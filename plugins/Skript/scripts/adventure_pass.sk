@@ -1,0 +1,650 @@
+on join:
+	if difference between {battle_pass::season_date::%uuid of player%} and now > difference between {battle_pass::season_date} and now:
+		BattlePassResetPlayer(player)
+	if {battle_pass::season_date::%uuid of player%} is not set:
+		BattlePassResetPlayer(player)
+	if {battle_pass::daily_quest::number::%uuid of player%} is set:
+		execute console command "/q objective %player% del battlepass.dq_%{battle_pass::daily_quest::number::%uuid of player%}%"
+	if {battle_pass::weekly_quest::number::%uuid of player%} is set:
+		execute console command "/q objective %player% del battlepass.wq_%{battle_pass::weekly_quest::number::%uuid of player%}%"
+	if {battle_pass::version::%uuid of player%} is not set:
+		set {battle_pass::version::%uuid of player%} to 1
+		execute console command "/cpdata set %player% page 1"
+
+
+
+
+
+function BattlePassResetPlayer(player: player):
+	set {battle_pass::level::%uuid of {_player}%} to 0
+	set {battle_pass::season_date::%uuid of {_player}%} to now
+	set {battle_pass::premium::%uuid of {_player}%} to false
+	clear {battle_pass::available_rewards::%uuid of {_player}%::*}
+
+
+
+
+on load:
+	BattlePassReload()
+
+
+function BattlePassReload():
+	load yaml "unlimited_adventures/AdventurePass/config.yml" as "config"
+	load yaml "unlimited_adventures/AdventurePass/rewards.yml" as "rewards"
+	load yaml "unlimited_adventures/AdventurePass/menu.yml" as "menu"
+	load yaml "unlimited_adventures/AdventurePass/messages.yml" as "messages"
+	if yaml value "version" from "rewards" is not set:
+		wait 1 tick
+		BattlePassCreateRewardsFile()
+	if yaml value "version" from "menu" is not set:
+		wait 1 tick
+		BattlePassCreateMenuFile()
+	if yaml value "version" from "config" is not set:
+		wait 1 tick
+		BattlePassCreateConfigFile()
+	if yaml value "version" from "messages" is not set:
+		wait 1 tick
+		BattlePassCreateMessagesFile()
+	
+
+
+
+	#	Config
+	clear {battle_pass::config::*}
+	if yaml value "leveling.first_level_xp_requirement" from "config" is set:
+		set {battle_pass::config::first_level_xp_requirement} to yaml value "leveling.first_level_xp_requirement" from "config"
+	if yaml value "leveling.next_level_required_xp_multiplier" from "config" is set:
+		set {battle_pass::config::next_level_required_xp_multiplier} to yaml value "leveling.next_level_required_xp_multiplier" from "config"
+	loop yaml node keys "xp_rewards" from "config":
+		set {_source} to loop-value
+		if yaml value "xp_rewards.%{_source}%" from "config" is set:
+			set {battle_pass::config::xp_rewards::%{_source}%} to yaml value "xp_rewards.%{_source}%" from "config"
+
+
+	#	Rewards
+	clear {battle_pass::rewards::*}
+	loop 70 times:
+		set {_level_nr} to loop-number
+		loop 25 times:
+			set {_reward_nr} to loop-number-2
+			if yaml value "%{_level_nr}%.%{_reward_nr}%" from "rewards" is set:
+				set {_var} to yaml value "%{_level_nr}%.%{_reward_nr}%" from "rewards"
+				if {_var} contains "gold ":
+					if {_var} doesn't contain "golden" or "ingot" or "raw" or "ore" or "block" or "sword" or "axe" or "pickaxe" or "shovel" or "hoe" or "nugget":
+						set {battle_pass::rewards::%{_level_nr}%::%{_reward_nr}%} to {_var}
+				if {_var} contains "gems ":
+					set {battle_pass::rewards::%{_level_nr}%::%{_reward_nr}%} to {_var}
+				if {_var} contains "command ":
+					set {battle_pass::rewards::%{_level_nr}%::%{_reward_nr}%} to {_var}
+			#	if {_var} doesn't contain "gold" or "command" or "gems":
+				if {battle_pass::rewards::%{_level_nr}%::%{_reward_nr}%} is not set:
+					set {battle_pass::rewards::%{_level_nr}%::%{_reward_nr}%} to {_var} parsed as item
+
+
+	#	Menu
+	clear {battle_pass::menu::*}
+	loop 70 times:
+		set {_level_nr} to loop-number
+		if yaml value "%{_level_nr}%.level" from "menu" is set:
+			set {battle_pass::menu::%{_level_nr}%::level} to yaml value "%{_level_nr}%.level" from "menu"
+		if yaml value "%{_level_nr}%.lore" from "menu" is set:
+			set {battle_pass::menu::%{_level_nr}%::lore} to yaml value "%{_level_nr}%.lore" from "menu"
+		if yaml value "%{_level_nr}%.material" from "menu" is set:
+			set {battle_pass::menu::%{_level_nr}%::material} to yaml value "%{_level_nr}%.material" from "menu"
+		if yaml value "%{_level_nr}%.amount" from "menu" is set:
+			set {battle_pass::menu::%{_level_nr}%::amount} to yaml value "%{_level_nr}%.amount" from "menu"
+		if yaml value "%{_level_nr}%.customdata" from "menu" is set:
+			set {battle_pass::menu::%{_level_nr}%::customdata} to yaml value "%{_level_nr}%.customdata" from "menu"
+		if yaml value "%{_level_nr}%.potion" from "menu" is set:
+			set {battle_pass::menu::%{_level_nr}%::potion} to yaml value "%{_level_nr}%.potion" from "menu"
+	
+
+
+	#	Messages
+	clear {battle_pass::messages::*}
+	loop yaml nodes from "messages":
+		if yaml node loop-value from "messages" has list:
+			set {battle_pass::messages::%loop-value%::*} to yaml list loop-value from "messages"
+		else:
+			set {battle_pass::messages::%loop-value%} to yaml value loop-value from "messages"
+
+
+	save yaml "config"
+	save yaml "rewards"
+	save yaml "menu"
+	save yaml "messages"
+
+
+
+
+function BattlePassCreateConfigFile():
+	load yaml "unlimited_adventures/AdventurePass/config.yml" as "config"
+
+	set yaml value "version" from "config" to 1
+	set the comments of yaml node "version" from "config" to "Please DO NOT change version number!"
+
+
+	set yaml value "leveling.first_level_xp_requirement" from "config" to 100
+	set yaml value "leveling.next_level_required_xp_multiplier" from "config" to 1.03
+
+	set yaml value "xp_rewards.daily_quest" from "config" to 100
+	set yaml value "xp_rewards.weekly_quest" from "config" to 250
+
+	set yaml value "xp_rewards.iron_ore" from "config" to 1
+	set yaml value "xp_rewards.gold_ore" from "config" to 2
+	set yaml value "xp_rewards.diamond_ore" from "config" to 5
+	set yaml value "xp_rewards.emerald_ore" from "config" to 5
+
+	set yaml value "xp_rewards.zombie" from "config" to 1
+	set yaml value "xp_rewards.skeleton" from "config" to 1
+	set yaml value "xp_rewards.spider" from "config" to 1
+	set yaml value "xp_rewards.zombie" from "config" to 1
+	set yaml value "xp_rewards.magma_cube" from "config" to 1
+	set yaml value "xp_rewards.creeper" from "config" to 1
+	set yaml value "xp_rewards.stray" from "config" to 1
+	set yaml value "xp_rewards.husk" from "config" to 1
+	set yaml value "xp_rewards.zombie_villager" from "config" to 1
+	set yaml value "xp_rewards.enderman" from "config" to 1
+	set yaml value "xp_rewards.vex" from "config" to 1
+	set yaml value "xp_rewards.phantom" from "config" to 1
+	set yaml value "xp_rewards.slime" from "config" to 1
+	set yaml value "xp_rewards.wither_skeleton" from "config" to 2
+	set yaml value "xp_rewards.cave_spider" from "config" to 2
+	set yaml value "xp_rewards.vindicator" from "config" to 3
+	set yaml value "xp_rewards.witch" from "config" to 3
+	set yaml value "xp_rewards.hoglin" from "config" to 3
+	set yaml value "xp_rewards.pillager" from "config" to 3
+	set yaml value "xp_rewards.shulker" from "config" to 3
+	set yaml value "xp_rewards.vindicator" from "config" to 3
+	set yaml value "xp_rewards.piglin_brute" from "config" to 4
+	set yaml value "xp_rewards.ghast" from "config" to 5
+	set yaml value "xp_rewards.ravager" from "config" to 5
+	set yaml value "xp_rewards.zoglin" from "config" to 5
+	set yaml value "xp_rewards.warden" from "config" to 20
+	set yaml value "xp_rewards.elder_guardian" from "config" to 20
+	set yaml value "xp_rewards.wither" from "config" to 30
+	set yaml value "xp_rewards.ender_dragon" from "config" to 50
+	set yaml value "xp_rewards.zombie_brute" from "config" to 30
+	set yaml value "xp_rewards.skeleton_king" from "config" to 30
+	set the comments of yaml node "leveling" from "config" to "" and "Here you can configure different Adventure Pass settings. Remember to follow the formatting." and "In case of any issues, feel free to contact us on the Ender Nerds Discord server." and ""
+	set the comments of yaml node "xp_rewards" from "config" to "" and "This section is responsible for XP rewards from various sources." and ""
+	save yaml "config"
+
+
+
+	
+function BattlePassCreateRewardsFile():
+	load yaml "unlimited_adventures/AdventurePass/rewards.yml" as "rewards"
+
+	set yaml value "version" from "rewards" to 1
+	set the comments of yaml node "version" from "rewards" to "Please DO NOT change version number!"
+
+	set yaml value "1.1" from "rewards" to "32 of cooked beef"
+	set yaml value "2.1" from "rewards" to "gold 250"
+	set yaml value "3.1" from "rewards" to "16 of iron ingot"
+	set yaml value "4.1" from "rewards" to "gold 250"
+	set yaml value "5.1" from "rewards" to "16 of gold ingot"#		NIE DZIALA
+	set yaml value "6.1" from "rewards" to "8 of slime block"
+	set yaml value "7.1" from "rewards" to "gems 100"
+	set yaml value "8.1" from "rewards" to "gold 250"
+	set yaml value "9.1" from "rewards" to "16 of experience bottle"
+	set yaml value "10.1" from "rewards" to "gold 250"
+	set yaml value "11.1" from "rewards" to "3 of golden apple"#		NIE DZIALA
+	set yaml value "12.1" from "rewards" to "3 of iron block"
+	set yaml value "13.1" from "rewards" to "name tag"
+	set yaml value "14.1" from "rewards" to "8 of tnt"
+	set yaml value "15.1" from "rewards" to "spyglass"
+	set yaml value "16.1" from "rewards" to "gems 100"
+	set yaml value "17.1" from "rewards" to "gold 250"
+	set yaml value "18.1" from "rewards" to "8 of ender pearl"
+	set yaml value "19.1" from "rewards" to "diamond sword"
+	set yaml value "20.1" from "rewards" to "gold 250"
+	set yaml value "21.1" from "rewards" to "32 of golden carrot"
+	set yaml value "22.1" from "rewards" to "2 of diamond"
+	set yaml value "23.1" from "rewards" to "32 of experience bottle"
+	set yaml value "24.1" from "rewards" to "gold 250"
+	set yaml value "25.1" from "rewards" to "5 of iron block"
+	set yaml value "26.1" from "rewards" to "16 of obsidian"
+	set yaml value "27.1" from "rewards" to "netherite scrap"
+	set yaml value "28.1" from "rewards" to "32 of firework rocket"
+	set yaml value "29.1" from "rewards" to "32 of tnt"
+	set yaml value "30.1" from "rewards" to "8 of emerald"
+	set yaml value "31.1" from "rewards" to "16 of spectral arrow"
+	set yaml value "32.1" from "rewards" to "gold 250"
+	set yaml value "33.1" from "rewards" to "2 of diamond"
+	set yaml value "34.1" from "rewards" to "emerald block"
+	set yaml value "35.1" from "rewards" to "gems 100"
+	set yaml value "36.1" from "rewards" to "16 of tipped arrow of slowness"
+	set yaml value "37.1" from "rewards" to "64 of experience bottle"
+	set yaml value "38.1" from "rewards" to "diamond boots"
+	set yaml value "39.1" from "rewards" to "3 of gold block"
+	set yaml value "40.1" from "rewards" to "gold 250"
+	set yaml value "41.1" from "rewards" to "2 of shulker shell"
+	set yaml value "42.1" from "rewards" to "5 of golden apple"
+	set yaml value "43.1" from "rewards" to "16 of emerald"
+	set yaml value "44.1" from "rewards" to "netherite scrap"
+	set yaml value "45.1" from "rewards" to "32 of obsidian"
+	set yaml value "46.1" from "rewards" to "4 of diamond"
+	set yaml value "47.1" from "rewards" to "5 of emerald block"
+	set yaml value "48.1" from "rewards" to "gold 250"
+	set yaml value "49.1" from "rewards" to "gems 100"
+	set yaml value "50.1" from "rewards" to "64 of experience bottle"
+	set yaml value "51.1" from "rewards" to "diamond pickaxe"
+	set yaml value "52.1" from "rewards" to "5 of gold block"
+	set yaml value "53.1" from "rewards" to "diamond horse armor"
+	set yaml value "54.1" from "rewards" to "gold 250"
+	set yaml value "55.1" from "rewards" to "potion of strong strength"
+	set yaml value "56.1" from "rewards" to "diamond block"
+	set yaml value "57.1" from "rewards" to "enchanted golden apple"
+	set yaml value "58.1" from "rewards" to "diamond axe"
+	set yaml value "59.1" from "rewards" to "2 of netherite scrap"
+	set yaml value "60.1" from "rewards" to "diamond helmet"
+	set yaml value "61.1" from "rewards" to "5 of diamonds"
+	set yaml value "62.1" from "rewards" to "totem of undying"
+	set yaml value "63.1" from "rewards" to "gems 100"
+	set yaml value "64.1" from "rewards" to "16 of golden apple"
+	set yaml value "65.1" from "rewards" to "diamond leggings"
+	set yaml value "66.1" from "rewards" to "64 of experience bottle"
+	set yaml value "67.1" from "rewards" to "trident"
+	set yaml value "68.1" from "rewards" to "diamond chestplate"
+	set yaml value "69.1" from "rewards" to "3 of netherite scrap"
+	set yaml value "70.1" from "rewards" to "elytra"
+	set the comments of yaml node "1" from "rewards" to "" and "Feel free to set up your own rewards for the Adventure Pass system. Remember to follow the formatting." and "Use 'command' word in order to use a command on reward claim. You can get a player's name by typing PLAYER_NAME. Example here:" and "command eco give PLAYER_NAME 100" and "To give player gold, use 'gold' word followed by a number." and "To give player gems, use 'gems' word followed by a number." and "To give items, an example would be: '10 of diamond'" and "In case of any issues, feel free to contact us on the Ender Nerds Discord server." and ""
+	save yaml "rewards"
+
+
+
+
+
+
+function BattlePassCreateMenuFile():
+	load yaml "unlimited_adventures/AdventurePass/menu.yml" as "menu"
+
+	set yaml value "version" from "menu" to 1
+	set the comments of yaml node "version" from "menu" to "Please DO NOT change version number!"
+	
+	set yaml value "1.lore" from "menu" to "32 Cooked Beef"
+	set yaml value "1.material" from "menu" to "COOKED_BEEF"
+	set yaml value "1.amount" from "menu" to 32
+	set yaml value "2.lore" from "menu" to "250 Gold"
+	set yaml value "2.material" from "menu" to "STICK"
+	set yaml value "2.customdata" from "menu" to 91
+	set yaml value "3.lore" from "menu" to "16 Iron Ingots"
+	set yaml value "3.material" from "menu" to "IRON_INGOT"
+	set yaml value "3.amount" from "menu" to 16
+	set yaml value "4.lore" from "menu" to "250 Gold"
+	set yaml value "4.material" from "menu" to "STICK"
+	set yaml value "4.customdata" from "menu" to 91
+	set yaml value "5.lore" from "menu" to "16 Gold Ingots"
+	set yaml value "5.material" from "menu" to "GOLD_INGOT"
+	set yaml value "5.amount" from "menu" to 16
+	set yaml value "6.lore" from "menu" to "8 Slime Blocks"
+	set yaml value "6.material" from "menu" to "SLIME_BLOCK"
+	set yaml value "6.amount" from "menu" to 8
+	set yaml value "7.lore" from "menu" to "100 Gems"
+	set yaml value "7.material" from "menu" to "STICK"
+	set yaml value "7.customdata" from "menu" to 92
+
+	set yaml value "8.lore" from "menu" to "250 Gold"
+	set yaml value "8.material" from "menu" to "STICK"
+	set yaml value "8.customdata" from "menu" to 91
+	set yaml value "9.lore" from "menu" to "16 Experience Bottles"
+	set yaml value "9.material" from "menu" to "EXPERIENCE_BOTTLE"
+	set yaml value "9.amount" from "menu" to 16
+	set yaml value "10.lore" from "menu" to "250 Gold"
+	set yaml value "10.material" from "menu" to "STICK"
+	set yaml value "10.customdata" from "menu" to 91
+	set yaml value "11.lore" from "menu" to "3 Golden Apples"
+	set yaml value "11.material" from "menu" to "GOLDEN_APPLE"
+	set yaml value "11.amount" from "menu" to 3
+	set yaml value "12.lore" from "menu" to "3 Iron Blocks"
+	set yaml value "12.material" from "menu" to "IRON_BLOCK"
+	set yaml value "12.amount" from "menu" to 3
+	set yaml value "13.lore" from "menu" to "Nametag"
+	set yaml value "13.material" from "menu" to "NAME_TAG"
+	set yaml value "14.lore" from "menu" to "8 TNT"
+	set yaml value "14.material" from "menu" to "TNT"
+	set yaml value "14.amount" from "menu" to 8
+
+	set yaml value "15.lore" from "menu" to "Spyglass"
+	set yaml value "15.material" from "menu" to "SPYGLASS"
+	set yaml value "16.lore" from "menu" to "100 Gems"
+	set yaml value "16.material" from "menu" to "STICK"
+	set yaml value "16.customdata" from "menu" to 92
+	set yaml value "17.lore" from "menu" to "250 Gold"
+	set yaml value "17.material" from "menu" to "STICK"
+	set yaml value "17.customdata" from "menu" to 91
+	set yaml value "18.lore" from "menu" to "8 Ender Pearls"
+	set yaml value "18.material" from "menu" to "ENDER_PEARL"
+	set yaml value "18.amount" from "menu" to 8
+	set yaml value "19.lore" from "menu" to "Diamond Sword"
+	set yaml value "19.material" from "menu" to "DIAMOND_SWORD"
+	set yaml value "20.lore" from "menu" to "250 Gold"
+	set yaml value "20.material" from "menu" to "STICK"
+	set yaml value "20.customdata" from "menu" to 91
+	set yaml value "21.lore" from "menu" to "32 Golden Carrots"
+	set yaml value "21.material" from "menu" to "GOLDEN_CARROT"
+	set yaml value "21.amount" from "menu" to 32
+
+	set yaml value "22.lore" from "menu" to "2 Diamonds"
+	set yaml value "22.material" from "menu" to "DIAMOND"
+	set yaml value "22.amount" from "menu" to 2
+	set yaml value "23.lore" from "menu" to "32 Experience Bottles"
+	set yaml value "23.material" from "menu" to "EXPERIENCE_BOTTLE"
+	set yaml value "23.amount" from "menu" to 32
+	set yaml value "24.lore" from "menu" to "250 Gold"
+	set yaml value "24.material" from "menu" to "STICK"
+	set yaml value "24.customdata" from "menu" to 91
+	set yaml value "25.lore" from "menu" to "5 Iron Blocks"
+	set yaml value "25.material" from "menu" to "IRON_BLOCK"
+	set yaml value "25.amount" from "menu" to 5
+	set yaml value "26.lore" from "menu" to "16 Obsidian"
+	set yaml value "26.material" from "menu" to "OBSIDIAN"
+	set yaml value "26.amount" from "menu" to 16
+	set yaml value "27.lore" from "menu" to "Netherite Scrap"
+	set yaml value "27.material" from "menu" to "NETHERITE_SCRAP"
+	set yaml value "28.lore" from "menu" to "32 Fireworks"
+	set yaml value "28.material" from "menu" to "FIREWORK_ROCKET"
+	set yaml value "28.amount" from "menu" to 32
+
+	set yaml value "29.lore" from "menu" to "32 TNT"
+	set yaml value "29.material" from "menu" to "TNT"
+	set yaml value "29.amount" from "menu" to 32
+	set yaml value "30.lore" from "menu" to "8 Emeralds"
+	set yaml value "30.material" from "menu" to "EMERALD"
+	set yaml value "30.amount" from "menu" to 8
+	set yaml value "31.lore" from "menu" to "16 Spectral Arrows"
+	set yaml value "31.material" from "menu" to "SPECTRAL_ARROW"
+	set yaml value "31.amount" from "menu" to 16
+	set yaml value "32.lore" from "menu" to "250 Gold"
+	set yaml value "32.material" from "menu" to "STICK"
+	set yaml value "32.customdata" from "menu" to 91
+	set yaml value "33.lore" from "menu" to "2 Diamonds"
+	set yaml value "33.material" from "menu" to "DIAMOND"
+	set yaml value "33.amount" from "menu" to 2
+	set yaml value "34.lore" from "menu" to "Emerald Block"
+	set yaml value "34.material" from "menu" to "EMERALD_BLOCK"
+	set yaml value "35.lore" from "menu" to "100 Gems"
+	set yaml value "35.material" from "menu" to "STICK"
+	set yaml value "35.customdata" from "menu" to 92
+
+	set yaml value "36.lore" from "menu" to "16 Arrows of Slowness"
+	set yaml value "36.material" from "menu" to "TIPPED_ARROW"
+	set yaml value "36.amount" from "menu" to 16
+	set yaml value "37.lore" from "menu" to "64 Experience Bottles"
+	set yaml value "37.material" from "menu" to "EXPERIENCE_BOTTLE"
+	set yaml value "37.amount" from "menu" to 64
+	set yaml value "38.lore" from "menu" to "Diamond Boots"
+	set yaml value "38.material" from "menu" to "DIAMOND_BOOTS"
+	set yaml value "39.lore" from "menu" to "3 Gold Blocks"
+	set yaml value "39.material" from "menu" to "GOLD_BLOCK"
+	set yaml value "39.amount" from "menu" to 3
+	set yaml value "40.lore" from "menu" to "250 Gold"
+	set yaml value "40.material" from "menu" to "STICK"
+	set yaml value "40.customdata" from "menu" to 91
+	set yaml value "41.lore" from "menu" to "2 Shulker Shells"
+	set yaml value "41.material" from "menu" to "SHULKER_SHELL"
+	set yaml value "41.amount" from "menu" to 2
+	set yaml value "42.lore" from "menu" to "5 Golden Apples"
+	set yaml value "42.material" from "menu" to "GOLDEN_APPLE"
+	set yaml value "42.amount" from "menu" to 5
+
+	set yaml value "43.lore" from "menu" to "16 Emeralds"
+	set yaml value "43.material" from "menu" to "EMERALD"
+	set yaml value "43.amount" from "menu" to 16
+	set yaml value "44.lore" from "menu" to "Netherite Scrap"
+	set yaml value "44.material" from "menu" to "NETHERITE_SCRAP"
+	set yaml value "45.lore" from "menu" to "32 Obsidian"
+	set yaml value "45.material" from "menu" to "OBSIDIAN"
+	set yaml value "45.amount" from "menu" to 32
+	set yaml value "46.lore" from "menu" to "4 Diamonds"
+	set yaml value "46.material" from "menu" to "DIAMOND"
+	set yaml value "46.amount" from "menu" to 4
+	set yaml value "47.lore" from "menu" to "5 Emerald Blocks"
+	set yaml value "47.material" from "menu" to "EMERALD_BLOCK"
+	set yaml value "47.amount" from "menu" to 5
+	set yaml value "48.lore" from "menu" to "250 Gold"
+	set yaml value "48.material" from "menu" to "STICK"
+	set yaml value "48.customdata" from "menu" to 91
+	set yaml value "49.lore" from "menu" to "100 Gems"
+	set yaml value "49.material" from "menu" to "STICK"
+	set yaml value "49.customdata" from "menu" to 92
+
+	set yaml value "50.lore" from "menu" to "64 Experience Bottles"
+	set yaml value "50.material" from "menu" to "EXPERIENCE_BOTTLE"
+	set yaml value "50.amount" from "menu" to 64
+	set yaml value "51.lore" from "menu" to "Diamond Pickaxe"
+	set yaml value "51.material" from "menu" to "DIAMOND_PICKAXE"
+	set yaml value "52.lore" from "menu" to "5 Gold Blocks"
+	set yaml value "52.material" from "menu" to "GOLD_BLOCK"
+	set yaml value "52.amount" from "menu" to 5
+	set yaml value "53.lore" from "menu" to "Diamond Horse Armor"
+	set yaml value "53.material" from "menu" to "DIAMOND_HORSE_ARMOR"
+	set yaml value "54.lore" from "menu" to "250 Gold"
+	set yaml value "54.material" from "menu" to "STICK"
+	set yaml value "54.customdata" from "menu" to 91
+	set yaml value "55.lore" from "menu" to "Potion of Strength II (01:30)"
+	set yaml value "55.material" from "menu" to "POTION"
+	set yaml value "56.lore" from "menu" to "Diamond Block"
+	set yaml value "56.material" from "menu" to "DIAMOND_BLOCK"
+
+	set yaml value "57.lore" from "menu" to "Enchanted Golden Apple"
+	set yaml value "57.material" from "menu" to "ENCHANTED_GOLDEN_APPLE"
+	set yaml value "58.lore" from "menu" to "Diamond Axe"
+	set yaml value "58.material" from "menu" to "DIAMOND_AXE"
+	set yaml value "59.lore" from "menu" to "2 Netherite Scrap"
+	set yaml value "59.material" from "menu" to "NETHERITE_SCRAP"
+	set yaml value "59.amount" from "menu" to 2
+	set yaml value "60.lore" from "menu" to "Diamond Helmet"
+	set yaml value "60.material" from "menu" to "DIAMOND_HELMET"
+	set yaml value "61.lore" from "menu" to "5 Diamonds"
+	set yaml value "61.material" from "menu" to "DIAMOND"
+	set yaml value "61.amount" from "menu" to 5
+	set yaml value "62.lore" from "menu" to "Totem of Undying"
+	set yaml value "62.material" from "menu" to "TOTEM_OF_UNDYING"
+	set yaml value "63.lore" from "menu" to "100 Gems"
+	set yaml value "63.material" from "menu" to "STICK"
+	set yaml value "63.customdata" from "menu" to 92
+
+	set yaml value "64.lore" from "menu" to "16 Golden Apples"
+	set yaml value "64.material" from "menu" to "GOLDEN_APPLE"
+	set yaml value "64.amount" from "menu" to 16
+	set yaml value "65.lore" from "menu" to "Diamond Leggings"
+	set yaml value "65.material" from "menu" to "DIAMOND_LEGGINGS"
+	set yaml value "66.lore" from "menu" to "64 Experience Bottles"
+	set yaml value "66.material" from "menu" to "EXPERIENCE_BOTTLE"
+	set yaml value "66.amount" from "menu" to 64
+	set yaml value "67.lore" from "menu" to "Trident"
+	set yaml value "67.material" from "menu" to "TRIDENT"
+	set yaml value "68.lore" from "menu" to "Diamond Chestplate"
+	set yaml value "68.material" from "menu" to "DIAMOND_CHESTPLATE"
+	set yaml value "69.lore" from "menu" to "3 Netherite Scrap"
+	set yaml value "69.material" from "menu" to "NETHERITE_SCRAP"
+	set yaml value "69.amount" from "menu" to 3
+	set yaml value "70.lore" from "menu" to "Elytra"
+	set yaml value "70.material" from "menu" to "ELYTRA"
+
+	set the comments of yaml node "1" from "menu" to "" and "Use this config file to setup the Adventure Pass menu. Remember to follow the formatting." and "This configuration is only visual. Real rewards are configured in rewards.yml" and "In case of any issues, feel free to contact us on the Ender Nerds Discord server." and ""
+	save yaml "menu"
+
+
+
+
+
+function BattlePassCreateMessagesFile():
+	load yaml "unlimited_adventures/AdventurePass/messages.yml" as "messages"
+
+	set yaml value "version" from "messages" to 1
+	set the comments of yaml node "version" from "messages" to "Please DO NOT change version number!"
+
+	set yaml value "no_space" from "messages" to "<##ffe608>&lAdventure Pass ▶ &cYou don't have space for this reward!"
+	set yaml value "claim_reward" from "messages" to "<##ffe608>&lAdventure Pass ▶ &aClaimed reward for achieving <##31ed96>Level ADVENTURE_PASS_LEVEL"
+	set yaml value "premium_upgrade_1" from "messages" to "<##ffe608>&lAdventure Pass ▶ <##31ed96>&lCongratulations!"
+	set yaml value "premium_upgrade_2" from "messages" to "&fYou have upgraded to &e&lAdventure Pass PREMIUM!"
+	
+	save yaml "messages"
+
+
+
+
+
+
+function BattlePassGiveExperience(player: player, amount: integer):
+	
+	if difference between {booster::adventure_pass::date} and now < 6 hours:
+		add {_amount} to {battle_pass::xp::%uuid of {_player}%}
+		add {_amount} to {battle_pass::xp::%uuid of {_player}%}
+	else:
+		add {_amount} to {battle_pass::xp::%uuid of {_player}%}
+	
+	if {battle_pass::level::%uuid of {_player}%} < 70:
+		if {battle_pass::xp::%uuid of {_player}%} >= {battle_pass::xp_need::%uuid of {_player}%}:
+			BattlePassLevelUp({_player})
+
+
+
+
+
+function BattlePassLevelUp(player: player):
+	if {battle_pass::level::%uuid of {_player}%} >= 70:
+		stop
+	
+	add 1 to {battle_pass::level::%uuid of {_player}%}
+	if {battle_pass::level::%uuid of {_player}%} > 70:
+		set {battle_pass::level::%uuid of {_player}%} to 70
+	set {_level} to {battle_pass::level::%uuid of {_player}%}
+	
+	add "_%{_level}%_" to {battle_pass::available_rewards::%uuid of {_player}%::*}
+	
+
+
+
+
+
+
+function BattlePassRewardClaim(player: player, level: integer):
+	
+
+	loop 10 times:
+		set {_reward_nr} to loop-number
+		
+		set {_reward} to {battle_pass::rewards::%{_level}%::%{_reward_nr}%}
+		if {_reward} contains "gold":
+			if {_reward} doesn't contain "golden" or "ingot" or "raw" or "ore" or "block" or "sword" or "axe" or "pickaxe" or "shovel" or "hoe" or "nugget":
+				replace all "gold " with "" in {_reward}
+				set {_amount} to {_reward} parsed as integer
+				add {_amount} to balance of {_player}
+				delete {_reward}
+		if {_reward} contains "gems":
+			replace all "gems " with "" in {_reward}
+			set {_amount} to {_reward} parsed as integer
+			PremiumCurrency({_player}, "add", {_amount})
+			delete {_reward}
+		if {_reward} contains "command":
+			replace all "command " with "" in {_reward}
+			replace all "PLAYER_NAME" with "%{_player}%" in {_reward}
+			set {_command} to {_reward}
+			execute console command "%{_command}%"
+			delete {_reward}
+		if {_reward} is set:
+			replace all "PLAYER_NAME" with "%{_player}%" in {_reward}
+			if {_player} has space for {_reward}:
+				give {_reward} to {_player}
+			else:
+#				send "<##ffe608>&lAdventure Pass ▶ &cYou don't have space for this reward!" to {_player}
+				send {battle_pass::messages::no_space} to {_player}
+				play sound "block.note_block.didgeridoo" with volume 0.7 and pitch 1 to {_player}
+				stop
+
+	remove "_%{_level}%_" from {battle_pass::available_rewards::%uuid of {_player}%::*}
+	
+	
+	send " " to {_player}
+#	send "<##ffe608>&lAdventure Pass ▶ &aClaimed reward for achieving <##31ed96>Level %{_level}%" to {_player}
+	set {_msg} to {battle_pass::messages::claim_reward}
+	replace all "ADVENTURE_PASS_LEVEL" with "%{_level}%" in {_msg}
+	send {_msg} to {_player}
+	send " " to {_player}
+	
+	
+	play sound "entity.experience_orb.pickup" with volume 0.7 and pitch 1 to {_player}
+	play sound "item.armor.equip_iron" with volume 1 and pitch 1 to {_player}
+
+
+command /battlepassclaimreward [<player>] [<integer>]:
+	permission: admin
+	trigger:
+		set {_player} to player-arg
+		set {_level} to arg-2
+		BattlePassRewardClaim({_player}, {_level})
+
+on tab complete of "/battlepassclaimreward":
+	set tab completions for position 1 to all players
+	set tab completions for position 2 to 1
+
+
+
+
+command /battlepassgivepremium [<player>]:
+	permission: admin
+	trigger:
+		set {_player} to player-arg
+		set {battle_pass::premium::%uuid of {_player}%} to true
+		send " " to {_player}
+#		send "<##ffe608>&lAdventure Pass ▶ <##31ed96>&lCongratulations!" to {_player}
+#		send "&fYou have upgraded to &e&lAdventure Pass PREMIUM!" to {_player}
+		send {battle_pass::messages::premium_upgrade_1} to {_player}
+		send {battle_pass::messages::premium_upgrade_2} to {_player}
+		send " " to {_player}
+
+on tab complete of "/battlepassgivepremium":
+	set tab completions for position 1 to all players
+
+
+
+
+
+command /adventurepass [<text>] [<player>] [<integer>]:
+	aliases: battlepass
+	permission: admin
+	trigger:
+		set {_player} to player-arg
+		
+		if arg 1 is "help":
+			send " " to sender
+			send "<##ffe608>Adventure Pass ▶ &7Available commands:" to sender
+			send "<##ffe608>• &7/adventurepass &fgivexp &e[player] [amount] &7- gives Adventure Pass XP to player," to sender
+			send "<##ffe608>• &7/adventurepass &freset &e[player] &7- reset player's Adventure Pass progress," to sender
+			send "<##ffe608>• &7/adventurepass &fnewquest &e[player] &7- gives new Daily and Weekly quest to a player," to sender
+			send "<##ffe608>• &7/adventurepass &freload &7- reloads the config," to sender
+			send "<##ffe608>• &7/adventurepass &fnewseason &7- starts a new Adventure Pass season." to sender
+		if arg 1 is "newseason":
+			set {battle_pass::season_date} to now
+			send "<##ffe608>Adventure Pass ▶ &aYou have started a new &6Adventure Pass &aseason!" to sender
+			loop {players::*}:
+				BattlePassResetPlayer(loop-value)
+		if arg 1 is "givexp":
+			BattlePassGiveExperience({_player}, arg-3)
+			send "<##ffe608>Adventure Pass ▶ &aYou have given %arg-3% Adventure Pass XP to %player-arg%" to sender
+		if arg 1 is "reset":
+			BattlePassResetPlayer({_player})
+			send "<##ffe608>Adventure Pass ▶ &aYou have resetted your Adventure Pass data!" to {_player}
+		if arg 1 is "reload":
+			BattlePassReload()
+			send "<##ffe608>Adventure Pass ▶ &aReloaded config!" to sender
+		if arg 1 is "regeneratefile":
+			BattlePassCreateRewardsFile()
+			wait 1 second
+			BattlePassReload()
+			send "<##ffe608>Adventure Pass ▶ &aConfig file has been regenerated!" to sender
+
+
+on tab complete of "/adventurepass":
+	set tab completions for position 1 to "help" and "newseason" and "givexp" and "reset" and "newquest" and "reload"
+	if tab arg-1 = "givexp" and "reset" and "newquest":
+		set tab completions for position 2 to all players
+
+
+
+
+

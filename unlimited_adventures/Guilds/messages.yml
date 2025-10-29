@@ -1,0 +1,32 @@
+# Please DO NOT change version number!
+version: 1
+
+slayers: slayers
+
+miners: miners
+
+ranchers: ranchers
+
+reputation_level_now: "§x&f&f&e&6&0&8&lGUILD_NAME &fYour reputation level is now: &a&lGUILD_LEVEL!"
+
+adventure_pass_level_up: "&f▶ §x&f&f&e&6&0&8Adventure Pass §x&2&b&a&d&5&2&lLEVEL UP!"
+
+slayers_reputation_reward_unlocked: "&f▶ &c&lSlayers §x&f&f&e&6&0&8Reputation Reward §x&2&b&a&d&5&2&lUNLOCKED!"
+
+miners_reputation_reward_unlocked: "&f▶ &b&lMiners §x&f&f&e&6&0&8Reputation Reward §x&2&b&a&d&5&2&lUNLOCKED!"
+
+ranchers_reputation_reward_unlocked: "&f▶ &6&lRanchers §x&f&f&e&6&0&8Reputation Reward §x&2&b&a&d&5&2&lUNLOCKED!"
+
+no_space: "§x&f&f&e&6&0&8&lGUILD_NAME ▶ &cYou don't have space for this reward!"
+
+reward_claim: "§x&f&f&e&6&0&8&lGUILD_NAME ▶ &aClaimed reward for achieving §x&3&1&e&d&9&6Reputation Level GUILD_LEVEL"
+
+quest_finished: "&6&lGUILD_NAME ▶ &fYou have finished the &aDIFFICULTY_LEVEL Quest!"
+
+rewards: "&fRewards:"
+
+xp_reward: "&f• &9XP_REWARD XP"
+
+gold_reward: "&f• &eGOLD_REWARD Gold &f"
+
+quest_finished_subtitle: "&aDIFFICULTY_LEVEL Quest &fFinished!"

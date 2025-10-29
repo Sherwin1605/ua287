@@ -1,0 +1,26 @@
+location: spawn:752,490:70,880:905,461
+enabled: true
+display-range: 48
+update-range: 48
+update-interval: 20
+facing: 0.0
+down-origin: false
+pages:
+- lines:
+  - content: '&6&lWelcome to the test server!'
+    height: 0.3
+  - content: '&7'
+    height: 0.3
+  - content: Use &e/getitems &fto open item menu
+    height: 0.3
+  - content: Use &e/gm &fto change your gamemode
+    height: 0.3
+  - content: '&fUse &e/test &fto get gold, gems and dungeon keys!'
+    height: 0.3
+  - content: '&7'
+    height: 0.3
+  - content: '&7Current TPS: &f%server_tps_1%&7/&f20'
+    height: 0.3
+  - content: '&7Loaded chunks: &f%server_total_chunks%'
+    height: 0.3
+  actions: {}

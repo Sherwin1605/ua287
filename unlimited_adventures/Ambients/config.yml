@@ -1,0 +1,166 @@
+# Please DO NOT change version number!
+version: 1
+
+# Should the Ambient Sounds be enabled?
+enabled: true
+
+green-biomes:
+- forest
+- flower_forest
+- birch_forest
+- old_growth_birch_forest
+- dark_forest
+- taiga
+- old_growth_pine_taiga
+- old_growth_spruce_taiga
+- jungle
+- sparse_jungle
+- bamboo_jungle
+- swamp
+- mangrove_swamp
+- river
+- warm_river
+- plains
+- sunflower_plains
+- spawn
+- t:brushland
+- t:orchid_swamp
+- t:shield_clearing
+- t:steppe
+- t:valley_clearing
+- t:yellowstone
+
+forest-biomes:
+- forest
+- flower_forest
+- birch_forest
+- old_growth_birch_forest
+- dark_forest
+- taiga
+- old_growth_pine_taiga
+- old_growth_spruce_taiga
+- jungle
+- sparse_jungle
+- bamboo_jungle
+- t:amethyst_canyon
+- t:amethyst_rainforest
+- t:birch_taiga
+- t:blooming_valley
+- t:cloud_forest
+- t:lavender_forest
+- t:forested_highlands
+- t:lavender_valley
+- t:lush_valley
+- t:mirage_isles
+- t:moonlight_grove
+- t:rocky_jungle
+- t:sakura_grove
+- t:shield
+- t:siberian_taiga
+- t:temperate_highlands
+- t:tropical_jungle
+- t:yosemite_lowlands
+
+arid-biomes:
+- desert
+- savanna
+- savanna_plateau
+- windswept_savanna
+- mesa
+- wooded_badlands
+- eroded_badlands
+- t:ancient_sands
+- t:arid_highlands
+- t:ashen_savanna
+- t:bryce_canyon
+- t:desert_canyon
+- t:desert_oasis
+- t:desert_spires
+- t:fractured_savanna
+- t:gravel_desert
+- t:hot_shrubland
+- t:lush_desert
+- t:painted_mountains
+- t:red_oasis
+- t:sandstone_valley
+- t:savanna_badlands
+- t:savanna_slopes
+- t:shrubland
+- t:volcanic_peaks
+- t:warped_mesa
+- t:white_mesa
+
+winter-biomes:
+- snowy_plains
+- ice_spikes
+- frozen_river
+- grove
+- snowy_slopes
+- snowy_taiga
+- frozen_peaks
+- jagged_peaks
+- snowy_beach
+- frozen_ocean
+- deep_frozen_ocean
+- t:alpha_islands_winter
+- t:alpine_grove
+- t:cold_shrubland
+- t:frozen_cliffs
+- t:glacial_chasm
+- t:ice_marsh
+- t:rocky_shrubland
+- t:siberian_grove
+- t:snowy_badlands
+- t:snowy_cherry_grove
+- t:snowy_maple_forest
+- t:snowy_shield
+- t:wintry_forest
+- t:wintry_lowlands
+
+high-biomes:
+- jagged_peaks
+- frozen_peaks
+- stony_peaks
+- meadow
+- windswept_hills
+- windswept_gravelly_hills
+- windswept_forest
+- windswept_savanna
+- t:alpine_highlands
+- t:blooming_plateau
+- t:caldera
+- t:emerald_peaks
+- t:jungle_mountains
+- t:haze_mountains
+- t:highlands
+- t:moonlight_valley
+- t:rocky_mountains
+- t:sakura_valley
+- t:scarlet_mountains
+- t:skylands_autumn
+- t:skylands_spring
+- t:skylands_winter
+- t:skylands_summer
+- t:stony_spires
+- t:white_cliffs
+- t:windswept_spires
+- t:yosemite_cliffs
+
+ocean-biomes:
+- ocean
+- deep_ocean
+- warm_ocean
+- lukewarm_ocean
+- deep_lukewarm_ocean
+- cold_ocean
+- deep_cold_ocean
+- frozen_ocean
+- deep_frozen_ocean
+- mushroom_fields
+- beach
+- snowy_beach
+- stony_shore
+- t:alpha_islands
+- t:basalt_cliffs
+- t:granite_cliffs
+- t:gravel_beach

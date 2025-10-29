@@ -1,0 +1,10 @@
+# Please DO NOT change version number!
+version: 1
+
+range: 2000
+
+world: world
+
+particle_effects: true
+
+sounds: true

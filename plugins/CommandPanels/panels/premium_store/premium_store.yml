@@ -1,0 +1,1340 @@
+panels:
+  premium_store:
+    perm: default
+    rows: 5
+    title: '&f'
+    commands:
+    - store
+    - premium_store
+    - premium
+    - premiumstore
+    - premiumshop
+    empty: AIR
+    sound-on-open: BLOCK_NOTE_BLOCK_HAT
+    item:
+
+
+
+
+      '0':
+        material: STICK
+        customdata: 1
+        name: '&c← Previous Menu'
+        commands:
+        - open= main_menu
+       
+       
+
+      '6':
+        material: STICK
+        customdata: 100
+        name: '%color_gems%Gems'
+        lore:
+        - ''
+        - '&7Support our server growth'
+        - '&7by purchasing %color_gems%Gems &7and use'
+        - '&7them to buy awesome items!'
+        - ''
+        - '&fYour Gems: %color_gems%%valiant_premium_currency% &f'
+        - ''
+        - '%color_menu_purchase%&l✔ Click to purchase!'
+        commands:
+        - msg= &7
+        - msg= &7         &6⯪ &6&lCheck out our Webstore! &6⯫
+        - msg= &7        &e▶ @store.unlimitedadventures.com ◀
+        - msg= &7 
+        - cpc
+        - delay= 2 sound= ENTITY_ITEM_PICKUP 0.7
+      '7':
+        material: STICK
+        customdata: 100
+        name: '%color_gems%Gems'
+        lore:
+        - ''
+        - '&7Support our server growth'
+        - '&7by purchasing %color_gems%Gems &7and use'
+        - '&7them to buy awesome items!'
+        - ''
+        - '&fYour Gems: %color_gems%%valiant_premium_currency% &f'
+        - ''
+        - '%color_menu_purchase%&l✔ Click to purchase!'
+        commands:
+        - msg= &7
+        - msg= &7         &6⯪ &6&lCheck out our Webstore! &6⯫
+        - msg= &7        &e▶ @store.unlimitedadventures.com ◀
+        - msg= &7 
+        - cpc
+        - delay= 2 sound= ENTITY_ITEM_PICKUP 0.7
+      '8':
+        material: STICK
+        customdata: 100
+        name: '%color_gems%Gems'
+        lore:
+        - ''
+        - '&7Support our server growth'
+        - '&7by purchasing %color_gems%Gems &7and use'
+        - '&7them to buy awesome items!'
+        - ''
+        - '&fYour Gems: %color_gems%%valiant_premium_currency% &f'
+        - ''
+        - '%color_menu_purchase%&l✔ Click to purchase!'
+        commands:
+        - msg= &7
+        - msg= &7         &6⯪ &6&lCheck out our Webstore! &6⯫
+        - msg= &7        &e▶ @store.unlimitedadventures.com ◀
+        - msg= &7 
+        - cpc
+        - delay= 2 sound= ENTITY_ITEM_PICKUP 0.7
+      
+      
+      
+
+       
+          
+          
+          
+          
+          
+          
+      
+      
+      '22':
+        material: STICK
+        customdata: 100
+        name: '&dPinata'
+        lore:
+        - ''
+        - '&7Smash this Pinata to make it'
+        - '&7explode with wonderful items!'
+        - ''
+        - '&fPrice: %color_gems%450 Gems &f'
+        has0:
+          value0: '%valiant_premium_currency% ISGREATER'
+          compare0: '450'
+          material: STICK
+          customdata: 100
+          name: '&dPinata'
+          lore:
+          - ''
+          - '&7Smash this Pinata to make it'
+          - '&7explode with wonderful items!'
+          - ''
+          - '&fPrice: %color_gems%450 Gems &f'
+          - ''
+          - '%color_menu_purchase%&l✔ Buy now!'
+          commands:
+          - set-data= item_name pinata %cp-player-name%
+          - set-data= item_price 450 %cp-player-name%
+          - open= premium_store_confirm
+      
+      
+      
+      
+      
+      '9':
+        material: STICK
+        customdata: 100
+        name: '%color_ultra%&lUltra &7[LIFETIME]'
+        lore:
+        - '&8LIFETIME RANK'
+        - ''
+        - '&7We have created a Ultra rank to'
+        - '&7reward generous player who want'
+        - '&7to support server development.'
+        - ''
+        - '&fPrice: %color_gems%950 Gems &f'
+        - ''
+        - '&6Right-Click to read more!'
+        commands:
+        - right= open= rank_ultra
+        has1:
+          value0: '%valiant_premium_currency% ISGREATER'
+          compare0: '950'
+          material: STICK
+          customdata: 100
+          name: '%color_ultra%&lUltra &7[LIFETIME]'
+          lore:
+          - '&8LIFETIME RANK'
+          - ''
+          - '&7We have created the Ultra rank to'
+          - '&7reward generous player who want'
+          - '&7to support server development.'
+          - ''
+          - '&fPrice: %color_gems%950 Gems &f'
+          - ''
+          - '%color_menu_purchase%&l✔ Buy now!'
+          - '&6Right-Click to read more!'
+          commands:
+          - set-data= item_name ultra_rank %cp-player-name%
+          - set-data= item_price 950 %cp-player-name%
+          - left= open= premium_store_confirm
+          - right= open= rank_ultra
+        has0:
+          value0: '%cp-player-name% HASPERM'
+          compare0: 'weight.1'
+          material: STICK
+          customdata: 100
+          name: '%color_ultra%&lUltra &7[LIFETIME]'
+          lore:
+          - '&8LIFETIME RANK'
+          - ''
+          - '&7We have created the Ultra rank to'
+          - '&7reward generous player who want'
+          - '&7to support server development.'
+          - ''
+          - '&fPrice: %color_gems%950 Gems &f'
+          - ''
+          - '%color_menu_unlocked%&lUNLOCKED'
+          - '&6Right-Click to read more!'
+          commands:
+          - right= open= rank_ultra
+      '10':
+        material: STICK
+        customdata: 100
+        name: '%color_ultra%&lUltra &7[LIFETIME]'
+        lore:
+        - '&8LIFETIME RANK'
+        - ''
+        - '&7We have created a Ultra rank to'
+        - '&7reward generous player who want'
+        - '&7to support server development.'
+        - ''
+        - '&fPrice: %color_gems%950 Gems &f'
+        - ''
+        - '&6Right-Click to read more!'
+        commands:
+        - right= open= rank_ultra
+        has1:
+          value0: '%valiant_premium_currency% ISGREATER'
+          compare0: '950'
+          material: STICK
+          customdata: 100
+          name: '%color_ultra%&lUltra &7[LIFETIME]'
+          lore:
+          - '&8LIFETIME RANK'
+          - ''
+          - '&7We have created the Ultra rank to'
+          - '&7reward generous player who want'
+          - '&7to support server development.'
+          - ''
+          - '&fPrice: %color_gems%950 Gems &f'
+          - ''
+          - '%color_menu_purchase%&l✔ Buy now!'
+          - '&6Right-Click to read more!'
+          commands:
+          - set-data= item_name ultra_rank %cp-player-name%
+          - set-data= item_price 950 %cp-player-name%
+          - left= open= premium_store_confirm
+          - right= open= rank_ultra
+        has0:
+          value0: '%cp-player-name% HASPERM'
+          compare0: 'weight.1'
+          material: STICK
+          customdata: 100
+          name: '%color_ultra%&lUltra &7[LIFETIME]'
+          lore:
+          - '&8LIFETIME RANK'
+          - ''
+          - '&7We have created the Ultra rank to'
+          - '&7reward generous player who want'
+          - '&7to support server development.'
+          - ''
+          - '&fPrice: %color_gems%950 Gems &f'
+          - ''
+          - '%color_menu_unlocked%&lUNLOCKED'
+          - '&6Right-Click to read more!'
+          commands:
+          - right= open= rank_ultra
+      '11':
+        material: STICK
+        customdata: 100
+        name: '%color_ultra%&lUltra &7[LIFETIME]'
+        lore:
+        - '&8LIFETIME RANK'
+        - ''
+        - '&7We have created a Ultra rank to'
+        - '&7reward generous player who want'
+        - '&7to support server development.'
+        - ''
+        - '&fPrice: %color_gems%950 Gems &f'
+        - ''
+        - '&6Right-Click to read more!'
+        commands:
+        - right= open= rank_ultra
+        has1:
+          value0: '%valiant_premium_currency% ISGREATER'
+          compare0: '950'
+          material: STICK
+          customdata: 100
+          name: '%color_ultra%&lUltra &7[LIFETIME]'
+          lore:
+          - '&8LIFETIME RANK'
+          - ''
+          - '&7We have created the Ultra rank to'
+          - '&7reward generous player who want'
+          - '&7to support server development.'
+          - ''
+          - '&fPrice: %color_gems%950 Gems &f'
+          - ''
+          - '%color_menu_purchase%&l✔ Buy now!'
+          - '&6Right-Click to read more!'
+          commands:
+          - set-data= item_name ultra_rank %cp-player-name%
+          - set-data= item_price 950 %cp-player-name%
+          - left= open= premium_store_confirm
+          - right= open= rank_ultra
+        has0:
+          value0: '%cp-player-name% HASPERM'
+          compare0: 'weight.1'
+          material: STICK
+          customdata: 100
+          name: '%color_ultra%&lUltra &7[LIFETIME]'
+          lore:
+          - '&8LIFETIME RANK'
+          - ''
+          - '&7We have created the Ultra rank to'
+          - '&7reward generous player who want'
+          - '&7to support server development.'
+          - ''
+          - '&fPrice: %color_gems%950 Gems &f'
+          - ''
+          - '%color_menu_unlocked%&lUNLOCKED'
+          - '&6Right-Click to read more!'
+          commands:
+          - right= open= rank_ultra
+        
+        
+      '18':
+        material: STICK
+        customdata: 100
+        name: '%color_hero%&lHero &7[LIFETIME]'
+        lore:
+        - '&8LIFETIME RANK'
+        - ''
+        - '&7Hero rank has been created to'
+        - '&7give a proper reward to our most'
+        - '&7generous community members.'
+        - ''
+        - '&fPrice: %color_gems%1850 Gems &f'
+        - ''
+        - '&6Right-Click to read more!'
+        commands:
+        - right= open= rank_hero
+        has1:
+          value0: '%valiant_premium_currency% ISGREATER'
+          compare0: '1850'
+          material: STICK
+          customdata: 100
+          name: '%color_hero%&lHero &7[LIFETIME]'
+          lore:
+          - '&8LIFETIME RANK'
+          - ''
+          - '&7Hero rank has been created to'
+          - '&7give a proper reward to our most'
+          - '&7generous community members.'
+          - ''
+          - '&fPrice: %color_gems%1850 Gems &f'
+          - ''
+          - '%color_menu_purchase%&l✔ Buy now!'
+          - '&6Right-Click to read more!'
+          commands:
+          - set-data= item_name hero_rank %cp-player-name%
+          - set-data= item_price 1850 %cp-player-name%
+          - left= open= premium_store_confirm
+          - right= open= rank_hero
+        has0:
+          value0: '%cp-player-name% HASPERM'
+          compare0: 'weight.2'
+          material: STICK
+          customdata: 100
+          name: '%color_hero%&lHero &7[LIFETIME]'
+          lore:
+          - '&8LIFETIME RANK'
+          - ''
+          - '&7Hero rank has been created to'
+          - '&7give a proper reward to our most'
+          - '&7generous community members.'
+          - ''
+          - '&fPrice: %color_gems%1850 Gems &f'
+          - ''
+          - '%color_menu_unlocked%&lUNLOCKED'
+          - '&6Right-Click to read more!'
+          commands:
+          - right= open= rank_hero
+      '19':
+        material: STICK
+        customdata: 100
+        name: '%color_hero%&lHero &7[LIFETIME]'
+        lore:
+        - '&8LIFETIME RANK'
+        - ''
+        - '&7Hero rank has been created to'
+        - '&7give a proper reward to our most'
+        - '&7generous community members.'
+        - ''
+        - '&fPrice: %color_gems%1850 Gems &f'
+        - ''
+        - '&6Right-Click to read more!'
+        commands:
+        - right= open= rank_hero
+        has1:
+          value0: '%valiant_premium_currency% ISGREATER'
+          compare0: '1850'
+          material: STICK
+          customdata: 100
+          name: '%color_hero%&lHero &7[LIFETIME]'
+          lore:
+          - '&8LIFETIME RANK'
+          - ''
+          - '&7Hero rank has been created to'
+          - '&7give a proper reward to our most'
+          - '&7generous community members.'
+          - ''
+          - '&fPrice: %color_gems%1850 Gems &f'
+          - ''
+          - '%color_menu_purchase%&l✔ Buy now!'
+          - '&6Right-Click to read more!'
+          commands:
+          - set-data= item_name hero_rank %cp-player-name%
+          - set-data= item_price 1850 %cp-player-name%
+          - left= open= premium_store_confirm
+          - right= open= rank_hero
+        has0:
+          value0: '%cp-player-name% HASPERM'
+          compare0: 'weight.2'
+          material: STICK
+          customdata: 100
+          name: '%color_hero%&lHero &7[LIFETIME]'
+          lore:
+          - '&8LIFETIME RANK'
+          - ''
+          - '&7Hero rank has been created to'
+          - '&7give a proper reward to our most'
+          - '&7generous community members.'
+          - ''
+          - '&fPrice: %color_gems%1850 Gems &f'
+          - ''
+          - '%color_menu_unlocked%&lUNLOCKED'
+          - '&6Right-Click to read more!'
+          commands:
+          - right= open= rank_hero
+      '20':
+        material: STICK
+        customdata: 100
+        name: '%color_hero%&lHero &7[LIFETIME]'
+        lore:
+        - '&8LIFETIME RANK'
+        - ''
+        - '&7Hero rank has been created to'
+        - '&7give a proper reward to our most'
+        - '&7generous community members.'
+        - ''
+        - '&fPrice: %color_gems%1850 Gems &f'
+        - ''
+        - '&6Right-Click to read more!'
+        commands:
+        - right= open= rank_hero
+        has1:
+          value0: '%valiant_premium_currency% ISGREATER'
+          compare0: '1850'
+          material: STICK
+          customdata: 100
+          name: '%color_hero%&lHero &7[LIFETIME]'
+          lore:
+          - '&8LIFETIME RANK'
+          - ''
+          - '&7Hero rank has been created to'
+          - '&7give a proper reward to our most'
+          - '&7generous community members.'
+          - ''
+          - '&fPrice: %color_gems%1850 Gems &f'
+          - ''
+          - '%color_menu_purchase%&l✔ Buy now!'
+          - '&6Right-Click to read more!'
+          commands:
+          - set-data= item_name hero_rank %cp-player-name%
+          - set-data= item_price 1850 %cp-player-name%
+          - left= open= premium_store_confirm
+          - right= open= rank_hero
+        has0:
+          value0: '%cp-player-name% HASPERM'
+          compare0: 'weight.2'
+          material: STICK
+          customdata: 100
+          name: '%color_hero%&lHero &7[LIFETIME]'
+          lore:
+          - '&8LIFETIME RANK'
+          - ''
+          - '&7Hero rank has been created to'
+          - '&7give a proper reward to our most'
+          - '&7generous community members.'
+          - ''
+          - '&fPrice: %color_gems%1850 Gems &f'
+          - ''
+          - '%color_menu_unlocked%&lUNLOCKED'
+          - '&6Right-Click to read more!'
+          commands:
+          - right= open= rank_hero
+      
+      '27':
+        material: STICK
+        customdata: 100
+        name: '%color_legend%&lLegend &7[LIFETIME]'
+        lore:
+        - '&8LIFETIME RANK'
+        - ''
+        - '&7Legend rank is reserved for the'
+        - '&7players that appreciate the server'
+        - '&7the most. We are eternally grateful!'
+        - ''
+        - '&fPrice: %color_gems%3750 Gems &f'
+        - ''
+        - '&6Right-Click to read more!'
+        commands:
+        - right= open= rank_legend
+        has1:
+          value0: '%valiant_premium_currency% ISGREATER'
+          compare0: '3750'
+          material: STICK
+          customdata: 100
+          name: '%color_legend%&lLegend &7[LIFETIME]'
+          lore:
+          - '&8LIFETIME RANK'
+          - ''
+          - '&7Legend rank is reserved for the'
+          - '&7players that appreciate the server'
+          - '&7the most. We are eternally grateful!'
+          - ''
+          - '&fPrice: %color_gems%3750 Gems &f'
+          - ''
+          - '%color_menu_purchase%&l✔ Buy now!'
+          - '&6Right-Click to read more!'
+          commands:
+          - set-data= item_name legend_rank %cp-player-name%
+          - set-data= item_price 3750 %cp-player-name%
+          - left= open= premium_store_confirm
+          - right= open= rank_legend
+        has0:
+          value0: '%cp-player-name% HASPERM'
+          compare0: 'weight.3'
+          material: STICK
+          customdata: 100
+          name: '%color_legend%&lLegend &7[LIFETIME]'
+          lore:
+          - '&8LIFETIME RANK'
+          - ''
+          - '&7Legend rank is reserved for the'
+          - '&7players that appreciate the server'
+          - '&7the most. We are eternally grateful!'
+          - ''
+          - '&fPrice: %color_gems%3750 Gems &f'
+          - ''
+          - '%color_menu_unlocked%&lUNLOCKED'
+          - '&6Right-Click to read more!'
+          commands:
+          - right= open= rank_legend
+      '28':
+        material: STICK
+        customdata: 100
+        name: '%color_legend%&lLegend &7[LIFETIME]'
+        lore:
+        - '&8LIFETIME RANK'
+        - ''
+        - '&7Legend rank is reserved for the'
+        - '&7players that appreciate the server'
+        - '&7the most. We are eternally grateful!'
+        - ''
+        - '&fPrice: %color_gems%3750 Gems &f'
+        - ''
+        - '&6Right-Click to read more!'
+        commands:
+        - right= open= rank_legend
+        has1:
+          value0: '%valiant_premium_currency% ISGREATER'
+          compare0: '3750'
+          material: STICK
+          customdata: 100
+          name: '%color_legend%&lLegend &7[LIFETIME]'
+          lore:
+          - '&8LIFETIME RANK'
+          - ''
+          - '&7Legend rank is reserved for the'
+          - '&7players that appreciate the server'
+          - '&7the most. We are eternally grateful!'
+          - ''
+          - '&fPrice: %color_gems%3750 Gems &f'
+          - ''
+          - '%color_menu_purchase%&l✔ Buy now!'
+          - '&6Right-Click to read more!'
+          commands:
+          - set-data= item_name legend_rank %cp-player-name%
+          - set-data= item_price 3750 %cp-player-name%
+          - left= open= premium_store_confirm
+          - right= open= rank_legend
+        has0:
+          value0: '%cp-player-name% HASPERM'
+          compare0: 'weight.3'
+          material: STICK
+          customdata: 100
+          name: '%color_legend%&lLegend &7[LIFETIME]'
+          lore:
+          - '&8LIFETIME RANK'
+          - ''
+          - '&7Legend rank is reserved for the'
+          - '&7players that appreciate the server'
+          - '&7the most. We are eternally grateful!'
+          - ''
+          - '&fPrice: %color_gems%3750 Gems &f'
+          - ''
+          - '%color_menu_unlocked%&lUNLOCKED'
+          - '&6Right-Click to read more!'
+          commands:
+          - right= open= rank_legend
+      '29':
+        material: STICK
+        customdata: 100
+        name: '%color_legend%&lLegend &7[LIFETIME]'
+        lore:
+        - '&8LIFETIME RANK'
+        - ''
+        - '&7Legend rank is reserved for the'
+        - '&7players that appreciate the server'
+        - '&7the most. We are eternally grateful!'
+        - ''
+        - '&fPrice: %color_gems%3750 Gems &f'
+        - ''
+        - '&6Right-Click to read more!'
+        commands:
+        - right= open= rank_legend
+        has1:
+          value0: '%valiant_premium_currency% ISGREATER'
+          compare0: '3750'
+          material: STICK
+          customdata: 100
+          name: '%color_legend%&lLegend &7[LIFETIME]'
+          lore:
+          - '&8LIFETIME RANK'
+          - ''
+          - '&7Legend rank is reserved for the'
+          - '&7players that appreciate the server'
+          - '&7the most. We are eternally grateful!'
+          - ''
+          - '&fPrice: %color_gems%3750 Gems &f'
+          - ''
+          - '%color_menu_purchase%&l✔ Buy now!'
+          - '&6Right-Click to read more!'
+          commands:
+          - set-data= item_name legend_rank %cp-player-name%
+          - set-data= item_price 3750 %cp-player-name%
+          - left= open= premium_store_confirm
+          - right= open= rank_legend
+        has0:
+          value0: '%cp-player-name% HASPERM'
+          compare0: 'weight.3'
+          material: STICK
+          customdata: 100
+          name: '%color_legend%&lLegend &7[LIFETIME]'
+          lore:
+          - '&8LIFETIME RANK'
+          - ''
+          - '&7Legend rank is reserved for the'
+          - '&7players that appreciate the server'
+          - '&7the most. We are eternally grateful!'
+          - ''
+          - '&fPrice: %color_gems%3750 Gems &f'
+          - ''
+          - '%color_menu_unlocked%&lUNLOCKED'
+          - '&6Right-Click to read more!'
+          commands:
+          - right= open= rank_legend
+
+      
+      
+      
+        
+        
+
+
+
+      '15':
+        material: STICK
+        customdata: 61
+        name: '%color_luck_booster%Luck Booster'
+        lore:
+        - ''
+        - '&7This booster will enhance the luck'
+        - '&7of all online players for &e6 hours&7.'
+        - ''
+        - '&7It will let players get better'
+        - '&7loot from chests and fishing.'
+        - ''
+        - '&fPrice: %color_gems%950 Gems &f'
+        has0:
+          value0: '%valiant_premium_currency% ISGREATER'
+          compare0: '950'
+          material: STICK
+          customdata: 61
+          name: '%color_luck_booster%Luck Booster'
+          lore:
+          - ''
+          - '&7This booster will enhance the luck'
+          - '&7of all online players for &e6 hours&7.'
+          - ''
+          - '&7It will let players get better'
+          - '&7loot from chests and fishing.'
+          - ''
+          - '&fPrice: %color_gems%950 Gems &f'
+          - ''
+          - '%color_menu_purchase%&l✔ Buy now!'
+          commands:
+            - set-data= item_name luck_booster %cp-player-name%
+            - set-data= item_price 950 %cp-player-name%
+            - open= premium_store_confirm
+      
+      '16':
+        material: STICK
+        customdata: 62
+        name: '%color_protection_booster%Protection Booster'
+        lore:
+        - ''
+        - '&7This booster will prevent players from'
+        - '&7dropping their items on death for &e6 hours&7.'
+        - ''
+        - '&7Players will keep all of their'
+        - '&7inventory contents on death.'
+        - ''
+        - '&fPrice: %color_gems%950 Gems &f'
+        has0:
+          value0: '%valiant_premium_currency% ISGREATER'
+          compare0: '950'
+          material: STICK
+          customdata: 62
+          name: '%color_protection_booster%Protection Booster'
+          lore:
+          - ''
+          - '&7This booster will prevent players from'
+          - '&7dropping their items on death for &e6 hours&7.'
+          - ''
+          - '&7Players will keep all of their'
+          - '&7inventory contents on death.'
+          - ''
+          - '&fPrice: %color_gems%950 Gems &f'
+          - ''
+          - '%color_menu_purchase%&l✔ Buy now!'
+          commands:
+            - set-data= item_name protection_booster %cp-player-name%
+            - set-data= item_price 950 %cp-player-name%
+            - open= premium_store_confirm
+      
+      
+      '17':
+        material: STICK
+        customdata: 63
+        name: '%color_adventure_pass_booster%Adventure Pass Booster'
+        lore:
+        - ''
+        - '&7This booster will increase the'
+        - '&6Adventure Pass &7experience gained'
+        - '&7for all players for &e6 hours&7.'
+        - ''
+        - '&7All players will get double'
+        - '&7Adventure Pass Experience.'
+        - ''
+        - '&fPrice: %color_gems%950 Gems &f'
+        has0:
+          value0: '%valiant_premium_currency% ISGREATER'
+          compare0: '950'
+          material: STICK
+          customdata: 63
+          name: '%color_adventure_pass_booster%Adventure Pass Booster'
+          lore:
+          - ''
+          - '&7This booster will increase the'
+          - '&6Adventure Pass &7experience gained'
+          - '&7for all players for &e6 hours&7.'
+          - ''
+          - '&7All players will get double'
+          - '&7Adventure Pass Experience.'
+          - ''
+          - '&fPrice: %color_gems%950 Gems &f'
+          - ''
+          - '%color_menu_purchase%&l✔ Buy now!'
+          commands:
+            - set-data= item_name xp_booster %cp-player-name%
+            - set-data= item_price 950 %cp-player-name%
+            - open= premium_store_confirm
+        
+
+
+
+
+      '33':
+        material: STICK
+        customdata: 51
+        name: '%color_ultra%Adventure Crate'
+        lore:
+        - ' '
+        - '&fRating: %color_ultra%★☆☆'
+        - ''
+        - '&7A chest found in the dark'
+        - '&7depths of a mysterious cave.'
+        - '&7Open it to discover what kind'
+        - '&7of valuables lay hidden inside.'
+        - ''
+        - '&fPrice: %color_gems%450 Gems &f for %color_ultra%2 Keys'
+        has0:
+          value0: '%valiant_premium_currency% ISGREATER'
+          compare0: '450'
+          material: STICK
+          customdata: 51
+          name: '%color_ultra%Adventure Crate'
+          lore:
+          - ' '
+          - '&fRating: %color_ultra%★☆☆'
+          - ''
+          - '&7A chest found in the dark'
+          - '&7depths of a mysterious cave.'
+          - '&7Open it to discover what kind'
+          - '&7of valuables lay hidden inside.'
+          - ''
+          - '&fPrice: %color_gems%450 Gems &f for %color_ultra%2 Keys'
+          - ''
+          - '%color_menu_purchase%&l✔ Buy now!'
+          commands:
+          - set-data= item_name adventure_crate %cp-player-name%
+          - set-data= item_price 450 %cp-player-name%
+          - open= premium_store_confirm
+      
+      '34':
+        material: STICK
+        customdata: 52
+        name: '%color_hero%Hero Crate'
+        lore:
+        - ' '
+        - '&fRating: %color_hero%★★☆'
+        - ''
+        - '&7This crate was discovered by'
+        - '&7a group of adventurers, while'
+        - '&7exploring an abandoned temple'
+        - '&7deep in the jungle.'
+        - ''
+        - '&fPrice: %color_gems%850 Gems &f for %color_hero%2 Keys'
+        has0:
+          value0: '%valiant_premium_currency% ISGREATER'
+          compare0: '850'
+          material: STICK
+          customdata: 52
+          name: '%color_hero%Hero Crate'
+          lore:
+          - ' '
+          - '&fRating: %color_hero%★★☆'
+          - ''
+          - '&7This crate was discovered by'
+          - '&7a group of adventurers, while'
+          - '&7exploring an abandoned temple'
+          - '&7deep in the jungle.'
+          - ''
+          - '&fPrice: %color_gems%850 Gems &f for %color_hero%2 Keys'
+          - ''
+          - '%color_menu_purchase%&l✔ Buy now!'
+          commands:
+          - set-data= item_name hero_crate %cp-player-name%
+          - set-data= item_price 850 %cp-player-name%
+          - open= premium_store_confirm
+      
+      '35':
+        material: STICK
+        customdata: 53
+        name: '%color_legend%Legendary Crate'
+        lore:
+        - ' '
+        - '&fRating: %color_legend%★★★'
+        - ''
+        - '&7Magnificient crate, brimming with'
+        - '&7powerful weapons and dazzling armor.'
+        - '&7The legend says that it was found in the'
+        - '&7sacrophagus of a legendary ancient tomb.'
+        - ''
+        - '&fPrice: %color_gems%1750 Gems &f for %color_legend%2 Keys'
+        has0:
+          value0: '%valiant_premium_currency% ISGREATER'
+          compare0: '1750'
+          material: STICK
+          customdata: 53
+          name: '%color_legend%Legendary Crate'
+          lore:
+          - ' '
+          - '&fRating: %color_legend%★★★'
+          - ''
+          - '&7Magnificient crate, brimming with'
+          - '&7powerful weapons and dazzling armor.'
+          - '&7Legend says it was found in the'
+          - '&7sacrophagus of a legendary ancient tomb.'
+          - ''
+          - '&fPrice: %color_gems%1750 Gems &f for %color_legend%2 Keys'
+          - ''
+          - '%color_menu_purchase%&l✔ Buy now!'
+          commands:
+          - set-data= item_name legendary_crate %cp-player-name%
+          - set-data= item_price 1750 %cp-player-name%
+          - open= premium_store_confirm
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      '36':
+        material: STICK
+        customdata: 100
+        name: '%color_adventure_pass_name%Adventure Pass %color_adventure_pass_premium%&lPREMIUM'
+        lore:
+        - '&8LASTS FULL SEASON'
+        - ''
+        - '&7Upgrade to %color_adventure_pass_premium%&lPREMIUM PASS'
+        - '&7and unlock &6&l40 NEW REWARDS!'
+        - ''
+        - '&fPrice: %color_gems%950 Gems &f'
+        has0:
+          value0: '%valiant_premium_currency% ISGREATER'
+          compare0: '950 AND'
+          value1: '%valiant_battlepass_premium%'
+          compare1: 'false'
+          material: STICK
+          customdata: 100
+          name: '%color_adventure_pass_name%Adventure Pass %color_adventure_pass_premium%&lPREMIUM'
+          lore:
+          - '&8LASTS FULL SEASON'
+          - ''
+          - '&7Upgrade to %color_adventure_pass_premium%&lPREMIUM PASS'
+          - '&7and unlock &6&l40 NEW REWARDS!'
+          - ''
+          - '&fPrice: %color_gems%950 Gems &f'
+          - ''
+          - '%color_menu_purchase%&l✔ Buy now!'
+          commands:
+          - set-data= item_name adventure_pass %cp-player-name%
+          - set-data= item_price 950 %cp-player-name%
+          - open= premium_store_confirm
+        has1:
+          value0: '%valiant_premium_currency% ISGREATER'
+          compare0: '950 AND'
+          value1: '%valiant_battlepass_premium%'
+          compare1: 'true'
+          material: STICK
+          customdata: 100
+          name: '%color_adventure_pass_name%Adventure Pass %color_adventure_pass_premium%&lPREMIUM'
+          lore:
+          - '&8LASTS FULL SEASON'
+          - ''
+          - '&7Upgrade to %color_adventure_pass_premium%&lPREMIUM PASS'
+          - '&7and unlock &6&l40 NEW REWARDS!'
+          - ''
+          - '&fPrice: %color_gems%950 Gems &f'
+          - ''
+          - '%color_menu_unlocked%&lUNLOCKED'
+      '37':
+        material: STICK
+        customdata: 100
+        name: '%color_adventure_pass_name%Adventure Pass %color_adventure_pass_premium%&lPREMIUM'
+        lore:
+        - '&8LASTS FULL SEASON'
+        - ''
+        - '&7Upgrade to %color_adventure_pass_premium%&lPREMIUM PASS'
+        - '&7and unlock &6&l40 NEW REWARDS!'
+        - ''
+        - '&fPrice: %color_gems%950 Gems &f'
+        has0:
+          value0: '%valiant_premium_currency% ISGREATER'
+          compare0: '950 AND'
+          value1: '%valiant_battlepass_premium%'
+          compare1: 'false'
+          material: STICK
+          customdata: 100
+          name: '%color_adventure_pass_name%Adventure Pass %color_adventure_pass_premium%&lPREMIUM'
+          lore:
+          - '&8LASTS FULL SEASON'
+          - ''
+          - '&7Upgrade to %color_adventure_pass_premium%&lPREMIUM PASS'
+          - '&7and unlock &6&l40 NEW REWARDS!'
+          - ''
+          - '&fPrice: %color_gems%950 Gems &f'
+          - ''
+          - '%color_menu_purchase%&l✔ Buy now!'
+          commands:
+          - set-data= item_name adventure_pass %cp-player-name%
+          - set-data= item_price 950 %cp-player-name%
+          - open= premium_store_confirm
+        has1:
+          value0: '%valiant_premium_currency% ISGREATER'
+          compare0: '950 AND'
+          value1: '%valiant_battlepass_premium%'
+          compare1: 'true'
+          material: STICK
+          customdata: 100
+          name: '%color_adventure_pass_name%Adventure Pass %color_adventure_pass_premium%&lPREMIUM'
+          lore:
+          - '&8LASTS FULL SEASON'
+          - ''
+          - '&7Upgrade to %color_adventure_pass_premium%&lPREMIUM PASS'
+          - '&7and unlock &6&l40 NEW REWARDS!'
+          - ''
+          - '&fPrice: %color_gems%950 Gems &f'
+          - ''
+          - '%color_menu_unlocked%&lUNLOCKED'
+      '38':
+        material: STICK
+        customdata: 100
+        name: '%color_adventure_pass_name%Adventure Pass %color_adventure_pass_premium%&lPREMIUM'
+        lore:
+        - '&8LASTS FULL SEASON'
+        - ''
+        - '&7Upgrade to %color_adventure_pass_premium%&lPREMIUM PASS'
+        - '&7and unlock &6&l40 NEW REWARDS!'
+        - ''
+        - '&fPrice: %color_gems%950 Gems &f'
+        has0:
+          value0: '%valiant_premium_currency% ISGREATER'
+          compare0: '950 AND'
+          value1: '%valiant_battlepass_premium%'
+          compare1: 'false'
+          material: STICK
+          customdata: 100
+          name: '%color_adventure_pass_name%Adventure Pass %color_adventure_pass_premium%&lPREMIUM'
+          lore:
+          - '&8LASTS FULL SEASON'
+          - ''
+          - '&7Upgrade to %color_adventure_pass_premium%&lPREMIUM PASS'
+          - '&7and unlock &6&l40 NEW REWARDS!'
+          - ''
+          - '&fPrice: %color_gems%950 Gems &f'
+          - ''
+          - '%color_menu_purchase%&l✔ Buy now!'
+          commands:
+          - set-data= item_name adventure_pass %cp-player-name%
+          - set-data= item_price 950 %cp-player-name%
+          - open= premium_store_confirm
+        has1:
+          value0: '%valiant_premium_currency% ISGREATER'
+          compare0: '950 AND'
+          value1: '%valiant_battlepass_premium%'
+          compare1: 'true'
+          material: STICK
+          customdata: 100
+          name: '%color_adventure_pass_name%Adventure Pass %color_adventure_pass_premium%&lPREMIUM'
+          lore:
+          - '&8LASTS FULL SEASON'
+          - ''
+          - '&7Upgrade to %color_adventure_pass_premium%&lPREMIUM PASS'
+          - '&7and unlock &6&l40 NEW REWARDS!'
+          - ''
+          - '&fPrice: %color_gems%950 Gems &f'
+          - ''
+          - '%color_menu_unlocked%&lUNLOCKED'
+      '39':
+        material: STICK
+        customdata: 100
+        name: '%color_adventure_pass_name%Adventure Pass %color_adventure_pass_premium%&lPREMIUM'
+        lore:
+        - '&8LASTS FULL SEASON'
+        - ''
+        - '&7Upgrade to %color_adventure_pass_premium%&lPREMIUM PASS'
+        - '&7and unlock &6&l40 NEW REWARDS!'
+        - ''
+        - '&fPrice: %color_gems%950 Gems &f'
+        has0:
+          value0: '%valiant_premium_currency% ISGREATER'
+          compare0: '950 AND'
+          value1: '%valiant_battlepass_premium%'
+          compare1: 'false'
+          material: STICK
+          customdata: 100
+          name: '%color_adventure_pass_name%Adventure Pass %color_adventure_pass_premium%&lPREMIUM'
+          lore:
+          - '&8LASTS FULL SEASON'
+          - ''
+          - '&7Upgrade to %color_adventure_pass_premium%&lPREMIUM PASS'
+          - '&7and unlock &6&l40 NEW REWARDS!'
+          - ''
+          - '&fPrice: %color_gems%950 Gems &f'
+          - ''
+          - '%color_menu_purchase%&l✔ Buy now!'
+          commands:
+          - set-data= item_name adventure_pass %cp-player-name%
+          - set-data= item_price 950 %cp-player-name%
+          - open= premium_store_confirm
+        has1:
+          value0: '%valiant_premium_currency% ISGREATER'
+          compare0: '950 AND'
+          value1: '%valiant_battlepass_premium%'
+          compare1: 'true'
+          material: STICK
+          customdata: 100
+          name: '%color_adventure_pass_name%Adventure Pass %color_adventure_pass_premium%&lPREMIUM'
+          lore:
+          - '&8LASTS FULL SEASON'
+          - ''
+          - '&7Upgrade to %color_adventure_pass_premium%&lPREMIUM PASS'
+          - '&7and unlock &6&l40 NEW REWARDS!'
+          - ''
+          - '&fPrice: %color_gems%950 Gems &f'
+          - ''
+          - '%color_menu_unlocked%&lUNLOCKED'
+      '40':
+        material: STICK
+        customdata: 100
+        name: '%color_adventure_pass_name%Adventure Pass %color_adventure_pass_premium%&lPREMIUM'
+        lore:
+        - '&8LASTS FULL SEASON'
+        - ''
+        - '&7Upgrade to %color_adventure_pass_premium%&lPREMIUM PASS'
+        - '&7and unlock &6&l40 NEW REWARDS!'
+        - ''
+        - '&fPrice: %color_gems%950 Gems &f'
+        has0:
+          value0: '%valiant_premium_currency% ISGREATER'
+          compare0: '950 AND'
+          value1: '%valiant_battlepass_premium%'
+          compare1: 'false'
+          material: STICK
+          customdata: 100
+          name: '%color_adventure_pass_name%Adventure Pass %color_adventure_pass_premium%&lPREMIUM'
+          lore:
+          - '&8LASTS FULL SEASON'
+          - ''
+          - '&7Upgrade to %color_adventure_pass_premium%&lPREMIUM PASS'
+          - '&7and unlock &6&l40 NEW REWARDS!'
+          - ''
+          - '&fPrice: %color_gems%950 Gems &f'
+          - ''
+          - '%color_menu_purchase%&l✔ Buy now!'
+          commands:
+          - set-data= item_name adventure_pass %cp-player-name%
+          - set-data= item_price 950 %cp-player-name%
+          - open= premium_store_confirm
+        has1:
+          value0: '%valiant_premium_currency% ISGREATER'
+          compare0: '950 AND'
+          value1: '%valiant_battlepass_premium%'
+          compare1: 'true'
+          material: STICK
+          customdata: 100
+          name: '%color_adventure_pass_name%Adventure Pass %color_adventure_pass_premium%&lPREMIUM'
+          lore:
+          - '&8LASTS FULL SEASON'
+          - ''
+          - '&7Upgrade to %color_adventure_pass_premium%&lPREMIUM PASS'
+          - '&7and unlock &6&l40 NEW REWARDS!'
+          - ''
+          - '&fPrice: %color_gems%950 Gems &f'
+          - ''
+          - '%color_menu_unlocked%&lUNLOCKED'
+      '41':
+        material: STICK
+        customdata: 100
+        name: '%color_adventure_pass_name%Adventure Pass %color_adventure_pass_premium%&lPREMIUM'
+        lore:
+        - '&8LASTS FULL SEASON'
+        - ''
+        - '&7Upgrade to %color_adventure_pass_premium%&lPREMIUM PASS'
+        - '&7and unlock &6&l40 NEW REWARDS!'
+        - ''
+        - '&fPrice: %color_gems%950 Gems &f'
+        has0:
+          value0: '%valiant_premium_currency% ISGREATER'
+          compare0: '950 AND'
+          value1: '%valiant_battlepass_premium%'
+          compare1: 'false'
+          material: STICK
+          customdata: 100
+          name: '%color_adventure_pass_name%Adventure Pass %color_adventure_pass_premium%&lPREMIUM'
+          lore:
+          - '&8LASTS FULL SEASON'
+          - ''
+          - '&7Upgrade to %color_adventure_pass_premium%&lPREMIUM PASS'
+          - '&7and unlock &6&l40 NEW REWARDS!'
+          - ''
+          - '&fPrice: %color_gems%950 Gems &f'
+          - ''
+          - '%color_menu_purchase%&l✔ Buy now!'
+          commands:
+          - set-data= item_name adventure_pass %cp-player-name%
+          - set-data= item_price 950 %cp-player-name%
+          - open= premium_store_confirm
+        has1:
+          value0: '%valiant_premium_currency% ISGREATER'
+          compare0: '950 AND'
+          value1: '%valiant_battlepass_premium%'
+          compare1: 'true'
+          material: STICK
+          customdata: 100
+          name: '%color_adventure_pass_name%Adventure Pass %color_adventure_pass_premium%&lPREMIUM'
+          lore:
+          - '&8LASTS FULL SEASON'
+          - ''
+          - '&7Upgrade to %color_adventure_pass_premium%&lPREMIUM PASS'
+          - '&7and unlock &6&l40 NEW REWARDS!'
+          - ''
+          - '&fPrice: %color_gems%950 Gems &f'
+          - ''
+          - '%color_menu_unlocked%&lUNLOCKED'
+      '42':
+        material: STICK
+        customdata: 100
+        name: '%color_adventure_pass_name%Adventure Pass %color_adventure_pass_premium%&lPREMIUM'
+        lore:
+        - '&8LASTS FULL SEASON'
+        - ''
+        - '&7Upgrade to %color_adventure_pass_premium%&lPREMIUM PASS'
+        - '&7and unlock &6&l40 NEW REWARDS!'
+        - ''
+        - '&fPrice: %color_gems%950 Gems &f'
+        has0:
+          value0: '%valiant_premium_currency% ISGREATER'
+          compare0: '950 AND'
+          value1: '%valiant_battlepass_premium%'
+          compare1: 'false'
+          material: STICK
+          customdata: 100
+          name: '%color_adventure_pass_name%Adventure Pass %color_adventure_pass_premium%&lPREMIUM'
+          lore:
+          - '&8LASTS FULL SEASON'
+          - ''
+          - '&7Upgrade to %color_adventure_pass_premium%&lPREMIUM PASS'
+          - '&7and unlock &6&l40 NEW REWARDS!'
+          - ''
+          - '&fPrice: %color_gems%950 Gems &f'
+          - ''
+          - '%color_menu_purchase%&l✔ Buy now!'
+          commands:
+          - set-data= item_name adventure_pass %cp-player-name%
+          - set-data= item_price 950 %cp-player-name%
+          - open= premium_store_confirm
+        has1:
+          value0: '%valiant_premium_currency% ISGREATER'
+          compare0: '950 AND'
+          value1: '%valiant_battlepass_premium%'
+          compare1: 'true'
+          material: STICK
+          customdata: 100
+          name: '%color_adventure_pass_name%Adventure Pass %color_adventure_pass_premium%&lPREMIUM'
+          lore:
+          - '&8LASTS FULL SEASON'
+          - ''
+          - '&7Upgrade to %color_adventure_pass_premium%&lPREMIUM PASS'
+          - '&7and unlock &6&l40 NEW REWARDS!'
+          - ''
+          - '&fPrice: %color_gems%950 Gems &f'
+          - ''
+          - '%color_menu_unlocked%&lUNLOCKED'
+      '43':
+        material: STICK
+        customdata: 100
+        name: '%color_adventure_pass_name%Adventure Pass %color_adventure_pass_premium%&lPREMIUM'
+        lore:
+        - '&8LASTS FULL SEASON'
+        - ''
+        - '&7Upgrade to %color_adventure_pass_premium%&lPREMIUM PASS'
+        - '&7and unlock &6&l40 NEW REWARDS!'
+        - ''
+        - '&fPrice: %color_gems%950 Gems &f'
+        has0:
+          value0: '%valiant_premium_currency% ISGREATER'
+          compare0: '950 AND'
+          value1: '%valiant_battlepass_premium%'
+          compare1: 'false'
+          material: STICK
+          customdata: 100
+          name: '%color_adventure_pass_name%Adventure Pass %color_adventure_pass_premium%&lPREMIUM'
+          lore:
+          - '&8LASTS FULL SEASON'
+          - ''
+          - '&7Upgrade to %color_adventure_pass_premium%&lPREMIUM PASS'
+          - '&7and unlock &6&l40 NEW REWARDS!'
+          - ''
+          - '&fPrice: %color_gems%950 Gems &f'
+          - ''
+          - '%color_menu_purchase%&l✔ Buy now!'
+          commands:
+          - set-data= item_name adventure_pass %cp-player-name%
+          - set-data= item_price 950 %cp-player-name%
+          - open= premium_store_confirm
+        has1:
+          value0: '%valiant_premium_currency% ISGREATER'
+          compare0: '950 AND'
+          value1: '%valiant_battlepass_premium%'
+          compare1: 'true'
+          material: STICK
+          customdata: 100
+          name: '%color_adventure_pass_name%Adventure Pass %color_adventure_pass_premium%&lPREMIUM'
+          lore:
+          - '&8LASTS FULL SEASON'
+          - ''
+          - '&7Upgrade to %color_adventure_pass_premium%&lPREMIUM PASS'
+          - '&7and unlock &6&l40 NEW REWARDS!'
+          - ''
+          - '&fPrice: %color_gems%950 Gems &f'
+          - ''
+          - '%color_menu_unlocked%&lUNLOCKED'
+      '44':
+        material: STICK
+        customdata: 100
+        name: '%color_adventure_pass_name%Adventure Pass %color_adventure_pass_premium%&lPREMIUM'
+        lore:
+        - '&8LASTS FULL SEASON'
+        - ''
+        - '&7Upgrade to %color_adventure_pass_premium%&lPREMIUM PASS'
+        - '&7and unlock &6&l40 NEW REWARDS!'
+        - ''
+        - '&fPrice: %color_gems%950 Gems &f'
+        has0:
+          value0: '%valiant_premium_currency% ISGREATER'
+          compare0: '950 AND'
+          value1: '%valiant_battlepass_premium%'
+          compare1: 'false'
+          material: STICK
+          customdata: 100
+          name: '%color_adventure_pass_name%Adventure Pass %color_adventure_pass_premium%&lPREMIUM'
+          lore:
+          - '&8LASTS FULL SEASON'
+          - ''
+          - '&7Upgrade to %color_adventure_pass_premium%&lPREMIUM PASS'
+          - '&7and unlock &6&l40 NEW REWARDS!'
+          - ''
+          - '&fPrice: %color_gems%950 Gems &f'
+          - ''
+          - '%color_menu_purchase%&l✔ Buy now!'
+          commands:
+          - set-data= item_name adventure_pass %cp-player-name%
+          - set-data= item_price 950 %cp-player-name%
+          - open= premium_store_confirm
+        has1:
+          value0: '%valiant_premium_currency% ISGREATER'
+          compare0: '950 AND'
+          value1: '%valiant_battlepass_premium%'
+          compare1: 'true'
+          material: STICK
+          customdata: 100
+          name: '%color_adventure_pass_name%Adventure Pass %color_adventure_pass_premium%&lPREMIUM'
+          lore:
+          - '&8LASTS FULL SEASON'
+          - ''
+          - '&7Upgrade to %color_adventure_pass_premium%&lPREMIUM PASS'
+          - '&7and unlock &6&l40 NEW REWARDS!'
+          - ''
+          - '&fPrice: %color_gems%950 Gems &f'
+          - ''
+          - '%color_menu_unlocked%&lUNLOCKED'

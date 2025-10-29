@@ -1,0 +1,620 @@
+'6':
+    zombie:
+        type: zombie
+        name: "&cZombie"
+        health: 17
+        weapon:
+        - diamond sword of sharpness 2
+        - diamond pickaxe of sharpness 2 and knockback 1
+        - diamond axe of sharpness 2
+        helmet:
+        - unbreakable diamond helmet
+        chestplate:
+        - unbreakable iron chestplate
+        - air
+        leggings:
+        - unbreakable diamond leggings
+        - unbreakable iron leggings
+        boots:
+        - unbreakable diamond boots
+        - unbreakable iron boots
+        loot:
+            common_loot:
+            - 4 of iron ingot
+            - 3 of gold ingot
+            rare_loot:
+            - custom:zombie_brain
+            - 2 of emerald
+            - diamond
+            epic_loot:
+            - custom:shackle
+            - custom:flashlight
+            common_chance: 15
+            rare_chance: 3
+            epic_chance: 0.5
+    skeleton:
+        type: skeleton
+        name: "&cSkeleton"
+        health: 17
+        weapon:
+        - bow of power 3
+        - bow of power 2
+        - diamond axe of sharpness 2
+        helmet:
+        - unbreakable iron helmet
+        - unbreakable diamond helmet
+        chestplate:
+        - unbreakable iron chestplate
+        - unbreakable diamond chestplate
+        leggings:
+        - unbreakable iron leggings
+        - air
+        boots:
+        - unbreakable iron boots
+        - air
+        loot:
+            common_loot:
+            - iron ingot
+            - carrot
+            rare_loot:
+            - custom:skeleton_skull
+            epic_loot:
+            - custom:bone_necklace
+            - custom:miner_helmet
+            common_chance: 15
+            rare_chance: 3
+            epic_chance: 0.5
+    ghost:
+        type: skeleton
+        name: "&cGhost"
+        health: 17
+        invisibility: true
+        weapon:
+        - iron sword of sharpness 7 and knockback 1
+        helmet:
+        - unbreakable iron helmet
+        - unbreakable diamond helmet
+        chestplate:
+        - unbreakable iron chestplate
+        - unbreakable diamond chestplate
+        loot:
+            common_loot:
+            - iron ingot
+            - carrot
+            rare_loot:
+            - custom:zombie_brain
+            epic_loot:
+            - custom:shackle
+            - custom:flashlight
+            common_chance: 15
+            rare_chance: 3
+            epic_chance: 0.5
+
+'7':
+    husk:
+        type: husk
+        name: "&cHusk"
+        health: 18
+        weapon:
+        - golden sword of sharpness 5 and unbreaking 3
+        - golden pickaxe of sharpness 5 and unbreaking 3 and knockback 1
+        - diamond axe of sharpness 4 and knockback 1
+        helmet:
+        - unbreakable diamond helmet
+        - unbreakable golden helmet of protection 1
+        chestplate:
+        - unbreakable diamond chestplate
+        - unbreakable golden chestplate of protection 1
+        leggings:
+        - unbreakable diamond leggings
+        - unbreakable golden leggings of protection 1
+        boots:
+        - unbreakable diamond boots
+        - unbreakable golden boots of protection 1
+        loot:
+            common_loot:
+            - 4 of iron ingot
+            - 3 of gold ingot
+            rare_loot:
+            - custom:zombie_brain
+            - 2 of diamond
+            epic_loot:
+            - custom:shackle
+            - custom:flashlight
+            common_chance: 15
+            rare_chance: 3
+            epic_chance: 0.5
+    skeleton:
+        type: skeleton
+        name: "&cSkeleton"
+        health: 18
+        weapon:
+        - bow of power 4
+        - bow of power 3 and punch 1
+        - diamond axe of sharpness 3
+        helmet:
+        - unbreakable iron helmet
+        - unbreakable diamond helmet
+        chestplate:
+        - unbreakable iron chestplate
+        - unbreakable diamond chestplate
+        leggings:
+        - unbreakable iron leggings
+        - unbreakable diamond boots
+        - air
+        boots:
+        - unbreakable iron boots
+        - unbreakable diamond boots
+        loot:
+            common_loot:
+            - iron ingot
+            - carrot
+            rare_loot:
+            - custom:skeleton_skull
+            epic_loot:
+            - custom:bone_necklace
+            - custom:miner_helmet
+            common_chance: 15
+            rare_chance: 3
+            epic_chance: 0.5
+
+'8':
+    husk:
+        type: husk
+        name: "&cHusk"
+        health: 19
+        weapon:
+        - unbreakable golden sword of sharpness 5
+        - unbreakable golden pickaxe of sharpness 5 and unbreaking 3
+        - diamond axe of sharpness 4 and knockback 1
+        helmet:
+        - unbreakable diamond helmet
+        - unbreakable golden helmet of protection 1
+        chestplate:
+        - unbreakable diamond chestplate
+        - unbreakable golden chestplate of protection 1
+        leggings:
+        - unbreakable diamond leggings
+        - unbreakable golden leggings of protection 1
+        boots:
+        - unbreakable diamond boots
+        - unbreakable golden boots of protection 1
+        loot:
+            common_loot:
+            - 4 of iron ingot
+            - 3 of gold ingot
+            rare_loot:
+            - custom:zombie_brain
+            - 2 of diamond
+            epic_loot:
+            - custom:shackle
+            - custom:flashlight
+            common_chance: 15
+            rare_chance: 3
+            epic_chance: 0.5
+    skeleton:
+        type: skeleton
+        name: "&cSkeleton"
+        health: 19
+        weapon:
+        - bow of power 5
+        - bow of power 4 and punch 1
+        - diamond axe of sharpness 4
+        helmet:
+        - unbreakable iron helmet
+        - unbreakable diamond helmet
+        chestplate:
+        - unbreakable iron chestplate
+        - unbreakable diamond chestplate
+        leggings:
+        - unbreakable iron leggings
+        - unbreakable diamond boots
+        boots:
+        - unbreakable iron boots
+        - unbreakable diamond boots
+        loot:
+            common_loot:
+            - iron ingot
+            - carrot
+            rare_loot:
+            - custom:skeleton_skull
+            epic_loot:
+            - custom:bone_necklace
+            - custom:miner_helmet
+            common_chance: 15
+            rare_chance: 3
+            epic_chance: 0.5
+
+'9':
+    husk:
+        type: husk
+        name: "&cHusk"
+        health: 20
+        weapon:
+        - unbreakable golden sword of sharpness 5
+        - unbreakable golden pickaxe of sharpness 5 and knockback 1
+        - diamond axe of sharpness 4 and knockback 1
+        helmet:
+        - unbreakable diamond helmet
+        - unbreakable golden helmet of protection 1
+        chestplate:
+        - unbreakable diamond chestplate
+        - unbreakable golden chestplate of protection 1
+        leggings:
+        - unbreakable diamond leggings
+        - unbreakable golden leggings of protection 1
+        boots:
+        - unbreakable diamond boots
+        - unbreakable golden boots of protection 1
+        loot:
+            common_loot:
+            - 4 of iron ingot
+            - 3 of gold ingot
+            rare_loot:
+            - custom:zombie_brain
+            - 2 of diamond
+            epic_loot:
+            - custom:shackle
+            - custom:flashlight
+            common_chance: 15
+            rare_chance: 3
+            epic_chance: 0.5
+    skeleton:
+        type: skeleton
+        name: "&cSkeleton"
+        health: 20
+        weapon:
+        - bow of power 6
+        - bow of power 5 and punch 1
+        - diamond axe of sharpness 5
+        helmet:
+        - unbreakable diamond helmet
+        - unbreakable netherite helmet
+        chestplate:
+        - unbreakable diamond chestplate
+        - unbreakable netherite chestplate
+        leggings:
+        - unbreakable iron leggings
+        - unbreakable diamond boots
+        boots:
+        - unbreakable diamond boots
+        loot:
+            common_loot:
+            - iron ingot
+            - gold ingot
+            rare_loot:
+            - custom:skeleton_skull
+            epic_loot:
+            - custom:bone_necklace
+            - custom:miner_helmet
+            common_chance: 15
+            rare_chance: 3
+            epic_chance: 0.5
+    spider:
+        type: spider
+        name: "&cSpider"
+        health: 15
+        loot:
+            common_loot:
+            - iron ingot
+            - carrot
+            rare_loot:
+            - custom:zombie_brain
+            epic_loot:
+            - custom:shackle
+            - custom:flashlight
+            common_chance: 15
+            rare_chance: 3
+            epic_chance: 0.5
+
+# Please DO NOT change version number!
+version: 1
+
+'1':
+    zombie:
+        type: zombie
+        name: "&cZombie"
+        health: 12
+        weapon:
+        - unbreakable iron sword
+        - unbreakable iron pickaxe
+        - air
+        helmet:
+        - unbreakable iron helmet
+        chestplate:
+        - unbreakable iron chestplate
+        - air
+        loot:
+            common_loot:
+            - iron ingot
+            - carrot
+            rare_loot:
+            - custom:zombie_brain
+            epic_loot:
+            - custom:shackle
+            - custom:flashlight
+            common_chance: 15
+            rare_chance: 3
+            epic_chance: 0.5
+
+'2':
+    zombie:
+        type: zombie
+        name: "&cZombie"
+        health: 13
+        weapon:
+        - iron sword
+        - iron pickaxe
+        - iron axe
+        helmet:
+        - unbreakable iron helmet
+        chestplate:
+        - unbreakable iron chestplate
+        - air
+        boots:
+        - unbreakable iron boots
+        - air
+        loot:
+            common_loot:
+            - 2 of iron ingot
+            - 2 of carrot
+            rare_loot:
+            - custom:zombie_brain
+            epic_loot:
+            - custom:shackle
+            - custom:flashlight
+            common_chance: 15
+            rare_chance: 3
+            epic_chance: 0.5
+    skeleton:
+        type: skeleton
+        name: "&cSkeleton"
+        health: 13
+        weapon:
+        - bow of power 1
+        - bow
+        - diamond axe
+        helmet:
+        - unbreakable iron helmet
+        loot:
+            common_loot:
+            - iron ingot
+            - carrot
+            rare_loot:
+            - custom:skeleton_skull
+            epic_loot:
+            - custom:bone_necklace
+            - custom:miner_helmet
+            common_chance: 15
+            rare_chance: 3
+            epic_chance: 0.5
+
+'3':
+    zombie:
+        type: zombie
+        name: "&cZombie"
+        health: 14
+        weapon:
+        - diamond sword
+        - iron pickaxe
+        - iron axe
+        helmet:
+        - unbreakable iron helmet
+        chestplate:
+        - unbreakable iron chestplate
+        - air
+        leggings:
+        - unbreakable iron leggings
+        - air
+        boots:
+        - unbreakable iron boots
+        - air
+        loot:
+            common_loot:
+            - 3 of iron ingot
+            - 2 of gold ingot
+            rare_loot:
+            - custom:zombie_brain
+            - emerald
+            epic_loot:
+            - custom:shackle
+            - custom:flashlight
+            common_chance: 15
+            rare_chance: 3
+            epic_chance: 0.5
+    skeleton:
+        type: skeleton
+        name: "&cSkeleton"
+        health: 14
+        weapon:
+        - bow of power 2
+        - bow of power 1
+        - diamond axe of sharpness 1
+        helmet:
+        - unbreakable iron helmet
+        chestplate:
+        - unbreakable iron chestplate
+        - air
+        loot:
+            common_loot:
+            - iron ingot
+            - carrot
+            rare_loot:
+            - custom:skeleton_skull
+            epic_loot:
+            - custom:bone_necklace
+            - custom:miner_helmet
+            common_chance: 15
+            rare_chance: 3
+            epic_chance: 0.5
+
+'4':
+    zombie:
+        type: zombie
+        name: "&cZombie"
+        health: 15
+        weapon:
+        - diamond sword
+        - diamond pickaxe
+        - diamond axe
+        helmet:
+        - unbreakable diamond helmet
+        chestplate:
+        - unbreakable iron chestplate
+        - air
+        leggings:
+        - unbreakable iron leggings
+        - air
+        boots:
+        - unbreakable iron boots
+        - air
+        loot:
+            common_loot:
+            - 4 of iron ingot
+            - 3 of gold ingot
+            rare_loot:
+            - custom:zombie_brain
+            - emerald
+            epic_loot:
+            - custom:shackle
+            - custom:flashlight
+            common_chance: 15
+            rare_chance: 3
+            epic_chance: 0.5
+    skeleton:
+        type: skeleton
+        name: "&cSkeleton"
+        health: 15
+        weapon:
+        - bow of power 2
+        - bow of power 1
+        - diamond axe of sharpness 1
+        helmet:
+        - unbreakable iron helmet
+        chestplate:
+        - unbreakable iron chestplate
+        boots:
+        - unbreakable iron boots
+        - air
+        loot:
+            common_loot:
+            - iron ingot
+            - carrot
+            rare_loot:
+            - custom:skeleton_skull
+            epic_loot:
+            - custom:bone_necklace
+            - custom:miner_helmet
+            common_chance: 15
+            rare_chance: 3
+            epic_chance: 0.5
+    ghost:
+        type: skeleton
+        name: "&cGhost"
+        health: 17
+        invisibility: true
+        weapon:
+        - iron sword of sharpness 4 and knockback 1
+        helmet:
+        - unbreakable iron helmet
+        chestplate:
+        - iron chestplate
+        loot:
+            common_loot:
+            - iron ingot
+            - carrot
+            rare_loot:
+            - custom:zombie_brain
+            epic_loot:
+            - custom:shackle
+            - custom:flashlight
+            common_chance: 15
+            rare_chance: 3
+            epic_chance: 0.5
+
+'5':
+    zombie:
+        type: zombie
+        name: "&cZombie"
+        health: 16
+        weapon:
+        - diamond sword of sharpness 1
+        - diamond pickaxe of sharpness 1 and knockback 1
+        - diamond axe of sharpness 1
+        helmet:
+        - unbreakable diamond helmet
+        chestplate:
+        - unbreakable iron chestplate
+        - air
+        leggings:
+        - unbreakable iron leggings
+        - air
+        boots:
+        - unbreakable diamond boots
+        - unbreakable iron boots
+        loot:
+            common_loot:
+            - 4 of iron ingot
+            - 3 of gold ingot
+            rare_loot:
+            - custom:zombie_brain
+            - emerald
+            - diamond
+            epic_loot:
+            - custom:shackle
+            - custom:flashlight
+            common_chance: 15
+            rare_chance: 3
+            epic_chance: 0.5
+    skeleton:
+        type: skeleton
+        name: "&cSkeleton"
+        health: 17
+        weapon:
+        - bow of power 3
+        - bow of power 2
+        - diamond axe of sharpness 2
+        helmet:
+        - unbreakable iron helmet
+        chestplate:
+        - unbreakable iron chestplate
+        - unbreakable diamond chestplate
+        boots:
+        - unbreakable iron boots
+        - air
+        loot:
+            common_loot:
+            - iron ingot
+            - carrot
+            rare_loot:
+            - custom:skeleton_skull
+            epic_loot:
+            - custom:bone_necklace
+            - custom:miner_helmet
+            common_chance: 15
+            rare_chance: 3
+            epic_chance: 0.5
+    ghost:
+        type: skeleton
+        name: "&cGhost"
+        health: 17
+        invisibility: true
+        weapon:
+        - iron sword of sharpness 5 and knockback 1
+        helmet:
+        - unbreakable iron helmet
+        chestplate:
+        - unbreakable iron chestplate
+        - unbreakable diamond chestplate
+        loot:
+            common_loot:
+            - iron ingot
+            - carrot
+            rare_loot:
+            - custom:zombie_brain
+            epic_loot:
+            - custom:shackle
+            - custom:flashlight
+            common_chance: 15
+            rare_chance: 3
+            epic_chance: 0.5

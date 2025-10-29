@@ -1,0 +1,18 @@
+location: spawn:-46,969:-29,812:1224,300
+enabled: true
+display-range: 48
+update-range: 48
+update-interval: 20
+facing: 0.0
+down-origin: false
+pages:
+- lines:
+  - content: '#f74154&lDungeon Portal'
+    height: 0.3
+  - content: '&7▶ Floor: 7 ◀'
+    height: 0.3
+  - content: '&6Difficulty: &f☠☠☠&7☠☠'
+    height: 0.3
+  - content: '&a❌ PVP DISABLED ❌'
+    height: 0.3
+  actions: {}

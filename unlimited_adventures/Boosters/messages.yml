@@ -1,0 +1,43 @@
+# Please DO NOT change version number!
+version: 1
+
+protection_booster_title: "&aThe &f&lProtection Booster &ahas been activated!"
+
+protection_booster_message:
+- "&aFor the next DURATION, players"
+- "&awill not lose any items on death!"
+
+luck_booster_title: "&aThe &f&lLuck Booster &ahas been activated!"
+
+luck_booster_message:
+- "&aFor the next DURATION, everyone"
+- "&awill have extra luck when"
+- "&afishing and looting chests!"
+
+adventure_pass_booster_title: "&aThe &f&lAdventure Pass XP Booster &ahas been activated!"
+
+adventure_pass_booster_message:
+- "&aFor the next DURATION, everyone"
+- "&awill earn double &6Adventure Pass"
+- "&aexperience from all sources!"
+
+luck_booster_expired:
+- "&aBeware Adventurers,"
+- ' '
+- "&aThe &f&lLuck Booster &ais no longer active!"
+
+protection_booster_expired:
+- "&aBeware Adventurers,"
+- ' '
+- "&aThe &f&lProtection Booster &ais no longer active!"
+- ' '
+- "&aRemain save on your journey!"
+
+adventure_pass_booster_expired:
+- "&aBeware Adventurers,"
+- ' '
+- "&aThe &f&lAdventure Pass XP Booster &ais no longer active!"
+
+cant_spawn_pinata: "&cYou can't spawn Pinata here!"
+
+pinata_purchase: "&fYou have purchased a &d&lPinata!"

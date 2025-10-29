@@ -1,0 +1,5 @@
+# Please DO NOT change version number!
+version: 1
+
+# Your world border size (diameter) in blocks.
+world_border_size: 10000

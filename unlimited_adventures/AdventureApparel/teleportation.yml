@@ -1,0 +1,4 @@
+commands:
+    tpa_enabled: false
+    home_enabled: false
+    rtp_enabled: false

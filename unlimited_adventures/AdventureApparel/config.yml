@@ -1,0 +1,41 @@
+# Please DO NOT change version number!
+version: 1
+
+# Should the Adventure Apparel be enabled?
+enabled: true
+
+# You can specify which items will be visible on the player model.
+# Disabled items will be ignored by the system.
+swords-enabled: true
+
+axes-enabled: true
+
+pickaxes-enabled: true
+
+shovels-enabled: true
+
+hoes-enabled: true
+
+# Due to Spigot limitations, players cannot teleport while Adventure Apparel is enabled.
+# I have created a workaround, which will allow players to teleport, but the teleport command must be known to the system.
+# Commands from Essentials are handled by default.
+# Please write down all teleport commands that your server is using:
+teleport-commands:
+- teleport
+- tp
+- tp2p
+- warp
+- tpa
+- tpask
+- back
+- spawn
+- unstuck
+- ascend
+- asc
+- descend
+- desc
+- jumpto
+- jump
+- j
+- thru
+- home

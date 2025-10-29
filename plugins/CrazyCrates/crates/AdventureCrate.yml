@@ -1,0 +1,328 @@
+Crate:
+  # Type of crate -> CSGO/QuadCrate/QuickCrate/Roulette/CrateOnTheGo/FireCracker/Wonder/Wheel/War
+
+    # Make sure to check out the wiki for anything not explained here.
+  # https://github.com/Crazy-Crew/Crazy-Crates/wiki
+
+    # See CosmicCrateExample.yml to see how the Cosmic CrateType works.
+  CrateType: QuickCrate
+  Preview-Name: <white>
+  # Starting amount of keys when the player 1st joins.
+  StartingKeys: 0
+  # Max amount of crates that can be opened at once using /cc max-open
+  Max-Mass-Open: 10
+  # If the crate shows in the /cc GUI.
+  # If the type is QuickCrate/CrateOnTheGo/FireCracker, They will not work as they require a Physical Crate.
+  InGUI: true
+  # Slot the item is in the GUI.
+  Slot: 21
+  # Enables/Disables the Broadcasts message when they open a crate.
+  OpeningBroadCast: false
+  # Message that is broadcast when opening the crate.
+  BroadCast: '%prefix%<gold>%player%</gold> <white>is opening a <#41c967><bold>Adventure
+    Crate</bold></white><gray>.'
+  # Item the crate is in the GUI
+  Item: chest
+  # If the crate in the main /cc GUI is glowing or not.
+  Glowing: false
+  # Name of the item in the GUI.
+  Name: <#41c967><bold>Adventure Crate
+  # The lore of the item in the GUI.
+  Lore:
+  - ''
+  - <gray>A chest found in the dark
+  - <gray>depths of a mysterious cave.
+  - <gray>Open it to discover what kind
+  - <gray>of valuables lay hidden inside.
+  - ''
+  - '<#41c967>▶ <white>Your keys: <#41c967>%Keys%'
+  - ''
+  - <bold><yellow>LEFT-CLICK </yellow></bold><bold><gold>TO OPEN
+  - <bold><yellow>RIGHT-CLICK </yellow></bold><bold><gold>TO PREVIEW
+  Preview:
+    # Turn on and off the preview for this crate.
+    Toggle: true
+    # How many lines the Crate Preview should have. Including Header and Bottom (Between 3 and 6)
+    ChestLines: 3
+    Glass:
+      # Turn the glass boarder in the preview on and off.
+      Toggle: false
+      # The name of the border item.
+      Name: ' '
+      # The item that shows in the boarder. Can be glass or any other item.
+      Item: lime_stained_glass_pane
+    Name: ' '
+  PhysicalKey:
+    # Name of the Key.
+    Name: <#41c967><bold>Adventure Crate </bold><bold><aqua>Key
+    # Lore of the Key.
+    Lore:
+    - <gray>A special Key
+    - <gray>For a special Crate.
+    # The item the key is.
+    Item: tripwire_hook
+    # Makes the key look enchanted.
+    Glowing: true
+  # Settings for the holograms.
+  Hologram:
+    # Toggle on and off the holograms for the crates.
+    Toggle: false
+    # The height of the hologram above the crate.
+    Height: 1.5
+    # The message that will be displayed.
+    Message:
+    - '&a&lAdventure Crate'
+  # All the prizes that can be gotten in the Crate.
+  Prizes:
+    '1':
+      DisplayItem: enchanted_golden_apple
+      DisplayAmount: 3
+      Items:
+      - Item:enchanted_golden_apple, Amount:3
+      Weight: 10.0
+    '2':
+      DisplayName: Mace
+      DisplayItem: mace
+      DisplayAmount: 1
+      Items:
+      - Item:mace, Amount:1
+      Weight: 10.0
+    '3':
+      DisplayItem: stick#651
+      DisplayAmount: 1
+      Commands:
+      - giveitem skeleton_key %player%
+      Weight: 0.5
+      DisplayName: <!italic><!underlined><!strikethrough><!bold><!obfuscated><green>Skeleton
+        Key
+      DisplayLore:
+      - ''
+      - <!italic><!underlined><!strikethrough><!bold><!obfuscated><gray>A key that
+        allows you to enter the Abandoned Mining Site
+      - <!italic><!underlined><!strikethrough><!bold><!obfuscated><gray>Can be used
+        to enter the dungeon.
+      - ''
+      - <!italic><!underlined><!strikethrough><!bold><!obfuscated><#e6ab4e>ᴅᴜɴɢᴇᴏɴ
+        ᴋᴇʏ
+    '4':
+      DisplayName: Totem of Undying
+      DisplayItem: totem_of_undying
+      DisplayAmount: 1
+      Items:
+      - Item:totem_of_undying, Amount:1
+      Weight: 10.0
+    '5':
+      DisplayName: <!italic><!underlined><!strikethrough><!bold><!obfuscated>Emerald
+        Sword
+      Commands:
+      - giveitem emerald_sword %player%
+      DisplayItem: diamond_sword#731
+      DisplayAmount: 1
+      Weight: 10.0
+    '6':
+      DisplayName: <!italic><!underlined><!strikethrough><!bold><!obfuscated><green>Portal
+        Stone
+      Commands:
+      - giveitem portal_stone %player%
+      DisplayLore:
+      - ''
+      - <!italic><!underlined><!strikethrough><!bold><!obfuscated><gray>Right-click
+        on ground to create a portal.
+      - <!italic><!underlined><!strikethrough><!bold><!obfuscated><gray>Put candles
+        in the corners to 'code' the portal.
+      DisplayItem: stick#743
+      DisplayAmount: 1
+      Weight: 10.0
+    '7':
+      DisplayItem: diamond
+      DisplayAmount: 8
+      Items:
+      - Item:diamond, Amount:8
+      Weight: 10.0
+    '8':
+      DisplayName: <bold><yellow>Handful of Gold
+      DisplayItem: gold_nugget
+      DisplayAmount: 1
+      DisplayLore:
+      - <gray>A handful of gold.
+      - ' '
+      - '<white>Contains: </white><yellow>1 000 Gold '
+      Firework: true
+      Commands:
+      - eco give %player% 1000
+      Weight: 10.0
+    '9':
+      DisplayName: <bold><yellow>Bag of Gold
+      DisplayItem: raw_gold
+      DisplayAmount: 1
+      DisplayLore:
+      - <gray>A bag filled with shiny gold.
+      - ' '
+      - '<white>Contains: </white><yellow>2 500 Gold '
+      Firework: true
+      Commands:
+      - eco give %player% 2500
+      Weight: 10.0
+    '10':
+      DisplayName: <!italic><!underlined><!strikethrough><!bold><!obfuscated><green>Traveler's
+        Backpack
+      Commands:
+      - giveitem traveler_backpack %player%
+      DisplayLore:
+      - ''
+      - <!italic><!underlined><!strikethrough><!bold><!obfuscated><gray>Basic backpack.
+        Can fit 18 items.
+      DisplayItem: stick#501
+      DisplayAmount: 1
+      Weight: 10.0
+    '11':
+      DisplayName: <!italic><!underlined><!strikethrough><!bold><!obfuscated><green>Jungle
+        Amulet
+      Commands:
+      - giveitem jungle_amulet %player%
+      DisplayLore:
+      - ''
+      - <!italic><!underlined><!strikethrough><!bold><!obfuscated><gray>Increases
+        movement speed.
+      - ''
+      - <!italic><!underlined><!strikethrough><!bold><!obfuscated><white>+5% Movement
+        Speed 
+      - ''
+      - <!italic><!underlined><!strikethrough><!bold><!obfuscated><#8f64de>ᴀᴄᴄᴇssᴏʀʏ
+        ɪᴛᴇᴍ
+      DisplayItem: stick#734
+      DisplayAmount: 1
+      Weight: 10.0
+    '12':
+      DisplayName: <!italic><!underlined><!strikethrough><!bold><!obfuscated><green>Gold
+        Tooth
+      Commands:
+      - giveitem gold_tooth %player%
+      DisplayLore:
+      - ''
+      - <!italic><!underlined><!strikethrough><!bold><!obfuscated><gray>Regenerates
+        life faster.
+      - ''
+      - <!italic><!underlined><!strikethrough><!bold><!obfuscated><#f2601c>+5 Regeneration
+        🍖
+      - ''
+      - <!italic><!underlined><!strikethrough><!bold><!obfuscated><#8f64de>ᴀᴄᴄᴇssᴏʀʏ
+        ɪᴛᴇᴍ
+      DisplayItem: stick#709
+      DisplayAmount: 1
+      Weight: 10.0
+    '13':
+      DisplayName: <!italic><!underlined><!strikethrough><!bold><!obfuscated><green>Hermes
+        Boots
+      Commands:
+      - giveitem hermes_boots %player%
+      DisplayLore:
+      - ''
+      - <!italic><!underlined><!strikethrough><!bold><!obfuscated><gray>Increases
+        movement speed.
+      - ''
+      - <!italic><!underlined><!strikethrough><!bold><!obfuscated><white>+5% Movement
+        Speed 
+      - ''
+      - <!italic><!underlined><!strikethrough><!bold><!obfuscated><#8f64de>ᴀᴄᴄᴇssᴏʀʏ
+        ɪᴛᴇᴍ
+      DisplayItem: stick#701
+      DisplayAmount: 1
+      Weight: 10.0
+    '14':
+      DisplayName: <!italic><!underlined><!strikethrough><!bold><!obfuscated><green>Philosopher's
+        Stone
+      Commands:
+      - giveitem philosopher_stone %player%
+      DisplayLore:
+      - ''
+      - <!italic><!underlined><!strikethrough><!bold><!obfuscated><gray>Increases
+        health.
+      - ''
+      - <!italic><!underlined><!strikethrough><!bold><!obfuscated><#df5252>+5 Health
+        ❤
+      - ''
+      - <!italic><!underlined><!strikethrough><!bold><!obfuscated><#8f64de>ᴀᴄᴄᴇssᴏʀʏ
+        ɪᴛᴇᴍ
+      DisplayItem: stick#716
+      DisplayAmount: 1
+      Weight: 10.0
+    '15':
+      DisplayName: <!italic><!underlined><!strikethrough><!bold><!obfuscated><green>Ring
+        of Speed
+      Commands:
+      - giveitem speed_ring %player%
+      DisplayLore:
+      - ''
+      - <!italic><!underlined><!strikethrough><!bold><!obfuscated><gray>Increases
+        movement speed.
+      - ''
+      - <!italic><!underlined><!strikethrough><!bold><!obfuscated><white>+5% Movement
+        Speed 
+      - ''
+      - <!italic><!underlined><!strikethrough><!bold><!obfuscated><#8f64de>ᴀᴄᴄᴇssᴏʀʏ
+        ɪᴛᴇᴍ
+      DisplayItem: stick#712
+      DisplayAmount: 1
+      Weight: 10.0
+    '16':
+      DisplayName: <!italic><!underlined><!strikethrough><!bold><!obfuscated><green>Sunstone
+        Ring
+      Commands:
+      - giveitem sunstone_ring %player%
+      DisplayLore:
+      - ''
+      - <!italic><!underlined><!strikethrough><!bold><!obfuscated><gray>Increases
+        wisdom and toughness.
+      - ''
+      - <!italic><!underlined><!strikethrough><!bold><!obfuscated><#6586e8>+5 Wisdom
+        
+      - <!italic><!underlined><!strikethrough><!bold><!obfuscated><#58d09c>+2 Toughness
+        🛡
+      - ''
+      - <!italic><!underlined><!strikethrough><!bold><!obfuscated><#8f64de>ᴀᴄᴄᴇssᴏʀʏ
+        ɪᴛᴇᴍ
+      DisplayItem: stick#732
+      DisplayAmount: 1
+      Weight: 10.0
+    '17':
+      DisplayName: <!italic><!underlined><!strikethrough><!bold><!obfuscated><green>Silver
+        Chain
+      Commands:
+      - giveitem silver_chain %player%
+      DisplayLore:
+      - ''
+      - <!italic><!underlined><!strikethrough><!bold><!obfuscated><gray>Increases
+        regeneration.
+      - ''
+      - <!italic><!underlined><!strikethrough><!bold><!obfuscated><#f2601c>+5 Regeneration
+        🍖
+      - ''
+      - <!italic><!underlined><!strikethrough><!bold><!obfuscated><#8f64de>ᴀᴄᴄᴇssᴏʀʏ
+        ɪᴛᴇᴍ
+      DisplayItem: stick#717
+      DisplayAmount: 1
+      Weight: 10.0
+    '18':
+      DisplayName: <!italic><!underlined><!strikethrough><!bold><!obfuscated><green>Talisman
+        of Vitality
+      Commands:
+      - giveitem vitality_ring %player%
+      DisplayLore:
+      - ''
+      - <!italic><!underlined><!strikethrough><!bold><!obfuscated><gray>Increases
+        health and regeneration.
+      - ''
+      - <!italic><!underlined><!strikethrough><!bold><!obfuscated><#df5252>+5 Health
+        ❤
+      - <!italic><!underlined><!strikethrough><!bold><!obfuscated><#f2601c>+5 Regeneration
+        🍖
+      - ''
+      - <!italic><!underlined><!strikethrough><!bold><!obfuscated><#8f64de>ᴀᴄᴄᴇssᴏʀʏ
+        ɪᴛᴇᴍ
+      DisplayItem: stick#718
+      DisplayAmount: 1
+      Weight: 10.0
+
+
+

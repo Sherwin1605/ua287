@@ -1,0 +1,14 @@
+location: spawn:720,465:108,839:809,462
+enabled: true
+display-range: 48
+update-range: 48
+update-interval: 20
+facing: 0.0
+down-origin: false
+pages:
+- lines:
+  - content: '#fed53b★ #fed53b&lLegend #fed53b★'
+    height: 0.3
+  - content: '#7dff49&lRIGHT-CLICK'
+    height: 0.3
+  actions: {}

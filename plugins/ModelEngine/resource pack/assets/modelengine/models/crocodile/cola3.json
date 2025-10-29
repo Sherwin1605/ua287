@@ -1,0 +1,1 @@
+{"textures":{"0":"modelengine:entity/crocodile4"},"elements":[{"from":[8.0,-3.328,-1.4399986],"to":[8.0,11.068001,25.699997],"faces":{"east":{"uv":[3.0,0.0,5.875,1.5],"tintindex":0,"rotation":0,"texture":"#0"},"west":{"uv":[3.0,1.5,5.875,3.0],"tintindex":0,"rotation":0,"texture":"#0"}}}],"display":{"gui":{"rotation":[30,225,0]}}}

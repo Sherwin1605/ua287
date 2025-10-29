@@ -1,0 +1,129 @@
+# PlayerAuctions by Olzie-12
+# https://www.spigotmc.org/resources/83073
+# We also have a discord server for help: https://olziedev.com/discord or check docs https://docs.olziedev.com/projects/playerauctions
+# Also if you find any bugs be happy to report them I will fix them :)
+# Made with love
+
+# If you want to disable any message just set it to nothing. by doing
+# list: "" <- This will no longer send a message.
+
+
+# every singe message in the plugin is here.
+# make sure you use "" to end of every string
+# Also you can use colour codes <3
+
+# To use hex color codes you will need to do
+# "{#HEX} text"
+
+lang:
+  cancel-chat-wait: "cancel"
+  chat-wait-cancelled: "&cCancelled your request!"
+  friendly-max-auctions: "Unlimited"
+  prefix: "&f "
+  auction-confirmation: "&f &aSelling this auction will cost you &e%price% Gold &f &a, do the command again to confirm."
+  auction-sell: "&f &aStarted to sell &e%item%&a for &e%price% Gold &f &a on the auction!"
+  auction-added: "&f &aYou added &e%amount%&a items to your similar auction on the market, the total price for that item is now &e%price% Gold &f &a, this works out as &e$%priceper% Gold &f &a per item."
+  auction-bid: "&f &aStarted to bid the item for &e%price% Gold &f &a on the auction!"
+  reloaded: "&f &aSuccessfully reloaded all configs!"
+  money-taken: "&f &a%price% Gold &f has been taken from your purse."
+  auctions-cancelled: "&f &aYour auctions have been cancelled!"
+  auctions-collected: "&f &aSuccessfully collected &e%items%&a expired items!"
+  bought-item: "&f &aSuccessfully purchased &e%item%&a for &e%price% Gold &f&a!"
+  someone-purchased: "&f &e%player%&a has just purchased &e%item% %amount%&a for &e%price% Gold &f&a!"
+  offline-title: "&f &bWhile you were offline..."
+  bidder: "&f &e%player%&a has just offered your bid of &e%item%&a for &e%price% Gold &f"
+  bidded: "&f &aYou just offered a bid to &e%item%&a for &e%price% Gold &f"
+  bid-success: "&f &e%player%&a has won your auction of &e%item%&a for &e%price% Gold &f"
+  bidder-success: "&f &aYou've won the auction of &e%item%&a for &e%price% Gold &f&a Check your expired auctions."
+  earned-offline: "&f &aYou've earned a total of &e$%total% Gold &f&a!"
+  given-more-auctions-success: "&f &aSuccessfully given &e%player%&a an extra of &e%extra%&a auctions and a total of &e%total%&a!"
+  dbexec-successful: "&f% &aSuccessfully updated &d%count%&a rows. &aPlease execute &d/%cmd% reload&a to update changes."
+  current-amount-of-auctions:
+  - "&7&l&m----------&7&l[ &b&lPlayer Auctions &7&l]&m----------"
+  - "&bYou currently have a maximum of &e%auctionsmax%&b (&e%staticauctions% static&b) auctions."
+  - "&bYou currently have used &e%auctionsused%&b auctions."
+  - "&7&l&m----------&7&l[ &b&lPlayer Auctions &7&l]&m----------"
+  current-amount-of-auctions-other:
+  - "&7&l&m----------&7&l[ &b&lPlayer Auctions &7&l]&m----------"
+  - "&d%player%&b currently has a maximum of &e%auctionsmax%&b (&e%staticauctions% static&b) auctions."
+  - "&d%player%&b currently has used &e%auctionsused%&b auctions."
+  - "&7&l&m----------&7&l[ &b&lPlayer Auctions &7&l]&m----------"
+  amount-auctions-others-alert: "&c%player% is currently offline, only showing their maximum auctions as a static amount."
+
+  # the help menu for a player
+  # The variable %cmd% is any command from the config.yml :)
+  help-player:
+  - "&7&l&m----------&7&l[ &b&lPlayer Auctions &7&l]&m----------"
+  - "&e/%cmd% help &7&l- &bDisplays this menu."
+  - "&e/%cmd% sell <price> [currency] [amount] &7&l- &bSell an item."
+  - "&e/%cmd% bid <price> &7&l- &bBid an item."
+  - "&e/%cmd% auction &7&l- &bAuction via a GUI."
+  - "&e/%cmd% cancel [id] [player] &7&l- &bCancel your auctioning items."
+  - "&e/%cmd% collect &7&l- &bCollect your cancelled items."
+  - "&e/%cmd% open [menu] [options] &7&l- &bOpens the player auction gui."
+  - "&e/%cmd% amount &7&l- &bCheck how much auctions you have."
+  - "&e/%cmd% reload &7&l- &bReloads all the config files."
+  - "&7&l&m----------&7&l[ &b&lPlayer Auctions &7&l]&m----------"
+
+  # the help menu for console
+  # The variable %cmd% is any command from the config.yml :)
+  help-console:
+  - "&7&l&m----------&7&l[ &b&lPlayer Auctions &7&l]&m----------"
+  - "&e/%cmd% help &7&l- &bDisplays this menu."
+  - "&e/%cmd% open [menu] [options] &7&l- &bOpens the player auction gui."
+  - "&e/%cmd% reload &7&l- &bReloads all the config files."
+  - "&e/%cmd% dbexec <query> &7&l- &bExecutes a query."
+  - "&7&l&m----------&7&l[ &b&lPlayer Auctions &7&l]&m----------"
+
+  # error messages.
+  errors:
+    command-syntax: "&f &cIncorrect syntax, use:\n%syntax%"
+    player-only: "&f &cYou must be a player!"
+    console-only: "&f &cThis command can only be executed from console!"
+    not-a-number: "&f &cThat is not a number!"
+    no-permission: "&f &cYou do not have &4%permission%&c to do this! %reason%"
+    auction-dont-exist: "&f &cThat auction does not exist!"
+    too-many-auctions: "&f &cYou can't auction more items. Your max is: &f%amount%"
+    money-not-enough-sell: "&f &cYou do not have %price% Gold &f to sell this item!"
+    money-not-enough-buy: "&f  &cYou do not have %price% Gold &f to buy this item!"
+    money-not-enough-bid: "&f &cYou do not have %price% Gold &f to bid this item!"
+    disabled-world-sell: "&f &cYou cannot sell items in this world!"
+    invalid-item: "&f &cThat is an invalid item to sell!"
+    damaged-item: "&f &cYou cannot sell a damaged item!"
+    invalid-gamemode: "&f &cThat is an invalid gamemode to sell in!"
+    invalid-category: "&f &cThat is a invalid category"
+    min-price: "&f &cYou need to set the price to at least %min% Gold &f!"
+    max-price: "&f &cYou need to set the price below %max% Gold &f!"
+    no-auctions: "&f &cYou currently have no auctions!"
+    no-expired-auctions: "&f &cYou currently have no expired auctions to collect!"
+    purchase-own: "&f &cYou cannot purchase your own auction!"
+    bid-own: "&f &cYou cannot bid your own auction!"
+    sell-cooldown: "&f &cYou currently have a cooldown for auctioning items! (%cooldown% left)"
+    bid-cooldown: "&f &cYou currently have a cooldown for bidding items! (%cooldown% left)"
+    offer-cooldown: "&f &cYou currently have a cooldown for offering a bid! (%cooldown% left)"
+    purchase-cooldown: "&f &cYou currently have a cooldown for purchasing items! (%cooldown% left)"
+    no-player-joined: "&f &cThat player does not exist!"
+    bidder-no-money: "&f &c%player% doesn't have enough gold for your &e%item%, their offer has been removed."
+    bid-no-money: "&f &cYou do not have enough gold anymore for &e%item%'s bid, your offer has been removed."
+    min-bid: "&f &cYou cannot offer that much! The minimum offer you can bid is 10 Gold &f"
+    gui-cooldown: "&f &cYou will need to wait a few seconds to use this again."
+    not-enough-add-bid: "&f &cYou do not have enough gold to add %amount% to $%bid%"
+    cancel-bid: "&f &cYou cannot cancel this auction while its been offered a bid!"
+    auction-doesnt-exist: "%prefix% &cThat auction doesn't exist anymore!"
+    dbexec-failed: "&f &cThere was an error executing this query. %error%"
+
+# Here you can specify different types of messages per no-permission message, using the specific permission node.
+# Or you may set it to blank to not send a message at all.
+# no-permission:
+#   pa.purchase: "You do not have permission to purchase auctions!"
+
+n/a:
+  no-seller: "N/A"
+  no-expire: "N/A"
+  no-category: "N/A"
+  no-displayname: "%player%"
+
+# Here you can configure the item name formatting, please note that you will have to add the items below that you want to change
+# You can view the list of the items here: https://javadocs.olziedev.com/spigot/latest/org/bukkit/Material.html
+item-names:
+  ARMOR_STAND: "Armor Stand"

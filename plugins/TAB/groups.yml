@@ -1,0 +1,20 @@
+#Owner:
+#  tabprefix: "&0&l[&a&lOwner&0&l] &a"
+#  tagprefix: "&2&lOwner &a"
+Default:
+  tabprefix: "&7"
+  tagprefix: "&7"
+example_group:
+  header:
+    - "This is an example of per-group header/footer"
+  footer:
+    - "applied to a group"
+
+ # default settings for all groups, all groups will take properties from this section unless player's primary group overrides a specific setting
+_DEFAULT_:
+  tabprefix: "%luckperms-prefix% "
+  tagprefix: "%luckperms-prefix% "
+  customtabname: "%tchat_nick%"
+  customtagname: "%tchat_nick%" # don't forget to enable unlimited nametag mode to make this one work
+  tabsuffix: ""
+  tagsuffix: "%ui_afk%"

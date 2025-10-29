@@ -1,0 +1,2754 @@
+{
+  "format_version": "1",
+  "items": {
+    "minecraft:crossbow": [
+      {
+        "name": "siege_crossbow",
+        "allow_offhand": false,
+        "icon": "siege_crossbow",
+        "custom_model_data": 1,
+        "tags": ["geyser_custom:custom_crossbow"]
+      }
+    ],
+    "minecraft:chainmail_boots": [
+      {
+        "name": "dragonscale_boots",
+        "allow_offhand": true,
+        "icon": "dragonscale_boots",
+        "custom_model_data": 736
+      }
+    ],
+    "minecraft:chainmail_chestplate": [
+      {
+        "name": "dragonscale_chestplate",
+        "allow_offhand": true,
+        "icon": "dragonscale_chestplate",
+        "custom_model_data": 734
+      }
+    ],
+    "minecraft:chainmail_helmet": [
+      {
+        "name": "dragonscale_helmet",
+        "allow_offhand": true,
+        "icon": "dragonscale_helmet",
+        "custom_model_data": 733
+      }
+    ],
+    "minecraft:chainmail_leggings": [
+      {
+        "name": "dragonscale_leggings",
+        "allow_offhand": true,
+        "icon": "dragonscale_leggings",
+        "custom_model_data": 735
+      }
+    ],
+    "minecraft:diamond_axe": [
+      {
+        "name": "emerald_axe",
+        "allow_offhand": true,
+        "icon": "emerald_axe",
+        "custom_model_data": 731
+      },
+      {
+        "name": "amethyst_axe",
+        "allow_offhand": true,
+        "icon": "amethyst_axe",
+        "custom_model_data": 733
+      }
+    ],
+    "minecraft:diamond_boots": [
+      {
+        "name": "dragonscale_boots2",
+        "allow_offhand": true,
+        "icon": "dragonscale_boots",
+        "custom_model_data": 736
+      }
+    ],
+    "minecraft:diamond_chestplate": [
+      {
+        "name": "dragonscale_chestplate2",
+        "allow_offhand": true,
+        "icon": "dragonscale_chestplate",
+        "custom_model_data": 734
+      }
+    ],
+    "minecraft:diamond_helmet": [
+      {
+        "name": "dragonscale_helmet2",
+        "allow_offhand": true,
+        "icon": "dragonscale_helmet",
+        "custom_model_data": 733
+      }
+    ],
+    "minecraft:diamond_hoe": [
+      {
+        "name": "emerald_hoe",
+        "allow_offhand": true,
+        "icon": "emerald_hoe",
+        "custom_model_data": 731
+      },
+      {
+        "name": "amethyst_hoe",
+        "allow_offhand": true,
+        "icon": "amethyst_hoe",
+        "custom_model_data": 733
+      }
+    ],
+    "minecraft:diamond_leggings": [
+      {
+        "name": "dragonscale_leggings2",
+        "allow_offhand": true,
+        "icon": "dragonscale_leggings",
+        "custom_model_data": 735
+      }
+    ],
+    "minecraft:diamond_pickaxe": [
+      {
+        "name": "emerald_pickaxe",
+        "allow_offhand": true,
+        "icon": "emerald_pickaxe",
+        "custom_model_data": 731
+      },
+      {
+        "name": "copper_pickaxe",
+        "allow_offhand": true,
+        "icon": "copper_pickaxe",
+        "custom_model_data": 732
+      },
+      {
+        "name": "amethyst_pickaxe",
+        "allow_offhand": true,
+        "icon": "amethyst_pickaxe",
+        "custom_model_data": 733
+      }
+    ],
+    "minecraft:diamond_shovel": [
+      {
+        "name": "emerald_shovel",
+        "allow_offhand": true,
+        "icon": "emerald_shovel",
+        "custom_model_data": 731
+      },
+      {
+        "name": "amethyst_shovel",
+        "allow_offhand": true,
+        "icon": "amethyst_shovel",
+        "custom_model_data": 733
+      }
+    ],
+    "minecraft:diamond_sword": [
+      {
+        "name": "bone_sword",
+        "allow_offhand": true,
+        "icon": "bone_sword",
+        "custom_model_data": 730
+      },
+      {
+        "name": "emerald_sword",
+        "allow_offhand": true,
+        "icon": "emerald_sword",
+        "custom_model_data": 731
+      },
+      {
+        "name": "copper_sword",
+        "allow_offhand": true,
+        "icon": "copper_sword",
+        "custom_model_data": 732
+      },
+      {
+        "name": "amethyst_sword",
+        "allow_offhand": true,
+        "icon": "amethyst_sword",
+        "custom_model_data": 733
+      },
+      {
+        "name": "crocodile_sword",
+        "allow_offhand": true,
+        "icon": "crocodile_sword",
+        "custom_model_data": 734
+      }
+    ],
+    "minecraft:feather": [
+      {
+        "name": "wooden_sword",
+        "allow_offhand": true,
+        "icon": "sword",
+        "frame": 0,
+        "custom_model_data": 1
+      },
+      {
+        "name": "stone_sword",
+        "allow_offhand": true,
+        "icon": "sword",
+        "frame": 1,
+        "custom_model_data": 2
+      },
+      {
+        "name": "iron_sword",
+        "allow_offhand": true,
+        "icon": "sword",
+        "frame": 2,
+        "custom_model_data": 3
+      },
+      {
+        "name": "golden_sword",
+        "allow_offhand": true,
+        "icon": "sword",
+        "frame": 3,
+        "custom_model_data": 4
+      },
+      {
+        "name": "diamond_sword",
+        "allow_offhand": true,
+        "icon": "sword",
+        "frame": 4,
+        "custom_model_data": 5
+      },
+      {
+        "name": "netherite_sword",
+        "allow_offhand": true,
+        "icon": "sword",
+        "frame": 5,
+        "custom_model_data": 6
+      },
+      {
+        "name": "bone_sword_back",
+        "allow_offhand": true,
+        "icon": "bone_sword",
+        "custom_model_data": 7
+      },
+      {
+        "name": "dragonscale_sword_back",
+        "allow_offhand": true,
+        "icon": "dragonscale_sword",
+        "custom_model_data": 8
+      },
+      {
+        "name": "dracula_sword_back",
+        "allow_offhand": true,
+        "icon": "dracula_sword",
+        "custom_model_data": 9
+      },
+      {
+        "name": "emerald_sword_back",
+        "allow_offhand": true,
+        "icon": "emerald_sword",
+        "custom_model_data": 10
+      },
+      {
+        "name": "copper_sword_back",
+        "allow_offhand": true,
+        "icon": "copper_sword",
+        "custom_model_data": 11
+      },
+      {
+        "name": "amethyst_sword_back",
+        "allow_offhand": true,
+        "icon": "amethyst_sword",
+        "custom_model_data": 12
+      },
+      {
+        "name": "crocodile_sword_back",
+        "allow_offhand": true,
+        "icon": "crocodile_sword",
+        "custom_model_data": 13
+      },
+      {
+        "name": "mace",
+        "allow_offhand": true,
+        "icon": "mace",
+        "custom_model_data": 14
+      },
+      {
+        "name": "wooden_axe",
+        "allow_offhand": true,
+        "icon": "axe",
+        "frame": 0,
+        "custom_model_data": 21
+      },
+      {
+        "name": "stone_axe",
+        "allow_offhand": true,
+        "icon": "axe",
+        "frame": 1,
+        "custom_model_data": 22
+      },
+      {
+        "name": "iron_axe",
+        "allow_offhand": true,
+        "icon": "axe",
+        "frame": 2,
+        "custom_model_data": 23
+      },
+      {
+        "name": "golden_axe",
+        "allow_offhand": true,
+        "icon": "axe",
+        "frame": 3,
+        "custom_model_data": 24
+      },
+      {
+        "name": "diamond_axe",
+        "allow_offhand": true,
+        "icon": "axe",
+        "frame": 4,
+        "custom_model_data": 25
+      },
+      {
+        "name": "netherite_axe",
+        "allow_offhand": true,
+        "icon": "axe",
+        "frame": 5,
+        "custom_model_data": 26
+      },
+      {
+        "name": "dragonscale_axe_back",
+        "allow_offhand": true,
+        "icon": "dragonscale_axe",
+        "custom_model_data": 27
+      },
+      {
+        "name": "ankh_scepter_back",
+        "allow_offhand": true,
+        "icon": "ankh_scepter",
+        "custom_model_data": 28
+      },
+      {
+        "name": "emerald_axe_back",
+        "allow_offhand": true,
+        "icon": "emerald_axe",
+        "custom_model_data": 29
+      },
+      {
+        "name": "copper_axe_back",
+        "allow_offhand": true,
+        "icon": "copper_axe",
+        "custom_model_data": 30
+      },
+      {
+        "name": "amethyst_axe_back",
+        "allow_offhand": true,
+        "icon": "amethyst_axe",
+        "custom_model_data": 31
+      },
+      {
+        "name": "wooden_pickaxe",
+        "allow_offhand": true,
+        "icon": "pickaxe",
+        "frame": 0,
+        "custom_model_data": 41
+      },
+      {
+        "name": "stone_pickaxe",
+        "allow_offhand": true,
+        "icon": "pickaxe",
+        "frame": 1,
+        "custom_model_data": 42
+      },
+      {
+        "name": "iron_pickaxe",
+        "allow_offhand": true,
+        "icon": "pickaxe",
+        "frame": 2,
+        "custom_model_data": 43
+      },
+      {
+        "name": "golden_pickaxe",
+        "allow_offhand": true,
+        "icon": "pickaxe",
+        "frame": 3,
+        "custom_model_data": 44
+      },
+      {
+        "name": "diamond_pickaxe",
+        "allow_offhand": true,
+        "icon": "pickaxe",
+        "frame": 4,
+        "custom_model_data": 45
+      },
+      {
+        "name": "netherite_pickaxe",
+        "allow_offhand": true,
+        "icon": "pickaxe",
+        "frame": 5,
+        "custom_model_data": 46
+      },
+      {
+        "name": "cursed_pickaxe_back",
+        "allow_offhand": true,
+        "icon": "cursed_pickaxe",
+        "custom_model_data": 47
+      },
+      {
+        "name": "emerald_pickaxe_back",
+        "allow_offhand": true,
+        "icon": "emerald_pickaxe",
+        "custom_model_data": 48
+      },
+      {
+        "name": "copper_pickaxe_back",
+        "allow_offhand": true,
+        "icon": "copper_pickaxe",
+        "custom_model_data": 49
+      },
+      {
+        "name": "amethyst_pickaxe_back",
+        "allow_offhand": true,
+        "icon": "amethyst_pickaxe",
+        "custom_model_data": 50
+      },
+      {
+        "name": "wooden_shovel",
+        "allow_offhand": true,
+        "icon": "shovel",
+        "frame": 0,
+        "custom_model_data": 61
+      },
+      {
+        "name": "stone_shovel",
+        "allow_offhand": true,
+        "icon": "shovel",
+        "frame": 1,
+        "custom_model_data": 62
+      },
+      {
+        "name": "iron_shovel",
+        "allow_offhand": true,
+        "icon": "shovel",
+        "frame": 2,
+        "custom_model_data": 63
+      },
+      {
+        "name": "golden_shovel",
+        "allow_offhand": true,
+        "icon": "shovel",
+        "frame": 3,
+        "custom_model_data": 64
+      },
+      {
+        "name": "diamond_shovel",
+        "allow_offhand": true,
+        "icon": "shovel",
+        "frame": 4,
+        "custom_model_data": 65
+      },
+      {
+        "name": "netherite_shovel",
+        "allow_offhand": true,
+        "icon": "shovel",
+        "frame": 5,
+        "custom_model_data": 66
+      },
+      {
+        "name": "emerald_shovel_back",
+        "allow_offhand": true,
+        "icon": "emerald_shovel",
+        "custom_model_data": 67
+      },
+      {
+        "name": "copper_shovel_back",
+        "allow_offhand": true,
+        "icon": "copper_shovel",
+        "custom_model_data": 68
+      },
+      {
+        "name": "amethyst_shovel_back",
+        "allow_offhand": true,
+        "icon": "amethyst_shovel",
+        "custom_model_data": 69
+      },
+      {
+        "name": "wooden_hoe",
+        "allow_offhand": true,
+        "icon": "hoe",
+        "frame": 0,
+        "custom_model_data": 81
+      },
+      {
+        "name": "stone_hoe",
+        "allow_offhand": true,
+        "icon": "hoe",
+        "frame": 1,
+        "custom_model_data": 82
+      },
+      {
+        "name": "iron_hoe",
+        "allow_offhand": true,
+        "icon": "hoe",
+        "frame": 2,
+        "custom_model_data": 83
+      },
+      {
+        "name": "golden_hoe",
+        "allow_offhand": true,
+        "icon": "hoe",
+        "frame": 3,
+        "custom_model_data": 84
+      },
+      {
+        "name": "diamond_hoe",
+        "allow_offhand": true,
+        "icon": "hoe",
+        "frame": 4,
+        "custom_model_data": 85
+      },
+      {
+        "name": "netherite_hoe",
+        "allow_offhand": true,
+        "icon": "hoe",
+        "frame": 5,
+        "custom_model_data": 86
+      },
+      {
+        "name": "emerald_hoe_back",
+        "allow_offhand": true,
+        "icon": "emerald_hoe",
+        "custom_model_data": 87
+      },
+      {
+        "name": "copper_hoe_back",
+        "allow_offhand": true,
+        "icon": "copper_hoe",
+        "custom_model_data": 88
+      },
+      {
+        "name": "amethyst_hoe_back",
+        "allow_offhand": true,
+        "icon": "amethyst_hoe",
+        "custom_model_data": 89
+      },
+      {
+        "name": "catching_net_back",
+        "allow_offhand": true,
+        "icon": "catching_net",
+        "custom_model_data": 90
+      },
+      {
+        "name": "traveler_backpack",
+        "allow_offhand": true,
+        "icon": "traveler_backpack",
+        "custom_model_data": 101
+      },
+      {
+        "name": "adventure_backpack",
+        "allow_offhand": true,
+        "icon": "adventure_backpack",
+        "custom_model_data": 102
+      },
+      {
+        "name": "hero_backpack",
+        "allow_offhand": true,
+        "icon": "hero_backpack",
+        "custom_model_data": 103
+      },
+      {
+        "name": "balloon",
+        "allow_offhand": true,
+        "icon": "balloon",
+        "custom_model_data": 201
+      },
+      {
+        "name": "dynamite_model",
+        "allow_offhand": true,
+        "icon": "dynamite_model",
+        "custom_model_data": 211
+      },
+      {
+        "name": "pile_of_bones",
+        "allow_offhand": true,
+        "icon": "pile_of_bones",
+        "custom_model_data": 212
+      },
+      {
+        "name": "skeleton_sit",
+        "allow_offhand": true,
+        "icon": "skeleton_sit",
+        "custom_model_data": 213
+      },
+      {
+        "name": "skeleton_lay",
+        "allow_offhand": true,
+        "icon": "skeleton_lay",
+        "custom_model_data": 214
+      },
+      {
+        "name": "skeleton_sit_golden_skull",
+        "allow_offhand": true,
+        "icon": "skeleton_sit_golden_skull",
+        "custom_model_data": 215
+      },
+      {
+        "name": "spider_totem",
+        "allow_offhand": true,
+        "icon": "spider_totem",
+        "custom_model_data": 216
+      }
+    ],
+    "minecraft:fishing_rod": [
+      {
+        "name": "bamboo_fishing_rod",
+        "allow_offhand": true,
+        "icon": "bamboo_fishing_rod",
+        "custom_model_data": 1
+      }
+    ],
+    "minecraft:iron_axe": [
+      {
+        "name": "copper_axe",
+        "allow_offhand": true,
+        "icon": "copper_axe",
+        "custom_model_data": 732
+      }
+    ],
+    "minecraft:iron_hoe": [
+      {
+        "name": "copper_hoe",
+        "allow_offhand": true,
+        "icon": "copper_hoe",
+        "custom_model_data": 732
+      }
+    ],
+    "minecraft:iron_pickaxe": [
+      {
+        "name": "copper_pickaxe2",
+        "allow_offhand": true,
+        "icon": "copper_pickaxe",
+        "custom_model_data": 732
+      }
+    ],
+    "minecraft:iron_shovel": [
+      {
+        "name": "copper_shovel",
+        "allow_offhand": true,
+        "icon": "copper_shovel",
+        "custom_model_data": 732
+      }
+    ],
+    "minecraft:iron_sword": [
+      {
+        "name": "copper_sword2",
+        "allow_offhand": true,
+        "icon": "copper_sword",
+        "custom_model_data": 732
+      }
+    ],
+    "minecraft:leather_horse_armor": [
+      {
+        "name": "gmdl_bbd62e4",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 1
+      },
+      {
+        "name": "gmdl_7d03efe",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 2
+      },
+      {
+        "name": "gmdl_434dc0e",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 3
+      },
+      {
+        "name": "gmdl_b3df3b4",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 4
+      },
+      {
+        "name": "gmdl_0bbc99f",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 5
+      },
+      {
+        "name": "gmdl_ed6dbb6",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 6
+      },
+      {
+        "name": "gmdl_197570e",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 7
+      },
+      {
+        "name": "gmdl_4e18f1d",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 8
+      },
+      {
+        "name": "gmdl_29ee111",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 9
+      },
+      {
+        "name": "gmdl_ba22e9e",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 10
+      },
+      {
+        "name": "gmdl_4d5d0f8",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 11
+      },
+      {
+        "name": "gmdl_267e90c",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 12
+      },
+      {
+        "name": "gmdl_57b95ff",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 13
+      },
+      {
+        "name": "gmdl_e056148",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 14
+      },
+      {
+        "name": "gmdl_ebe2ebf",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 15
+      },
+      {
+        "name": "gmdl_2f29fe3",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 16
+      },
+      {
+        "name": "gmdl_c489c67",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 17
+      },
+      {
+        "name": "gmdl_dfc1a3f",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 18
+      },
+      {
+        "name": "gmdl_6236658",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 19
+      },
+      {
+        "name": "gmdl_edba9e1",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 20
+      },
+      {
+        "name": "gmdl_b37c40a",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 21
+      },
+      {
+        "name": "gmdl_b7dbbe1",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 22
+      },
+      {
+        "name": "gmdl_1b4e38b",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 23
+      },
+      {
+        "name": "gmdl_55c7fdb",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 24
+      },
+      {
+        "name": "gmdl_5fb0332",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 25
+      },
+      {
+        "name": "gmdl_b551a5e",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 26
+      },
+      {
+        "name": "gmdl_dccf255",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 27
+      },
+      {
+        "name": "gmdl_ddd2013",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 28
+      },
+      {
+        "name": "gmdl_96973b1",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 29
+      },
+      {
+        "name": "gmdl_d6459a7",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 30
+      },
+      {
+        "name": "gmdl_8e68b84",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 31
+      },
+      {
+        "name": "gmdl_45d6776",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 32
+      },
+      {
+        "name": "gmdl_eadf446",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 33
+      },
+      {
+        "name": "gmdl_2433db7",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 34
+      },
+      {
+        "name": "gmdl_ea8f653",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 35
+      },
+      {
+        "name": "gmdl_33fec79",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 36
+      },
+      {
+        "name": "gmdl_cfbfe25",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 37
+      },
+      {
+        "name": "gmdl_6dd099a",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 38
+      },
+      {
+        "name": "gmdl_16bf8bb",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 39
+      },
+      {
+        "name": "gmdl_53de429",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 40
+      },
+      {
+        "name": "gmdl_9513b5d",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 41
+      },
+      {
+        "name": "gmdl_e38ed95",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 42
+      },
+      {
+        "name": "gmdl_cb50cb7",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 43
+      },
+      {
+        "name": "gmdl_bbaa06e",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 44
+      },
+      {
+        "name": "gmdl_8e5ec66",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 45
+      },
+      {
+        "name": "gmdl_8c4c1de",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 46
+      },
+      {
+        "name": "gmdl_669d517",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 47
+      },
+      {
+        "name": "gmdl_ee3f13d",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 48
+      },
+      {
+        "name": "gmdl_9153aa1",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 49
+      },
+      {
+        "name": "gmdl_b8d0f91",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 50
+      },
+      {
+        "name": "gmdl_cee3099",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 51
+      },
+      {
+        "name": "gmdl_321007c",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 52
+      },
+      {
+        "name": "gmdl_8f01848",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 53
+      },
+      {
+        "name": "gmdl_13b3fc9",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 54
+      },
+      {
+        "name": "gmdl_784d4dd",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 55
+      },
+      {
+        "name": "gmdl_cbf855a",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 56
+      },
+      {
+        "name": "gmdl_e12083d",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 57
+      },
+      {
+        "name": "gmdl_3250ff2",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 58
+      },
+      {
+        "name": "gmdl_66f28f9",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 59
+      },
+      {
+        "name": "gmdl_747baed",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 60
+      },
+      {
+        "name": "gmdl_ea941a9",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 61
+      },
+      {
+        "name": "gmdl_6728897",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 62
+      },
+      {
+        "name": "gmdl_acaae0b",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 63
+      },
+      {
+        "name": "gmdl_cf53f87",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 64
+      },
+      {
+        "name": "gmdl_958205a",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 65
+      },
+      {
+        "name": "gmdl_d483fc2",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 66
+      },
+      {
+        "name": "gmdl_add6cde",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 67
+      },
+      {
+        "name": "gmdl_c66fda6",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 68
+      },
+      {
+        "name": "gmdl_c3d1ee0",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 69
+      },
+      {
+        "name": "gmdl_ec67adf",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 70
+      },
+      {
+        "name": "gmdl_da0479f",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 71
+      },
+      {
+        "name": "gmdl_9bab165",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 72
+      },
+      {
+        "name": "gmdl_1a11ccd",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 73
+      },
+      {
+        "name": "gmdl_6afedab",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 74
+      },
+      {
+        "name": "gmdl_9941728",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 75
+      },
+      {
+        "name": "gmdl_9477b91",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 76
+      },
+      {
+        "name": "gmdl_ac7acf0",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 77
+      },
+      {
+        "name": "gmdl_05977b5",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 78
+      },
+      {
+        "name": "gmdl_de0a763",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 79
+      },
+      {
+        "name": "gmdl_dfa7264",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 80
+      },
+      {
+        "name": "gmdl_b672133",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 81
+      },
+      {
+        "name": "gmdl_df4f0ed",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 82
+      },
+      {
+        "name": "gmdl_dda2b3d",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 83
+      },
+      {
+        "name": "gmdl_c4cc24a",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 84
+      },
+      {
+        "name": "gmdl_c457094",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 85
+      },
+      {
+        "name": "gmdl_a539db8",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 86
+      },
+      {
+        "name": "gmdl_6524b50",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 87
+      },
+      {
+        "name": "gmdl_31ff0f6",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 88
+      },
+      {
+        "name": "gmdl_fcefcc2",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 89
+      },
+      {
+        "name": "gmdl_d360f88",
+        "allow_offhand": true,
+        "icon": "leather_horse_armor",
+        "custom_model_data": 90
+      }
+    ],
+    "minecraft:netherite_axe": [
+      {
+        "name": "gmdl_ed945f9",
+        "allow_offhand": true,
+        "icon": "dragonscale_axe",
+        "custom_model_data": 732
+      },
+      {
+        "name": "ankh_scepter",
+        "allow_offhand": true,
+        "icon": "ankh_scepter",
+        "custom_model_data": 733
+      }
+    ],
+    "minecraft:netherite_pickaxe": [
+      {
+        "name": "cursed_pickaxe",
+        "allow_offhand": true,
+        "icon": "cursed_pickaxe",
+        "custom_model_data": 733
+      }
+    ],
+    "minecraft:netherite_sword": [
+      {
+        "name": "dragonscale_sword",
+        "allow_offhand": true,
+        "icon": "dragonscale_sword",
+        "custom_model_data": 731
+      },
+      {
+        "name": "dracula_sword",
+        "allow_offhand": true,
+        "icon": "dracula_sword",
+        "custom_model_data": 732
+      }
+    ],
+    "minecraft:stick": [
+      {
+        "name": "left_button",
+        "allow_offhand": true,
+        "icon": "left_button",
+        "custom_model_data": 1
+      },
+      {
+        "name": "right_button",
+        "allow_offhand": true,
+        "icon": "right_button",
+        "custom_model_data": 2
+      },
+      {
+        "name": "claim_button",
+        "allow_offhand": true,
+        "icon": "claim_button",
+        "custom_model_data": 3
+      },
+      {
+        "name": "hourglass_icon",
+        "allow_offhand": true,
+        "icon": "hourglass_icon",
+        "custom_model_data": 4
+      },
+      {
+        "name": "lock",
+        "allow_offhand": true,
+        "icon": "lock",
+        "custom_model_data": 5
+      },
+      {
+        "name": "wooden_chest",
+        "allow_offhand": true,
+        "icon": "wooden_chest",
+        "custom_model_data": 6
+      },
+      {
+        "name": "wooden_chest_ready",
+        "allow_offhand": true,
+        "icon": "wooden_chest_ready",
+        "custom_model_data": 7
+      },
+      {
+        "name": "wooden_chest_opened",
+        "allow_offhand": true,
+        "icon": "wooden_chest_opened",
+        "custom_model_data": 8
+      },
+      {
+        "name": "wooden_chest_waiting",
+        "allow_offhand": true,
+        "icon": "wooden_chest_waiting",
+        "custom_model_data": 9
+      },
+      {
+        "name": "gems_button",
+        "allow_offhand": true,
+        "icon": "gems_button",
+        "custom_model_data": 10
+      },
+      {
+        "name": "info_icon",
+        "allow_offhand": true,
+        "icon": "info_icon",
+        "custom_model_data": 11
+      },
+      {
+        "name": "purchase_button",
+        "allow_offhand": true,
+        "icon": "purchase_button",
+        "custom_model_data": 12
+      },
+      {
+        "name": "open_button",
+        "allow_offhand": true,
+        "icon": "open_button",
+        "custom_model_data": 13
+      },
+      {
+        "name": "claimed_button",
+        "allow_offhand": true,
+        "icon": "claimed_button",
+        "custom_model_data": 14
+      },
+      {
+        "name": "claim_button_unavailable",
+        "allow_offhand": true,
+        "icon": "claim_button_unavailable",
+        "custom_model_data": 15
+      },
+      {
+        "name": "close_button",
+        "allow_offhand": true,
+        "icon": "close_button",
+        "custom_model_data": 16
+      },
+      {
+        "name": "sort_button",
+        "allow_offhand": true,
+        "icon": "sort_button",
+        "custom_model_data": 17
+      },
+      {
+        "name": "search_button",
+        "allow_offhand": true,
+        "icon": "search_button",
+        "custom_model_data": 18
+      },
+      {
+        "name": "browser_button",
+        "allow_offhand": true,
+        "icon": "browser_button",
+        "custom_model_data": 19
+      },
+      {
+        "name": "bids_button",
+        "allow_offhand": true,
+        "icon": "bids_button",
+        "custom_model_data": 20
+      },
+      {
+        "name": "quest_locked",
+        "allow_offhand": true,
+        "icon": "quest_locked",
+        "custom_model_data": 21
+      },
+      {
+        "name": "quest_in_progress",
+        "allow_offhand": true,
+        "icon": "quest_in_progress",
+        "custom_model_data": 22
+      },
+      {
+        "name": "quest_completed",
+        "allow_offhand": true,
+        "icon": "quest_completed",
+        "custom_model_data": 23
+      },
+      {
+        "name": "quest_icon",
+        "allow_offhand": true,
+        "icon": "quest_icon",
+        "custom_model_data": 24
+      },
+      {
+        "name": "claimed",
+        "allow_offhand": true,
+        "icon": "claimed",
+        "custom_model_data": 25
+      },
+      {
+        "name": "dungeon_entrance",
+        "allow_offhand": true,
+        "icon": "stick",
+        "custom_model_data": 31
+      },
+      {
+        "name": "dungeon_entrance_locked",
+        "allow_offhand": true,
+        "icon": "dungeon_entrance_locked",
+        "custom_model_data": 32
+      },
+      {
+        "name": "dungeon_entrance_boss",
+        "allow_offhand": true,
+        "icon": "stick",
+        "custom_model_data": 33
+      },
+      {
+        "name": "10",
+        "allow_offhand": true,
+        "icon": "10",
+        "custom_model_data": 39
+      },
+      {
+        "name": "100",
+        "allow_offhand": true,
+        "icon": "100",
+        "custom_model_data": 40
+      },
+      {
+        "name": "1",
+        "allow_offhand": true,
+        "icon": "1",
+        "custom_model_data": 41
+      },
+      {
+        "name": "32",
+        "allow_offhand": true,
+        "icon": "32",
+        "custom_model_data": 42
+      },
+      {
+        "name": "64",
+        "allow_offhand": true,
+        "icon": "64",
+        "custom_model_data": 43
+      },
+      {
+        "name": "close",
+        "allow_offhand": true,
+        "icon": "close",
+        "custom_model_data": 44
+      },
+      {
+        "name": "categories",
+        "allow_offhand": true,
+        "icon": "categories",
+        "custom_model_data": 45
+      },
+      {
+        "name": "refresh",
+        "allow_offhand": true,
+        "icon": "refresh",
+        "custom_model_data": 46
+      },
+      {
+        "name": "enter_amount",
+        "allow_offhand": true,
+        "icon": "enter_amount",
+        "custom_model_data": 47
+      },
+      {
+        "name": "manage_auctions_icon",
+        "allow_offhand": true,
+        "icon": "manage_auctions_icon",
+        "custom_model_data": 49
+      },
+      {
+        "name": "bid_history",
+        "allow_offhand": true,
+        "icon": "bid_history",
+        "custom_model_data": 50
+      },
+      {
+        "name": "adventure_crate",
+        "allow_offhand": true,
+        "icon": "adventure_crate",
+        "custom_model_data": 51
+      },
+      {
+        "name": "hero_crate",
+        "allow_offhand": true,
+        "icon": "hero_crate",
+        "custom_model_data": 52
+      },
+      {
+        "name": "legendary_crate",
+        "allow_offhand": true,
+        "icon": "legendary_crate",
+        "custom_model_data": 53
+      },
+      {
+        "name": "luck_booster",
+        "allow_offhand": true,
+        "icon": "luck_booster",
+        "custom_model_data": 61
+      },
+      {
+        "name": "protection_booster",
+        "allow_offhand": true,
+        "icon": "protection_booster",
+        "custom_model_data": 62
+      },
+      {
+        "name": "adventure_pass_booster",
+        "allow_offhand": true,
+        "icon": "adventure_pass_booster",
+        "custom_model_data": 63
+      },
+      {
+        "name": "pinata",
+        "allow_offhand": true,
+        "icon": "pinata",
+        "custom_model_data": 64
+      },
+      {
+        "name": "gold_icon",
+        "allow_offhand": true,
+        "icon": "gold_icon",
+        "custom_model_data": 81
+      },
+      {
+        "name": "gems_icon",
+        "allow_offhand": true,
+        "icon": "gems_icon",
+        "custom_model_data": 82
+      },
+      {
+        "name": "gold_item",
+        "allow_offhand": true,
+        "icon": "gold_item",
+        "custom_model_data": 91
+      },
+      {
+        "name": "gems_item",
+        "allow_offhand": true,
+        "icon": "gems_item",
+        "custom_model_data": 92
+      },
+      {
+        "name": "button_air",
+        "allow_offhand": true,
+        "icon": "button_air",
+        "custom_model_data": 100
+      },
+      {
+        "name": "stats",
+        "allow_offhand": true,
+        "icon": "stats",
+        "custom_model_data": 112
+      },
+      {
+        "name": "chart_icon",
+        "allow_offhand": true,
+        "icon": "chart_icon",
+        "custom_model_data": 113
+      },
+      {
+        "name": "xp_sources",
+        "allow_offhand": true,
+        "icon": "xp_sources",
+        "custom_model_data": 114
+      },
+      {
+        "name": "abilities",
+        "allow_offhand": true,
+        "icon": "abilities",
+        "custom_model_data": 115
+      },
+      {
+        "name": "strength",
+        "allow_offhand": true,
+        "icon": "strength",
+        "custom_model_data": 121
+      },
+      {
+        "name": "health",
+        "allow_offhand": true,
+        "icon": "health",
+        "custom_model_data": 122
+      },
+      {
+        "name": "regeneration",
+        "allow_offhand": true,
+        "icon": "regeneration",
+        "custom_model_data": 123
+      },
+      {
+        "name": "luck",
+        "allow_offhand": true,
+        "icon": "luck",
+        "custom_model_data": 124
+      },
+      {
+        "name": "wisdom",
+        "allow_offhand": true,
+        "icon": "wisdom",
+        "custom_model_data": 125
+      },
+      {
+        "name": "toughness",
+        "allow_offhand": true,
+        "icon": "toughness",
+        "custom_model_data": 126
+      },
+      {
+        "name": "level_unlocked",
+        "allow_offhand": true,
+        "icon": "level_unlocked",
+        "custom_model_data": 131
+      },
+      {
+        "name": "level_progress",
+        "allow_offhand": true,
+        "icon": "level_progress",
+        "custom_model_data": 132
+      },
+      {
+        "name": "level_locked",
+        "allow_offhand": true,
+        "icon": "level_locked",
+        "custom_model_data": 133
+      },
+      {
+        "name": "level_claim",
+        "allow_offhand": true,
+        "icon": "level_claim",
+        "custom_model_data": 134
+      },
+      {
+        "name": "bossbar",
+        "allow_offhand": true,
+        "icon": "bossbar",
+        "custom_model_data": 141
+      },
+      {
+        "name": "sidebar",
+        "allow_offhand": true,
+        "icon": "sidebar",
+        "custom_model_data": 142
+      },
+      {
+        "name": "auto_tool",
+        "allow_offhand": true,
+        "icon": "auto_tool",
+        "custom_model_data": 144
+      },
+      {
+        "name": "lumberjack",
+        "allow_offhand": true,
+        "icon": "lumberjack",
+        "custom_model_data": 145
+      },
+      {
+        "name": "private_messages",
+        "allow_offhand": true,
+        "icon": "private_messages",
+        "custom_model_data": 148
+      },
+      {
+        "name": "bossbar_off",
+        "allow_offhand": true,
+        "icon": "bossbar_off",
+        "custom_model_data": 151
+      },
+      {
+        "name": "sidebar_off",
+        "allow_offhand": true,
+        "icon": "sidebar_off",
+        "custom_model_data": 152
+      },
+      {
+        "name": "auto_tool_off",
+        "allow_offhand": true,
+        "icon": "auto_tool_off",
+        "custom_model_data": 154
+      },
+      {
+        "name": "lumberjack_off",
+        "allow_offhand": true,
+        "icon": "lumberjack_off",
+        "custom_model_data": 155
+      },
+      {
+        "name": "private_messages_off",
+        "allow_offhand": true,
+        "icon": "private_messages_off",
+        "custom_model_data": 158
+      },
+      {
+        "name": "mining",
+        "allow_offhand": true,
+        "icon": "mining",
+        "custom_model_data": 201
+      },
+      {
+        "name": "foraging",
+        "allow_offhand": true,
+        "icon": "foraging",
+        "custom_model_data": 202
+      },
+      {
+        "name": "farming",
+        "allow_offhand": true,
+        "icon": "farming",
+        "custom_model_data": 203
+      },
+      {
+        "name": "fishing",
+        "allow_offhand": true,
+        "icon": "fishing",
+        "custom_model_data": 204
+      },
+      {
+        "name": "excavation",
+        "allow_offhand": true,
+        "icon": "excavation",
+        "custom_model_data": 205
+      },
+      {
+        "name": "fighting",
+        "allow_offhand": true,
+        "icon": "fighting",
+        "custom_model_data": 206
+      },
+      {
+        "name": "defense",
+        "allow_offhand": true,
+        "icon": "defense",
+        "custom_model_data": 207
+      },
+      {
+        "name": "archery",
+        "allow_offhand": true,
+        "icon": "archery",
+        "custom_model_data": 208
+      },
+      {
+        "name": "endurance",
+        "allow_offhand": true,
+        "icon": "endurance",
+        "custom_model_data": 209
+      },
+      {
+        "name": "agility",
+        "allow_offhand": true,
+        "icon": "agility",
+        "custom_model_data": 210
+      },
+      {
+        "name": "alchemy",
+        "allow_offhand": true,
+        "icon": "alchemy",
+        "custom_model_data": 211
+      },
+      {
+        "name": "enchanting",
+        "allow_offhand": true,
+        "icon": "enchanting",
+        "custom_model_data": 212
+      },
+      {
+        "name": "sorcery",
+        "allow_offhand": true,
+        "icon": "sorcery",
+        "custom_model_data": 213
+      },
+      {
+        "name": "healing",
+        "allow_offhand": true,
+        "icon": "healing",
+        "custom_model_data": 214
+      },
+      {
+        "name": "forging",
+        "allow_offhand": true,
+        "icon": "forging",
+        "custom_model_data": 215
+      },
+      {
+        "name": "crafter",
+        "allow_offhand": true,
+        "icon": "crafter",
+        "custom_model_data": 218
+      },
+      {
+        "name": "filled",
+        "allow_offhand": true,
+        "icon": "filled",
+        "custom_model_data": 221
+      },
+      {
+        "name": "mining_wooden",
+        "allow_offhand": true,
+        "icon": "mining_wooden",
+        "custom_model_data": 251
+      },
+      {
+        "name": "mining_stone",
+        "allow_offhand": true,
+        "icon": "mining_stone",
+        "custom_model_data": 252
+      },
+      {
+        "name": "mining_coal",
+        "allow_offhand": true,
+        "icon": "mining_coal",
+        "custom_model_data": 253
+      },
+      {
+        "name": "mining_copper",
+        "allow_offhand": true,
+        "icon": "mining_copper",
+        "custom_model_data": 254
+      },
+      {
+        "name": "mining_iron",
+        "allow_offhand": true,
+        "icon": "mining_iron",
+        "custom_model_data": 255
+      },
+      {
+        "name": "mining_gold",
+        "allow_offhand": true,
+        "icon": "mining_gold",
+        "custom_model_data": 256
+      },
+      {
+        "name": "mining_diamond",
+        "allow_offhand": true,
+        "icon": "mining_diamond",
+        "custom_model_data": 257
+      },
+      {
+        "name": "mining_emerald",
+        "allow_offhand": true,
+        "icon": "mining_emerald",
+        "custom_model_data": 258
+      },
+      {
+        "name": "mining_netherite",
+        "allow_offhand": true,
+        "icon": "mining_netherite",
+        "custom_model_data": 259
+      },
+      {
+        "name": "unknown_badge",
+        "allow_offhand": true,
+        "icon": "unknown_badge",
+        "custom_model_data": 260
+      },
+      {
+        "name": "crafting_wooden",
+        "allow_offhand": true,
+        "icon": "crafting_wooden",
+        "custom_model_data": 261
+      },
+      {
+        "name": "crafting_stone",
+        "allow_offhand": true,
+        "icon": "crafting_stone",
+        "custom_model_data": 262
+      },
+      {
+        "name": "crafting_coal",
+        "allow_offhand": true,
+        "icon": "crafting_coal",
+        "custom_model_data": 263
+      },
+      {
+        "name": "crafting_copper",
+        "allow_offhand": true,
+        "icon": "crafting_copper",
+        "custom_model_data": 264
+      },
+      {
+        "name": "crafting_iron",
+        "allow_offhand": true,
+        "icon": "crafting_iron",
+        "custom_model_data": 265
+      },
+      {
+        "name": "crafting_gold",
+        "allow_offhand": true,
+        "icon": "crafting_gold",
+        "custom_model_data": 266
+      },
+      {
+        "name": "crafting_diamond",
+        "allow_offhand": true,
+        "icon": "crafting_diamond",
+        "custom_model_data": 267
+      },
+      {
+        "name": "crafting_emerald",
+        "allow_offhand": true,
+        "icon": "crafting_emerald",
+        "custom_model_data": 268
+      },
+      {
+        "name": "crafting_netherite",
+        "allow_offhand": true,
+        "icon": "crafting_netherite",
+        "custom_model_data": 269
+      },
+      {
+        "name": "new_badge",
+        "allow_offhand": true,
+        "icon": "new_badge",
+        "custom_model_data": 270
+      },
+      {
+        "name": "survival_wooden",
+        "allow_offhand": true,
+        "icon": "survival_wooden",
+        "custom_model_data": 271
+      },
+      {
+        "name": "survival_stone",
+        "allow_offhand": true,
+        "icon": "survival_stone",
+        "custom_model_data": 272
+      },
+      {
+        "name": "survival_coal",
+        "allow_offhand": true,
+        "icon": "survival_coal",
+        "custom_model_data": 273
+      },
+      {
+        "name": "survival_copper",
+        "allow_offhand": true,
+        "icon": "survival_copper",
+        "custom_model_data": 274
+      },
+      {
+        "name": "survival_iron",
+        "allow_offhand": true,
+        "icon": "survival_iron",
+        "custom_model_data": 275
+      },
+      {
+        "name": "survival_gold",
+        "allow_offhand": true,
+        "icon": "survival_gold",
+        "custom_model_data": 276
+      },
+      {
+        "name": "survival_diamond",
+        "allow_offhand": true,
+        "icon": "survival_diamond",
+        "custom_model_data": 277
+      },
+      {
+        "name": "survival_emerald",
+        "allow_offhand": true,
+        "icon": "survival_emerald",
+        "custom_model_data": 278
+      },
+      {
+        "name": "survival_netherite",
+        "allow_offhand": true,
+        "icon": "survival_netherite",
+        "custom_model_data": 279
+      },
+      {
+        "name": "caving_wooden",
+        "allow_offhand": true,
+        "icon": "caving_wooden",
+        "custom_model_data": 281
+      },
+      {
+        "name": "caving_stone",
+        "allow_offhand": true,
+        "icon": "caving_stone",
+        "custom_model_data": 282
+      },
+      {
+        "name": "caving_coal",
+        "allow_offhand": true,
+        "icon": "caving_coal",
+        "custom_model_data": 283
+      },
+      {
+        "name": "caving_copper",
+        "allow_offhand": true,
+        "icon": "caving_copper",
+        "custom_model_data": 284
+      },
+      {
+        "name": "caving_iron",
+        "allow_offhand": true,
+        "icon": "caving_iron",
+        "custom_model_data": 285
+      },
+      {
+        "name": "caving_gold",
+        "allow_offhand": true,
+        "icon": "caving_gold",
+        "custom_model_data": 286
+      },
+      {
+        "name": "caving_diamond",
+        "allow_offhand": true,
+        "icon": "caving_diamond",
+        "custom_model_data": 287
+      },
+      {
+        "name": "caving_emerald",
+        "allow_offhand": true,
+        "icon": "caving_emerald",
+        "custom_model_data": 288
+      },
+      {
+        "name": "caving_netherite",
+        "allow_offhand": true,
+        "icon": "caving_netherite",
+        "custom_model_data": 289
+      },
+      {
+        "name": "hunting_wooden",
+        "allow_offhand": true,
+        "icon": "hunting_wooden",
+        "custom_model_data": 291
+      },
+      {
+        "name": "hunting_stone",
+        "allow_offhand": true,
+        "icon": "hunting_stone",
+        "custom_model_data": 292
+      },
+      {
+        "name": "hunting_coal",
+        "allow_offhand": true,
+        "icon": "hunting_coal",
+        "custom_model_data": 293
+      },
+      {
+        "name": "hunting_copper",
+        "allow_offhand": true,
+        "icon": "hunting_copper",
+        "custom_model_data": 294
+      },
+      {
+        "name": "hunting_iron",
+        "allow_offhand": true,
+        "icon": "hunting_iron",
+        "custom_model_data": 295
+      },
+      {
+        "name": "hunting_gold",
+        "allow_offhand": true,
+        "icon": "hunting_gold",
+        "custom_model_data": 296
+      },
+      {
+        "name": "hunting_diamond",
+        "allow_offhand": true,
+        "icon": "hunting_diamond",
+        "custom_model_data": 297
+      },
+      {
+        "name": "hunting_emerald",
+        "allow_offhand": true,
+        "icon": "hunting_emerald",
+        "custom_model_data": 298
+      },
+      {
+        "name": "hunting_netherite",
+        "allow_offhand": true,
+        "icon": "hunting_netherite",
+        "custom_model_data": 299
+      },
+      {
+        "name": "claim_button2",
+        "allow_offhand": true,
+        "icon": "claim_button2",
+        "custom_model_data": 303
+      },
+      {
+        "name": "claimed_button2",
+        "allow_offhand": true,
+        "icon": "claimed_button",
+        "custom_model_data": 304
+      },
+      {
+        "name": "book",
+        "allow_offhand": true,
+        "icon": "book",
+        "custom_model_data": 311
+      },
+      {
+        "name": "level_0",
+        "allow_offhand": true,
+        "icon": "level_0",
+        "custom_model_data": 400
+      },
+      {
+        "name": "level_1",
+        "allow_offhand": true,
+        "icon": "level_1",
+        "custom_model_data": 401
+      },
+      {
+        "name": "level_2",
+        "allow_offhand": true,
+        "icon": "level_2",
+        "custom_model_data": 402
+      },
+      {
+        "name": "level_3",
+        "allow_offhand": true,
+        "icon": "level_3",
+        "custom_model_data": 403
+      },
+      {
+        "name": "level_4",
+        "allow_offhand": true,
+        "icon": "level_4",
+        "custom_model_data": 404
+      },
+      {
+        "name": "level_5",
+        "allow_offhand": true,
+        "icon": "level_5",
+        "custom_model_data": 405
+      },
+      {
+        "name": "level_6",
+        "allow_offhand": true,
+        "icon": "level_6",
+        "custom_model_data": 406
+      },
+      {
+        "name": "level_7",
+        "allow_offhand": true,
+        "icon": "level_7",
+        "custom_model_data": 407
+      },
+      {
+        "name": "level_8",
+        "allow_offhand": true,
+        "icon": "level_8",
+        "custom_model_data": 408
+      },
+      {
+        "name": "level_9",
+        "allow_offhand": true,
+        "icon": "level_9",
+        "custom_model_data": 409
+      },
+      {
+        "name": "level_10",
+        "allow_offhand": true,
+        "icon": "level_10",
+        "custom_model_data": 410
+      },
+      {
+        "name": "level_11",
+        "allow_offhand": true,
+        "icon": "level_11",
+        "custom_model_data": 411
+      },
+      {
+        "name": "level_12",
+        "allow_offhand": true,
+        "icon": "level_12",
+        "custom_model_data": 412
+      },
+      {
+        "name": "level_13",
+        "allow_offhand": true,
+        "icon": "level_13",
+        "custom_model_data": 413
+      },
+      {
+        "name": "level_14",
+        "allow_offhand": true,
+        "icon": "level_14",
+        "custom_model_data": 414
+      },
+      {
+        "name": "level_15",
+        "allow_offhand": true,
+        "icon": "level_15",
+        "custom_model_data": 415
+      },
+      {
+        "name": "level_16",
+        "allow_offhand": true,
+        "icon": "level_16",
+        "custom_model_data": 416
+      },
+      {
+        "name": "level_17",
+        "allow_offhand": true,
+        "icon": "level_17",
+        "custom_model_data": 417
+      },
+      {
+        "name": "level_18",
+        "allow_offhand": true,
+        "icon": "level_18",
+        "custom_model_data": 418
+      },
+      {
+        "name": "level_19",
+        "allow_offhand": true,
+        "icon": "level_19",
+        "custom_model_data": 419
+      },
+      {
+        "name": "level_20",
+        "allow_offhand": true,
+        "icon": "level_20",
+        "custom_model_data": 420
+      },
+      {
+        "name": "level_21",
+        "allow_offhand": true,
+        "icon": "level_21",
+        "custom_model_data": 421
+      },
+      {
+        "name": "level_22",
+        "allow_offhand": true,
+        "icon": "level_22",
+        "custom_model_data": 422
+      },
+      {
+        "name": "level_23",
+        "allow_offhand": true,
+        "icon": "level_23",
+        "custom_model_data": 423
+      },
+      {
+        "name": "level_24",
+        "allow_offhand": true,
+        "icon": "level_24",
+        "custom_model_data": 424
+      },
+      {
+        "name": "level_25",
+        "allow_offhand": true,
+        "icon": "level_25",
+        "custom_model_data": 425
+      },
+      {
+        "name": "level_26",
+        "allow_offhand": true,
+        "icon": "level_26",
+        "custom_model_data": 426
+      },
+      {
+        "name": "level_27",
+        "allow_offhand": true,
+        "icon": "level_27",
+        "custom_model_data": 427
+      },
+      {
+        "name": "level_28",
+        "allow_offhand": true,
+        "icon": "level_28",
+        "custom_model_data": 428
+      },
+      {
+        "name": "level_29",
+        "allow_offhand": true,
+        "icon": "level_29",
+        "custom_model_data": 429
+      },
+      {
+        "name": "level_30",
+        "allow_offhand": true,
+        "icon": "level_30",
+        "custom_model_data": 430
+      },
+      {
+        "name": "level_31",
+        "allow_offhand": true,
+        "icon": "level_31",
+        "custom_model_data": 431
+      },
+      {
+        "name": "level_32",
+        "allow_offhand": true,
+        "icon": "level_32",
+        "custom_model_data": 432
+      },
+      {
+        "name": "level_33",
+        "allow_offhand": true,
+        "icon": "level_33",
+        "custom_model_data": 433
+      },
+      {
+        "name": "level_34",
+        "allow_offhand": true,
+        "icon": "level_34",
+        "custom_model_data": 434
+      },
+      {
+        "name": "level_35",
+        "allow_offhand": true,
+        "icon": "level_35",
+        "custom_model_data": 435
+      },
+      {
+        "name": "level_36",
+        "allow_offhand": true,
+        "icon": "level_36",
+        "custom_model_data": 436
+      },
+      {
+        "name": "level_37",
+        "allow_offhand": true,
+        "icon": "level_37",
+        "custom_model_data": 437
+      },
+      {
+        "name": "level_38",
+        "allow_offhand": true,
+        "icon": "level_38",
+        "custom_model_data": 438
+      },
+      {
+        "name": "level_39",
+        "allow_offhand": true,
+        "icon": "level_39",
+        "custom_model_data": 439
+      },
+      {
+        "name": "level_40",
+        "allow_offhand": true,
+        "icon": "level_40",
+        "custom_model_data": 440
+      },
+      {
+        "name": "level_41",
+        "allow_offhand": true,
+        "icon": "level_41",
+        "custom_model_data": 441
+      },
+      {
+        "name": "level_42",
+        "allow_offhand": true,
+        "icon": "level_42",
+        "custom_model_data": 442
+      },
+      {
+        "name": "level_43",
+        "allow_offhand": true,
+        "icon": "level_43",
+        "custom_model_data": 443
+      },
+      {
+        "name": "level_44",
+        "allow_offhand": true,
+        "icon": "level_44",
+        "custom_model_data": 444
+      },
+      {
+        "name": "level_45",
+        "allow_offhand": true,
+        "icon": "level_45",
+        "custom_model_data": 445
+      },
+      {
+        "name": "reward_ready",
+        "allow_offhand": true,
+        "icon": "reward_ready",
+        "custom_model_data": 499
+      },
+      {
+        "name": "traveler_backpack_item",
+        "allow_offhand": true,
+        "icon": "traveler_backpack",
+        "custom_model_data": 501
+      },
+      {
+        "name": "adventure_backpack_item",
+        "allow_offhand": true,
+        "icon": "adventure_backpack",
+        "custom_model_data": 502
+      },
+      {
+        "name": "hero_backpack_item",
+        "allow_offhand": true,
+        "icon": "hero_backpack",
+        "custom_model_data": 503
+      },
+      {
+        "name": "zombie_brain",
+        "allow_offhand": true,
+        "icon": "zombie_brain",
+        "custom_model_data": 601
+      },
+      {
+        "name": "spider_venom",
+        "allow_offhand": true,
+        "icon": "spider_venom",
+        "custom_model_data": 602
+      },
+      {
+        "name": "dragonscale",
+        "allow_offhand": true,
+        "icon": "dragonscale",
+        "custom_model_data": 603
+      },
+      {
+        "name": "skeleton_key",
+        "allow_offhand": true,
+        "icon": "skeleton_key",
+        "custom_model_data": 651
+      },
+      {
+        "name": "dracula_key",
+        "allow_offhand": true,
+        "icon": "dracula_key",
+        "custom_model_data": 652
+      },
+      {
+        "name": "desert_key",
+        "allow_offhand": true,
+        "icon": "desert_key",
+        "custom_model_data": 653
+      },
+      {
+        "name": "jungle_key",
+        "allow_offhand": true,
+        "icon": "jungle_key",
+        "custom_model_data": 654
+      },
+      {
+        "name": "hermes_boots",
+        "allow_offhand": true,
+        "icon": "hermes_boots",
+        "custom_model_data": 701
+      },
+      {
+        "name": "rocket_boots",
+        "allow_offhand": true,
+        "icon": "rocket_boots",
+        "custom_model_data": 702
+      },
+      {
+        "name": "lightning_boots",
+        "allow_offhand": true,
+        "icon": "lightning_boots",
+        "custom_model_data": 703
+      },
+      {
+        "name": "flashlight",
+        "allow_offhand": true,
+        "icon": "flashlight",
+        "custom_model_data": 704
+      },
+      {
+        "name": "miner_helmet",
+        "allow_offhand": true,
+        "icon": "miner_helmet",
+        "custom_model_data": 705
+      },
+      {
+        "name": "miner_helmet_lamp",
+        "allow_offhand": true,
+        "icon": "miner_helmet_lamp",
+        "custom_model_data": 706
+      },
+      {
+        "name": "diving_mask",
+        "allow_offhand": true,
+        "icon": "diving_mask",
+        "custom_model_data": 707
+      },
+      {
+        "name": "ninja_cloak",
+        "allow_offhand": true,
+        "icon": "ninja_cloak",
+        "custom_model_data": 708
+      },
+      {
+        "name": "gold_tooth",
+        "allow_offhand": true,
+        "icon": "gold_tooth",
+        "custom_model_data": 709
+      },
+      {
+        "name": "vitality_ring",
+        "allow_offhand": true,
+        "icon": "vitality_ring",
+        "custom_model_data": 711
+      },
+      {
+        "name": "speed_ring",
+        "allow_offhand": true,
+        "icon": "speed_ring",
+        "custom_model_data": 712
+      },
+      {
+        "name": "wool_scarf",
+        "allow_offhand": true,
+        "icon": "wool_scarf",
+        "custom_model_data": 713
+      },
+      {
+        "name": "magic_bracelet",
+        "allow_offhand": true,
+        "icon": "magic_bracelet",
+        "custom_model_data": 714
+      },
+      {
+        "name": "knight_shield",
+        "allow_offhand": true,
+        "icon": "knight_shield",
+        "custom_model_data": 715
+      },
+      {
+        "name": "philosopher_stone",
+        "allow_offhand": true,
+        "icon": "philosopher_stone",
+        "custom_model_data": 716
+      },
+      {
+        "name": "silver_chain",
+        "allow_offhand": true,
+        "icon": "silver_chain",
+        "custom_model_data": 717
+      },
+      {
+        "name": "talisman_of_vitality",
+        "allow_offhand": true,
+        "icon": "talisman_of_vitality",
+        "custom_model_data": 718
+      },
+      {
+        "name": "dark_magic_necklace",
+        "allow_offhand": true,
+        "icon": "dark_magic_necklace",
+        "custom_model_data": 719
+      },
+      {
+        "name": "shiver_bracelet",
+        "allow_offhand": true,
+        "icon": "shiver_bracelet",
+        "custom_model_data": 720
+      },
+      {
+        "name": "bone_necklace",
+        "allow_offhand": true,
+        "icon": "bone_necklace",
+        "custom_model_data": 721
+      },
+      {
+        "name": "shackle",
+        "allow_offhand": true,
+        "icon": "shackle",
+        "custom_model_data": 722
+      },
+      {
+        "name": "gold_pouch",
+        "allow_offhand": true,
+        "icon": "gold_pouch",
+        "custom_model_data": 723
+      },
+      {
+        "name": "magma_boots",
+        "allow_offhand": true,
+        "icon": "magma_boots",
+        "custom_model_data": 724
+      },
+      {
+        "name": "wither_crown",
+        "allow_offhand": true,
+        "icon": "wither_crown",
+        "custom_model_data": 725
+      },
+      {
+        "name": "sculk_shield",
+        "allow_offhand": true,
+        "icon": "sculk_shield",
+        "custom_model_data": 726
+      },
+      {
+        "name": "ender_gauntlet",
+        "allow_offhand": true,
+        "icon": "ender_gauntlet",
+        "custom_model_data": 727
+      },
+      {
+        "name": "blood_vial",
+        "allow_offhand": true,
+        "icon": "blood_vial",
+        "custom_model_data": 728
+      },
+      {
+        "name": "cloak_of_wrath",
+        "allow_offhand": true,
+        "icon": "cloak_of_wrath",
+        "custom_model_data": 729
+      },
+      {
+        "name": "molten_dice",
+        "allow_offhand": true,
+        "icon": "molten_dice",
+        "custom_model_data": 730
+      },
+      {
+        "name": "horseshoe",
+        "allow_offhand": true,
+        "icon": "horseshoe",
+        "custom_model_data": 731
+      },
+      {
+        "name": "sunstone_ring",
+        "allow_offhand": true,
+        "icon": "sunstone_ring",
+        "custom_model_data": 732
+      },
+      {
+        "name": "zephyr_veil",
+        "allow_offhand": true,
+        "icon": "zephyr_veil",
+        "custom_model_data": 733
+      },
+      {
+        "name": "jungle_amulet",
+        "allow_offhand": true,
+        "icon": "jungle_amulet",
+        "custom_model_data": 734
+      },
+      {
+        "name": "golem_heart",
+        "allow_offhand": true,
+        "icon": "golem_heart",
+        "custom_model_data": 735
+      },
+      {
+        "name": "ankh_charm",
+        "allow_offhand": true,
+        "icon": "ankh_charm",
+        "custom_model_data": 736
+      },
+      {
+        "name": "vampire_signet",
+        "allow_offhand": true,
+        "icon": "vampire_signet",
+        "custom_model_data": 737
+      },
+      {
+        "name": "crystal_amulet",
+        "allow_offhand": true,
+        "icon": "crystal_amulet",
+        "custom_model_data": 738
+      },
+      {
+        "name": "random_teleportation_scroll",
+        "allow_offhand": true,
+        "icon": "random_teleportation_scroll",
+        "custom_model_data": 741
+      },
+      {
+        "name": "home_teleportation_scroll",
+        "allow_offhand": true,
+        "icon": "home_teleportation_scroll",
+        "custom_model_data": 742
+      },
+      {
+        "name": "portal_stone",
+        "allow_offhand": true,
+        "icon": "portal_stone",
+        "custom_model_data": 743
+      },
+      {
+        "name": "catching_net",
+        "allow_offhand": true,
+        "icon": "catching_net",
+        "custom_model_data": 744
+      },
+      {
+        "name": "dynamite",
+        "allow_offhand": true,
+        "icon": "dynamite",
+        "custom_model_data": 745
+      },
+      {
+        "name": "green_crystal",
+        "allow_offhand": true,
+        "icon": "green_crystal",
+        "custom_model_data": 746
+      },
+      {
+        "name": "pink_crystal",
+        "allow_offhand": true,
+        "icon": "pink_crystal",
+        "custom_model_data": 747
+      },
+      {
+        "name": "blue_crystal",
+        "allow_offhand": true,
+        "icon": "blue_crystal",
+        "custom_model_data": 748
+      },
+      {
+        "name": "yellow_crystal",
+        "allow_offhand": true,
+        "icon": "yellow_crystal",
+        "custom_model_data": 749
+      },
+      {
+        "name": "crocodile_tooth",
+        "allow_offhand": true,
+        "icon": "crocodile_tooth",
+        "custom_model_data": 750
+      },
+      {
+        "name": "unidentified_weapon",
+        "allow_offhand": true,
+        "icon": "unidentified_weapon",
+        "custom_model_data": 751
+      },
+      {
+        "name": "unidentified_armor",
+        "allow_offhand": true,
+        "icon": "unidentified_armor",
+        "custom_model_data": 752
+      },
+      {
+        "name": "unidentified_artifact",
+        "allow_offhand": true,
+        "icon": "unidentified_artifact",
+        "custom_model_data": 753
+      },
+      {
+        "name": "forge_schematic",
+        "allow_offhand": true,
+        "icon": "forge_schematic",
+        "custom_model_data": 754
+      },
+      {
+        "name": "emerald_outline",
+        "allow_offhand": true,
+        "icon": "emerald_outline",
+        "custom_model_data": 755
+      },
+      {
+        "name": "golden_skull",
+        "allow_offhand": true,
+        "icon": "golden_skull",
+        "custom_model_data": 756
+      },
+      {
+        "name": "safari_hat",
+        "allow_offhand": true,
+        "icon": "safari_hat",
+        "custom_model_data": 757
+      },
+      {
+        "name": "wanted_poster",
+        "allow_offhand": true,
+        "icon": "wanted_poster",
+        "custom_model_data": 758
+      },
+      {
+        "name": "caravan_key",
+        "allow_offhand": true,
+        "icon": "caravan_key",
+        "custom_model_data": 759
+      }
+    ],
+    "minecraft:stone_hoe": [
+      {
+        "name": "catching_net2",
+        "allow_offhand": true,
+        "icon": "catching_net",
+        "custom_model_data": 738
+      }
+    ]
+  }
+}

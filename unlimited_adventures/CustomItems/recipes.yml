@@ -1,0 +1,83 @@
+# Please DO NOT change version number!
+version: 1
+
+#  
+# Forge Items crafting recipes:
+#  
+recipes:
+    dynamite:
+    - 1 of tnt
+    - 3 of string
+    - 3 of iron ingot
+    catching_net:
+    - 5 of string
+    - 3 of slimeball
+    elytra:
+    - 10 of custom:dragonscale
+    - 32 of phantom membrane
+    dragonscale_sword:
+    - 2 of custom:dragonscale
+    - netherite sword
+    dragonscale_axe:
+    - 3 of custom:dragonscale
+    - netherite axe
+    dragonscale_helmet:
+    - 5 of custom:dragonscale
+    - netherite helmet
+    dragonscale_chestplate:
+    - 8 of custom:dragonscale
+    - netherite chestplate
+    dragonscale_leggings:
+    - 7 of custom:dragonscale
+    - netherite leggings
+    dragonscale_boots:
+    - 4 of custom:dragonscale
+    - netherite boots
+    random_teleportation_scroll:
+    - paper
+    - 2 of lapis lazuli
+    home_teleportation_scroll:
+    - paper
+    - 2 of lapis lazuli
+    - 2 of gold ingot
+    portal_stone:
+    - echo shard
+    - 4 of amethyst shard
+    - 4 of ender eye
+    traveler_backpack:
+    - 10 of leather
+    - 2 of iron ingots
+    adventure_backpack:
+    - custom:traveler_backpack
+    - 5 of iron ingots
+    - 10 of string
+    hero_backpack:
+    - custom:adventure_backpack
+    - 2 of diamond
+    - 5 of gold ingots
+    bone_sword:
+    - 10 of skeleton skull
+    crocodile_sword:
+    - 10 of custom:crocodile_tooth
+    siege_crossbow:
+    - crossbow
+    - 5 of diamond
+    - 20 of iron ingot
+    wool_scarf:
+    - 10 of white wool
+    - 10 of red wool
+    - 10 of strings
+    lightning_boots:
+    - custom:hermes_boots
+    - custom:rocket_boots
+    miner_helmet_lamp:
+    - custom:miner_helmet
+    - custom:flashlight
+    talisman_of_vitality:
+    - custom:philosopher_stone
+    - custom:silver_chain
+    crystal_amulet:
+    - custom:green_crystal
+    - custom:pink_crystal
+    - custom:blue_crystal
+    - custom:yellow_crystal

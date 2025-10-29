@@ -1,0 +1,4 @@
+objectives:
+  questInfo: variable no-chat
+#  firstJoinQuest: 'login events:valiant.obj_1 global persistent conditions:!firstQuest'
+  test: 'login events:valiant.obj_1 global conditions:!firstQuest'

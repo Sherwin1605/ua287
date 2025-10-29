@@ -1,0 +1,675 @@
+panels:
+  daily_rewards:
+    perm: default
+    rows: 5
+    title: '&f'
+    empty: AIR
+    sound-on-open: BLOCK_NOTE_BLOCK_HAT
+    item:
+
+
+      '0':
+        material: STICK
+        customdata: 1
+        name: '&c← Previous Menu'
+        commands:
+        - open= main_menu
+      
+      
+      
+      #     Chest 1
+      
+      '19':
+        material: STICK
+        customdata: 6
+        name: '&7Day 1 | &8Locked Reward'
+        lore:
+        - ' '
+        - '&f&lRewards:'
+        - '&f• &7100 Gold '
+        - '&f• &710 Ranchers Reputation Points'
+        - ' '
+        - '&c❌ Claim previous rewards to unlock'
+        has0:
+          value0: '%valiant_dailyrewards_daynumber%'
+          compare0: '1'
+          material: STICK
+          customdata: 9
+          name: '%color_primary_color%Day 1 | &fAwaiting... ⌚'
+          lore:
+          - ' '
+          - '&f&lRewards:'
+          - '&f• %color_gold%100 Gold &f'
+          - '&f• &910 Ranchers Reputation Points'
+          - ' '
+          - '%color_primary_color%⌚ &fAvailable in: %color_primary_color%%valiant_dailyrewards_timeuntilclaim%'
+          has1:
+            value0: '%valiant_dailyrewards_canclaim%'
+            compare0: 'true'
+            material: STICK
+            customdata: 7
+            name: '%color_menu_item_selected%Day 1 | &a&lAvailable Reward!'
+            lore:
+            - ' '
+            - '&f&lRewards:'
+            - '&f• %color_gold%100 Gold &f'
+            - '&f• &910 Ranchers Reputation Points'
+            - ' '
+            - '&a⏳ &fExpires in: &a%valiant_dailyrewards_timeuntilexpiration%'
+            commands:
+            - 'console= dailyrewards claim %player_name%'
+            - refresh
+        has1:
+          value0: '%valiant_dailyrewards_daynumber% ISGREATER'
+          compare0: '2'
+          material: STICK
+          customdata: 8
+          name: '&2Day 1 | %color_menu_item_unlocked%Claimed Reward'
+          lore:
+          - ' '
+          - '&7&lRewards:'
+          - '&8• &m100 Gold '
+          - '&8• &m10 Ranchers Reputation Points'
+          - ' '
+          - '%color_menu_unlocked%&lReward Claimed'
+      
+      
+      
+      #     Chest 2
+      
+      '20':
+        material: STICK
+        customdata: 6
+        name: '&7Day 2 | &8Locked Reward'
+        lore:
+        - ' '
+        - '&f&lRewards:'
+        - '&f• &7200 Gold '
+        - '&f• &715 Slayers Reputation Points'
+        - '&f• &710 Steak'
+        - ' '
+        - '&c❌ Claim previous rewards to unlock'
+        has0:
+          value0: '%valiant_dailyrewards_daynumber%'
+          compare0: '2'
+          material: STICK
+          customdata: 9
+          name: '%color_primary_color%Day 2 | &fAwaiting... ⌚'
+          lore:
+          - ' '
+          - '&f&lRewards:'
+          - '&f• %color_gold%200 Gold &f'
+          - '&f• &915 Slayers Reputation Points'
+          - '&f• &c10 Steak'
+          - ' '
+          - '%color_primary_color%⌚ &fAvailable in: %color_primary_color%%valiant_dailyrewards_timeuntilclaim%'
+          has1:
+            value0: '%valiant_dailyrewards_canclaim%'
+            compare0: 'true'
+            material: STICK
+            customdata: 7
+            name: '%color_menu_item_selected%Day 2 | &a&lAvailable Reward!'
+            lore:
+            - ' '
+            - '&f&lRewards:'
+            - '&f• %color_gold%200 Gold &f'
+            - '&f• &915 Slayers Reputation Points'
+            - '&f• &c10 Steak'
+            - ' '
+            - '&a⏳ &fExpires in: &a%valiant_dailyrewards_timeuntilexpiration%'
+            commands:
+            - 'console= dailyrewards claim %player_name%'
+            - refresh
+        has1:
+          value0: '%valiant_dailyrewards_daynumber% ISGREATER'
+          compare0: '3'
+          material: STICK
+          customdata: 8
+          name: '&2Day 2 | %color_menu_item_unlocked%Claimed Reward'
+          lore:
+          - ' '
+          - '&7&lRewards:'
+          - '&8• &m200 Gold '
+          - '&8• &m15 Slayers Reputation Points'
+          - '&8• &m10 Steak'
+          - ' '
+          - '%color_menu_unlocked%&lReward Claimed'
+       
+       
+       
+      #     Chest 3
+      
+      '21':
+        material: STICK
+        customdata: 6
+        name: '&7Day 3 | &8Locked Reward'
+        lore:
+        - ' '
+        - '&f&lRewards:'
+        - '&f• &7300 Gold '
+        - '&f• &720 Miners Reputation Points'
+        - '&f• &78 Iron Ingots'
+        - ' '
+        - '&c❌ Claim previous rewards to unlock'
+        has0:
+          value0: '%valiant_dailyrewards_daynumber%'
+          compare0: '3'
+          material: STICK
+          customdata: 9
+          name: '%color_primary_color%Day 3 | &fAwaiting... ⌚'
+          lore:
+          - ' '
+          - '&f&lRewards:'
+          - '&f• %color_gold%300 Gold &f'
+          - '&f• &920 Miners Reputation Points'
+          - '&f• &f8 Iron Ingots'
+          - ' '
+          - '%color_primary_color%⌚ &fAvailable in: %color_primary_color%%valiant_dailyrewards_timeuntilclaim%'
+          has1:
+            value0: '%valiant_dailyrewards_canclaim%'
+            compare0: 'true'
+            material: STICK
+            customdata: 7
+            name: '%color_menu_item_selected%Day 3 | &a&lAvailable Reward!'
+            lore:
+            - ' '
+            - '&f&lRewards:'
+            - '&f• %color_gold%300 Gold &f'
+            - '&f• &920 Miners Reputation Points'
+            - '&f• &f8 Iron Ingots'
+            - ' '
+            - '&a⏳ &fExpires in: &a%valiant_dailyrewards_timeuntilexpiration%'
+            commands:
+            - 'console= dailyrewards claim %player_name%'
+            - refresh
+        has1:
+          value0: '%valiant_dailyrewards_daynumber% ISGREATER'
+          compare0: '4'
+          material: STICK
+          customdata: 8
+          name: '&2Day 3 | %color_menu_item_unlocked%Claimed Reward'
+          lore:
+          - ' '
+          - '&7&lRewards:'
+          - '&8• &m300 Gold '
+          - '&8• &m20 Miners Reputation Points'
+          - '&8• &m8 Iron Ingots'
+          - ' '
+          - '%color_menu_unlocked%&lReward Claimed'
+      
+      
+      
+      
+      
+      #     Chest 4
+      
+      '22':
+        material: STICK
+        customdata: 6
+        name: '&7Day 4 | &8Locked Reward'
+        lore:
+        - ' '
+        - '&f&lRewards:'
+        - '&f• &7400 Gold '
+        - '&f• &725 Ranchers Reputation Points'
+        - '&f• &71 Golden Apple'
+        - ' '
+        - '&c❌ Claim previous rewards to unlock'
+        has0:
+          value0: '%valiant_dailyrewards_daynumber%'
+          compare0: '4'
+          material: STICK
+          customdata: 9
+          name: '%color_primary_color%Day 4 | &fAwaiting... ⌚'
+          lore:
+          - ' '
+          - '&f&lRewards:'
+          - '&f• %color_gold%400 Gold &f'
+          - '&f• &925 Ranchers Reputation Points'
+          - '&f• &61 Golden Apple'
+          - ' '
+          - '%color_primary_color%⌚ &fAvailable in: %color_primary_color%%valiant_dailyrewards_timeuntilclaim%'
+          has1:
+            value0: '%valiant_dailyrewards_canclaim%'
+            compare0: 'true'
+            material: STICK
+            customdata: 7
+            name: '%color_menu_item_selected%Day 4 | &a&lAvailable Reward!'
+            lore:
+            - ' '
+            - '&f&lRewards:'
+            - '&f• %color_gold%400 Gold &f'
+            - '&f• &925 Ranchers Reputation Points'
+            - '&f• &61 Golden Apple'
+            - ' '
+            - '&a⏳ &fExpires in: &a%valiant_dailyrewards_timeuntilexpiration%'
+            commands:
+            - 'console= dailyrewards claim %player_name%'
+            - refresh
+        has1:
+          value0: '%valiant_dailyrewards_daynumber% ISGREATER'
+          compare0: '5'
+          material: STICK
+          customdata: 8
+          name: '&2Day 4 | %color_menu_item_unlocked%Claimed Reward'
+          lore:
+          - ' '
+          - '&7&lRewards:'
+          - '&8• &m400 Gold '
+          - '&8• &m25 Ranchers Reputation Points'
+          - '&8• &m1 Golden Apple'
+          - ' '
+          - '%color_menu_unlocked%&lReward Claimed'
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      #     Chest 5
+      
+      '23':
+        material: STICK
+        customdata: 6
+        name: '&7Day 5 | &8Locked Reward'
+        lore:
+        - ' '
+        - '&f&lRewards:'
+        - '&f• &7500 Gold '
+        - '&f• &730 Slayers Reputation Points'
+        - '&f• &716 Experience Bottles'
+        - ' '
+        - '&c❌ Claim previous rewards to unlock'
+        has0:
+          value0: '%valiant_dailyrewards_daynumber%'
+          compare0: '5'
+          material: STICK
+          customdata: 9
+          name: '%color_primary_color%Day 5 | &fAwaiting... ⌚'
+          lore:
+          - ' '
+          - '&f&lRewards:'
+          - '&f• %color_gold%500 Gold &f'
+          - '&f• &930 Slayers Reputation Points'
+          - '&f• &916 Experience Bottles'
+          - ' '
+          - '%color_primary_color%⌚ &fAvailable in: %color_primary_color%%valiant_dailyrewards_timeuntilclaim%'
+          has1:
+            value0: '%valiant_dailyrewards_canclaim%'
+            compare0: 'true'
+            material: STICK
+            customdata: 7
+            name: '%color_menu_item_selected%Day 5 | &a&lAvailable Reward!'
+            lore:
+            - ' '
+            - '&f&lRewards:'
+            - '&f• %color_gold%500 Gold &f'
+            - '&f• &930 Slayers Reputation Points'
+            - '&f• &916 Experience Bottles'
+            - ' '
+            - '&a⏳ &fExpires in: &a%valiant_dailyrewards_timeuntilexpiration%'
+            commands:
+            - 'console= dailyrewards claim %player_name%'
+            - refresh
+        has1:
+          value0: '%valiant_dailyrewards_daynumber% ISGREATER'
+          compare0: '6'
+          material: STICK
+          customdata: 8
+          name: '&2Day 5 | %color_menu_item_unlocked%Claimed Reward'
+          lore:
+          - ' '
+          - '&7&lRewards:'
+          - '&8• &m500 Gold '
+          - '&8• &m30 Slayers Reputation Points'
+          - '&8• &m16 Experience Bottles'
+          - ' '
+          - '%color_menu_unlocked%&lReward Claimed'
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      #     Chest 6
+      
+      '24':
+        material: STICK
+        customdata: 6
+        name: '&7Day 6 | &8Locked Reward'
+        lore:
+        - ' '
+        - '&f&lRewards:'
+        - '&f• &7750 Gold '
+        - '&f• &740 Miners Reputation Points'
+        - '&f• &74 Emeralds'
+        - ' '
+        - '&c❌ Claim previous rewards to unlock'
+        has0:
+          value0: '%valiant_dailyrewards_daynumber%'
+          compare0: '6'
+          material: STICK
+          customdata: 9
+          name: '%color_primary_color%Day 6 | &fAwaiting... ⌚'
+          lore:
+          - ' '
+          - '&f&lRewards:'
+          - '&f• %color_gold%750 Gold &f'
+          - '&f• &940 Miners Reputation Points'
+          - '&f• &a4 Emeralds'
+          - ' '
+          - '%color_primary_color%⌚ &fAvailable in: %color_primary_color%%valiant_dailyrewards_timeuntilclaim%'
+          has1:
+            value0: '%valiant_dailyrewards_canclaim%'
+            compare0: 'true'
+            material: STICK
+            customdata: 7
+            name: '%color_menu_item_selected%Day 6 | &a&lAvailable Reward!'
+            lore:
+            - ' '
+            - '&f&lRewards:'
+            - '&f• %color_gold%750 Gold &f'
+            - '&f• &940 Miners Reputation Points'
+            - '&f• &a4 Emeralds'
+            - ' '
+            - '&a⏳ &fExpires in: &a%valiant_dailyrewards_timeuntilexpiration%'
+            commands:
+            - 'console= dailyrewards claim %player_name%'
+            - refresh
+        has1:
+          value0: '%valiant_dailyrewards_daynumber% ISGREATER'
+          compare0: '7'
+          material: STICK
+          customdata: 8
+          name: '&2Day 6 | %color_menu_item_unlocked%Claimed Reward'
+          lore:
+          - ' '
+          - '&7&lRewards:'
+          - '&8• &m750 Gold '
+          - '&8• &m40 Miners Reputation Points'
+          - '&8• &m4 Emeralds'
+          - ' '
+          - '%color_menu_unlocked%&lReward Claimed'
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      #     Chest 7
+      
+      '25':
+        material: STICK
+        customdata: 6
+        name: '&7Day 7 | &8Locked Reward'
+        lore:
+        - ' '
+        - '&f&lRewards:'
+        - '&f• &71000 Gold '
+        - '&f• &750 Ranchers Reputation Points'
+        - '&f• &71 Diamond'
+        - ' '
+        - '&c❌ Claim previous rewards to unlock'
+        has0:
+          value0: '%valiant_dailyrewards_daynumber%'
+          compare0: '7'
+          material: STICK
+          customdata: 9
+          name: '%color_primary_color%Day 7 | &fAwaiting... ⌚'
+          lore:
+          - ' '
+          - '&f&lRewards:'
+          - '&f• %color_gold%1000 Gold &f'
+          - '&f• &950 Ranchers Reputation Points'
+          - '&f• &b1 Diamond'
+          - ' '
+          - '%color_primary_color%⌚ &fAvailable in: %color_primary_color%%valiant_dailyrewards_timeuntilclaim%'
+          has1:
+            value0: '%valiant_dailyrewards_canclaim%'
+            compare0: 'true'
+            material: STICK
+            customdata: 7
+            name: '%color_menu_item_selected%Day 7 | &a&lAvailable Reward!'
+            lore:
+            - ' '
+            - '&f&lRewards:'
+            - '&f• %color_gold%1000 Gold &f'
+            - '&f• &950 Ranchers Reputation Points'
+            - '&f• &b1 Diamond'
+            - ' '
+            - '&a⏳ &fExpires in: &a%valiant_dailyrewards_timeuntilexpiration%'
+            commands:
+            - 'console= dailyrewards claim %player_name%'
+            - refresh
+        has1:
+          value0: '%valiant_dailyrewards_daynumber% ISGREATER'
+          compare0: '8'
+          material: STICK
+          customdata: 8
+          name: '&2Day 7 | %color_menu_item_unlocked%Claimed Reward'
+          lore:
+          - ' '
+          - '&7&lRewards:'
+          - '&8• &m1000 Gold '
+          - '&8• &m50 Ranchers Reputation Points'
+          - '&8• &m1 Diamond'
+          - ' '
+          - '%color_menu_unlocked%&lReward Claimed'
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      #     Reward Actions
+      
+      
+      '28':
+        material: STICK
+        customdata: 5
+        name: '&7Reward is locked'
+        has0:
+          value0: '%valiant_dailyrewards_daynumber%'
+          compare0: '1'
+          material: STICK
+          customdata: 4
+          name: '&fReward is not ready yet!'
+          has1:
+            value0: '%valiant_dailyrewards_canclaim%'
+            compare0: 'true'
+            material: STICK
+            customdata: 3
+            name: '%color_menu_purchase%&lClick to claim!'
+            commands:
+            - 'console= dailyrewards claim %player_name%'
+            - refresh
+        has1:
+          value0: '%valiant_dailyrewards_daynumber% ISGREATER'
+          compare0: '2'
+          material: STICK
+          customdata: 25
+          name: '%color_menu_unlocked%&lReward Claimed'
+      
+      '29':
+        material: STICK
+        customdata: 5
+        name: '&7Reward is locked'
+        has0:
+          value0: '%valiant_dailyrewards_daynumber%'
+          compare0: '2'
+          material: STICK
+          customdata: 4
+          name: '&fReward is not ready yet!'
+          has1:
+            value0: '%valiant_dailyrewards_canclaim%'
+            compare0: 'true'
+            material: STICK
+            customdata: 3
+            name: '%color_menu_purchase%&lClick to claim!'
+            commands:
+            - 'console= dailyrewards claim %player_name%'
+            - refresh
+        has1:
+          value0: '%valiant_dailyrewards_daynumber% ISGREATER'
+          compare0: '3'
+          material: STICK
+          customdata: 25
+          name: '%color_menu_unlocked%&lReward Claimed'
+      
+      '30':
+        material: STICK
+        customdata: 5
+        name: '&7Reward is locked'
+        has0:
+          value0: '%valiant_dailyrewards_daynumber%'
+          compare0: '3'
+          material: STICK
+          customdata: 4
+          name: '&fReward is not ready yet!'
+          has1:
+            value0: '%valiant_dailyrewards_canclaim%'
+            compare0: 'true'
+            material: STICK
+            customdata: 3
+            name: '%color_menu_purchase%&lClick to claim!'
+            commands:
+            - 'console= dailyrewards claim %player_name%'
+            - refresh
+        has1:
+          value0: '%valiant_dailyrewards_daynumber% ISGREATER'
+          compare0: '4'
+          material: STICK
+          customdata: 25
+          name: '%color_menu_unlocked%&lReward Claimed'
+      
+      '31':
+        material: STICK
+        customdata: 5
+        name: '&7Reward is locked'
+        has0:
+          value0: '%valiant_dailyrewards_daynumber%'
+          compare0: '4'
+          material: STICK
+          customdata: 4
+          name: '&fReward is not ready yet!'
+          has1:
+            value0: '%valiant_dailyrewards_canclaim%'
+            compare0: 'true'
+            material: STICK
+            customdata: 3
+            name: '%color_menu_purchase%&lClick to claim!'
+            commands:
+            - 'console= dailyrewards claim %player_name%'
+            - refresh
+        has1:
+          value0: '%valiant_dailyrewards_daynumber% ISGREATER'
+          compare0: '5'
+          material: STICK
+          customdata: 25
+          name: '%color_menu_unlocked%&lReward Claimed'
+      
+      '32':
+        material: STICK
+        customdata: 5
+        name: '&7Reward is locked'
+        has0:
+          value0: '%valiant_dailyrewards_daynumber%'
+          compare0: '5'
+          material: STICK
+          customdata: 4
+          name: '&fReward is not ready yet!'
+          has1:
+            value0: '%valiant_dailyrewards_canclaim%'
+            compare0: 'true'
+            material: STICK
+            customdata: 3
+            name: '%color_menu_purchase%&lClick to claim!'
+            commands:
+            - 'console= dailyrewards claim %player_name%'
+            - refresh
+        has1:
+          value0: '%valiant_dailyrewards_daynumber% ISGREATER'
+          compare0: '6'
+          material: STICK
+          customdata: 25
+          name: '%color_menu_unlocked%&lReward Claimed'
+      
+      '33':
+        material: STICK
+        customdata: 5
+        name: '&7Reward is locked'
+        has0:
+          value0: '%valiant_dailyrewards_daynumber%'
+          compare0: '6'
+          material: STICK
+          customdata: 4
+          name: '&fReward is not ready yet!'
+          has1:
+            value0: '%valiant_dailyrewards_canclaim%'
+            compare0: 'true'
+            material: STICK
+            customdata: 3
+            name: '%color_menu_purchase%&lClick to claim!'
+            commands:
+            - 'console= dailyrewards claim %player_name%'
+            - refresh
+        has1:
+          value0: '%valiant_dailyrewards_daynumber% ISGREATER'
+          compare0: '7'
+          material: STICK
+          customdata: 25
+          name: '%color_menu_unlocked%&lReward Claimed'
+      
+      '34':
+        material: STICK
+        customdata: 5
+        name: '&7Reward is locked'
+        has0:
+          value0: '%valiant_dailyrewards_daynumber%'
+          compare0: '7'
+          material: STICK
+          customdata: 4
+          name: '&fReward is not ready yet!'
+          has1:
+            value0: '%valiant_dailyrewards_canclaim%'
+            compare0: 'true'
+            material: STICK
+            customdata: 3
+            name: '%color_menu_purchase%&lClick to claim!'
+            commands:
+            - 'console= dailyrewards claim %player_name%'
+            - refresh
+        has1:
+          value0: '%valiant_dailyrewards_daynumber% ISGREATER'
+          compare0: '8'
+          material: STICK
+          customdata: 25
+          name: '%color_menu_unlocked%&lReward Claimed'
+        
+        
+        
+

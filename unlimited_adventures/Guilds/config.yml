@@ -1,0 +1,40 @@
+# Please DO NOT change version number!
+version: 1
+
+# 
+# Here you can configure different Reputation settings. Remember to follow the formatting.
+# In case of any issues, feel free to contact us on the Valiant Studio Discord server.
+# 
+leveling:
+    first_level_xp_requirement: 100
+    next_level_required_xp_multiplier: 1.03
+
+quests:
+    slayers:
+        easy: 11
+        medium: 11
+        hard: 7
+    miners:
+        easy: 10
+        medium: 7
+        hard: 4
+    ranchers:
+        easy: 8
+        medium: 12
+        hard: 6
+
+# 
+# This section is responsible for XP rewards from quests.
+# 
+xp_rewards:
+    easy_quest: 50
+    medium_quest: 100
+    hard_quest: 200
+
+# 
+# This section is responsible for Gold rewards from quests.
+# 
+gold_rewards:
+    easy_quest: 250
+    medium_quest: 500
+    hard_quest: 1000

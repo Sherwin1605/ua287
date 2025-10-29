@@ -1,0 +1,19 @@
+# Please DO NOT change version number!
+version: 1
+
+# 
+# Pinata will drop X random items from the list below. (drops can repeat)
+# You can configure how many items will Pinata drop at random.
+# 
+pinata:
+    drops-amount: 10
+    drops-list:
+    - custom:yellow_crystal
+    - custom:pink_crystal
+    - custom:blue_crystal
+    - custom:green_crystal
+    - custom:skeleton_key
+    - custom:dracula_key
+    - custom:desert_key
+    - 2 of netherite ingot
+    - 8 of diamond

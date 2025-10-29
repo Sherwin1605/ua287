@@ -1,0 +1,18 @@
+location: spawn:703,494:108,200:824,455
+enabled: true
+display-range: 48
+update-range: 48
+update-interval: 20
+facing: 0.0
+down-origin: false
+pages:
+- lines:
+  - content: '#fed53b&lLegendary Crate'
+    height: 0.3
+  - content: '#fed53b▶ &fYour Keys: %crazycrates_legendarycrate_total% #fed53b◀'
+    height: 0.3
+  - content: '#7dff49&lLEFT-CLICK #61fb9b&l(PREVIEW)'
+    height: 0.3
+  - content: '#7dff49&lRIGHT-CLICK #61fb9b&l(OPEN)'
+    height: 0.3
+  actions: {}

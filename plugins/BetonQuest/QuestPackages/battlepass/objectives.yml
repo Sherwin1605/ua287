@@ -1,0 +1,42 @@
+objectives:
+  dq_1: block STONE -100 events:finish_daily_quest
+  dq_2: craft bread 5 events:finish_daily_quest
+  dq_3: fish cod 5 events:finish_daily_quest
+  dq_4: fish salmon 5 events:finish_daily_quest
+  dq_5: mobkill ZOMBIE 10 events:finish_daily_quest
+  dq_6: mobkill SKELETON 10 events:finish_daily_quest
+  dq_7: mobkill CREEPER 10 events:finish_daily_quest
+  dq_8: mobkill SPIDER 10 events:finish_daily_quest
+  dq_9: mobkill BLAZE 8 events:finish_daily_quest
+  dq_10: mobkill WITHER_SKELETON 4 events:finish_daily_quest
+  dq_11: mobkill GHAST 2 events:finish_daily_quest
+  dq_12: block COAL_ORE -20 events:finish_daily_quest
+  dq_13: block IRON_ORE -15 events:finish_daily_quest
+  dq_14: block GOLD_ORE -10 events:finish_daily_quest
+  dq_15: block LAPIS_ORE -10 events:finish_daily_quest
+  dq_16: block REDSTONE_ORE -15 events:finish_daily_quest
+  dq_17: block COPPER_ORE -20 events:finish_daily_quest
+  dq_18: block SAND -100 events:finish_daily_quest
+  dq_19: block GRAVEL -100 events:finish_daily_quest
+  dq_20: craft gold_block 5 events:finish_daily_quest
+  dq_21: block CARROTS[age=7] -10 events:finish_daily_quest
+  dq_22: block WHEAT[age=7] -10 events:finish_daily_quest
+  dq_23: smelt IRON_INGOT 25 events:finish_daily_quest
+  dq_24: smelt GOLD_INGOT 25 events:finish_daily_quest
+  dq_25: smelt COPPER_INGOT 25 events:finish_daily_quest
+  dq_26: experience 200 events:finish_daily_quest
+  dq_27: craft iron_block 5 events:finish_daily_quest
+  dq_28: block OAK_LOG -50 events:finish_daily_quest
+  dq_29: block POTATOES[age=7] -10 events:finish_daily_quest
+  dq_30: craft golden_apple 2 events:finish_daily_quest
+  
+  wq_1: craft golden_apple 10 events:finish_weekly_quest
+  wq_2: kill 5 events:finish_weekly_quest
+  wq_3: experience 1000 events:finish_weekly_quest
+  wq_4: smelt IRON_INGOT 100 events:finish_daily_quest
+  wq_5: smelt GOLD_INGOT 100 events:finish_daily_quest
+  wq_6: block COAL_ORE -100 events:finish_daily_quest
+  wq_7: block OAK_LOG -200 events:finish_daily_quest
+  wq_8: block OAK_LOG -200 events:finish_daily_quest
+  wq_9: block OAK_LOG -200 events:finish_daily_quest
+  wq_10: block OAK_LOG -200 events:finish_daily_quest

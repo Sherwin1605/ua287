@@ -1,0 +1,389 @@
+panels:
+  sell_menu_mob_drops:
+    perm: default
+    rows: 5
+    title: '&f'
+    empty: AIR
+    sound-on-open: BLOCK_NOTE_BLOCK_HAT
+    
+    custom-item:
+      zombie_brain:
+        itemType:
+        - noAttributes
+        material: STICK
+        customdata: 601
+        name: '&aZombie Brain'
+      skeleton_skull:
+        itemType:
+        - noAttributes
+        material: SKELETON_SKULL
+        name: '&aSkeleton Skull'
+      spider_venom:
+        itemType:
+        - noAttributes
+        material: STICK
+        customdata: 602
+        name: '&aSpider Venom'
+      dragonscale:
+        itemType:
+        - noAttributes
+        material: STICK
+        customdata: 603
+        name: '&aDragonscale'
+      green_crystal:
+        itemType:
+        - noAttributes
+        material: STICK
+        customdata: 746
+        name: '&aGreen Crystal'
+      pink_crystal:
+        itemType:
+        - noAttributes
+        material: STICK
+        customdata: 747
+        name: '&aPink Crystal'
+      blue_crystal:
+        itemType:
+        - noAttributes
+        material: STICK
+        customdata: 748
+        name: '&aBlue Crystal'
+      yellow_crystal:
+        itemType:
+        - noAttributes
+        material: STICK
+        customdata: 749
+        name: '&aYellow Crystal'
+      crocodile_tooth:
+        itemType:
+        - noAttributes
+        material: STICK
+        customdata: 750
+        name: '&aCrocodile Tooth'
+    
+    
+    
+    item:
+    
+    
+    
+      '0':
+        material: STICK
+        customdata: 1
+        name: '&c← Previous Menu'
+        commands:
+        - open= main_menu
+      
+      '38':
+        material: STICK
+        customdata: 1
+        name: '&a← Previous Page'
+        commands:
+        - open= sell_menu_farming
+
+
+      
+      
+      
+      '10':
+        material: ROTTEN_FLESH
+        stack: 16
+        name: '%color_menu_primary%Rotten Flesh'
+        lore:
+        - ' '
+        - '%color_gold%  &7SELL &f&l16 &7FOR %color_gold%20 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - item-paywall= rotten_flesh 16
+        - console= eco give %cp-player-name% 20
+        - console= itemsellsound %cp-player-name%
+      '11':
+        material: BONE
+        stack: 16
+        name: '%color_menu_primary%Bone'
+        lore:
+        - ' '
+        - '%color_gold%  &7SELL &f&l16 &7FOR %color_gold%25 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - item-paywall= bone 16
+        - console= eco give %cp-player-name% 25
+        - console= itemsellsound %cp-player-name%
+      '12':
+        material: STRING
+        stack: 16
+        name: '%color_menu_primary%String'
+        lore:
+        - ' '
+        - '%color_gold%  &7SELL &f&l16 &7FOR %color_gold%30 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - item-paywall= string 16
+        - console= eco give %cp-player-name% 30
+        - console= itemsellsound %cp-player-name%
+      '13':
+        material: GUNPOWDER
+        stack: 16
+        name: '%color_menu_primary%Gunpowder'
+        lore:
+        - ' '
+        - '%color_gold%  &7SELL &f&l16 &7FOR %color_gold%40 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - item-paywall= gunpowder 16
+        - console= eco give %cp-player-name% 40
+        - console= itemsellsound %cp-player-name%
+      '14':
+        material: SPIDER_EYE
+        stack: 1
+        name: '%color_menu_primary%Spider Eye'
+        lore:
+        - ' '
+        - '%color_gold%  &7SELL &f&l1 &7FOR %color_gold%15 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - item-paywall= spider_eye 1
+        - console= eco give %cp-player-name% 15
+        - console= itemsellsound %cp-player-name%
+      '15':
+        material: PHANTOM_MEMBRANE
+        stack: 4
+        name: '%color_menu_primary%Phantom Membrane'
+        lore:
+        - ' '
+        - '%color_gold%  &7SELL &f&l4 &7FOR %color_gold%20 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - item-paywall= phantom_membrane 4
+        - console= eco give %cp-player-name% 20
+        - console= itemsellsound %cp-player-name%
+      '16':
+        material: ENDER_PEARL
+        stack: 4
+        name: '%color_menu_primary%Ender Pearl'
+        lore:
+        - ' '
+        - '%color_gold%  &7SELL &f&l4 &7FOR %color_gold%50 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - item-paywall= ender_pearl 4
+        - console= eco give %cp-player-name% 50
+        - console= itemsellsound %cp-player-name%
+      
+      
+      
+      
+      '19':
+        material: SLIME_BALL
+        stack: 4
+        name: '%color_menu_primary%Slimeball'
+        lore:
+        - ' '
+        - '%color_gold%  &7SELL &f&l4 &7FOR %color_gold%30 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - item-paywall= slime_ball 4
+        - console= eco give %cp-player-name% 30
+        - console= itemsellsound %cp-player-name%
+      '20':
+        material: RABBIT_FOOT
+        stack: 1
+        name: '%color_menu_primary%Rabbit''s Foot'
+        lore:
+        - ' '
+        - '%color_gold%  &7SELL &f&l1 &7FOR %color_gold%25 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - item-paywall= rabbit_foot 1
+        - console= eco give %cp-player-name% 25
+        - console= itemsellsound %cp-player-name%
+      '21':
+        material: BLAZE_ROD
+        stack: 2
+        name: '%color_menu_primary%Blaze Rod'
+        lore:
+        - ' '
+        - '%color_gold%  &7SELL &f&l2 &7FOR %color_gold%25 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - item-paywall= blaze_rod 2
+        - console= eco give %cp-player-name% 25
+        - console= itemsellsound %cp-player-name%
+      '22':
+        material: MAGMA_CREAM
+        stack: 2
+        name: '%color_menu_primary%Magma Cream'
+        lore:
+        - ' '
+        - '%color_gold%  &7SELL &f&l2 &7FOR %color_gold%15 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - item-paywall= magma_cream 2
+        - console= eco give %cp-player-name% 15
+        - console= itemsellsound %cp-player-name%
+      '23':
+        material: WITHER_SKELETON_SKULL
+        stack: 1
+        name: '%color_menu_primary%Wither Skeleton Skull'
+        lore:
+        - ' '
+        - '%color_gold%  &7SELL &f&l1 &7FOR %color_gold%300 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - item-paywall= wither_skeleton_skull 1
+        - console= eco give %cp-player-name% 300
+        - console= itemsellsound %cp-player-name%
+      '24':
+        material: STICK
+        customdata: 601
+        name: '%color_menu_primary%Zombie Brain'
+        lore:
+        - ' '
+        - '%color_gold%  &7SELL &f&l1 &7FOR %color_gold%100 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - item-paywall= zombie_brain 1 IGNORENBT
+        - console= eco give %cp-player-name% 100
+        - console= itemsellsound %cp-player-name%
+        
+      '25':
+        material: SKELETON_SKULL
+        name: '%color_menu_primary%Skeleton Skull'
+        lore:
+        - ' '
+        - '%color_gold%  &7SELL &f&l1 &7FOR %color_gold%120 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - item-paywall= skeleton_skull 1
+        - console= eco give %cp-player-name% 120
+        - console= itemsellsound %cp-player-name%
+
+      '28':
+        material: STICK
+        customdata: 602
+        name: '%color_menu_primary%Spider Venom'
+        lore:
+        - ' '
+        - '%color_gold%  &7SELL &f&l1 &7FOR %color_gold%150 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - item-paywall= spider_venom 1
+        - console= eco give %cp-player-name% 150
+        - console= itemsellsound %cp-player-name%
+      '29':
+        material: STICK
+        customdata: 603
+        name: '%color_menu_primary%Dragonscale'
+        lore:
+        - ' '
+        - '%color_gold%  &7SELL &f&l1 &7FOR %color_gold%1000 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - item-paywall= dragonscale 1
+        - console= eco give %cp-player-name% 1000
+        - console= itemsellsound %cp-player-name%
+      '30':
+        material: STICK
+        customdata: 750
+        name: '%color_menu_primary%Crocodile Tooth'
+        lore:
+        - ' '
+        - '%color_gold%  &7SELL &f&l1 &7FOR %color_gold%100 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - item-paywall= crocodile_tooth 1
+        - console= eco give %cp-player-name% 100
+        - console= itemsellsound %cp-player-name%
+      '31':
+        material: STICK
+        customdata: 746
+        name: '%color_menu_primary%Green Crystal'
+        lore:
+        - ' '
+        - '%color_gold%  &7SELL &f&l1 &7FOR %color_gold%100 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - item-paywall= green_crystal 1
+        - console= eco give %cp-player-name% 100
+        - console= itemsellsound %cp-player-name%
+      '32':
+        material: STICK
+        customdata: 747
+        name: '%color_menu_primary%Pink Crystal'
+        lore:
+        - ' '
+        - '%color_gold%  &7SELL &f&l1 &7FOR %color_gold%100 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - item-paywall= pink_crystal 1
+        - console= eco give %cp-player-name% 100
+        - console= itemsellsound %cp-player-name%
+      '33':
+        material: STICK
+        customdata: 748
+        name: '%color_menu_primary%Blue Crystal'
+        lore:
+        - ' '
+        - '%color_gold%  &7SELL &f&l1 &7FOR %color_gold%100 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - item-paywall= blue_crystal 1
+        - console= eco give %cp-player-name% 100
+        - console= itemsellsound %cp-player-name%
+      '34':
+        material: STICK
+        customdata: 749
+        name: '%color_menu_primary%Yellow Crystal'
+        lore:
+        - ' '
+        - '%color_gold%  &7SELL &f&l1 &7FOR %color_gold%100 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - item-paywall= yellow_crystal 1
+        - console= eco give %cp-player-name% 100
+        - console= itemsellsound %cp-player-name%
+
+
+      '24':
+        material: AIR
+      '25':
+        material: AIR
+      '27':
+        material: AIR
+      '28':
+        material: AIR
+      '29':
+        material: AIR
+      '30':
+        material: AIR
+      '31':
+        material: AIR
+      '32':
+        material: AIR
+      '33':
+        material: AIR
+      '34':
+        material: AIR
+
+

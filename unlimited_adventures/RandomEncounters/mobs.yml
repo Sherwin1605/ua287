@@ -1,0 +1,38 @@
+# Please DO NOT change version number!
+version: 1
+
+# New zombie is the chance for the zombie to become a special mob.
+spawn_chance:
+    new_zombies: 2
+    new_skeletons: 2
+    new_spiders: 2
+    new_creepers: 2
+    new_husks: 2
+    new_strays: 2
+    new_snowmans: 0.5
+
+mob_enabled:
+    zombie_knight: true
+    reversed_zombie: true
+    skeleton_bandit: true
+    hermit_husk: true
+    hermit_stray: true
+    tarantula: true
+    atomic_creeper: true
+    wild_snowman: true
+
+drops:
+    zombie_knight:
+    - 3 of iron ingots
+    reversed_zombie:
+    - 3 of emerald
+    skeleton_bandit:
+    - 3 of gold ingots
+    hermit_husk:
+    - 3 of leather
+    hermit_stray:
+    - 3 of leather
+    tarantula:
+    - custom:spider_venom
+    atomic_creeper:
+    - 3 of tnt

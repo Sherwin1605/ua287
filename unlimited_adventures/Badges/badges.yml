@@ -1,0 +1,152 @@
+# Please DO NOT change version number!
+version: 1
+
+# 
+# Feel free to setup your own requirements for the Badges system. Remember to follow the formatting.
+# Requirements are made using placeholders. You can use any PAPI supported placeholders.
+# In case of any issues, feel free to contact us on the Valiant Studio Discord server.
+# 
+mining:
+    '1':
+        requirement: statistic_mine_block:STONE
+        value: 100
+    '2':
+        requirement: statistic_mine_block:STONE
+        value: 500
+    '3':
+        requirement: statistic_mine_block:GRAVEL
+        value: 100
+    '4':
+        requirement: statistic_mine_block:SAND
+        value: 150
+    '5':
+        requirement: statistic_mine_block:DEEPSLATE
+        value: 250
+    '6':
+        requirement: statistic_mine_block:NETHERRACK
+        value: 100
+    '7':
+        requirement: statistic_mine_block:GLOWSTONE
+        value: 50
+    '8':
+        requirement: statistic_mine_block:END_STONE
+        value: 50
+    '9':
+        requirement: statistic_mine_block:OBSIDIAN
+        value: 50
+
+crafting:
+    '1':
+        requirement: statistic_craft_item
+        value: 10
+    '2':
+        requirement: statistic_craft_item
+        value: 50
+    '3':
+        requirement: statistic_craft_item
+        value: 150
+    '4':
+        requirement: statistic_craft_item:BREAD
+        value: 50
+    '5':
+        requirement: statistic_craft_item:IRON_BLOCK
+        value: 20
+    '6':
+        requirement: statistic_craft_item:GOLDEN_APPLE
+        value: 5
+    '7':
+        requirement: statistic_craft_item:END_CRYSTAL
+        value: 1
+    '8':
+        requirement: statistic_craft_item:EMERALD_BLOCK
+        value: 1
+    '9':
+        requirement: statistic_craft_item:BEACON
+        value: 1
+
+survival:
+    '1':
+        requirement: statistic_mine_block:OAK_LOG
+        value: 10
+    '2':
+        requirement: statistic_mine_block:OAK_LOG
+        value: 50
+    '3':
+        requirement: statistic_mine_block:OAK_LOG
+        value: 120
+    '4':
+        requirement: statistic_fish_caught
+        value: 10
+    '5':
+        requirement: statistic_mine_block:OAK_LOG
+        value: 250
+    '6':
+        requirement: statistic_fish_caught
+        value: 30
+    '7':
+        requirement: statistic_mine_block:OAK_LOG
+        value: 500
+    '8':
+        requirement: statistic_mine_block:OAK_LOG
+        value: 750
+    '9':
+        requirement: statistic_mine_block:OAK_LOG
+        value: 1000
+
+caving:
+    '1':
+        requirement: statistic_mine_block:IRON_ORE
+        value: 10
+    '2':
+        requirement: statistic_mine_block:COAL_ORE
+        value: 50
+    '3':
+        requirement: statistic_mine_block:COPPER_ORE
+        value: 100
+    '4':
+        requirement: statistic_mine_block:GOLD_ORE
+        value: 100
+    '5':
+        requirement: statistic_mine_block:REDSTONE_ORE
+        value: 80
+    '6':
+        requirement: statistic_mine_block:LAPIS_ORE
+        value: 50
+    '7':
+        requirement: statistic_mine_block:DIAMOND_ORE
+        value: 10
+    '8':
+        requirement: statistic_mine_block:EMERALD_ORE
+        value: 5
+    '9':
+        requirement: statistic_mine_block:ANCIENT_DEBRIS
+        value: 5
+
+hunting:
+    '1':
+        requirement: statistic_mob_kills
+        value: 20
+    '2':
+        requirement: statistic_kill_entity:ZOMBIE
+        value: 25
+    '3':
+        requirement: statistic_kill_entity:SKELETON
+        value: 40
+    '4':
+        requirement: statistic_kill_entity:SPIDER
+        value: 50
+    '5':
+        requirement: statistic_kill_entity:CREEPER
+        value: 50
+    '6':
+        requirement: statistic_kill_entity:ENDERMAN
+        value: 50
+    '7':
+        requirement: statistic_kill_entity:GHAST
+        value: 10
+    '8':
+        requirement: statistic_kill_entity:BLAZE
+        value: 50
+    '9':
+        requirement: statistic_kill_entity:SHULKER
+        value: 10

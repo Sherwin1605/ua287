@@ -1,0 +1,339 @@
+Crate:
+  # Type of crate -> CSGO/QuadCrate/QuickCrate/Roulette/CrateOnTheGo/FireCracker/Wonder/Wheel/War
+
+    # Make sure to check out the wiki for anything not explained here.
+  # https://github.com/Crazy-Crew/Crazy-Crates/wiki
+
+    # See CosmicCrateExample.yml to see how the Cosmic CrateType works.
+  CrateType: FireCracker
+  Preview-Name: <white>
+  # Starting amount of keys when the player 1st joins.
+  StartingKeys: 0
+  # Max amount of crates that can be opened at once using /cc max-open
+  Max-Mass-Open: 10
+  # If the crate shows in the /cc GUI.
+  # If the type is QuickCrate/CrateOnTheGo/FireCracker, They will not work as they require a Physical Crate.
+  InGUI: true
+  # Slot the item is in the GUI.
+  Slot: 25
+  # Enables/Disables the Broadcasts message when they open a crate.
+  OpeningBroadCast: true
+  # Message that is broadcast when opening the crate.
+  BroadCast: '%prefix%<gold>%player%</gold> <white>is opening a <#fed53b><bold>Legendary
+    Crate</bold></white><gray>.'
+  # Item the crate is in the GUI
+  Item: chest
+  # If the crate in the main /cc GUI is glowing or not.
+  Glowing: false
+  # Name of the item in the GUI.
+  Name: <#fed53b><bold>Legendary Crate
+  # The lore of the item in the GUI.
+  Lore:
+  - ''
+  - <gray>A chest found in the dark
+  - <gray>depths of a mysterious cave.
+  - <gray>Open it to discover what kind
+  - <gray>of valuables lay hidden inside.
+  - ''
+  - '<#fed53b>▶ <white>Your keys: <#fed53b>%Keys%'
+  - ''
+  - <bold><yellow>LEFT-CLICK </yellow></bold><bold><gold>TO OPEN
+  - <bold><yellow>RIGHT-CLICK </yellow></bold><bold><gold>TO PREVIEW
+  Preview:
+    # Turn on and off the preview for this crate.
+    Toggle: true
+    # How many lines the Crate Preview should have. Including Header and Bottom (Between 3 and 6)
+    ChestLines: 3
+    Glass:
+      # Turn the glass boarder in the preview on and off.
+      Toggle: false
+      # The name of the border item.
+      Name: ' '
+      # The item that shows in the boarder. Can be glass or any other item.
+      Item: yellow_stained_glass_pane
+    Name: ' '
+  PhysicalKey:
+    # Name of the Key.
+    Name: <#fed53b><bold>Legendary Crate </bold><bold><aqua>Key
+    # Lore of the Key.
+    Lore:
+    - <gray>A special Key
+    - <gray>For a special Crate.
+    # The item the key is.
+    Item: tripwire_hook
+    # Makes the key look enchanted.
+    Glowing: true
+  # Settings for the holograms.
+  Hologram:
+    # Toggle on and off the holograms for the crates.
+    Toggle: false
+    # The height of the hologram above the crate.
+    Height: 1.5
+    # The message that will be displayed.
+    Message:
+    - '&6&lLegendary Crate'
+  # All the prizes that can be gotten in the Crate.
+  Prizes:
+    
+    '1':
+      Commands:
+      - giveitem dragonscale_sword %player%
+      DisplayName: <!italic><!underlined><!strikethrough><!bold><!obfuscated><green>Dragonscale
+        Sword
+      DisplayLore:
+      - ''
+      - <!italic><!underlined><!strikethrough><!bold><!obfuscated><gray>Legendary
+        sword made out of
+      - <!italic><!underlined><!strikethrough><!bold><!obfuscated><gray>the ominous
+        scales of a dragon.
+      - ''
+      - <!italic><!underlined><!strikethrough><!bold><!obfuscated><#b12222>9 Attack
+        Damage 🗡
+      DisplayItem: netherite_sword
+      DisplayAmount: 1
+      Weight: 10.0
+    '2':
+      Commands:
+      - giveitem dragonscale_axe %player%
+      DisplayName: <!italic><!underlined><!strikethrough><!bold><!obfuscated><green>Dragonscale
+        Axe
+      DisplayLore:
+      - ''
+      - <!italic><!underlined><!strikethrough><!bold><!obfuscated><gray>Legendary
+        axe made out of
+      - <!italic><!underlined><!strikethrough><!bold><!obfuscated><gray>the ominous
+        scales of a dragon.
+      - ''
+      - <!italic><!underlined><!strikethrough><!bold><!obfuscated><#b12222>11 Attack
+        Damage 🗡
+      DisplayItem: netherite_axe
+      DisplayAmount: 1
+      Weight: 10.0
+    '3':
+      Commands:
+      - giveitem dragonscale_helmet %player%
+      DisplayName: <!italic><!underlined><!strikethrough><!bold><!obfuscated><green>Dragonscale
+        Helmet
+      DisplayLore:
+      - ''
+      - <!italic><!underlined><!strikethrough><!bold><!obfuscated><gray>Legendary
+        helmet made out of
+      - <!italic><!underlined><!strikethrough><!bold><!obfuscated><gray>the ominous
+        scales of a dragon.
+      DisplayItem: chainmail_helmet#733
+      DisplayAmount: 1
+      Weight: 10.0
+    '4':
+      Commands:
+      - giveitem dragonscale_chestplate %player%
+      DisplayName: <!italic><!underlined><!strikethrough><!bold><!obfuscated><green>Dragonscale
+        Chestplate
+      DisplayLore:
+      - ''
+      - <!italic><!underlined><!strikethrough><!bold><!obfuscated><gray>Legendary
+        chestplate made out of
+      - <!italic><!underlined><!strikethrough><!bold><!obfuscated><gray>the ominous
+        scales of a dragon.
+      DisplayItem: chainmail_chestplate#734
+      DisplayAmount: 1
+      Weight: 10.0
+    '5':
+      Commands:
+      - giveitem dragonscale_leggings %player%
+      DisplayName: <!italic><!underlined><!strikethrough><!bold><!obfuscated><green>Dragonscale
+        Leggings
+      DisplayLore:
+      - ''
+      - <!italic><!underlined><!strikethrough><!bold><!obfuscated><gray>Legendary
+        leggings made out of
+      - <!italic><!underlined><!strikethrough><!bold><!obfuscated><gray>the ominous
+        scales of a dragon.
+      DisplayItem: chainmail_leggings#735
+      DisplayAmount: 1
+      Weight: 10.0
+    '6':
+      Commands:
+      - giveitem dragonscale_boots %player%
+      DisplayName: <!italic><!underlined><!strikethrough><!bold><!obfuscated><green>Dragonscale
+        Boots
+      DisplayLore:
+      - ''
+      - <!italic><!underlined><!strikethrough><!bold><!obfuscated><gray>Legendary
+        boots made out of
+      - <!italic><!underlined><!strikethrough><!bold><!obfuscated><gray>the ominous
+        scales of a dragon.
+      DisplayItem: chainmail_boots#736
+      DisplayAmount: 1
+      Weight: 10.0
+    '7':
+      Commands:
+      - giveitem desert_key %player%
+      DisplayName: <!italic><!underlined><!strikethrough><!bold><!obfuscated><green>Desert
+        Key
+      DisplayLore:
+      - ''
+      - <!italic><!underlined><!strikethrough><!bold><!obfuscated><gray>A key that
+        allows you to enter the Desert Ruins
+      - <!italic><!underlined><!strikethrough><!bold><!obfuscated><gray>Can be used
+        to enter the dungeon.
+      - ''
+      - <!italic><!underlined><!strikethrough><!bold><!obfuscated><#e6ab4e>ᴅᴜɴɢᴇᴏɴ
+        ᴋᴇʏ
+      DisplayItem: stick#653
+      DisplayAmount: 1
+      Weight: 10.0
+    '8':
+      Commands:
+      - giveitem crystal_amulet %player%
+      DisplayName: <!italic><!underlined><!strikethrough><!bold><!obfuscated><green>Crystal
+        Amulet
+      DisplayLore:
+      - ''
+      - <!italic><!underlined><!strikethrough><!bold><!obfuscated><gray>Increases
+        strength and speed.
+      - ''
+      - <!italic><!underlined><!strikethrough><!bold><!obfuscated><#b12222>+5 Strength
+        🗡
+      - <!italic><!underlined><!strikethrough><!bold><!obfuscated><white>+10% Movement
+        Speed 
+      - ''
+      - <!italic><!underlined><!strikethrough><!bold><!obfuscated><#8f64de>ᴀᴄᴄᴇssᴏʀʏ
+        ɪᴛᴇᴍ
+      DisplayItem: stick#738
+      DisplayAmount: 1
+      Weight: 10.0
+    '9':
+      Commands:
+      - giveitem vampire_signet %player%
+      DisplayName: <!italic><!underlined><!strikethrough><!bold><!obfuscated><green>Vampire's
+        Signet
+      DisplayLore:
+      - ''
+      - <!italic><!underlined><!strikethrough><!bold><!obfuscated><gray>Increases
+        health and regeneration.
+      - ''
+      - <!italic><!underlined><!strikethrough><!bold><!obfuscated><#df5252>+10 Health
+        ❤
+      - <!italic><!underlined><!strikethrough><!bold><!obfuscated><#f2601c>+10 Regeneration
+        🍖
+      - ''
+      - <!italic><!underlined><!strikethrough><!bold><!obfuscated><#8f64de>ᴀᴄᴄᴇssᴏʀʏ
+        ɪᴛᴇᴍ
+      DisplayItem: stick#737
+      DisplayAmount: 1
+      Weight: 10.0
+    '10':
+      Commands:
+      - giveitem dragonscale %player% 2
+      DisplayName: <!italic><!underlined><!strikethrough><!bold><!obfuscated><green>Dragonscale
+      DisplayLore:
+      - ''
+      - <!italic><!underlined><!strikethrough><!bold><!obfuscated><gray>A piece that
+        broke off from
+      - <!italic><!underlined><!strikethrough><!bold><!obfuscated><gray>the armor
+        of a legendary beast.
+      - <!italic><!underlined><!strikethrough><!bold><!obfuscated><gray>Can be sold
+        or used in forging.
+      - ''
+      - <!italic><!underlined><!strikethrough><!bold><!obfuscated><#e6ab4e>ᴄʀᴀғᴛɪɴɢ
+        sᴜᴘᴘʟʏ
+      DisplayItem: stick#603
+      DisplayAmount: 2
+      Weight: 10.0
+    '11':
+      Commands:
+      - giveitem ankh_charm %player%
+      DisplayName: <!italic><!underlined><!strikethrough><!bold><!obfuscated><green>Ankh
+        Charm
+      DisplayLore:
+      - ''
+      - <!italic><!underlined><!strikethrough><!bold><!obfuscated><gray>Increases
+        strength and regeneration.
+      - ''
+      - <!italic><!underlined><!strikethrough><!bold><!obfuscated><#b12222>+8 Strength
+        🗡
+      - <!italic><!underlined><!strikethrough><!bold><!obfuscated><#f2601c>+8 Regeneration
+        🍖
+      - ''
+      - <!italic><!underlined><!strikethrough><!bold><!obfuscated><#8f64de>ᴀᴄᴄᴇssᴏʀʏ
+        ɪᴛᴇᴍ
+      DisplayItem: stick#736
+      DisplayAmount: 1
+      Weight: 10.0
+    '12':
+      Commands:
+      - giveitem pinata %player%
+      DisplayName: <!italic><!underlined><!strikethrough><!bold><!obfuscated><green>Pinata
+      DisplayLore:
+      - ''
+      - <!italic><!underlined><!strikethrough><!bold><!obfuscated><gray>Release and
+        then smash it to
+      - <!italic><!underlined><!strikethrough><!bold><!obfuscated><gray>make it drop
+        wonderful items!
+      DisplayItem: player_head
+      Player: '6177ec295ec6a0326c16faa52b620dcf392439d1e6f0332bf2df6508cf2b7974'
+      DisplayAmount: 1
+      Weight: 10.0
+    '13':
+      Commands:
+      - giveitem hero_backpack %player%
+      DisplayName: <!italic><!underlined><!strikethrough><!bold><!obfuscated><green>Hero's
+        Backpack
+      DisplayLore:
+      - ''
+      - <!italic><!underlined><!strikethrough><!bold><!obfuscated><gray>Big backpack.
+        Can fit 54 items.
+      DisplayItem: stick#503
+      DisplayAmount: 1
+      Weight: 10.0
+    
+    '14':
+      DisplayItem: wind_charge
+      DisplayAmount: 3
+      Items:
+      - Item:wind_charge, Amount:3
+      Weight: 10.0
+    '15':
+      DisplayItem: netherite_ingot
+      DisplayAmount: 6
+      Items:
+      - Item:netherite_ingot, Amount:6
+      Weight: 10.0
+    '16':
+      DisplayName: <bold><yellow>Crate of Gold
+      DisplayItem: gold_ingot
+      DisplayAmount: 1
+      DisplayLore:
+      - <gray>A huge crate filled with shiny gold.
+      - ' '
+      - '<white>Contains: </white><yellow>5 000 Gold '
+      Firework: true
+      Commands:
+      - eco give %player% 5000
+      Weight: 8.0
+    '17':
+      DisplayName: <bold><light_purple>Chest of Gold
+      DisplayItem: gold_block
+      DisplayAmount: 1
+      DisplayLore:
+      - <gray>An enormous chest brimming
+      - <gray>with shiny gold coins.
+      - ' '
+      - '<white>Contains: </white><yellow>10 000 Gold '
+      Firework: true
+      Commands:
+      - eco give %player% 10000
+      Weight: 5.0
+    '18':
+      DisplayName: <bold><aqua>Diamond Bundle
+      DisplayItem: diamond_block
+      DisplayAmount: 3
+      DisplayLore:
+      - ''
+      - '<white>Contains: </white><aqua>3x Diamond Blocks'
+      MaxRange: 100
+      Chance: 1
+      Items:
+      - Item:diamond_block, Amount:3
+      Weight: 10.0
+    

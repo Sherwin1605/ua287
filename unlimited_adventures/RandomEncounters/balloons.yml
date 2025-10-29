@@ -1,0 +1,35 @@
+# Please DO NOT change version number!
+version: 1
+
+# Cooldown in seconds before another balloon can spawn on player
+spawn_cooldown: 2700
+
+# Percentage chance for a balloon to spawn on player (checked every 5 seconds)
+spawn_chance: 2
+
+# Balloons will never spawn on those biomes
+blocked_biomes:
+- spawn
+- dungeons
+
+# Balloons will never spawn in those worlds
+blocked_worlds:
+- spawn
+- dungeons
+
+# List of possible items that can drop from balloons
+balloon_drops:
+- 2 of diamond
+- 5 of golden carrot
+- 16 of iron ingot
+- 20 of gold ingot
+- 2 netherite scrap
+- 8 emerald
+- 16 lapis lazuli
+- 2 slime ball
+- 2 of golden apple
+- 16 of amethyst shard
+- diamond horse armor
+
+# Amount of items that will be dropped from the list
+drop_amount: 5

@@ -1,0 +1,6 @@
+# Please DO NOT change version number!
+version: 1
+
+sculk_portals:
+- 786.5, 93.5, 845.5, spawn
+- 725.5, 67.5, 921.5, spawn

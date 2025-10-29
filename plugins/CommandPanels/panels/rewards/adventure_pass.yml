@@ -1,0 +1,928 @@
+panels:
+  adventure_pass:
+    perm: default
+    rows: 5
+    title: '&f%valiant_battlepass_menu_font%'
+    commands:
+    - adventurepass
+    - ap
+    - battlepass
+    empty: AIR
+    sound-on-open: ENTITY_EXPERIENCE_ORB_PICKUP
+    pre-load-commands:
+    - 'add-data= page 1 %cp-player-name%'
+    item:
+    
+    
+    
+      '0':
+        material: STICK
+        customdata: 1
+        name: '&c← Previous Menu'
+        commands:
+        - open= reputation
+          
+      
+      
+      '9':
+        material: AIR
+        customdata: 100
+        name: '&7'
+        has0:
+          value0: '%cp-data-page% ISGREATER'
+          compare0: 2
+          material: STICK
+          customdata: 100
+          name: '&a← Previous Page'
+          commands:
+          - math-data= page -1 %cp-player-name%
+          - sound= BLOCK_NOTE_BLOCK_HAT 0.8 0.8
+          - refresh
+
+
+
+
+
+      '17':
+        material: AIR
+        customdata: 100
+        name: '&7'
+        has0:
+          value0: 'NOT %cp-data-page% ISGREATER'
+          compare0: 10
+          material: STICK
+          customdata: 100
+          name: '&aNext Page →'
+          commands:
+          - math-data= page +1 %cp-player-name%
+          - sound= BLOCK_NOTE_BLOCK_HAT 0.8 1.2
+          - refresh
+      
+      
+      
+      '8':
+        material: STICK
+        customdata: 11
+        name: '%color_menu_primary%How to level up?'
+        lore:
+        - ''
+        - '&7Each time you gain next reputation level,'
+        - '&7in any Guild, another reward in the'
+        - '&7Adventure Pass will be unlocked.'
+        - ''
+        - '&a• &7Complete quests for Guilds'
+        - '&a• &7Claim experience from Daily Rewards'
+      
+      
+      '4':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%Adventure Pass'
+        lore:
+        - '&8FREE REWARDS ONLY'
+        - ''
+        - '%color_adventure_pass_premium%• &7Level: %color_adventure_pass_xp%%valiant_battlepass_level%'
+        has0:
+          value0: '%valiant_battlepass_premium%'
+          compare0: 'true'
+          material: STICK
+          customdata: 100
+          name: '%color_adventure_pass_name%&lAdventure Pass'
+          lore:
+          - '%color_adventure_pass_premium%⭐ PREMIUM ADVENTURE PASS'
+          - ' '
+          - '%color_adventure_pass_premium%• &7Level: %color_adventure_pass_xp%%valiant_battlepass_level%'
+          has0:
+            value0: '%valiant_battlepass_level% ISGREATER'
+            compare0: '70'
+            material: STICK
+            customdata: 100
+            name: '%color_adventure_pass_name%&lAdventure Pass'
+            lore:
+            - '%color_adventure_pass_premium%⭐ PREMIUM ADVENTURE PASS'
+            - ' '
+            - '%color_adventure_pass_premium%• &7Level: %color_adventure_pass_xp%%valiant_battlepass_level%'
+        has1:
+          value0: '%valiant_battlepass_premium%'
+          compare0: 'false'
+          material: STICK
+          customdata: 100
+          name: '%color_menu_primary%Adventure Pass'
+          lore:
+          - '&8FREE REWARDS ONLY'
+          - ' '
+          - '%color_adventure_pass_premium%• &7Level: %color_adventure_pass_xp%%valiant_battlepass_level%'
+          has0:
+            value0: '%valiant_battlepass_level% ISGREATER'
+            compare0: '70'
+            material: STICK
+            customdata: 100
+            name: '%color_menu_primary%Adventure Pass'
+            lore:
+            - '&8FREE REWARDS ONLY'
+            - ' '
+            - '%color_adventure_pass_premium%• &7Level: %color_adventure_pass_xp%%valiant_battlepass_level%'
+      
+
+
+
+      '38':
+        material: AIR
+        has0:
+          value0: '%valiant_battlepass_premium%'
+          compare0: 'false'
+          material: STICK
+          customdata: 100
+          name: '%color_adventure_pass_name%&lUpgrade to PREMIUM'
+          lore:
+          - ''
+          - '&a• &7Upgrade to %color_adventure_pass_premium%&lPREMIUM PASS'
+          - '&7  &7and unlock &6&l40 NEW REWARDS!'
+          - ''
+          - '&fPrice: %color_gems%950 Gems &f'
+          - '&fLasts: &aFull season'
+          - ''
+          - '&cNOT ENOUGH GEMS'
+          - '%color_menu_purchase%&lClick to buy more!'
+          commands:
+          - open= premium_store
+          has1:
+            value0: '%valiant_premium_currency% ISGREATER'
+            compare0: '950'
+            material: STICK
+            customdata: 100
+            name: '%color_adventure_pass_name%&lUpgrade to PREMIUM'
+            lore:
+            - ''
+            - '&a• &7Upgrade to %color_adventure_pass_premium%&lPREMIUM PASS'
+            - '&7  &7and unlock &6&l40 NEW REWARDS!'
+            - ''
+            - '&fPrice: %color_gems%950 Gems &f'
+            - '&fLasts: &aFull season'
+            -  ''
+            - '%color_menu_purchase%&lClick to purchase!'
+            commands:
+            - set-data= item_name adventure_pass %cp-player-name%
+            - set-data= item_price 950 %cp-player-name%
+            - open= premium_store_confirm
+      '39':
+        material: AIR
+        has0:
+          value0: '%valiant_battlepass_premium%'
+          compare0: 'false'
+          material: STICK
+          customdata: 100
+          name: '%color_adventure_pass_name%&lUpgrade to PREMIUM'
+          lore:
+          - ''
+          - '&a• &7Upgrade to %color_adventure_pass_premium%&lPREMIUM PASS'
+          - '&7  &7and unlock &6&l40 NEW REWARDS!'
+          - ''
+          - '&fPrice: %color_gems%950 Gems &f'
+          - '&fLasts: &aFull season'
+          - ''
+          - '&cNOT ENOUGH GEMS'
+          - '%color_menu_purchase%&lClick to buy more!'
+          commands:
+          - open= premium_store
+          has1:
+            value0: '%valiant_premium_currency% ISGREATER'
+            compare0: '950'
+            material: STICK
+            customdata: 100
+            name: '%color_adventure_pass_name%&lUpgrade to PREMIUM'
+            lore:
+            - ''
+            - '&a• &7Upgrade to %color_adventure_pass_premium%&lPREMIUM PASS'
+            - '&7  &7and unlock &6&l40 NEW REWARDS!'
+            - ''
+            - '&fPrice: %color_gems%950 Gems &f'
+            - '&fLasts: &aFull season'
+            -  ''
+            - '%color_menu_purchase%&lClick to purchase!'
+            commands:
+            - set-data= item_name adventure_pass %cp-player-name%
+            - set-data= item_price 950 %cp-player-name%
+            - open= premium_store_confirm
+      '40':
+        material: AIR
+        has0:
+          value0: '%valiant_battlepass_premium%'
+          compare0: 'false'
+          material: STICK
+          customdata: 100
+          name: '%color_adventure_pass_name%&lUpgrade to PREMIUM'
+          lore:
+          - ''
+          - '&a• &7Upgrade to %color_adventure_pass_premium%&lPREMIUM PASS'
+          - '&7  &7and unlock &6&l40 NEW REWARDS!'
+          - ''
+          - '&fPrice: %color_gems%950 Gems &f'
+          - '&fLasts: &aFull season'
+          - ''
+          - '&cNOT ENOUGH GEMS'
+          - '%color_menu_purchase%&lClick to buy more!'
+          commands:
+          - open= premium_store
+          has1:
+            value0: '%valiant_premium_currency% ISGREATER'
+            compare0: '950'
+            material: STICK
+            customdata: 100
+            name: '%color_adventure_pass_name%&lUpgrade to PREMIUM'
+            lore:
+            - ''
+            - '&a• &7Upgrade to %color_adventure_pass_premium%&lPREMIUM PASS'
+            - '&7  &7and unlock &6&l40 NEW REWARDS!'
+            - ''
+            - '&fPrice: %color_gems%950 Gems &f'
+            - '&fLasts: &aFull season'
+            -  ''
+            - '%color_menu_purchase%&lClick to purchase!'
+            commands:
+            - set-data= item_name adventure_pass %cp-player-name%
+            - set-data= item_price 950 %cp-player-name%
+            - open= premium_store_confirm
+      '41':
+        material: AIR
+        has0:
+          value0: '%valiant_battlepass_premium%'
+          compare0: 'false'
+          material: STICK
+          customdata: 100
+          name: '%color_adventure_pass_name%&lUpgrade to PREMIUM'
+          lore:
+          - ''
+          - '&a• &7Upgrade to %color_adventure_pass_premium%&lPREMIUM PASS'
+          - '&7  &7and unlock &6&l40 NEW REWARDS!'
+          - ''
+          - '&fPrice: %color_gems%950 Gems &f'
+          - '&fLasts: &aFull season'
+          - ''
+          - '&cNOT ENOUGH GEMS'
+          - '%color_menu_purchase%&lClick to buy more!'
+          commands:
+          - open= premium_store
+          has1:
+            value0: '%valiant_premium_currency% ISGREATER'
+            compare0: '950'
+            material: STICK
+            customdata: 100
+            name: '%color_adventure_pass_name%&lUpgrade to PREMIUM'
+            lore:
+            - ''
+            - '&a• &7Upgrade to %color_adventure_pass_premium%&lPREMIUM PASS'
+            - '&7  &7and unlock &6&l40 NEW REWARDS!'
+            - ''
+            - '&fPrice: %color_gems%950 Gems &f'
+            - '&fLasts: &aFull season'
+            -  ''
+            - '%color_menu_purchase%&lClick to purchase!'
+            commands:
+            - set-data= item_name adventure_pass %cp-player-name%
+            - set-data= item_price 950 %cp-player-name%
+            - open= premium_store_confirm
+      '42':
+        material: AIR
+        has0:
+          value0: '%valiant_battlepass_premium%'
+          compare0: 'false'
+          material: STICK
+          customdata: 100
+          name: '%color_adventure_pass_name%&lUpgrade to PREMIUM'
+          lore:
+          - ''
+          - '&a• &7Upgrade to %color_adventure_pass_premium%&lPREMIUM PASS'
+          - '&7  &7and unlock &6&l40 NEW REWARDS!'
+          - ''
+          - '&fPrice: %color_gems%950 Gems &f'
+          - '&fLasts: &aFull season'
+          - ''
+          - '&cNOT ENOUGH GEMS'
+          - '%color_menu_purchase%&lClick to buy more!'
+          commands:
+          - open= premium_store
+          has1:
+            value0: '%valiant_premium_currency% ISGREATER'
+            compare0: '950'
+            material: STICK
+            customdata: 100
+            name: '%color_adventure_pass_name%&lUpgrade to PREMIUM'
+            lore:
+            - ''
+            - '&a• &7Upgrade to %color_adventure_pass_premium%&lPREMIUM PASS'
+            - '&7  &7and unlock &6&l40 NEW REWARDS!'
+            - ''
+            - '&fPrice: %color_gems%950 Gems &f'
+            - '&fLasts: &aFull season'
+            -  ''
+            - '%color_menu_purchase%&lClick to purchase!'
+            commands:
+            - set-data= item_name adventure_pass %cp-player-name%
+            - set-data= item_price 950 %cp-player-name%
+            - open= premium_store_confirm
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      ##################################################################################################
+      #
+      #
+      #
+      #
+      #
+      #          Adventure Pass Levels:
+      #
+      #
+      #
+      #
+      #
+      ##################################################################################################
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+      
+      
+# %utils_parse_valiant_battlepass_menu_item_{math_0_{valiant_battlepass_page}+1}_material%
+# %valiant_bp_1_{valiant_battlepass_page}_level%
+      
+      
+      
+      '10':
+        material: "%valiant_bp_item_1_{cp-data-page}_material%"
+        customdata: "%valiant_bp_item_1_{cp-data-page}_customdata%"
+        stack: "%valiant_bp_item_1_{cp-data-page}_amount%"
+        potion: 
+        name: '&7Level %valiant_bp_item_1_{cp-data-page}_level%'
+        lore:
+        - ' '
+        - '%color_adventure_pass_premium%⭐ &lPREMIUM REWARD:'
+        - '%color_adventure_pass_premium%• &7%valiant_bp_item_1_{cp-data-page}_lore%'
+        - ' '
+        - '&cPREMIUM REWARD ONLY'
+        has0:
+          value0: '%valiant_battlepass_premium%'
+          compare0: 'true'
+          material: "%valiant_bp_item_1_{cp-data-page}_material%"
+          customdata: "%valiant_bp_item_1_{cp-data-page}_customdata%"
+          stack: "%valiant_bp_item_1_{cp-data-page}_amount%"
+          potion: 
+          name: '&7Level %valiant_bp_item_1_{cp-data-page}_level%'
+          lore:
+          - ' '
+          - '%color_adventure_pass_premium%⭐ &lPREMIUM REWARD:'
+          - '%color_adventure_pass_premium%• &7%valiant_bp_item_1_{cp-data-page}_lore%'
+          - ' '
+          - '&7Not unlocked yet!'
+          has1:
+            value0: '%valiant_battlepass_level% ISGREATER'
+            compare0: '%valiant_bp_item_1_{cp-data-page}_level%'
+            material: "%valiant_bp_item_1_{cp-data-page}_material%"
+            customdata: "%valiant_bp_item_1_{cp-data-page}_customdata%"
+            stack: "%valiant_bp_item_1_{cp-data-page}_amount%"
+            potion: 
+            name: '%color_menu_item_unlocked%Level %valiant_bp_item_1_{cp-data-page}_level%'
+            lore:
+            - ' '
+            - '%color_adventure_pass_premium%⭐ &lPREMIUM REWARD:'
+            - '%color_adventure_pass_premium%• &7&m%valiant_bp_item_1_{cp-data-page}_lore%'
+            - ' '
+            - '%color_menu_unlocked%&lUnlocked'
+            has2:
+              value0: '%valiant_battlepass_rewardavailable_1_{cp-data-page}_%'
+              compare0: 'true'
+              material: "%valiant_bp_item_1_{cp-data-page}_material%"
+              customdata: "%valiant_bp_item_1_{cp-data-page}_customdata%"
+              stack: "%valiant_bp_item_1_{cp-data-page}_amount%"
+              potion: 
+              name: '&eLevel %valiant_bp_item_1_{cp-data-page}_level%'
+              lore:
+              - ' '
+              - '%color_adventure_pass_premium%⭐ &lPREMIUM REWARD:'
+              - '%color_adventure_pass_premium%• &7%valiant_bp_item_1_{cp-data-page}_lore%'
+              - ' '
+              - '%color_menu_purchase%&l✔ Click to claim!'
+              commands:
+              - console= battlepassclaimreward %cp-player-name% %valiant_bp_item_1_{cp-data-page}_level%
+              - refresh
+        
+        
+        
+        
+        
+
+
+      '11':
+        material: "%valiant_bp_item_2_{cp-data-page}_material%"
+        customdata: "%valiant_bp_item_2_{cp-data-page}_customdata%"
+        stack: "%valiant_bp_item_2_{cp-data-page}_amount%"
+        name: '&7Level %valiant_bp_item_2_{cp-data-page}_level%'
+        lore:
+        - ' '
+        - '&2&lFREE REWARD:'
+        - '&2• &7%valiant_bp_item_2_{cp-data-page}_lore%'
+        - ' '
+        - '&7Not unlocked yet!'
+        has0:
+          value0: '%valiant_battlepass_level% ISGREATER'
+          compare0: '%valiant_bp_item_2_{cp-data-page}_level%'
+          material: "%valiant_bp_item_2_{cp-data-page}_material%"
+          customdata: "%valiant_bp_item_2_{cp-data-page}_customdata%"
+          stack: "%valiant_bp_item_2_{cp-data-page}_amount%"
+          name: '%color_menu_item_unlocked%Level %valiant_bp_item_2_{cp-data-page}_level%'
+          lore:
+          - ' '
+          - '&2&lFREE REWARD:'
+          - '&2• &7&m%valiant_bp_item_2_{cp-data-page}_lore%'
+          - ' '
+          - '%color_menu_unlocked%&lUnlocked'
+          has1:
+            value0: '%valiant_battlepass_rewardavailable_2_{cp-data-page}_%'
+            compare0: 'true'
+            material: "%valiant_bp_item_2_{cp-data-page}_material%"
+            customdata: "%valiant_bp_item_2_{cp-data-page}_customdata%"
+            stack: "%valiant_bp_item_2_{cp-data-page}_amount%"
+            name: '&eLevel %valiant_bp_item_2_{cp-data-page}_level%'
+            lore:
+            - ' '
+            - '&2&lFREE REWARD:'
+            - '&2• &7%valiant_bp_item_2_{cp-data-page}_lore%'
+            - ' '
+            - '%color_menu_purchase%&l✔ Click to claim!'
+            commands:
+            - console= battlepassclaimreward %cp-player-name% %valiant_bp_item_2_{cp-data-page}_level%
+            - refresh
+            
+
+
+      '12':
+        material: "%valiant_bp_item_3_{cp-data-page}_material%"
+        customdata: "%valiant_bp_item_3_{cp-data-page}_customdata%"
+        stack: "%valiant_bp_item_3_{cp-data-page}_amount%"
+        name: '&7Level %valiant_bp_item_3_{cp-data-page}_level%'
+        lore:
+        - ' '
+        - '%color_adventure_pass_premium%⭐ &lPREMIUM REWARD:'
+        - '%color_adventure_pass_premium%• &7%valiant_bp_item_3_{cp-data-page}_lore%'
+        - ' '
+        - '&cPREMIUM REWARD ONLY'
+        has0:
+          value0: '%valiant_battlepass_premium%'
+          compare0: 'true'
+          material: "%valiant_bp_item_3_{cp-data-page}_material%"
+          customdata: "%valiant_bp_item_3_{cp-data-page}_customdata%"
+          stack: "%valiant_bp_item_3_{cp-data-page}_amount%"
+          name: '&7Level %valiant_bp_item_3_{cp-data-page}_level%'
+          lore:
+          - ' '
+          - '%color_adventure_pass_premium%⭐ &lPREMIUM REWARD:'
+          - '%color_adventure_pass_premium%• &7%valiant_bp_item_3_{cp-data-page}_lore%'
+          - ' '
+          - '&7Not unlocked yet!'
+          has1:
+            value0: '%valiant_battlepass_level% ISGREATER'
+            compare0: '%valiant_bp_item_3_{cp-data-page}_level%'
+            material: "%valiant_bp_item_3_{cp-data-page}_material%"
+            customdata: "%valiant_bp_item_3_{cp-data-page}_customdata%"
+            stack: "%valiant_bp_item_3_{cp-data-page}_amount%"
+            name: '%color_menu_item_unlocked%Level %valiant_bp_item_3_{cp-data-page}_level%'
+            lore:
+            - ' '
+            - '%color_adventure_pass_premium%⭐ &lPREMIUM REWARD:'
+            - '%color_adventure_pass_premium%• &7&m%valiant_bp_item_3_{cp-data-page}_lore%'
+            - ' '
+            - '%color_menu_unlocked%&lUnlocked'
+            has2:
+              value0: '%valiant_battlepass_rewardavailable_3_{cp-data-page}_%'
+              compare0: 'true'
+              material: "%valiant_bp_item_3_{cp-data-page}_material%"
+              customdata: "%valiant_bp_item_3_{cp-data-page}_customdata%"
+              stack: "%valiant_bp_item_3_{cp-data-page}_amount%"
+              name: '&eLevel %valiant_bp_item_3_{cp-data-page}_level%'
+              lore:
+              - ' '
+              - '%color_adventure_pass_premium%⭐ &lPREMIUM REWARD:'
+              - '%color_adventure_pass_premium%• &7%valiant_bp_item_3_{cp-data-page}_lore%'
+              - ' '
+              - '%color_menu_purchase%&l✔ Click to claim!'
+              commands:
+              - console= battlepassclaimreward %cp-player-name% %valiant_bp_item_3_{cp-data-page}_level%
+              - refresh
+
+      '13':
+        material: "%valiant_bp_item_4_{cp-data-page}_material%"
+        customdata: "%valiant_bp_item_4_{cp-data-page}_customdata%"
+        stack: "%valiant_bp_item_4_{cp-data-page}_amount%"
+        name: '&7Level %valiant_bp_item_4_{cp-data-page}_level%'
+        lore:
+        - ' '
+        - '%color_adventure_pass_premium%⭐ &lPREMIUM REWARD:'
+        - '%color_adventure_pass_premium%• &7%valiant_bp_item_4_{cp-data-page}_lore%'
+        - ' '
+        - '&cPREMIUM REWARD ONLY'
+        has0:
+          value0: '%valiant_battlepass_premium%'
+          compare0: 'true'
+          material: "%valiant_bp_item_4_{cp-data-page}_material%"
+          customdata: "%valiant_bp_item_4_{cp-data-page}_customdata%"
+          stack: "%valiant_bp_item_4_{cp-data-page}_amount%"
+          name: '&7Level %valiant_bp_item_4_{cp-data-page}_level%'
+          lore:
+          - ' '
+          - '%color_adventure_pass_premium%⭐ &lPREMIUM REWARD:'
+          - '%color_adventure_pass_premium%• &7%valiant_bp_item_4_{cp-data-page}_lore%'
+          - ' '
+          - '&7Not unlocked yet!'
+          has1:
+            value0: '%valiant_battlepass_level% ISGREATER'
+            compare0: '%valiant_bp_item_4_{cp-data-page}_level%'
+            material: "%valiant_bp_item_4_{cp-data-page}_material%"
+            customdata: "%valiant_bp_item_4_{cp-data-page}_customdata%"
+            stack: "%valiant_bp_item_4_{cp-data-page}_amount%"
+            name: '%color_menu_item_unlocked%Level %valiant_bp_item_4_{cp-data-page}_level%'
+            lore:
+            - ' '
+            - '%color_adventure_pass_premium%⭐ &lPREMIUM REWARD:'
+            - '%color_adventure_pass_premium%• &7&m%valiant_bp_item_4_{cp-data-page}_lore%'
+            - ' '
+            - '%color_menu_unlocked%&lUnlocked'
+            has2:
+              value0: '%valiant_battlepass_rewardavailable_4_{cp-data-page}_%'
+              compare0: 'true'
+              material: "%valiant_bp_item_4_{cp-data-page}_material%"
+              customdata: "%valiant_bp_item_4_{cp-data-page}_customdata%"
+              stack: "%valiant_bp_item_4_{cp-data-page}_amount%"
+              name: '&eLevel %valiant_bp_item_4_{cp-data-page}_level%'
+              lore:
+              - ' '
+              - '%color_adventure_pass_premium%⭐ &lPREMIUM REWARD:'
+              - '%color_adventure_pass_premium%• &7%valiant_bp_item_4_{cp-data-page}_lore%'
+              - ' '
+              - '%color_menu_purchase%&l✔ Click to claim!'
+              commands:
+              - console= battlepassclaimreward %cp-player-name% %valiant_bp_item_4_{cp-data-page}_level%
+              - refresh
+
+      
+      '14':
+        material: "%valiant_bp_item_5_{cp-data-page}_material%"
+        customdata: "%valiant_bp_item_5_{cp-data-page}_customdata%"
+        stack: "%valiant_bp_item_5_{cp-data-page}_amount%"
+        name: '&7Level %valiant_bp_item_5_{cp-data-page}_level%'
+        lore:
+        - ' '
+        - '%color_adventure_pass_premium%⭐ &lPREMIUM REWARD:'
+        - '%color_adventure_pass_premium%• &7%valiant_bp_item_5_{cp-data-page}_lore%'
+        - ' '
+        - '&cPREMIUM REWARD ONLY'
+        has0:
+          value0: '%valiant_battlepass_premium%'
+          compare0: 'true'
+          material: "%valiant_bp_item_5_{cp-data-page}_material%"
+          customdata: "%valiant_bp_item_5_{cp-data-page}_customdata%"
+          stack: "%valiant_bp_item_5_{cp-data-page}_amount%"
+          name: '&7Level %valiant_bp_item_5_{cp-data-page}_level%'
+          lore:
+          - ' '
+          - '%color_adventure_pass_premium%⭐ &lPREMIUM REWARD:'
+          - '%color_adventure_pass_premium%• &7%valiant_bp_item_5_{cp-data-page}_lore%'
+          - ' '
+          - '&7Not unlocked yet!'
+          has1:
+            value0: '%valiant_battlepass_level% ISGREATER'
+            compare0: '%valiant_bp_item_5_{cp-data-page}_level%'
+            material: "%valiant_bp_item_5_{cp-data-page}_material%"
+            customdata: "%valiant_bp_item_5_{cp-data-page}_customdata%"
+            stack: "%valiant_bp_item_5_{cp-data-page}_amount%"
+            name: '%color_menu_item_unlocked%Level %valiant_bp_item_5_{cp-data-page}_level%'
+            lore:
+            - ' '
+            - '%color_adventure_pass_premium%⭐ &lPREMIUM REWARD:'
+            - '%color_adventure_pass_premium%• &7&m%valiant_bp_item_5_{cp-data-page}_lore%'
+            - ' '
+            - '%color_menu_unlocked%&lUnlocked'
+            has2:
+              value0: '%valiant_battlepass_rewardavailable_5_{cp-data-page}_%'
+              compare0: 'true'
+              material: "%valiant_bp_item_5_{cp-data-page}_material%"
+              customdata: "%valiant_bp_item_5_{cp-data-page}_customdata%"
+              stack: "%valiant_bp_item_5_{cp-data-page}_amount%"
+              name: '&eLevel %valiant_bp_item_5_{cp-data-page}_level%'
+              lore:
+              - ' '
+              - '%color_adventure_pass_premium%⭐ &lPREMIUM REWARD:'
+              - '%color_adventure_pass_premium%• &7%valiant_bp_item_5_{cp-data-page}_lore%'
+              - ' '
+              - '%color_menu_purchase%&l✔ Click to claim!'
+              commands:
+              - console= battlepassclaimreward %cp-player-name% %valiant_bp_item_5_{cp-data-page}_level%
+              - refresh
+      
+      
+      '15':
+        material: "%valiant_bp_item_6_{cp-data-page}_material%"
+        customdata: "%valiant_bp_item_6_{cp-data-page}_customdata%"
+        stack: "%valiant_bp_item_6_{cp-data-page}_amount%"
+        name: '&7Level %valiant_bp_item_6_{cp-data-page}_level%'
+        lore:
+        - ' '
+        - '%color_adventure_pass_premium%⭐ &lPREMIUM REWARD:'
+        - '%color_adventure_pass_premium%• &7%valiant_bp_item_6_{cp-data-page}_lore%'
+        - ' '
+        - '&cPREMIUM REWARD ONLY'
+        has0:
+          value0: '%valiant_battlepass_premium%'
+          compare0: 'true'
+          material: "%valiant_bp_item_6_{cp-data-page}_material%"
+          customdata: "%valiant_bp_item_6_{cp-data-page}_customdata%"
+          stack: "%valiant_bp_item_6_{cp-data-page}_amount%"
+          name: '&7Level %valiant_bp_item_6_{cp-data-page}_level%'
+          lore:
+          - ' '
+          - '%color_adventure_pass_premium%⭐ &lPREMIUM REWARD:'
+          - '%color_adventure_pass_premium%• &7%valiant_bp_item_6_{cp-data-page}_lore%'
+          - ' '
+          - '&7Not unlocked yet!'
+          has1:
+            value0: '%valiant_battlepass_level% ISGREATER'
+            compare0: '%valiant_bp_item_6_{cp-data-page}_level%'
+            material: "%valiant_bp_item_6_{cp-data-page}_material%"
+            customdata: "%valiant_bp_item_6_{cp-data-page}_customdata%"
+            stack: "%valiant_bp_item_6_{cp-data-page}_amount%"
+            name: '%color_menu_item_unlocked%Level %valiant_bp_item_6_{cp-data-page}_level%'
+            lore:
+            - ' '
+            - '%color_adventure_pass_premium%⭐ &lPREMIUM REWARD:'
+            - '%color_adventure_pass_premium%• &7&m%valiant_bp_item_6_{cp-data-page}_lore%'
+            - ' '
+            - '%color_menu_unlocked%&lUnlocked'
+            has2:
+              value0: '%valiant_battlepass_rewardavailable_6_{cp-data-page}_%'
+              compare0: 'true'
+              material: "%valiant_bp_item_6_{cp-data-page}_material%"
+              customdata: "%valiant_bp_item_6_{cp-data-page}_customdata%"
+              stack: "%valiant_bp_item_6_{cp-data-page}_amount%"
+              name: '&eLevel %valiant_bp_item_6_{cp-data-page}_level%'
+              lore:
+              - ' '
+              - '%color_adventure_pass_premium%⭐ &lPREMIUM REWARD:'
+              - '%color_adventure_pass_premium%• &7%valiant_bp_item_6_{cp-data-page}_lore%'
+              - ' '
+              - '%color_menu_purchase%&l✔ Click to claim!'
+              commands:
+              - console= battlepassclaimreward %cp-player-name% %valiant_bp_item_6_{cp-data-page}_level%
+              - refresh
+      
+      
+      
+      '16':
+        material: "%valiant_bp_item_7_{cp-data-page}_material%"
+        customdata: "%valiant_bp_item_7_{cp-data-page}_customdata%"
+        stack: "%valiant_bp_item_7_{cp-data-page}_amount%"
+        name: '&7Level %valiant_bp_item_7_{cp-data-page}_level%'
+        lore:
+        - ' '
+        - '%color_adventure_pass_premium%⭐ &lPREMIUM REWARD:'
+        - '%color_adventure_pass_premium%• &7%valiant_bp_item_7_{cp-data-page}_lore%'
+        - ' '
+        - '&cPREMIUM REWARD ONLY'
+        has0:
+          value0: '%valiant_battlepass_premium%'
+          compare0: 'true'
+          material: "%valiant_bp_item_7_{cp-data-page}_material%"
+          customdata: "%valiant_bp_item_7_{cp-data-page}_customdata%"
+          stack: "%valiant_bp_item_7_{cp-data-page}_amount%"
+          name: '&7Level %valiant_bp_item_7_{cp-data-page}_level%'
+          lore:
+          - ' '
+          - '%color_adventure_pass_premium%⭐ &lPREMIUM REWARD:'
+          - '%color_adventure_pass_premium%• &7%valiant_bp_item_7_{cp-data-page}_lore%'
+          - ' '
+          - '&7Not unlocked yet!'
+          has1:
+            value0: '%valiant_battlepass_level% ISGREATER'
+            compare0: '%valiant_bp_item_7_{cp-data-page}_level%'
+            material: "%valiant_bp_item_7_{cp-data-page}_material%"
+            customdata: "%valiant_bp_item_7_{cp-data-page}_customdata%"
+            stack: "%valiant_bp_item_7_{cp-data-page}_amount%"
+            name: '%color_menu_item_unlocked%Level %valiant_bp_item_7_{cp-data-page}_level%'
+            lore:
+            - ' '
+            - '%color_adventure_pass_premium%⭐ &lPREMIUM REWARD:'
+            - '%color_adventure_pass_premium%• &7&m%valiant_bp_item_7_{cp-data-page}_lore%'
+            - ' '
+            - '%color_menu_unlocked%&lUnlocked'
+            has2:
+              value0: '%valiant_battlepass_rewardavailable_7_{cp-data-page}_%'
+              compare0: 'true'
+              material: "%valiant_bp_item_7_{cp-data-page}_material%"
+              customdata: "%valiant_bp_item_7_{cp-data-page}_customdata%"
+              stack: "%valiant_bp_item_7_{cp-data-page}_amount%"
+              name: '&eLevel %valiant_bp_item_7_{cp-data-page}_level%'
+              lore:
+              - ' '
+              - '%color_adventure_pass_premium%⭐ &lPREMIUM REWARD:'
+              - '%color_adventure_pass_premium%• &7%valiant_bp_item_7_{cp-data-page}_lore%'
+              - ' '
+              - '%color_menu_purchase%&l✔ Click to claim!'
+              commands:
+              - console= battlepassclaimreward %cp-player-name% %valiant_bp_item_7_{cp-data-page}_level%
+              - refresh
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      #
+      #         Claim Buttons
+      #
+      
+      
+      
+      '19':
+        material: AIR
+        has0:
+          value0: '%valiant_battlepass_premium%'
+          compare0: 'true'
+          material: STICK
+          customdata: 15
+          name: '&7Not unlocked yet!'
+          has1:
+            value0: '%valiant_battlepass_level% ISGREATER'
+            compare0: '%valiant_bp_item_1_{cp-data-page}_level%'
+            material: STICK
+            customdata: 304
+            name: '%color_menu_unlocked%&lUnlocked'
+            has2:
+              value0: '%valiant_battlepass_rewardavailable_1_{cp-data-page}_%'
+              compare0: 'true'
+              material: STICK
+              customdata: 303
+              name: '%color_menu_purchase%&l✔ Click to claim!'
+              commands:
+              - console= battlepassclaimreward %cp-player-name% %valiant_bp_item_1_{cp-data-page}_level%
+              - refresh
+      '20':
+        material: STICK
+        customdata: 15
+        name: '&7Not unlocked yet!'
+        has0:
+          value0: '%valiant_battlepass_level% ISGREATER'
+          compare0: '%valiant_bp_item_2_{cp-data-page}_level%'
+          material: STICK
+          customdata: 304
+          name: '%color_menu_unlocked%&lUnlocked'
+          has1:
+            value0: '%valiant_battlepass_rewardavailable_2_{cp-data-page}_%'
+            compare0: 'true'
+            material: STICK
+            customdata: 303
+            name: '%color_menu_purchase%&l✔ Click to claim!'
+            commands:
+            - console= battlepassclaimreward %cp-player-name% %valiant_bp_item_2_{cp-data-page}_level%
+            - refresh
+      '21':
+        material: AIR
+        has0:
+          value0: '%valiant_battlepass_premium%'
+          compare0: 'true'
+          material: STICK
+          customdata: 15
+          name: '&7Not unlocked yet!'
+          has1:
+            value0: '%valiant_battlepass_level% ISGREATER'
+            compare0: '%valiant_bp_item_3_{cp-data-page}_level%'
+            material: STICK
+            customdata: 304
+            name: '%color_menu_unlocked%&lUnlocked'
+            has2:
+              value0: '%valiant_battlepass_rewardavailable_3_{cp-data-page}_%'
+              compare0: 'true'
+              material: STICK
+              customdata: 303
+              name: '%color_menu_purchase%&l✔ Click to claim!'
+              commands:
+              - console= battlepassclaimreward %cp-player-name% %valiant_bp_item_3_{cp-data-page}_level%
+              - refresh
+      '22':
+        material: AIR
+        has0:
+          value0: '%valiant_battlepass_premium%'
+          compare0: 'true'
+          material: STICK
+          customdata: 15
+          name: '&7Not unlocked yet!'
+          has1:
+            value0: '%valiant_battlepass_level% ISGREATER'
+            compare0: '%valiant_bp_item_4_{cp-data-page}_level%'
+            material: STICK
+            customdata: 304
+            name: '%color_menu_unlocked%&lUnlocked'
+            has2:
+              value0: '%valiant_battlepass_rewardavailable_4_{cp-data-page}_%'
+              compare0: 'true'
+              material: STICK
+              customdata: 303
+              name: '%color_menu_purchase%&l✔ Click to claim!'
+              commands:
+              - console= battlepassclaimreward %cp-player-name% %valiant_bp_item_4_{cp-data-page}_level%
+              - refresh
+      '23':
+        material: AIR
+        has0:
+          value0: '%valiant_battlepass_premium%'
+          compare0: 'true'
+          material: STICK
+          customdata: 15
+          name: '&7Not unlocked yet!'
+          has1:
+            value0: '%valiant_battlepass_level% ISGREATER'
+            compare0: '%valiant_bp_item_5_{cp-data-page}_level%'
+            material: STICK
+            customdata: 304
+            name: '%color_menu_unlocked%&lUnlocked'
+            has2:
+              value0: '%valiant_battlepass_rewardavailable_5_{cp-data-page}_%'
+              compare0: 'true'
+              material: STICK
+              customdata: 303
+              name: '%color_menu_purchase%&l✔ Click to claim!'
+              commands:
+              - console= battlepassclaimreward %cp-player-name% %valiant_bp_item_5_{cp-data-page}_level%
+              - refresh
+      '24':
+        material: AIR
+        has0:
+          value0: '%valiant_battlepass_premium%'
+          compare0: 'true'
+          material: STICK
+          customdata: 15
+          name: '&7Not unlocked yet!'
+          has1:
+            value0: '%valiant_battlepass_level% ISGREATER'
+            compare0: '%valiant_bp_item_6_{cp-data-page}_level%'
+            material: STICK
+            customdata: 304
+            name: '%color_menu_unlocked%&lUnlocked'
+            has2:
+              value0: '%valiant_battlepass_rewardavailable_6_{cp-data-page}_%'
+              compare0: 'true'
+              material: STICK
+              customdata: 303
+              name: '%color_menu_purchase%&l✔ Click to claim!'
+              commands:
+              - console= battlepassclaimreward %cp-player-name% %valiant_bp_item_6_{cp-data-page}_level%
+              - refresh
+      '25':
+        material: AIR
+        has0:
+          value0: '%valiant_battlepass_premium%'
+          compare0: 'true'
+          material: STICK
+          customdata: 15
+          name: '&7Not unlocked yet!'
+          has1:
+            value0: '%valiant_battlepass_level% ISGREATER'
+            compare0: '%valiant_bp_item_7_{cp-data-page}_level%'
+            material: STICK
+            customdata: 304
+            name: '%color_menu_unlocked%&lUnlocked'
+            has2:
+              value0: '%valiant_battlepass_rewardavailable_7_{cp-data-page}_%'
+              compare0: 'true'
+              material: STICK
+              customdata: 303
+              name: '%color_menu_purchase%&l✔ Click to claim!'
+              commands:
+              - console= battlepassclaimreward %cp-player-name% %valiant_bp_item_7_{cp-data-page}_level%
+              - refresh
+

@@ -1,0 +1,137 @@
+panels:
+  crates:
+    perm: default
+    rows: 5
+    title: '&f'
+    commands:
+    - crate
+    - crates
+    - cratesmenu
+    - cratemenu
+    empty: AIR
+    sound-on-open: BLOCK_NOTE_BLOCK_HAT
+    item:
+
+
+      '0':
+        material: STICK
+        customdata: 1
+        name: '&cPrevious Menu'
+        commands:
+        - open= main_menu
+      
+      
+      
+      '8':
+        material: STICK
+        customdata: 11
+        name: '%color_menu_primary%What are crates?'
+        lore:
+        - ''
+        - '&7Crates are special, exclusive'
+        - '&7chests, containing powerful items.'
+        - ''
+        - '&fYou can open crates at spawn.'
+      
+      
+      '20':
+        material: STICK
+        customdata: 51
+        name: '%color_ultra%Adventure Crate'
+        lore:
+        - ''
+        - '&fRating: %color_ultra%★☆☆'
+        - ''
+        - '&7A chest found in the dark'
+        - '&7depths of a mysterious cave.'
+        - '&7Open it to discover what kind'
+        - '&7of valuables lay hidden inside.'
+        - ''
+        - '%color_ultra%▶ &fYour Keys: %crazycrates_AdventureCrate%'
+      '22':
+        material: STICK
+        customdata: 52
+        name: '%color_hero%Hero Crate'
+        lore:
+        - ''
+        - '&fRating: %color_hero%★★☆'
+        - ''
+        - '&7This crate was discovered by a'
+        - '&7group of adventurers, while'
+        - '&7exploring an abandoned temple'
+        - '&7deep in the jungle.'
+        - ''
+        - '%color_hero%▶ &fYour Keys: %crazycrates_HeroCrate%'
+      '24':
+        material: STICK
+        customdata: 53
+        name: '%color_legend%Legendary Crate'
+        lore:
+        - ''
+        - '&fRating: %color_legend%★★★'
+        - ''
+        - '&7Magnificient crate, brimming with'
+        - '&7powerful weapons and dazzling armor.'
+        - '&7Legend says it was found in the'
+        - '&7sacrophagus of a legendary ancient tomb.'
+        - ''
+        - '%color_legend%▶ &fYour Keys: %crazycrates_LegendaryCrate%'
+      
+      
+      '29':
+        material: STICK
+        customdata: 12
+        name: '&eBuy keys!'
+        lore:
+        - ''
+        - '%color_menu_purchase%&lClick to purchase!'
+        commands:
+        - open= premium_store
+        has0:
+          value0: '%crazycrates_AdventureCrate% ISGREATER'
+          compare0: '1'
+          material: STICK
+          customdata: 13
+          name: '&eOpen Crate!'
+          commands:
+          - warp crates
+      
+      '31':
+        material: STICK
+        customdata: 12
+        name: '&eBuy keys!'
+        lore:
+        - ''
+        - '%color_menu_purchase%&lClick to purchase!'
+        commands:
+        - open= premium_store
+        has0:
+          value0: '%crazycrates_HeroCrate% ISGREATER'
+          compare0: '1'
+          material: STICK
+          customdata: 13
+          name: '&eOpen Crate!'
+          commands:
+          - warp crates
+      
+      
+      '33':
+        material: STICK
+        customdata: 12
+        name: '&eBuy keys!'
+        lore:
+        - ''
+        - '%color_menu_purchase%&lClick to purchase!'
+        commands:
+        - open= premium_store
+        has0:
+          value0: '%crazycrates_LegendaryCrate% ISGREATER'
+          compare0: '1'
+          material: STICK
+          customdata: 13
+          name: '&eOpen Crate!'
+          commands:
+          - warp crates
+      
+      
+      

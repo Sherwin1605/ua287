@@ -1,0 +1,110 @@
+# Please DO NOT change version number!
+version: 1
+
+# 
+# Feel free to set up your own rewards for the Badges system. Remember to follow the formatting.
+# Use 'command' word in order to use a command on reward claim. You can get a player's name by typing PLAYER_NAME. Example here:
+# command eco give PLAYER_NAME 100
+# To give player gold, use 'gold' word followed by a number.
+# To give items, an example would be: '10 of diamond'
+# In case of any issues, feel free to contact us on the Valiant Studio Discord server.
+# 
+mining:
+    '1':
+        '1': command eco give PLAYER_NAME 100
+    '2':
+        '1': command eco give PLAYER_NAME 150
+    '3':
+        '1': command eco give PLAYER_NAME 200
+    '4':
+        '1': command eco give PLAYER_NAME 250
+    '5':
+        '1': command eco give PLAYER_NAME 300
+    '6':
+        '1': command eco give PLAYER_NAME 350
+    '7':
+        '1': command eco give PLAYER_NAME 400
+    '8':
+        '1': command eco give PLAYER_NAME 450
+    '9':
+        '1': command eco give PLAYER_NAME 500
+
+crafting:
+    '1':
+        '1': command eco give PLAYER_NAME 100
+    '2':
+        '1': command eco give PLAYER_NAME 150
+    '3':
+        '1': command eco give PLAYER_NAME 200
+    '4':
+        '1': command eco give PLAYER_NAME 250
+    '5':
+        '1': command eco give PLAYER_NAME 300
+    '6':
+        '1': command eco give PLAYER_NAME 350
+    '7':
+        '1': command eco give PLAYER_NAME 400
+    '8':
+        '1': command eco give PLAYER_NAME 450
+    '9':
+        '1': command eco give PLAYER_NAME 500
+
+survival:
+    '1':
+        '1': command eco give PLAYER_NAME 100
+    '2':
+        '1': command eco give PLAYER_NAME 150
+    '3':
+        '1': command eco give PLAYER_NAME 200
+    '4':
+        '1': command eco give PLAYER_NAME 250
+    '5':
+        '1': command eco give PLAYER_NAME 300
+    '6':
+        '1': command eco give PLAYER_NAME 350
+    '7':
+        '1': command eco give PLAYER_NAME 400
+    '8':
+        '1': command eco give PLAYER_NAME 450
+    '9':
+        '1': command eco give PLAYER_NAME 500
+
+caving:
+    '1':
+        '1': command eco give PLAYER_NAME 100
+    '2':
+        '1': command eco give PLAYER_NAME 150
+    '3':
+        '1': command eco give PLAYER_NAME 200
+    '4':
+        '1': command eco give PLAYER_NAME 250
+    '5':
+        '1': command eco give PLAYER_NAME 300
+    '6':
+        '1': command eco give PLAYER_NAME 350
+    '7':
+        '1': command eco give PLAYER_NAME 400
+    '8':
+        '1': command eco give PLAYER_NAME 450
+    '9':
+        '1': command eco give PLAYER_NAME 500
+
+hunting:
+    '1':
+        '1': command eco give PLAYER_NAME 100
+    '2':
+        '1': command eco give PLAYER_NAME 150
+    '3':
+        '1': command eco give PLAYER_NAME 200
+    '4':
+        '1': command eco give PLAYER_NAME 250
+    '5':
+        '1': command eco give PLAYER_NAME 300
+    '6':
+        '1': command eco give PLAYER_NAME 350
+    '7':
+        '1': command eco give PLAYER_NAME 400
+    '8':
+        '1': command eco give PLAYER_NAME 450
+    '9':
+        '1': command eco give PLAYER_NAME 500

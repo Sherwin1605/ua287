@@ -1,0 +1,66 @@
+# Please DO NOT change version number!
+version: 1
+
+# 
+# Here you can configure the menu names of rewards in Reputation system. Remember to follow the formatting.
+# In case of any issues, feel free to contact us on the Valiant Studio Discord server.
+# 
+slayers:
+    '1':
+        '1': Diamond Sword
+    '2':
+        '1': Diamond Boots
+    '3':
+        '1': Diamond Helmet
+    '4':
+        '1': Diamond Leggings
+    '5':
+        '1': Diamond Chestplate
+    '6':
+        '1': Netherite Ingot
+    '7':
+        '1': 4 Enchanted Golden Apples
+    '8':
+        '1': Diamond Chestplate of Protection IV
+    '9':
+        '1': Diamond Sword of Sharpness VI
+
+miners:
+    '1':
+        '1': Diamond Pickaxe
+    '2':
+        '1': 4 Diamonds
+    '3':
+        '1': 64 TNT
+    '4':
+        '1': Diamond Pickaxe of Efficiency V
+    '5':
+        '1': 2 Netherite Ingots
+    '6':
+        '1': 8 Diamonds
+    '7':
+        '1': Diamond Helmet of Blast Protection IV
+    '8':
+        '1': Diamond Boots of Swift Sneak III
+    '9':
+        '1': Diamond Pickaxe of Efficiency VI
+
+ranchers:
+    '1':
+        '1': Diamond Axe
+    '2':
+        '1': Diamond Hoe
+    '3':
+        '1': Fishing Rod of Lure III
+    '4':
+        '1': 32 Golden Carrots
+    '5':
+        '1': 8 Golden Apples
+    '6':
+        '1': Diamond Horse Armor
+    '7':
+        '1': Diamond Boots of Protection IV and Feather Falling IV
+    '8':
+        '1': Totem of Undying
+    '9':
+        '1': Elytra

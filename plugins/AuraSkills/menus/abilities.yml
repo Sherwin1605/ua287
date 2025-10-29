@@ -1,0 +1,115 @@
+title: '{{abilities_title}}'
+size: 4
+fill:
+  enabled: false
+  material: black_stained_glass_pane
+items:
+  back:
+    material: stick
+    pos: 0,0
+    display_name: '<green>{{back}}'
+    lore:
+      - '<gray>{{back_click}}'
+    nbt:
+      CustomModelData: 1
+templates:
+  locked_ability:
+    material: stick
+    display_name: '<gray>{name}'
+    lore:
+      - '<white>{{description}}:'
+      - text: '{desc}'
+        wrap: true
+        wrap_indent: '  '
+        style: '<gray>'
+      - ' '
+      - text: '{{unlocked_at}}'
+        styles:
+          1: '<gray>'
+          2: '<dark_aqua>'
+      - ' '
+      - '<red>{{locked}}'
+    nbt:
+      CustomModelData: 133
+  locked_mana_ability:
+    pos: 2,4
+    material: stick
+    display_name: '<gray>{name}'
+    lore:
+      - '<white>{{description}}:'
+      - text: '{desc}'
+        wrap: true
+        wrap_indent: '  '
+        styles:
+          0: '<gray>'
+          1: '<yellow>'
+      - ' '
+      - text: '{{unlocked_at}}'
+        styles:
+          1: '<gray>'
+          2: '<dark_aqua>'
+      - ' '
+      - '<red>{{locked}}'
+    nbt:
+      CustomModelData: 133
+  unlocked_ability:
+    material: stick
+    display_name: '<#31ed96>{name}'
+    lore:
+      - component: your_level
+      - component: your_level_maxed
+      - ' '
+      - component: unlocked_desc
+      - component: unlocked_desc_maxed
+      - ' '
+      - '<green>{{unlocked}}'
+    nbt:
+      CustomModelData: 131
+  unlocked_mana_ability:
+    pos: 2,4
+    material: stick
+    display_name: '<#31ed96>{name}'
+    lore:
+      - component: your_level
+      - component: your_level_maxed
+      - ' '
+      - component: unlocked_desc
+      - component: unlocked_desc_maxed
+      - ' '
+      - '<green>{{unlocked}}'
+    nbt:
+      CustomModelData: 131
+components:
+  your_level:
+    context: AbstractAbility
+    lore:
+      - '&7{{your_level}}: <white>{level}'
+  your_level_maxed:
+    context: AbstractAbility
+    lore:
+      - '&7{{your_level}}: <white>{level} <gold>(MAXED)'
+  unlocked_desc:
+    context: AbstractAbility
+    lore:
+      - text: '{{next_upgrade_at}}'
+        styles:
+          1: '<white>'
+          2: '<dark_aqua>'
+      - text: '{desc}'
+        wrap: true
+        wrap_indent: '  '
+        styles:
+          0: '<gray>'
+          1: '<yellow>'
+  unlocked_desc_maxed:
+    context: AbstractAbility
+    lore:
+      - '<white>{{description}}:'
+      - text: '{desc}'
+        wrap: true
+        wrap_indent: '  '
+        styles:
+          0: '<gray>'
+          1: '<yellow>'
+formats:
+  desc_upgrade_value: '<gray>{current}<dark_gray>→{next}<gray>'

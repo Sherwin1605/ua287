@@ -1,0 +1,73 @@
+# #################################################################
+# ┌─────────────────────────────────────────────────────────────┐ #
+# │                        Auto Broadcast                       │ #
+# └─────────────────────────────────────────────────────────────┘ #
+# #################################################################
+
+# Placeholders:
+# - %center% - Center line text
+
+# General options
+options:
+  # Time between broadcast and broadcast
+  time: 300
+  # Enable/disable all broadcasts
+  enabled: true
+
+broadcasts:
+  broadcast1:
+    # Enable/disable this broadcast
+    enabled: true
+    # Broadcast message (supports colors &, HEX colors &#, and PlaceholderAPI)
+    message:
+      - " "
+      - "                      &%color_primary_color%&l🌧 Ambient Sounds 🌧"
+      - "       &fYou can adjust background sounds volume using"
+      - "         &fthe 'Ambient' slider in Minecraft sound settings."
+      - " "
+    channel: "none"
+  broadcast2:
+    enabled: true
+    message:
+      - " "
+      - "                        &%color_primary_color%☠ &%color_primary_color%&lDungeons Key &%color_primary_color%☠"
+      - "                &fYou can find the Dungeons Keys by"
+      - "                &fkilling mini-bosses in the Wilderness!"
+      - " "
+    channel: "none"
+    permission: "none"
+  broadcast3:
+    enabled: true
+    message:
+      - " "
+      - "                    &%color_primary_color%&lHave you got questions?"
+      - "      &fFeel free to join our Discord and ask about anything!"
+      - "               &9&lhttps://discord.gg/wdBFC7Hc6X"
+      - " "
+    channel: "none"
+    permission: "none"
+  broadcast4:
+    enabled: true
+    message:
+      - " "
+      - "                   &%color_primary_color%  &%color_primary_color%&lProtect your terrain &%color_primary_color% "
+      - "                 &fClaim terrain with /claim command."
+      - "                 &fYou can also use Golden Shovel."
+      - " "
+    channel: "none"
+    permission: "none"
+  broadcast5:
+    enabled: true
+    message:
+      - " "
+      - "                  &%color_primary_color%⯪ &%color_primary_color%&lCheck out Our Discord &%color_primary_color%⯪"
+      - "            &fJoin Us to take part in epic events, find"
+      - "         &fa great team and have a lot of fun together!"
+      - "              &e▶  https://discord.gg/wdBFC7Hc6X  ◀"
+      - " "
+    channel: "none"
+    permission: "none"
+
+
+
+  

@@ -1,0 +1,30 @@
+# Plugin by NZXTER
+#
+# To use gradients in your messages, write: <color>your text<color>
+# Supported colors: green, dark_green, red, dark_red, blue, dark_blue, aqua, dark_aqua, purple, dark_purple,
+# yellow, gold, white, gray, dark_gray, orange, black, pink, lime, cyan
+#
+#-----------------------------------------------------------------------------------------
+prefix: '&8[<gold>RandomTP<gold>&8] &7'
+title-prefix: '<gold>RandomTP<gold>'
+#-----------------------------------------------------------------------------------------
+allowed-worlds:
+  - world
+  - world_nether
+  - world_the_end
+#-----------------------------------------------------------------------------------------
+settings:
+  only-loaded-chunks-teleport: true
+  min-coord: -200
+  max-coord: 200
+  sound: entity_enderman_teleport
+#-----------------------------------------------------------------------------------------
+messages:
+  use-title-for-teleporting-message: true
+  searching: 'Searching for a &esuitable location'
+  teleporting: 'You are being teleported to &eX: %locationX% Y: %locationY% Z: %locationZ%'
+  world-not-allowed: 'The teleport not allowed for &e%world%'
+  world-not-exist: 'The teleport not work, not exist &e%world%'
+  admin:
+    config-reloaded: 'The configuration has been &asuccessfully reloaded.'
+    no-permission: 'You dont have &cpermission.'

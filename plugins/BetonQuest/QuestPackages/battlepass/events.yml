@@ -1,0 +1,58 @@
+events:
+  start_dq_1: objective start dq_1
+  start_dq_2: objective start dq_2
+  start_dq_3: objective start dq_3
+  start_dq_4: objective start dq_4
+  start_dq_5: objective start dq_5
+  start_dq_6: objective start dq_6
+  start_dq_7: objective start dq_7
+  start_dq_8: objective start dq_8
+  start_dq_9: objective start dq_9
+  start_dq_10: objective start dq_10
+  start_dq_11: objective start dq_11
+  start_dq_12: objective start dq_12
+  start_dq_13: objective start dq_13
+  start_dq_14: objective start dq_14
+  start_dq_15: objective start dq_15
+  start_dq_16: objective start dq_16
+  start_dq_17: objective start dq_17
+  start_dq_18: objective start dq_18
+  start_dq_19: objective start dq_19
+  start_dq_20: objective start dq_20
+  start_dq_21: objective start dq_21
+  start_dq_22: objective start dq_22
+  start_dq_23: objective start dq_23
+  start_dq_24: objective start dq_24
+  start_dq_25: objective start dq_25
+  start_dq_26: objective start dq_26
+  start_dq_27: objective start dq_27
+  start_dq_28: objective start dq_28
+  start_dq_29: objective start dq_29
+  start_dq_30: objective start dq_30
+  
+  start_wq_1: objective start wq_1
+  start_wq_2: objective start wq_2
+  start_wq_3: objective start wq_3
+  start_wq_4: objective start wq_4
+  start_wq_5: objective start wq_5
+  start_wq_6: objective start wq_6
+  start_wq_7: objective start wq_7
+  start_wq_8: objective start wq_8
+  start_wq_9: objective start wq_9
+  start_wq_10: objective start wq_10
+  
+  
+  finish_daily_quest: folder daily_subtitle,daily_quest_reward
+  finish_weekly_quest: folder weekly_subtitle,weekly_quest_reward
+  
+  daily_quest_reward: command battlepassfinishdailyquest %player%
+  weekly_quest_reward: command battlepassfinishweeklyquest %player%
+  
+  
+  
+  
+  daily_title: notify &dDaily Quest Finished! category:title
+  daily_subtitle: notify &dDaily Quest Finished! category:subtitle
+  
+  weekly_title: notify &dWeekly Quest Finished! category:title
+  weekly_subtitle: notify &dWeekly Quest Finished! category:subtitle

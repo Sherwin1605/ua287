@@ -1,0 +1,88 @@
+every second:
+	loop {players::*}:
+		CheckLocation(loop-value)
+
+
+
+
+
+
+function CheckLocation(player: player):
+	loop 2 times:
+		AnnouncePlayerBiome({_player})
+		if "%region at {_player}%" contains "wild_tp":
+			TeleportToWilderness({_player})
+		if "%region at {_player}%" contains "random_tp":
+			RandomTeleportAttempt({_player}, true)
+		if "%region at {_player}%" contains "spawn in world":
+			set {_loc} to "<##4dff2b>Adventurer's Town"
+			if {_player} has permission "core.spawn_fly":
+				if {_player}'s fly mode is false:
+					set {_player}'s fly mode to true
+		else:
+			if {_player} has permission "core.spawn_fly":
+				if {_player} doesn't have permission "group.moderator":
+					if {_player}'s fly mode is true:
+						set {_player}'s fly mode to false
+		if {_player}'s gamemode is creative:
+			set {_player}'s fly mode to true
+		if world of {_player} is "spawn":
+			if "%region at {_player}%" doesn't contain "spawn in world":
+				if {_player} doesn't have permission "core.leave_spawn_bounds":
+					if metadata value "sculk_teleport_date" of {_player} is set:
+						set {_portal_delay} to {sculk_portal::config::teleport_duration} + 3 seconds
+						if difference between metadata value "sculk_teleport_date" of {_player} and now < {_portal_delay}:
+							stop
+					PerformSpawnTeleport({_player})
+		if "%region at {_player}%" contains "dungeon":
+			set {_floor} to GetPlayerFloor({_player})
+			set {_dungeon} to FindDungeon({_floor})
+			set {_loc} to "<##f74154>%GetDungeonName({_dungeon})%"
+		else:
+			if metadata value "dungeon_floor" of {_player} is set:
+				LeaveDungeon({_player})
+		if {_loc} is not set:
+			set {_loc} to placeholder "griefprevention_currentclaim_ownername" from {_player}
+			if {_loc} is {_player}:
+				set {_loc} to "&eYour Claim"
+			else:
+				if {_loc} is "Unclaimed":
+					set {_loc} to "<##13e375>Wilderness"
+				else:
+					set {_loc} to "<##e96375>Foreign Claim"
+		set metadata value "location" of {_player} to {_loc}
+		wait 0.5 second
+
+
+
+function AnnouncePlayerBiome(player: player):
+	set {_biome::*} to "%biome key of block at {_player}%" split at ":"
+	set {_biome} to {_biome::2}
+	if world of {_player} is not "world":
+		stop
+	
+	if difference between metadata value "print_day_count_date" of {_player} and now < 4 seconds:
+		stop
+
+	if metadata value "announce_biome_last_biome" of {_player} is not {_biome}:
+		if difference between metadata value "announce_biome_date" of {_player} and now < 15 seconds:
+			stop
+		if difference between metadata value "announce_biome_date_%{_biome}%" of {_player} and now < 5 minutes:
+			set metadata value "announce_biome_last_biome" of {_player} to {_biome}
+			stop
+		set metadata value "announce_biome_date_%{_biome}%" of {_player} to now
+		set metadata value "announce_biome_date" of {_player} to now
+		set metadata value "announce_biome_last_biome" of {_player} to {_biome}
+
+		replace all "_" with " " in {_biome}
+		replace all "cave/" with "" in {_biome}
+
+		set {_biome_text} to {_biome}
+
+		#	Translate biome names here, if you want!
+#		set {_biome::plains} to "your_translation"
+#		set {_biome::forested_highlands} to "your_translation"
+		if {_biome::%{_biome}%} is set:
+			set {_biome_text} to {_biome::%{_biome}%}
+
+		PrintBiomeAnnouncement({_player}, capitalize({_biome_text}))

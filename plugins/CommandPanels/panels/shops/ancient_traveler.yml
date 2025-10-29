@@ -1,0 +1,1158 @@
+panels:
+  ancient_traveler:
+    perm: ancient_traveler
+    rows: 5
+    title: '&f'
+    commands:
+    - ancient_traveler_menu
+    - ancientraveler
+    - ancientshop
+    - ancientstore
+    empty: AIR
+    sound-on-open: ENTITY_WANDERING_TRADER_DISAPPEARED
+    
+#  
+#       CUSTOM ITEMS
+#  
+
+    custom-item:
+      harm_arrow_2:
+        itemType:
+        - noAttributes
+        material: TIPPED_ARROW
+        potion: INSTANT_DAMAGE false true
+        name: '&fArrow of Harming'
+        lore:
+        - '&cInstant Damage II'
+      
+      strength_potion_2:
+        itemType:
+        - noAttributes
+        material: POTION
+        potion: STRENGTH false true
+        name: '&fPotion of Strength'
+        lore:
+        - '&9Strength II (1:30)'
+        - ''
+        - '&5When Applied:'
+        - '&9+6 Attack Damage'
+      splash_healing_potion_2:
+        itemType:
+        - noAttributes
+        material: SPLASH_POTION
+        potion: INSTANT_HEAL false true
+        name: '&fSplash Potion of Healing'
+        lore:
+        - '&9Instant Health II'
+      splash_damage_potion_2:
+        itemType:
+        - noAttributes
+        material: SPLASH_POTION
+        potion: INSTANT_DAMAGE false true
+        name: '&fSplash Potion of Harming'
+        lore:
+        - '&cInstant Damage II'
+      
+      looting_book:
+        itemType:
+        - noAttributes
+        material: ENCHANTED_BOOK
+        enchanted:
+        - LOOTING 3
+        name: '&eEnchanted Book'
+      smite_book:
+        itemType:
+        - noAttributes
+        material: ENCHANTED_BOOK
+        enchanted:
+        - SMITE 3
+        name: '&eEnchanted Book'
+      feather_falling_book:
+        itemType:
+        - noAttributes
+        material: ENCHANTED_BOOK
+        enchanted:
+        - FEATHER_FALLING 4
+        name: '&eEnchanted Book'
+      frost_walker_book:
+        itemType:
+        - noAttributes
+        material: ENCHANTED_BOOK
+        enchanted:
+        - FROST_WALKER 2
+        name: '&eEnchanted Book'
+      piercing_book:
+        itemType:
+        - noAttributes
+        material: ENCHANTED_BOOK
+        enchanted:
+        - PIERCING 4
+        name: '&eEnchanted Book'
+      quick_charge_book:
+        itemType:
+        - noAttributes
+        material: ENCHANTED_BOOK
+        enchanted:
+        - QUICK_CHARGE 3
+        name: '&eEnchanted Book'
+      luck_of_the_sea_book:
+        itemType:
+        - noAttributes
+        material: ENCHANTED_BOOK
+        enchanted:
+        - LUCK_OF_THE_SEA 3
+        name: '&eEnchanted Book'
+    
+    
+    item:
+
+
+      '0':
+        material: STICK
+        customdata: 1
+        name: '&c← Previous Menu'
+        commands:
+        - open= main_menu
+      
+      
+      
+      '8':
+        material: STICK
+        customdata: 11
+        name: '%color_menu_primary%Ancient Traveler'
+        lore:
+        - ''
+        - '&7Here you can find rare items'
+        - '&7that cannot be purchased otherwise.'
+        - ''
+        - '&e⌚ &fNew items in: &e%valiant_ancienttraveler_refresh_time%'
+        - ''
+        - '&7Ancient Traveler''s shop'
+        - '&7is restocked every day.'
+      
+      
+
+        
+      
+      
+      
+      
+      
+      '29':
+        material: BLACK_CONCRETE
+        name: '%color_menu_primary%Item #1'
+        lore:
+        - ' '
+        - '&7Wait for the items to refresh!'
+        has1:
+          value0: '%valiant_ancienttraveler_item_1%'
+          compare0: 'amethyst shard'
+          material: AMETHYST_SHARD
+          name: '%color_menu_primary%Amethyst Shard'
+          lore:
+          - ''
+          - '%color_gold%  &7BUY &f&l1 &7FOR %color_gold%200 Gold '
+          - ''
+          - '&a&l✔ Click to buy'
+          commands:
+          - paywall= 200
+          - console= give %cp-player-name% amethyst_shard 1
+          - console= itempurchasesound %cp-player-name%
+        has2:
+          value0: '%valiant_ancienttraveler_item_1%'
+          compare0: 'heart of the sea'
+          material: HEART_OF_THE_SEA
+          name: '%color_menu_primary%Heart of The Sea'
+          lore:
+          - ''
+          - '%color_gold%  &7BUY &f&l1 &7FOR %color_gold%2500 Gold '
+          - ''
+          - '&a&l✔ Click to buy'
+          commands:
+          - paywall= 2500
+          - console= give %cp-player-name% heart_of_the_sea 1
+          - console= itempurchasesound %cp-player-name%
+        has3:
+          value0: '%valiant_ancienttraveler_item_1%'
+          compare0: 'shulker shell'
+          material: SHULKER_SHELL
+          name: '%color_menu_primary%Shulker Shell'
+          lore:
+          - ''
+          - '%color_gold%  &7BUY &f&l1 &7FOR %color_gold%500 Gold '
+          - ''
+          - '&a&l✔ Click to buy'
+          commands:
+          - paywall= 500
+          - console= give %cp-player-name% shulker_shell 1
+          - console= itempurchasesound %cp-player-name%
+        has4:
+          value0: '%valiant_ancienttraveler_item_1%'
+          compare0: 'diamond horse armor'
+          material: DIAMOND_HORSE_ARMOR
+          name: '%color_menu_primary%Diamond Horse Armor'
+          lore:
+          - ''
+          - '%color_gold%  &7BUY &f&l1 &7FOR %color_gold%2500 Gold '
+          - ''
+          - '&a&l✔ Click to buy'
+          commands:
+          - paywall= 2500
+          - console= give %cp-player-name% diamond_horse_armor 1
+          - console= itempurchasesound %cp-player-name%
+        has5:
+          value0: '%valiant_ancienttraveler_item_1%'
+          compare0: 'enchanted golden apple'
+          material: ENCHANTED_GOLDEN_APPLE
+          name: '%color_menu_primary%Enchanted Golden Apple'
+          lore:
+          - ''
+          - '%color_gold%  &7BUY &f&l1 &7FOR %color_gold%2000 Gold '
+          - ''
+          - '&a&l✔ Click to buy'
+          commands:
+          - paywall= 2000
+          - console= give %cp-player-name% enchanted_golden_apple 1
+          - console= itempurchasesound %cp-player-name%
+        has6:
+          value0: '%valiant_ancienttraveler_item_1%'
+          compare0: 'totem of undying'
+          material: TOTEM_OF_UNDYING
+          name: '%color_menu_primary%Totem of Undying'
+          lore:
+          - ''
+          - '%color_gold%  &7BUY &f&l1 &7FOR %color_gold%5000 Gold '
+          - ''
+          - '&a&l✔ Click to buy'
+          commands:
+          - paywall= 5000
+          - console= give %cp-player-name% totem_of_undying 1
+          - console= itempurchasesound %cp-player-name%
+        has7:
+          value0: '%valiant_ancienttraveler_item_1%'
+          compare0: 'bamboo'
+          material: BAMBOO
+          name: '%color_menu_primary%Bamboo'
+          lore:
+          - ''
+          - '%color_gold%  &7BUY &f&l1 &7FOR %color_gold%100 Gold '
+          - ''
+          - '&a&l✔ Click to buy'
+          commands:
+          - paywall= 100
+          - console= give %cp-player-name% bamboo 1
+          - console= itempurchasesound %cp-player-name%
+        has8:
+          value0: '%valiant_ancienttraveler_item_1%'
+          compare0: 'turtle shell'
+          material: TURTLE_HELMET
+          name: '%color_menu_primary%Turtle Shell'
+          lore:
+          - ''
+          - '%color_gold%  &7BUY &f&l1 &7FOR %color_gold%400 Gold '
+          - ''
+          - '&a&l✔ Click to buy'
+          commands:
+          - paywall= 400
+          - console= give %cp-player-name% turtle_helmet 1
+          - console= itempurchasesound %cp-player-name%
+        has9:
+          value0: '%valiant_ancienttraveler_item_1%'
+          compare0: 'dragon breath'
+          material: DRAGON_BREATH
+          name: '%color_menu_primary%Dragon Breath'
+          lore:
+          - ''
+          - '%color_gold%  &7BUY &f&l1 &7FOR %color_gold%300 Gold '
+          - ''
+          - '&a&l✔ Click to buy'
+          commands:
+          - paywall= 300
+          - console= give %cp-player-name% dragon_breath 1
+          - console= itempurchasesound %cp-player-name%
+        has10:
+          value0: '%valiant_ancienttraveler_item_1%'
+          compare0: 'trident'
+          material: TRIDENT
+          name: '%color_menu_primary%Trident'
+          lore:
+          - ''
+          - '%color_gold%  &7BUY &f&l1 &7FOR %color_gold%4000 Gold '
+          - ''
+          - '&a&l✔ Click to buy'
+          commands:
+          - paywall= 4000
+          - console= give %cp-player-name% trident 1
+          - console= itempurchasesound %cp-player-name%
+        has11:
+          value0: '%valiant_ancienttraveler_item_1%'
+          compare0: 'netherite ingot'
+          material: NETHERITE_INGOT
+          name: '%color_menu_primary%Netherite Ingot'
+          lore:
+          - ''
+          - '%color_gold%  &7BUY &f&l1 &7FOR %color_gold%2500 Gold '
+          - ''
+          - '&a&l✔ Click to buy'
+          commands:
+          - paywall= 2500
+          - console= give %cp-player-name% netherite_ingot 1
+          - console= itempurchasesound %cp-player-name%
+        
+        has12:
+          value0: '%valiant_ancienttraveler_item_1%'
+          compare0: 'harm arrow 2'
+          material: TIPPED_ARROW
+          potion: INSTANT_DAMAGE false true
+          name: '%color_menu_primary%Arrow of Harming'
+          lore:
+          - ''
+          - '%color_gold%  &7BUY &f&l1 &7FOR %color_gold%400 Gold '
+          - ''
+          - '&a&l✔ Click to buy'
+          commands:
+          - paywall= 400
+          - give-item= harm_arrow_2
+          - console= itempurchasesound %cp-player-name%
+        
+        has13:
+          value0: '%valiant_ancienttraveler_item_1%'
+          compare0: 'strength potion 2'
+          material: POTION
+          potion: STRENGTH false true
+          name: '%color_menu_primary%Potion of Strength'
+          lore:
+          - ''
+          - '&5When Applied:'
+          - '&9+6 Attack Damage'
+          - ''
+          - '%color_gold%  &7BUY &f&l1 &7FOR %color_gold%1500 Gold '
+          - ''
+          - '&a&l✔ Click to buy'
+          commands:
+          - paywall= 1500
+          - give-item= strength_potion_2
+          - console= itempurchasesound %cp-player-name%
+        has14:
+          value0: '%valiant_ancienttraveler_item_1%'
+          compare0: 'splash healing potion 2'
+          material: SPLASH_POTION
+          potion: INSTANT_HEAL false true
+          name: '%color_menu_primary%Splash Potion of Healing'
+          lore:
+          - ''
+          - '%color_gold%  &7BUY &f&l1 &7FOR %color_gold%800 Gold '
+          - ''
+          - '&a&l✔ Click to buy'
+          commands:
+          - paywall= 800
+          - give-item= splash_healing_potion_2
+          - console= itempurchasesound %cp-player-name%
+        has15:
+          value0: '%valiant_ancienttraveler_item_1%'
+          compare0: 'splash instant damage 2'
+          material: SPLASH_POTION
+          potion: INSTANT_DAMAGE false true
+          name: '%color_menu_primary%Splash Potion of Harming'
+          lore:
+          - ''
+          - '%color_gold%  &7BUY &f&l1 &7FOR %color_gold%800 Gold '
+          - ''
+          - '&a&l✔ Click to buy'
+          commands:
+          - paywall= 800
+          - give-item= splash_damage_potion_2
+          - console= itempurchasesound %cp-player-name%
+        
+        has16:
+          value0: '%valiant_ancienttraveler_item_1%'
+          compare0: 'looting'
+          material: ENCHANTED_BOOK
+          enchanted:
+          - LOOTING 3
+          name: '%color_menu_primary%Enchanted Book'
+          lore:
+          - ''
+          - '%color_gold%  &7BUY &f&l1 &7FOR %color_gold%2500 Gold '
+          - ''
+          - '&a&l✔ Click to buy'
+          commands:
+          - paywall= 2500
+          - console= minecraft:give %cp-player-name% enchanted_book[enchantments={levels:{looting:3}}]
+          - console= itempurchasesound %cp-player-name%
+        has17:
+          value0: '%valiant_ancienttraveler_item_1%'
+          compare0: 'smite'
+          material: ENCHANTED_BOOK
+          enchanted:
+          - SMITE 3
+          name: '%color_menu_primary%Enchanted Book'
+          lore:
+          - ''
+          - '%color_gold%  &7BUY &f&l1 &7FOR %color_gold%1500 Gold '
+          - ''
+          - '&a&l✔ Click to buy'
+          commands:
+          - paywall= 1500
+          - console= minecraft:give %cp-player-name% enchanted_book[enchantments={levels:{smite:3}}]
+          - console= itempurchasesound %cp-player-name%
+        has18:
+          value0: '%valiant_ancienttraveler_item_1%'
+          compare0: 'feather falling'
+          material: ENCHANTED_BOOK
+          enchanted:
+          - FEATHER_FALLING 4
+          name: '%color_menu_primary%Enchanted Book'
+          lore:
+          - ''
+          - '%color_gold%  &7BUY &f&l1 &7FOR %color_gold%2000 Gold '
+          - ''
+          - '&a&l✔ Click to buy'
+          commands:
+          - paywall= 2000
+          - console= minecraft:give %cp-player-name% enchanted_book[enchantments={levels:{feather_falling:4}}]
+          - console= itempurchasesound %cp-player-name%
+        has19:
+          value0: '%valiant_ancienttraveler_item_1%'
+          compare0: 'frost walker'
+          material: ENCHANTED_BOOK
+          enchanted:
+          - FROST_WALKER 2
+          name: '%color_menu_primary%Enchanted Book'
+          lore:
+          - ''
+          - '%color_gold%  &7BUY &f&l1 &7FOR %color_gold%2000 Gold '
+          - ''
+          - '&a&l✔ Click to buy'
+          commands:
+          - paywall= 2000
+          - console= minecraft:give %cp-player-name% enchanted_book[enchantments={levels:{frost_walker:2}}]
+          - console= itempurchasesound %cp-player-name%
+        has20:
+          value0: '%valiant_ancienttraveler_item_1%'
+          compare0: 'piercing'
+          material: ENCHANTED_BOOK
+          enchanted:
+          - PIERCING 4
+          name: '%color_menu_primary%Enchanted Book'
+          lore:
+          - ''
+          - '%color_gold%  &7BUY &f&l1 &7FOR %color_gold%2500 Gold '
+          - ''
+          - '&a&l✔ Click to buy'
+          commands:
+          - paywall= 2500
+          - console= minecraft:give %cp-player-name% enchanted_book[enchantments={levels:{piercing:4}}]
+          - console= itempurchasesound %cp-player-name%
+        has21:
+          value0: '%valiant_ancienttraveler_item_1%'
+          compare0: 'quick charge'
+          material: ENCHANTED_BOOK
+          enchanted:
+          - QUICK_CHARGE 3
+          name: '%color_menu_primary%Enchanted Book'
+          lore:
+          - ''
+          - '%color_gold%  &7BUY &f&l1 &7FOR %color_gold%2500 Gold '
+          - ''
+          - '&a&l✔ Click to buy'
+          commands:
+          - paywall= 2500
+          - console= minecraft:give %cp-player-name% enchanted_book[enchantments={levels:{quick_charge:3}}]
+          - console= itempurchasesound %cp-player-name%
+        has22:
+          value0: '%valiant_ancienttraveler_item_1%'
+          compare0: 'luck of the sea'
+          material: ENCHANTED_BOOK
+          enchanted:
+          - LUCK_OF_THE_SEA 3
+          name: '%color_menu_primary%Enchanted Book'
+          lore:
+          - ''
+          - '%color_gold%  &7BUY &f&l1 &7FOR %color_gold%2500 Gold '
+          - ''
+          - '&a&l✔ Click to buy'
+          commands:
+          - paywall= 2500
+          - console= minecraft:give %cp-player-name% enchanted_book[enchantments={levels:{luck_of_the_sea:3}}]
+          - console= itempurchasesound %cp-player-name%
+        
+      
+      '31':
+        material: BLACK_CONCRETE
+        name: '%color_menu_primary%Item #2'
+        lore:
+        - ' '
+        - '&7Wait for the items to refresh!'
+        has1:
+          value0: '%valiant_ancienttraveler_item_2%'
+          compare0: 'amethyst shard'
+          material: AMETHYST_SHARD
+          name: '%color_menu_primary%Amethyst Shard'
+          lore:
+          - ''
+          - '%color_gold%  &7BUY &f&l1 &7FOR %color_gold%200 Gold '
+          - ''
+          - '&a&l✔ Click to buy'
+          commands:
+          - paywall= 200
+          - console= give %cp-player-name% amethyst_shard 1
+          - console= itempurchasesound %cp-player-name%
+        has2:
+          value0: '%valiant_ancienttraveler_item_2%'
+          compare0: 'heart of the sea'
+          material: HEART_OF_THE_SEA
+          name: '%color_menu_primary%Heart of The Sea'
+          lore:
+          - ''
+          - '%color_gold%  &7BUY &f&l1 &7FOR %color_gold%2500 Gold '
+          - ''
+          - '&a&l✔ Click to buy'
+          commands:
+          - paywall= 2500
+          - console= give %cp-player-name% heart_of_the_sea 1
+          - console= itempurchasesound %cp-player-name%
+        has3:
+          value0: '%valiant_ancienttraveler_item_2%'
+          compare0: 'shulker shell'
+          material: SHULKER_SHELL
+          name: '%color_menu_primary%Shulker Shell'
+          lore:
+          - ''
+          - '%color_gold%  &7BUY &f&l1 &7FOR %color_gold%500 Gold '
+          - ''
+          - '&a&l✔ Click to buy'
+          commands:
+          - paywall= 500
+          - console= give %cp-player-name% shulker_shell 1
+          - console= itempurchasesound %cp-player-name%
+        has4:
+          value0: '%valiant_ancienttraveler_item_2%'
+          compare0: 'diamond horse armor'
+          material: DIAMOND_HORSE_ARMOR
+          name: '%color_menu_primary%Diamond Horse Armor'
+          lore:
+          - ''
+          - '%color_gold%  &7BUY &f&l1 &7FOR %color_gold%2500 Gold '
+          - ''
+          - '&a&l✔ Click to buy'
+          commands:
+          - paywall= 2500
+          - console= give %cp-player-name% diamond_horse_armor 1
+          - console= itempurchasesound %cp-player-name%
+        has5:
+          value0: '%valiant_ancienttraveler_item_2%'
+          compare0: 'enchanted golden apple'
+          material: ENCHANTED_GOLDEN_APPLE
+          name: '%color_menu_primary%Enchanted Golden Apple'
+          lore:
+          - ''
+          - '%color_gold%  &7BUY &f&l1 &7FOR %color_gold%2000 Gold '
+          - ''
+          - '&a&l✔ Click to buy'
+          commands:
+          - paywall= 2000
+          - console= give %cp-player-name% enchanted_golden_apple 1
+          - console= itempurchasesound %cp-player-name%
+        has6:
+          value0: '%valiant_ancienttraveler_item_2%'
+          compare0: 'totem of undying'
+          material: TOTEM_OF_UNDYING
+          name: '%color_menu_primary%Totem of Undying'
+          lore:
+          - ''
+          - '%color_gold%  &7BUY &f&l1 &7FOR %color_gold%5000 Gold '
+          - ''
+          - '&a&l✔ Click to buy'
+          commands:
+          - paywall= 5000
+          - console= give %cp-player-name% totem_of_undying 1
+          - console= itempurchasesound %cp-player-name%
+        has7:
+          value0: '%valiant_ancienttraveler_item_2%'
+          compare0: 'bamboo'
+          material: BAMBOO
+          name: '%color_menu_primary%Bamboo'
+          lore:
+          - ''
+          - '%color_gold%  &7BUY &f&l1 &7FOR %color_gold%100 Gold '
+          - ''
+          - '&a&l✔ Click to buy'
+          commands:
+          - paywall= 100
+          - console= give %cp-player-name% bamboo 1
+          - console= itempurchasesound %cp-player-name%
+        has8:
+          value0: '%valiant_ancienttraveler_item_2%'
+          compare0: 'turtle shell'
+          material: TURTLE_HELMET
+          name: '%color_menu_primary%Turtle Shell'
+          lore:
+          - ''
+          - '%color_gold%  &7BUY &f&l1 &7FOR %color_gold%400 Gold '
+          - ''
+          - '&a&l✔ Click to buy'
+          commands:
+          - paywall= 400
+          - console= give %cp-player-name% turtle_helmet 1
+          - console= itempurchasesound %cp-player-name%
+        has9:
+          value0: '%valiant_ancienttraveler_item_2%'
+          compare0: 'dragon breath'
+          material: DRAGON_BREATH
+          name: '%color_menu_primary%Dragon Breath'
+          lore:
+          - ''
+          - '%color_gold%  &7BUY &f&l1 &7FOR %color_gold%300 Gold '
+          - ''
+          - '&a&l✔ Click to buy'
+          commands:
+          - paywall= 300
+          - console= give %cp-player-name% dragon_breath 1
+          - console= itempurchasesound %cp-player-name%
+        has10:
+          value0: '%valiant_ancienttraveler_item_2%'
+          compare0: 'trident'
+          material: TRIDENT
+          name: '%color_menu_primary%Trident'
+          lore:
+          - ''
+          - '%color_gold%  &7BUY &f&l1 &7FOR %color_gold%4000 Gold '
+          - ''
+          - '&a&l✔ Click to buy'
+          commands:
+          - paywall= 4000
+          - console= give %cp-player-name% trident 1
+          - console= itempurchasesound %cp-player-name%
+        has11:
+          value0: '%valiant_ancienttraveler_item_2%'
+          compare0: 'netherite ingot'
+          material: NETHERITE_INGOT
+          name: '%color_menu_primary%Netherite Ingot'
+          lore:
+          - ''
+          - '%color_gold%  &7BUY &f&l1 &7FOR %color_gold%2500 Gold '
+          - ''
+          - '&a&l✔ Click to buy'
+          commands:
+          - paywall= 2500
+          - console= give %cp-player-name% netherite_ingot 1
+          - console= itempurchasesound %cp-player-name%
+        
+        has12:
+          value0: '%valiant_ancienttraveler_item_2%'
+          compare0: 'harm arrow 2'
+          material: TIPPED_ARROW
+          potion: INSTANT_DAMAGE false true
+          name: '%color_menu_primary%Arrow of Harming'
+          lore:
+          - ''
+          - '%color_gold%  &7BUY &f&l1 &7FOR %color_gold%400 Gold '
+          - ''
+          - '&a&l✔ Click to buy'
+          commands:
+          - paywall= 400
+          - give-item= harm_arrow_2
+          - console= itempurchasesound %cp-player-name%
+        
+        has13:
+          value0: '%valiant_ancienttraveler_item_2%'
+          compare0: 'strength potion 2'
+          material: POTION
+          potion: STRENGTH false true
+          name: '%color_menu_primary%Potion of Strength'
+          lore:
+          - ''
+          - '&5When Applied:'
+          - '&9+6 Attack Damage'
+          - ''
+          - '%color_gold%  &7BUY &f&l1 &7FOR %color_gold%1500 Gold '
+          - ''
+          - '&a&l✔ Click to buy'
+          commands:
+          - paywall= 1500
+          - give-item= strength_potion_2
+          - console= itempurchasesound %cp-player-name%
+        has14:
+          value0: '%valiant_ancienttraveler_item_2%'
+          compare0: 'splash healing potion 2'
+          material: SPLASH_POTION
+          potion: INSTANT_HEAL false true
+          name: '%color_menu_primary%Splash Potion of Healing'
+          lore:
+          - ''
+          - '%color_gold%  &7BUY &f&l1 &7FOR %color_gold%800 Gold '
+          - ''
+          - '&a&l✔ Click to buy'
+          commands:
+          - paywall= 800
+          - give-item= splash_healing_potion_2
+          - console= itempurchasesound %cp-player-name%
+        has15:
+          value0: '%valiant_ancienttraveler_item_2%'
+          compare0: 'splash instant damage 2'
+          material: SPLASH_POTION
+          potion: INSTANT_DAMAGE false true
+          name: '%color_menu_primary%Splash Potion of Harming'
+          lore:
+          - ''
+          - '%color_gold%  &7BUY &f&l1 &7FOR %color_gold%800 Gold '
+          - ''
+          - '&a&l✔ Click to buy'
+          commands:
+          - paywall= 800
+          - give-item= splash_damage_potion_2
+          - console= itempurchasesound %cp-player-name%
+        
+        has16:
+          value0: '%valiant_ancienttraveler_item_2%'
+          compare0: 'looting'
+          material: ENCHANTED_BOOK
+          enchanted:
+          - LOOTING 3
+          name: '%color_menu_primary%Enchanted Book'
+          lore:
+          - ''
+          - '%color_gold%  &7BUY &f&l1 &7FOR %color_gold%2500 Gold '
+          - ''
+          - '&a&l✔ Click to buy'
+          commands:
+          - paywall= 2500
+          - console= minecraft:give %cp-player-name% enchanted_book[enchantments={levels:{looting:3}}]
+          - console= itempurchasesound %cp-player-name%
+        has17:
+          value0: '%valiant_ancienttraveler_item_2%'
+          compare0: 'smite'
+          material: ENCHANTED_BOOK
+          enchanted:
+          - SMITE 3
+          name: '%color_menu_primary%Enchanted Book'
+          lore:
+          - ''
+          - '%color_gold%  &7BUY &f&l1 &7FOR %color_gold%1500 Gold '
+          - ''
+          - '&a&l✔ Click to buy'
+          commands:
+          - paywall= 1500
+          - console= minecraft:give %cp-player-name% enchanted_book[enchantments={levels:{smite:3}}]
+          - console= itempurchasesound %cp-player-name%
+        has18:
+          value0: '%valiant_ancienttraveler_item_2%'
+          compare0: 'feather falling'
+          material: ENCHANTED_BOOK
+          enchanted:
+          - FEATHER_FALLING 4
+          name: '%color_menu_primary%Enchanted Book'
+          lore:
+          - ''
+          - '%color_gold%  &7BUY &f&l1 &7FOR %color_gold%2000 Gold '
+          - ''
+          - '&a&l✔ Click to buy'
+          commands:
+          - paywall= 2000
+          - console= minecraft:give %cp-player-name% enchanted_book[enchantments={levels:{feather_falling:4}}]
+          - console= itempurchasesound %cp-player-name%
+        has19:
+          value0: '%valiant_ancienttraveler_item_2%'
+          compare0: 'frost walker'
+          material: ENCHANTED_BOOK
+          enchanted:
+          - FROST_WALKER 2
+          name: '%color_menu_primary%Enchanted Book'
+          lore:
+          - ''
+          - '%color_gold%  &7BUY &f&l1 &7FOR %color_gold%2000 Gold '
+          - ''
+          - '&a&l✔ Click to buy'
+          commands:
+          - paywall= 2000
+          - console= minecraft:give %cp-player-name% enchanted_book[enchantments={levels:{frost_walker:2}}]
+          - console= itempurchasesound %cp-player-name%
+        has20:
+          value0: '%valiant_ancienttraveler_item_2%'
+          compare0: 'piercing'
+          material: ENCHANTED_BOOK
+          enchanted:
+          - PIERCING 4
+          name: '%color_menu_primary%Enchanted Book'
+          lore:
+          - ''
+          - '%color_gold%  &7BUY &f&l1 &7FOR %color_gold%2500 Gold '
+          - ''
+          - '&a&l✔ Click to buy'
+          commands:
+          - paywall= 2500
+          - console= minecraft:give %cp-player-name% enchanted_book[enchantments={levels:{piercing:4}}]
+          - console= itempurchasesound %cp-player-name%
+        has21:
+          value0: '%valiant_ancienttraveler_item_2%'
+          compare0: 'quick charge'
+          material: ENCHANTED_BOOK
+          enchanted:
+          - QUICK_CHARGE 3
+          name: '%color_menu_primary%Enchanted Book'
+          lore:
+          - ''
+          - '%color_gold%  &7BUY &f&l1 &7FOR %color_gold%2500 Gold '
+          - ''
+          - '&a&l✔ Click to buy'
+          commands:
+          - paywall= 2500
+          - console= minecraft:give %cp-player-name% enchanted_book[enchantments={levels:{quick_charge:3}}]
+          - console= itempurchasesound %cp-player-name%
+        has22:
+          value0: '%valiant_ancienttraveler_item_2%'
+          compare0: 'luck of the sea'
+          material: ENCHANTED_BOOK
+          enchanted:
+          - LUCK_OF_THE_SEA 3
+          name: '%color_menu_primary%Enchanted Book'
+          lore:
+          - ''
+          - '%color_gold%  &7BUY &f&l1 &7FOR %color_gold%2500 Gold '
+          - ''
+          - '&a&l✔ Click to buy'
+          commands:
+          - paywall= 2500
+          - console= minecraft:give %cp-player-name% enchanted_book[enchantments={levels:{luck_of_the_sea:3}}]
+          - console= itempurchasesound %cp-player-name%
+      
+      '33':
+        material: BLACK_CONCRETE
+        name: '%color_menu_primary%Item #1'
+        lore:
+        - ' '
+        - '&7Wait for the items to refresh!'
+        has1:
+          value0: '%valiant_ancienttraveler_item_3%'
+          compare0: 'amethyst shard'
+          material: AMETHYST_SHARD
+          name: '%color_menu_primary%Amethyst Shard'
+          lore:
+          - ''
+          - '%color_gold%  &7BUY &f&l1 &7FOR %color_gold%200 Gold '
+          - ''
+          - '&a&l✔ Click to buy'
+          commands:
+          - paywall= 200
+          - console= give %cp-player-name% amethyst_shard 1
+          - console= itempurchasesound %cp-player-name%
+        has2:
+          value0: '%valiant_ancienttraveler_item_3%'
+          compare0: 'heart of the sea'
+          material: HEART_OF_THE_SEA
+          name: '%color_menu_primary%Heart of The Sea'
+          lore:
+          - ''
+          - '%color_gold%  &7BUY &f&l1 &7FOR %color_gold%2500 Gold '
+          - ''
+          - '&a&l✔ Click to buy'
+          commands:
+          - paywall= 2500
+          - console= give %cp-player-name% heart_of_the_sea 1
+          - console= itempurchasesound %cp-player-name%
+        has3:
+          value0: '%valiant_ancienttraveler_item_3%'
+          compare0: 'shulker shell'
+          material: SHULKER_SHELL
+          name: '%color_menu_primary%Shulker Shell'
+          lore:
+          - ''
+          - '%color_gold%  &7BUY &f&l1 &7FOR %color_gold%500 Gold '
+          - ''
+          - '&a&l✔ Click to buy'
+          commands:
+          - paywall= 500
+          - console= give %cp-player-name% shulker_shell 1
+          - console= itempurchasesound %cp-player-name%
+        has4:
+          value0: '%valiant_ancienttraveler_item_3%'
+          compare0: 'diamond horse armor'
+          material: DIAMOND_HORSE_ARMOR
+          name: '%color_menu_primary%Diamond Horse Armor'
+          lore:
+          - ''
+          - '%color_gold%  &7BUY &f&l1 &7FOR %color_gold%2500 Gold '
+          - ''
+          - '&a&l✔ Click to buy'
+          commands:
+          - paywall= 2500
+          - console= give %cp-player-name% diamond_horse_armor 1
+          - console= itempurchasesound %cp-player-name%
+        has5:
+          value0: '%valiant_ancienttraveler_item_3%'
+          compare0: 'enchanted golden apple'
+          material: ENCHANTED_GOLDEN_APPLE
+          name: '%color_menu_primary%Enchanted Golden Apple'
+          lore:
+          - ''
+          - '%color_gold%  &7BUY &f&l1 &7FOR %color_gold%2000 Gold '
+          - ''
+          - '&a&l✔ Click to buy'
+          commands:
+          - paywall= 2000
+          - console= give %cp-player-name% enchanted_golden_apple 1
+          - console= itempurchasesound %cp-player-name%
+        has6:
+          value0: '%valiant_ancienttraveler_item_3%'
+          compare0: 'totem of undying'
+          material: TOTEM_OF_UNDYING
+          name: '%color_menu_primary%Totem of Undying'
+          lore:
+          - ''
+          - '%color_gold%  &7BUY &f&l1 &7FOR %color_gold%5000 Gold '
+          - ''
+          - '&a&l✔ Click to buy'
+          commands:
+          - paywall= 5000
+          - console= give %cp-player-name% totem_of_undying 1
+          - console= itempurchasesound %cp-player-name%
+        has7:
+          value0: '%valiant_ancienttraveler_item_3%'
+          compare0: 'bamboo'
+          material: BAMBOO
+          name: '%color_menu_primary%Bamboo'
+          lore:
+          - ''
+          - '%color_gold%  &7BUY &f&l1 &7FOR %color_gold%100 Gold '
+          - ''
+          - '&a&l✔ Click to buy'
+          commands:
+          - paywall= 100
+          - console= give %cp-player-name% bamboo 1
+          - console= itempurchasesound %cp-player-name%
+        has8:
+          value0: '%valiant_ancienttraveler_item_3%'
+          compare0: 'turtle shell'
+          material: TURTLE_HELMET
+          name: '%color_menu_primary%Turtle Shell'
+          lore:
+          - ''
+          - '%color_gold%  &7BUY &f&l1 &7FOR %color_gold%400 Gold '
+          - ''
+          - '&a&l✔ Click to buy'
+          commands:
+          - paywall= 400
+          - console= give %cp-player-name% turtle_helmet 1
+          - console= itempurchasesound %cp-player-name%
+        has9:
+          value0: '%valiant_ancienttraveler_item_3%'
+          compare0: 'dragon breath'
+          material: DRAGON_BREATH
+          name: '%color_menu_primary%Dragon Breath'
+          lore:
+          - ''
+          - '%color_gold%  &7BUY &f&l1 &7FOR %color_gold%300 Gold '
+          - ''
+          - '&a&l✔ Click to buy'
+          commands:
+          - paywall= 300
+          - console= give %cp-player-name% dragon_breath 1
+          - console= itempurchasesound %cp-player-name%
+        has10:
+          value0: '%valiant_ancienttraveler_item_3%'
+          compare0: 'trident'
+          material: TRIDENT
+          name: '%color_menu_primary%Trident'
+          lore:
+          - ''
+          - '%color_gold%  &7BUY &f&l1 &7FOR %color_gold%4000 Gold '
+          - ''
+          - '&a&l✔ Click to buy'
+          commands:
+          - paywall= 4000
+          - console= give %cp-player-name% trident 1
+          - console= itempurchasesound %cp-player-name%
+        has11:
+          value0: '%valiant_ancienttraveler_item_3%'
+          compare0: 'netherite ingot'
+          material: NETHERITE_INGOT
+          name: '%color_menu_primary%Netherite Ingot'
+          lore:
+          - ''
+          - '%color_gold%  &7BUY &f&l1 &7FOR %color_gold%2500 Gold '
+          - ''
+          - '&a&l✔ Click to buy'
+          commands:
+          - paywall= 2500
+          - console= give %cp-player-name% netherite_ingot 1
+          - console= itempurchasesound %cp-player-name%
+        
+        has12:
+          value0: '%valiant_ancienttraveler_item_3%'
+          compare0: 'harm arrow 2'
+          material: TIPPED_ARROW
+          potion: INSTANT_DAMAGE false true
+          name: '%color_menu_primary%Arrow of Harming'
+          lore:
+          - ''
+          - '%color_gold%  &7BUY &f&l1 &7FOR %color_gold%400 Gold '
+          - ''
+          - '&a&l✔ Click to buy'
+          commands:
+          - paywall= 400
+          - give-item= harm_arrow_2
+          - console= itempurchasesound %cp-player-name%
+        
+        has13:
+          value0: '%valiant_ancienttraveler_item_3%'
+          compare0: 'strength potion 2'
+          material: POTION
+          potion: STRENGTH false true
+          name: '%color_menu_primary%Potion of Strength'
+          lore:
+          - ''
+          - '&5When Applied:'
+          - '&9+6 Attack Damage'
+          - ''
+          - '%color_gold%  &7BUY &f&l1 &7FOR %color_gold%1500 Gold '
+          - ''
+          - '&a&l✔ Click to buy'
+          commands:
+          - paywall= 1500
+          - give-item= strength_potion_2
+          - console= itempurchasesound %cp-player-name%
+        has14:
+          value0: '%valiant_ancienttraveler_item_3%'
+          compare0: 'splash healing potion 2'
+          material: SPLASH_POTION
+          potion: INSTANT_HEAL false true
+          name: '%color_menu_primary%Splash Potion of Healing'
+          lore:
+          - ''
+          - '%color_gold%  &7BUY &f&l1 &7FOR %color_gold%800 Gold '
+          - ''
+          - '&a&l✔ Click to buy'
+          commands:
+          - paywall= 800
+          - give-item= splash_healing_potion_2
+          - console= itempurchasesound %cp-player-name%
+        has15:
+          value0: '%valiant_ancienttraveler_item_3%'
+          compare0: 'splash instant damage 2'
+          material: SPLASH_POTION
+          potion: INSTANT_DAMAGE false true
+          name: '%color_menu_primary%Splash Potion of Harming'
+          lore:
+          - ''
+          - '%color_gold%  &7BUY &f&l1 &7FOR %color_gold%800 Gold '
+          - ''
+          - '&a&l✔ Click to buy'
+          commands:
+          - paywall= 800
+          - give-item= splash_damage_potion_2
+          - console= itempurchasesound %cp-player-name%
+        
+        has16:
+          value0: '%valiant_ancienttraveler_item_3%'
+          compare0: 'looting'
+          material: ENCHANTED_BOOK
+          enchanted:
+          - LOOTING 3
+          name: '%color_menu_primary%Enchanted Book'
+          lore:
+          - ''
+          - '%color_gold%  &7BUY &f&l1 &7FOR %color_gold%2500 Gold '
+          - ''
+          - '&a&l✔ Click to buy'
+          commands:
+          - paywall= 2500
+          - console= minecraft:give %cp-player-name% enchanted_book[enchantments={levels:{looting:3}}]
+          - console= itempurchasesound %cp-player-name%
+        has17:
+          value0: '%valiant_ancienttraveler_item_3%'
+          compare0: 'smite'
+          material: ENCHANTED_BOOK
+          enchanted:
+          - SMITE 3
+          name: '%color_menu_primary%Enchanted Book'
+          lore:
+          - ''
+          - '%color_gold%  &7BUY &f&l1 &7FOR %color_gold%1500 Gold '
+          - ''
+          - '&a&l✔ Click to buy'
+          commands:
+          - paywall= 1500
+          - console= minecraft:give %cp-player-name% enchanted_book[enchantments={levels:{smite:3}}]
+          - console= itempurchasesound %cp-player-name%
+        has18:
+          value0: '%valiant_ancienttraveler_item_3%'
+          compare0: 'feather falling'
+          material: ENCHANTED_BOOK
+          enchanted:
+          - FEATHER_FALLING 4
+          name: '%color_menu_primary%Enchanted Book'
+          lore:
+          - ''
+          - '%color_gold%  &7BUY &f&l1 &7FOR %color_gold%2000 Gold '
+          - ''
+          - '&a&l✔ Click to buy'
+          commands:
+          - paywall= 2000
+          - console= minecraft:give %cp-player-name% enchanted_book[enchantments={levels:{feather_falling:4}}]
+          - console= itempurchasesound %cp-player-name%
+        has19:
+          value0: '%valiant_ancienttraveler_item_3%'
+          compare0: 'frost walker'
+          material: ENCHANTED_BOOK
+          enchanted:
+          - FROST_WALKER 2
+          name: '%color_menu_primary%Enchanted Book'
+          lore:
+          - ''
+          - '%color_gold%  &7BUY &f&l1 &7FOR %color_gold%2000 Gold '
+          - ''
+          - '&a&l✔ Click to buy'
+          commands:
+          - paywall= 2000
+          - console= minecraft:give %cp-player-name% enchanted_book[enchantments={levels:{frost_walker:2}}]
+          - console= itempurchasesound %cp-player-name%
+        has20:
+          value0: '%valiant_ancienttraveler_item_3%'
+          compare0: 'piercing'
+          material: ENCHANTED_BOOK
+          enchanted:
+          - PIERCING 4
+          name: '%color_menu_primary%Enchanted Book'
+          lore:
+          - ''
+          - '%color_gold%  &7BUY &f&l1 &7FOR %color_gold%2500 Gold '
+          - ''
+          - '&a&l✔ Click to buy'
+          commands:
+          - paywall= 2500
+          - console= minecraft:give %cp-player-name% enchanted_book[enchantments={levels:{piercing:4}}]
+          - console= itempurchasesound %cp-player-name%
+        has21:
+          value0: '%valiant_ancienttraveler_item_3%'
+          compare0: 'quick charge'
+          material: ENCHANTED_BOOK
+          enchanted:
+          - QUICK_CHARGE 3
+          name: '%color_menu_primary%Enchanted Book'
+          lore:
+          - ''
+          - '%color_gold%  &7BUY &f&l1 &7FOR %color_gold%2500 Gold '
+          - ''
+          - '&a&l✔ Click to buy'
+          commands:
+          - paywall= 2500
+          - console= minecraft:give %cp-player-name% enchanted_book[enchantments={levels:{quick_charge:3}}]
+          - console= itempurchasesound %cp-player-name%
+        has22:
+          value0: '%valiant_ancienttraveler_item_3%'
+          compare0: 'luck of the sea'
+          material: ENCHANTED_BOOK
+          enchanted:
+          - LUCK_OF_THE_SEA 3
+          name: '%color_menu_primary%Enchanted Book'
+          lore:
+          - ''
+          - '%color_gold%  &7BUY &f&l1 &7FOR %color_gold%2500 Gold '
+          - ''
+          - '&a&l✔ Click to buy'
+          commands:
+          - paywall= 2500
+          - console= minecraft:give %cp-player-name% enchanted_book[enchantments={levels:{luck_of_the_sea:3}}]
+          - console= itempurchasesound %cp-player-name%
+

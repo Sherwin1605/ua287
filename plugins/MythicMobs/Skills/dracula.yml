@@ -1,0 +1,232 @@
+### Standard Kick Attack
+
+dracula_kick_parse:
+  Conditions:
+  - offgcd
+  - onground
+  - hasaura{n=skill_used} false
+  - targetwithin{d=4} true
+  Skills:
+  - CancelEvent
+  - skill{s=dracula_kick}
+  
+dracula_kick:
+  Conditions:
+  - targetwithin{d=4} true
+  Skills:
+  - gcd{ticks=60}
+  - aura{auraname=skill_used;d=60} @self
+  - look{headOnly=false;immediately=true} @target
+  - state{m=dracula;s=kick;li=2;lo=2} @target
+  - setspeed{speed=0.8;type=walking} @self
+#  - randomskill{s=dracula_kick_animation_1,dracula_kick_animation_2}
+  - skill{s=dracula_kick_animation_1}
+  - sound{s=entity.zoglin.attack;p=1.5;v=0.6} @self
+  - delay 10
+  - sound{s=entity.zombie.attack_wooden_door;p=1;v=1} @self
+  - damage{amount=20} @target
+  - throw{velocity=13;velocityY=1} @PlayersInRadius{r=4}
+  - setspeed{speed=1;type=walking} @self
+
+dracula_cancel_attack:
+  Skills:
+  - CancelEvent
+
+dracula_kick_animation_1:
+  Skills:
+  - state{s=kick;li=1} @self
+
+dracula_kick_animation_2:
+  Skills:
+  - state{s=kick_2;li=1} @self
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+dracula_dash_parse:
+  Conditions:
+  - offgcd
+  - hasaura{n=skill_used} false
+  Skills:
+  - CancelEvent
+  - skill{s=dracula_dash;cd=1}
+
+dracula_dash:
+  Skills:
+  - gcd{ticks=30}
+  - aura{auraname=skill_used;d=200} @self
+  - look{headOnly=false;force=true}
+  - state{state=dash;li=1;n=false;speed=1} @self
+  - sound{s=entity.zoglin.attack;p=0.8;v=0.6} @self
+  - command{c="bossability dracula dash"} @self
+  - delay 20
+  - sound{s=entity.firework_rocket.launch;p=1;v=3} @self
+
+
+dracula_elevate_parse:
+  Conditions:
+  - offgcd
+  - hasaura{n=skill_used} false
+  Skills:
+  - CancelEvent
+  - skill{s=dracula_elevate;cd=1}
+
+dracula_elevate:
+  Skills:
+  - gcd{ticks=30}
+  - aura{auraname=skill_used;d=160} @self
+  - state{state=elevate;li=1;n=false;speed=1} @self
+  - setspeed{speed=0.3;type=walking} @self
+  - sound{s=entity.zoglin.attack;p=0.8;v=0.6} @self
+  - delay 16
+  - sound{s=entity.firework_rocket.launch;p=1;v=3} @self
+  - potion{type=LEVITATION;duration=12;level=10;hasParticles=false} @self
+  - delay 15
+  - setgravity{g=false} @self
+  - delay 10
+  - skill{s=knife_throw_a}
+  - delay 5
+  - skill{s=knife_throw_a}
+  - delay 5
+  - skill{s=knife_throw_a}
+  - delay 5
+  - skill{s=knife_throw_a}
+  - delay 5
+  - skill{s=knife_throw_a}
+  - delay 5
+  - skill{s=knife_throw_a}
+  - delay 20
+  - setgravity{g=true} @self
+  - setspeed{speed=1;type=walking} @self
+
+
+dracula_bat_swarm_parse:
+  Conditions:
+  - offgcd
+  - hasaura{n=skill_used} false
+  Skills:
+  - CancelEvent
+  - skill{s=dracula_bat_swarm;cd=1}
+
+dracula_bat_swarm:
+  Skills:
+  - gcd{ticks=30}
+  - aura{auraname=skill_used;d=250} @self
+  - state{state=bat_swarm;li=1;n=false;speed=1} @self
+  - command{c="bossability dracula bat_swarm"} @self
+  - sound{s=entity.zoglin.attack;p=0.8;v=0.6} @self
+  - delay 20
+  - potion{type=INVISIBILITY;duration=200;level=2;hasParticles=false} @self
+  - delay 1
+  - model{m=vampire;r=true} @self
+  - delay 10
+  - setspeed{speed=5;type=walking} @self
+  - delay 190
+  - setspeed{speed=1;type=walking} @self
+  - model{mid=vampire;n=name;step=1} @self
+
+
+
+dracula_knife_throw_parse:
+  Conditions:
+  - offgcd
+  - hasaura{n=skill_used} false
+  Skills:
+  - CancelEvent
+  - skill{s=dracula_knife_throw}
+
+dracula_knife_throw:
+  Skills:
+  - gcd{ticks=100}
+  - aura{auraname=skill_used;d=120} @self
+  - look{headOnly=false;immediately=true} @target
+  - sound{s=entity.zoglin.attack;p=0.8;v=0.6} @self
+  - setspeed{speed=0.3;type=walking} @self
+  - skill{s=knife_throw_a}
+  - delay 5
+  - skill{s=knife_throw_a}
+  - delay 5
+  - skill{s=knife_throw_a}
+  - delay 5
+  - skill{s=knife_throw_a}
+  - delay 5
+  - skill{s=knife_throw_a}
+  - delay 5
+  - skill{s=knife_throw_a}
+  - delay 20
+  - setspeed{speed=1;type=walking} @self
+
+knife_throw:
+  Skills:
+  - projectile{bulletType=DISPLAY;bulletMaterial=IRON_SWORD;onHit=knife_throw-hit;v=10;i=1;hR=1;vR=1;hnp=true;StartYOffset=3;pitch=2.2;yaw=1.57}
+  - sound{s=entity.evoker_fangs.attack;p=2;v=3} @self
+knife_throw-hit:
+  Skills:
+  - damage{a=18}
+
+knife_throw_a:
+  Skills:
+  - state{state=knife_throw;li=1;n=false;speed=1} @self
+  - projectile{bulletType=DISPLAY;bulletMaterial=IRON_SWORD;onTick=knife_throw-tick;onHit=knife_throw-hit;v=10;i=1;hR=1;vR=1;hnp=true;StartYOffset=3;pitch=2.2;yaw=1.57}
+  - sound{s=entity.evoker_fangs.attack;p=2;v=3} @self
+
+
+
+
+### Teleport Chase Players
+
+dracula_teleport:
+  Conditions:
+#  - targets{} true
+  - TargetNotInLineOfSight true
+#  - playerswithin{d=50} true
+  - targetnotwithin{d=15} true
+  Skills:
+  - delay 20
+  - sound{s=entity.enderman.teleport;p=2;v=3} @self
+  - teleportto{location=-66,0,-1089} @self
+
+dracula_chase:
+  Conditions:
+  - targetnotwithin{d=20} true
+  Skills:
+  - setspeed{speed=2;type=walking} @self
+  - delay 20
+  - setspeed{speed=1;type=walking} @self
+
+
+
+
+
+### Hurt Events
+
+dracula_hurt_parse:
+  Conditions:
+  - onground{} true cancel
+  Skills:
+  - randomskill{s=dracula_hurt_1,dracula_hurt_2;sync=true}
+
+dracula_hurt_1:
+  Skills:
+  - state{state=hurt;li=1;n=false;speed=1} @self
+
+dracula_hurt_2:
+  Skills:
+  - state{state=hurt_2;li=1;n=false;speed=1} @self

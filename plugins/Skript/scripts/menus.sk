@@ -1,0 +1,376 @@
+
+
+
+
+function OpenArtifactWorkshopMenu(player: player):
+	set metadata value "artifact_worshop_menu" of {_player} to chest inventory with 4 rows named "&f"
+
+	set slot 11 of metadata value "artifact_worshop_menu" of {_player} to {accessories::%uuid of {_player}%::items::1}
+
+	loop 8 times:
+		set slot 0 + loop-number of metadata value "artifact_worshop_menu" of {_player} to stick with custom model data 100 named " "
+	set slot 9 of metadata value "artifact_worshop_menu" of {_player} to stick with custom model data 100 named " "
+	set slot 10 of metadata value "artifact_worshop_menu" of {_player} to stick with custom model data 100 named " "
+	set slot 10 of metadata value "artifact_worshop_menu" of {_player} to stick with custom model data 100 named " "
+	
+
+	set slot 22 of metadata value "artifact_worshop_menu" of {_player} to stick with custom model data 3 named "&6Identify Item!"
+
+
+	open (metadata value "artifact_worshop_menu" of {_player}) to {_player}
+
+
+
+
+
+
+
+
+function OpenAccessoriesMenu(player: player):
+	play sound "item.armor.equip_diamond" with volume 0.8 and pitch 1.5 to {_player}
+	set metadata value "accessories_menu" of {_player} to chest inventory with 3 rows named "&f"
+	set slot 0 of metadata value "accessories_menu" of {_player} to stick with custom model data 1 named "&c← Previous Menu"
+
+	set slot 11 of metadata value "accessories_menu" of {_player} to {accessories::%uuid of {_player}%::items::1}
+	set slot 15 of metadata value "accessories_menu" of {_player} to {accessories::%uuid of {_player}%::items::2}
+	set slot 21 of metadata value "accessories_menu" of {_player} to {accessories::%uuid of {_player}%::items::3}
+	set slot 23 of metadata value "accessories_menu" of {_player} to {accessories::%uuid of {_player}%::items::4}
+
+	loop 8 times:
+		set slot 0 + loop-number of metadata value "accessories_menu" of {_player} to stick with custom model data 100 named " "
+	set slot 9 of metadata value "accessories_menu" of {_player} to stick with custom model data 100 named " "
+	set slot 10 of metadata value "accessories_menu" of {_player} to stick with custom model data 100 named " "
+	loop 3 times:
+		set slot 11 + loop-number of metadata value "accessories_menu" of {_player} to stick with custom model data 100 named " "
+	set slot 16 of metadata value "accessories_menu" of {_player} to stick with custom model data 100 named " "
+	set slot 17 of metadata value "accessories_menu" of {_player} to stick with custom model data 100 named " "
+	loop 3 times:
+		set slot 17 + loop-number of metadata value "accessories_menu" of {_player} to stick with custom model data 100 named " "
+	set slot 22 of metadata value "accessories_menu" of {_player} to stick with custom model data 100 named " "
+	loop 3 times:
+		set slot 23 + loop-number of metadata value "accessories_menu" of {_player} to stick with custom model data 100 named " "
+
+	set {_stats_item} to stick with custom model data 100 named "<##31ed96>Your Stats"
+	set line 2 of lore of {_stats_item} to "<##b12222>  Strength &f%placeholder "aureliumskills_strength_int" from {_player}%"
+	set line 3 of lore of {_stats_item} to "<##df5252>❤ Health &f%placeholder "aureliumskills_health_int" from {_player}%"
+	set line 4 of lore of {_stats_item} to "<##f2601c>  Regeneration &f%placeholder "aureliumskills_regeneration_int" from {_player}%"
+	set line 5 of lore of {_stats_item} to "<##4cb61b> Luck &f%placeholder "aureliumskills_luck_int" from {_player}%"
+	set line 6 of lore of {_stats_item} to "<##6586e8> Wisdom &f%placeholder "aureliumskills_wisdom_int" from {_player}%"
+	set line 7 of lore of {_stats_item} to "<##58d09c>  Toughness &f%placeholder "aureliumskills_toughness_int" from {_player}%"
+	set line 8 of lore of {_stats_item} to "&f Speed &f%placeholder "aureliumskills_speed_int" from {_player}%"
+	set slot 3 of metadata value "accessories_menu" of {_player} to {_stats_item}
+	set slot 4 of metadata value "accessories_menu" of {_player} to {_stats_item}
+	set slot 5 of metadata value "accessories_menu" of {_player} to {_stats_item}
+	set slot 13 of metadata value "accessories_menu" of {_player} to {_stats_item}
+
+	set {_about} to stick with custom model data 11 named "<##31ed96>About Gear"
+	set line 2 of lore of {_about} to "&7You can equip yourself with"
+	set line 3 of lore of {_about} to "&7up to <##8f64de>4 ᴀᴄᴄᴇssᴏʀʏ <##8f64de>ɪᴛᴇᴍs"
+	set line 4 of lore of {_about} to "&7to become more powerful."
+	set line 6 of lore of {_about} to "&7Accessory items can be dropped from"
+	set line 7 of lore of {_about} to "&7monsters in the &2Overworld &7and <##f74154>Dungeons."
+	set line 8 of lore of {_about} to "&7You can also craft and upgrade"
+	set line 9 of lore of {_about} to "&7accessories in &6The Forge."
+	set slot 8 of metadata value "accessories_menu" of {_player} to {_about}
+
+
+
+	open (metadata value "accessories_menu" of {_player}) to {_player}
+
+
+
+
+
+
+function OpenAncientTravelerMenu(player: player):
+	play sound "item.entity.wandering_trader.appear" with volume 1 and pitch 1 to {_player}
+	set metadata value "ancient_traveler_menu" of {_player} to chest inventory with 3 rows named "&f"
+	set slot 0 of metadata value "ancient_traveler_menu" of {_player} to stick with custom model data 1 named "&c← Previous Menu"
+
+	set slot 11 of metadata value "ancient_traveler_menu" of {_player} to {accessories::%uuid of {_player}%::items::1}
+	set slot 15 of metadata value "ancient_traveler_menu" of {_player} to {accessories::%uuid of {_player}%::items::2}
+	set slot 21 of metadata value "ancient_traveler_menu" of {_player} to {accessories::%uuid of {_player}%::items::3}
+	set slot 23 of metadata value "ancient_traveler_menu" of {_player} to {accessories::%uuid of {_player}%::items::4}
+
+	loop 8 times:
+		set slot 0 + loop-number of metadata value "ancient_traveler_menu" of {_player} to stick with custom model data 100 named " "
+	set slot 9 of metadata value "ancient_traveler_menu" of {_player} to stick with custom model data 100 named " "
+	set slot 10 of metadata value "ancient_traveler_menu" of {_player} to stick with custom model data 100 named " "
+	loop 3 times:
+		set slot 11 + loop-number of metadata value "ancient_traveler_menu" of {_player} to stick with custom model data 100 named " "
+	set slot 16 of metadata value "ancient_traveler_menu" of {_player} to stick with custom model data 100 named " "
+	set slot 17 of metadata value "ancient_traveler_menu" of {_player} to stick with custom model data 100 named " "
+	loop 3 times:
+		set slot 17 + loop-number of metadata value "ancient_traveler_menu" of {_player} to stick with custom model data 100 named " "
+	set slot 22 of metadata value "ancient_traveler_menu" of {_player} to stick with custom model data 100 named " "
+	loop 3 times:
+		set slot 23 + loop-number of metadata value "ancient_traveler_menu" of {_player} to stick with custom model data 100 named " "
+
+
+	open (metadata value "ancient_traveler_menu" of {_player}) to {_player}
+
+
+command /getitems:
+	aliases: getitem, itemslist
+	trigger:
+		OpenCustomItemsMenu(player, 1)
+
+function OpenCustomItemsMenu(player: player, page: integer = 1):
+	if {server::test_server} is not true:
+		if {_player} doesn't have permission "admin":
+			stop
+
+	set metadata value "custom_items_menu" of {_player} to chest inventory with 6 rows named "&f"
+	set metadata value "custom_items_menu_page" of {_player} to {_page}
+
+	set {_all_items::*} to {item::*}
+	loop {_all_items::*}:
+		set {_id} to GetCustomItemId(loop-value)
+		if {forge::item::%{_id}%::item} is any sword or any tool or any armor or crossbow or bow:
+			add loop-value to {_menu_items::*}
+			remove loop-value from {_all_items::*}
+	loop {_all_items::*}:
+		set {_id} to GetCustomItemId(loop-value)
+		if {forge::accessories_list::*} contains {_id}:
+			add loop-value to {_menu_items::*}
+			remove loop-value from {_all_items::*}
+	add {_all_items::*} to {_menu_items::*}
+
+
+	set {_slot_nr} to -1
+	loop {_menu_items::*}:
+		add 1 to {_nr}
+		if {_page} is not 1:
+			if {_nr} < 44*({_page}-1)+1:
+				continue
+
+		add 1 to {_slot_nr}
+		set {_item} to loop-index
+
+		if {forge::item::%{_item}%::item_id} is set:
+			if {forge::item::%{_item}%::item_id} is "catching_net":
+				set slot {_slot_nr} of metadata value "custom_items_menu" of {_player} to GenerateCatchingNet()
+			if {forge::item::%{_item}%::rows} is set:
+				set slot {_slot_nr} of metadata value "custom_items_menu" of {_player} to GenerateBackpack({_item})
+		else:
+			set slot {_slot_nr} of metadata value "custom_items_menu" of {_player} to loop-value
+		if {_slot_nr} is 44:
+			exit loop
+
+	if metadata value "custom_items_menu_page" of {_player} > 1:
+		set slot 45 of metadata value "custom_items_menu" of {_player} to stick with custom model data 1 named "&c← Previous Page"
+	if metadata value "custom_items_menu_page" of {_player} < size of {item::*} / 45:
+		set slot 53 of metadata value "custom_items_menu" of {_player} to stick with custom model data 2 named "&aNext Page →"
+
+	if {_player}'s current inventory is not (metadata value "custom_items_menu" of {_player}):
+		open (metadata value "custom_items_menu" of {_player}) to {_player}
+
+
+
+
+
+on inventory click:
+
+
+	#	Artifacts Workshop Menu
+
+
+	if player's current inventory is (metadata value "artifact_worshop_menu" of player):
+		if name of event-slot is "&6Identify Item!":
+			cancel event
+			loop 20 times:
+				draw 10 end rod at location of player's target block with offset vector(0, 0, 0) with extra 0.5
+				apply slowness of tier 20-loop-number without any particles to player for 0.2 second
+				wait 1 tick
+			set slot 11 of player's current inventory to air
+			set slot 15 of player's current inventory to {item::rocket_boots}
+
+
+
+
+
+	#	Custom Items Menu
+
+	if player's current inventory is (metadata value "custom_items_menu" of player):
+		if name of event-slot is "&aNext Page →":
+			cancel event
+			if metadata value "custom_items_menu_page" of player < size of {item::*} / 45:
+				set metadata value "custom_items_menu_page" of player to metadata value "custom_items_menu_page" of player + 1
+				OpenCustomItemsMenu(player, metadata value "custom_items_menu_page" of player)
+				play sound "ui.button.click" with volume 0.5 and pitch 1.5 to player
+		if name of event-slot is "&c← Previous Page":
+			cancel event
+			if metadata value "custom_items_menu_page" of player > 1:
+				set metadata value "custom_items_menu_page" of player to metadata value "custom_items_menu_page" of player - 1
+				OpenCustomItemsMenu(player, metadata value "custom_items_menu_page" of player)
+				play sound "ui.button.click" with volume 0.5 and pitch 1.2 to player
+
+
+	#	Backpack Menu
+
+	if player's current inventory is (metadata value "backpack_inventory" of player):
+
+
+		#	Prevent player from losing his backpack
+#		loop all items in player's current inventory:
+#			if loop-item is a stick:
+#				loop {forge::backpacks_list::*}:
+#					if custom model data of loop-item-1 is {forge::item::%loop-value-2%::custom_model_data}:
+#						set {_item} to loop-item-1
+#						remove loop-item-1 from player's current inventory
+	#					give {_item} to player
+
+		#	Prevent player from misplacing backpack (anti-dupe)
+		if inventory action is swap with hotbar:
+			cancel event
+			stop
+		if IsBackpack(player's tool) is true:
+			set {_pass} to true
+		if {_pass} is not true:
+			close the inventory of player
+			stop
+
+		#	Save inventory every click
+		if player's tool is a stick:
+			set {_n} to nbt of player's tool
+			loop all items in player's current inventory:
+				set {_index} to index of loop-slot
+				set {_item} to full nbt of loop-item
+				set {_items::%{_index}%} to nbt from "{slot:%{_index}%b,item:%{_item}%}"
+			set compound list tag "minecraft:custom_data;items" of {_n} to {_items::*}
+
+
+		#	Prevent player from touching backpacks while in backpack menu (anti-dupe)
+		if IsBackpack(event-item) is true:
+#			if inventory action is instant move:
+			cancel event
+			stop
+
+
+		
+		wait 1 tick
+
+		#	If player doesn't have backpack in hand, close menu
+		if IsBackpack(player's tool) is not true:
+			close the inventory of player
+			stop
+
+		#	If there is a backpack inside of a backpack, remove it and move it back to player's inventory
+		loop all items in player's current inventory:
+			if IsBackpack(loop-item) is true:
+				set {_bp_item} to loop-item-1
+				remove loop-item-1 from player's current inventory
+				give {_bp_item} to player
+				exit loop
+		#	I forgot what it does >_<
+		if {_bp_item} is set:
+			if player's tool is not a stick:
+				loop {forge::backpacks_list::*}:
+					if custom model data of player's tool is not {forge::item::%loop-value-2%::custom_model_data}:
+						remove player's tool from player
+
+
+	#	Accessories Menu
+
+	if player's current inventory is (metadata value "accessories_menu" of player):
+		if event-slot is stick:
+			if name of event-slot is " " or "<##31ed96>Your Stats" or "<##31ed96>About Gear":
+				cancel event
+		if name of event-slot is "&c← Previous Menu":
+			cancel event
+			close the player's inventory
+			execute player command "cp main_menu"
+
+		wait 2 tick
+		if player's current inventory is (metadata value "accessories_menu" of player):
+			set {_slot_nr::*} to 11 and 15 and 21 and 23
+
+			#	Remove non-accessories from accessory slots
+			loop 4 times:
+				if slot {_slot_nr::%loop-number%} of player's current inventory is not air:
+					set {_item::%loop-number%} to item in slot {_slot_nr::%loop-number%} of player's current inventory#	Items need to be saved to variable to be able to safely give them back to the player
+
+				if GetAccessory({_item::%loop-number%}) is not set:
+					if player has space for {_item::%loop-number%}:
+						give {_item::%loop-number%} to player
+					else:
+						drop {_item::%loop-number%} at player
+					set slot {_slot_nr::%loop-number%} of player's current inventory to air
+
+	#	Ancient Traveler Menu
+
+#	if player's current inventory is (metadata value "ancient_traveler_menu" of player):
+#		if event-slot is stick:
+#			if name of event-slot is " " or "<##31ed96>Your Stats" or "<##31ed96>About Gear":
+#				cancel event
+
+#		wait 2 tick
+#		if player's current inventory is (metadata value "ancient_traveler_menu" of player):
+
+
+#		set slot 23 of player's current inventory to air
+
+
+
+
+
+
+
+
+
+
+#
+#		Backpacks
+#
+
+
+
+on right click holding stick:
+	if IsBackpack(player's tool) is true:
+		cancel event
+		BackpackOpen(player, GetCustomItemId(player's tool))
+
+
+function BackpackOpen(player: player, backpack: string):
+	if {_player}'s tool is not stick:
+		stop
+
+	set metadata value "backpack_inventory" of {_player} to chest inventory with {forge::item::%{_backpack}%::rows} rows named {forge::item::%{_backpack}%::name}
+
+	set metadata value "backpack_item" of {_player} to {_player}'s tool
+	set {_n} to nbt of {_player}'s tool
+	set {_bp_items::*} to compound list tag "minecraft:custom_data;items" of {_n}
+
+
+	loop {_bp_items::*}:
+		set {_value} to loop-value
+		set {_slot} to byte tag "slot" of {_value}
+		set {_item} to compound tag "item" of {_value}
+		set {_item} to item from nbt {_item}
+		set slot {_slot} of metadata value "backpack_inventory" of {_player} to {_item}
+
+	open (metadata value "backpack_inventory" of {_player}) to {_player}
+
+	loop all items in {_player}'s current inventory:
+		if IsBackpack(loop-item) is true:
+			set {_item} to loop-item-1
+			remove loop-item-1 from {_player}'s current inventory
+			give {_item} to {_player}
+
+on inventory close:
+	set {_player} to player
+
+	if event-inventory is (metadata value "backpack_inventory" of {_player}):
+		set {_n} to nbt of {_player}'s tool #metadata value "backpack_item" of {_player}
+		loop all items in {_player}'s current inventory:
+			set {_index} to index of loop-slot
+			set {_item} to full nbt of loop-item
+			set {_items::%{_index}%} to nbt from "{slot:%{_index}%b,item:%{_item}%}"
+		set compound list tag "minecraft:custom_data;items" of {_n} to {_items::*}
+
+	if event-inventory is (metadata value "accessories_menu" of {_player}):
+		set {accessories::%uuid of {_player}%::items::1} to slot 11 of {_player}'s current inventory
+		set {accessories::%uuid of {_player}%::items::2} to slot 15 of {_player}'s current inventory
+		set {accessories::%uuid of {_player}%::items::3} to slot 21 of {_player}'s current inventory
+		set {accessories::%uuid of {_player}%::items::4} to slot 23 of {_player}'s current inventory
+

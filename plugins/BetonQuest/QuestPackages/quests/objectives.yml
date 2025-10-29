@@ -1,0 +1,31 @@
+objectives:
+  quest_1: block BEDROCK -1
+  quest_2: block STONE -100 events:finish_quest_2
+  quest_3: craft iron_sword 1 events:finish_quest_3
+  quest_4: craft bread 1 events:finish_quest_4
+  quest_5: craft bow 1 events:finish_quest_5
+  quest_6: fish cod 5 events:finish_quest_6
+  quest_7: mobkill CREEPER 10 events:finish_quest_7
+  quest_8: craft note_block 1 events:finish_quest_8
+  quest_9: craft cake 1 events:finish_quest_9
+  quest_10: consume golden_apple events:finish_quest_10
+  quest_11: block .*DIAMOND_ORE -1 events:finish_quest_11
+  quest_12: craft ender_chest 1 events:finish_quest_12
+  quest_13: craft pumpkin_pie 1 events:finish_quest_13
+  quest_14: mobkill ZOMBIE 40 events:finish_quest_14
+  quest_15: brew speed_potion 1 events:finish_quest_15
+  quest_16: block .*EMERALD_ORE -1 events:finish_quest_16
+  quest_17: block CARROTS[age=7] -25 events:finish_quest_17
+  quest_18: mobkill ENDERMAN 8 events:finish_quest_18
+  quest_19: mobkill WITHER_SKELETON 10 events:finish_quest_19
+  quest_20: experience 30 level events:finish_quest_20
+  quest_21: block NETHER_QUARTZ_ORE -40 events:finish_quest_21
+  quest_22: craft diamond_block 1 events:finish_quest_22
+  quest_23: enchant diamond_helmet PROTECTION_ENVIRONMENTAL:4 events:finish_quest_23
+  quest_24: kill 5 events:finish_quest_24
+  quest_25: smelt IRON_INGOT 100 events:finish_quest_25
+  quest_26: brew strength_potion_2 3 events:finish_quest_26
+  quest_27: craft coal_block 64 events:finish_quest_27
+  quest_28: mobkill WITHER 1 events:finish_quest_28
+  quest_29: block OBSIDIAN -50 events:finish_quest_29
+  quest_30: mobkill ENDER_DRAGON 1 events:finish_quest_30

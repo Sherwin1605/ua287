@@ -1,0 +1,62 @@
+# #################################################################
+# ┌─────────────────────────────────────────────────────────────┐ #
+# │                         Discord hook                        │ #
+# └─────────────────────────────────────────────────────────────┘ #
+# #################################################################
+
+discord:
+  # Enable/disable
+  enabled: false
+  # https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks
+  # (Change the link)
+  webhook: "https://discord.com/api/webhooks/..."
+  # Player join
+  join:
+    # Enable/disable this function
+    enabled: false
+    # Embed title
+    title: "User join"
+    # Embed description
+    description: "%player% has joined the server!"
+    # Decimal format (NO SUPPORT WITH HEX)
+    # https://www.colorhexa.com/
+    # (The decimal number is shown just below the Color Conversion section)
+    color: 2090501
+    # Enable/disable embed avatar
+    avatar-enabled: true
+  quit:
+    enabled: false
+    title: "User left"
+    description: "%player% has left the server!"
+    # https://www.colorhexa.com/
+    color: 15074565
+    avatar-enabled: true
+  death:
+    enabled: false
+    title: "User death"
+    description: "%player% has died"
+    # https://www.colorhexa.com/
+    color: 0
+    avatar-enabled: true
+  banned-words:
+    # For disable and change webhook, check the banned_words.yml
+    title: "Banned Word Detected!"
+    description: "Player %player% used a banned word: %word%\nMessage: \"%message%\""
+    # https://www.colorhexa.com/
+    color: 15158332
+    avatar-enabled: true
+  mute:
+    enabled: false
+    webhook: "https://discord.com/api/webhooks/..."
+    title: "Player muted!"
+    description: "Player %player% has muted by %admin%"
+    # https://www.colorhexa.com/
+    color: 15158332
+    avatar-enabled: true
+  banned-commands:
+    # For disable and change webhook, check the banned_commands.yml
+    title: "Banned Command Detected!"
+    description: "Player %player% used a banned command: %word%\nMessage: \"%message%\""
+    # https://www.colorhexa.com/
+    color: 15158332
+    avatar-enabled: true

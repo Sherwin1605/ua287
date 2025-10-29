@@ -1,0 +1,3 @@
+conditions:
+  # first_quest: point valiant.finishedQuests 1 equal
+  first_quest: objective quest_1

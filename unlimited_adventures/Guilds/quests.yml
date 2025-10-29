@@ -1,0 +1,97 @@
+# Please DO NOT change version number!
+version: 1
+
+# 
+# Feel free to set up your own Quest Info for the Reputation system. Remember to follow the formatting.
+# In case of any issues, feel free to contact us on the Valiant Studio Discord server.
+# 
+slayers:
+    easy:
+        '1': Kill 10 Zombies
+        '2': Kill 10 Skeletons
+        '3': Kill 8 Spiders
+        '4': Kill 6 Creepers
+        '5': Kill a Player
+        '6': Kill an Enderman
+        '7': Kill 2 Husks
+        '8': Kill 2 Strays
+        '9': Kill a Phantom
+        '10': Kill 2 Piglins
+        '11': Kill 2 Drowneds
+    medium:
+        '1': Kill 3 Endermen
+        '2': Kill 6 Piglins
+        '3': Kill 4 Wither Skeletons
+        '4': Kill 6 Blazes
+        '5': Kill a Witch
+        '6': Kill 5 Drowneds
+        '7': Kill 8 Husks
+        '8': Kill 6 Strays
+        '9': Kill 5 Phantoms
+        '10': Kill 4 Pillagers
+        '11': Kill 2 Silverfishes
+    hard:
+        '1': Kill 2 Slimes
+        '2': Kill 3 Ghasts
+        '3': Kill 2 Shulkers
+        '4': Kill a Ravager
+        '5': Kill a Guardian
+        '6': Kill 3 Piglin Brutes
+        '7': Kill 5 Players
+
+miners:
+    easy:
+        '1': Mine 15 Copper Ores
+        '2': Mine 15 Iron Ores
+        '3': Mine 10 Gold Ores
+        '4': Mine 25 Coal Ores
+        '5': Mine 30 Redstone Ores
+        '6': Smelt 25 Iron Ingots
+        '7': Smelt 20 Copper Ingots
+        '8': Smelt 15 Gold Ingots
+        '9': Mine 3 Lapis Ores
+        '10': Mine 250 Stone
+    medium:
+        '1': Mine 4 Emerald Ores
+        '2': Mine 12 Lapis Ores
+        '3': Mine 15 Glowstone
+        '4': Smelt 40 Iron Ingots
+        '5': Smelt 40 Gold Ingots
+        '6': Craft a Diamond Pickaxe
+        '7': Mine 30 Gold Ores
+    hard:
+        '1': Mine 5 Diamond Ores
+        '2': Mine an Ancient Debris
+        '3': Mine an Amethyst Cluster
+        '4': Mine 8 Obsidian
+
+ranchers:
+    easy:
+        '1': Harvest 12 Wheat Crops
+        '2': Harvest 10 Carrot Crops
+        '3': Harvest 10 Potato Crops
+        '4': Craft 4 Breads
+        '5': Craft a Golden Carrot
+        '6': Cook 5 Potatoes
+        '7': Collect 8 Cactuses
+        '8': Collect 5 Sugar Canes
+    medium:
+        '1': Harvest 5 Melons
+        '2': Harvest 5 Pumpkins
+        '3': Harvest 10 Beetroot Crops
+        '4': Harvest 10 Kelp Crops
+        '5': Breed Pigs
+        '6': Breed Cows
+        '7': Breed Chickens
+        '8': Breed Sheeps
+        '9': Craft 5 Hay Bales
+        '10': Fish 5 Cods
+        '11': Fish 4 Salmons
+        '12': Shear 3 Sheeps
+    hard:
+        '1': Tame a Wolf
+        '2': Fish 3 Pufferfishes
+        '3': Collect a Bee Nest
+        '4': Harvest 64 Carrots
+        '5': Harvest 64 Beetroots
+        '6': Harvest 64 Potatoes

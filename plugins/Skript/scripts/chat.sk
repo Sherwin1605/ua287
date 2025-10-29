@@ -1,0 +1,44 @@
+on load:
+	load yaml "unlimited_adventures/AdventureCore/interface.yml" as "interface"
+	if yaml value "play_chat_message" of "interface" is not set:
+		set yaml value "play_chat_message" of "interface" to true
+	
+	set {interface::play_chat_message} to yaml value "play_chat_message" of "interface"
+
+	save yaml "interface"
+
+
+
+on join:
+	set {_prefix} to placeholder "luckperms_prefix" from player
+	set join message to colored "%{_prefix}% %player% &ehas joined the adventure!"
+
+on quit:
+	set {_prefix} to placeholder "luckperms_prefix" from player
+	set quit message to colored "%{_prefix}% %player% &ehas left the world."
+
+on chat:
+	set {_prefix} to placeholder "luckperms_prefix" from player
+	set {_suffix} to placeholder "luckperms_suffix" from player
+	set chat format to colored "%{_prefix}% %player%%{_suffix}% %message%"
+	if {interface::play_chat_message} is true:
+		ChatSound()
+
+on death:
+	set death message to "&f☠ &c%death message%"
+
+
+
+
+command /clearchat:
+	aliases: cleanchat, cc
+	permission: admin.clearchat
+	trigger:
+		loop 100 times:
+			send " " to all players
+		send "&eChat has been cleared by &a%sender%" to all players
+		loop 4 times:
+			send " " to all players
+#		play sound "minecraft:item.spyglass.use" with volume 1 and pitch 2 to sender
+		play sound "minecraft:block.composter.ready" with volume 1 and pitch 2 to sender
+

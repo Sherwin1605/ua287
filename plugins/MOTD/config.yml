@@ -1,0 +1,50 @@
+# Plugin by NZXTER
+#
+# You need ProtocolLib: https://www.spigotmc.org/resources/protocollib.1997/
+#
+# To use gradients in your messages, write: <color>your text<color>
+# Supported colors: green, dark_green, red, dark_red, blue, dark_blue, aqua, dark_aqua, purple, dark_purple,
+# yellow, gold, white, gray, dark_gray, orange, black, pink, lime, cyan
+#
+#-----------------------------------------------------------------------------------------
+prefix: '&8[<green>MOTD<green>&8] &7'
+#-----------------------------------------------------------------------------------------
+maxplayer: 20
+fakeplayer: false
+maintenance: false
+#-----------------------------------------------------------------------------------------
+favicon:
+  normal: server-icon.png
+  maintenance: wartung-icon.png
+#-----------------------------------------------------------------------------------------
+motd:
+  normal:
+    top:
+    - '&6            &lLeaked Server &8- &8[&e1.8.x - 1.2X&8]'
+    bottom:
+    - '&7                 <red>#1 Best Leaked Server<red>'
+  maintenance:
+    top: '&6            &lLeaked Server &f- &8[&e1.8.x - 1.2X&8]'
+    bottom: '           We are currently performing maintenance'
+#-----------------------------------------------------------------------------------------
+versionname:
+  left:
+  - 'Server Leaked by NZXTER'
+  right:
+    normal: '%teamplayers% / %players% / %maxplayers%'
+    maintenance: 'Maintenance'
+  hover:
+  - 'https://discord.gg/54BZDxCFr6'
+#-----------------------------------------------------------------------------------------
+messages:
+  maintenance:
+    kick:
+    - '%prefix%'
+    - ''
+    - 'The server is currently under maintenance.'
+    - 'Please try again later.'
+  fullserver:
+  - '%prefix%'
+  - ''
+  - 'The server is currently full.'
+  - 'Please try again later.'

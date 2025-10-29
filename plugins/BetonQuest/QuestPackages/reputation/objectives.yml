@@ -1,0 +1,93 @@
+objectives:
+  slayers_easy_1: mobkill ZOMBIE 10 events:finish_slayers_easy
+  slayers_easy_2: mobkill SKELETON 10 events:finish_slayers_easy
+  slayers_easy_3: mobkill SPIDER 8 events:finish_slayers_easy
+  slayers_easy_4: mobkill CREEPER 6 events:finish_slayers_easy
+  slayers_easy_5: kill 1 events:finish_slayers_easy
+  slayers_easy_6: mobkill ENDERMAN 1 events:finish_slayers_easy
+  slayers_easy_7: mobkill HUSK 2 events:finish_slayers_easy
+  slayers_easy_8: mobkill STRAY 2 events:finish_slayers_easy
+  slayers_easy_9: mobkill PHANTOM 1 events:finish_slayers_easy
+  slayers_easy_10: mobkill PIGLIN 2 events:finish_slayers_easy
+  slayers_easy_11: mobkill DROWNED 2 events:finish_slayers_easy
+  
+  slayers_medium_1: mobkill ENDERMAN 3 events:finish_slayers_medium
+  slayers_medium_2: mobkill PIGLIN 6 events:finish_slayers_medium
+  slayers_medium_3: mobkill WITHER_SKELETON 4 events:finish_slayers_medium
+  slayers_medium_4: mobkill BLAZE 6 events:finish_slayers_medium
+  slayers_medium_5: mobkill WITCH 1 events:finish_slayers_medium
+  slayers_medium_6: mobkill DROWNED 5 events:finish_slayers_medium
+  slayers_medium_7: mobkill HUSK 8 events:finish_slayers_medium
+  slayers_medium_8: mobkill STRAY 6 events:finish_slayers_medium
+  slayers_medium_9: mobkill PHANTOM 5 events:finish_slayers_medium
+  slayers_medium_10: mobkill PILLAGER 4 events:finish_slayers_medium
+  slayers_medium_11: mobkill SILVERFISH 2 events:finish_slayers_medium
+  
+  slayers_hard_1: mobkill SLIME 2 events:finish_slayers_hard
+  slayers_hard_2: mobkill GHAST 3 events:finish_slayers_hard
+  slayers_hard_3: mobkill SHULKER 2 events:finish_slayers_hard
+  slayers_hard_4: mobkill RAVAGER 1 events:finish_slayers_hard
+  slayers_hard_5: mobkill GUARDIAN 1 events:finish_slayers_hard
+  slayers_hard_6: mobkill PIGLIN_BRUTE 3 events:finish_slayers_hard
+  slayers_hard_7: kill 5 events:finish_slayers_hard
+  
+  
+  
+  
+  
+  miners_easy_1: block .*COPPER_ORE -15 events:finish_miners_easy
+  miners_easy_2: block .*IRON_ORE -15 events:finish_miners_easy
+  miners_easy_3: block .*GOLD_ORE -10 events:finish_miners_easy
+  miners_easy_4: block .*COAL_ORE -25 events:finish_miners_easy
+  miners_easy_5: block .*REDSTONE_ORE -30 events:finish_miners_easy
+  miners_easy_6: smelt IRON_INGOT 25 events:finish_miners_easy
+  miners_easy_7: smelt COPPER_INGOT 20 events:finish_miners_easy
+  miners_easy_8: smelt GOLD_INGOT 15 events:finish_miners_easy
+  miners_easy_9: block .*LAPIS_ORE -3 events:finish_miners_easy
+  miners_easy_10: block STONE -250 events:finish_miners_easy
+  
+  miners_medium_1: block .*EMERALD_ORE -4 events:finish_miners_medium
+  miners_medium_2: block .*LAPIS_ORE -12 events:finish_miners_medium
+  miners_medium_3: block GLOWSTONE -15 events:finish_miners_medium
+  miners_medium_4: smelt IRON_INGOT 40 events:finish_miners_medium
+  miners_medium_5: smelt GOLD_INGOT 40 events:finish_miners_medium
+  miners_medium_6: craft diamond_pickaxe 1 events:finish_miners_medium
+  miners_medium_7: block .*GOLD_ORE -30 events:finish_miners_medium
+  
+  miners_hard_1: block .*_DIAMOND_ORE -5 events:finish_miners_hard
+  miners_hard_2: block ANCIENT_DEBRIS -1 events:finish_miners_hard
+  miners_hard_3: block AMETHYST_CLUSTER -1 events:finish_miners_hard
+  miners_hard_4: block OBSIDIAN -8 events:finish_miners_hard
+  
+  
+  
+  
+  
+  ranchers_easy_1: block WHEAT[age=7] -12 events:finish_ranchers_easy
+  ranchers_easy_2: block CARROT[age=7] -10 events:finish_ranchers_easy
+  ranchers_easy_3: block POTATO[age=7] -10 events:finish_ranchers_easy
+  ranchers_easy_4: craft bread 4 events:finish_ranchers_easy
+  ranchers_easy_5: craft golden_carrot 1 events:finish_ranchers_easy
+  ranchers_easy_6: smelt POTATO 5 events:finish_ranchers_easy
+  ranchers_easy_7: block CACTUS -8 events:finish_ranchers_easy
+  ranchers_easy_8: block SUGAR_CANE -5 events:finish_ranchers_easy
+  
+  ranchers_medium_1: block MELON -5 events:finish_ranchers_medium
+  ranchers_medium_2: block PUMPKIN -5 events:finish_ranchers_medium
+  ranchers_medium_3: block BEETROOTS[age=3] -10 events:finish_ranchers_medium
+  ranchers_medium_4: block KELP -10 events:finish_ranchers_medium
+  ranchers_medium_5: breed PIG 1 events:finish_ranchers_medium
+  ranchers_medium_6: breed COW 1 events:finish_ranchers_medium
+  ranchers_medium_7: breed CHICKEN 1 events:finish_ranchers_medium
+  ranchers_medium_8: breed SHEEP 1 events:finish_ranchers_medium
+  ranchers_medium_9: craft hay_bale 5 events:finish_ranchers_medium
+  ranchers_medium_10: fish COD 5 events:finish_ranchers_medium
+  ranchers_medium_11: fish SALMON 4 events:finish_ranchers_medium
+  ranchers_medium_12: shear 3 events:finish_ranchers_medium
+  
+  ranchers_hard_1: tame WOLF 1 events:finish_ranchers_hard
+  ranchers_hard_2: fish PUFFERFISH 3 events:finish_ranchers_hard
+  ranchers_hard_3: block BEE_NEST -1 events:finish_ranchers_hard
+  ranchers_hard_4: block CARROT -64 events:finish_ranchers_hard
+  ranchers_hard_5: block BEETROOTS[age=3] -64 events:finish_ranchers_hard
+  ranchers_hard_6: block POTATO -64 events:finish_ranchers_hard

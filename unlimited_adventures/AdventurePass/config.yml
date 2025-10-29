@@ -1,0 +1,50 @@
+# Please DO NOT change version number!
+version: 1
+
+# 
+# Here you can configure different Adventure Pass settings. Remember to follow the formatting.
+# In case of any issues, feel free to contact us on the Valiant Studio Discord server.
+# 
+leveling:
+    first_level_xp_requirement: 100
+    next_level_required_xp_multiplier: 1.03
+
+# 
+# This section is responsible for XP rewards from various sources.
+# 
+xp_rewards:
+    daily_quest: 100
+    weekly_quest: 250
+    iron_ore: 1
+    gold_ore: 2
+    diamond_ore: 5
+    emerald_ore: 5
+    zombie: 1
+    skeleton: 1
+    spider: 1
+    magma_cube: 1
+    creeper: 1
+    stray: 1
+    husk: 1
+    zombie_villager: 1
+    enderman: 1
+    vex: 1
+    phantom: 1
+    slime: 1
+    wither_skeleton: 2
+    cave_spider: 2
+    vindicator: 3
+    witch: 3
+    hoglin: 3
+    pillager: 3
+    shulker: 3
+    piglin_brute: 4
+    ghast: 5
+    ravager: 5
+    zoglin: 5
+    warden: 20
+    elder_guardian: 20
+    wither: 30
+    ender_dragon: 50
+    zombie_brute: 30
+    skeleton_king: 30

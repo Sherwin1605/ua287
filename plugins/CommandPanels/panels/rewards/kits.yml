@@ -1,0 +1,747 @@
+panels:
+  kits:
+    perm: default
+    rows: 5
+    title: '&f'
+    commands:
+    - kits
+    - kit
+    - kitsmenu
+    - kitlist
+    - kitslist
+    - playerkits
+    - gkits
+    empty: AIR
+    sound-on-open: BLOCK_NOTE_BLOCK_HAT
+    item:
+
+
+
+      '0':
+        material: STICK
+        customdata: 1
+        name: '&c← Previous Menu'
+        commands:
+        - open= main_menu
+      
+      
+      
+      
+      
+      '19':
+        material: STICK
+        customdata: 100
+        name: '%color_player%⛏ Player'
+        lore:
+        - ' '
+        - '&7Basic set of tools to help you'
+        - '&7get started on your adventure!'
+        - ''
+        - '&7Contents:'
+        - '&7• %color_player%Stone Tools'
+        - '&7• %color_player%2 Steaks'
+        - ' '
+        - '&c❌ &fYou need  rank to access this kit!'
+        has0:
+          value0: '%cp-player-name% HASPERM'
+          compare0: 'essentials.kits.player'
+          material: STICK
+          customdata: 100
+          name: '%color_player%⛏ Player'
+          lore:
+          - ' '
+          - '&7Basic set of tools to help you'
+          - '&7get started on your adventure!'
+          - ''
+          - '&7Contents:'
+          - '&7• %color_player%Stone Tools'
+          - '&7• %color_player%2 Steaks'
+          - ' '
+          - '&f⌚ This kit will become available in:'
+          - '&e%essentials_kit_time_until_available_player%'
+          has1:
+            value0: 'yes'
+            compare0: '%essentials_kit_is_available_player%'
+            material: STICK
+            customdata: 100
+            name: '%color_player%⛏ Player'
+            lore:
+            - ' '
+            - '&7Basic set of tools to help you'
+            - '&7get started on your adventure!'
+            - ''
+            - '&7Contents:'
+            - '&7• %color_player%Stone Tools'
+            - '&7• %color_player%2 Steaks'
+            - ' '
+            - '&a&l✔ Click to claim!'
+            commands:
+            - kit player
+            - sound= ITEM_ARMOR_EQUIP_LEATHER
+            - refresh
+      '20':
+        material: STICK
+        customdata: 100
+        name: '%color_player%⛏ Player'
+        lore:
+        - ' '
+        - '&7Basic set of tools to help you'
+        - '&7get started on your adventure!'
+        - ''
+        - '&7Contents:'
+        - '&7• %color_player%Stone Tools'
+        - '&7• %color_player%2 Steaks'
+        - ' '
+        - '&c❌ &fYou need  rank to access this kit!'
+        has0:
+          value0: '%cp-player-name% HASPERM'
+          compare0: 'essentials.kits.player'
+          material: STICK
+          customdata: 100
+          name: '%color_player%⛏ Player'
+          lore:
+          - ' '
+          - '&7Basic set of tools to help you'
+          - '&7get started on your adventure!'
+          - ''
+          - '&7Contents:'
+          - '&7• %color_player%Stone Tools'
+          - '&7• %color_player%2 Steaks'
+          - ' '
+          - '&f⌚ This kit will become available in:'
+          - '&e%essentials_kit_time_until_available_player%'
+          has1:
+            value0: 'yes'
+            compare0: '%essentials_kit_is_available_player%'
+            material: STICK
+            customdata: 100
+            name: '%color_player%⛏ Player'
+            lore:
+            - ' '
+            - '&7Basic set of tools to help you'
+            - '&7get started on your adventure!'
+            - ''
+            - '&7Contents:'
+            - '&7• %color_player%Stone Tools'
+            - '&7• %color_player%2 Steaks'
+            - ' '
+            - '&a&l✔ Click to claim!'
+            commands:
+            - kit player
+            - sound= ITEM_ARMOR_EQUIP_LEATHER
+            - refresh
+      '21':
+        material: STICK
+        customdata: 100
+        name: '%color_player%⛏ Player'
+        lore:
+        - ' '
+        - '&7Basic set of tools to help you'
+        - '&7get started on your adventure!'
+        - ''
+        - '&7Contents:'
+        - '&7• %color_player%Stone Tools'
+        - '&7• %color_player%2 Steaks'
+        - ' '
+        - '&c❌ &fYou need  rank to access this kit!'
+        has0:
+          value0: '%cp-player-name% HASPERM'
+          compare0: 'essentials.kits.player'
+          material: STICK
+          customdata: 100
+          name: '%color_player%⛏ Player'
+          lore:
+          - ' '
+          - '&7Basic set of tools to help you'
+          - '&7get started on your adventure!'
+          - ''
+          - '&7Contents:'
+          - '&7• %color_player%Stone Tools'
+          - '&7• %color_player%2 Steaks'
+          - ' '
+          - '&f⌚ This kit will become available in:'
+          - '&e%essentials_kit_time_until_available_player%'
+          has1:
+            value0: 'yes'
+            compare0: '%essentials_kit_is_available_player%'
+            material: STICK
+            customdata: 100
+            name: '%color_player%⛏ Player'
+            lore:
+            - ' '
+            - '&7Basic set of tools to help you'
+            - '&7get started on your adventure!'
+            - ''
+            - '&7Contents:'
+            - '&7• %color_player%Stone Tools'
+            - '&7• %color_player%2 Steaks'
+            - ' '
+            - '&a&l✔ Click to claim!'
+            commands:
+            - kit player
+            - sound= ITEM_ARMOR_EQUIP_LEATHER
+            - refresh
+      
+      
+      
+      
+      
+      '23':
+        material: STICK
+        customdata: 100
+        name: '%color_ultra%☆ %color_ultra%&lUltra'
+        lore:
+        - ' '
+        - '&7A set of equipment necessary'
+        - '&7for a Ultra during his adventures.'
+        - ''
+        - '&7Contents:'
+        - '&7• %color_ultra%Iron Armor'
+        - '&7• %color_ultra%Iron Tools'
+        - '&7• %color_ultra%32 Arrows'
+        - '&7• %color_ultra%4 Steaks'
+        - ' '
+        - '&c❌ &fYou need  rank to access this kit!'
+        has0:
+          value0: '%cp-player-name% HASPERM'
+          compare0: 'essentials.kits.Ultra'
+          material: STICK
+          customdata: 100
+          name: '%color_ultra%☆ %color_ultra%&lUltra'
+          lore:
+          - ' '
+          - '&7A set of equipment necessary'
+          - '&7for a Ultra during his adventures.'
+          - ''
+          - '&7Contents:'
+          - '&7• %color_ultra%Iron Armor'
+          - '&7• %color_ultra%Iron Tools'
+          - '&7• %color_ultra%32 Arrows'
+          - '&7• %color_ultra%4 Steaks'
+          - ' '
+          - '&f⌚ This kit will become available in:'
+          - '&e%essentials_kit_time_until_available_Ultra%'
+          has1:
+            value0: 'yes'
+            compare0: '%essentials_kit_is_available_Ultra%'
+            material: STICK
+            customdata: 100
+            name: '%color_ultra%☆ %color_ultra%&lUltra'
+            lore:
+            - ' '
+            - '&7A set of equipment necessary'
+            - '&7for a Ultra during his adventures.'
+            - ''
+            - '&7Contents:'
+            - '&7• %color_ultra%Iron Armor'
+            - '&7• %color_ultra%Iron Tools'
+            - '&7• %color_ultra%32 Arrows'
+            - '&7• %color_ultra%4 Steaks'
+            - ' '
+            - '&a&l✔ Click to claim!'
+            commands:
+            - kit Ultra
+            - sound= ITEM_ARMOR_EQUIP_IRON
+            - refresh
+      '24':
+        material: STICK
+        customdata: 100
+        name: '%color_ultra%☆ %color_ultra%&lUltra'
+        lore:
+        - ' '
+        - '&7A set of equipment necessary'
+        - '&7for a Ultra during his adventures.'
+        - ''
+        - '&7Contents:'
+        - '&7• %color_ultra%Iron Armor'
+        - '&7• %color_ultra%Iron Tools'
+        - '&7• %color_ultra%32 Arrows'
+        - '&7• %color_ultra%4 Steaks'
+        - ' '
+        - '&c❌ &fYou need  rank to access this kit!'
+        has0:
+          value0: '%cp-player-name% HASPERM'
+          compare0: 'essentials.kits.Ultra'
+          material: STICK
+          customdata: 100
+          name: '%color_ultra%☆ %color_ultra%&lUltra'
+          lore:
+          - ' '
+          - '&7A set of equipment necessary'
+          - '&7for a Ultra during his adventures.'
+          - ''
+          - '&7Contents:'
+          - '&7• %color_ultra%Iron Armor'
+          - '&7• %color_ultra%Iron Tools'
+          - '&7• %color_ultra%32 Arrows'
+          - '&7• %color_ultra%4 Steaks'
+          - ' '
+          - '&f⌚ This kit will become available in:'
+          - '&e%essentials_kit_time_until_available_Ultra%'
+          has1:
+            value0: 'yes'
+            compare0: '%essentials_kit_is_available_Ultra%'
+            material: STICK
+            customdata: 100
+            name: '%color_ultra%☆ %color_ultra%&lUltra'
+            lore:
+            - ' '
+            - '&7A set of equipment necessary'
+            - '&7for a Ultra during his adventures.'
+            - ''
+            - '&7Contents:'
+            - '&7• %color_ultra%Iron Armor'
+            - '&7• %color_ultra%Iron Tools'
+            - '&7• %color_ultra%32 Arrows'
+            - '&7• %color_ultra%4 Steaks'
+            - ' '
+            - '&a&l✔ Click to claim!'
+            commands:
+            - kit Ultra
+            - sound= ITEM_ARMOR_EQUIP_IRON
+            - refresh
+      '25':
+        material: STICK
+        customdata: 100
+        name: '%color_ultra%☆ %color_ultra%&lUltra'
+        lore:
+        - ' '
+        - '&7A set of equipment necessary'
+        - '&7for a Ultra during his adventures.'
+        - ''
+        - '&7Contents:'
+        - '&7• %color_ultra%Iron Armor'
+        - '&7• %color_ultra%Iron Tools'
+        - '&7• %color_ultra%32 Arrows'
+        - '&7• %color_ultra%4 Steaks'
+        - ' '
+        - '&c❌ &fYou need  rank to access this kit!'
+        has0:
+          value0: '%cp-player-name% HASPERM'
+          compare0: 'essentials.kits.Ultra'
+          material: STICK
+          customdata: 100
+          name: '%color_ultra%☆ %color_ultra%&lUltra'
+          lore:
+          - ' '
+          - '&7A set of equipment necessary'
+          - '&7for a Ultra during his adventures.'
+          - ''
+          - '&7Contents:'
+          - '&7• %color_ultra%Iron Armor'
+          - '&7• %color_ultra%Iron Tools'
+          - '&7• %color_ultra%32 Arrows'
+          - '&7• %color_ultra%4 Steaks'
+          - ' '
+          - '&f⌚ This kit will become available in:'
+          - '&e%essentials_kit_time_until_available_Ultra%'
+          has1:
+            value0: 'yes'
+            compare0: '%essentials_kit_is_available_Ultra%'
+            material: STICK
+            customdata: 100
+            name: '%color_ultra%☆ %color_ultra%&lUltra'
+            lore:
+            - ' '
+            - '&7A set of equipment necessary'
+            - '&7for a Ultra during his adventures.'
+            - ''
+            - '&7Contents:'
+            - '&7• %color_ultra%Iron Armor'
+            - '&7• %color_ultra%Iron Tools'
+            - '&7• %color_ultra%32 Arrows'
+            - '&7• %color_ultra%4 Steaks'
+            - ' '
+            - '&a&l✔ Click to claim!'
+            commands:
+            - kit Ultra
+            - sound= ITEM_ARMOR_EQUIP_IRON
+            - refresh
+          
+          
+          
+      '28':
+        material: STICK
+        customdata: 100
+        name: '%color_hero%⯪ %color_hero%&lHero'
+        lore:
+        - ' '
+        - '&7A high-quality equipement set'
+        - '&7prepared for a true hero.'
+        - ''
+        - '&7Contents:'
+        - '&7• %color_hero%Diamond Tools'
+        - '&7• %color_hero%Iron Armor'
+        - '&7• %color_hero%16 Fireworks'
+        - '&7• %color_hero%32 Arrows'
+        - '&7• %color_hero%8 Steaks'
+        - ' '
+        - '&c❌ &fYou need  rank to access this kit!'
+        has0:
+          value0: '%cp-player-name% HASPERM'
+          compare0: 'essentials.kits.hero'
+          material: STICK
+          customdata: 100
+          name: '%color_hero%⯪ %color_hero%&lHero'
+          lore:
+          - ' '
+          - '&7A high-quality equipement set'
+          - '&7prepared for a true hero.'
+          - ''
+          - '&7Contents:'
+          - '&7• %color_hero%Diamond Tools'
+          - '&7• %color_hero%Iron Armor'
+          - '&7• %color_hero%16 Fireworks'
+          - '&7• %color_hero%32 Arrows'
+          - '&7• %color_hero%8 Steaks'
+          - ' '
+          - '&f⌚ This kit will become available in:'
+          - '&e%essentials_kit_time_until_available_hero%'
+          has1:
+            value0: 'yes'
+            compare0: '%essentials_kit_is_available_hero%'
+            material: STICK
+            customdata: 100
+            name: '%color_hero%⯪ %color_hero%&lHero'
+            lore:
+            - ' '
+            - '&7A high-quality equipement set'
+            - '&7prepared for a true hero.'
+            - ''
+            - '&7Contents:'
+            - '&7• %color_hero%Diamond Tools'
+            - '&7• %color_hero%Iron Armor'
+            - '&7• %color_hero%16 Fireworks'
+            - '&7• %color_hero%32 Arrows'
+            - '&7• %color_hero%8 Steaks'
+            - ' '
+            - '&a&l✔ Click to claim!'
+            commands:
+            - kit hero
+            - sound= ITEM_ARMOR_EQUIP_DIAMOND
+            - sound= ENTITY_EXPERIENCE_ORB_PICKUP 0.3
+            - refresh
+      '29':
+        material: STICK
+        customdata: 100
+        name: '%color_hero%⯪ %color_hero%&lHero'
+        lore:
+        - ' '
+        - '&7A high-quality equipement set'
+        - '&7prepared for a true hero.'
+        - ''
+        - '&7Contents:'
+        - '&7• %color_hero%Diamond Tools'
+        - '&7• %color_hero%Iron Armor'
+        - '&7• %color_hero%16 Fireworks'
+        - '&7• %color_hero%32 Arrows'
+        - '&7• %color_hero%8 Steaks'
+        - ' '
+        - '&c❌ &fYou need  rank to access this kit!'
+        has0:
+          value0: '%cp-player-name% HASPERM'
+          compare0: 'essentials.kits.hero'
+          material: STICK
+          customdata: 100
+          name: '%color_hero%⯪ %color_hero%&lHero'
+          lore:
+          - ' '
+          - '&7A high-quality equipement set'
+          - '&7prepared for a true hero.'
+          - ''
+          - '&7Contents:'
+          - '&7• %color_hero%Diamond Tools'
+          - '&7• %color_hero%Iron Armor'
+          - '&7• %color_hero%16 Fireworks'
+          - '&7• %color_hero%32 Arrows'
+          - '&7• %color_hero%8 Steaks'
+          - ' '
+          - '&f⌚ This kit will become available in:'
+          - '&e%essentials_kit_time_until_available_hero%'
+          has1:
+            value0: 'yes'
+            compare0: '%essentials_kit_is_available_hero%'
+            material: STICK
+            customdata: 100
+            name: '%color_hero%⯪ %color_hero%&lHero'
+            lore:
+            - ' '
+            - '&7A high-quality equipement set'
+            - '&7prepared for a true hero.'
+            - ''
+            - '&7Contents:'
+            - '&7• %color_hero%Diamond Tools'
+            - '&7• %color_hero%Iron Armor'
+            - '&7• %color_hero%16 Fireworks'
+            - '&7• %color_hero%32 Arrows'
+            - '&7• %color_hero%8 Steaks'
+            - ' '
+            - '&a&l✔ Click to claim!'
+            commands:
+            - kit hero
+            - sound= ITEM_ARMOR_EQUIP_DIAMOND
+            - sound= ENTITY_EXPERIENCE_ORB_PICKUP 0.3
+            - refresh
+      '30':
+        material: STICK
+        customdata: 100
+        name: '%color_hero%⯪ %color_hero%&lHero'
+        lore:
+        - ' '
+        - '&7A high-quality equipement set'
+        - '&7prepared for a true hero.'
+        - ''
+        - '&7Contents:'
+        - '&7• %color_hero%Diamond Tools'
+        - '&7• %color_hero%Iron Armor'
+        - '&7• %color_hero%16 Fireworks'
+        - '&7• %color_hero%32 Arrows'
+        - '&7• %color_hero%8 Steaks'
+        - ' '
+        - '&c❌ &fYou need  rank to access this kit!'
+        has0:
+          value0: '%cp-player-name% HASPERM'
+          compare0: 'essentials.kits.hero'
+          material: STICK
+          customdata: 100
+          name: '%color_hero%⯪ %color_hero%&lHero'
+          lore:
+          - ' '
+          - '&7A high-quality equipement set'
+          - '&7prepared for a true hero.'
+          - ''
+          - '&7Contents:'
+          - '&7• %color_hero%Diamond Tools'
+          - '&7• %color_hero%Iron Armor'
+          - '&7• %color_hero%16 Fireworks'
+          - '&7• %color_hero%32 Arrows'
+          - '&7• %color_hero%8 Steaks'
+          - ' '
+          - '&f⌚ This kit will become available in:'
+          - '&e%essentials_kit_time_until_available_hero%'
+          has1:
+            value0: 'yes'
+            compare0: '%essentials_kit_is_available_hero%'
+            material: STICK
+            customdata: 100
+            name: '%color_hero%⯪ %color_hero%&lHero'
+            lore:
+            - ' '
+            - '&7A high-quality equipement set'
+            - '&7prepared for a true hero.'
+            - ''
+            - '&7Contents:'
+            - '&7• %color_hero%Diamond Tools'
+            - '&7• %color_hero%Iron Armor'
+            - '&7• %color_hero%16 Fireworks'
+            - '&7• %color_hero%32 Arrows'
+            - '&7• %color_hero%8 Steaks'
+            - ' '
+            - '&a&l✔ Click to claim!'
+            commands:
+            - kit hero
+            - sound= ITEM_ARMOR_EQUIP_DIAMOND
+            - sound= ENTITY_EXPERIENCE_ORB_PICKUP 0.3
+            - refresh
+        
+        
+        
+        
+      '32':
+        material: STICK
+        customdata: 100
+        name: '%color_legend%★ %color_legend%&lLegend'
+        lore:
+        - ' '
+        - '&7Legendary equipment pack'
+        - '&7for the ultimate warrior.'
+        - ''
+        - '&7Contents:'
+        - '&7• %color_legend%Diamond Tools'
+        - '&7• %color_legend%Diamond Armor'
+        - '&7• %color_legend%2 Golden Apples'
+        - '&7• %color_legend%16 Fireworks'
+        - '&7• %color_legend%32 Arrows'
+        - '&7• %color_legend%10 Steaks'
+        - ' '
+        - '&c❌ &fYou need  rank to access this kit!'
+        has1:
+          value0: '%cp-player-name% HASPERM'
+          compare0: 'essentials.kits.legend'
+          material: STICK
+          customdata: 100
+          name: '%color_legend%★ %color_legend%&lLegend'
+          lore:
+          - ' '
+          - '&7Legendary equipment pack'
+          - '&7for the ultimate warrior.'
+          - ''
+          - '&7Contents:'
+          - '&7• %color_legend%Diamond Tools'
+          - '&7• %color_legend%Diamond Armor'
+          - '&7• %color_legend%2 Golden Apples'
+          - '&7• %color_legend%16 Fireworks'
+          - '&7• %color_legend%32 Arrows'
+          - '&7• %color_legend%10 Steaks'
+          - ' '
+          - '&f⌚ This kit will become available in:'
+          - '&e%essentials_kit_time_until_available_legend%'
+          has0:
+            value0: 'yes'
+            compare0: '%essentials_kit_is_available_legend%'
+            material: STICK
+            customdata: 100
+            name: '%color_legend%★ %color_legend%&lLegend'
+            lore:
+            - ' '
+            - '&7Legendary equipment pack'
+            - '&7for the ultimate warrior.'
+            - ''
+            - '&7Contents:'
+            - '&7• %color_legend%Diamond Tools'
+            - '&7• %color_legend%Diamond Armor'
+            - '&7• %color_legend%2 Golden Apples'
+            - '&7• %color_legend%16 Fireworks'
+            - '&7• %color_legend%32 Arrows'
+            - '&7• %color_legend%10 Steaks'
+            - ' '
+            - '&a&l✔ Click to claim!'
+            commands:
+            - kit legend
+            - sound= ITEM_ARMOR_EQUIP_NETHERITE
+            - sound= ENTITY_PLAYER_LEVELUP 0.3
+            - refresh
+      '33':
+        material: STICK
+        customdata: 100
+        name: '%color_legend%★ %color_legend%&lLegend'
+        lore:
+        - ' '
+        - '&7Legendary equipment pack'
+        - '&7for the ultimate warrior.'
+        - ''
+        - '&7Contents:'
+        - '&7• %color_legend%Diamond Tools'
+        - '&7• %color_legend%Diamond Armor'
+        - '&7• %color_legend%2 Golden Apples'
+        - '&7• %color_legend%16 Fireworks'
+        - '&7• %color_legend%32 Arrows'
+        - '&7• %color_legend%10 Steaks'
+        - ' '
+        - '&c❌ &fYou need  rank to access this kit!'
+        has1:
+          value0: '%cp-player-name% HASPERM'
+          compare0: 'essentials.kits.legend'
+          material: STICK
+          customdata: 100
+          name: '%color_legend%★ %color_legend%&lLegend'
+          lore:
+          - ' '
+          - '&7Legendary equipment pack'
+          - '&7for the ultimate warrior.'
+          - ''
+          - '&7Contents:'
+          - '&7• %color_legend%Diamond Tools'
+          - '&7• %color_legend%Diamond Armor'
+          - '&7• %color_legend%2 Golden Apples'
+          - '&7• %color_legend%16 Fireworks'
+          - '&7• %color_legend%32 Arrows'
+          - '&7• %color_legend%10 Steaks'
+          - ' '
+          - '&f⌚ This kit will become available in:'
+          - '&e%essentials_kit_time_until_available_legend%'
+          has0:
+            value0: 'yes'
+            compare0: '%essentials_kit_is_available_legend%'
+            material: STICK
+            customdata: 100
+            name: '%color_legend%★ %color_legend%&lLegend'
+            lore:
+            - ' '
+            - '&7Legendary equipment pack'
+            - '&7for the ultimate warrior.'
+            - ''
+            - '&7Contents:'
+            - '&7• %color_legend%Diamond Tools'
+            - '&7• %color_legend%Diamond Armor'
+            - '&7• %color_legend%2 Golden Apples'
+            - '&7• %color_legend%16 Fireworks'
+            - '&7• %color_legend%32 Arrows'
+            - '&7• %color_legend%10 Steaks'
+            - ' '
+            - '&a&l✔ Click to claim!'
+            commands:
+            - kit legend
+            - sound= ITEM_ARMOR_EQUIP_NETHERITE
+            - sound= ENTITY_PLAYER_LEVELUP 0.3
+            - refresh
+      '34':
+        material: STICK
+        customdata: 100
+        name: '%color_legend%★ %color_legend%&lLegend'
+        lore:
+        - ' '
+        - '&7Legendary equipment pack'
+        - '&7for the ultimate warrior.'
+        - ''
+        - '&7Contents:'
+        - '&7• %color_legend%Diamond Tools'
+        - '&7• %color_legend%Diamond Armor'
+        - '&7• %color_legend%2 Golden Apples'
+        - '&7• %color_legend%16 Fireworks'
+        - '&7• %color_legend%32 Arrows'
+        - '&7• %color_legend%10 Steaks'
+        - ' '
+        - '&c❌ &fYou need  rank to access this kit!'
+        has1:
+          value0: '%cp-player-name% HASPERM'
+          compare0: 'essentials.kits.legend'
+          material: STICK
+          customdata: 100
+          name: '%color_legend%★ %color_legend%&lLegend'
+          lore:
+          - ' '
+          - '&7Legendary equipment pack'
+          - '&7for the ultimate warrior.'
+          - ''
+          - '&7Contents:'
+          - '&7• %color_legend%Diamond Tools'
+          - '&7• %color_legend%Diamond Armor'
+          - '&7• %color_legend%2 Golden Apples'
+          - '&7• %color_legend%16 Fireworks'
+          - '&7• %color_legend%32 Arrows'
+          - '&7• %color_legend%10 Steaks'
+          - ' '
+          - '&f⌚ This kit will become available in:'
+          - '&e%essentials_kit_time_until_available_legend%'
+          has0:
+            value0: 'yes'
+            compare0: '%essentials_kit_is_available_legend%'
+            material: STICK
+            customdata: 100
+            name: '%color_legend%★ %color_legend%&lLegend'
+            lore:
+            - ' '
+            - '&7Legendary equipment pack'
+            - '&7for the ultimate warrior.'
+            - ''
+            - '&7Contents:'
+            - '&7• %color_legend%Diamond Tools'
+            - '&7• %color_legend%Diamond Armor'
+            - '&7• %color_legend%2 Golden Apples'
+            - '&7• %color_legend%16 Fireworks'
+            - '&7• %color_legend%32 Arrows'
+            - '&7• %color_legend%10 Steaks'
+            - ' '
+            - '&a&l✔ Click to claim!'
+            commands:
+            - kit legend
+            - sound= ITEM_ARMOR_EQUIP_NETHERITE
+            - sound= ENTITY_PLAYER_LEVELUP 0.3
+            - refresh
+        
+        
+        
+
+      
+      

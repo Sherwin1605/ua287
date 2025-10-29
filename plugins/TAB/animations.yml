@@ -1,0 +1,120 @@
+ServerName:
+  change-interval: 100
+  texts:
+  - "%color_server_name%&lUnlimited Adventures"
+  - "%color_server_name%&lUnlimited Adventures"
+  - "%color_server_name%&lUnlimited Adventures"
+  - "%color_server_name%&lUnlimited Adventures"
+  - "%color_server_name%&lUnlimited Adventures"
+  - "%color_server_name%&lUnlimited Adventures"
+  - "%color_server_name%&lUnlimited Adventures"
+  - "%color_server_name%&lUnlimited Adventures"
+  - "%color_server_name%&lUnlimited Adventures"
+  - "%color_server_name%&lUnlimited Adventures"
+  - "%color_server_name%&lUnlimited Adventures"
+  - "%color_server_name%&lUnlimited Adventures"
+  - "%color_server_name%&lUnlimited Adventures"
+  - "%color_server_name%&lUnlimited Adventures"
+  - "%color_server_name%&lUnlimited Adventures"
+  - "%color_server_name%&lUnlimited Adventures"
+  - "%color_server_name%&lUnlimited Adventures"
+  - "%color_server_name%&lUnlimited Adventures"
+  - "%color_server_name%&lUnlimited Adventures"
+  - "%color_server_name%&lUnlimited Adventures"
+  - "%color_server_name%&lUnlimited Adventures"
+  - "%color_server_name%&lUnlimited Adventures"
+  - "%color_server_name%&lUnlimited Adventures"
+  - "%color_server_name%&lUnlimited Adventures"
+  - "%color_server_name%&lUnlimited Adventures"
+  - "%color_server_name%&lUnlimited Adventures"
+  - "%color_server_name%&lUnlimited Adventures"
+  - "%color_server_name_1%&lU%color_server_name%&lnlimited Adventures"
+  - "%color_server_name_2%&lU%color_server_name_1%&ln%color_server_name%&llimited Adventures"
+  - "%color_server_name_1%&lU%color_server_name_2%&ln%color_server_name_1%&ll%color_server_name%&limited Adventures"
+  - "%color_server_name%&lU%color_server_name_1%&ln%color_server_name_2%&ll%color_server_name_1%&li%color_server_name%&lmited Adventures"
+  - "%color_server_name%&lUn%color_server_name_1%&ll%color_server_name_2%&li%color_server_name_1%&lm%color_server_name%&lited Adventures"
+  - "%color_server_name%&lUnl%color_server_name_1%&li%color_server_name_2%&lm%color_server_name_1%&li%color_server_name%&lted Adventures"
+  - "%color_server_name%&lUnli%color_server_name_1%&lm%color_server_name_2%&li%color_server_name_1%&lt%color_server_name%&led Adventures"
+  - "%color_server_name%&lUnlim%color_server_name_1%&li%color_server_name_2%&lt%color_server_name_1%&le%color_server_name%&ld Adventures"
+  - "%color_server_name%&lUnlimi%color_server_name_1%&lt%color_server_name_2%&le%color_server_name_1%&ld%color_server_name%&l Adventures"
+  - "%color_server_name%&lUnlimit%color_server_name_1%&le%color_server_name_2%&ld%color_server_name_1%&l A%color_server_name%&ldventures"
+  - "%color_server_name%&lUnlimite%color_server_name_1%&ld%color_server_name_2%&l A%color_server_name_1%&ld%color_server_name%&lventures"
+  - "%color_server_name%&lUnlimited%color_server_name_1%&l A%color_server_name_2%&ld%color_server_name_1%&lv%color_server_name%&lentures"
+  - "%color_server_name%&lUnlimited A%color_server_name_1%&ld%color_server_name_2%&lv%color_server_name_1%&le%color_server_name%&lntures"
+  - "%color_server_name%&lUnlimited Ad%color_server_name_1%&lv%color_server_name_2%&le%color_server_name_1%&ln%color_server_name%&ltures"
+  - "%color_server_name%&lUnlimited Adv%color_server_name_1%&le%color_server_name_2%&ln%color_server_name_1%&lt%color_server_name%&lures"
+  - "%color_server_name%&lUnlimited Adve%color_server_name_1%&ln%color_server_name_2%&lt%color_server_name_1%&lu%color_server_name%&lres"
+  - "%color_server_name%&lUnlimited Adven%color_server_name_1%&lt%color_server_name_2%&lu%color_server_name_1%&lr%color_server_name%&les"
+  - "%color_server_name%&lUnlimited Advent%color_server_name_1%&lu%color_server_name_2%&lr%color_server_name_1%&le%color_server_name%&ls"
+  - "%color_server_name%&lUnlimited Adventu%color_server_name_1%&lr%color_server_name_2%&le%color_server_name_1%&ls"
+  - "%color_server_name%&lUnlimited Adventur%color_server_name_1%&le%color_server_name_2%&ls"
+  - "%color_server_name%&lUnlimited Adventure%color_server_name_1%&ls"
+web:
+  change-interval: 200
+  texts:
+  - '&ewww.domain.com'
+  - '&ewww.domain.com'
+  - '&ewww.domain.com'
+  - '&ewww.domain.com'
+  - '&ewww.domain.com'
+  - '&ewww.domain.com'
+  - '&6w&eww.domain.com'
+  - '&ew&6w&ew.domain.com'
+  - '&eww&6w&e.domain.com'
+  - '&ewww&6.&edomain.com'
+  - '&ewww.&6d&eomain.com'
+  - '&ewww.d&6o&emain.com'
+  - '&ewww.do&6m&eain.com'
+  - '&ewww.dom&6a&ein.com'
+  - '&ewww.doma&6i&en.com'
+  - '&ewww.domai&6n&e.com'
+  - '&ewww.domain&6.&ecom'
+  - '&ewww.domain.&6c&eom'
+  - '&ewww.domain.c&6o&em'
+  - '&ewww.domain.co&6m'
+  - '&ewww.domain.com'
+  - '&ewww.domain.com'
+  - '&ewww.domain.com'
+  - '&ewww.domain.com'
+  - '&ewww.domain.com'
+  - '&ewww.domain.com'
+vote:
+  change-interval: 1000
+  texts:
+  - '&avote.domain.com'
+  - '&a&nvote.domain.com'
+  - '&5vote.domain.com'
+  - '&5&nvote.domain.com'
+Welcome:
+  change-interval: 400
+  texts:
+  - '&7&lW_'
+  - '&7&lW_'
+  - '&7&lWe_'
+  - '&7&lWel_'
+  - '&7&lWelc_'
+  - '&7&lWelco_'
+  - '&7&lWelcom_'
+  - '&7&lWelcome_'
+  - '&7&lWelcome_'
+  - '&7&lWelcome_'
+  - '&7&lWelcome_'
+  - '&7&lWelcom_'
+  - '&7&lWelco_'
+  - '&7&lWelc_'
+  - '&7&lWel_'
+  - '&7&lWe_'
+  - '&7&lW_'
+  - '&7&lW_'
+time:
+  change-interval: 3000
+  texts:
+    - '&7Time &b%time%'
+    - '&7Date &b%date%'
+barcolors:
+  change-interval: 1000
+  texts:
+    - RED
+    - BLUE
+    - GREEN
+    - YELLOW
