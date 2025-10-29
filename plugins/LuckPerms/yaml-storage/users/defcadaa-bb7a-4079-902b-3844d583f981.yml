@@ -1,0 +1,18 @@
+uuid: defcadaa-bb7a-4079-902b-3844d583f981
+name: prisq
+primary-group: owner
+permissions:
+- ia.user.recipe.*
+- access.ctheveil
+- access.guild
+- access.shen
+- access.sirius
+- access.theveil
+- aureliumskills.multiplier.10
+- aureliumskills.multiplier.15
+- itemsadder.craft
+- slot.accessory1
+- slot.accessory2
+- slot.accessory3
+parents:
+- owner

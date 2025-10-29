@@ -1,0 +1,360 @@
+Name: '&5&lObsidian Crate'
+Preview_Config: obsidian
+Permission_Required: false
+Attached_Citizens: ''
+Opening:
+  Cooldown: 0
+Key:
+  Ids:
+  - obsidian
+  # Sets whether or not keys are required to open this crate.
+  Required: true
+Block:
+  Locations:
+  - -143.0,179.0,-143.0,0.0,0.0,spawn
+  Pushback:
+    Enabled: true
+  Hologram:
+    Enabled: true
+    Template: obsidian
+    Y_Offset: 0.0
+  Effect:
+    Model: BEACON
+    Particle:
+      Name: SPELL_WITCH
+Rewards:
+  List:
+    obsidian_1:
+      Name: Iron Block
+      Chance: 5.0
+      Broadcast: false
+      Preview: 1800020009km800kdlkmspb3e9gmct1qd5p6urivc9m6uorb0400agrfeln78g00
+      Commands: []
+      Items:
+      - 1800020009km800kdlkmspb3e9gmct1qd5p6urivc9m6uorb0400agrfeln78g00
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+    obsidian_2:
+      Name: Gold Block
+      Chance: 5.0
+      Broadcast: false
+      Preview: 1800020009km800kdlkmspb3e9gmct1qctnmop2vc9m6uorb0400agrfeln78g00
+      Commands: []
+      Items:
+      - 1800020009km800kdlkmspb3e9gmct1qctnmop2vc9m6uorb0400agrfeln78g00
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+    obsidian_3:
+      Name: Diamond Block
+      Chance: 5.0
+      Broadcast: false
+      Preview: k00010004qb400bmqqbeclhn4ob6egt68qb1dlnmsp2vc9m6uorb0400agrfeln78800
+      Commands: []
+      Items:
+      - k00010004qb400bmqqbeclhn4ob6egt68qb1dlnmsp2vc9m6uorb0400agrfeln78800
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+    obsidian_4:
+      Name: Emerald Block
+      Chance: 5.0
+      Broadcast: false
+      Preview: k00010004qb400bmqqbeclhn4ob6egt6arb5e9gmop2vc9m6uorb0400agrfeln78800
+      Commands: []
+      Items:
+      - k00010004qb400bmqqbeclhn4ob6egt6arb5e9gmop2vc9m6uorb0400agrfeln78800
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+    obsidian_5:
+      Name: Netherite Block
+      Chance: 5.0
+      Broadcast: false
+      Preview: 1800020009km800pdlkmspb3e9gmct1qdpin8q35e9kn8pavc9m6uorb0400agrfeln78400
+      Commands: []
+      Items:
+      - 1800020009km800pdlkmspb3e9gmct1qdpin8q35e9kn8pavc9m6uorb0400agrfeln78400
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+    obsidian_6:
+      Name: Golden Apple
+      Chance: 5.0
+      Broadcast: false
+      Preview: 2g0004000j9cg01crb9dpim6sj1cpq3kprfdhi6arivc5o70r350400agrfeln78g00
+      Commands: []
+      Items:
+      - 2g0004000j9cg01crb9dpim6sj1cpq3kprfdhi6arivc5o70r350400agrfeln78g00
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+    obsidian_7:
+      Name: Enchanted Golden Apple
+      Chance: 3.0
+      Broadcast: false
+      Preview: 2g0004000j9cg020rb9dpim6sj1cpq3kpbecdk62rjkcli5uprfdhi6arivc5o70r350400agrfeln78400
+      Commands: []
+      Items:
+      - 2g0004000j9cg020rb9dpim6sj1cpq3kpbecdk62rjkcli5uprfdhi6arivc5o70r350400agrfeln78400
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+    obsidian_8:
+      Name: Beacon
+      Chance: 1.0
+      Broadcast: false
+      Preview: a0000g002d5i0043dd5n6aoric5j78ej2clgm6rre0400agrfeln78080
+      Commands: []
+      Items:
+      - a0000g002d5i0043dd5n6aoric5j78ej2clgm6rre0400agrfeln78080
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+    obsidian_9:
+      Name: Heart Of The Sea
+      Chance: 1.0
+      Broadcast: false
+      Preview: a0000g002d5i006jdd5n6aoric5j78ej8clgn4t2vdtj5ut38clfn6pb10400agrfeln78080
+      Commands: []
+      Items:
+      - a0000g002d5i006jdd5n6aoric5j78ej8clgn4t2vdtj5ut38clfn6pb10400agrfeln78080
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+    obsidian_10:
+      Name: Nether Star
+      Chance: 1.0
+      Broadcast: false
+      Preview: a0000g002d5i005bdd5n6aoric5j78ejeclq6gpbibtpn8obi0400agrfeln78080
+      Commands: []
+      Items:
+      - a0000g002d5i005bdd5n6aoric5j78ejeclq6gpbibtpn8obi0400agrfeln78080
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+    obsidian_11:
+      Name: Amethyst Block
+      Chance: 4.0
+      Broadcast: false
+      Preview: 5000080016ip0031mmirj5cdp62pjk79gmqpbkd1sn6t2vc9m6uorb0400agrfeln78g00
+      Commands: []
+      Items:
+      - 5000080016ip0031mmirj5cdp62pjk79gmqpbkd1sn6t2vc9m6uorb0400agrfeln78g00
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+    obsidian_12:
+      Name: Elytra
+      Chance: 2.0
+      Broadcast: false
+      Preview: a0000g002d5i0043dd5n6aoric5j78ej5dhsn8sj118006t31cs1g01i4c5mm2pr5000000000400agrfeln78080
+      Commands: []
+      Items:
+      - a0000g002d5i0043dd5n6aoric5j78ej5dhsn8sj118006t31cs1g01i4c5mm2pr5000000000400agrfeln78080
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+    obsidian_13:
+      Name: Experience Bottle
+      Chance: 4.0
+      Broadcast: false
+      Preview: 2g0004000j9cg01mrb9dpim6sj1cpq3kpboe1in4qb5dphmanr2dtq78r350400agrfeln78g00
+      Commands: []
+      Items:
+      - 2g0004000j9cg01mrb9dpim6sj1cpq3kpboe1in4qb5dphmanr2dtq78r350400agrfeln78g00
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+    obsidian_14:
+      Name: Firework Rocket
+      Chance: 4.0
+      Broadcast: false
+      Preview: 1800020009km800pdlkmspb3e9gmct1qcpkn4pbndtp6mnridthmmpbk0400agrfeln78g00
+      Commands:
+      - obsidian_9
+      Items:
+      - 1800020009km800pdlkmspb3e9gmct1qcpkn4pbndtp6mnridthmmpbk0400agrfeln78g00
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+    obsidian_15:
+      Name: Diamond Horse Armor
+      Chance: 3.0
+      Broadcast: false
+      Preview: 5000080016ip003lmmirj5cdp62pjk79i6iobddtn68nr8dtp76pavc5p6qrri0400agrfeln78080
+      Commands: []
+      Items:
+      - 5000080016ip003lmmirj5cdp62pjk79i6iobddtn68nr8dtp76pavc5p6qrri0400agrfeln78080
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+    obsidian_16:
+      Name: Amethyst Shard
+      Chance: 4.0
+      Broadcast: false
+      Preview: 5000080016ip0031mmirj5cdp62pjk79gmqpbkd1sn6t2vedk62sj40400agrfeln78g00
+      Commands: []
+      Items:
+      - 5000080016ip0031mmirj5cdp62pjk79gmqpbkd1sn6t2vedk62sj40400agrfeln78g00
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+    obsidian_17:
+      Name: Glow Ink Sac
+      Chance: 3.0
+      Broadcast: false
+      Preview: 2g0004000j9cg01crb9dpim6sj1cpq3kprcdtrluqbeddfn6ob30400agrfeln78g00
+      Commands: []
+      Items:
+      - 2g0004000j9cg01crb9dpim6sj1cpq3kprcdtrluqbeddfn6ob30400agrfeln78g00
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+Animation_Config: spin_mystery
+Item:
+  Material: PLAYER_HEAD
+  SkinURL: 9e5bb8b31f46aa9af1baa88b74f0ff383518cd23faac52a3acb96cfe91e22ebc
+  Name: '&e&lGolden Crate &7(Right-Click)'
+  Lore:
+  - '&fLeft Click &7to preview'
+  - '&fRight Click &7to open'
+Last_Opener: prisq
+Last_Reward: Enchanted Golden Apple

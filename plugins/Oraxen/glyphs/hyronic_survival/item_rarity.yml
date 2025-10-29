@@ -1,0 +1,50 @@
+#Item Rarities
+rarity_common:
+  char: ஸ
+  texture: hyronic_sur/labels/item_rarities/rarity_common.png
+  ascent: 7
+  height: 14
+  chat:
+    permission: oraxen.emoji.hs.rarity_common
+rarity_uncommon:
+  char: ஹ
+  texture: hyronic_sur/labels/item_rarities/rarity_uncommon.png
+  ascent: 7
+  height: 14
+  chat:
+    permission: oraxen.emoji.hs.rarity_uncommon
+rarity_rare:
+  char: ஺
+  texture: hyronic_sur/labels/item_rarities/rarity_rare.png
+  ascent: 7
+  height: 14
+  chat:
+    permission: oraxen.emoji.hs.rarity_rare
+rarity_epic:
+  char: ஻
+  texture: hyronic_sur/labels/item_rarities/rarity_epic.png
+  ascent: 7
+  height: 14
+  chat:
+    permission: oraxen.emoji.hs.rarity_epic
+rarity_legendary:
+  char: ஼
+  texture: hyronic_sur/labels/item_rarities/rarity_legendary.png
+  ascent: 7
+  height: 14
+  chat:
+    permission: oraxen.emoji.hs.rarity_legendary
+rarity_mythic:
+  char: ஽
+  texture: hyronic_sur/labels/item_rarities/rarity_mythic.png
+  ascent: 7
+  height: 14
+  chat:
+    permission: oraxen.emoji.hs.rarity_mythic
+rarity_divine:
+  char: ா
+  texture: hyronic_sur/labels/item_rarities/rarity_divine.png
+  ascent: 7
+  height: 14
+  chat:
+    permission: oraxen.emoji.hs.rarity_divine

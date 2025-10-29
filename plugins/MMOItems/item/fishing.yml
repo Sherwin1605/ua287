@@ -1,0 +1,343 @@
+MOSS_EEL:
+  base:
+    material: SALMON
+    custom-model-data: 10.0
+    name: <#77DD77>Moss Eel
+    tier: C
+    disable-crafting: true
+    disable-interaction: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    lore:
+      - "&7The moss clinging on this fish"
+      - "&7is apparently mutated."
+      - ""
+      - "&3✄ &8Can be &3filleted&7!"
+MOSS_CARP:
+  base:
+    material: SALMON
+    custom-model-data: 9.0
+    name: <#77DD77>Moss Carp
+    tier: C
+    disable-crafting: true
+    disable-interaction: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    lore:
+      - "&7The moss clinging on this fish"
+      - "&7is apparently mutated."
+      - ""
+      - "&3✄ &8Can be &3filleted&7!"
+MOSS_MACKEREL:
+  base:
+    material: SALMON
+    custom-model-data: 11.0
+    name: <#77DD77>Moss Mackerel
+    tier: C
+    disable-crafting: true
+    disable-interaction: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    lore:
+      - "&7The moss clinging on this fish"
+      - "&7is apparently mutated."
+      - ""
+      - "&3✄ &8Can be &3filleted&7!"
+MOSS_SALMON:
+  base:
+    material: SALMON
+    custom-model-data: 12.0
+    name: <#77DD77>Moss Salmon
+    tier: C
+    disable-crafting: true
+    disable-interaction: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    lore:
+      - "&7The moss clinging on this fish"
+      - "&7is apparently mutated."
+      - ""
+      - "&3✄ &8Can be &3filleted&7!"
+SAPHIRE_JELLYFISH:
+  base:
+    material: SALMON
+    custom-model-data: 13.0
+    name: <#049cdc>Saphire Jellyfish
+    tier: B
+    disable-crafting: true
+    disable-interaction: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    lore:
+      - "&7A mysterious substance coats this"
+      - "&7fish, pulsating a saphire-like glow."
+      - ""
+      - "&3✄ &8Can be &3filleted&7!"
+SAPHIRE_LOBSTER:
+  base:
+    material: SALMON
+    custom-model-data: 14.0
+    name: <#049cdc>Saphire Lobster
+    tier: B
+    disable-crafting: true
+    disable-interaction: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    lore:
+      - "&7A mysterious substance coats this"
+      - "&7fish, pulsating a saphire-like glow."
+      - ""
+      - "&3✄ &8Can be &3filleted&7!"
+SAPHIRE_PUFFERFISH:
+  base:
+    material: SALMON
+    custom-model-data: 15.0
+    name: <#049cdc>Saphire Pufferfish
+    tier: B
+    disable-crafting: true
+    disable-interaction: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    lore:
+      - "&7A mysterious substance coats this"
+      - "&7fish, pulsating a saphire-like glow."
+      - ""
+      - "&3✄ &8Can be &3filleted&7!"
+SAPHIRE_ROCKFISH:
+  base:
+    material: SALMON
+    custom-model-data: 16.0
+    name: <#049cdc>Saphire Rockfish
+    tier: B
+    disable-crafting: true
+    disable-interaction: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    lore:
+      - "&7A mysterious substance coats this"
+      - "&7fish, pulsating a saphire-like glow."
+      - ""
+      - "&3✄ &8Can be &3filleted&7!"
+SAPHIRE_SALMON:
+  base:
+    material: SALMON
+    custom-model-data: 17.0
+    name: <#049cdc>Saphire Salmon
+    tier: B
+    disable-crafting: true
+    disable-interaction: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    lore:
+      - "&7A mysterious substance coats this"
+      - "&7fish, pulsating a saphire-like glow."
+      - ""
+      - "&3✄ &8Can be &3filleted&7!"
+
+GOLDEN_CARP:
+  base:
+    material: SALMON
+    custom-model-data: 23.0
+    name: <#fca414>Golden Carp
+    tier: S
+    disable-crafting: true
+    disable-interaction: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    lore:
+      - "&7Exposure to a mysterious force"
+      - "&7transformed this aquatic lifeform"
+      - "&7into a glowing golden shell&7&o."
+      - ""
+      - "&3✄ &8Can be &3filleted&7!"
+GOLDEN_CRAB:
+  base:
+    material: SALMON
+    custom-model-data: 24.0
+    name: <#fca414>Golden Crab
+    tier: S
+    disable-crafting: true
+    disable-interaction: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    lore:
+      - "&7Exposure to a mysterious force"
+      - "&7transformed this aquatic lifeform"
+      - "&7into a glowing golden shell&7&o."
+      - ""
+      - "&3✄ &8Can be &3filleted&7!"
+GOLDEN_EEL:
+  base:
+    material: SALMON
+    custom-model-data: 25.0
+    name: <#fca414>Golden Eel
+    tier: S
+    disable-crafting: true
+    disable-interaction: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    lore:
+      - "&7Exposure to a mysterious force"
+      - "&7transformed this aquatic lifeform"
+      - "&7into a glowing golden shell&7&o."
+      - ""
+      - "&3✄ &8Can be &3filleted&7!"
+GOLDEN_JELLYFISH:
+  base:
+    material: SALMON
+    custom-model-data: 27.0
+    name: <#fca414>Golden Jellyfish
+    tier: S
+    disable-crafting: true
+    disable-interaction: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    lore:
+      - "&7Exposure to a mysterious force"
+      - "&7transformed this aquatic lifeform"
+      - "&7into a glowing golden shell&7&o."
+      - ""
+      - "&3✄ &8Can be &3filleted&7!"
+GOLDEN_LOBSTER:
+  base:
+    material: SALMON
+    custom-model-data: 28.0
+    name: <#fca414>Golden Lobster
+    tier: S
+    disable-crafting: true
+    disable-interaction: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    lore:
+      - "&7Exposure to a mysterious force"
+      - "&7transformed this aquatic lifeform"
+      - "&7into a glowing golden shell&7&o."
+      - ""
+      - "&3✄ &8Can be &3filleted&7!"
+GOLDEN_MACKEREL:
+  base:
+    material: SALMON
+    custom-model-data: 29.0
+    name: <#fca414>Golden Mackerel
+    tier: S
+    disable-crafting: true
+    disable-interaction: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    lore:
+      - "&7Exposure to a mysterious force"
+      - "&7transformed this aquatic lifeform"
+      - "&7into a glowing golden shell&7&o."
+      - ""
+      - "&3✄ &8Can be &3filleted&7!"
+
+HEXIFIED_CRAB:
+  base:
+    material: SALMON
+    custom-model-data: 18.0
+    name: <#dc3cfc>Hexified Crab
+    tier: S+
+    disable-crafting: true
+    disable-interaction: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    lore:
+      - "&7An alleged encounter with Hex Magic"
+      - "&7warped the cells of this lifeform on"
+      - "&7an atomic level, transforming them"
+      - "&7into a rotting abomination of its"
+      - "&7former self."
+      - ""
+      - "&3✄ &8Can be &3filleted&7!"
+HEXIFIED_LOBSTER:
+  base:
+    material: SALMON
+    custom-model-data: 19.0
+    name: <#dc3cfc>Hexified Lobster
+    tier: S+
+    disable-crafting: true
+    disable-interaction: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    lore:
+      - "&7An alleged encounter with Hex Magic"
+      - "&7warped the cells of this lifeform on"
+      - "&7an atomic level, transforming them"
+      - "&7into a rotting abomination of its"
+      - "&7former self."
+      - ""
+      - "&3✄ &8Can be &3filleted&7!"
+HEXIFIED_STARFISH:
+  base:
+    material: SALMON
+    custom-model-data: 21.0
+    name: <#dc3cfc>Hexified Starfish
+    tier: S+
+    disable-crafting: true
+    disable-interaction: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    lore:
+      - "&7An alleged encounter with Hex Magic"
+      - "&7warped the cells of this lifeform on"
+      - "&7an atomic level, transforming them"
+      - "&7into a rotting abomination of its"
+      - "&7former self."
+      - ""
+      - "&3✄ &8Can be &3filleted&7!"
+HEXIFIED_VOIDFISH:
+  base:
+    material: SALMON
+    custom-model-data: 22.0
+    name: <#dc3cfc>Hexified Voidfish
+    tier: S+
+    disable-crafting: true
+    disable-interaction: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    lore:
+      - "&7An alleged encounter with Hex Magic"
+      - "&7warped the cells of this lifeform on"
+      - "&7an atomic level, transforming them"
+      - "&7into a rotting abomination of its"
+      - "&7former self."
+      - ""
+      - "&3✄ &8Can be &3filleted&7!"

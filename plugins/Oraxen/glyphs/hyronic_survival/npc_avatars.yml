@@ -1,0 +1,99 @@
+#NPCs Avatars
+1:
+  char: ま
+  texture: hyronic_sur/interface/npc_avatars/1.png
+  ascent: 9.5
+  height: 46
+  chat:
+    permission: oraxen.emoji.hs.1
+2:
+  char: ゐ
+  texture: hyronic_sur/interface/npc_avatars/2.png
+  ascent: 9.5
+  height: 46
+  chat:
+    permission: oraxen.emoji.hs.2
+3:
+  char: ん
+  texture: hyronic_sur/interface/npc_avatars/3.png
+  ascent: 9.5
+  height: 46
+  chat:
+    permission: oraxen.emoji.hs.3
+4:
+  char: ゠
+  texture: hyronic_sur/interface/npc_avatars/4.png
+  ascent: 9.5
+  height: 46
+  chat:
+    permission: oraxen.emoji.hs.4
+5:
+  char: エ
+  texture: hyronic_sur/interface/npc_avatars/5.png
+  ascent: 9.5
+  height: 46
+  chat:
+    permission: oraxen.emoji.hs.5
+6:
+  char: ウ
+  texture: hyronic_sur/interface/npc_avatars/6.png
+  ascent: 9.5
+  height: 46
+  chat:
+    permission: oraxen.emoji.hs.6
+7:
+  char: ゥ
+  texture: hyronic_sur/interface/npc_avatars/7.png
+  ascent: 9.5
+  height: 46
+  chat:
+    permission: oraxen.emoji.hs.7
+8:
+  char: ェ
+  texture: hyronic_sur/interface/npc_avatars/8.png
+  ascent: 9.5
+  height: 46
+  chat:
+    permission: oraxen.emoji.hs.8
+9:
+  char: ぐ
+  texture: hyronic_sur/interface/npc_avatars/9.png
+  ascent: 9.5
+  height: 46
+  chat:
+    permission: oraxen.emoji.hs.9
+10:
+  char: く
+  texture: hyronic_sur/interface/npc_avatars/10.png
+  ascent: 9.5
+  height: 46
+  chat:
+    permission: oraxen.emoji.hs.10
+11:
+  char: ヾ
+  texture: hyronic_sur/interface/npc_avatars/11.png
+  ascent: 9.5
+  height: 46
+  chat:
+    permission: oraxen.emoji.hs.11
+12:
+  char: ヺ
+  texture: hyronic_sur/interface/npc_avatars/12.png
+  ascent: 9.5
+  height: 46
+  chat:
+    permission: oraxen.emoji.hs.12
+13:
+  char: క
+  texture: hyronic_sur/interface/npc_avatars/13.png
+  ascent: 9.5
+  height: 46
+  chat:
+    permission: oraxen.emoji.hs.12
+14:
+  char: ఝ
+  texture: hyronic_sur/interface/npc_avatars/14.png
+  ascent: 9.5
+  height: 46
+  chat:
+    permission: oraxen.emoji.hs.12

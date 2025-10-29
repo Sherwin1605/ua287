@@ -1,0 +1,602 @@
+TITANIUM_CORE:
+  base:
+    material: PAPER
+    disable-crafting: true
+    disable-interaction: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    custom-model-data: 5.0
+    name: <#049cdc>Titanium Core
+    lore:
+      - "&7Made from pure Titanium,"
+      - "&7used to power Hextech."
+    tier: B
+MYTHRIL_INGOT:
+  base:
+    material: PAPER
+    disable-crafting: true
+    disable-interaction: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    custom-model-data: 20.0
+    name: <#049cdc>Mythril Ingot
+    tier: B
+ORICHALCUM_INGOT:
+  base:
+    material: PAPER
+    disable-crafting: true
+    disable-interaction: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    custom-model-data: 21.0
+    name: <#049cdc>Orichalcum Ingot
+    tier: B
+TITANIUM_INGOT:
+  base:
+    material: PAPER
+    disable-crafting: true
+    disable-interaction: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    custom-model-data: 19.0
+    name: <#7f56fc>Titanium Ingot
+    tier: A
+HEXIM_NECKLACE:
+  base:
+    material: PAPER
+    disable-crafting: true
+    disable-interaction: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    name: <#7f56fc>Hexim Necklace
+    custom-model-data: 10.0
+    lore:
+    - '&7Used to upgrade Apocalypse'
+    - '&7armor or convert specialized'
+    - '&7Apocalypse armor into &dHexim'
+    - '&7armor in smithing table.'
+    tier: A
+MORTOS_BELT:
+  base:
+    material: PAPER
+    disable-crafting: true
+    disable-interaction: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    name: <#7f56fc>Mortos Belt
+    custom-model-data: 11.0
+    lore:
+    - '&7Used to upgrade Apocalypse'
+    - '&7armor or convert specialized'
+    - '&7Apocalypse armor into &3Mortos'
+    - '&7armor in smithing table.'
+    tier: A
+CAELETUS_RING:
+  base:
+    material: PAPER
+    name: <#7f56fc>Caeletus Ring
+    custom-model-data: 12.0
+    disable-crafting: true
+    disable-interaction: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    lore:
+    - '&7Used to upgrade Apocalypse'
+    - '&7armor or convert specialized'
+    - '&7Apocalypse armor into the'
+    - '&6Caeletus&7 armor via smithing'
+    - '&7table.'
+    tier: A
+QUINERUS_CLOAK:
+  base:
+    material: PAPER
+    name: <#7f56fc>Quinerus Cloak
+    custom-model-data: 13.0
+    disable-crafting: true
+    disable-interaction: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    lore:
+    - '&7Used to upgrade Apocalypse'
+    - '&7armor or convert specialized'
+    - '&7Apocalypse armor into the'
+    - '&4Quinerus&7 armor via smithing'
+    - '&7table.'
+    tier: A
+NIGHTMARE_FUEL:
+  base:
+    material: PAPER
+    disable-crafting: true
+    disable-interaction: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    custom-model-data: 25.0
+    name: <#7f56fc>Nightmare Fuel
+    lore:
+    - '&7Being near this induces'
+    - '&7petrifying nightmares.'
+    tier: A
+NIGHTMARE_BAR:
+  base:
+    material: PAPER
+    disable-crafting: true
+    disable-interaction: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    name: <#fca414>Nightmare Bar
+    custom-model-data: 26.0
+    tier: S
+    lore:
+    - '&7An ingot forged out of'
+    - '&7pure terror.'
+EXO_STONE:
+  base:
+    material: PAPER
+    disable-crafting: true
+    disable-interaction: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    custom-model-data: 24.0
+    name: <#fca414>Exo Stone
+    lore:
+    - '&7The legendary element forged'
+    - '&7from three fabled metals.'
+    tier: S
+BROKEN_HANDLE:
+  base:
+    material: PAPER
+    disable-crafting: true
+    disable-interaction: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    custom-model-data: 27.0
+    name: <#7f56fc>Broken Handle
+    lore:
+    - '&7The remain of once a powerful'
+    - '&7weapon. Maybe the blacksmith'
+    - '&7can restore it?'
+    tier: A
+BROKEN_STAFF:
+  base:
+    material: PAPER
+    disable-crafting: true
+    disable-interaction: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    custom-model-data: 29.0
+    name: <#7f56fc>Broken Staff
+    lore:
+    - '&7The remain of once a powerful'
+    - '&7weapon. Maybe the blacksmith'
+    - '&7can restore it?'
+    tier: A
+BROKEN_BOW:
+  base:
+    material: PAPER
+    disable-crafting: true
+    disable-interaction: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    custom-model-data: 28.0
+    lore:
+    - '&7The remain of once a powerful'
+    - '&7weapon. Maybe the blacksmith'
+    - '&7can restore it?'
+    tier: A
+    name: <#7f56fc>Broken Bow
+RED_CANDYCANE:
+  base:
+    material: PAPER
+    disable-crafting: true
+    disable-interaction: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    custom-model-data: 32.0
+    name: '&cRed Candycane'
+    lore:
+    - '&7A common sweet loved by'
+    - '&7Hyronians, used to trade'
+    - '&7exclusive items, equipments'
+    - '&7and weapons with &cSanta'
+    - '&a'
+    - '&fి &82022 Chrismas exclusive!'
+    tier: B
+BLUE_CANDYCANE:
+  base:
+    material: PAPER
+    disable-crafting: true
+    disable-interaction: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    custom-model-data: 33.0
+    name: '&9Blue Candycane'
+    lore:
+    - '&7A rarer sweet loved by'
+    - '&7Hyronians, used to trade'
+    - '&7exclusive items, equipments'
+    - '&7and weapons with &cSanta'
+    - '&a'
+    - '&fి &82022 Chrismas exclusive!'
+    tier: A
+SHARD_OF_TRUE_ICE:
+  base:
+    material: PAPER
+    disable-crafting: true
+    disable-interaction: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    custom-model-data: 34.0
+    name: <#b3fafb>Shard of True Ice
+    lore:
+    - '&7A small shard of the mythic'
+    - <#b3fafb>True Ice&7, especially sought
+    - '&7after by &cSanta&7!'
+    - '&a'
+    - '&fి &82022 Chrismas exclusive!'
+    tier: S
+URANIUM:
+  base:
+    material: PAPER
+    disable-crafting: true
+    disable-interaction: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    custom-model-data: 40.0
+    name: <#fca414>Uranium
+    lore:
+    - '&7It gives off a strong'
+    - '&7green light. You keep'
+    - '&7hearing ringing inside'
+    - '&7your ears.'
+    tier: S
+IRIDIUM_CRYSTAL:
+  base:
+    material: PAPER
+    disable-crafting: true
+    disable-interaction: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    custom-model-data: 42.0
+    name: <#fca414>Iridium Crystal
+    lore:
+    - '&7An otherworldly crystal from'
+    - '&7from the heavens.'
+    tier: S
+ENDERCORE:
+  base:
+    material: PAPER
+    disable-crafting: true
+    disable-interaction: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    custom-model-data: 44.0
+    name: <#fca414>Endercore
+    lore:
+    - '&7Can be combined in smithing'
+    - '&7table with these items to imbue'
+    - '&7them with immense &5draconic'
+    - '&5power&7, amplifying their power:'
+    - '&f'
+    - <#DA70D6> Hellfire Armor
+    - <#DA70D6> Warden Armor
+    - <#DA70D6> Apollo Armor
+    - <#DA70D6> Death Armor
+    - '&7'
+    - '&8&oA hex machinery implanted into'
+    - '&8&othe Ender Dragon eons ago'
+    - '&8&oby the Coven in order to take'
+    - '&8&ocontrol of the beast.'
+    tier: S
+DRAGON_SCALE:
+  base:
+    material: PAPER
+    disable-crafting: true
+    disable-interaction: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    custom-model-data: 43.0
+    name: <#fca414>Dragon's Scale
+    lore:
+    - '&7A mythical piece of flesh'
+    - '&7from the Ender Dragon,'
+    - '&7being one of the most'
+    - '&7resillient material in the'
+    - '&7world.'
+    tier: S
+VOID_GEM:
+  base:
+    material: PAPER
+    disable-crafting: true
+    disable-interaction: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    custom-model-data: 45.0
+    name: <#dc3cfc>Void Gem
+    lore:
+    - '&7An extremely volatile gem'
+    - '&7containing the primordial'
+    - '&7energy of <#770737>The Void&7.'
+    tier: S+
+NULL_CELL:
+  base:
+    material: PAPER
+    disable-crafting: true
+    disable-interaction: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    custom-model-data: 46.0
+    name: <#fca414>Null Cell
+    tier: S
+BLOOM_DOOM:
+  base:
+    material: PAPER
+    disable-crafting: true
+    disable-interaction: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    name: <#7f56fc>Bloom Doom
+    custom-model-data: 47.0
+    tier: A
+    lore:
+    - '&7A flower only blooms'
+    - '&7when &cchaos&7 and &ddeath'
+    - '&7meet.'
+VOID_STONE:
+  base:
+    material: PAPER
+    disable-crafting: true
+    disable-interaction: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    name: <#7f56fc>Void Stone
+    custom-model-data: 48.0
+    lore:
+    - '&7A pebble originated from'
+    - '&7the void, holding numerous'
+    - '&7anomalous properties.'
+    tier: A
+
+
+ADVENTURER_BADGE:
+  base:
+    material: PAPER
+    disable-crafting: true
+    disable-interaction: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    name: <#fca414>Adventurer Badge
+    custom-model-data: 56.0
+    lore:
+    - '&7A token of gratitude from'
+    - '&7the &6guild&7.'
+    tier: S
+SILVER_COIN:
+  base:
+    material: PAPER
+    disable-crafting: true
+    disable-interaction: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    name: <#fca414>Silver Coin
+    custom-model-data: 57.0
+    lore:
+    - '&7A coin forged out of'
+    - '&7pure &fhyron&7.'
+    tier: S
+
+PURE_DIAMOND:
+  base:
+    material: PAPER
+    disable-crafting: true
+    disable-interaction: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    name: <#049cdc>Pure Diamond
+    custom-model-data: 58.0
+    lore:
+    - '&7A diamond containing'
+    - '&7no impurities.'
+    - ''
+    - '&8Rarely drops from'
+    - '&8mining &7Diamond Ore&8.'
+    tier: B
+PERFECT_EMERALD:
+  base:
+    material: PAPER
+    disable-crafting: true
+    disable-interaction: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    name: <#049cdc>Perfect Emerald
+    custom-model-data: 59.0
+    lore:
+    - '&7A valuable forged out'
+    - '&7of valuables'
+    - ''
+    - '&8Rarely drops from'
+    - '&8mining &7Emerald Ore&8.'
+    tier: B
+TRUE_BLACK:
+  base:
+    material: PAPER
+    disable-crafting: true
+    disable-interaction: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    name: <#7f56fc>True Black
+    custom-model-data: 60.0
+    lore:
+    - '&7The darkest material'
+    - '&7known to mankind.'
+    - ''
+    - '&8Rarely drops from'
+    - '&8mining &7Obsidian&8.'
+    tier: A
+LOST_SOUL:
+  base:
+    material: PAPER
+    disable-crafting: true
+    disable-interaction: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    name: <#049cdc>Lost Soul
+    custom-model-data: 61.0
+    lore:
+    - '&7Soul claimed by Ravenna''s'
+    - '&7corrupted magic.'
+    tier: B
+LOST_BLUEPRINT:
+  base:
+    material: PAPER
+    disable-crafting: true
+    disable-interaction: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    name: <#7f56fc>Lost Blueprint
+    custom-model-data: 62.0
+    lore:
+    - '&7A blueprint made by'
+    - '&7the last Draford''s'
+    - '&7blacksmith.'
+    tier: A
+
+
+FISH_FILLET:
+  base:
+    material: PAPER
+    disable-crafting: true
+    disable-interaction: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    name: <#77DD77>Fish Fillet
+    custom-model-data: 64.0
+    lore:
+    - '&7A fillet of normal'
+    - '&7fish'
+    tier: C
+MOSS_FISH_FILLET:
+  base:
+    material: PAPER
+    disable-crafting: true
+    disable-interaction: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    name: <#049cdc>Moss Fish Fillet
+    custom-model-data: 65.0
+    lore:
+    - '&7A fillet of moss'
+    - '&7fish'
+    tier: B
+SAPHIRE_FISH_FILLET:
+  base:
+    material: PAPER
+    disable-crafting: true
+    disable-interaction: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    name: <#7f56fc>Saphire Fish Fillet
+    custom-model-data: 66.0
+    lore:
+    - '&7A fillet of saphire'
+    - '&7fish'
+    tier: A
+GOLDEN_FISH_FILLET:
+  base:
+    material: PAPER
+    disable-crafting: true
+    disable-interaction: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    name: <#fca414>Golden Fish Fillet
+    custom-model-data: 67.0
+    lore:
+    - '&7A fillet of golden'
+    - '&7fish'
+    tier: S
+VOID_FISH_FILLET:
+  base:
+    material: PAPER
+    disable-crafting: true
+    disable-interaction: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    name: <#dc3cfc>Void Fish Fillet
+    custom-model-data: 68.0
+    lore:
+    - '&7A fillet of hexified'
+    - '&7fish'
+    tier: S+

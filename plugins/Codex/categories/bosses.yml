@@ -1,0 +1,131 @@
+name: "&c&lWorld &7&lRegions"
+discover_title:
+  title: "&c&lBOSS DEFEATED!"
+  subtitle: "%name%"
+  fade_in: 0
+  stay: 0
+  fade_out: 0
+discover_message:
+- " "
+- "{centered}&c&lBOSS IDENTIFIED!"
+- "{centered}&7%name%"
+- " "
+- "{centered}&7Check it now by using &6/codex"
+- " "
+discover_sound:
+  name: ENTITY_PLAYER_LEVELUP
+  volume: 10
+  pitch: 0.1
+discoveries:
+
+  1:
+    name: "#d4ffffTitanium Golem"
+    lore:
+    - "&8Lost Protector"
+    - ""
+    - "&7Difficulty: &a☠&8☠☠☠"
+    - ""
+    - "#AEC6CF&oAn ancient race of golem, no"
+    - "#AEC6CF&oone quite knows what happened"
+    - "#AEC6CF&oto them. Only a few remained,"
+    - "#AEC6CF&oblindly seeking the one that"
+    - "#AEC6CF&oput an end to their kind."
+    - ""
+    - "&7Health: &c10,000❤"
+    - "&7Damage: &c10+ &8(Melee)"
+    - "&c          30&8 (Slam Attack)"
+    - "&c          45&8 (Enraged Slam Attack)"
+    - "&7"
+    - "&e♦ ᴅʀᴏᴘꜱ:"
+    - "&8- #AEC6CF4x &fTitanium Core &2GUARANTEED"
+    - "&8- #AEC6CF1-4x &fMythril Ingot &2GUARANTEED"
+    - "&8- #AEC6CF1-2x &fTitanium Ingot &aCOMMON"
+    - "&8- #AEC6CF1-3x &fOrichalcum Ingot &aCOMMON"
+    - "&8- &fTitanium Medallion &9VERY RARE"
+    - "&8  (Only for top 3)"
+    discovered_on_mob_kill: 
+      mythic_mobs_id: TITANIUM_GOLEM
+
+  2:
+    name: "#0A494FBlasphemy"
+    lore:
+    - "&8Sin Incarnate"
+    - ""
+    - "&7Difficulty: &e☠☠&8☠☠"
+    - ""
+    - "#AEC6CF&oThis abomination was once a human,"
+    - "#AEC6CF&otransformed by the Fallen Queen to"
+    - "#AEC6CF&oserve as the captain of her army."
+    - "#AEC6CF&oHe once swore to protect the Queen,"
+    - "#AEC6CF&oa promise that carried even in death."
+    - ""
+    - "&7Health: &c50,000❤"
+    - "&7Damage: &c15+ &8(Melee)"
+    - "&7"
+    - "&e♦ ᴅʀᴏᴘꜱ:"
+    - "&8- &fLost Soul &aCOMMON"
+    - "&8- &fMythril Ingot &eRARE"
+    - "&8- &fOrichalcum Ingot &eRARE"
+    - "&8- &fGrimoire of the Loyal &9VERY RARE"
+    - "&8- &fLost Blueprint &dEXTREMELY RARE"
+    discovered_on_mob_kill: 
+      mythic_mobs_id: BLASPHEMY
+
+  3:
+    name: "#702963Ravenna"
+    lore:
+    - "&8Herald of the End"
+    - ""
+    - "&7Difficulty: &5☠☠☠☠"
+    - ""
+    - "#AEC6CF&oThe former queen of Draford, she"
+    - "#AEC6CF&oonce saved Hyronia with her magic,"
+    - "#AEC6CF&obut sarcrified herself to the Gods"
+    - "#AEC6CF&oin the process. Now, she reigns as"
+    - "#AEC6CF&othe patron of the Gods, heralding"
+    - "#AEC6CF&othe inevitable apocalypse that will"
+    - "#AEC6CF&obefall should they return."
+    - ""
+    - "&7Health: &c250,000❤"
+    - "&7Damage: &cHigh &8(Ability)"
+    - "&7"
+    - "&e♦ ᴅʀᴏᴘꜱ:"
+    - "&8- &fNightmare Fuel &aCOMMON"
+    - "&8- &fMythril Ingot &aCOMMON"
+    - "&8- &fOrichalcum Ingot &aCOMMON"
+    - "&8- &fTitanium Ingot &aCOMMON"
+    - "&8- &fGrimoire of the Damned &eRARE"
+    - "&8- &fHexim Necklace &9VERY RARE"
+    - "&8- &fMortos Belt &9VERY RARE"
+    - "&8- &fCaeletus Ring &9VERY RARE"
+    - "&8- &fQuinerus Cloak &9VERY RARE"
+    - "&8- &fBroken Handle &dEXTREMELY RARE"
+    - "&8- &fBroken Staff &dEXTREMELY RARE"
+    - "&8- &fBroken Bow &dEXTREMELY RARE"
+    discovered_on_mob_kill: 
+      mythic_mobs_id: RAVENNA
+
+  4:
+    name: "#9400D3The Null"
+    lore:
+    - "&8Envoy of The Void"
+    - ""
+    - "&7Difficulty: &c☠☠☠&8☠"
+    - ""
+    - "#AEC6CF&oAn anomaly birthed from the Void,"
+    - "#AEC6CF&othis monstrocity wanders the End"
+    - "#AEC6CF&oand obliterate all life, courtesy"
+    - "#AEC6CF&oof the Gods."
+    - ""
+    - "&7Health: &c200,000❤"
+    - "&7Damage: &c50 &8(Melee)"
+    - "&c          35&8 (AOE each 3s)"
+    - "&c          100&8 (Black Hole attack)"
+    - "&7"
+    - "&e♦ ᴅʀᴏᴘꜱ:"
+    - "&8- &fNull Cells &2GUARANTEED!"
+    - "&8- &fEndercore &9VERY RARE"
+    - "&8- &fVoid Gem &4RNG INCARNATE!"
+    - "&8  (Only for top 1)"
+    discovered_on_mob_kill: 
+      mythic_mobs_id: THE_NULL

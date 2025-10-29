@@ -1,0 +1,17 @@
+TRUE_DAMAGE:
+  name: True Damage
+  icon: TRIDENT
+  lore-icon: ''
+  color: '&f'
+  regular-attack:
+    mythiclib-skill-id: empty_skill
+  # No crits possible
+
+HEX:
+  name: Hex
+  icon: TRIDENT
+  lore-icon: '❈'
+  color: '&5'
+  regular-attack:
+    mythiclib-skill-id: empty_skill
+  # No crits possible

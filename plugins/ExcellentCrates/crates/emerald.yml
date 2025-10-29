@@ -1,0 +1,301 @@
+Name: '&a&lEmerald Crate'
+Preview_Config: emerald
+Animation_Config: spin_csgo
+Permission_Required: false
+Attached_Citizens: ''
+Opening:
+  Cooldown: 0
+Key:
+  Ids:
+  - emerald
+  # Sets whether or not keys are required to open this crate.
+  Required: true
+Block:
+  Locations:
+  - -143.0,179.0,-147.0,0.0,0.0,spawn
+  Pushback:
+    Enabled: true
+  Hologram:
+    Enabled: true
+    Template: emerald
+    Y_Offset: 0.0
+  Effect:
+    Model: SPIRAL
+    Particle:
+      Name: VILLAGER_HAPPY
+Rewards:
+  List:
+    emerald_1:
+      Name: Iron Block
+      Chance: 5.0
+      Broadcast: false
+      Preview: 1800020009km800kdlkmspb3e9gmct1qd5p6urivc9m6uorb0400agrfeln78g00
+      Commands: []
+      Items:
+      - 1800020009km800kdlkmspb3e9gmct1qd5p6urivc9m6uorb0400agrfeln78g00
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+    emerald_2:
+      Name: Gold Block
+      Chance: 5.0
+      Broadcast: false
+      Preview: 1800020009km800kdlkmspb3e9gmct1qctnmop2vc9m6uorb0400agrfeln78800
+      Commands: []
+      Items:
+      - 1800020009km800kdlkmspb3e9gmct1qctnmop2vc9m6uorb0400agrfeln78800
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+    emerald_3:
+      Name: Diamond Block
+      Chance: 4.0
+      Broadcast: false
+      Preview: k00010004qb400bmqqbeclhn4ob6egt68qb1dlnmsp2vc9m6uorb0400agrfeln78400
+      Commands: []
+      Items:
+      - k00010004qb400bmqqbeclhn4ob6egt68qb1dlnmsp2vc9m6uorb0400agrfeln78400
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+    emerald_4:
+      Name: Emerald Block
+      Chance: 4.0
+      Broadcast: false
+      Preview: k00010004qb400bmqqbeclhn4ob6egt6arb5e9gmop2vc9m6uorb0400agrfeln78400
+      Commands: []
+      Items:
+      - k00010004qb400bmqqbeclhn4ob6egt6arb5e9gmop2vc9m6uorb0400agrfeln78400
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+    emerald_5:
+      Name: Netherite Block
+      Chance: 4.0
+      Broadcast: false
+      Preview: 1800020009km800pdlkmspb3e9gmct1qdpin8q35e9kn8pavc9m6uorb0400agrfeln78200
+      Commands: []
+      Items:
+      - 1800020009km800pdlkmspb3e9gmct1qdpin8q35e9kn8pavc9m6uorb0400agrfeln78200
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+    emerald_6:
+      Name: Amethyst Block
+      Chance: 6.0
+      Broadcast: false
+      Preview: 5000080016ip0031mmirj5cdp62pjk79gmqpbkd1sn6t2vc9m6uorb0400agrfeln78g00
+      Commands: []
+      Items:
+      - 5000080016ip0031mmirj5cdp62pjk79gmqpbkd1sn6t2vc9m6uorb0400agrfeln78g00
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+    emerald_7:
+      Name: Elytra
+      Chance: 1.0
+      Broadcast: false
+      Preview: a0000g002d5i0043dd5n6aoric5j78ej5dhsn8sj118006t31cs1g01i4c5mm2pr5000000000400agrfeln78080
+      Commands: []
+      Items:
+      - a0000g002d5i0043dd5n6aoric5j78ej5dhsn8sj118006t31cs1g01i4c5mm2pr5000000000400agrfeln78080
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+    emerald_8:
+      Name: Experience Bottle
+      Chance: 3.0
+      Broadcast: false
+      Preview: 2g0004000j9cg01mrb9dpim6sj1cpq3kpboe1in4qb5dphmanr2dtq78r350400agrfeln78g00
+      Commands: []
+      Items:
+      - 2g0004000j9cg01mrb9dpim6sj1cpq3kpboe1in4qb5dphmanr2dtq78r350400agrfeln78g00
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+    emerald_9:
+      Name: Firework Rocket
+      Chance: 3.0
+      Broadcast: false
+      Preview: 1800020009km800pdlkmspb3e9gmct1qcpkn4pbndtp6mnridthmmpbk0400agrfeln78g00
+      Commands:
+      - emerald_9
+      Items:
+      - 1800020009km800pdlkmspb3e9gmct1qcpkn4pbndtp6mnridthmmpbk0400agrfeln78g00
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+    emerald_10:
+      Name: Diamond Horse Armor
+      Chance: 3.0
+      Broadcast: false
+      Preview: 5000080016ip003lmmirj5cdp62pjk79i6iobddtn68nr8dtp76pavc5p6qrri0400agrfeln78080
+      Commands: []
+      Items:
+      - 5000080016ip003lmmirj5cdp62pjk79i6iobddtn68nr8dtp76pavc5p6qrri0400agrfeln78080
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+    emerald_11:
+      Name: Golden Apple
+      Chance: 3.0
+      Broadcast: false
+      Preview: 2g0004000j9cg01crb9dpim6sj1cpq3kprfdhi6arivc5o70r350400agrfeln78800
+      Commands: []
+      Items:
+      - 2g0004000j9cg01crb9dpim6sj1cpq3kprfdhi6arivc5o70r350400agrfeln78800
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+    emerald_12:
+      Name: Enchanted Golden Apple
+      Chance: 1.0
+      Broadcast: false
+      Preview: 2g0004000j9cg020rb9dpim6sj1cpq3kpbecdk62rjkcli5uprfdhi6arivc5o70r350400agrfeln78200
+      Commands: []
+      Items:
+      - 2g0004000j9cg020rb9dpim6sj1cpq3kpbecdk62rjkcli5uprfdhi6arivc5o70r350400agrfeln78200
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+    emerald_13:
+      Name: Amethyst Shard
+      Chance: 4.0
+      Broadcast: false
+      Preview: 5000080016ip0031mmirj5cdp62pjk79gmqpbkd1sn6t2vedk62sj40400agrfeln78g00
+      Commands: []
+      Items:
+      - 5000080016ip0031mmirj5cdp62pjk79gmqpbkd1sn6t2vedk62sj40400agrfeln78g00
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+    emerald_14:
+      Name: Glow Ink Sac
+      Chance: 3.0
+      Broadcast: false
+      Preview: 2g0004000j9cg01crb9dpim6sj1cpq3kprcdtrluqbeddfn6ob30400agrfeln78g00
+      Commands: []
+      Items:
+      - 2g0004000j9cg01crb9dpim6sj1cpq3kprcdtrluqbeddfn6ob30400agrfeln78g00
+      Win_Limit:
+        Player:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+        Global:
+          Enabled: false
+          Amount: -1
+          Cooldown: 0
+          CooldownStep: 1
+Item:
+  Material: PLAYER_HEAD
+  SkinURL: bc0e6d9e242735481918c5fd14498bd760bb9f4ff6430ad4696b38e8a883da97
+  Name: '&a&lEmerald Crate &7(Right-Click)'
+  Lore:
+  - '&fLeft Click &7to preview'
+  - '&fRight Click &7to open'

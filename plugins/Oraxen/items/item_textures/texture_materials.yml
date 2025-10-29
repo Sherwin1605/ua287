@@ -1,0 +1,584 @@
+# For textures only!!!
+
+titanium_core:
+  displayname: '&8Use &f/mi browse&8 to get items!'
+  material: PAPER
+  excludeFromInventory: true
+  Pack:
+    generate_model: true
+    custom_model_data: 5
+    parent_model: item/generated
+    textures:
+    - hyronic_sur/items_textures/materials/titanium_core
+
+titanium_medallion:
+  displayname: '&8Use &f/mi browse&8 to get items!'
+  material: PAPER
+  excludeFromInventory: true
+  Pack:
+    generate_model: true
+    custom_model_data: 6
+    parent_model: item/generated
+    textures:
+    - hyronic_sur/items_textures/materials/titanium_medallion
+
+hexim_necklace:
+  displayname: '&8Use &f/mi browse&8 to get items!'
+  material: PAPER
+  excludeFromInventory: true
+  Pack:
+    generate_model: true
+    custom_model_data: 10
+    parent_model: item/generated
+    textures:
+    - hyronic_sur/items_textures/materials/hexim_necklace
+
+mortos_belt:
+  displayname: '&8Use &f/mi browse&8 to get items!'
+  material: PAPER
+  excludeFromInventory: true
+  Pack:
+    generate_model: true
+    custom_model_data: 11
+    parent_model: item/generated
+    textures:
+    - hyronic_sur/items_textures/materials/mortos_belt
+
+caeletus_ring:
+  displayname: '&8Use &f/mi browse&8 to get items!'
+  material: PAPER
+  excludeFromInventory: true
+  Pack:
+    generate_model: true
+    custom_model_data: 12
+    parent_model: item/generated
+    textures:
+    - hyronic_sur/items_textures/materials/caeletus_ring
+
+quinerus_cloak:
+  displayname: '&8Use &f/mi browse&8 to get items!'
+  material: PAPER
+  excludeFromInventory: true
+  Pack:
+    generate_model: true
+    custom_model_data: 13
+    parent_model: item/generated
+    textures:
+    - hyronic_sur/items_textures/materials/quinerus_cloak
+
+titanium_ingot:
+  displayname: '&8Use &f/mi browse&8 to get items!'
+  material: PAPER
+  excludeFromInventory: true
+  Pack:
+    generate_model: true
+    custom_model_data: 19
+    parent_model: item/generated
+    textures:
+    - hyronic_sur/items_textures/minerals/titanium_ingot
+
+mythril_ingot:
+  displayname: '&8Use &f/mi browse&8 to get items!'
+  material: PAPER
+  excludeFromInventory: true
+  Pack:
+    generate_model: true
+    custom_model_data: 20
+    parent_model: item/generated
+    textures:
+    - hyronic_sur/items_textures/minerals/mythril_ingot
+
+orichalcum_ingot:
+  displayname: '&8Use &f/mi browse&8 to get items!'
+  material: PAPER
+  excludeFromInventory: true
+  Pack:
+    generate_model: true
+    custom_model_data: 21
+    parent_model: item/generated
+    textures:
+    - hyronic_sur/items_textures/minerals/orichalcum_ingot
+
+exo_stone:
+  displayname: '&8Use &f/mi browse&8 to get items!'
+  material: PAPER
+  excludeFromInventory: true
+  Pack:
+    generate_model: true
+    custom_model_data: 24
+    parent_model: item/generated
+    textures:
+    - hyronic_sur/items_textures/materials/exo_stone
+
+nightmare_fuel:
+  displayname: '&8Use &f/mi browse&8 to get items!'
+  material: PAPER
+  excludeFromInventory: true
+  Pack:
+    generate_model: true
+    custom_model_data: 25
+    parent_model: item/generated
+    textures:
+    - hyronic_sur/items_textures/materials/nightmare_fuel
+
+nightmare_bar:
+  displayname: '&8Use &f/mi browse&8 to get items!'
+  material: PAPER
+  excludeFromInventory: true
+  Pack:
+    generate_model: true
+    custom_model_data: 26
+    parent_model: item/generated
+    textures:
+    - hyronic_sur/items_textures/materials/nightmare_bar
+
+calamity_handle:
+  displayname: '&8Use &f/mi browse&8 to get items!'
+  material: PAPER
+  excludeFromInventory: true
+  Pack:
+    generate_model: true
+    custom_model_data: 27
+    parent_model: item/generated
+    textures:
+    - hyronic_sur/items_textures/materials/calamity_handle
+
+catastrophe_broken:
+  displayname: '&8Use &f/mi browse&8 to get items!'
+  material: PAPER
+  excludeFromInventory: true
+  Pack:
+    generate_model: true
+    custom_model_data: 28
+    parent_model: item/generated
+    textures:
+    - hyronic_sur/items_textures/materials/catastrophe_broken
+
+cataclysm_handle:
+  displayname: '&8Use &f/mi browse&8 to get items!'
+  material: PAPER
+  excludeFromInventory: true
+  Pack:
+    generate_model: true
+    custom_model_data: 29
+    parent_model: item/generated
+    textures:
+    - hyronic_sur/items_textures/materials/cataclysm_handle
+
+red_candycane:
+  displayname: '&8Use &f/mi browse&8 to get items!'
+  material: PAPER
+  excludeFromInventory: true
+  Pack:
+    generate_model: true
+    custom_model_data: 32
+    parent_model: item/generated
+    textures:
+    - hyronic_sur/items_textures/materials/red_candycane
+
+blue_candycane:
+  displayname: '&8Use &f/mi browse&8 to get items!'
+  material: PAPER
+  excludeFromInventory: true
+  Pack:
+    generate_model: true
+    custom_model_data: 33
+    parent_model: item/generated
+    textures:
+    - hyronic_sur/items_textures/materials/blue_candycane
+
+shard_of_true_ice:
+  displayname: '&8Use &f/mi browse&8 to get items!'
+  material: PAPER
+  excludeFromInventory: true
+  Pack:
+    generate_model: true
+    custom_model_data: 34
+    parent_model: item/generated
+    textures:
+    - hyronic_sur/items_textures/materials/shard_of_true_ice
+
+uranium_debris:
+  displayname: '&8Use &f/mi browse&8 to get items!'
+  material: PAPER
+  excludeFromInventory: true
+  Pack:
+    generate_model: true
+    custom_model_data: 39
+    parent_model: item/generated
+    textures:
+    - hyronic_sur/items_textures/minerals/uranium_debris
+
+uranium:
+  displayname: '&8Use &f/mi browse&8 to get items!'
+  material: PAPER
+  excludeFromInventory: true
+  Pack:
+    generate_model: true
+    custom_model_data: 40
+    parent_model: item/generated
+    textures:
+    - hyronic_sur/items_textures/minerals/uranium
+
+iridium_shard:
+  displayname: '&8Use &f/mi browse&8 to get items!'
+  material: PAPER
+  excludeFromInventory: true
+  Pack:
+    generate_model: true
+    custom_model_data: 41
+    parent_model: item/generated
+    textures:
+    - hyronic_sur/items_textures/minerals/iridium_shard
+
+iridium_crystal:
+  displayname: '&8Use &f/mi browse&8 to get items!'
+  material: PAPER
+  excludeFromInventory: true
+  Pack:
+    generate_model: true
+    custom_model_data: 42
+    parent_model: item/generated
+    textures:
+    - hyronic_sur/items_textures/minerals/iridium_crystal
+
+dragon_scale:
+  displayname: '&8Use &f/mi browse&8 to get items!'
+  material: PAPER
+  excludeFromInventory: true
+  Pack:
+    generate_model: true
+    custom_model_data: 43
+    parent_model: item/generated
+    textures:
+    - hyronic_sur/items_textures/materials/dragon_scale
+
+endercore:
+  displayname: '&8Use &f/mi browse&8 to get items!'
+  material: PAPER
+  excludeFromInventory: true
+  Pack:
+    generate_model: true
+    custom_model_data: 44
+    parent_model: item/generated
+    textures:
+    - hyronic_sur/items_textures/materials/endercore
+
+endergem:
+  displayname: '&8Use &f/mi browse&8 to get items!'
+  material: PAPER
+  excludeFromInventory: true
+  Pack:
+    generate_model: true
+    custom_model_data: 45
+    parent_model: item/generated
+    textures:
+    - hyronic_sur/items_textures/materials/endergem
+
+null_cell:
+  displayname: '&8Use &f/mi browse&8 to get items!'
+  material: PAPER
+  excludeFromInventory: true
+  Pack:
+    generate_model: true
+    custom_model_data: 46
+    parent_model: item/generated
+    textures:
+    - hyronic_sur/items_textures/materials/null_cell
+
+bloom_doom:
+  displayname: '&8Use &f/mi browse&8 to get items!'
+  material: PAPER
+  excludeFromInventory: true
+  Pack:
+    generate_model: true
+    custom_model_data: 47
+    parent_model: item/generated
+    textures:
+    - hyronic_sur/items_textures/materials/bloom_doom
+
+void_stone:
+  displayname: '&8Use &f/mi browse&8 to get items!'
+  material: PAPER
+  excludeFromInventory: true
+  Pack:
+    generate_model: true
+    custom_model_data: 48
+    parent_model: item/generated
+    textures:
+    - hyronic_sur/items_textures/materials/void_stone
+
+black_powder:
+  displayname: '&8Use &f/mi browse&8 to get items!'
+  material: PAPER
+  excludeFromInventory: true
+  Pack:
+    generate_model: true
+    custom_model_data: 49
+    parent_model: item/generated
+    textures:
+    - hyronic_sur/items_textures/materials/black_powder
+
+detached_eye:
+  displayname: '&8Use &f/mi browse&8 to get items!'
+  material: PAPER
+  excludeFromInventory: true
+  Pack:
+    generate_model: true
+    custom_model_data: 50
+    parent_model: item/generated
+    textures:
+    - hyronic_sur/items_textures/materials/detached_eye
+
+prismatic_fruit:
+  displayname: '&8Use &f/mi browse&8 to get items!'
+  material: PAPER
+  excludeFromInventory: true
+  Pack:
+    generate_model: true
+    custom_model_data: 51
+    parent_model: item/generated
+    textures:
+    - hyronic_sur/items_textures/materials/prismatic_fruit
+
+silver_leaf:
+  displayname: '&8Use &f/mi browse&8 to get items!'
+  material: PAPER
+  excludeFromInventory: true
+  Pack:
+    generate_model: true
+    custom_model_data: 52
+    parent_model: item/generated
+    textures:
+    - hyronic_sur/items_textures/materials/silver_leaf
+
+slimy_mucus:
+  displayname: '&8Use &f/mi browse&8 to get items!'
+  material: PAPER
+  excludeFromInventory: true
+  Pack:
+    generate_model: true
+    custom_model_data: 53
+    parent_model: item/generated
+    textures:
+    - hyronic_sur/items_textures/materials/slimy_mucus
+
+teal_mushroom:
+  displayname: '&8Use &f/mi browse&8 to get items!'
+  material: PAPER
+  excludeFromInventory: true
+  Pack:
+    generate_model: true
+    custom_model_data: 54
+    parent_model: item/generated
+    textures:
+    - hyronic_sur/items_textures/materials/teal_mushroom
+
+grimoire_of_the_damned:
+  displayname: '&8Use &f/mi browse&8 to get items!'
+  material: PAPER
+  excludeFromInventory: true
+  Pack:
+    generate_model: true
+    custom_model_data: 55
+    parent_model: item/generated
+    textures:
+    - hyronic_sur/items_textures/materials/grimoire_of_the_damned
+
+adventurer_badge:
+  displayname: '&8Use &f/mi browse&8 to get items!'
+  material: PAPER
+  excludeFromInventory: true
+  Pack:
+    generate_model: true
+    custom_model_data: 56
+    parent_model: item/generated
+    textures:
+    - hyronic_sur/items_textures/materials/adventurer_badge
+
+silver_coin:
+  displayname: '&8Use &f/mi browse&8 to get items!'
+  material: PAPER
+  excludeFromInventory: true
+  Pack:
+    generate_model: true
+    custom_model_data: 57
+    parent_model: item/generated
+    textures:
+    - hyronic_sur/items_textures/materials/silver_coin
+
+pure_diamond:
+  displayname: '&8Use &f/mi browse&8 to get items!'
+  material: PAPER
+  excludeFromInventory: true
+  Pack:
+    generate_model: true
+    custom_model_data: 58
+    parent_model: item/generated
+    textures:
+    - hyronic_sur/items_textures/materials/pure_diamond
+
+perfect_emerald:
+  displayname: '&8Use &f/mi browse&8 to get items!'
+  material: PAPER
+  excludeFromInventory: true
+  Pack:
+    generate_model: true
+    custom_model_data: 59
+    parent_model: item/generated
+    textures:
+    - hyronic_sur/items_textures/materials/perfect_emerald
+
+true_black:
+  displayname: '&8Use &f/mi browse&8 to get items!'
+  material: PAPER
+  excludeFromInventory: true
+  Pack:
+    generate_model: true
+    custom_model_data: 60
+    parent_model: item/generated
+    textures:
+    - hyronic_sur/items_textures/materials/true_black
+
+lost_soul:
+  displayname: '&8Use &f/mi browse&8 to get items!'
+  material: PAPER
+  excludeFromInventory: true
+  Pack:
+    generate_model: true
+    custom_model_data: 61
+    parent_model: item/generated
+    textures:
+    - hyronic_sur/items_textures/materials/lost_soul
+
+lost_blueprint:
+  displayname: '&8Use &f/mi browse&8 to get items!'
+  material: PAPER
+  excludeFromInventory: true
+  Pack:
+    generate_model: true
+    custom_model_data: 62
+    parent_model: item/generated
+    textures:
+    - hyronic_sur/items_textures/materials/lost_blueprint
+
+fish_fillet:
+  displayname: ''
+  material: PAPER
+  excludeFromInventory: true
+  Pack:
+    generate_model: true
+    custom_model_data: 64
+    parent_model: item/generated
+    textures:
+    - hyronic_sur/items_textures/materials/fish_fillet
+
+moss_fish_fillet:
+  displayname: ''
+  material: PAPER
+  excludeFromInventory: true
+  Pack:
+    generate_model: true
+    custom_model_data: 65
+    parent_model: item/generated
+    textures:
+    - hyronic_sur/items_textures/materials/moss_fish_fillet
+
+saphire_fish_fillet:
+  displayname: ''
+  material: PAPER
+  excludeFromInventory: true
+  Pack:
+    generate_model: true
+    custom_model_data: 66
+    parent_model: item/generated
+    textures:
+    - hyronic_sur/items_textures/materials/saphire_fish_fillet
+
+golden_fish_fillet:
+  displayname: ''
+  material: PAPER
+  excludeFromInventory: true
+  Pack:
+    generate_model: true
+    custom_model_data: 67
+    parent_model: item/generated
+    textures:
+    - hyronic_sur/items_textures/materials/golden_fish_fillet
+
+void_fish_fillet:
+  displayname: ''
+  material: PAPER
+  excludeFromInventory: true
+  Pack:
+    generate_model: true
+    custom_model_data: 68
+    parent_model: item/generated
+    textures:
+    - hyronic_sur/items_textures/materials/void_fish_fillet
+
+grimoire_of_the_loyal:
+  displayname: '&8Use &f/mi browse&8 to get items!'
+  material: PAPER
+  excludeFromInventory: true
+  Pack:
+    generate_model: true
+    custom_model_data: 63
+    parent_model: item/generated
+    textures:
+    - hyronic_sur/items_textures/materials/grimoire_of_the_loyal
+
+demeter_favour:
+  displayname: '&8Use &f/mi browse&8 to get items!'
+  material: PAPER
+  excludeFromInventory: true
+  Pack:
+    generate_model: true
+    custom_model_data: 69
+    parent_model: item/generated
+    textures:
+    - hyronic_sur/items_textures/materials/demeter_favour
+
+mythril:
+  displayname: '&8Use &f/mi browse&8 to get items!'
+  material: PAPER
+  excludeFromInventory: true
+  Pack:
+    generate_model: true
+    custom_model_data: 70
+    parent_model: item/generated
+    textures:
+    - hyronic_sur/items_textures/minerals/mythril
+
+orichalcum:
+  displayname: '&8Use &f/mi browse&8 to get items!'
+  material: PAPER
+  excludeFromInventory: true
+  Pack:
+    generate_model: true
+    custom_model_data: 71
+    parent_model: item/generated
+    textures:
+    - hyronic_sur/items_textures/minerals/orichalcum
+
+titanium:
+  displayname: '&8Use &f/mi browse&8 to get items!'
+  material: PAPER
+  excludeFromInventory: true
+  Pack:
+    generate_model: true
+    custom_model_data: 72
+    parent_model: item/generated
+    textures:
+    - hyronic_sur/items_textures/minerals/titanium
+
+bizzare_fruit:
+  displayname: '&8Use &f/mi browse&8 to get items!'
+  material: PAPER
+  excludeFromInventory: true
+  Pack:
+    generate_model: true
+    custom_model_data: 73
+    parent_model: item/generated
+    textures:
+    - hyronic_sur/items_textures/materials/bizzare_fruit

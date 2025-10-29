@@ -1,0 +1,64 @@
+#Custom GUIs
+profile_gui:
+  char: ఀ
+  texture: hyronic_sur/interface/custom_guis/profile.png
+  ascent: 19
+  height: 256
+  chat:
+    permission: oraxen.emoji.hs.coins
+blacksmith:
+  char: ఋ
+  texture: hyronic_sur/interface/custom_guis/blacksmith_old.png
+  ascent: 19
+  height: 256
+  chat:
+    permission: oraxen.emoji.hs.coins
+jeweler:
+  char: ఌ
+  texture: hyronic_sur/interface/custom_guis/jeweler_old.png
+  ascent: 19
+  height: 256
+  chat:
+    permission: oraxen.emoji.hs.coins
+alchemist:
+  char: ఙ
+  texture: hyronic_sur/interface/custom_guis/alchemist_old.png
+  ascent: 19
+  height: 256
+  chat:
+    permission: oraxen.emoji.hs.coins
+accessory_room:
+  char: చ
+  texture: hyronic_sur/interface/custom_guis/accessory_room.png
+  ascent: 19
+  height: 256
+  chat:
+    permission: oraxen.emoji.hs.coins
+crate:
+  char: ఛ
+  texture: hyronic_sur/interface/custom_guis/crate.png
+  ascent: 19
+  height: 256
+  chat:
+    permission: oraxen.emoji.hs.coins
+forging:
+  char: జ
+  texture: hyronic_sur/interface/custom_guis/forging.png
+  ascent: 19
+  height: 256
+  chat:
+    permission: oraxen.emoji.hs.coins
+guild:
+  char: ట
+  texture: hyronic_sur/interface/custom_guis/guild.png
+  ascent: 19
+  height: 256
+  chat:
+    permission: oraxen.emoji.hs.coins
+chrismas_gui:
+  char: ఠ
+  texture: hyronic_sur/interface/custom_guis/chrismas.png
+  ascent: 19
+  height: 256
+  chat:
+    permission: oraxen.emoji.hs.coins

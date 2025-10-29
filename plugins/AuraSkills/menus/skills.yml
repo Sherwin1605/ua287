@@ -1,0 +1,171 @@
+title: '         ᴀᴅᴠᴇɴᴛᴜʀᴇʀ ꜱᴋɪʟʟꜱ'
+size: 6
+fill:
+  enabled: true
+  material: clay_ball
+  nbt:
+    CustomModelData: 1
+items:
+  close:
+    pos: 5,4
+    material: book
+    nbt:
+      CustomModelData: 2
+    display_name: <red>{{close}}
+templates:
+  skill:
+    contexts:
+      archery:
+        group: first_row
+        order: 2
+        material: book
+        nbt:
+          CustomModelData: 32
+      fighting:
+        group: first_row
+        order: 1
+        material: book
+        nbt:
+          CustomModelData: 33
+        flags:
+        - hide_attributes
+      defense:
+        group: first_row2
+        order: 1
+        material: book
+        nbt:
+          CustomModelData: 34
+        flags:
+        - hide_attributes
+      endurance:
+        group: first_row
+        order: 4
+        material: golden_apple
+      farming:
+        group: second_row
+        order: 1
+        material: book
+        nbt:
+          CustomModelData: 30
+        flags:
+        - hide_attributes
+      foraging:
+        group: second_row
+        order: 2
+        material: book
+        nbt:
+          CustomModelData: 35
+        flags:
+        - hide_attributes
+      mining:
+        group: second_row
+        order: 3
+        material: book
+        nbt:
+          CustomModelData: 31
+        flags:
+        - hide_attributes
+      fishing:
+        group: second_row
+        order: 4
+        material: book
+        nbt:
+          CustomModelData: 36
+      excavation:
+        group: second_row
+        order: 5
+        material: golden_shovel
+        flags:
+        - hide_attributes
+      agility:
+        group: first_row
+        order: 4
+        material: feather
+      alchemy:
+        group: first_row2
+        order: 2
+        material: book
+        nbt:
+          CustomModelData: 37
+        flags:
+        - hide_potion_effects
+      enchanting:
+        group: second_row
+        order: 7
+        material: book
+        nbt:
+          CustomModelData: 72
+    groups:
+      first_row:
+        start: 3,2
+        end: 3,4
+        align: center
+      first_row2:
+        start: 3,5
+        end: 3,7
+        align: center
+      second_row:
+        start: 2,0
+        end: 2,8
+        align: center
+    display_name: <#FDFD96>{skill} <#9e957a>ʟᴠʟ.<#a88b32>{level}
+    lore:
+    - text: '{desc}'
+      wrap: true
+      style: <gray>
+    - component: ability_levels
+    - component: mana_ability_info
+    - ' '
+    - component: progress
+    - component: max_level
+    - ' '
+    - <yellow>{{skill_click}}
+components:
+  stats_leveled:
+    context: Skill
+    lore:
+    - ' '
+    - '<gray>{{stats_leveled}}: {entries[<gray>, ]}'
+  ability_levels:
+    context: Skill
+    lore:
+    - ' '
+    - '<gradient:#ccbb83:#fffdf5>{{ability_levels}}: \n{entries[]}'
+  mana_ability_info:
+    context: Skill
+    lore:
+    - ' '
+    - <light_purple><bold>{{mana_ability}}</bold> <blue>{name} {level}
+    - '  {entries[\n  ](3)}'
+  progress:
+    context: Skill
+    lore:
+    - '<gray>{{progress_to_level}} {next_level}: <yellow>{percent}%'
+    - '{bar}'
+    - <dark_gray> {current_xp}/{level_xp} {xp_unit}
+  max_level:
+    context: Skill
+    lore:
+    - <rainbow:!2><bold>{{max_level}}!
+  skill_job_active:
+    context: Skill
+    lore:
+    - ' '
+    - <dark_gray>▶ <green>{{active_job}}
+formats:
+  stat_leveled_entry: '{color}{stat}<gray>'
+  unlocked_ability_entry: \n  <#b39f5f>{name} {level} \n  <dark_gray>{info}
+  locked_ability_entry: \n  <#33302b><strikethrough>{name}
+  duration_entry: '<gray>{{duration}}: <green>{duration}s '
+  mana_cost_entry: '<gray>{{mana_cost}}: <aqua>{mana_cost} '
+  cooldown_entry: '<gray>{{cooldown}}: <yellow>{cooldown}s '
+  damage_entry: '<gray>{{damage}}: <red>{value} '
+  damage_per_mana_entry: '<gray>{{damage}}: <red>+{value}% / Mana '
+  max_mana_cost_entry: '<gray>{{max_mana_cost}}: <aqua>{mana_cost} '
+  attack_speed_entry: '<gray>{{attack_speed}}: <red>+{value}% '
+  bar_completed: '<green><strikethrough> '
+  bar_current: '<yellow><strikethrough> '
+  bar_remaining: '<gray><strikethrough> '
+options:
+  bar_length: 30
+file_version: 1

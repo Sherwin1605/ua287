@@ -1,0 +1,6 @@
+ # default settings for all groups, all groups will take properties from this section unless player's primary group overrides a specific setting
+_DEFAULT_:
+  tabprefix: "%luckperms_primary_group_name% &f"
+  tabprefix: "%luckperms_primary_group_name% &f"
+  abovename: "%luckperms_suffix%"
+  belowname: "&c%health%❤ &8- &3%javascript_power%✯" 

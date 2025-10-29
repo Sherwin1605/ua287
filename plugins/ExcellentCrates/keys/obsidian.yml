@@ -1,0 +1,16 @@
+Name: §5&lObsidian Crate Key
+Virtual: false
+Item:
+  Material: PAPER
+  Amount: 1
+  Durability: 0
+  Name: '&5Obsidian Crate Key'
+  Lore:
+  - '&8Consumed on use'
+  - ''
+  - '&7Can be used to open'
+  - '&7an &5&lOBSIDIAN&7 crate!'
+  Custom_Model_Data: 15
+  Item_Flags:
+  - HIDE_ATTRIBUTES
+  Unbreakable: false

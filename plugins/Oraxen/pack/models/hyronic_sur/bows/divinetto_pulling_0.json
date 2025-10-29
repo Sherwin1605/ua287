@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "hyronic_sur/items_textures/bow/divenetto_pulling_0"
+  }
+}

@@ -1,0 +1,248 @@
+General:
+  # Do not change! Used to track the config version when major updates happen.
+  Version: 1
+  DisplayName: '&dThe Veil'
+  # Whether to show the display name above in a title message to the players when the dungeon begins.
+  ShowTitleOnStart: false
+  Lobby:
+    Enabled: false
+    Location:
+      ==: org.bukkit.Location
+      x: 8.0
+      y: 10.0
+      z: 36.0
+      pitch: 0.0
+      yaw: 0.0
+  Gamemode: SURVIVAL
+  # How many times the player can die before being unable to respawn. 0 will give the player infinite lives.
+  PlayerLives: 1
+  # Whether players who lose all their lives get put into spectator. If this is set to false, the player will instead be kicked from the dungeon.
+  # NOTE: Spectators cannot use the spectator menu to exit the dungeon.
+  DeadPlayersSpectate: true
+  # Whether players keep their inventory upon entering the dungeon.
+  KeepInventoryOnEnter: true
+  # Whether players keep their current health upon entering the dungeon.
+  # (Otherwise,they will be restored to full health upon entry, and set back to their previous health upon exit.)
+  KeepHealthOnEnter: false
+  # Whether players keep their current food level upon entering the dungeon.
+  # (Otherwise, they will be restored to full food upon entry, and set back to their previous food level upon exit.)
+  KeepFoodOnEnter: false
+  # Whether players keep their current potion effects upon entering the dungeon.
+  # (Otherwise, they will have all potion effects cleared upon entry.)
+  KeepPotionEffectsOnEnter: false
+  # Whether to kick players who disconnect during the dungeon.
+  KickOfflinePlayers: true
+  # How long to wait in seconds after a disconnect before kicking the player from the dungeon.
+  KickOfflinePlayersDelay: 300
+  # The maximum number of backups the plugin will save before deleting old backups.
+  MaxBackups: 3
+  # The maximum number of instances there can be of this dungeon at a time.
+  MaxInstances: 5
+  
+  # When set to 'true', when players take items from reward functions, they'll be put in a rewards list.
+  # Upon finishing the dungeon, the players will be given the rewards.
+  GiveLootAfterCompletion: false
+  # Loot Cooldown makes it so that players can't loot chests they've already looted recently.
+  # Reward functions can be configured individually, or use the default values provided in this section.
+  LootCooldown:
+    Enabled: false
+    # Whether or not the cooldown is per-chest or dungeon-wide. !!NOT CURRENTLY WORKING!!
+    PerReward: true
+    # Setting this to TIMER will make it so the player can't get loot again until their cooldown is up.
+    # Options like HOURLY, DAILY, WEEKLY, and MONTHLY will let you configure a set time for loot to be reset.
+    CooldownType: DAILY
+    # If type is set to TIMER, this is how many minutes until the player can acquire loot again.
+    # Otherwise, this is the time of day when the reset occurs in hours.
+    CooldownTime: 0
+    # If type is set to WEEKLY, ResetDay determines what numbered day of the week the reset occurs.
+    # "Sunday" would be 1, "Monday" is 2, "Tuesday" is 3, etc.
+    # If type is set to MONTHLY, ResetDay determines what day of the month the reset occurs.
+    # Doesn't do anything if CooldownType is set to "TIMER"
+    ResetDay: 1
+  
+  
+  # Access cooldown is used to limit how quickly a player can play this dungeon again after playing it.
+  # NOTE: Be wary using this, as this can result in players being unable to play with each other if one of them has already run the dungeon recently!
+  #    The "LootCooldown" section should be used instead to avoid this.
+  AccessCooldown:
+    Enabled: false
+    # Setting this to TIMER will make it so the player can't get run this dungeon again until their cooldown is up.
+    # Options like HOURLY, DAILY, WEEKLY, and MONTHLY will let you configure a set time for access to be reset.
+    CooldownType: DAILY
+    # If type is set to TIMER, this is how many minutes until the player can player the dungeon again.
+    # Otherwise, this is the time of day when the reset occurs in hours.
+    CooldownTime: 0
+    # If type is set to WEEKLY, ResetDay determines what numbered day of the week the reset occurs.
+    # "Sunday" would be 1, "Monday" is 2, "Tuesday" is 3, etc.
+    # If type is set to MONTHLY, ResetDay determines what day of the month the reset occurs.
+    ResetDay: 1
+  ExitLocation:
+    world: veil_0
+    x: 11.981387711889997
+    y: 9.0
+    z: -17.69999998807907
+    pitch: 25.796522
+    yaw: 176.71649
+
+Requirements:
+  # A list of permissions the player must have.
+  Permissions:
+  - access.theveil
+  MinPartySize: 1
+  MaxPartySize: 4
+  # A list of dungeons the player must have completed. Note: "Finished" means the "Finish Dungeon" function was used in the required dungeon.
+  DungeonsComplete: []
+  Cost: 0
+
+AccessKeys:
+  KeyItems:
+  - ==: org.bukkit.inventory.ItemStack
+    v: 3700
+    type: PAPER
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":"Rusty
+        Key"}],"text":""}'
+      lore:
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":""}],"text":""}'
+      - '{"extra":[{"italic":false,"color":"gray","text":"Can be used to access "},{"italic":false,"color":"dark_aqua","text":"The"}],"text":""}'
+      - '{"extra":[{"italic":false,"color":"dark_aqua","text":"Veil"},{"italic":false,"color":"gray","text":"
+        dungeon once!"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":""}],"text":""}'
+      - '{"extra":[{"italic":false,"color":"white","text":"஻"}],"text":""}'
+      custom-model-data: 14
+      attribute-modifiers:
+        GENERIC_ATTACK_SPEED:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: 0.0
+          name: mmoitemsDecoy
+          uuid: 87851e28-af12-43f6-898e-c62bde6bd0ec
+          operation: 0
+      ItemFlags:
+      - HIDE_ATTRIBUTES
+      internal: H4sIAAAAAAAA/52QvUrEQBSFr9qMwi4q2FiNU6SykS0WUhmSYRM2k5HMRAghDDE7/oAksJkUy7KvJFhb+iI+iomQ4GJnc4v7nXvu4ZwAILhgjAeSMqG8NHJY4KqQxxT8jJBrYs3dosIPGreNXmFT46IsddNgayafdc9n9/rl1ZrjVVs96brCdVXqqw707PHr7YPkCM7HD/1UMr2jMGGBcGkYOhHliUBwuq8JPJh4SbSgPFJLmqob1F0Mii4lheO4bcwGL/UGwdQXMk4VjVzfiaSA2y0RpjDEJsOqi8MXwtTrDbGzLRmtBq4+3xuz7g6ynOzy3RFcjhI3EZIzxbhHQ+U50gGAKYKzPx5wmOW/Y/7UaGf/7XDPSwY0hgMHvgH+rklmsgEAAA==
+  - ==: org.bukkit.inventory.ItemStack
+    v: 3700
+    type: PAPER
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":"Rusty
+        Key: "},{"italic":false,"color":"light_purple","text":"The Veil"}],"text":""}'
+      lore:
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":""}],"text":""}'
+      - '{"extra":[{"italic":false,"color":"gray","text":"Can be used to access "},{"italic":false,"color":"light_purple","text":"The"}],"text":""}'
+      - '{"extra":[{"italic":false,"color":"light_purple","text":"Veil"},{"italic":false,"color":"gray","text":"
+        dungeon once!"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":""}],"text":""}'
+      - '{"extra":[{"italic":false,"color":"white","text":"஻"}],"text":""}'
+      custom-model-data: 14
+      attribute-modifiers:
+        GENERIC_ATTACK_SPEED:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: 0.0
+          name: mmoitemsDecoy
+          uuid: 87851e28-af12-43f6-898e-c62bde6bd0ec
+          operation: 0
+      ItemFlags:
+      - HIDE_ATTRIBUTES
+      internal: H4sIAAAAAAAA/52QPWuEQBCGJ0kjlw+SwDWpNltYpT+wE11O0XWDu3cgIovRzQcEhXMt5Li/dJA6Zf5Ifko0gtxBqjQDw/sw88zMAAyYU8p8QSiXbhLZ1HdkyGICXorxAzYXTl6hJ4XaRpVI1ygvCtU0yCzFqxrycq3e3s0FKtvqRdUVqqtC3ffBkD1/7z9xZsDttGGoUiSPBM7dVbQkLJIBSQy4PiZ8Fy6ER+Sa+OEIXE5Ar0hgHreN7lCgOmtUQYPGGdxNmLPiglFJmUtC6drCBoArA24mgESOZ0eCw2naK848LuJkHB5sMde5xhYe2v4QtuS63nTYSrf4yEN+fTR604N/6uBdtjs0/32rlf73p9nhLOGTGE5s+AFWPdj5wgEAAA==
+  - ==: org.bukkit.inventory.ItemStack
+    v: 3700
+    type: PAPER
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"#049CDC","text":"Rusty
+        Key"}],"text":""}'
+      lore:
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":""}],"text":""}'
+      - '{"extra":[{"italic":false,"color":"gray","text":"Can be used to access "},{"italic":false,"color":"light_purple","text":"The"}],"text":""}'
+      - '{"extra":[{"italic":false,"color":"light_purple","text":"Veil"},{"italic":false,"color":"gray","text":"
+        dungeon once!"}],"text":""}'
+      - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":""}],"text":""}'
+      - '{"extra":[{"italic":false,"color":"white","text":"஺"}],"text":""}'
+      custom-model-data: 14
+      attribute-modifiers:
+        GENERIC_ATTACK_SPEED:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: 0.0
+          name: mmoitemsDecoy
+          uuid: 87851e28-af12-43f6-898e-c62bde6bd0ec
+          operation: 0
+      ItemFlags:
+      - HIDE_ATTRIBUTES
+      internal: H4sIAAAAAAAA/52QTUvDQBCGR72E+oEWvHhaV+jJgwehGESIydKEZrOS3RZCCEtM1g+QBJrNIZT+JcGrV/+IP8XEQmjx5mVgeB9mnpkBgAGnlDJPEMqlEwUW9Wzps5CAG2N8iUdjOy3Qo0J1pXKkS5RmmaoqNMrFi+ryfK5e30ZjlNfFsyoLVBaZOm+DLnv6fv/EiQHDfkNXpYgeCOw7s2BCWCCnJDLgeJvwHDgQLpFz4vlr4LAHWkUCw9uLq+ubLM/uwrrSDZqqZg/OesaeccGopMwhvnQsYQHAkQEnPUAC27UCwWE3bv0GLhdhtJ7sLjHXqcYm7tr2Cjbhulw02IyXeEtCfn1UetGCf13wKlltOv8+1Iz/+81kc5bwSAg79/ADodsVLLwBAAA=
+  - ==: org.bukkit.inventory.ItemStack
+    v: 3700
+    type: PAPER
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"text":"","extra":[{"text":"Rusty Key","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"#049CDC","bold":false}]}'
+      lore:
+      - '{"text":"","extra":[{"text":"","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"white","bold":false}]}'
+      - '{"text":"","extra":[{"text":"Can be used to access ","italic":false,"color":"gray"},{"text":"The","italic":false,"color":"light_purple"}]}'
+      - '{"text":"","extra":[{"text":"Veil","italic":false,"color":"light_purple"},{"text":"
+        dungeon once!","italic":false,"color":"gray"}]}'
+      - '{"text":"","extra":[{"text":"","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"white","bold":false}]}'
+      - '{"text":"","extra":[{"text":"஺","italic":false,"color":"white"}]}'
+      custom-model-data: 14
+      attribute-modifiers:
+        GENERIC_ATTACK_SPEED:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: 0.0
+          name: mmoitemsDecoy
+          uuid: 87851e28-af12-43f6-898e-c62bde6bd0ec
+          operation: 0
+      ItemFlags:
+      - HIDE_ATTRIBUTES
+      internal: H4sIAAAAAAAA/3WQTUuEQBiA3+oi2we10KXTNIGnDh2CSCIwHVZZP0JnF8RkMJ2tIBRWPciyv2dvQdeO9kf6Kenaym7R5YVhHt555ukBCHBsmrZOieky1bNkU1eYYTsEHnxcLSb4vJnV4koJE/TIUZHxGOUpCqOIZxmqFjF95isoHvOX15pFcZE88TRBaRLx0/Z2xUy+3j5wIEC/e7WZjHr3BHbVkTUgtsWGxBPgcJPQVdijGmFjohstsN8BtTaB/s3ZxeV1FEe3TpHlJRrycgdOOkYZudQ2mWmrxGCqTGUAOBDgqAOIpWiyRV3Y9mu/nuZSx2s3azPs5mGOJdwc65/YAzdPpyWW/BnekGCf71k+rcG/LngezNedl5ElH4v/pBV/yorLquLvqMH6LqoTB7bu4BuvNxrV0AEAAA==
+  Consume: true
+
+Rules:
+  SpawnMobs: false
+  SpawnAnimals: false
+  SpawnMonsters: false
+  AllowBreakBlocks: false
+  AllowPlaceBlocks: false
+  AllowEnderpearl: false
+  AllowChorusFruit: false
+  AllowBucket: false
+  PreventPlantGrowth: true
+  PvP: false
+  HideDeathMessages: true
+  AllowedCommands:
+  - party
+  - p
+  - dungeon leave
+  - md leave
+  - leave
+  - spawn
+  # Vanilla Minecraft item materials to ban. (Must be a valid Spigot material.)
+  BannedItems: []
+  # A list of more detailed items to ban from the dungeon. (Recommended to use the /md banitem command instead of modifying this directly.)
+  CustomBannedItems: []
+  # Toggles whether banned items can be picked up if they are on the ground in the dungeon.
+  AllowPickupBannedItems: false
+  # Toggles whether banned items can be crafted while inside the dungeon.
+  AllowCraftBannedItems: false
+  # Toggles whether banned items can be placed in or removed from storage in the dungeon.
+  AllowStorageBannedItems: false
+  # A list of blocks that are allowed to be PLACED in this dungeon, regardless of the "AllowPlaceBlocks" rule.
+  # Remove the [] and add the blocks like a list as show in the comments.
+  BlockPlaceWhitelist: []
+  # - DIAMOND_ORE
+  # - GOLD_ORE
+  # A list of blocks that are allowed to be BROKEN in this dungeon, regardless of the "AllowBreakBlocks" rule.
+  BlockBreakWhitelist: []
+  # A list of blocks that are NOT allowed to be PLACED in this dungeon, regardless of the "AllowPlaceBlocks" rule.
+  BlockPlaceBlacklist: []
+  # A list of blocks that are NOT allowed to be BROKEN in this dungeon, regardless of the "AllowBreakBlocks" rule.
+  BlockBreakBlacklist: []
+  # When set to true, prevents armor, weapons and/or tools from losing durability while in the dungeon
+  PreventDurabilityLoss:
+    Armor: true
+    Weapons: true
+    Tools: true

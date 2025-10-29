@@ -1,0 +1,17 @@
+# For more information, check out the plugin manual or join us on Discord:
+# http://www.mythicmobs.net
+#  
+
+Harbinger:
+  Action: ADD
+  Type: Harbinger
+  Chance: 0.01
+  Priority: 20
+  Worlds: world_the_end
+
+Daedalus_Warrior:
+  Action: ADD
+  Type: Daedalus_Warrior
+  Chance: 0.01
+  Priority: 20
+  Worlds: world_the_end

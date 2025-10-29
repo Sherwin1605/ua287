@@ -1,0 +1,356 @@
+# ==============================================================
+#                       GLOBAL QUESTS FILE
+# ==============================================================
+# Quests must be numbered and increment from 1 to 1.
+# Please be attentive to the indentation and respect the scheme.
+# This could cause several bugs.
+# ==============================================================
+# AVAILABLE QUESTS TYPES :
+# https://ordwenplugins.gitbook.io/odailyquests/quests/quests-types
+# ==============================================================
+# AVAILABLE REWARDS TYPES :
+# https://ordwenplugins.gitbook.io/odailyquests/quests/rewards-types
+# ==============================================================
+# AVAILABLE PLUGIN PLACEHOLDERS FOR QUESTS DESCRIPTIONS :
+# %progress% is replaced by the progression of the quest.
+# %required% is replaced by the required amount to complete the quest.
+# ==============================================================
+# More tips available on Wiki :
+# https://ordwenplugins.gitbook.io/odailyquests/
+# Need help ? https://discord.gg/Q8sw5KFvqg
+# For more affected objects or types, please make suggestion.
+# ==============================================================
+quests:
+
+  1:
+    name: "&6Commission: &eExpert Miner"
+    menu_item: "custommodeldata:BOOK:115"
+    description:
+      - "&7Complete the guild's commission"
+      - "&7to earn bountiful rewards!"
+      - ""
+      - "&8Tasks"
+      - "&f Mine 150 blocks"
+      - ""
+      - "&8Rewards"
+      - "&e +150 Adv EXP"
+      - "&f +10 Hyrons"
+    quest_type: BREAK
+    required_amount: 5
+    reward:
+      reward_type: COMMAND
+      commands:
+        - "points give %player% 10"
+        - "levels addexp %player% 150"
+
+  2:
+    name: "&6Commission: &eExperienced"
+    menu_item: "custommodeldata:BOOK:115"
+    description:
+      - "&7Complete the guild's commission"
+      - "&7to earn bountiful rewards!"
+      - ""
+      - "&8Tasks"
+      - "&f Gain 10 levels"
+      - ""
+      - "&8Rewards"
+      - "&e +150 Adv EXP"
+      - "&f +10 Hyrons"
+    quest_type: EXP_LEVELS
+    required_amount: 10
+    reward:
+      reward_type: COMMAND
+      commands:
+        - "points give %player% 10"
+        - "levels addexp %player% 150"
+
+  3:
+    name: "&6Commission: &eConsumer"
+    menu_item: "custommodeldata:BOOK:115"
+    description:
+      - "&7Complete the guild's commission"
+      - "&7to earn bountiful rewards!"
+      - ""
+      - "&8Tasks"
+      - "&f Consume 15 random items"
+      - ""
+      - "&8Rewards"
+      - "&e +150 Adv EXP"
+      - "&f +10 Hyrons"
+    quest_type: CONSUME
+    required_amount: 15
+    reward:
+      reward_type: COMMAND
+      commands:
+        - "points give %player% 10"
+        - "levels addexp %player% 150"
+
+  3:
+    name: "&6Commission: &eChef"
+    menu_item: "custommodeldata:BOOK:115"
+    description:
+      - "&7Complete the guild's commission"
+      - "&7to earn bountiful rewards!"
+      - ""
+      - "&8Tasks"
+      - "&f Cook 10 items"
+      - ""
+      - "&8Rewards"
+      - "&e +150 Adv EXP"
+      - "&f +10 Hyrons"
+    quest_type: COOK
+    required_amount: 10
+    reward:
+      reward_type: COMMAND
+      commands:
+        - "points give %player% 10"
+        - "levels addexp %player% 150"
+
+  4:
+    name: "&6Commission: &eCold Blooded"
+    menu_item: "custommodeldata:BOOK:115"
+    description:
+      - "&7Complete the guild's commission"
+      - "&7to earn bountiful rewards!"
+      - ""
+      - "&8Tasks"
+      - "&f Slay 20 mobs"
+      - ""
+      - "&8Rewards"
+      - "&e +150 Adv EXP"
+      - "&f +10 Hyrons"
+    quest_type: KILL
+    required_amount: 20
+    reward:
+      reward_type: COMMAND
+      commands:
+        - "points give %player% 10"
+        - "levels addexp %player% 150"
+
+  5:
+    name: "&6Commission: &eRoddin'"
+    menu_item: "custommodeldata:BOOK:115"
+    description:
+      - "&7Complete the guild's commission"
+      - "&7to earn bountiful rewards!"
+      - ""
+      - "&8Tasks"
+      - "&f Fish 15 times"
+      - ""
+      - "&8Rewards"
+      - "&e +150 Adv EXP"
+      - "&f +10 Hyrons"
+    quest_type: FISH
+    required_amount: 15
+    reward:
+      reward_type: COMMAND
+      commands:
+        - "points give %player% 10"
+        - "levels addexp %player% 150"
+
+  6:
+    name: "&6Commission: &eFarmer"
+    menu_item: "custommodeldata:BOOK:115"
+    description:
+      - "&7Complete the guild's commission"
+      - "&7to earn bountiful rewards!"
+      - ""
+      - "&8Tasks"
+      - "&f Harvest 50 crops"
+      - ""
+      - "&8Rewards"
+      - "&e +150 Adv EXP"
+      - "&f +10 Hyrons"
+    quest_type: FARMING
+    required_amount: 50
+    reward:
+      reward_type: COMMAND
+      commands:
+        - "points give %player% 10"
+        - "levels addexp %player% 150"
+        
+  7:
+    name: "&6Commission: &eMagic Time"
+    menu_item: "custommodeldata:BOOK:115"
+    description:
+      - "&7Complete the guild's commission"
+      - "&7to earn bountiful rewards!"
+      - ""
+      - "&8Tasks"
+      - "&f Enchant 1 item"
+      - ""
+      - "&8Rewards"
+      - "&e +150 Adv EXP"
+      - "&f +10 Hyrons"
+    quest_type: ENCHANT
+    required_amount: 1
+    reward:
+      reward_type: COMMAND
+      commands:
+        - "points give %player% 10"
+        - "levels addexp %player% 150"
+        
+  9:
+    name: "&6Commission: &eMultiplication"
+    menu_item: "custommodeldata:BOOK:115"
+    description:
+      - "&7Complete the guild's commission"
+      - "&7to earn bountiful rewards!"
+      - ""
+      - "&8Tasks"
+      - "&f Breed 3 mobs"
+      - ""
+      - "&8Rewards"
+      - "&e +150 Adv EXP"
+      - "&f +10 Hyrons"
+    quest_type: BREED
+    required_amount: 3
+    reward:
+      reward_type: COMMAND
+      commands:
+        - "points give %player% 10"
+        - "levels addexp %player% 150"
+    
+  10:
+    name: "&6Commission: &eNature's Friend"
+    menu_item: "custommodeldata:BOOK:115"
+    description:
+      - "&7Complete the guild's commission"
+      - "&7to earn bountiful rewards!"
+      - ""
+      - "&8Tasks"
+      - "&f Tame 1 animal"
+      - ""
+      - "&8Rewards"
+      - "&e +150 Adv EXP"
+      - "&f +10 Hyrons"
+    quest_type: TAME
+    required_amount: 1
+    reward:
+      reward_type: COMMAND
+      commands:
+        - "points give %player% 10"
+        - "levels addexp %player% 150"
+    
+  11:
+    name: "&6Commission: &eSmooooth"
+    menu_item: "custommodeldata:BOOK:115"
+    description:
+      - "&7Complete the guild's commission"
+      - "&7to earn bountiful rewards!"
+      - ""
+      - "&8Tasks"
+      - "&f Shear 3 sheep"
+      - ""
+      - "&8Rewards"
+      - "&e +150 Adv EXP"
+      - "&f +10 Hyrons"
+    quest_type: SHEAR
+    required_amount: 3
+    reward:
+      reward_type: COMMAND
+      commands:
+        - "points give %player% 10"
+        - "levels addexp %player% 150"
+    
+  12:
+    name: "&6Commission: &eLactose Maniac"
+    menu_item: "custommodeldata:BOOK:115"
+    description:
+      - "&7Complete the guild's commission"
+      - "&7to earn bountiful rewards!"
+      - ""
+      - "&8Tasks"
+      - "&f Milk 5 cows"
+      - ""
+      - "&8Rewards"
+      - "&e +150 Adv EXP"
+      - "&f +10 Hyrons"
+    quest_type: MILKING
+    required_amount: 5
+    reward:
+      reward_type: COMMAND
+      commands:
+        - "points give %player% 10"
+        - "levels addexp %player% 150"
+
+  h_1:
+    name: "&c★ &6Commission: &cTraitor"
+    menu_item: "custommodeldata:BOOK:114"
+    description:
+      - "&7Complete the guild's commission"
+      - "&7to earn bountiful rewards!"
+      - ""
+      - "&c★ &7Harder quests gives more"
+      - "&7rewards!"
+      - ""
+      - "&8Tasks"
+      - "&f Slay &dRavenna"
+      - ""
+      - "&8Rewards"
+      - "&e +500 Adv EXP"
+      - "&f +65 Hyrons"
+      - "&6 Silver Coin"
+    quest_type: CUSTOM_MOBS
+    entity_name: "RAVENNA"
+    required_amount: 1
+    reward:
+      reward_type: COMMAND
+      commands:
+        - "points give %player% 65"
+        - "levels addexp %player% 500"
+        - "mi give material SILVER_COIN %player%"
+
+  h_2:
+    name: "&c★ &6Commission: &cNihility"
+    menu_item: "custommodeldata:BOOK:114"
+    description:
+      - "&7Complete the guild's commission"
+      - "&7to earn bountiful rewards!"
+      - ""
+      - "&c★ &7Harder quests gives more"
+      - "&7rewards!"
+      - ""
+      - "&8Tasks"
+      - "&f Slay &dThe Null"
+      - ""
+      - "&8Rewards"
+      - "&e +500 Adv EXP"
+      - "&f +65 Hyrons"
+      - "&6 Silver Coin"
+    quest_type: CUSTOM_MOBS
+    entity_name: "THE_NULL"
+    required_amount: 1
+    reward:
+      reward_type: COMMAND
+      commands:
+        - "points give %player% 65"
+        - "levels addexp %player% 500"
+        - "mi give material SILVER_COIN %player%"
+
+  h_3:
+    name: "&c★ &6Commission: &cBlasphemous"
+    menu_item: "custommodeldata:BOOK:114"
+    description:
+      - "&7Complete the guild's commission"
+      - "&7to earn bountiful rewards!"
+      - ""
+      - "&c★ &7Harder quests gives more"
+      - "&7rewards!"
+      - ""
+      - "&8Tasks"
+      - "&f Slay &dBlasphemy"
+      - ""
+      - "&8Rewards"
+      - "&e +500 Adv EXP"
+      - "&f +65 Hyrons"
+      - "&6 Silver Coin"
+    quest_type: CUSTOM_MOBS
+    entity_name: "BLASPHEMY"
+    required_amount: 1
+    reward:
+      reward_type: COMMAND
+      commands:
+        - "points give %player% 65"
+        - "levels addexp %player% 500"
+        - "mi give material SILVER_COIN %player%"

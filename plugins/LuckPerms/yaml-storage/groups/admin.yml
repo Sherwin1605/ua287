@@ -1,0 +1,5 @@
+name: admin
+permissions:
+- displayname.&fே
+- weight.9
+- chat.admin

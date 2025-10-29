@@ -1,0 +1,39 @@
+blocks:
+    DIAMOND_ORE:
+        rare-diamond:
+            coef: 1
+            disable-silk-touch: true
+            items:
+                MATERIAL:
+                    PURE_DIAMOND: 2,1,0
+    DEEPSLATE_DIAMOND_ORE:
+        rare-diamond:
+            coef: 1
+            disable-silk-touch: true
+            items:
+                MATERIAL:
+                    PURE_DIAMOND: 4,1,0
+
+    EMERALD_ORE:
+        rare-emerald:
+            coef: 1
+            disable-silk-touch: true
+            items:
+                MATERIAL:
+                    PERFECT_EMERALD: 2,1,0
+    DEEPSLATE_EMERALD_ORE:
+        rare-emerald:
+            coef: 1
+            disable-silk-touch: true
+            items:
+                MATERIAL:
+                    PERFECT_EMERALD: 4,1,0
+
+
+    OBSIDIAN:
+        rare-obsidian:
+            coef: 1
+            disable-silk-touch: true
+            items:
+                MATERIAL:
+                    TRUE_BLACK: 1,1,0

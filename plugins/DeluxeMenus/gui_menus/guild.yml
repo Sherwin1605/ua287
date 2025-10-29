@@ -1,0 +1,81 @@
+open_command: 
+  - guild
+size: 36
+open_requirement:
+  requirements:
+    1:
+      type: has permission
+      permission: access.guild
+      deny_commands:
+        - "[message] &c&lLOCKED!&7 Talk to &cDarius&7 to unlock the guild!"
+menu_title: '&fట'
+items:
+  'adventuerr':
+    material: BOOK
+    model_data: 110
+    slots: [0,1,2,9,10,11,18,19,20]
+    item_flags:
+    - HIDE_POTION_EFFECTS
+    display_name: "&#c5b358Adventurer Guild"
+    lore:
+      - ""
+      - "&#eae0c8&oA guild founded with the aim"
+      - "&#eae0c8&oto help adventurers, the Guild"
+      - "&#eae0c8&okeeps track of your progress"
+      - "&#eae0c8&oin Hyronia and rewards you"
+      - "&#eae0c8&ofor such advancements."
+      - ""
+      - "&#eedc82&l     ᴀᴅᴠᴇɴᴛᴜʀᴇʀ ɪɴꜰᴏ"
+      - "&7Adventurer LVL: &#c5b358ʟᴠʟ.%alonsolevels_level%"
+      - "&7Status: &8N/A"
+      - "&7Level Progress: %alonsolevels_progress_format%"
+      - "&8 %alonsolevels_progress_percent%% %alonsolevels_progress_bar%"
+      - ""
+      - "&7Commissions Done: &#eae0c8%odailyquests_achieved%&8/&#c5b3586"
+      - "&8You have &7%odailyquests_drawin%&8 to complete."
+
+  '1':
+    material: BOOK
+    model_data: 110
+    slots: [4,5,13,14,22,23]
+    item_flags:
+    - HIDE_POTION_EFFECTS
+    display_name: "&#DE8F5F★ Guild Commissions"
+    lore:
+      - ""
+      - "&#eae0c8&oComplete guild commissions to"
+      - "&#eae0c8&oearn bountiful rewards!"
+      - ""
+      - "&fCommissions Done: &#eae0c8%odailyquests_achieved%&8/&#c5b3586"
+      - "&8You have &7%odailyquests_drawin%&8 to complete."
+      - ""
+      - "&#DE8F5FCommissions Progress:"
+      - "&#c5b358 Comm 1: &f%odailyquests_progress_1%%"
+      - "&#c5b358 Comm 2: &f%odailyquests_progress_2%%"
+      - "&#c5b358 Comm 3: &f%odailyquests_progress_3%%"
+      - "&#c5b358 Comm 4: &f%odailyquests_progress_4%%"
+      - "&#c5b358 Comm 5: &f%odailyquests_progress_5%%"
+      - "&#c5b358 Comm 6: &f%odailyquests_progress_6%%"
+    left_click_commands:
+      - "[player] quests"
+      - "[sound] BLOCK_LEVER_CLICK"
+
+  '2':
+    material: BOOK
+    model_data: 110
+    slots: [6,7,15,16,24,25]
+    item_flags:
+    - HIDE_POTION_EFFECTS
+    display_name: "&#FF3131✦ Level Rewards"
+    lore:
+      - ""
+      - "&#eae0c8&oRank up your adventurer"
+      - "&#eae0c8&olevel and earn a lot of"
+      - "&#eae0c8&ospecial rewards"
+      - ""
+      - "&7Adventurer LVL: &#c5b358ʟᴠʟ.%alonsolevels_level%&8/20"
+      - "&7Level Progress: %alonsolevels_progress_format%"
+      - "&8 %alonsolevels_progress_percent%% %alonsolevels_progress_bar%"
+    left_click_commands:
+      - "[player] level rewards"
+      - "[sound] BLOCK_LEVER_CLICK"

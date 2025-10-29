@@ -1,0 +1,40 @@
+catastrophe:
+  displayname: '&1'
+  material: BOW
+  excludeFromInventory: true
+  Pack:
+    generate_model: true
+    custom_model_data: 2
+    parent_model: item/handheld
+    textures:
+    - hyronic_sur/items_textures/bow/catastrophe
+    pulling_models:
+    - hyronic_sur/bows/catastrophe_pulling_0
+    - hyronic_sur/bows/catastrophe_pulling_1
+    - hyronic_sur/bows/catastrophe_pulling_2
+
+divenetto:
+  displayname: '&1'
+  material: BOW
+  excludeFromInventory: true
+  Pack:
+    generate_model: true
+    custom_model_data: 3
+    parent_model: item/handheld
+    textures:
+    - hyronic_sur/items_textures/bow/divenetto
+    pulling_models:
+    - hyronic_sur/bows/divinetto_pulling_0
+    - hyronic_sur/bows/divinetto_pulling_1
+    - hyronic_sur/bows/divinetto_pulling_2
+
+hospitality:
+  displayname: '&1'
+  material: BOW
+  excludeFromInventory: true
+  Pack:
+    generate_model: true
+    custom_model_data: 4
+    parent_model: item/handheld
+    textures:
+    - hyronic_sur/items_textures/bow/hospitality

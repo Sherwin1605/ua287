@@ -1,0 +1,47 @@
+uranium_helmet:
+  excludeFromInventory: true
+  material: LEATHER_HELMET
+  color: 252,3,12
+  Pack:
+    custom_model_data: 10000
+    generate_model: true
+    parent_model: item/generated
+    textures:
+    - hyronic_sur/items_textures/armor/uranium_helmet
+    - hyronic_sur/items_textures/armor/uranium_helmet
+
+uranium_chestplate:
+  excludeFromInventory: true
+  material: LEATHER_CHESTPLATE
+  color: 252,3,12
+  Pack:
+    custom_model_data: 10000
+    generate_model: true
+    parent_model: item/generated
+    textures:
+    - hyronic_sur/items_textures/armor/uranium_chestplate
+    - hyronic_sur/items_textures/armor/uranium_chestplate
+
+uranium_leggings:
+  excludeFromInventory: true
+  material: LEATHER_LEGGINGS
+  color: 252,3,12
+  Pack:
+    custom_model_data: 10000
+    generate_model: true
+    parent_model: item/generated
+    textures:
+    - hyronic_sur/items_textures/armor/uranium_leggings
+    - hyronic_sur/items_textures/armor/uranium_leggings
+
+uranium_boots:
+  excludeFromInventory: true
+  material: LEATHER_BOOTS
+  color: 252,3,12
+  Pack:
+    custom_model_data: 10000
+    generate_model: true
+    parent_model: item/generated
+    textures:
+    - hyronic_sur/items_textures/armor/uranium_boots
+    - hyronic_sur/items_textures/armor/uranium_boots

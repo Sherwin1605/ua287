@@ -1,0 +1,85 @@
+pools:
+  rare:
+    base_chance: 0
+    selection_priority: 1
+    loot:
+      - type: command
+        executor: console
+        command: mi give FISHING MOSS_EEL {player} 1
+        weight: 10
+      - type: command
+        executor: console
+        command: mi give FISHING MOSS_CARP {player} 1
+        weight: 10
+      - type: command
+        executor: console
+        command: mi give FISHING MOSS_MACKEREL {player} 1
+        weight: 10
+      - type: command
+        executor: console
+        command: mi give FISHING MOSS_SALMON {player} 1
+        weight: 10
+      - type: command
+        executor: console
+        command: mi give FISHING SAPHIRE_JELLYFISH {player} 1
+        weight: 5
+      - type: command
+        executor: console
+        command: mi give FISHING SAPHIRE_LOBSTER {player} 1
+        weight: 5
+      - type: command
+        executor: console
+        command: mi give FISHING SAPHIRE_PUFFERFISH {player} 1
+        weight: 5
+      - type: command
+        executor: console
+        command: mi give FISHING SAPHIRE_ROCKFISH {player} 1
+        weight: 5
+      - type: command
+        executor: console
+        command: mi give FISHING SAPHIRE_SALMON {player} 1
+        weight: 5
+  epic:
+    base_chance: 0
+    selection_priority: 2
+    loot:
+      - type: command
+        executor: console
+        command: mi give FISHING GOLDEN_CARP {player} 1
+        weight: 10
+      - type: command
+        executor: console
+        command: mi give FISHING GOLDEN_CRAB {player} 1
+        weight: 10
+      - type: command
+        executor: console
+        command: mi give FISHING GOLDEN_EEL {player} 1
+        weight: 10
+      - type: command
+        executor: console
+        command: mi give FISHING GOLDEN_JELLYFISH {player} 1
+        weight: 10
+      - type: command
+        executor: console
+        command: mi give FISHING GOLDEN_LOBSTER {player} 1
+        weight: 10
+      - type: command
+        executor: console
+        command: mi give FISHING GOLDEN_MACKEREL {player} 1
+        weight: 10
+      - type: command
+        executor: console
+        command: mi give FISHING HEXIFIED_CRAB {player} 1
+        weight: 3
+      - type: command
+        executor: console
+        command: mi give FISHING HEXIFIED_LOBSTER {player} 1
+        weight: 3
+      - type: command
+        executor: console
+        command: mi give FISHING HEXIFIED_STARFISH {player} 1
+        weight: 3
+      - type: command
+        executor: console
+        command: mi give FISHING HEXIFIED_VOIDFISH {player} 1
+        weight: 3

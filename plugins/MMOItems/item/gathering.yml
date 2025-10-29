@@ -1,0 +1,477 @@
+COMPACTED_WHEAT:
+  base:
+    material: WHEAT
+    name: <#77DD77>Compacted Wheat
+    hide-enchants: true
+    enchants:
+      unbreaking: 1.0
+    disable-crafting: true
+    disable-interaction: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    tier: C
+    crafting:
+      shapeless:
+        '1':
+          input:
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          - v WHEAT - 32.0..
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          hidden: false
+COMPACTED_CARROT:
+  base:
+    material: CARROT
+    name: <#77DD77>Compacted Carrot
+    hide-enchants: true
+    enchants:
+      unbreaking: 1.0
+    disable-crafting: true
+    disable-interaction: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    tier: C
+    crafting:
+      shapeless:
+        '1':
+          input:
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          - v CARROT - 32.0..
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          hidden: false
+COMPACTED_MELON:
+  base:
+    material: MELON_SLICE
+    name: <#77DD77>Compacted Melon
+    hide-enchants: true
+    enchants:
+      unbreaking: 1.0
+    disable-crafting: true
+    disable-interaction: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    tier: C
+    crafting:
+      shapeless:
+        '1':
+          input:
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          - v MELON_SLICE - 32.0..
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          hidden: false
+COMPACTED_POTATO:
+  base:
+    material: POTATO
+    name: <#77DD77>Compacted Potato
+    hide-enchants: true
+    enchants:
+      unbreaking: 1.0
+    disable-crafting: true
+    disable-interaction: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    tier: C
+    crafting:
+      shapeless:
+        '1':
+          input:
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          - v POTATO - 32.0..
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          hidden: false
+COMPACTED_CACTUS:
+  base:
+    material: CACTUS
+    name: <#77DD77>Compacted Cactus
+    hide-enchants: true
+    enchants:
+      unbreaking: 1.0
+    disable-crafting: true
+    disable-interaction: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    tier: C
+    crafting:
+      shapeless:
+        '1':
+          input:
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          - v CACTUS - 32.0..
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          hidden: false
+COMPACTED_SUGAR_CANE:
+  base:
+    material: SUGAR_CANE
+    name: <#77DD77>Compacted Sugar Cane
+    hide-enchants: true
+    enchants:
+      unbreaking: 1.0
+    disable-crafting: true
+    disable-interaction: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    tier: C
+    crafting:
+      shapeless:
+        '1':
+          input:
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          - v SUGAR_CANE - 32.0..
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          hidden: false
+COMPACTED_PUMPKIN:
+  base:
+    material: PUMPKIN
+    name: <#77DD77>Compacted Pumpkin
+    hide-enchants: true
+    enchants:
+      unbreaking: 1.0
+    disable-crafting: true
+    disable-interaction: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    tier: C
+    crafting:
+      shapeless:
+        '1':
+          input:
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          - v PUMPKIN - 32.0..
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          hidden: false
+COMPACTED_COCOA_BEANS:
+  base:
+    material: COCOA_BEANS
+    name: <#77DD77>Compacted Cocoa Beans
+    hide-enchants: true
+    enchants:
+      unbreaking: 1.0
+    disable-crafting: true
+    disable-interaction: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    tier: C
+    crafting:
+      shapeless:
+        '1':
+          input:
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          - v COCOA_BEANS - 32.0..
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          hidden: false
+COMPACTED_NETHER_WART:
+  base:
+    material: NETHER_WART
+    name: <#77DD77>Compacted Nether Wart
+    hide-enchants: true
+    enchants:
+      unbreaking: 1.0
+    disable-crafting: true
+    disable-interaction: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    tier: C
+    crafting:
+      shapeless:
+        '1':
+          input:
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          - v NETHER_WART - 32.0..
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          hidden: false
+
+COMPACTED_OAK_LOG:
+  base:
+    material: OAK_LOG
+    name: <#77DD77>Compacted Oak Log
+    hide-enchants: true
+    enchants:
+      unbreaking: 1.0
+    disable-crafting: true
+    disable-interaction: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    tier: C
+    crafting:
+      shapeless:
+        '1':
+          input:
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          - v OAK_LOG - 64.0..
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          hidden: false
+COMPACTED_SPRUCE_LOG:
+  base:
+    material: SPRUCE_LOG
+    name: <#77DD77>Compacted Spruce Log
+    hide-enchants: true
+    enchants:
+      unbreaking: 1.0
+    disable-crafting: true
+    disable-interaction: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    tier: C
+    crafting:
+      shapeless:
+        '1':
+          input:
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          - v SPRUCE_LOG - 64.0..
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          hidden: false
+COMPACTED_JUNGLE_LOG:
+  base:
+    material: JUNGLE_LOG
+    name: <#77DD77>Compacted Jungle Log
+    hide-enchants: true
+    enchants:
+      unbreaking: 1.0
+    disable-crafting: true
+    disable-interaction: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    tier: C
+    crafting:
+      shapeless:
+        '1':
+          input:
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          - v JUNGLE_LOG - 64.0..
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          hidden: false
+COMPACTED_BIRCH_LOG:
+  base:
+    material: BIRCH_LOG
+    name: <#77DD77>Compacted Birch Log
+    hide-enchants: true
+    enchants:
+      unbreaking: 1.0
+    disable-crafting: true
+    disable-interaction: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    tier: C
+    crafting:
+      shapeless:
+        '1':
+          input:
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          - v BIRCH_LOG - 64.0..
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          hidden: false
+COMPACTED_ACACIA_LOG:
+  base:
+    material: ACACIA_LOG
+    name: <#77DD77>Compacted Acacia Log
+    hide-enchants: true
+    enchants:
+      unbreaking: 1.0
+    disable-crafting: true
+    disable-interaction: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    tier: C
+    crafting:
+      shapeless:
+        '1':
+          input:
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          - v ACACIA_LOG - 64.0..
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          hidden: false
+COMPACTED_DARK_OAK_LOG:
+  base:
+    material: OAK_LOG
+    name: <#77DD77>Compacted Dark Oak Log
+    hide-enchants: true
+    enchants:
+      unbreaking: 1.0
+    disable-crafting: true
+    disable-interaction: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    tier: C
+    crafting:
+      shapeless:
+        '1':
+          input:
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          - v DARK_OAK_LOG - 64.0..
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          hidden: false
+COMPACTED_MANGROVE_LOG:
+  base:
+    material: MANGROVE_LOG
+    name: <#77DD77>Compacted Mangrove Log
+    hide-enchants: true
+    enchants:
+      unbreaking: 1.0
+    disable-crafting: true
+    disable-interaction: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    tier: C
+    crafting:
+      shapeless:
+        '1':
+          input:
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          - v MANGROVE_LOG - 64.0..
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          hidden: false
+COMPACTED_CHERRY_LOG:
+  base:
+    material: CHERRY_LOG
+    name: <#77DD77>Compacted Cherry Log
+    hide-enchants: true
+    enchants:
+      unbreaking: 1.0
+    disable-crafting: true
+    disable-interaction: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    tier: C
+    crafting:
+      shapeless:
+        '1':
+          input:
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          - v CHERRY_LOG - 64.0..
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          - v AIR - 1.0..
+          hidden: false

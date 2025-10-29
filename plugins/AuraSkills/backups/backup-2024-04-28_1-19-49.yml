@@ -1,0 +1,261 @@
+backup_version: 2
+users:
+    7b0b0988-b799-4dae-b696-52e823b3079f:
+        skills:
+            auraskills/agility: {level: 1, xp: 0.0}
+            auraskills/enchanting: {level: 1, xp: 0.0}
+            auraskills/sorcery: {level: 1, xp: 0.0}
+            auraskills/archery: {level: 1, xp: 0.0}
+            auraskills/healing: {level: 1, xp: 0.0}
+            auraskills/forging: {level: 1, xp: 0.0}
+            auraskills/alchemy: {level: 1, xp: 0.0}
+            auraskills/farming: {level: 1, xp: 0.0}
+            auraskills/fighting: {level: 1, xp: 38.0}
+            auraskills/foraging: {level: 1, xp: 0.0}
+            auraskills/fishing: {level: 1, xp: 0.0}
+            auraskills/defense: {level: 1, xp: 72.0}
+            auraskills/excavation: {level: 1, xp: 0.0}
+            auraskills/endurance: {level: 1, xp: 0.0}
+            auraskills/mining: {level: 1, xp: 0.0}
+        mana: 20.0
+        stat_modifiers:
+        - {name: mmoitems, stat: auraskills/wisdom, value: 0.0}
+    a60e966b-91d2-42c8-9821-3be423870868:
+        skills:
+            auraskills/agility: {level: 1, xp: 0.0}
+            auraskills/enchanting: {level: 1, xp: 0.0}
+            auraskills/sorcery: {level: 1, xp: 0.0}
+            auraskills/archery: {level: 1, xp: 0.0}
+            auraskills/healing: {level: 1, xp: 0.0}
+            auraskills/forging: {level: 1, xp: 0.0}
+            auraskills/alchemy: {level: 1, xp: 0.0}
+            auraskills/farming: {level: 1, xp: 0.0}
+            auraskills/fighting: {level: 1, xp: 9.0}
+            auraskills/foraging: {level: 1, xp: 0.0}
+            auraskills/fishing: {level: 1, xp: 0.0}
+            auraskills/defense: {level: 1, xp: 23.375}
+            auraskills/excavation: {level: 1, xp: 0.0}
+            auraskills/endurance: {level: 1, xp: 0.0}
+            auraskills/mining: {level: 1, xp: 0.0}
+        mana: 20.0
+        stat_modifiers:
+        - {name: mmoitems, stat: auraskills/wisdom, value: 0.0}
+    bdd75a33-f2d7-442e-80e3-f0d1eb6a2d1f:
+        skills:
+            auraskills/agility: {level: 1, xp: 0.0}
+            auraskills/enchanting: {level: 1, xp: 0.0}
+            auraskills/sorcery: {level: 1, xp: 0.0}
+            auraskills/archery: {level: 1, xp: 0.0}
+            auraskills/healing: {level: 1, xp: 0.0}
+            auraskills/forging: {level: 1, xp: 0.0}
+            auraskills/alchemy: {level: 1, xp: 0.0}
+            auraskills/farming: {level: 1, xp: 0.0}
+            auraskills/fighting: {level: 1, xp: 0.0}
+            auraskills/foraging: {level: 1, xp: 0.0}
+            auraskills/fishing: {level: 1, xp: 0.0}
+            auraskills/defense: {level: 1, xp: 6.0}
+            auraskills/excavation: {level: 1, xp: 0.0}
+            auraskills/endurance: {level: 1, xp: 0.0}
+            auraskills/mining: {level: 1, xp: 0.0}
+        mana: 20.0
+        stat_modifiers:
+        - {name: mmoitems, stat: auraskills/wisdom, value: 0.0}
+    defcadaa-bb7a-4079-902b-3844d583f981:
+        skills:
+            auraskills/agility: {level: 1, xp: 0.0}
+            auraskills/enchanting: {level: 50, xp: 0.0}
+            auraskills/sorcery: {level: 1, xp: 0.0}
+            auraskills/archery: {level: 50, xp: 35.0}
+            auraskills/healing: {level: 1, xp: 0.0}
+            auraskills/forging: {level: 1, xp: 0.0}
+            auraskills/alchemy: {level: 50, xp: 0.0}
+            auraskills/farming: {level: 50, xp: 12.75}
+            auraskills/fighting: {level: 50, xp: 23776.000000000095}
+            auraskills/foraging: {level: 50, xp: 3.9999999999999996}
+            auraskills/fishing: {level: 50, xp: 51382.5}
+            auraskills/defense: {level: 50, xp: 15622.969007515898}
+            auraskills/excavation: {level: 1, xp: 0.0}
+            auraskills/endurance: {level: 1, xp: 0.0}
+            auraskills/mining: {level: 50, xp: 59.980000000000004}
+        mana: 794.0
+        stat_modifiers:
+        - {name: level_wisdom(10), stat: auraskills/wisdom, value: 3.0}
+        - {name: level_wisdom(22), stat: auraskills/wisdom, value: 3.0}
+        - {name: level_strength(5), stat: auraskills/strength, value: 2.0}
+        - {name: level_health(6), stat: auraskills/health, value: 3.0}
+        - {name: level_wisdom(34), stat: auraskills/wisdom, value: 3.0}
+        - {name: level_health(11), stat: auraskills/health, value: 4.0}
+        - {name: level_strength(26), stat: auraskills/strength, value: 2.0}
+        - {name: level_health(35), stat: auraskills/health, value: 3.0}
+        - {name: level_health(23), stat: auraskills/health, value: 2.0}
+        - {name: level_wisdom(18), stat: auraskills/wisdom, value: 2.0}
+        - {name: level_strength(38), stat: auraskills/strength, value: 2.0}
+        - {name: level_luck(4), stat: auraskills/luck, value: 1.0}
+        - {name: level_strength(14), stat: auraskills/strength, value: 3.0}
+        - {name: level_health(47), stat: auraskills/health, value: 4.0}
+        - {name: level_health(19), stat: auraskills/health, value: 4.0}
+        - {name: level_strength(42), stat: auraskills/strength, value: 3.0}
+        - {name: level_wisdom(9), stat: auraskills/wisdom, value: 3.0}
+        - {name: level_strength(41), stat: auraskills/strength, value: 3.0}
+        - {name: mmoitems_WISDOM, stat: auraskills/wisdom, value: 0.0}
+        - {name: level_regen(11), stat: auraskills/regeneration, value: 3.0}
+        - {name: level_regen(23), stat: auraskills/regeneration, value: 3.0}
+        - {name: level_strength, stat: auraskills/strength, value: 1.0}
+        - {name: level_strength(6), stat: auraskills/strength, value: 2.0}
+        - {name: level_regen(3), stat: auraskills/regeneration, value: 2.0}
+        - {name: mmoitems, stat: auraskills/wisdom, value: 0.0}
+        - {name: mmoitems_TOUGHNESS, stat: auraskills/toughness, value: 0.0}
+        - {name: level_strength(4), stat: auraskills/strength, value: 1.0}
+        - {name: level_wisdom(11), stat: auraskills/wisdom, value: 3.0}
+        - {name: level_health(40), stat: auraskills/health, value: 4.0}
+        - {name: level_wisdom(23), stat: auraskills/wisdom, value: 2.0}
+        - {name: level_health(7), stat: auraskills/health, value: 3.0}
+        - {name: level_wisdom(35), stat: auraskills/wisdom, value: 3.0}
+        - {name: mmoitems_REGENERATION, stat: auraskills/regeneration, value: 0.0}
+        - {name: level_strength(39), stat: auraskills/strength, value: 2.0}
+        - {name: level_strength(15), stat: auraskills/strength, value: 4.0}
+        - {name: level_health(24), stat: auraskills/health, value: 2.0}
+        - {name: level_health(12), stat: auraskills/health, value: 4.0}
+        - {name: level_strength(27), stat: auraskills/strength, value: 2.0}
+        - {name: level_wisdom(19), stat: auraskills/wisdom, value: 2.0}
+        - {name: level_health(48), stat: auraskills/health, value: 4.0}
+        - {name: level_luck(5), stat: auraskills/luck, value: 1.0}
+        - {name: level_health(36), stat: auraskills/health, value: 3.0}
+        - {name: level_strength(31), stat: auraskills/strength, value: 1.0}
+        - {name: level_regen(19), stat: auraskills/regeneration, value: 3.0}
+        - {name: level_strength(43), stat: auraskills/strength, value: 3.0}
+        - {name: level_regen(10), stat: auraskills/regeneration, value: 3.0}
+        - {name: level_strength(30), stat: auraskills/strength, value: 3.0}
+        - {name: level_regen(22), stat: auraskills/regeneration, value: 3.0}
+        - {name: level_regen(2), stat: auraskills/regeneration, value: 2.0}
+        - {name: mmoitems_STRENGTH, stat: auraskills/strength, value: 0.0}
+        - {name: level_wisdom(12), stat: auraskills/wisdom, value: 3.0}
+        - {name: level_wisdom(24), stat: auraskills/wisdom, value: 2.0}
+        - {name: level_health(8), stat: auraskills/health, value: 3.0}
+        - {name: level_wisdom(36), stat: auraskills/wisdom, value: 3.0}
+        - {name: level_health(33), stat: auraskills/health, value: 2.0}
+        - {name: level_health(21), stat: auraskills/health, value: 2.0}
+        - {name: level_regen, stat: auraskills/regeneration, value: 2.0}
+        - {name: level_strength(48), stat: auraskills/strength, value: 4.0}
+        - {name: level_health(45), stat: auraskills/health, value: 4.0}
+        - {name: level_strength(24), stat: auraskills/strength, value: 1.0}
+        - {name: level_strength(36), stat: auraskills/strength, value: 2.0}
+        - {name: level_health(17), stat: auraskills/health, value: 4.0}
+        - {name: level_wisdom(7), stat: auraskills/wisdom, value: 3.0}
+        - {name: level_strength(12), stat: auraskills/strength, value: 3.0}
+        - {name: level_health(29), stat: auraskills/health, value: 3.0}
+        - {name: level_luck(12), stat: auraskills/luck, value: 1.0}
+        - {name: level_luck(6), stat: auraskills/luck, value: 1.0}
+        - {name: level_regen(13), stat: auraskills/regeneration, value: 2.0}
+        - {name: level_regen(9), stat: auraskills/regeneration, value: 3.0}
+        - {name: level_strength(8), stat: auraskills/strength, value: 2.0}
+        - {name: level_wisdom, stat: auraskills/wisdom, value: 2.0}
+        - {name: level_health(50), stat: auraskills/health, value: 4.0}
+        - {name: level_wisdom(13), stat: auraskills/wisdom, value: 3.0}
+        - {name: level_wisdom(25), stat: auraskills/wisdom, value: 2.0}
+        - {name: level_health(9), stat: auraskills/health, value: 3.0}
+        - {name: level_health(22), stat: auraskills/health, value: 2.0}
+        - {name: level_wisdom(37), stat: auraskills/wisdom, value: 3.0}
+        - {name: level_health(10), stat: auraskills/health, value: 4.0}
+        - {name: level_strength(37), stat: auraskills/strength, value: 2.0}
+        - {name: level_health(46), stat: auraskills/health, value: 4.0}
+        - {name: level_health(34), stat: auraskills/health, value: 2.0}
+        - {name: level_strength(49), stat: auraskills/strength, value: 4.0}
+        - {name: level_strength(13), stat: auraskills/strength, value: 3.0}
+        - {name: level_strength(25), stat: auraskills/strength, value: 2.0}
+        - {name: level_wisdom(8), stat: auraskills/wisdom, value: 3.0}
+        - {name: level_health(18), stat: auraskills/health, value: 4.0}
+        - {name: level_strength(40), stat: auraskills/strength, value: 3.0}
+        - {name: level_luck(7), stat: auraskills/luck, value: 1.0}
+        - {name: level_regen(8), stat: auraskills/regeneration, value: 3.0}
+        - {name: level_regen(12), stat: auraskills/regeneration, value: 2.0}
+        - {name: level_strength(7), stat: auraskills/strength, value: 2.0}
+        - {name: level_health(31), stat: auraskills/health, value: 2.0}
+        - {name: level_wisdom(14), stat: auraskills/wisdom, value: 3.0}
+        - {name: level_wisdom(26), stat: auraskills/wisdom, value: 2.0}
+        - {name: level_strength(18), stat: auraskills/strength, value: 4.0}
+        - {name: level_health(43), stat: auraskills/health, value: 4.0}
+        - {name: level_wisdom(38), stat: auraskills/wisdom, value: 3.0}
+        - {name: level_health(15), stat: auraskills/health, value: 4.0}
+        - {name: level_strength(46), stat: auraskills/strength, value: 4.0}
+        - {name: level_regen(16), stat: auraskills/regeneration, value: 2.0}
+        - {name: level_strength(22), stat: auraskills/strength, value: 1.0}
+        - {name: level_health(39), stat: auraskills/health, value: 3.0}
+        - {name: level_health(27), stat: auraskills/health, value: 3.0}
+        - {name: level_strength(34), stat: auraskills/strength, value: 1.0}
+        - {name: level_health(2), stat: auraskills/health, value: 2.0}
+        - {name: level_strength(10), stat: auraskills/strength, value: 3.0}
+        - {name: level_luck(10), stat: auraskills/luck, value: 1.0}
+        - {name: level_wisdom(4), stat: auraskills/wisdom, value: 2.0}
+        - {name: level_luck(8), stat: auraskills/luck, value: 1.0}
+        - {name: level_regen(7), stat: auraskills/regeneration, value: 3.0}
+        - {name: level_health(3), stat: auraskills/health, value: 2.0}
+        - {name: level_wisdom(31), stat: auraskills/wisdom, value: 3.0}
+        - {name: level_strength(19), stat: auraskills/strength, value: 4.0}
+        - {name: level_health(20), stat: auraskills/health, value: 4.0}
+        - {name: level_wisdom(15), stat: auraskills/wisdom, value: 3.0}
+        - {name: level_health(44), stat: auraskills/health, value: 4.0}
+        - {name: level_health(32), stat: auraskills/health, value: 2.0}
+        - {name: level_wisdom(27), stat: auraskills/wisdom, value: 2.0}
+        - {name: level_strength(35), stat: auraskills/strength, value: 2.0}
+        - {name: level_regen(15), stat: auraskills/regeneration, value: 2.0}
+        - {name: level_strength(47), stat: auraskills/strength, value: 4.0}
+        - {name: level_wisdom(6), stat: auraskills/wisdom, value: 3.0}
+        - {name: level_strength(11), stat: auraskills/strength, value: 3.0}
+        - {name: level_health(28), stat: auraskills/health, value: 3.0}
+        - {name: level_health(16), stat: auraskills/health, value: 4.0}
+        - {name: level_strength(23), stat: auraskills/strength, value: 1.0}
+        - {name: mmoitems_HEALTH, stat: auraskills/health, value: 0.0}
+        - {name: level_wisdom(5), stat: auraskills/wisdom, value: 2.0}
+        - {name: level_luck(11), stat: auraskills/luck, value: 1.0}
+        - {name: level_strength(50), stat: auraskills/strength, value: 4.0}
+        - {name: level_regen(14), stat: auraskills/regeneration, value: 2.0}
+        - {name: level_luck(9), stat: auraskills/luck, value: 1.0}
+        - {name: level_regen(6), stat: auraskills/regeneration, value: 3.0}
+        - {name: level_strength(9), stat: auraskills/strength, value: 2.0}
+        - {name: level_wisdom(30), stat: auraskills/wisdom, value: 3.0}
+        - {name: level_wisdom(20), stat: auraskills/wisdom, value: 2.0}
+        - {name: level_strength(3), stat: auraskills/strength, value: 1.0}
+        - {name: level_health(4), stat: auraskills/health, value: 2.0}
+        - {name: level_wisdom(32), stat: auraskills/wisdom, value: 3.0}
+        - {name: level_health(41), stat: auraskills/health, value: 4.0}
+        - {name: level_strength(28), stat: auraskills/strength, value: 2.0}
+        - {name: level_wisdom(16), stat: auraskills/wisdom, value: 3.0}
+        - {name: level_health(13), stat: auraskills/health, value: 4.0}
+        - {name: level_luck(2), stat: auraskills/luck, value: 1.0}
+        - {name: level_wisdom(28), stat: auraskills/wisdom, value: 3.0}
+        - {name: level_strength(16), stat: auraskills/strength, value: 4.0}
+        - {name: level_regen(18), stat: auraskills/regeneration, value: 3.0}
+        - {name: level_health(37), stat: auraskills/health, value: 3.0}
+        - {name: level_health(25), stat: auraskills/health, value: 3.0}
+        - {name: level_strength(44), stat: auraskills/strength, value: 3.0}
+        - {name: level_health(49), stat: auraskills/health, value: 4.0}
+        - {name: level_strength(20), stat: auraskills/strength, value: 4.0}
+        - {name: level_strength(32), stat: auraskills/strength, value: 1.0}
+        - {name: level_wisdom(2), stat: auraskills/wisdom, value: 2.0}
+        - {name: level_regen(21), stat: auraskills/regeneration, value: 3.0}
+        - {name: level_luck, stat: auraskills/luck, value: 1.0}
+        - {name: level_regen(5), stat: auraskills/regeneration, value: 2.0}
+        - {name: level_health, stat: auraskills/health, value: 2.0}
+        - {name: level_strength(2), stat: auraskills/strength, value: 1.0}
+        - {name: level_wisdom(21), stat: auraskills/wisdom, value: 2.0}
+        - {name: level_health(5), stat: auraskills/health, value: 3.0}
+        - {name: level_wisdom(33), stat: auraskills/wisdom, value: 3.0}
+        - {name: level_health(42), stat: auraskills/health, value: 4.0}
+        - {name: level_health(30), stat: auraskills/health, value: 4.0}
+        - {name: level_strength(17), stat: auraskills/strength, value: 4.0}
+        - {name: level_strength(29), stat: auraskills/strength, value: 2.0}
+        - {name: level_wisdom(17), stat: auraskills/wisdom, value: 2.0}
+        - {name: level_regen(17), stat: auraskills/regeneration, value: 2.0}
+        - {name: level_luck(3), stat: auraskills/luck, value: 1.0}
+        - {name: level_wisdom(29), stat: auraskills/wisdom, value: 3.0}
+        - {name: level_health(26), stat: auraskills/health, value: 3.0}
+        - {name: level_health(14), stat: auraskills/health, value: 4.0}
+        - {name: level_strength(33), stat: auraskills/strength, value: 1.0}
+        - {name: mmoitems_LUCK, stat: auraskills/luck, value: 0.0}
+        - {name: level_health(38), stat: auraskills/health, value: 3.0}
+        - {name: level_strength(45), stat: auraskills/strength, value: 4.0}
+        - {name: level_strength(21), stat: auraskills/strength, value: 1.0}
+        - {name: level_regen(20), stat: auraskills/regeneration, value: 3.0}
+        - {name: level_wisdom(3), stat: auraskills/wisdom, value: 2.0}
+        - {name: level_regen(4), stat: auraskills/regeneration, value: 2.0}

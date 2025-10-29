@@ -1,0 +1,132 @@
+harbinger_of_death:
+  displayname: '&eironsword'
+  material: IRON_SWORD
+  excludeFromInventory: true
+  Pack:
+    generate_model: true
+    custom_model_data: 1
+    parent_model: item/handheld
+    textures:
+    - hyronic_sur/items_textures/sword/harbinger_of_death
+
+ark_of_the_cosmos:
+  displayname: '&eironsword'
+  material: IRON_SWORD
+  excludeFromInventory: true
+  Pack:
+    generate_model: true
+    custom_model_data: 3
+    parent_model: item/handheld
+    textures:
+    - hyronic_sur/items_textures/sword/ark_of_the_cosmos
+
+absolute_zero:
+  displayname: '&eironsword'
+  material: IRON_SWORD
+  excludeFromInventory: true
+  Pack:
+    generate_model: true
+    custom_model_data: 4
+    parent_model: item/handheld
+    textures:
+    - hyronic_sur/items_textures/sword/absolute_zero
+
+the_trickster:
+  displayname: '&eironsword'
+  material: IRON_SWORD
+  excludeFromInventory: true
+  Pack:
+    generate_model: true
+    custom_model_data: 5
+    parent_model: item/handheld
+    textures:
+    - hyronic_sur/items_textures/sword/the_trickster
+
+calamity:
+  displayname: '&eironsword'
+  material: IRON_SWORD
+  excludeFromInventory: true
+  Pack:
+    generate_model: true
+    custom_model_data: 6
+    parent_model: item/handheld
+    textures:
+    - hyronic_sur/items_textures/sword/calamity
+
+mythril_greatsword:
+  displayname: '&eironsword'
+  material: IRON_SWORD
+  excludeFromInventory: true
+  Pack:
+    generate_model: true
+    custom_model_data: 7
+    parent_model: item/handheld
+    textures:
+    - hyronic_sur/items_textures/sword/mythril_greatsword
+
+orichalcum_sword:
+  displayname: '&eironsword'
+  material: IRON_SWORD
+  excludeFromInventory: true
+  Pack:
+    generate_model: true
+    custom_model_data: 8
+    parent_model: item/handheld
+    textures:
+    - hyronic_sur/items_textures/sword/orichalcum_sword
+
+titanium_blade:
+  displayname: '&eironsword'
+  material: IRON_SWORD
+  excludeFromInventory: true
+  Pack:
+    generate_model: true
+    custom_model_data: 9
+    parent_model: item/handheld
+    textures:
+    - hyronic_sur/items_textures/sword/titanium_blade
+
+immolus:
+  displayname: '&eironsword'
+  material: IRON_SWORD
+  excludeFromInventory: true
+  Pack:
+    generate_model: true
+    custom_model_data: 10
+    parent_model: item/handheld
+    textures:
+    - hyronic_sur/items_textures/sword/immolus
+
+securus:
+  displayname: '&eironsword'
+  material: IRON_SWORD
+  excludeFromInventory: true
+  Pack:
+    generate_model: true
+    custom_model_data: 11
+    parent_model: item/handheld
+    textures:
+    - hyronic_sur/items_textures/sword/securus
+
+daedalus_replica:
+  displayname: '&eironsword'
+  material: IRON_SWORD
+  excludeFromInventory: true
+  Pack:
+    generate_model: true
+    custom_model_data: 12
+    parent_model: item/handheld
+    textures:
+    - hyronic_sur/items_textures/sword/daedalus_replica
+
+cobra:
+  displayname: '&eironsword'
+  material: IRON_SWORD
+  excludeFromInventory: true
+  Pack:
+    generate_model: true
+    custom_model_data: 13
+    parent_model: item/handheld
+    textures:
+    - hyronic_sur/items_textures/sword/cobra
+

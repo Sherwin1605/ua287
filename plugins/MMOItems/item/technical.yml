@@ -1,0 +1,72 @@
+MYTHRIL:
+  base:
+    material: PAPER
+    disable-crafting: true
+    disable-interaction: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    custom-model-data: 70.0
+    name: <#049cdc>Mythril
+    tier: B
+    lore:
+      - "&7Can be smelt into ingots"
+ORICHALCUM:
+  base:
+    material: PAPER
+    disable-crafting: true
+    disable-interaction: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    custom-model-data: 71.0
+    name: <#049cdc>Orichalcum
+    tier: B
+    lore:
+      - "&7Can be smelt into ingots"
+TITANIUM:
+  base:
+    material: PAPER
+    disable-crafting: true
+    disable-interaction: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    custom-model-data: 72.0
+    name: <#7f56fc>Titanium
+    tier: A
+    lore:
+      - "&7Can be smelt into ingots"
+URANIUM_DEBRIS:
+  base:
+    material: PAPER
+    disable-crafting: true
+    disable-interaction: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    custom-model-data: 39.0
+    name: <#7f56fc>Uranium Debris
+    lore:
+    - '&7A piece of hyper-radioactive'
+    - '&7metal. Holding this makes you sick.'
+    tier: A
+IRIDIUM_SHARD:
+  base:
+    material: PAPER
+    disable-crafting: true
+    disable-interaction: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    custom-model-data: 41.0
+    name: <#7f56fc>Iridium Shard
+    lore:
+    - '&7It''s giving off strange'
+    - '&7glow.'
+    tier: A

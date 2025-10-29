@@ -1,0 +1,348 @@
+open_command: []
+size: 54
+open_requirement:
+  requirements:
+    1:
+      type: has permission
+      permission: access.shen
+      deny_commands:
+        - "[message] &c&lLOCKED!&7 Reach &6Adventurer LVL 2 &7to unlock this feature!"
+menu_title: '              ꜱʜᴇɴ ꜱʜᴏᴘ'
+items:
+  'close':
+    material: BOOK
+    model_data: 2
+    slot: 49
+    display_name: "&cClose Interface"
+    lore:
+      - "&7Click this to close"
+      - "&7this interface!"
+    left_click_commands:
+      - "[close] menu"
+      - "[sound] BLOCK_LEVER_CLICK"
+  'outerfill':
+    material: CLAY_BALL
+    model_data: 1
+    hide_attributes: true
+    priority: 10
+    display_name: "&f"
+    slots: [0,1,2,3,4,5,6,7,8,9,18,27,36,45,46,47,50,51,52,17,26,35,44,52,53,10,11,12,13,14,15,16,19,20,22,24,25,28,29,31,33,34,37,38,39,40,41,42,43,48,21,23,30,32]
+  '1':
+    material: BONE
+    model_data: 10
+    slot: 10
+    item_flags:
+    - HIDE_POTION_EFFECTS
+    display_name: "&#049cdcBronze Badge"
+    lore:
+      - "&8Accessory"
+      - ""
+      - "&d???"
+      - ""
+      - "&8Costs"
+      - "&f 500 Hyrons"
+      - "&6 &710x&6 Adventurer Badge"
+      - ""
+      - "%changeoutput_>=_input:{alonsolevels_level}_matcher:2_ifmatch:&a✔_else:&c✘% Adventurer LVL.2"
+      - ""
+      - "&eClick to buy!"
+    left_click_requirement:
+      requirements:
+        1:
+          type: ">="
+          input: "%alonsolevels_level%"
+          output: 2
+          deny_commands:
+            - "[message] &cAdventurer level not high enough!"
+        2:
+          type: ">="
+          input: "%playerpoints_points%"
+          output: 500
+          deny_commands:
+            - "[message] &cNot enough Hyrons!"
+        3:
+          type: ">="
+          input: "%checkitem_amount_nbtstrings:MMOITEMS_ITEM_ID=ADVENTURER_BADGE%"
+          output: 10
+          deny_commands:
+            - "[message] &cNot enough items!"
+      deny_commands:
+        - "[sound] ENTITY_VILLAGER_NO"
+        - "[close] menu"
+    left_click_commands:
+      - "[console] mi give ACCESSORY BRONZE_BADGE %player_name%"
+      - "[console] points take %player_name% 500"
+      - "[console] papi parse %player_name% %checkitem_amount_remove_nbtstrings:MMOITEMS_ITEM_ID=ADVENTURER_BADGE,amt:10%"
+      - "[sound] ENTITY_PLAYER_LEVELUP"
+
+  '2':
+    material: BONE
+    model_data: 11
+    slot: 11
+    item_flags:
+    - HIDE_POTION_EFFECTS
+    display_name: "&#7a09faSilver Badge"
+    lore:
+      - "&8Accessory"
+      - ""
+      - "&d???"
+      - ""
+      - "&8Costs"
+      - "&#049cdc Bronze Badge"
+      - "&f 2,000 Hyrons"
+      - "&6 &725x&6 Adventurer Badge"
+      - "&6 &75x&6 Silver Coins"
+      - ""
+      - "%changeoutput_>=_input:{alonsolevels_level}_matcher:10_ifmatch:&a✔_else:&c✘% Adventurer LVL.10"
+      - ""
+      - "&eClick to buy!"
+    left_click_requirement:
+      requirements:
+        1:
+          type: ">="
+          input: "%alonsolevels_level%"
+          output: 10
+          deny_commands:
+            - "[message] &cAdventurer level not high enough!"
+        2:
+          type: ">="
+          input: "%playerpoints_points%"
+          output: 2000
+          deny_commands:
+            - "[message] &cNot enough Hyrons!"
+        3:
+          type: ">="
+          input: "%checkitem_amount_nbtstrings:MMOITEMS_ITEM_ID=ADVENTURER_BADGE%"
+          output: 25
+          deny_commands:
+            - "[message] &cNot enough items!"
+        4:
+          type: ">="
+          input: "%checkitem_amount_nbtstrings:MMOITEMS_ITEM_ID=SILVER_COIN%"
+          output: 5
+          deny_commands:
+            - "[message] &cNot enough items!"
+        5:
+          type: ">="
+          input: "%checkitem_amount_nbtstrings:MMOITEMS_ITEM_ID=BRONZE_BADGE%"
+          output: 1
+          deny_commands:
+            - "[message] &cNot enough items!"
+      deny_commands:
+        - "[sound] ENTITY_VILLAGER_NO"
+        - "[close] menu"
+    left_click_commands:
+      - "[console] mi give ACCESSORY SILVER_BADGE %player_name%"
+      - "[console] points take %player_name% 2000"
+      - "[console] papi parse %player_name% %checkitem_amount_remove_nbtstrings:MMOITEMS_ITEM_ID=ADVENTURER_BADGE,amt:25%"
+      - "[console] papi parse %player_name% %checkitem_amount_remove_nbtstrings:MMOITEMS_ITEM_ID=SILVER_COIN,amt:5%"
+      - "[console] papi parse %player_name% %checkitem_amount_remove_nbtstrings:MMOITEMS_ITEM_ID=BRONZE_BADGE,amt:1%"
+      - "[sound] ENTITY_PLAYER_LEVELUP"
+  '3':
+    material: BONE
+    model_data: 12
+    slot: 12
+    item_flags:
+    - HIDE_POTION_EFFECTS
+    display_name: "&#fca414Gold Badge"
+    lore:
+      - "&8Accessory"
+      - ""
+      - "&d???"
+      - ""
+      - "&8Costs"
+      - "&#7a09fa Silver Badge"
+      - "&f 15,000 Hyrons"
+      - "&6 &764x&6 Adventurer Badge"
+      - "&6 &720x&6 Silver Coins"
+      - ""
+      - "%changeoutput_>=_input:{alonsolevels_level}_matcher:20_ifmatch:&a✔_else:&c✘% Adventurer LVL.20"
+      - ""
+      - "&eClick to buy!"
+    left_click_requirement:
+      requirements:
+        1:
+          type: ">="
+          input: "%alonsolevels_level%"
+          output: 20
+          deny_commands:
+            - "[message] &cAdventurer level not high enough!"
+        2:
+          type: ">="
+          input: "%playerpoints_points%"
+          output: 15000
+          deny_commands:
+            - "[message] &cNot enough Hyrons!"
+        3:
+          type: ">="
+          input: "%checkitem_amount_nbtstrings:MMOITEMS_ITEM_ID=ADVENTURER_BADGE%"
+          output: 64
+          deny_commands:
+            - "[message] &cNot enough items!"
+        4:
+          type: ">="
+          input: "%checkitem_amount_nbtstrings:MMOITEMS_ITEM_ID=SILVER_COIN%"
+          output: 20
+          deny_commands:
+            - "[message] &cNot enough items!"
+        5:
+          type: ">="
+          input: "%checkitem_amount_nbtstrings:MMOITEMS_ITEM_ID=SILVER_BADGE%"
+          output: 1
+          deny_commands:
+            - "[message] &cNot enough items!"
+      deny_commands:
+        - "[sound] ENTITY_VILLAGER_NO"
+        - "[close] menu"
+    left_click_commands:
+      - "[console] mi give ACCESSORY GOLD_BADGE %player_name%"
+      - "[console] points take %player_name% 15000"
+      - "[console] papi parse %player_name% %checkitem_amount_remove_nbtstrings:MMOITEMS_ITEM_ID=ADVENTURER_BADGE,amt:64%"
+      - "[console] papi parse %player_name% %checkitem_amount_remove_nbtstrings:MMOITEMS_ITEM_ID=SILVER_COIN,amt:20%"
+      - "[console] papi parse %player_name% %checkitem_amount_remove_nbtstrings:MMOITEMS_ITEM_ID=SILVER_BADGE,amt:1%"
+      - "[sound] ENTITY_PLAYER_LEVELUP"
+
+  '4':
+    material: PAPER
+    model_data: 15
+    slot: 19
+    item_flags:
+    - HIDE_POTION_EFFECTS
+    display_name: "&bDiamond Crate Key"
+    lore:
+      - "&8Consumed on use"
+      - ""
+      - "&7Can be used to open"
+      - "&7a &b&lDIAMOND&7 crate!"
+      - ""
+      - "&8Costs"
+      - "&f 1,000 Hyrons"
+      - "&6 &71x &#049cdcPure Diamond"
+      - ""
+      - "%changeoutput_>=_input:{alonsolevels_level}_matcher:7_ifmatch:&a✔_else:&c✘% Adventurer LVL.7"
+      - ""
+      - "&eClick to buy!"
+    left_click_requirement:
+      requirements:
+        1:
+          type: ">="
+          input: "%alonsolevels_level%"
+          output: 7
+          deny_commands:
+            - "[message] &cAdventurer level not high enough!"
+        2:
+          type: ">="
+          input: "%playerpoints_points%"
+          output: 1000
+          deny_commands:
+            - "[message] &cNot enough Hyrons!"
+        3:
+          type: ">="
+          input: "%checkitem_amount_nbtstrings:MMOITEMS_ITEM_ID=PURE_DIAMOND%"
+          output: 1
+          deny_commands:
+            - "[message] &cNot enough items!"
+      deny_commands:
+        - "[sound] ENTITY_VILLAGER_NO"
+        - "[close] menu"
+    left_click_commands:
+      - "[console] crate key give %player_name% DIAMOND 1"
+      - "[console] points take %player_name% 1000"
+      - "[console] papi parse %player_name% %checkitem_amount_remove_nbtstrings:MMOITEMS_ITEM_ID=PURE_DIAMOND,amt:1%"
+      - "[sound] ENTITY_PLAYER_LEVELUP"
+  '5':
+    material: PAPER
+    model_data: 15
+    slot: 20
+    item_flags:
+    - HIDE_POTION_EFFECTS
+    display_name: "&aEmerald Crate Key"
+    lore:
+      - "&8Consumed on use"
+      - ""
+      - "&7Can be used to open"
+      - "&7an &a&lEMERALD&7 crate!"
+      - ""
+      - "&8Costs"
+      - "&f 2,500 Hyrons"
+      - "&6 &71x &#049cdcPerfect Emerald"
+      - ""
+      - "%changeoutput_>=_input:{alonsolevels_level}_matcher:12_ifmatch:&a✔_else:&c✘% Adventurer LVL.12"
+      - ""
+      - "&eClick to buy!"
+    left_click_requirement:
+      requirements:
+        1:
+          type: ">="
+          input: "%alonsolevels_level%"
+          output: 12
+          deny_commands:
+            - "[message] &cAdventurer level not high enough!"
+        2:
+          type: ">="
+          input: "%playerpoints_points%"
+          output: 2500
+          deny_commands:
+            - "[message] &cNot enough Hyrons!"
+        3:
+          type: ">="
+          input: "%checkitem_amount_nbtstrings:MMOITEMS_ITEM_ID=PERFECT_EMERALD%"
+          output: 1
+          deny_commands:
+            - "[message] &cNot enough items!"
+      deny_commands:
+        - "[sound] ENTITY_VILLAGER_NO"
+        - "[close] menu"
+    left_click_commands:
+      - "[console] crate key give %player_name% EMERALD 1"
+      - "[console] points take %player_name% 2500"
+      - "[console] papi parse %player_name% %checkitem_amount_remove_nbtstrings:MMOITEMS_ITEM_ID=PERFECT_EMERALD,amt:1%"
+      - "[sound] ENTITY_PLAYER_LEVELUP"
+  '6':
+    material: PAPER
+    model_data: 15
+    slot: 21
+    item_flags:
+    - HIDE_POTION_EFFECTS
+    display_name: "&5Obsidian Crate Key"
+    lore:
+      - "&8Consumed on use"
+      - ""
+      - "&7Can be used to open"
+      - "&7an &5&lOBSIDIAN&7 crate!"
+      - ""
+      - "&8Costs"
+      - "&f 5,000 Hyrons"
+      - "&6 &75x &#7a09faTrue Black"
+      - ""
+      - "%changeoutput_>=_input:{alonsolevels_level}_matcher:18_ifmatch:&a✔_else:&c✘% Adventurer LVL.18"
+      - ""
+      - "&eClick to buy!"
+    left_click_requirement:
+      requirements:
+        1:
+          type: ">="
+          input: "%alonsolevels_level%"
+          output: 18
+          deny_commands:
+            - "[message] &cAdventurer level not high enough!"
+        2:
+          type: ">="
+          input: "%playerpoints_points%"
+          output: 5000
+          deny_commands:
+            - "[message] &cNot enough Hyrons!"
+        3:
+          type: ">="
+          input: "%checkitem_amount_nbtstrings:MMOITEMS_ITEM_ID=TRUE_BLACK%"
+          output: 1
+          deny_commands:
+            - "[message] &cNot enough items!"
+      deny_commands:
+        - "[sound] ENTITY_VILLAGER_NO"
+        - "[close] menu"
+    left_click_commands:
+      - "[console] crate key give %player_name% OBSIDIAN 1"
+      - "[console] points take %player_name% 1000"
+      - "[console] papi parse %player_name% %checkitem_amount_remove_nbtstrings:MMOITEMS_ITEM_ID=TRUE_BLACK,amt:1%"
+      - "[sound] ENTITY_PLAYER_LEVELUP"

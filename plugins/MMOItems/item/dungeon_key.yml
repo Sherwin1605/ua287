@@ -1,0 +1,36 @@
+THE_VEIL_KEY:
+  base:
+    material: PAPER
+    custom-model-data: 14.0
+    lore:
+    - '&7Can be used to access &dThe'
+    - '&dVeil&7 dungeon once!'
+    tier: B
+    name: <#049cdc>Rusty Key
+    crafting:
+      shaped:
+        '1':
+          input:
+          - v iron_ingot - 1.0..|v gold_ingot - 1.0..|v iron_ingot - 1.0..
+          - v redstone - 12.0..|v tripwire_hook - 1.0..|v lapis_lazuli - 12.0..
+          - m material mythril_ingot 1.0..|m material orichalcum_ingot 1.0..|m material
+            mythril_ingot 1.0..
+
+C_THE_VEIL_KEY:
+  base:
+    material: PAPER
+    custom-model-data: 14.0
+    lore:
+    - '&7Can be used to access &dThe'
+    - '&dVeil &5&l[C]&7 dungeon once!'
+    tier: A
+    name: <#7f56fc>Rift Key
+    crafting:
+      shaped:
+        '1':
+          input:
+          - m material uranium 2.0..|m material null_cell 1.0..|m material uranium
+            2.0..
+          - v AIR 0 1.0..|v tripwire_hook - 1.0..|v AIR 0 1.0..
+          - m material iridium_crystal 2.0..|m material null_cell 1.0..|m material
+            iridium_crystal 2.0..

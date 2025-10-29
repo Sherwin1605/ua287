@@ -1,0 +1,6 @@
+name: owner
+permissions:
+- '*'
+- displayname.&Fை
+- chat.owner
+- weight.10

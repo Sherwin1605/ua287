@@ -1,0 +1,149 @@
+RAVENNA:
+  Type: SKELETON
+  Display: 'Ravenna'
+  Health: 250000
+  Damage: 35
+  Armor: 0
+  Faction: Boss
+  BossBar:
+    Enabled: true
+    Title: '&fྦྷ <GRADIENT:#340f42:#804896>ʀᴀᴠᴇɴɴᴀ &8- <GRADIENT:#340f42:#804896><caster.hp{round=0}>❤'
+    Range: 40
+    Color: WHITE
+    Style: SOLID
+    CreateFog: true
+  Options:
+    NoGravity: true
+    Collidable: false
+    DigOutOfGround: true
+    MaxCombatDistance: 40
+    MovementSpeed: 0.4
+    Despawn: true
+    FollowRange: 30
+    KnockbackResistance: 1
+    PreventItemPickup: true
+    PreventMobKillDrops: true
+    PreventOtherDrops: true
+    PreventSunburn: true
+    Silent: true
+    PreventRandomEquipment: true
+    ReviveHealth: 1
+  DropOptions:
+    DropMethod: FANCY
+    ShowDeathChatMessage: true
+    PerPlayerDrops: true
+    ClientSideDrops: true
+    HologramItemNames: true
+    RequiredDamagePercent: 1
+    HologramTimeout: 6000
+    ChatMessage:
+    - ''
+    - '<rainbow><bold>         BOSS DEFEATED!</rainbow>'
+    - '<dark_gray>                Ravenna'
+    - ''
+    - '<gold><bold>   1st Place <reset><dark_gray>- <gold><1.name> <reset><dark_gray>- <red><1.damage>'
+    - '<yellow><bold>   2nd Place <reset><dark_gray>- <yellow><2.name> <reset><dark_gray>- <red><2.damage>'
+    - '<red><bold>   3rd Place <reset><dark_gray>- <red><3.name> <reset><dark_gray>- <red><3.damage>'
+    - '<gray><bold>   4th Place <reset><dark_gray>- <gray><4.name> <reset><dark_gray>- <red><4.damage>'
+    - ''
+    - '<gold> ▶ <gray>You deal <red><player.damage><gray> damage, ranking <yellow>#<player.rank><gray>! <gold>◀'
+    - '<#F28800>'
+  Modules:
+    ThreatTable: true
+    ImmunityTable: true
+  Equipment:
+  - PLAYER_HEAD{skullTexture=eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTZkYTdmZGUxNjUyNzkzOTUzNjIzYzYzZGEzNjk2MTZhNTNiZDliMGQ1ZDg0ZDIyMzhhODRhOGM4MDYyMCJ9fX0=} HEAD
+  - mmoitems{type=ARMOR;id=HEXIM_CHESTPLATE} CHEST
+  - mmoitems{type=ARMOR;id=CAELETUS_LEGGINGS} LEGS
+  - mmoitems{type=ARMOR;id=QUINERUS_BOOTS} FEET
+  DamageModifiers:
+  - LIGHTNING 0
+  - FIRE 0
+  - FIRE_TICK 0
+  - DROWNING 0
+  - BLOCK_EXPLOSION 0
+  - ENTITY_EXPLOSION 0
+  - LIGHTNING 0
+  - POISON 0
+  - MAGIC 0
+  - DRAGON_BREATH 0
+  - WITHER 0
+  - FALLING_BLOCK 0
+  - THORNS 0
+  - LAVA 0
+  - FALL 0
+  - HOT_FLOOR 0
+  - SUFFOCATION 0
+  - CONTACT 0
+  AIGoalSelectors:
+  - 0 Clear
+  - 1 Lookatplayers
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  - 2 attackers
+  Skills:
+  - sound{s=bossmusic;v=100;p=0} @self ~onSpawn
+  - sound{s=bossmusic;v=100;p=0} @self ~onTimer:4320
+  - effect:particles{p=smoke_large;amount=4;hS=0.4;vS=1;speed=0.05} @self ~onTimer:5
+  - skill{s=R_Entrance} @self ~onSpawn 
+  - skill{s=R_Stasis;sync=true} ~onDamaged
+  - skill{s=R_TransformP2} @self =70%
+  - skill{s=R_TransformP3-1st} @self =40%
+  - skill{s=R_Death;sync=true} ~onDeath
+  - stopsound{s=bossmusic} ~onDeath @world
+
+Raven:
+  Type: Bat
+  Display: '&8Bad Omen'
+  Health: 75
+  Damage: 0
+  Armor: 5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.35
+    Despawn: true
+    FollowRange: 30
+    KnockbackResistance: 1
+    PreventItemPickup: true
+    PreventMobKillDrops: true
+    PreventOtherDrops: true
+    PreventSunburn: true
+    Silent: true
+    PreventRandomEquipment: true
+  Skills:
+  - skill{s=R_Sacrifice} ~onSignal:explode
+
+Nightcrawler:
+  Type: ENDERMAN
+  Display: 'Nightcrawler'
+  Health: 100
+  Damage: 25
+  Options:
+    MovementSpeed: 0.3
+    AlwaysShowName: true
+  AIGoalSelectors:
+  - 0 Clear
+  - 1 meleeattack
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  - 2 attackers
+
+Acolyte:
+  Type: DROWNED
+  Display: 'Acolyte'
+  Health: 100
+  Damage: 0
+  Options:
+    MovementSpeed: 0
+    KnockbackResistance: 1
+    AlwaysShowName: true
+    Collidable: false
+    Silent: true
+  AIGoalSelectors:
+  - 0 Clear
+  AITargetSelectors:
+  - 0 clear
+  Skills:
+  - skill{s=R_Acolyte_Death} @Parent ~onDeath

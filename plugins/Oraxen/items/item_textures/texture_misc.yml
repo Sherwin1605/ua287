@@ -1,0 +1,34 @@
+# For textures only!!!
+
+hotbar_menu_item:
+  displayname: '&epaper'
+  material: PAPER
+  excludeFromInventory: true
+  Pack:
+    generate_model: true
+    custom_model_data: 3
+    parent_model: item/generated
+    textures:
+    - hyronic_sur/misc/menu
+
+dungeon_key:
+  displayname: '&epaper'
+  material: PAPER
+  excludeFromInventory: true
+  Pack:
+    generate_model: true
+    custom_model_data: 14
+    parent_model: item/generated
+    textures:
+    - hyronic_sur/items_textures/dungeon_key_1
+
+crate_key:
+  displayname: '&epaper'
+  material: PAPER
+  excludeFromInventory: true
+  Pack:
+    generate_model: true
+    custom_model_data: 15
+    parent_model: item/generated
+    textures:
+    - hyronic_sur/items_textures/materials/crate_key

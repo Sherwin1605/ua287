@@ -1,0 +1,336 @@
+open_command:
+  - sirius
+open_requirement:
+  requirements:
+    1:
+      type: has permission
+      permission: access.sirius
+      deny_commands:
+        - "[message] &c&lLOCKED!&7 Reach &6Adventurer LVL 10 &7to unlock this feature!"
+size: 54
+menu_title: '            ᴛʜᴇ ᴀᴡᴀᴋᴇɴᴇʀ'
+items:
+  'close':
+    material: BOOK
+    model_data: 2
+    slot: 49
+    display_name: "&cClose Interface"
+    lore:
+      - "&7Click this to close"
+      - "&7this interface!"
+    left_click_commands:
+      - "[close] menu"
+      - "[sound] BLOCK_LEVER_CLICK"
+  'outerfill':
+    material: CLAY_BALL
+    model_data: 1
+    hide_attributes: true
+    priority: 10
+    display_name: "&f"
+    slots: [0,1,2,3,4,5,6,7,8,9,18,27,36,45,46,47,50,51,52,17,26,35,44,52,53,10,11,12,13,14,15,16,19,20,22,24,25,28,29,31,33,34,37,38,39,40,41,42,43,48,21,23,30,32]
+  '1a':
+    material: BOOK
+    model_data: 9
+    slot: 21
+    priority: 5
+    item_flags:
+    - HIDE_POTION_EFFECTS
+    display_name: "&9Skill XP Boost I"
+    lore:
+      - "&8Perk"
+      - ""
+      - "&7Increases your &3♣ Bonus"
+      - "&3Skills EXP &7by &92%&7."
+      - ""
+      - "&8Costs"
+      - "&f 10,000 Hyrons"
+      - "&6 100k Coins"
+      - ""
+      - "%changeoutput_>=_input:{alonsolevels_level}_matcher:10_ifmatch:&a✔_else:&c✘% Adventurer LVL.10"
+      - ""
+      - "&eClick to buy!"
+    left_click_requirement:
+      requirements:
+        1:
+          type: ">="
+          input: "%alonsolevels_level%"
+          output: 10
+          deny_commands:
+            - "[message] &cAdventurer level not high enough!"
+        2:
+          type: ">="
+          input: "%playerpoints_points%"
+          output: 10000
+          deny_commands:
+            - "[message] &cNot enough Hyrons!"
+        3:
+          type: ">="
+          input: "%vault_eco_balance_fixed%"
+          output: 100000
+          deny_commands:
+            - "[message] &cNot enough coins!"
+      deny_commands:
+        - "[sound] ENTITY_VILLAGER_NO"
+        - "[close] menu"
+    left_click_commands:
+      - "[console] lp user %player_name% permission set aureliumskills.multiplier.2 true"
+      - "[console] points take %player_name% 10000"
+      - "[console] eco take %player_name% 100000"
+      - "[message] &3&lPERK UNLOCKED!&f This perk is now in effect."
+      - "[sound] BLOCK_BEACON_ACTIVATE"
+  '1b':
+    material: BOOK
+    model_data: 9
+    slot: 21
+    amount: 2
+    priority: 4
+    item_flags:
+    - HIDE_POTION_EFFECTS
+    display_name: "&9Skill XP Boost II"
+    lore:
+      - "&8Perk"
+      - ""
+      - "&7Increases your &3♣ Bonus"
+      - "&3Skills EXP &7by &8&m2%&f → &34%&7."
+      - ""
+      - "&8Costs"
+      - "&f 20,000 Hyrons"
+      - "&6 200k Coins"
+      - ""
+      - "%changeoutput_>=_input:{alonsolevels_level}_matcher:10_ifmatch:&a✔_else:&c✘% Adventurer LVL.10"
+      - ""
+      - "&eClick to buy!"
+    view_requirement:
+      requirements:
+        1:
+          type: has permission
+          permission: aureliumskills.multiplier.2
+    left_click_requirement:
+      requirements:
+        1:
+          type: ">="
+          input: "%alonsolevels_level%"
+          output: 10
+          deny_commands:
+            - "[message] &cAdventurer level not high enough!"
+        2:
+          type: ">="
+          input: "%playerpoints_points%"
+          output: 20000
+          deny_commands:
+            - "[message] &cNot enough Hyrons!"
+        3:
+          type: ">="
+          input: "%vault_eco_balance_fixed%"
+          output: 200000
+          deny_commands:
+            - "[message] &cNot enough coins!"
+      deny_commands:
+        - "[sound] ENTITY_VILLAGER_NO"
+        - "[close] menu"
+    left_click_commands:
+      - "[console] lp user %player_name% permission set aureliumskills.multiplier.2.0 true"
+      - "[console] points take %player_name% 20000"
+      - "[console] eco take %player_name% 200000"
+      - "[message] &3&lPERK UNLOCKED!&f This perk is now in effect."
+      - "[sound] BLOCK_BEACON_ACTIVATE"
+  '1c':
+    material: BOOK
+    model_data: 9
+    slot: 21
+    amount: 3
+    priority: 3
+    item_flags:
+    - HIDE_POTION_EFFECTS
+    display_name: "&9Skill XP Boost III"
+    lore:
+      - "&8Perk"
+      - ""
+      - "&7Increases your &3♣ Bonus"
+      - "&3Skills EXP &7by &8&m4%&f → &36%&7."
+      - ""
+      - "&8Costs"
+      - "&f 40,000 Hyrons"
+      - "&6 400k Coins"
+      - ""
+      - "%changeoutput_>=_input:{alonsolevels_level}_matcher:10_ifmatch:&a✔_else:&c✘% Adventurer LVL.10"
+      - ""
+      - "&eClick to buy!"
+    view_requirement:
+      requirements:
+        1:
+          type: has permission
+          permission: aureliumskills.multiplier.2.0
+    left_click_requirement:
+      requirements:
+        1:
+          type: ">="
+          input: "%alonsolevels_level%"
+          output: 10
+          deny_commands:
+            - "[message] &cAdventurer level not high enough!"
+        2:
+          type: ">="
+          input: "%playerpoints_points%"
+          output: 40000
+          deny_commands:
+            - "[message] &cNot enough Hyrons!"
+        3:
+          type: ">="
+          input: "%vault_eco_balance_fixed%"
+          output: 400000
+          deny_commands:
+            - "[message] &cNot enough coins!"
+      deny_commands:
+        - "[sound] ENTITY_VILLAGER_NO"
+        - "[close] menu"
+    left_click_commands:
+      - "[console] lp user %player_name% permission set aureliumskills.multiplier.2.00 true"
+      - "[console] points take %player_name% 40000"
+      - "[console] eco take %player_name% 400000"
+      - "[message] &3&lPERK UNLOCKED!&f This perk is now in effect."
+      - "[sound] BLOCK_BEACON_ACTIVATE"
+  '1d':
+    material: BOOK
+    model_data: 9
+    slot: 21
+    amount: 4
+    priority: 2
+    item_flags:
+    - HIDE_POTION_EFFECTS
+    display_name: "&9Skill XP Boost IV"
+    lore:
+      - "&8Perk"
+      - ""
+      - "&7Increases your &3♣ Bonus"
+      - "&3Skills EXP &7by &8&m6%&f → &38%&7."
+      - ""
+      - "&8Costs"
+      - "&f 75,000 Hyrons"
+      - "&6 750k Coins"
+      - ""
+      - "%changeoutput_>=_input:{alonsolevels_level}_matcher:10_ifmatch:&a✔_else:&c✘% Adventurer LVL.10"
+      - ""
+      - "&eClick to buy!"
+    view_requirement:
+      requirements:
+        1:
+          type: has permission
+          permission: aureliumskills.multiplier.2.00
+    left_click_requirement:
+      requirements:
+        1:
+          type: ">="
+          input: "%alonsolevels_level%"
+          output: 10
+          deny_commands:
+            - "[message] &cAdventurer level not high enough!"
+        2:
+          type: ">="
+          input: "%playerpoints_points%"
+          output: 75000
+          deny_commands:
+            - "[message] &cNot enough Hyrons!"
+        3:
+          type: ">="
+          input: "%vault_eco_balance_fixed%"
+          output: 750000
+          deny_commands:
+            - "[message] &cNot enough coins!"
+      deny_commands:
+        - "[sound] ENTITY_VILLAGER_NO"
+        - "[close] menu"
+    left_click_commands:
+      - "[console] lp user %player_name% permission set aureliumskills.multiplier.2.000 true"
+      - "[console] points take %player_name% 75000"
+      - "[console] eco take %player_name% 750000"
+      - "[message] &3&lPERK UNLOCKED!&f This perk is now in effect."
+      - "[sound] BLOCK_BEACON_ACTIVATE"
+  '1e':
+    material: BOOK
+    model_data: 9
+    slot: 21
+    amount: 5
+    priority: 1
+    item_flags:
+    - HIDE_POTION_EFFECTS
+    display_name: "&9Skill XP Boost V"
+    lore:
+      - "&8Perk"
+      - ""
+      - "&7Increases your &3♣ Bonus"
+      - "&3Skills EXP &7by &8&m8%&f → &310%&7."
+      - ""
+      - "&8Costs"
+      - "&f 100,000 Hyrons"
+      - "&6 1m Coins"
+      - ""
+      - "%changeoutput_>=_input:{alonsolevels_level}_matcher:10_ifmatch:&a✔_else:&c✘% Adventurer LVL.10"
+      - ""
+      - "&eClick to buy!"
+    view_requirement:
+      requirements:
+        1:
+          type: has permission
+          permission: aureliumskills.multiplier.2.000
+    left_click_requirement:
+      requirements:
+        1:
+          type: ">="
+          input: "%alonsolevels_level%"
+          output: 10
+          deny_commands:
+            - "[message] &cAdventurer level not high enough!"
+        2:
+          type: ">="
+          input: "%playerpoints_points%"
+          output: 100000
+          deny_commands:
+            - "[message] &cNot enough Hyrons!"
+        3:
+          type: ">="
+          input: "%vault_eco_balance_fixed%"
+          output: 1000000
+          deny_commands:
+            - "[message] &cNot enough coins!"
+      deny_commands:
+        - "[sound] ENTITY_VILLAGER_NO"
+        - "[close] menu"
+    left_click_commands:
+      - "[console] lp user %player_name% permission set aureliumskills.multiplier.2.0000 true"
+      - "[console] points take %player_name% 100000"
+      - "[console] eco take %player_name% 1000000"
+      - "[message] &3&lPERK UNLOCKED!&f This perk is now in effect."
+      - "[sound] BLOCK_BEACON_ACTIVATE"
+  '1done':
+    material: BOOK
+    model_data: 9
+    slot: 21
+    amount: 5
+    priority: 0
+    item_flags:
+    - HIDE_POTION_EFFECTS
+    display_name: "&9Skill XP Boost V"
+    lore:
+      - "&8Perk"
+      - ""
+      - "&7Increases your &3♣ Bonus"
+      - "&3Skills EXP &7by &310%&7."
+      - ""
+      - "&a&lMAXED!"
+    view_requirement:
+      requirements:
+        1:
+          type: has permission
+          permission: aureliumskills.multiplier.2.0000
+
+  'coming':
+    material: GRAY_DYE
+    slots: [22,23]
+    priority: 0
+    item_flags:
+    - HIDE_POTION_EFFECTS
+    display_name: "&c???"
+    lore:
+      - "&7This perk may become"
+      - "&7available in the future!"
