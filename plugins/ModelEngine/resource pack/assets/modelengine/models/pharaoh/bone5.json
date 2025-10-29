@@ -1,1 +1,0 @@
-{"textures":{"0":"modelengine:entity/egyptian_boss"},"elements":[{"from":[-0.01111,-6.9666705,7.98889],"to":[16.01111,8.05555,8.01111],"faces":{"south":{"uv":[13.9375,4.9375,14.9375,5.875],"tintindex":0,"rotation":0,"texture":"#0"},"north":{"uv":[12.9375,4.9375,13.9375,5.875],"tintindex":0,"rotation":0,"texture":"#0"}}}],"display":{"gui":{"rotation":[30,225,0]}}}
