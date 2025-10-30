@@ -1,0 +1,1630 @@
+panels:
+  slayers:
+    perm: default
+    rows: 5
+    title: '&f'
+    commands:
+    - slayer
+    - slayers
+    empty: AIR
+    sound-on-open: BLOCK_NOTE_BLOCK_HAT
+    item:
+
+
+      '0':
+        material: STICK
+        customdata: 1
+        name: '&c← Previous Menu'
+        commands:
+        - open= reputation
+      
+      
+      
+      '8':
+        material: STICK
+        customdata: 11
+        name: '%color_menu_primary%Slayers'
+        lore:
+        - ''
+        - '&7Slayers specialize in killing'
+        - '&7mobs and defeating bosses.'
+        - ''
+        - '&7They also scout the Dungeons and'
+        - '&7even resort to killing other players.'
+      
+      
+      
+      '1':
+        material: 'STICK'
+        customdata: '%valiant_reputation_slayers_level_model_data%'
+        name: '&fSlayers Level: &e%valiant_reputation_slayers_level%'
+      
+      
+      '2':
+        material: STICK
+        customdata: 100
+        name: '&fSlayers Level: &e%valiant_reputation_slayers_level%'
+        has0:
+          value0: '%valiant_reputation_slayers_xp_bar% ISGREATER'
+          compare0: '1'
+          material: STICK
+          customdata: 221
+          name: '&fSlayers Level: &e%valiant_reputation_slayers_level%'
+      '3':
+        material: STICK
+        customdata: 100
+        name: '&fSlayers Level: &e%valiant_reputation_slayers_level%'
+        has0:
+          value0: '%valiant_reputation_slayers_xp_bar% ISGREATER'
+          compare0: '2'
+          material: STICK
+          customdata: 221
+          name: '&fSlayers Level: &e%valiant_reputation_slayers_level%'
+      '4':
+        material: STICK
+        customdata: 100
+        name: '&fSlayers Level: &e%valiant_reputation_slayers_level%'
+        has0:
+          value0: '%valiant_reputation_slayers_xp_bar% ISGREATER'
+          compare0: '3'
+          material: STICK
+          customdata: 221
+          name: '&fSlayers Level: &e%valiant_reputation_slayers_level%'
+      '5':
+        material: STICK
+        customdata: 100
+        name: '&fSlayers Level: &e%valiant_reputation_slayers_level%'
+        has0:
+          value0: '%valiant_reputation_slayers_xp_bar% ISGREATER'
+          compare0: '4'
+          material: STICK
+          customdata: 221
+          name: '&fSlayers Level: &e%valiant_reputation_slayers_level%'
+      '6':
+        material: STICK
+        customdata: 100
+        name: '&fSlayers Level: &e%valiant_reputation_slayers_level%'
+        has0:
+          value0: '%valiant_reputation_slayers_xp_bar% ISGREATER'
+          compare0: '5'
+          material: STICK
+          customdata: 221
+          name: '&fSlayers Level: &e%valiant_reputation_slayers_level%'
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      '9':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%Easy Quest'
+        lore:
+        - ''
+        - '&7Your quest is not ready yet!'
+        - ''
+        - '%color_primary_color%⌚ &fNew quest in: %color_primary_color%%valiant_reputation_time_until_quest_reset%'
+        has0:
+          value0: '%valiant_reputation_slayers_quest_easy_progress%'
+          compare0: 'in progress'
+          material: STICK
+          customdata: 100
+          name: '&eEasy Quest'
+          lore:
+          - ''
+          - '&7%valiant_reputation_slayers_quest_easy_desc%'
+          - ''
+          - '&fRewards:'
+          - '&f• &9%valiant_reputation_easy_quest_xp_reward% Reputation'
+          - '&f• &e%valiant_reputation_easy_quest_gold_reward% Gold &f'
+          - ''
+          - '%color_primary_color%⌚ &fNew quest in: %color_primary_color%%valiant_reputation_time_until_quest_reset%'
+        has1:
+          value0: '%valiant_reputation_slayers_quest_easy_progress%'
+          compare0: 'finished'
+          material: STICK
+          customdata: 100
+          name: '%color_menu_primary%Easy Quest'
+          lore:
+          - ''
+          - '&2&lQuest Finished!'
+          - ''
+          - '&fRewards:'
+          - '&f• &7&m%valiant_reputation_easy_quest_xp_reward% Reputation'
+          - '&f• &7&m%valiant_reputation_easy_quest_gold_reward% Gold '
+          - ''
+          - '%color_primary_color%⌚ &fNew quest in: %color_primary_color%%valiant_reputation_time_until_quest_reset%'
+      '10':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%Easy Quest'
+        lore:
+        - ''
+        - '&7Your quest is not ready yet!'
+        - ''
+        - '%color_primary_color%⌚ &fNew quest in: %color_primary_color%%valiant_reputation_time_until_quest_reset%'
+        has0:
+          value0: '%valiant_reputation_slayers_quest_easy_progress%'
+          compare0: 'in progress'
+          material: STICK
+          customdata: 100
+          name: '&eEasy Quest'
+          lore:
+          - ''
+          - '&7%valiant_reputation_slayers_quest_easy_desc%'
+          - ''
+          - '&fRewards:'
+          - '&f• &9%valiant_reputation_easy_quest_xp_reward% Reputation'
+          - '&f• &e%valiant_reputation_easy_quest_gold_reward% Gold &f'
+          - ''
+          - '%color_primary_color%⌚ &fNew quest in: %color_primary_color%%valiant_reputation_time_until_quest_reset%'
+        has1:
+          value0: '%valiant_reputation_slayers_quest_easy_progress%'
+          compare0: 'finished'
+          material: STICK
+          customdata: 100
+          name: '%color_menu_primary%Easy Quest'
+          lore:
+          - ''
+          - '&2&lQuest Finished!'
+          - ''
+          - '&fRewards:'
+          - '&f• &7&m%valiant_reputation_easy_quest_xp_reward% Reputation'
+          - '&f• &7&m%valiant_reputation_easy_quest_gold_reward% Gold '
+          - ''
+          - '%color_primary_color%⌚ &fNew quest in: %color_primary_color%%valiant_reputation_time_until_quest_reset%'
+      '11':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%Easy Quest'
+        lore:
+        - ''
+        - '&7Your quest is not ready yet!'
+        - ''
+        - '%color_primary_color%⌚ &fNew quest in: %color_primary_color%%valiant_reputation_time_until_quest_reset%'
+        has0:
+          value0: '%valiant_reputation_slayers_quest_easy_progress%'
+          compare0: 'in progress'
+          material: STICK
+          customdata: 100
+          name: '&eEasy Quest'
+          lore:
+          - ''
+          - '&7%valiant_reputation_slayers_quest_easy_desc%'
+          - ''
+          - '&fRewards:'
+          - '&f• &9%valiant_reputation_easy_quest_xp_reward% Reputation'
+          - '&f• &e%valiant_reputation_easy_quest_gold_reward% Gold &f'
+          - ''
+          - '%color_primary_color%⌚ &fNew quest in: %color_primary_color%%valiant_reputation_time_until_quest_reset%'
+        has1:
+          value0: '%valiant_reputation_slayers_quest_easy_progress%'
+          compare0: 'finished'
+          material: STICK
+          customdata: 100
+          name: '%color_menu_primary%Easy Quest'
+          lore:
+          - ''
+          - '&2&lQuest Finished!'
+          - ''
+          - '&fRewards:'
+          - '&f• &7&m%valiant_reputation_easy_quest_xp_reward% Reputation'
+          - '&f• &7&m%valiant_reputation_easy_quest_gold_reward% Gold '
+          - ''
+          - '%color_primary_color%⌚ &fNew quest in: %color_primary_color%%valiant_reputation_time_until_quest_reset%'
+      '18':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%Easy Quest'
+        lore:
+        - ''
+        - '&7Your quest is not ready yet!'
+        - ''
+        - '%color_primary_color%⌚ &fNew quest in: %color_primary_color%%valiant_reputation_time_until_quest_reset%'
+        has0:
+          value0: '%valiant_reputation_slayers_quest_easy_progress%'
+          compare0: 'in progress'
+          material: STICK
+          customdata: 100
+          name: '&eEasy Quest'
+          lore:
+          - ''
+          - '&7%valiant_reputation_slayers_quest_easy_desc%'
+          - ''
+          - '&fRewards:'
+          - '&f• &9%valiant_reputation_easy_quest_xp_reward% Reputation'
+          - '&f• &e%valiant_reputation_easy_quest_gold_reward% Gold &f'
+          - ''
+          - '%color_primary_color%⌚ &fNew quest in: %color_primary_color%%valiant_reputation_time_until_quest_reset%'
+        has1:
+          value0: '%valiant_reputation_slayers_quest_easy_progress%'
+          compare0: 'finished'
+          material: STICK
+          customdata: 100
+          name: '%color_menu_primary%Easy Quest'
+          lore:
+          - ''
+          - '&2&lQuest Finished!'
+          - ''
+          - '&fRewards:'
+          - '&f• &7&m%valiant_reputation_easy_quest_xp_reward% Reputation'
+          - '&f• &7&m%valiant_reputation_easy_quest_gold_reward% Gold '
+          - ''
+          - '%color_primary_color%⌚ &fNew quest in: %color_primary_color%%valiant_reputation_time_until_quest_reset%'
+      '19':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%Easy Quest'
+        lore:
+        - ''
+        - '&7Your quest is not ready yet!'
+        - ''
+        - '%color_primary_color%⌚ &fNew quest in: %color_primary_color%%valiant_reputation_time_until_quest_reset%'
+        has0:
+          value0: '%valiant_reputation_slayers_quest_easy_progress%'
+          compare0: 'in progress'
+          material: STICK
+          customdata: 100
+          name: '&eEasy Quest'
+          lore:
+          - ''
+          - '&7%valiant_reputation_slayers_quest_easy_desc%'
+          - ''
+          - '&fRewards:'
+          - '&f• &9%valiant_reputation_easy_quest_xp_reward% Reputation'
+          - '&f• &e%valiant_reputation_easy_quest_gold_reward% Gold &f'
+          - ''
+          - '%color_primary_color%⌚ &fNew quest in: %color_primary_color%%valiant_reputation_time_until_quest_reset%'
+        has1:
+          value0: '%valiant_reputation_slayers_quest_easy_progress%'
+          compare0: 'finished'
+          material: STICK
+          customdata: 100
+          name: '%color_menu_primary%Easy Quest'
+          lore:
+          - ''
+          - '&2&lQuest Finished!'
+          - ''
+          - '&fRewards:'
+          - '&f• &7&m%valiant_reputation_easy_quest_xp_reward% Reputation'
+          - '&f• &7&m%valiant_reputation_easy_quest_gold_reward% Gold '
+          - ''
+          - '%color_primary_color%⌚ &fNew quest in: %color_primary_color%%valiant_reputation_time_until_quest_reset%'
+      '20':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%Easy Quest'
+        lore:
+        - ''
+        - '&7Your quest is not ready yet!'
+        - ''
+        - '%color_primary_color%⌚ &fNew quest in: %color_primary_color%%valiant_reputation_time_until_quest_reset%'
+        has0:
+          value0: '%valiant_reputation_slayers_quest_easy_progress%'
+          compare0: 'in progress'
+          material: STICK
+          customdata: 100
+          name: '&eEasy Quest'
+          lore:
+          - ''
+          - '&7%valiant_reputation_slayers_quest_easy_desc%'
+          - ''
+          - '&fRewards:'
+          - '&f• &9%valiant_reputation_easy_quest_xp_reward% Reputation'
+          - '&f• &e%valiant_reputation_easy_quest_gold_reward% Gold &f'
+          - ''
+          - '%color_primary_color%⌚ &fNew quest in: %color_primary_color%%valiant_reputation_time_until_quest_reset%'
+        has1:
+          value0: '%valiant_reputation_slayers_quest_easy_progress%'
+          compare0: 'finished'
+          material: STICK
+          customdata: 100
+          name: '%color_menu_primary%Easy Quest'
+          lore:
+          - ''
+          - '&2&lQuest Finished!'
+          - ''
+          - '&fRewards:'
+          - '&f• &7&m%valiant_reputation_easy_quest_xp_reward% Reputation'
+          - '&f• &7&m%valiant_reputation_easy_quest_gold_reward% Gold '
+          - ''
+          - '%color_primary_color%⌚ &fNew quest in: %color_primary_color%%valiant_reputation_time_until_quest_reset%'
+      '27':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%Easy Quest'
+        lore:
+        - ''
+        - '&7Your quest is not ready yet!'
+        - ''
+        - '%color_primary_color%⌚ &fNew quest in: %color_primary_color%%valiant_reputation_time_until_quest_reset%'
+        has0:
+          value0: '%valiant_reputation_slayers_quest_easy_progress%'
+          compare0: 'in progress'
+          material: STICK
+          customdata: 100
+          name: '&eEasy Quest'
+          lore:
+          - ''
+          - '&7%valiant_reputation_slayers_quest_easy_desc%'
+          - ''
+          - '&fRewards:'
+          - '&f• &9%valiant_reputation_easy_quest_xp_reward% Reputation'
+          - '&f• &e%valiant_reputation_easy_quest_gold_reward% Gold &f'
+          - ''
+          - '%color_primary_color%⌚ &fNew quest in: %color_primary_color%%valiant_reputation_time_until_quest_reset%'
+        has1:
+          value0: '%valiant_reputation_slayers_quest_easy_progress%'
+          compare0: 'finished'
+          material: STICK
+          customdata: 100
+          name: '%color_menu_primary%Easy Quest'
+          lore:
+          - ''
+          - '&2&lQuest Finished!'
+          - ''
+          - '&fRewards:'
+          - '&f• &7&m%valiant_reputation_easy_quest_xp_reward% Reputation'
+          - '&f• &7&m%valiant_reputation_easy_quest_gold_reward% Gold '
+          - ''
+          - '%color_primary_color%⌚ &fNew quest in: %color_primary_color%%valiant_reputation_time_until_quest_reset%'
+      '28':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%Easy Quest'
+        lore:
+        - ''
+        - '&7Your quest is not ready yet!'
+        - ''
+        - '%color_primary_color%⌚ &fNew quest in: %color_primary_color%%valiant_reputation_time_until_quest_reset%'
+        has0:
+          value0: '%valiant_reputation_slayers_quest_easy_progress%'
+          compare0: 'in progress'
+          material: STICK
+          customdata: 100
+          name: '&eEasy Quest'
+          lore:
+          - ''
+          - '&7%valiant_reputation_slayers_quest_easy_desc%'
+          - ''
+          - '&fRewards:'
+          - '&f• &9%valiant_reputation_easy_quest_xp_reward% Reputation'
+          - '&f• &e%valiant_reputation_easy_quest_gold_reward% Gold &f'
+          - ''
+          - '%color_primary_color%⌚ &fNew quest in: %color_primary_color%%valiant_reputation_time_until_quest_reset%'
+        has1:
+          value0: '%valiant_reputation_slayers_quest_easy_progress%'
+          compare0: 'finished'
+          material: STICK
+          customdata: 100
+          name: '%color_menu_primary%Easy Quest'
+          lore:
+          - ''
+          - '&2&lQuest Finished!'
+          - ''
+          - '&fRewards:'
+          - '&f• &7&m%valiant_reputation_easy_quest_xp_reward% Reputation'
+          - '&f• &7&m%valiant_reputation_easy_quest_gold_reward% Gold '
+          - ''
+          - '%color_primary_color%⌚ &fNew quest in: %color_primary_color%%valiant_reputation_time_until_quest_reset%'
+      '29':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%Easy Quest'
+        lore:
+        - ''
+        - '&7Your quest is not ready yet!'
+        - ''
+        - '%color_primary_color%⌚ &fNew quest in: %color_primary_color%%valiant_reputation_time_until_quest_reset%'
+        has0:
+          value0: '%valiant_reputation_slayers_quest_easy_progress%'
+          compare0: 'in progress'
+          material: STICK
+          customdata: 100
+          name: '&eEasy Quest'
+          lore:
+          - ''
+          - '&7%valiant_reputation_slayers_quest_easy_desc%'
+          - ''
+          - '&fRewards:'
+          - '&f• &9%valiant_reputation_easy_quest_xp_reward% Reputation'
+          - '&f• &e%valiant_reputation_easy_quest_gold_reward% Gold &f'
+          - ''
+          - '%color_primary_color%⌚ &fNew quest in: %color_primary_color%%valiant_reputation_time_until_quest_reset%'
+        has1:
+          value0: '%valiant_reputation_slayers_quest_easy_progress%'
+          compare0: 'finished'
+          material: STICK
+          customdata: 100
+          name: '%color_menu_primary%Easy Quest'
+          lore:
+          - ''
+          - '&2&lQuest Finished!'
+          - ''
+          - '&fRewards:'
+          - '&f• &7&m%valiant_reputation_easy_quest_xp_reward% Reputation'
+          - '&f• &7&m%valiant_reputation_easy_quest_gold_reward% Gold '
+          - ''
+          - '%color_primary_color%⌚ &fNew quest in: %color_primary_color%%valiant_reputation_time_until_quest_reset%'
+          
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      '12':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%Medium Quest'
+        lore:
+        - ''
+        - '&7Your quest is not ready yet!'
+        - ''
+        - '%color_primary_color%⌚ &fNew quest in: %color_primary_color%%valiant_reputation_time_until_quest_reset%'
+        has0:
+          value0: '%valiant_reputation_slayers_quest_medium_progress%'
+          compare0: 'in progress'
+          material: STICK
+          customdata: 100
+          name: '&eMedium Quest'
+          lore:
+          - ''
+          - '&7%valiant_reputation_slayers_quest_medium_desc%'
+          - ''
+          - '&fRewards:'
+          - '&f• &9%valiant_reputation_medium_quest_xp_reward% Reputation'
+          - '&f• &e%valiant_reputation_medium_quest_gold_reward% Gold &f'
+          - ''
+          - '%color_primary_color%⌚ &fNew quest in: %color_primary_color%%valiant_reputation_time_until_quest_reset%'
+        has1:
+          value0: '%valiant_reputation_slayers_quest_medium_progress%'
+          compare0: 'finished'
+          material: STICK
+          customdata: 100
+          name: '%color_menu_primary%Medium Quest'
+          lore:
+          - ''
+          - '&2&lQuest Finished!'
+          - ''
+          - '&fRewards:'
+          - '&f• &7&m%valiant_reputation_medium_quest_xp_reward% Reputation'
+          - '&f• &7&m%valiant_reputation_medium_quest_gold_reward% Gold '
+          - ''
+          - '%color_primary_color%⌚ &fNew quest in: %color_primary_color%%valiant_reputation_time_until_quest_reset%'
+      '13':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%Medium Quest'
+        lore:
+        - ''
+        - '&7Your quest is not ready yet!'
+        - ''
+        - '%color_primary_color%⌚ &fNew quest in: %color_primary_color%%valiant_reputation_time_until_quest_reset%'
+        has0:
+          value0: '%valiant_reputation_slayers_quest_medium_progress%'
+          compare0: 'in progress'
+          material: STICK
+          customdata: 100
+          name: '&eMedium Quest'
+          lore:
+          - ''
+          - '&7%valiant_reputation_slayers_quest_medium_desc%'
+          - ''
+          - '&fRewards:'
+          - '&f• &9%valiant_reputation_medium_quest_xp_reward% Reputation'
+          - '&f• &e%valiant_reputation_medium_quest_gold_reward% Gold &f'
+          - ''
+          - '%color_primary_color%⌚ &fNew quest in: %color_primary_color%%valiant_reputation_time_until_quest_reset%'
+        has1:
+          value0: '%valiant_reputation_slayers_quest_medium_progress%'
+          compare0: 'finished'
+          material: STICK
+          customdata: 100
+          name: '%color_menu_primary%Medium Quest'
+          lore:
+          - ''
+          - '&2&lQuest Finished!'
+          - ''
+          - '&fRewards:'
+          - '&f• &7&m%valiant_reputation_medium_quest_xp_reward% Reputation'
+          - '&f• &7&m%valiant_reputation_medium_quest_gold_reward% Gold '
+          - ''
+          - '%color_primary_color%⌚ &fNew quest in: %color_primary_color%%valiant_reputation_time_until_quest_reset%'
+      '14':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%Medium Quest'
+        lore:
+        - ''
+        - '&7Your quest is not ready yet!'
+        - ''
+        - '%color_primary_color%⌚ &fNew quest in: %color_primary_color%%valiant_reputation_time_until_quest_reset%'
+        has0:
+          value0: '%valiant_reputation_slayers_quest_medium_progress%'
+          compare0: 'in progress'
+          material: STICK
+          customdata: 100
+          name: '&eMedium Quest'
+          lore:
+          - ''
+          - '&7%valiant_reputation_slayers_quest_medium_desc%'
+          - ''
+          - '&fRewards:'
+          - '&f• &9%valiant_reputation_medium_quest_xp_reward% Reputation'
+          - '&f• &e%valiant_reputation_medium_quest_gold_reward% Gold &f'
+          - ''
+          - '%color_primary_color%⌚ &fNew quest in: %color_primary_color%%valiant_reputation_time_until_quest_reset%'
+        has1:
+          value0: '%valiant_reputation_slayers_quest_medium_progress%'
+          compare0: 'finished'
+          material: STICK
+          customdata: 100
+          name: '%color_menu_primary%Medium Quest'
+          lore:
+          - ''
+          - '&2&lQuest Finished!'
+          - ''
+          - '&fRewards:'
+          - '&f• &7&m%valiant_reputation_medium_quest_xp_reward% Reputation'
+          - '&f• &7&m%valiant_reputation_medium_quest_gold_reward% Gold '
+          - ''
+          - '%color_primary_color%⌚ &fNew quest in: %color_primary_color%%valiant_reputation_time_until_quest_reset%'
+      '21':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%Medium Quest'
+        lore:
+        - ''
+        - '&7Your quest is not ready yet!'
+        - ''
+        - '%color_primary_color%⌚ &fNew quest in: %color_primary_color%%valiant_reputation_time_until_quest_reset%'
+        has0:
+          value0: '%valiant_reputation_slayers_quest_medium_progress%'
+          compare0: 'in progress'
+          material: STICK
+          customdata: 100
+          name: '&eMedium Quest'
+          lore:
+          - ''
+          - '&7%valiant_reputation_slayers_quest_medium_desc%'
+          - ''
+          - '&fRewards:'
+          - '&f• &9%valiant_reputation_medium_quest_xp_reward% Reputation'
+          - '&f• &e%valiant_reputation_medium_quest_gold_reward% Gold &f'
+          - ''
+          - '%color_primary_color%⌚ &fNew quest in: %color_primary_color%%valiant_reputation_time_until_quest_reset%'
+        has1:
+          value0: '%valiant_reputation_slayers_quest_medium_progress%'
+          compare0: 'finished'
+          material: STICK
+          customdata: 100
+          name: '%color_menu_primary%Medium Quest'
+          lore:
+          - ''
+          - '&2&lQuest Finished!'
+          - ''
+          - '&fRewards:'
+          - '&f• &7&m%valiant_reputation_medium_quest_xp_reward% Reputation'
+          - '&f• &7&m%valiant_reputation_medium_quest_gold_reward% Gold '
+          - ''
+          - '%color_primary_color%⌚ &fNew quest in: %color_primary_color%%valiant_reputation_time_until_quest_reset%'
+      '22':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%Medium Quest'
+        lore:
+        - ''
+        - '&7Your quest is not ready yet!'
+        - ''
+        - '%color_primary_color%⌚ &fNew quest in: %color_primary_color%%valiant_reputation_time_until_quest_reset%'
+        has0:
+          value0: '%valiant_reputation_slayers_quest_medium_progress%'
+          compare0: 'in progress'
+          material: STICK
+          customdata: 100
+          name: '&eMedium Quest'
+          lore:
+          - ''
+          - '&7%valiant_reputation_slayers_quest_medium_desc%'
+          - ''
+          - '&fRewards:'
+          - '&f• &9%valiant_reputation_medium_quest_xp_reward% Reputation'
+          - '&f• &e%valiant_reputation_medium_quest_gold_reward% Gold &f'
+          - ''
+          - '%color_primary_color%⌚ &fNew quest in: %color_primary_color%%valiant_reputation_time_until_quest_reset%'
+        has1:
+          value0: '%valiant_reputation_slayers_quest_medium_progress%'
+          compare0: 'finished'
+          material: STICK
+          customdata: 100
+          name: '%color_menu_primary%Medium Quest'
+          lore:
+          - ''
+          - '&2&lQuest Finished!'
+          - ''
+          - '&fRewards:'
+          - '&f• &7&m%valiant_reputation_medium_quest_xp_reward% Reputation'
+          - '&f• &7&m%valiant_reputation_medium_quest_gold_reward% Gold '
+          - ''
+          - '%color_primary_color%⌚ &fNew quest in: %color_primary_color%%valiant_reputation_time_until_quest_reset%'
+      '23':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%Medium Quest'
+        lore:
+        - ''
+        - '&7Your quest is not ready yet!'
+        - ''
+        - '%color_primary_color%⌚ &fNew quest in: %color_primary_color%%valiant_reputation_time_until_quest_reset%'
+        has0:
+          value0: '%valiant_reputation_slayers_quest_medium_progress%'
+          compare0: 'in progress'
+          material: STICK
+          customdata: 100
+          name: '&eMedium Quest'
+          lore:
+          - ''
+          - '&7%valiant_reputation_slayers_quest_medium_desc%'
+          - ''
+          - '&fRewards:'
+          - '&f• &9%valiant_reputation_medium_quest_xp_reward% Reputation'
+          - '&f• &e%valiant_reputation_medium_quest_gold_reward% Gold &f'
+          - ''
+          - '%color_primary_color%⌚ &fNew quest in: %color_primary_color%%valiant_reputation_time_until_quest_reset%'
+        has1:
+          value0: '%valiant_reputation_slayers_quest_medium_progress%'
+          compare0: 'finished'
+          material: STICK
+          customdata: 100
+          name: '%color_menu_primary%Medium Quest'
+          lore:
+          - ''
+          - '&2&lQuest Finished!'
+          - ''
+          - '&fRewards:'
+          - '&f• &7&m%valiant_reputation_medium_quest_xp_reward% Reputation'
+          - '&f• &7&m%valiant_reputation_medium_quest_gold_reward% Gold '
+          - ''
+          - '%color_primary_color%⌚ &fNew quest in: %color_primary_color%%valiant_reputation_time_until_quest_reset%'
+      '30':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%Medium Quest'
+        lore:
+        - ''
+        - '&7Your quest is not ready yet!'
+        - ''
+        - '%color_primary_color%⌚ &fNew quest in: %color_primary_color%%valiant_reputation_time_until_quest_reset%'
+        has0:
+          value0: '%valiant_reputation_slayers_quest_medium_progress%'
+          compare0: 'in progress'
+          material: STICK
+          customdata: 100
+          name: '&eMedium Quest'
+          lore:
+          - ''
+          - '&7%valiant_reputation_slayers_quest_medium_desc%'
+          - ''
+          - '&fRewards:'
+          - '&f• &9%valiant_reputation_medium_quest_xp_reward% Reputation'
+          - '&f• &e%valiant_reputation_medium_quest_gold_reward% Gold &f'
+          - ''
+          - '%color_primary_color%⌚ &fNew quest in: %color_primary_color%%valiant_reputation_time_until_quest_reset%'
+        has1:
+          value0: '%valiant_reputation_slayers_quest_medium_progress%'
+          compare0: 'finished'
+          material: STICK
+          customdata: 100
+          name: '%color_menu_primary%Medium Quest'
+          lore:
+          - ''
+          - '&2&lQuest Finished!'
+          - ''
+          - '&fRewards:'
+          - '&f• &7&m%valiant_reputation_medium_quest_xp_reward% Reputation'
+          - '&f• &7&m%valiant_reputation_medium_quest_gold_reward% Gold '
+          - ''
+          - '%color_primary_color%⌚ &fNew quest in: %color_primary_color%%valiant_reputation_time_until_quest_reset%'
+      '31':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%Medium Quest'
+        lore:
+        - ''
+        - '&7Your quest is not ready yet!'
+        - ''
+        - '%color_primary_color%⌚ &fNew quest in: %color_primary_color%%valiant_reputation_time_until_quest_reset%'
+        has0:
+          value0: '%valiant_reputation_slayers_quest_medium_progress%'
+          compare0: 'in progress'
+          material: STICK
+          customdata: 100
+          name: '&eMedium Quest'
+          lore:
+          - ''
+          - '&7%valiant_reputation_slayers_quest_medium_desc%'
+          - ''
+          - '&fRewards:'
+          - '&f• &9%valiant_reputation_medium_quest_xp_reward% Reputation'
+          - '&f• &e%valiant_reputation_medium_quest_gold_reward% Gold &f'
+          - ''
+          - '%color_primary_color%⌚ &fNew quest in: %color_primary_color%%valiant_reputation_time_until_quest_reset%'
+        has1:
+          value0: '%valiant_reputation_slayers_quest_medium_progress%'
+          compare0: 'finished'
+          material: STICK
+          customdata: 100
+          name: '%color_menu_primary%Medium Quest'
+          lore:
+          - ''
+          - '&2&lQuest Finished!'
+          - ''
+          - '&fRewards:'
+          - '&f• &7&m%valiant_reputation_medium_quest_xp_reward% Reputation'
+          - '&f• &7&m%valiant_reputation_medium_quest_gold_reward% Gold '
+          - ''
+          - '%color_primary_color%⌚ &fNew quest in: %color_primary_color%%valiant_reputation_time_until_quest_reset%'
+      '32':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%Medium Quest'
+        lore:
+        - ''
+        - '&7Your quest is not ready yet!'
+        - ''
+        - '%color_primary_color%⌚ &fNew quest in: %color_primary_color%%valiant_reputation_time_until_quest_reset%'
+        has0:
+          value0: '%valiant_reputation_slayers_quest_medium_progress%'
+          compare0: 'in progress'
+          material: STICK
+          customdata: 100
+          name: '&eMedium Quest'
+          lore:
+          - ''
+          - '&7%valiant_reputation_slayers_quest_medium_desc%'
+          - ''
+          - '&fRewards:'
+          - '&f• &9%valiant_reputation_medium_quest_xp_reward% Reputation'
+          - '&f• &e%valiant_reputation_medium_quest_gold_reward% Gold &f'
+          - ''
+          - '%color_primary_color%⌚ &fNew quest in: %color_primary_color%%valiant_reputation_time_until_quest_reset%'
+        has1:
+          value0: '%valiant_reputation_slayers_quest_medium_progress%'
+          compare0: 'finished'
+          material: STICK
+          customdata: 100
+          name: '%color_menu_primary%Medium Quest'
+          lore:
+          - ''
+          - '&2&lQuest Finished!'
+          - ''
+          - '&fRewards:'
+          - '&f• &7&m%valiant_reputation_medium_quest_xp_reward% Reputation'
+          - '&f• &7&m%valiant_reputation_medium_quest_gold_reward% Gold '
+          - ''
+          - '%color_primary_color%⌚ &fNew quest in: %color_primary_color%%valiant_reputation_time_until_quest_reset%'
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      '15':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%Hard Quest'
+        lore:
+        - ''
+        - '&7Your quest is not ready yet!'
+        - ''
+        - '%color_primary_color%⌚ &fNew quest in: %color_primary_color%%valiant_reputation_time_until_quest_reset%'
+        has0:
+          value0: '%valiant_reputation_slayers_quest_hard_progress%'
+          compare0: 'in progress'
+          material: STICK
+          customdata: 100
+          name: '&eHard Quest'
+          lore:
+          - ''
+          - '&7%valiant_reputation_slayers_quest_hard_desc%'
+          - ''
+          - '&fRewards:'
+          - '&f• &9%valiant_reputation_hard_quest_xp_reward% Reputation'
+          - '&f• &e%valiant_reputation_hard_quest_gold_reward% Gold &f'
+          - ''
+          - '%color_primary_color%⌚ &fNew quest in: %color_primary_color%%valiant_reputation_time_until_quest_reset%'
+        has1:
+          value0: '%valiant_reputation_slayers_quest_hard_progress%'
+          compare0: 'finished'
+          material: STICK
+          customdata: 100
+          name: '%color_menu_primary%Hard Quest'
+          lore:
+          - ''
+          - '&2&lQuest Finished!'
+          - ''
+          - '&fRewards:'
+          - '&f• &7&m%valiant_reputation_hard_quest_xp_reward% Reputation'
+          - '&f• &7&m%valiant_reputation_hard_quest_gold_reward% Gold '
+          - ''
+          - '%color_primary_color%⌚ &fNew quest in: %color_primary_color%%valiant_reputation_time_until_quest_reset%'
+      '16':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%Hard Quest'
+        lore:
+        - ''
+        - '&7Your quest is not ready yet!'
+        - ''
+        - '%color_primary_color%⌚ &fNew quest in: %color_primary_color%%valiant_reputation_time_until_quest_reset%'
+        has0:
+          value0: '%valiant_reputation_slayers_quest_hard_progress%'
+          compare0: 'in progress'
+          material: STICK
+          customdata: 100
+          name: '&eHard Quest'
+          lore:
+          - ''
+          - '&7%valiant_reputation_slayers_quest_hard_desc%'
+          - ''
+          - '&fRewards:'
+          - '&f• &9%valiant_reputation_hard_quest_xp_reward% Reputation'
+          - '&f• &e%valiant_reputation_hard_quest_gold_reward% Gold &f'
+          - ''
+          - '%color_primary_color%⌚ &fNew quest in: %color_primary_color%%valiant_reputation_time_until_quest_reset%'
+        has1:
+          value0: '%valiant_reputation_slayers_quest_hard_progress%'
+          compare0: 'finished'
+          material: STICK
+          customdata: 100
+          name: '%color_menu_primary%Hard Quest'
+          lore:
+          - ''
+          - '&2&lQuest Finished!'
+          - ''
+          - '&fRewards:'
+          - '&f• &7&m%valiant_reputation_hard_quest_xp_reward% Reputation'
+          - '&f• &7&m%valiant_reputation_hard_quest_gold_reward% Gold '
+          - ''
+          - '%color_primary_color%⌚ &fNew quest in: %color_primary_color%%valiant_reputation_time_until_quest_reset%'
+      '17':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%Hard Quest'
+        lore:
+        - ''
+        - '&7Your quest is not ready yet!'
+        - ''
+        - '%color_primary_color%⌚ &fNew quest in: %color_primary_color%%valiant_reputation_time_until_quest_reset%'
+        has0:
+          value0: '%valiant_reputation_slayers_quest_hard_progress%'
+          compare0: 'in progress'
+          material: STICK
+          customdata: 100
+          name: '&eHard Quest'
+          lore:
+          - ''
+          - '&7%valiant_reputation_slayers_quest_hard_desc%'
+          - ''
+          - '&fRewards:'
+          - '&f• &9%valiant_reputation_hard_quest_xp_reward% Reputation'
+          - '&f• &e%valiant_reputation_hard_quest_gold_reward% Gold &f'
+          - ''
+          - '%color_primary_color%⌚ &fNew quest in: %color_primary_color%%valiant_reputation_time_until_quest_reset%'
+        has1:
+          value0: '%valiant_reputation_slayers_quest_easy_progress%'
+          compare0: 'finished'
+          material: STICK
+          customdata: 100
+          name: '%color_menu_primary%Hard Quest'
+          lore:
+          - ''
+          - '&2&lQuest Finished!'
+          - ''
+          - '&fRewards:'
+          - '&f• &7&m%valiant_reputation_hard_quest_xp_reward% Reputation'
+          - '&f• &7&m%valiant_reputation_hard_quest_gold_reward% Gold '
+          - ''
+          - '%color_primary_color%⌚ &fNew quest in: %color_primary_color%%valiant_reputation_time_until_quest_reset%'
+      '24':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%Hard Quest'
+        lore:
+        - ''
+        - '&7Your quest is not ready yet!'
+        - ''
+        - '%color_primary_color%⌚ &fNew quest in: %color_primary_color%%valiant_reputation_time_until_quest_reset%'
+        has0:
+          value0: '%valiant_reputation_slayers_quest_hard_progress%'
+          compare0: 'in progress'
+          material: STICK
+          customdata: 100
+          name: '&eHard Quest'
+          lore:
+          - ''
+          - '&7%valiant_reputation_slayers_quest_hard_desc%'
+          - ''
+          - '&fRewards:'
+          - '&f• &9%valiant_reputation_hard_quest_xp_reward% Reputation'
+          - '&f• &e%valiant_reputation_hard_quest_gold_reward% Gold &f'
+          - ''
+          - '%color_primary_color%⌚ &fNew quest in: %color_primary_color%%valiant_reputation_time_until_quest_reset%'
+        has1:
+          value0: '%valiant_reputation_slayers_quest_hard_progress%'
+          compare0: 'finished'
+          material: STICK
+          customdata: 100
+          name: '%color_menu_primary%Hard Quest'
+          lore:
+          - ''
+          - '&2&lQuest Finished!'
+          - ''
+          - '&fRewards:'
+          - '&f• &7&m%valiant_reputation_hard_quest_xp_reward% Reputation'
+          - '&f• &7&m%valiant_reputation_hard_quest_gold_reward% Gold '
+          - ''
+          - '%color_primary_color%⌚ &fNew quest in: %color_primary_color%%valiant_reputation_time_until_quest_reset%'
+      '25':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%Hard Quest'
+        lore:
+        - ''
+        - '&7Your quest is not ready yet!'
+        - ''
+        - '%color_primary_color%⌚ &fNew quest in: %color_primary_color%%valiant_reputation_time_until_quest_reset%'
+        has0:
+          value0: '%valiant_reputation_slayers_quest_hard_progress%'
+          compare0: 'in progress'
+          material: STICK
+          customdata: 100
+          name: '&eHard Quest'
+          lore:
+          - ''
+          - '&7%valiant_reputation_slayers_quest_hard_desc%'
+          - ''
+          - '&fRewards:'
+          - '&f• &9%valiant_reputation_hard_quest_xp_reward% Reputation'
+          - '&f• &e%valiant_reputation_hard_quest_gold_reward% Gold &f'
+          - ''
+          - '%color_primary_color%⌚ &fNew quest in: %color_primary_color%%valiant_reputation_time_until_quest_reset%'
+        has1:
+          value0: '%valiant_reputation_slayers_quest_hard_progress%'
+          compare0: 'finished'
+          material: STICK
+          customdata: 100
+          name: '%color_menu_primary%Hard Quest'
+          lore:
+          - ''
+          - '&2&lQuest Finished!'
+          - ''
+          - '&fRewards:'
+          - '&f• &7&m%valiant_reputation_hard_quest_xp_reward% Reputation'
+          - '&f• &7&m%valiant_reputation_hard_quest_gold_reward% Gold '
+          - ''
+          - '%color_primary_color%⌚ &fNew quest in: %color_primary_color%%valiant_reputation_time_until_quest_reset%'
+      '26':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%Hard Quest'
+        lore:
+        - ''
+        - '&7Your quest is not ready yet!'
+        - ''
+        - '%color_primary_color%⌚ &fNew quest in: %color_primary_color%%valiant_reputation_time_until_quest_reset%'
+        has0:
+          value0: '%valiant_reputation_slayers_quest_hard_progress%'
+          compare0: 'in progress'
+          material: STICK
+          customdata: 100
+          name: '&eHard Quest'
+          lore:
+          - ''
+          - '&7%valiant_reputation_slayers_quest_hard_desc%'
+          - ''
+          - '&fRewards:'
+          - '&f• &9%valiant_reputation_hard_quest_xp_reward% Reputation'
+          - '&f• &e%valiant_reputation_hard_quest_gold_reward% Gold &f'
+          - ''
+          - '%color_primary_color%⌚ &fNew quest in: %color_primary_color%%valiant_reputation_time_until_quest_reset%'
+        has1:
+          value0: '%valiant_reputation_slayers_quest_hard_progress%'
+          compare0: 'finished'
+          material: STICK
+          customdata: 100
+          name: '%color_menu_primary%Hard Quest'
+          lore:
+          - ''
+          - '&2&lQuest Finished!'
+          - ''
+          - '&fRewards:'
+          - '&f• &7&m%valiant_reputation_hard_quest_xp_reward% Reputation'
+          - '&f• &7&m%valiant_reputation_hard_quest_gold_reward% Gold '
+          - ''
+          - '%color_primary_color%⌚ &fNew quest in: %color_primary_color%%valiant_reputation_time_until_quest_reset%'
+      '33':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%Hard Quest'
+        lore:
+        - ''
+        - '&7Your quest is not ready yet!'
+        - ''
+        - '%color_primary_color%⌚ &fNew quest in: %color_primary_color%%valiant_reputation_time_until_quest_reset%'
+        has0:
+          value0: '%valiant_reputation_slayers_quest_hard_progress%'
+          compare0: 'in progress'
+          material: STICK
+          customdata: 100
+          name: '&eHard Quest'
+          lore:
+          - ''
+          - '&7%valiant_reputation_slayers_quest_hard_desc%'
+          - ''
+          - '&fRewards:'
+          - '&f• &9%valiant_reputation_hard_quest_xp_reward% Reputation'
+          - '&f• &e%valiant_reputation_hard_quest_gold_reward% Gold &f'
+          - ''
+          - '%color_primary_color%⌚ &fNew quest in: %color_primary_color%%valiant_reputation_time_until_quest_reset%'
+        has1:
+          value0: '%valiant_reputation_slayers_quest_hard_progress%'
+          compare0: 'finished'
+          material: STICK
+          customdata: 100
+          name: '%color_menu_primary%Hard Quest'
+          lore:
+          - ''
+          - '&2&lQuest Finished!'
+          - ''
+          - '&fRewards:'
+          - '&f• &7&m%valiant_reputation_hard_quest_xp_reward% Reputation'
+          - '&f• &7&m%valiant_reputation_hard_quest_gold_reward% Gold '
+          - ''
+          - '%color_primary_color%⌚ &fNew quest in: %color_primary_color%%valiant_reputation_time_until_quest_reset%'
+      '34':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%Hard Quest'
+        lore:
+        - ''
+        - '&7Your quest is not ready yet!'
+        - ''
+        - '%color_primary_color%⌚ &fNew quest in: %color_primary_color%%valiant_reputation_time_until_quest_reset%'
+        has0:
+          value0: '%valiant_reputation_slayers_quest_hard_progress%'
+          compare0: 'in progress'
+          material: STICK
+          customdata: 100
+          name: '&eHard Quest'
+          lore:
+          - ''
+          - '&7%valiant_reputation_slayers_quest_hard_desc%'
+          - ''
+          - '&fRewards:'
+          - '&f• &9%valiant_reputation_hard_quest_xp_reward% Reputation'
+          - '&f• &e%valiant_reputation_hard_quest_gold_reward% Gold &f'
+          - ''
+          - '%color_primary_color%⌚ &fNew quest in: %color_primary_color%%valiant_reputation_time_until_quest_reset%'
+        has1:
+          value0: '%valiant_reputation_slayers_quest_hard_progress%'
+          compare0: 'finished'
+          material: STICK
+          customdata: 100
+          name: '%color_menu_primary%Hard Quest'
+          lore:
+          - ''
+          - '&2&lQuest Finished!'
+          - ''
+          - '&fRewards:'
+          - '&f• &7&m%valiant_reputation_hard_quest_xp_reward% Reputation'
+          - '&f• &7&m%valiant_reputation_hard_quest_gold_reward% Gold '
+          - ''
+          - '%color_primary_color%⌚ &fNew quest in: %color_primary_color%%valiant_reputation_time_until_quest_reset%'
+      '35':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%Hard Quest'
+        lore:
+        - ''
+        - '&7Your quest is not ready yet!'
+        - ''
+        - '%color_primary_color%⌚ &fNew quest in: %color_primary_color%%valiant_reputation_time_until_quest_reset%'
+        has0:
+          value0: '%valiant_reputation_slayers_quest_hard_progress%'
+          compare0: 'in progress'
+          material: STICK
+          customdata: 100
+          name: '&eHard Quest'
+          lore:
+          - ''
+          - '&7%valiant_reputation_slayers_quest_hard_desc%'
+          - ''
+          - '&fRewards:'
+          - '&f• &9%valiant_reputation_hard_quest_xp_reward% Reputation'
+          - '&f• &e%valiant_reputation_hard_quest_gold_reward% Gold &f'
+          - ''
+          - '%color_primary_color%⌚ &fNew quest in: %color_primary_color%%valiant_reputation_time_until_quest_reset%'
+        has1:
+          value0: '%valiant_reputation_slayers_quest_hard_progress%'
+          compare0: 'finished'
+          material: STICK
+          customdata: 100
+          name: '%color_menu_primary%Hard Quest'
+          lore:
+          - ''
+          - '&2&lQuest Finished!'
+          - ''
+          - '&fRewards:'
+          - '&f• &7&m%valiant_reputation_hard_quest_xp_reward% Reputation'
+          - '&f• &7&m%valiant_reputation_hard_quest_gold_reward% Gold '
+          - ''
+          - '%color_primary_color%⌚ &fNew quest in: %color_primary_color%%valiant_reputation_time_until_quest_reset%'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      '36':
+        material: STICK
+        customdata: 133
+        name: '%color_menu_primary%Level 5'
+        lore:
+        - '&6ʀᴇᴘᴜᴛᴀᴛɪᴏɴ ᴘᴇʀᴋ'
+        - ''
+        - '&f• &b%valiant_reputation_slayers_reward_menu_name_1_1%'
+        - ''
+        - '&c&lNOT UNLOCKED'
+        has0:
+          value0: '%valiant_reputation_slayers_reward_ready_1%'
+          compare0: 'true'
+          material: STICK
+          customdata: 134
+          name: '&eLevel 5'
+          lore:
+          - '&6ʀᴇᴘᴜᴛᴀᴛɪᴏɴ ᴘᴇʀᴋ'
+          - ''
+          - '&f• &b%valiant_reputation_slayers_reward_menu_name_1_1%'
+          - ''
+          - '&a&lCLICK TO CLAIM!'
+          commands:
+          - 'console= reputationclaimreward %cp-player-name% slayers 1'
+          - refresh
+        has1:
+          value0: '%valiant_reputation_slayers_reward_claimed_1%'
+          compare0: 'true'
+          material: STICK
+          customdata: 131
+          name: '%color_menu_primary%&lLevel 5'
+          lore:
+          - '&6ʀᴇᴘᴜᴛᴀᴛɪᴏɴ ᴘᴇʀᴋ'
+          - ''
+          - '&f• &7&m%valiant_reputation_slayers_reward_menu_name_1_1%'
+          - ''
+          - '&2&lREWARD CLAIMED'
+       
+       
+       
+       
+      '37':
+        material: STICK
+        customdata: 133
+        name: '%color_menu_primary%Level 10'
+        lore:
+        - '&6ʀᴇᴘᴜᴛᴀᴛɪᴏɴ ᴘᴇʀᴋ'
+        - ''
+        - '&f• &b%valiant_reputation_slayers_reward_menu_name_2_1%'
+        - ''
+        - '&c&lNOT UNLOCKED'
+        has0:
+          value0: '%valiant_reputation_slayers_reward_ready_2%'
+          compare0: 'true'
+          material: STICK
+          customdata: 134
+          name: '&eLevel 10'
+          lore:
+          - '&6ʀᴇᴘᴜᴛᴀᴛɪᴏɴ ᴘᴇʀᴋ'
+          - ''
+          - '&f• &b%valiant_reputation_slayers_reward_menu_name_2_1%'
+          - ''
+          - '&a&lCLICK TO CLAIM!'
+          commands:
+          - 'console= reputationclaimreward %cp-player-name% slayers 2'
+          - refresh
+        has1:
+          value0: '%valiant_reputation_slayers_reward_claimed_2%'
+          compare0: 'true'
+          material: STICK
+          customdata: 131
+          name: '%color_menu_primary%&lLevel 10'
+          lore:
+          - '&6ʀᴇᴘᴜᴛᴀᴛɪᴏɴ ᴘᴇʀᴋ'
+          - ''
+          - '&f• &7&m%valiant_reputation_slayers_reward_menu_name_2_1%'
+          - ''
+          - '&2&lREWARD CLAIMED'
+      
+      
+      
+      
+      '38':
+        material: STICK
+        customdata: 133
+        name: '%color_menu_primary%Level 15'
+        lore:
+        - '&6ʀᴇᴘᴜᴛᴀᴛɪᴏɴ ᴘᴇʀᴋ'
+        - ''
+        - '&f• &b%valiant_reputation_slayers_reward_menu_name_3_1%'
+        - ''
+        - '&c&lNOT UNLOCKED'
+        has0:
+          value0: '%valiant_reputation_slayers_reward_ready_3%'
+          compare0: 'true'
+          material: STICK
+          customdata: 134
+          name: '&eLevel 15'
+          lore:
+          - '&6ʀᴇᴘᴜᴛᴀᴛɪᴏɴ ᴘᴇʀᴋ'
+          - ''
+          - '&f• &b%valiant_reputation_slayers_reward_menu_name_3_1%'
+          - ''
+          - '&a&lCLICK TO CLAIM!'
+          commands:
+          - 'console= reputationclaimreward %cp-player-name% slayers 3'
+          - refresh
+        has1:
+          value0: '%valiant_reputation_slayers_reward_claimed_3%'
+          compare0: 'true'
+          material: STICK
+          customdata: 131
+          name: '%color_menu_primary%&lLevel 15'
+          lore:
+          - '&6ʀᴇᴘᴜᴛᴀᴛɪᴏɴ ᴘᴇʀᴋ'
+          - ''
+          - '&f• &7&m%valiant_reputation_slayers_reward_menu_name_3_1%'
+          - ''
+          - '&2&lREWARD CLAIMED'
+      
+      
+      
+      
+      '39':
+        material: STICK
+        customdata: 133
+        name: '%color_menu_primary%Level 20'
+        lore:
+        - '&6ʀᴇᴘᴜᴛᴀᴛɪᴏɴ ᴘᴇʀᴋ'
+        - ''
+        - '&f• &b%valiant_reputation_slayers_reward_menu_name_4_1%'
+        - ''
+        - '&c&lNOT UNLOCKED'
+        has0:
+          value0: '%valiant_reputation_slayers_reward_ready_4%'
+          compare0: 'true'
+          material: STICK
+          customdata: 134
+          name: '&eLevel 20'
+          lore:
+          - '&6ʀᴇᴘᴜᴛᴀᴛɪᴏɴ ᴘᴇʀᴋ'
+          - ''
+          - '&f• &b%valiant_reputation_slayers_reward_menu_name_4_1%'
+          - ''
+          - '&a&lCLICK TO CLAIM!'
+          commands:
+          - 'console= reputationclaimreward %cp-player-name% slayers 4'
+          - refresh
+        has1:
+          value0: '%valiant_reputation_slayers_reward_claimed_4%'
+          compare0: 'true'
+          material: STICK
+          customdata: 131
+          name: '%color_menu_primary%&lLevel 20'
+          lore:
+          - '&6ʀᴇᴘᴜᴛᴀᴛɪᴏɴ ᴘᴇʀᴋ'
+          - ''
+          - '&f• &7&m%valiant_reputation_slayers_reward_menu_name_4_1%'
+          - ''
+          - '&2&lREWARD CLAIMED'
+      
+      
+      
+      
+      '40':
+        material: STICK
+        customdata: 133
+        name: '%color_menu_primary%Level 25'
+        lore:
+        - '&6ʀᴇᴘᴜᴛᴀᴛɪᴏɴ ᴘᴇʀᴋ'
+        - ''
+        - '&f• &b%valiant_reputation_slayers_reward_menu_name_5_1%'
+        - ''
+        - '&c&lNOT UNLOCKED'
+        has0:
+          value0: '%valiant_reputation_slayers_reward_ready_5%'
+          compare0: 'true'
+          material: STICK
+          customdata: 134
+          name: '&eLevel 25'
+          lore:
+          - '&6ʀᴇᴘᴜᴛᴀᴛɪᴏɴ ᴘᴇʀᴋ'
+          - ''
+          - '&f• &b%valiant_reputation_slayers_reward_menu_name_5_1%'
+          - ''
+          - '&a&lCLICK TO CLAIM!'
+          commands:
+          - 'console= reputationclaimreward %cp-player-name% slayers 5'
+          - refresh
+        has1:
+          value0: '%valiant_reputation_slayers_reward_claimed_5%'
+          compare0: 'true'
+          material: STICK
+          customdata: 131
+          name: '%color_menu_primary%&lLevel 25'
+          lore:
+          - '&6ʀᴇᴘᴜᴛᴀᴛɪᴏɴ ᴘᴇʀᴋ'
+          - ''
+          - '&f• &7&m%valiant_reputation_slayers_reward_menu_name_5_1%'
+          - ''
+          - '&2&lREWARD CLAIMED'
+      
+      
+      
+      
+      '41':
+        material: STICK
+        customdata: 133
+        name: '%color_menu_primary%Level 30'
+        lore:
+        - '&6ʀᴇᴘᴜᴛᴀᴛɪᴏɴ ᴘᴇʀᴋ'
+        - ''
+        - '&f• &b%valiant_reputation_slayers_reward_menu_name_6_1%'
+        - ''
+        - '&c&lNOT UNLOCKED'
+        has0:
+          value0: '%valiant_reputation_slayers_reward_ready_6%'
+          compare0: 'true'
+          material: STICK
+          customdata: 134
+          name: '&eLevel 30'
+          lore:
+          - '&6ʀᴇᴘᴜᴛᴀᴛɪᴏɴ ᴘᴇʀᴋ'
+          - ''
+          - '&f• &b%valiant_reputation_slayers_reward_menu_name_6_1%'
+          - ''
+          - '&a&lCLICK TO CLAIM!'
+          commands:
+          - 'console= reputationclaimreward %cp-player-name% slayers 6'
+          - refresh
+        has1:
+          value0: '%valiant_reputation_slayers_reward_claimed_6%'
+          compare0: 'true'
+          material: STICK
+          customdata: 131
+          name: '%color_menu_primary%&lLevel 30'
+          lore:
+          - '&6ʀᴇᴘᴜᴛᴀᴛɪᴏɴ ᴘᴇʀᴋ'
+          - ''
+          - '&f• &7&m%valiant_reputation_slayers_reward_menu_name_6_1%'
+          - ''
+          - '&2&lREWARD CLAIMED'
+      
+      
+            
+      
+      '42':
+        material: STICK
+        customdata: 133
+        name: '%color_menu_primary%Level 35'
+        lore:
+        - '&6ʀᴇᴘᴜᴛᴀᴛɪᴏɴ ᴘᴇʀᴋ'
+        - ''
+        - '&f• &b%valiant_reputation_slayers_reward_menu_name_7_1%'
+        - ''
+        - '&c&lNOT UNLOCKED'
+        has0:
+          value0: '%valiant_reputation_slayers_reward_ready_7%'
+          compare0: 'true'
+          material: STICK
+          customdata: 134
+          name: '&eLevel 35'
+          lore:
+          - '&6ʀᴇᴘᴜᴛᴀᴛɪᴏɴ ᴘᴇʀᴋ'
+          - ''
+          - '&f• &b%valiant_reputation_slayers_reward_menu_name_7_1%'
+          - ''
+          - '&a&lCLICK TO CLAIM!'
+          commands:
+          - 'console= reputationclaimreward %cp-player-name% slayers 7'
+          - refresh
+        has1:
+          value0: '%valiant_reputation_slayers_reward_claimed_7%'
+          compare0: 'true'
+          material: STICK
+          customdata: 131
+          name: '%color_menu_primary%&lLevel 35'
+          lore:
+          - '&6ʀᴇᴘᴜᴛᴀᴛɪᴏɴ ᴘᴇʀᴋ'
+          - ''
+          - '&f• &7&m%valiant_reputation_slayers_reward_menu_name_7_1%'
+          - ''
+          - '&2&lREWARD CLAIMED'
+      
+      
+      
+      
+      '43':
+        material: STICK
+        customdata: 133
+        name: '%color_menu_primary%Level 40'
+        lore:
+        - '&6ʀᴇᴘᴜᴛᴀᴛɪᴏɴ ᴘᴇʀᴋ'
+        - ''
+        - '&f• &b%valiant_reputation_slayers_reward_menu_name_8_1%'
+        - ''
+        - '&c&lNOT UNLOCKED'
+        has0:
+          value0: '%valiant_reputation_slayers_reward_ready_8%'
+          compare0: 'true'
+          material: STICK
+          customdata: 134
+          name: '&eLevel 40'
+          lore:
+          - '&6ʀᴇᴘᴜᴛᴀᴛɪᴏɴ ᴘᴇʀᴋ'
+          - ''
+          - '&f• &b%valiant_reputation_slayers_reward_menu_name_8_1%'
+          - ''
+          - '&a&lCLICK TO CLAIM!'
+          commands:
+          - 'console= reputationclaimreward %cp-player-name% slayers 8'
+          - refresh
+        has1:
+          value0: '%valiant_reputation_slayers_reward_claimed_8%'
+          compare0: 'true'
+          material: STICK
+          customdata: 131
+          name: '%color_menu_primary%&lLevel 40'
+          lore:
+          - '&6ʀᴇᴘᴜᴛᴀᴛɪᴏɴ ᴘᴇʀᴋ'
+          - ''
+          - '&f• &7&m%valiant_reputation_slayers_reward_menu_name_8_1%'
+          - ''
+          - '&2&lREWARD CLAIMED'
+      
+      
+      
+      
+      '44':
+        material: STICK
+        customdata: 133
+        name: '%color_menu_primary%Level 45'
+        lore:
+        - '&6ʀᴇᴘᴜᴛᴀᴛɪᴏɴ ᴘᴇʀᴋ'
+        - ''
+        - '&f• &b%valiant_reputation_slayers_reward_menu_name_9_1%'
+        - ''
+        - '&c&lNOT UNLOCKED'
+        has0:
+          value0: '%valiant_reputation_slayers_reward_ready_9%'
+          compare0: 'true'
+          material: STICK
+          customdata: 134
+          name: '&eLevel 45'
+          lore:
+          - '&6ʀᴇᴘᴜᴛᴀᴛɪᴏɴ ᴘᴇʀᴋ'
+          - ''
+          - '&f• &b%valiant_reputation_slayers_reward_menu_name_9_1%'
+          - ''
+          - '&a&lCLICK TO CLAIM!'
+          commands:
+          - 'console= reputationclaimreward %cp-player-name% slayers 9'
+          - refresh
+        has1:
+          value0: '%valiant_reputation_slayers_reward_claimed_9%'
+          compare0: 'true'
+          material: STICK
+          customdata: 131
+          name: '%color_menu_primary%&lLevel 45'
+          lore:
+          - '&6ʀᴇᴘᴜᴛᴀᴛɪᴏɴ ᴘᴇʀᴋ'
+          - ''
+          - '&f• &7&m%valiant_reputation_slayers_reward_menu_name_9_1%'
+          - ''
+          - '&2&lREWARD CLAIMED'
+      
+      
+      
+      
+      
+      
+      

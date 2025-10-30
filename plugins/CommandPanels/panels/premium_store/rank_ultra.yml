@@ -1,0 +1,167 @@
+panels:
+  rank_ultra:
+    perm: default
+    rows: 5
+    title: '&f%valiant_rank_ultra_font%'
+    commands:
+    - ultrarank
+    - rankultra
+    empty: AIR
+    sound-on-open: BLOCK_NOTE_BLOCK_HAT
+    item:
+      
+      
+      '0':
+        material: STICK
+        customdata: 1
+        name: '&c← Previous Menu'
+        commands:
+        - open= premium_store
+
+
+      '8':
+        material: STICK
+        customdata: 11
+        name: '%color_ultra%&lUltra &7[LIFETIME]'
+        lore:
+        - '&8LIFETIME RANK'
+        - ''
+        - '&7We have created the Ultra rank to'
+        - '&7reward generous players who want'
+        - '&7to support server development.'
+
+      '40':
+        material: STICK
+        customdata: 100
+        name: '&6&lBuy the Rank!'
+        lore:
+        - ''
+        - '&7You can purchase this rank in'
+        - '&7order to support the server!'
+        - ''
+        - '&fPrice: %color_gems%950 Gems &f'
+        - ''
+        - '&cNOT ENOUGH GEMS'
+        - '%color_menu_purchase%&lClick to buy more!'
+        commands:
+        - open= premium_store
+        has1:        
+          value0: '%valiant_premium_currency% ISGREATER'
+          compare0: '950'
+          material: STICK
+          customdata: 100
+          name: '&6&lBuy the Rank!'
+          lore:
+          - ''
+          - '&7You can purchase this rank in'
+          - '&7order to support the server!'
+          - ''
+          - '&fPrice: %color_gems%950 Gems &f'
+          - ''
+          - '%color_menu_purchase%&lClick to purchase!'
+          commands:
+          - set-data= item_name ultra_rank %cp-player-name%
+          - set-data= item_price 950 %cp-player-name%
+          - open= premium_store_confirm
+        has0:
+          value0: '%cp-player-name% HASPERM'
+          compare0: 'weight.1'
+          material: STICK
+          customdata: 100
+          name: '&6&lRank Purchased'
+          lore:
+          - ''
+          - '&7You have already purchased'
+          - '&7this rank. Thank You!'
+          - ''
+          - '&8Price: 950 Gems '
+          - ''
+          - '%color_menu_unlocked%&lPurchased'
+        
+        
+
+      '12':
+        material: STICK
+        customdata: 100
+        name: '%color_ultra%Ultra Visual Pack'
+        lore:
+        - ''
+        - '&f• &7Unique Prefix: &f'
+        - '&f• &7Nickname Colour: &eGold'
+        - '&f• &7Outstanding &fwhite &7chat colour'
+        - ''
+        - '&7Your prefix & nickname &7will be visible on:'
+        - '&fChat&7, &fTablist &7& &fIn-Game &7(above your head)'
+
+      '13':
+        material: STICK
+        customdata: 100
+        name: '&aPersonal Settings'
+        lore:
+        - ''
+        - '&7Access additional settings to get more'
+        - '&7control over your server experience.'
+        - ''
+        - '&7• &f/autotool &7- toggles auto tool'
+        - '&7• &f/lumberjack &7- toggles tree physics'
+        - ''
+        - '&7You can toggle your settings'
+        - '&7in the &9&lYour Profile &7menu.'
+
+      '14':
+        material: STICK
+        customdata: 100
+        name: '%color_ultra%Ultra Kit'
+        lore:
+        - ''
+        - '&7A set of equipment necessary'
+        - '&7for the Ultra during his adventures.'
+        - ''
+        - '&7Contents:'
+        - '&f• %color_ultra%Iron Armor Set'
+        - '&f• %color_ultra%Iron Tools Set'
+        - '&f• %color_ultra%x32 Arrows'
+        - '&f• %color_ultra%x4 Steak'
+        - ''
+        - '&e⌚ &7You can claim this kit every 6 hours.'
+      
+      
+      
+      '30':
+        material: STICK
+        customdata: 100
+        name: '&aFlight on Spawn'
+        lore:
+        - ''
+        - '&7Raise up above the ground to'
+        - '&7admire the spawn and have a'
+        - '&7better look at all the players!'
+      
+      '31':
+        material: STICK
+        customdata: 100
+        name: '&aPortable Crafting Table'
+        lore:
+        - ''
+        - '&7Execute &f/craft &7to open a portable'
+        - '&7crafting table wherever you are!'
+      
+      '32':
+        material: STICK
+        customdata: 100
+        name: '&aPortable Trash Can'
+        lore:
+        - ''
+        - '&7Execute &f/disposal &7to open a'
+        - '&7portable trash can and get rid'
+        - '&7of unnecessary items quickly!'
+      
+      
+        
+        
+        
+      
+      
+        
+        
+        

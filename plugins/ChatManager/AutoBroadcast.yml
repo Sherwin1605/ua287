@@ -1,0 +1,54 @@
+Auto_Broadcast:
+  Global_Messages:
+    Enable: true
+    Header_And_Footer: true
+    Interval: 90
+    Prefix: ""
+    Header: " "
+    Footer: " "
+    Sound: ''
+    Messages:
+      - "                %color_primary_color%☠ %color_primary_color%&lDungeons Key %color_primary_color%☠ \n \n        &fYou can find the Dungeons Keys by\n        &fkilling mini-bosses in the Wilderness!\n \n                   %color_accent_color%✔  Good Luck!  ✔"
+      - "          %color_primary_color%&lHave you got questions? \n \n        &fFeel free to join Our Discord\n              &fand ask about anything!\n \n     %color_accent_color%▶  https://discord.gg/wdBFC7Hc6X  ◀"
+      - "          %color_primary_color%🪓 %color_primary_color%&lProtect your terrain %color_primary_color%🪓 \n \n        &fClaim terrain with /claim command.\n        &fYou can also use Golden Shovel.\n \n         %color_accent_color%✎  Read Guide for more info  ✎"
+      - "       %color_primary_color%⯪ %color_primary_color%&lCheck out Our Discord! %color_primary_color%⯫ \n \n             &fJoin Us to take part in\n        &fEpic Events, find a great Team\n       &fand have a lot of fun together!\n \n       %color_accent_color%▶  https://discord.gg/wdBFC7Hc6X  ◀"
+      - "          %color_primary_color%&l!!! Don't ever cheat !!! \n \n     &fUsing cheats or hacked clients\n       &fwill result in a permanent ban.\n \n           %color_accent_color%✔  Always play fair!  ✔"
+  Per_World_Messages:
+    Enable: false
+    Header_And_Footer: true
+    Interval: 90
+    Prefix: ""
+    Header: " "
+    Footer: " "
+    Sound: ''
+    Messages:
+      world:
+        - "       &6⯪ &9&lCheck out Our Discord! &6⯫ \n \n              &fJoin Us to take part in\n         &fEpic Events, find a great Team\n       &fand have a lot of fun together!\n \n       &e▶  &6&ehttps://discord.gg/wdBFC7Hc6X&e  ◀"
+        - "          &c&l!!! Don't ever cheat !!! \n \n     &fUsing cheats or hacked clients\n       &fwill result in a permanent ban.\n \n           &2✔  &aAlways play fair!  &2✔"
+      world_nether:
+        - "       &6⯪ &9&lCheck out Our Discord! &6⯫ \n \n              &fJoin Us to take part in\n         &fEpic Events, find a great Team\n       &fand have a lot of fun together!\n \n       &e▶  &6&ehttps://discord.gg/wdBFC7Hc6X&e  ◀"
+        - "          &c&l!!! Don't ever cheat !!! \n \n     &fUsing cheats or hacked clients\n       &fwill result in a permanent ban.\n \n           &2✔  &aAlways play fair!  &2✔"
+      world_the_end:
+        - "       &6⯪ &9&lCheck out Our Discord! &6⯫ \n \n              &fJoin Us to take part in\n         &fEpic Events, find a great Team\n       &fand have a lot of fun together!\n \n       &e▶  &6&ehttps://discord.gg/wdBFC7Hc6X&e  ◀"
+        - "          &c&l!!! Don't ever cheat !!! \n \n     &fUsing cheats or hacked clients\n       &fwill result in a permanent ban.\n \n           &2✔  &aAlways play fair!  &2✔"
+  Actionbar_Messages:
+    Enable: false
+    Interval: 60
+    Prefix: "&7[&6AutoBroadcast&7]"
+    Sound: ''
+    Messages:
+      - "{Prefix} &7Auto-Broadcast action bar message."
+  Title_Messages:
+    Enable: false
+    Interval: 60
+    Sound: ''
+    Title: "&cTitle"
+    Messages:
+      - "&7Auto-Broadcast title message."
+  Bossbar_Messages: #1.9+
+    Enable: false
+    Interval: 60
+    Sound: ''
+    Bar_Time: 10 #How long the boss bar stays on for.
+    Messages:
+      - "&7Auto-Broadcast bossbar message."

@@ -1,0 +1,155 @@
+### Standard Swing Attack
+
+miner_wrath_attack_parse:
+  Conditions:
+  - offgcd
+  - onground
+  - hasaura{n=skill_used} false
+  - targetwithin{d=4} true
+  Skills:
+  - CancelEvent
+  - skill{s=miner_wrath_attack}
+  
+miner_wrath_attack:
+  Conditions:
+  - targetwithin{d=4} true
+  Skills:
+  - gcd{ticks=40}
+  - aura{auraname=skill_used;d=40} @self
+  - look{headOnly=false;immediately=true} @target
+  - state{m=miner_wrath;s=attack;li=2;lo=2} @target
+  - setspeed{speed=0.8;type=walking} @self
+  - randomskill{s=miner_wrath_attack_animation_1,miner_wrath_attack_animation_2}
+  - sound{s=entity.zoglin.attack;p=1.5;v=0.6} @self
+  - delay 10
+  - sound{s=entity.zombie.attack_wooden_door;p=1;v=1} @self
+  - damage{amount=12} @target
+  - setspeed{speed=1;type=walking} @self
+
+miner_wrath_cancel_attack:
+  Skills:
+  - CancelEvent
+
+miner_wrath_attack_animation_1:
+  Skills:
+  - state{s=attack;li=1} @self
+
+miner_wrath_attack_animation_2:
+  Skills:
+  - state{s=attack_2;li=1} @self
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+miner_wrath_kick_parse:
+  Conditions:
+  - offgcd
+  - hasaura{n=skill_used} false
+  - hasaura{n=kick_used} false
+  Skills:
+  - CancelEvent
+  - skill{s=miner_wrath_kick;cd=1}
+
+miner_wrath_kick:
+  Skills:
+  - gcd{ticks=30}
+  - aura{auraname=skill_used;d=100} @self
+  - aura{auraname=kick_used;d=300} @self
+  - sound{s=entity.zoglin.attack;p=1;v=2} @self
+  - delay 8
+  - state{state=kick;li=1;n=false;speed=1} @self
+  - look{headOnly=false;immediately=true} @target
+  - lunge{velocity=0.4;velocityY=0.2;delay=6} @target
+  - command{c="bossability miner_wrath kick"} @self
+
+
+miner_wrath_pickaxe_smash_parse:
+  Conditions:
+  - offgcd
+  - hasaura{n=skill_used} false
+  - hasaura{n=pickaxe_smash_used} false
+  Skills:
+  - CancelEvent
+  - skill{s=miner_wrath_pickaxe_smash;cd=1}
+
+miner_wrath_pickaxe_smash:
+  Skills:
+  - gcd{ticks=70}
+  - aura{auraname=skill_used;d=200} @self
+  - aura{auraname=pickaxe_smash_used;d=200} @self
+  - state{state=roar;li=1;n=false;speed=1} @self
+  - sound{s=entity.zoglin.attack;p=0.5;v=2} @self
+  - sound{s=entity.zoglin.attack;p=1;v=2} @self
+  - delay 3
+  - sound{s=entity.zoglin.attack;p=0.5;v=2} @self
+  - sound{s=entity.zoglin.attack;p=1;v=2} @self
+  - delay 3
+  - sound{s=entity.zoglin.attack;p=0.5;v=2} @self
+  - sound{s=entity.zoglin.attack;p=1;v=2} @self
+  - delay 3
+  - sound{s=entity.zoglin.attack;p=0.5;v=2} @self
+  - sound{s=entity.zoglin.attack;p=1;v=2} @self
+  - delay 17
+  - state{state=pickaxe_smash;li=1;n=false;speed=1} @self
+  - setspeed{speed=0.5;type=walking} @self
+  - look{headOnly=false;immediately=true} @target
+  - command{c="bossability miner_wrath pickaxe_smash"} @self
+  - delay 40
+  - setspeed{speed=1;type=walking} @self
+
+
+
+miner_wrath_chase:
+  Conditions:
+  - targetnotwithin{d=15} true
+  Skills:
+  - setspeed{speed=2;type=walking} @self
+  - delay 20
+  - setspeed{speed=1;type=walking} @self
+
+
+
+
+
+
+
+
+### Hurt Events
+
+miner_wrath_hurt:
+  Conditions:
+  - onground{} true cancel
+  Skills:
+  - state{state=hurt;li=1;n=false;speed=1} @self
+
+miner_wrath_hurt_2:
+  Conditions:
+  - onground{} true cancel
+  Skills:
+  - state{state=hurt_2;li=1;n=false;speed=1} @self
+
+
+miner_wrath_hit_from_afar:
+  Conditions:
+  - playernotwithin{d=25} true
+  Skills:
+  - modifyDamage{a=-1.8;modifier=ADD;sync=true} @self
+  - message{m="<caster.name>&f:&r&f Hahaha! Those arrows do nothing to me!"} @PlayersInRadius{r=50} 0.2
+#  - randommessage{
+#      m=
+#      "<caster.name>: &rHahaha! Those arrows do nothing to me!",
+#      "<caster.name>: &rBwahaha! What is this puny stuff youre throwing at me!",
+#      "<caster.name>: &rKeep shooting, this doesnt impress me at all!",
+#      "<caster.name>: &rThis is pathetic, your projectiles are ineffective!";
+#      } @PlayersInRadius{r=50} 0.2
+

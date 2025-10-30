@@ -1,0 +1,57 @@
+dracula:
+  Type: VINDICATOR
+  Display: '&c&lLord Dracula'
+  Health: 1000
+  Damage: 0
+  MaxCombatDistance: 150
+  AIGoalSelectors:
+  - clear
+  - meleeattack{attackReach=5}
+  - randomstroll
+  AITargetSelectors:
+  - clear
+  - players
+  Options:  
+    Persistent: true
+    Despawn: chunk
+    Collidable: true
+    MovementSpeed: 0.33
+    PreventOtherDrops: true
+    Silent: true
+    PreventRenaming: true
+    PreventLeashing: true
+    AlwaysShowName: false
+    KnockbackResistance: 0.8
+  BossBar:
+    Enabled: true
+    Title: '&c&lLord Dracula'
+    Range: 40
+    Color: RED
+    Style: SOLID
+  Modules:
+    ThreatTable: true
+  Skills:
+  ### Applies the model when spawned.
+  - model{mid=vampire;n=name;step=1} @self ~onSpawn
+  - model{mid=vampire;n=name;step=1} @self ~onLoad
+  
+  ### Hurt Skills & Sounds
+  - sound{s=entity.zoglin.hurt;p=0.8;v=1} @self ~onDamaged
+  - skill{s=dracula_hurt_parse;sync=true} ~onDamaged
+  
+  ### Death Skills & Sounds
+  - sound{s=entity.zoglin.death;p=0.8;v=1} @self ~onDeath
+  
+  ### Kick Player
+  - skill{s=dracula_kick_parse;sync=true} ~onTimer:10
+
+  ###  Chase Player
+  - skill{s=dracula_chase;sync=true;cd=5} @self ~onTimer:20
+  - skill{s=dracula_cancel_attack;sync=true} ~onAttack
+
+  ### Abilities Skills
+  - skill{s=dracula_dash_parse;sync=true;cd=9} @target ~onTimer:30 0.5
+  - skill{s=dracula_knife_throw_parse;sync=true;cd=12} @target ~onTimer:40 0.3
+  - skill{s=dracula_elevate_parse;sync=true;cd=7} @target ~onTimer:40 0.3
+  - skill{s=dracula_bat_swarm_parse;sync=true;cd=20} @target ~onTimer:40 0.3
+

@@ -1,6 +1,6 @@
 patterns:
   - type: stat
-    stat: health
+    stat: toughness
     value: 1
     pattern:
       start: 2

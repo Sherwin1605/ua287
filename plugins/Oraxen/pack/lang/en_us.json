@@ -1,9 +1,3 @@
 {
-  "connect.joining": "",
-  "menu.disconnect": "§f<glyph:hs_esc_banner>",
-  "menu.returnToGame": "Back to the Hyronic Survival",
-  "menu.game": "<glyph:hs_esc_logo>",
-  "item.dyed": "",
-  "container.inventory": " Inventory",
-  "resourcePack.server.name": "Hyronic Survival RSP"
-} 
+  "menu.returnToGame": "Back to the server"
+}

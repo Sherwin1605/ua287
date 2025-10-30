@@ -7,54 +7,7 @@ worlds:
     style: NORMAL
     pvp: 'true'
     scale: '1.0'
-    respawnWorld: ''
-    allowWeather: 'true'
-    difficulty: PEACEFUL
-    spawning:
-      ==: MVSpawnSettings
-      animals:
-        ==: MVSpawnSubSettings
-        spawn: 'true'
-        spawnrate: '-1'
-        exceptions: []
-      monsters:
-        ==: MVSpawnSubSettings
-        spawn: 'true'
-        spawnrate: '-1'
-        exceptions: []
-    entryfee:
-      ==: MVEntryFee
-      amount: '0.0'
-    hunger: 'true'
-    autoHeal: 'true'
-    adjustSpawn: 'true'
-    portalForm: ALL
-    gameMode: SURVIVAL
-    keepSpawnInMemory: 'true'
-    spawnLocation:
-      ==: MVSpawnLocation
-      x: -104.0
-      y: -1.0
-      z: -136.0
-      pitch: 0.0
-      yaw: 0.0
-    autoLoad: 'true'
-    bedRespawn: 'true'
-    worldBlacklist: []
-    environment: NORMAL
-    seed: '-2916362171153001040'
-    generator: 'null'
-    playerLimit: '-1'
-    allowFlight: 'true'
-  world:
-    ==: MVWorld
-    hidden: 'false'
-    alias: Overworld
-    color: DARKGREEN
-    style: NORMAL
-    pvp: 'true'
-    scale: '1.0'
-    respawnWorld: ''
+    respawnWorld: spawn
     allowWeather: 'true'
     difficulty: EASY
     spawning:
@@ -80,28 +33,28 @@ worlds:
     keepSpawnInMemory: 'true'
     spawnLocation:
       ==: MVSpawnLocation
-      x: 14.0
-      y: 66.0
-      z: 8.0
-      pitch: 0.0
-      yaw: 0.0
+      x: 0.5
+      y: -30.0
+      z: 6.5
+      pitch: -2.7000148
+      yaw: 179.99918
     autoLoad: 'true'
     bedRespawn: 'true'
     worldBlacklist: []
     environment: NORMAL
-    seed: '-3216697066952657716'
+    seed: '-3613292868856745782'
     generator: 'null'
     playerLimit: '-1'
     allowFlight: 'true'
   world_the_end:
     ==: MVWorld
     hidden: 'false'
-    alias: The End
+    alias: world_the_end
     color: WHITE
     style: NORMAL
     pvp: 'true'
     scale: '16.0'
-    respawnWorld: ''
+    respawnWorld: world
     allowWeather: 'true'
     difficulty: EASY
     spawning:
@@ -127,8 +80,8 @@ worlds:
     keepSpawnInMemory: 'true'
     spawnLocation:
       ==: MVSpawnLocation
-      x: 0.0
-      y: 66.0
+      x: 30.0
+      y: 62.0
       z: 0.0
       pitch: 0.0
       yaw: 0.0
@@ -136,15 +89,62 @@ worlds:
     bedRespawn: 'true'
     worldBlacklist: []
     environment: THE_END
-    seed: '-3216697066952657716'
+    seed: '3327597777194943071'
+    generator: 'null'
+    playerLimit: '-1'
+    allowFlight: 'true'
+  world:
+    ==: MVWorld
+    hidden: 'false'
+    alias: world
+    color: WHITE
+    style: NORMAL
+    pvp: 'true'
+    scale: '1.0'
+    respawnWorld: spawn
+    allowWeather: 'true'
+    difficulty: NORMAL
+    spawning:
+      ==: MVSpawnSettings
+      animals:
+        ==: MVSpawnSubSettings
+        spawn: 'true'
+        spawnrate: '-1'
+        exceptions: []
+      monsters:
+        ==: MVSpawnSubSettings
+        spawn: 'true'
+        spawnrate: '-1'
+        exceptions: []
+    entryfee:
+      ==: MVEntryFee
+      amount: '0.0'
+    hunger: 'true'
+    autoHeal: 'true'
+    adjustSpawn: 'true'
+    portalForm: ALL
+    gameMode: SURVIVAL
+    keepSpawnInMemory: 'true'
+    spawnLocation:
+      ==: MVSpawnLocation
+      x: 1.71816175E7
+      y: 74.0
+      z: 8737540.5
+      pitch: 0.0
+      yaw: 0.0
+    autoLoad: 'true'
+    bedRespawn: 'true'
+    worldBlacklist: []
+    environment: NORMAL
+    seed: '5090933777284247740'
     generator: 'null'
     playerLimit: '-1'
     allowFlight: 'true'
   world_nether:
     ==: MVWorld
     hidden: 'false'
-    alias: The Nether
-    color: RED
+    alias: world_nether
+    color: WHITE
     style: NORMAL
     pvp: 'true'
     scale: '8.0'
@@ -174,16 +174,63 @@ worlds:
     keepSpawnInMemory: 'true'
     spawnLocation:
       ==: MVSpawnLocation
-      x: 6.5
-      y: 69.0
-      z: -7.5
+      x: 0.5
+      y: 62.0
+      z: -5.5
       pitch: 0.0
       yaw: 0.0
     autoLoad: 'true'
     bedRespawn: 'true'
     worldBlacklist: []
     environment: NETHER
-    seed: '-3216697066952657716'
+    seed: '3327597777194943071'
+    generator: 'null'
+    playerLimit: '-1'
+    allowFlight: 'true'
+  dungeons:
+    ==: MVWorld
+    hidden: 'false'
+    alias: dungeons
+    color: WHITE
+    style: NORMAL
+    pvp: 'true'
+    scale: '1.0'
+    respawnWorld: spawn
+    allowWeather: 'true'
+    difficulty: EASY
+    spawning:
+      ==: MVSpawnSettings
+      animals:
+        ==: MVSpawnSubSettings
+        spawn: 'true'
+        spawnrate: '-1'
+        exceptions: []
+      monsters:
+        ==: MVSpawnSubSettings
+        spawn: 'true'
+        spawnrate: '-1'
+        exceptions: []
+    entryfee:
+      ==: MVEntryFee
+      amount: '0.0'
+    hunger: 'true'
+    autoHeal: 'true'
+    adjustSpawn: 'true'
+    portalForm: ALL
+    gameMode: SURVIVAL
+    keepSpawnInMemory: 'true'
+    spawnLocation:
+      ==: MVSpawnLocation
+      x: 0.0
+      y: -60.0
+      z: 0.0
+      pitch: 0.0
+      yaw: 0.0
+    autoLoad: 'true'
+    bedRespawn: 'true'
+    worldBlacklist: []
+    environment: NORMAL
+    seed: '3706513482351188593'
     generator: 'null'
     playerLimit: '-1'
     allowFlight: 'true'

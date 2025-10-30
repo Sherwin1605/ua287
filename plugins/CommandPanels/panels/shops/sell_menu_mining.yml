@@ -1,0 +1,269 @@
+panels:
+  sell_menu_mining:
+    perm: default
+    rows: 5
+    title: '&f'
+    commands:
+    - sellmenu
+    - smenu
+    empty: AIR
+    sound-on-open: BLOCK_NOTE_BLOCK_HAT
+    item:
+
+
+      '0':
+        material: STICK
+        customdata: 1
+        name: '&c← Previous Menu'
+        commands:
+        - open= main_menu
+      
+      '42':
+        material: STICK
+        customdata: 2
+        name: '&aNext Page →'
+        commands:
+        - open= sell_menu_minerals
+      
+
+      
+      
+      '10':
+        material: DIRT
+        stack: 32
+        name: '%color_menu_primary%Dirt'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7SELL &f&l32 &7FOR %color_gold%8 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - sell= 8 DIRT 32
+      '11':
+        material: GRAVEL
+        stack: 32
+        name: '%color_menu_primary%Gravel'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7SELL &f&l32 &7FOR %color_gold%12 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - sell= 12 GRAVEL 32
+      '12':
+        material: SAND
+        stack: 32
+        name: '%color_menu_primary%Sand'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7SELL &f&l32 &7FOR %color_gold%10 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - sell= 10 SAND 32
+      '13':
+        material: COBBLESTONE
+        stack: 32
+        name: '%color_menu_primary%Cobblestone'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7SELL &f&l32 &7FOR %color_gold%10 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - sell= 10 COBBLESTONE 32
+      '14':
+        material: TUFF
+        stack: 32
+        name: '%color_menu_primary%Tuff'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7SELL &f&l32 &7FOR %color_gold%12 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - sell= 12 TUFF 32
+      '15':
+        material: COBBLED_DEEPSLATE
+        stack: 32
+        name: '%color_menu_primary%Cobbled Deepslate'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7SELL &f&l32 &7FOR %color_gold%12 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - sell= 12 COBBLED_DEEPSLATE 32
+      '16':
+        material: DRIPSTONE_BLOCK
+        stack: 32
+        name: '%color_menu_primary%Dripstone Block'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7SELL &f&l32 &7FOR %color_gold%12 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - sell= 12 DRIPSTONE_BLOCK 32
+      
+      
+      
+      '19':
+        material: ANDESITE
+        stack: 32
+        name: '%color_menu_primary%Andesite'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7SELL &f&l32 &7FOR %color_gold%20 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - sell= 20 ANDESITE 32
+      '20':
+        material: DIORITE
+        stack: 32
+        name: '%color_menu_primary%Diorite'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7SELL &f&l32 &7FOR %color_gold%20 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - sell= 20 DIORITE 32
+      '21':
+        material: GRANITE
+        stack: 32
+        name: '%color_menu_primary%Granite'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7SELL &f&l32 &7FOR %color_gold%20 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - sell= 20 GRANITE 32
+      '22':
+        material: STONE
+        stack: 32
+        name: '%color_menu_primary%Stone'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7SELL &f&l32 &7FOR %color_gold%30 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - sell= 30 STONE 32
+      '23':
+        material: DEEPSLATE
+        stack: 32
+        name: '%color_menu_primary%Deepslate'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7SELL &f&l32 &7FOR %color_gold%35 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - sell= 35 DEEPSLATE 32
+      '24':
+        material: BLACKSTONE
+        stack: 32
+        name: '%color_menu_primary%Blackstone'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7SELL &f&l32 &7FOR %color_gold%25 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - sell= 25 BLACKSTONE 32
+      '25':
+        material: END_STONE
+        stack: 32
+        name: '%color_menu_primary%End Stone'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7SELL &f&l32 &7FOR %color_gold%25 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - sell= 25 END_STONE 32
+       
+       
+       
+      '28':
+        material: OAK_LOG
+        stack: 32
+        name: '%color_menu_primary%Oak Log'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7SELL &f&l32 &7FOR %color_gold%50 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - sell= 50 OAK_LOG 32
+      '29':
+        material: SPRUCE_LOG
+        stack: 32
+        name: '%color_menu_primary%Spruce Log'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7SELL &f&l32 &7FOR %color_gold%50 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - sell= 50 SPRUCE_LOG 32
+      '30':
+        material: BIRCH_LOG
+        stack: 32
+        name: '%color_menu_primary%Birch Log'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7SELL &f&l32 &7FOR %color_gold%50 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - sell= 50 BIRCH_LOG 32
+      '31':
+        material: JUNGLE_LOG
+        stack: 32
+        name: '%color_menu_primary%Jungle Log'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7SELL &f&l32 &7FOR %color_gold%50 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - sell= 50 JUNGLE_LOG 32
+      '32':
+        material: ACACIA_LOG
+        stack: 32
+        name: '%color_menu_primary%Acacia Log'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7SELL &f&l32 &7FOR %color_gold%50 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - sell= 50 ACACIA_LOG 32
+      '33':
+        material: DARK_OAK_LOG
+        stack: 32
+        name: '%color_menu_primary%Dark Oak Log'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7SELL &f&l32 &7FOR %color_gold%50 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - sell= 50 DARK_OAK_LOG 32
+      '34':
+        material: MANGROVE_LOG
+        stack: 32
+        name: '%color_menu_primary%Mangrove Log'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7SELL &f&l32 &7FOR %color_gold%50 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - sell= 50 MANGROVE_LOG 32
+      
+ 

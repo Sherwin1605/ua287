@@ -1,0 +1,159 @@
+events:
+  start_quest_1: objective start quest_1
+  start_quest_2: objective start quest_2
+  start_quest_3: objective start quest_3
+  start_quest_4: objective start quest_4
+  start_quest_5: objective start quest_5
+  start_quest_6: objective start quest_6
+  start_quest_7: objective start quest_7
+  start_quest_8: objective start quest_8
+  start_quest_9: objective start quest_9
+  start_quest_10: objective start quest_10
+  start_quest_11: objective start quest_11
+  start_quest_12: objective start quest_12
+  start_quest_13: objective start quest_13
+  start_quest_14: objective start quest_14
+  start_quest_15: objective start quest_15
+  start_quest_16: objective start quest_16
+  start_quest_17: objective start quest_17
+  start_quest_18: objective start quest_18
+  start_quest_19: objective start quest_19
+  start_quest_20: objective start quest_20
+  start_quest_21: objective start quest_21
+  start_quest_22: objective start quest_22
+  start_quest_23: objective start quest_23
+  start_quest_24: objective start quest_24
+  start_quest_25: objective start quest_25
+  start_quest_26: objective start quest_26
+  start_quest_27: objective start quest_27
+  start_quest_28: objective start quest_28
+  start_quest_29: objective start quest_29
+  start_quest_30: objective start quest_30
+  
+  finish_quest_1: folder give_reward_1,notify_1,subtitle,sound,valiant.quest_finished,valiant.obj_2,finish_quest_1_x
+    conditions:first_quest
+  finish_quest_2: folder give_reward_2,notify_2,subtitle,sound,valiant.quest_finished,valiant.obj_3
+  finish_quest_3: folder give_reward_3,notify_3,subtitle,sound,valiant.quest_finished,valiant.obj_4
+  finish_quest_4: folder give_reward_4,notify_4,subtitle,sound,valiant.quest_finished,valiant.obj_5
+  finish_quest_5: folder give_reward_5,notify_5,subtitle,sound,valiant.quest_finished,valiant.obj_6
+  finish_quest_6: folder give_reward_6,notify_6,subtitle,sound,valiant.quest_finished,valiant.obj_7
+  finish_quest_7: folder give_reward_7,notify_7,subtitle,sound,valiant.quest_finished,valiant.obj_8
+  finish_quest_8: folder give_reward_8,notify_8,subtitle,sound,valiant.quest_finished,valiant.obj_9
+  finish_quest_9: folder give_reward_9,notify_9,subtitle,sound,valiant.quest_finished,valiant.obj_10
+  finish_quest_10: folder give_reward_10,notify_10,subtitle,sound,valiant.quest_finished,valiant.obj_11
+  finish_quest_11: folder give_reward_11,notify_11,subtitle,sound,valiant.quest_finished,valiant.obj_12
+  finish_quest_12: folder give_reward_12,notify_12,subtitle,sound,valiant.quest_finished,valiant.obj_13
+  finish_quest_13: folder give_reward_13,notify_13,subtitle,sound,valiant.quest_finished,valiant.obj_14
+  finish_quest_14: folder give_reward_14,notify_14,subtitle,sound,valiant.quest_finished,valiant.obj_15
+  finish_quest_15: folder give_reward_15,notify_15,subtitle,sound,valiant.quest_finished,valiant.obj_16
+  finish_quest_16: folder give_reward_16,notify_16,subtitle,sound,valiant.quest_finished,valiant.obj_17
+  finish_quest_17: folder give_reward_17,notify_17,subtitle,sound,valiant.quest_finished,valiant.obj_18
+  finish_quest_18: folder give_reward_18,notify_18,subtitle,sound,valiant.quest_finished,valiant.obj_19
+  finish_quest_19: folder give_reward_19,notify_19,subtitle,sound,valiant.quest_finished,valiant.obj_20
+  finish_quest_20: folder give_reward_20,notify_20,subtitle,sound,valiant.quest_finished,valiant.obj_21
+  finish_quest_21: folder give_reward_21,notify_21,subtitle,sound,valiant.quest_finished,valiant.obj_22
+  finish_quest_22: folder give_reward_22,notify_22,subtitle,sound,valiant.quest_finished,valiant.obj_23
+  finish_quest_23: folder give_reward_23,notify_23,subtitle,sound,valiant.quest_finished,valiant.obj_24
+  finish_quest_24: folder give_reward_24,notify_24,subtitle,sound,valiant.quest_finished,valiant.obj_25
+  finish_quest_25: folder give_reward_25,notify_25,subtitle,sound,valiant.quest_finished,valiant.obj_26
+  finish_quest_26: folder give_reward_26,notify_26,subtitle,sound,valiant.quest_finished,valiant.obj_27
+  finish_quest_27: folder give_reward_27,notify_27,subtitle,sound,valiant.quest_finished,valiant.obj_28
+  finish_quest_28: folder give_reward_28,notify_28,subtitle,sound,valiant.quest_finished,valiant.obj_29
+  finish_quest_29: folder give_reward_29,notify_29,subtitle,sound,valiant.quest_finished,valiant.obj_30
+  finish_quest_30: folder give_reward_30,notify_30,subtitle,sound,valiant.quest_finished
+  
+  finish_quest_1_x: objective remove quest_1
+  
+  give_reward_1: command eco give %player% 200
+  give_reward_2: give steak:10
+  give_reward_3: give IRON_INGOT:5
+  give_reward_4: give bone_meal:32
+  give_reward_5: give arrow:32
+  give_reward_6: give luck_of_the_sea
+  give_reward_7: command eco give %player% 1000
+  give_reward_8: give gold_ingot:10
+  give_reward_9: command eco give %player% 250
+  give_reward_10: give strength_potion_2
+  give_reward_11: give fortune_2
+  give_reward_12: command eco give %player% 1000
+  give_reward_13: give cooked_chicken:16
+  give_reward_14: give smite_3
+  give_reward_15: give experience_bottle:16
+  give_reward_16: command eco give %player% 1500
+  give_reward_17: give golden_apple:3
+  give_reward_18: give obsidian:32
+  give_reward_19: give experience_bottle:32
+  give_reward_20: command eco give %player% 1000
+  give_reward_21: give experience_bottle:16
+  give_reward_22: give diamond:1
+  give_reward_23: give unbreaking_3
+  give_reward_24: give diamond_sword
+  give_reward_25: command eco give %player% 1500
+  give_reward_26: give turtle_master
+  give_reward_27: give diamond
+  give_reward_28: give netherite_scrap
+  give_reward_29: give diamond
+  give_reward_30: give elytra
+  
+  notify_1: notify &x&f&f&e&8&1&7&l✔ Quest Finished! &6You have completed; &x&3&1&e&d&9&6Adventure
+    Begins
+  notify_2: notify &x&f&f&e&8&1&7&l✔ Quest Finished! &6You have completed; &x&3&1&e&d&9&6It
+    all begins in a cave
+  notify_3: notify &x&f&f&e&8&1&7&l✔ Quest Finished! &6You have completed; &x&3&1&e&d&9&6Arm
+    yourself!
+  notify_4: notify &x&f&f&e&8&1&7&l✔ Quest Finished! &6You have completed; &x&3&1&e&d&9&6Earn
+    your bread
+  notify_5: notify &x&f&f&e&8&1&7&l✔ Quest Finished! &6You have completed; &x&3&1&e&d&9&6Bow
+    Up!
+  notify_6: notify &x&f&f&e&8&1&7&l✔ Quest Finished! &6You have completed; &x&3&1&e&d&9&6If
+    I'm missin' I've gone fishin'
+  notify_7: notify &x&f&f&e&8&1&7&l✔ Quest Finished! &6You have completed; &x&3&1&e&d&9&6Creepy
+    Mission
+  notify_8: notify &x&f&f&e&8&1&7&l✔ Quest Finished! &6You have completed; &x&3&1&e&d&9&6Looney
+    Tunes
+  notify_9: notify &x&f&f&e&8&1&7&l✔ Quest Finished! &6You have completed; &x&3&1&e&d&9&6Sweet
+    Life
+  notify_10: notify &x&f&f&e&8&1&7&l✔ Quest Finished! &6You have completed; &x&3&1&e&d&9&6Golden
+    Tooth
+  notify_11: notify &x&f&f&e&8&1&7&l✔ Quest Finished! &6You have completed; &x&3&1&e&d&9&6Dwarf's
+    Quest
+  notify_12: notify &x&f&f&e&8&1&7&l✔ Quest Finished! &6You have completed; &x&3&1&e&d&9&6Multidimensional
+    Storage
+  notify_13: notify &x&f&f&e&8&1&7&l✔ Quest Finished! &6You have completed; &x&3&1&e&d&9&6Finger
+    Lickin' Good
+  notify_14: notify &x&f&f&e&8&1&7&l✔ Quest Finished! &6You have completed; &x&3&1&e&d&9&6Apocalypse
+    Prevention
+  notify_15: notify &x&f&f&e&8&1&7&l✔ Quest Finished! &6You have completed; &x&3&1&e&d&9&6Alchemist's
+    Job
+  notify_16: notify &x&f&f&e&8&1&7&l✔ Quest Finished! &6You have completed; &x&3&1&e&d&9&6Shiny
+    Gems
+  notify_17: notify &x&f&f&e&8&1&7&l✔ Quest Finished! &6You have completed; &x&3&1&e&d&9&6Take
+    care of your vision
+  notify_18: notify &x&f&f&e&8&1&7&l✔ Quest Finished! &6You have completed; &x&3&1&e&d&9&6Staring
+    Competition
+  notify_19: notify &x&f&f&e&8&1&7&l✔ Quest Finished! &6You have completed; &x&3&1&e&d&9&6Spooky
+    Scary Skeletons
+  notify_20: notify &x&f&f&e&8&1&7&l✔ Quest Finished! &6You have completed; &x&3&1&e&d&9&6Experienced
+  notify_21: notify &x&f&f&e&8&1&7&l✔ Quest Finished! &6You have completed; &x&3&1&e&d&9&6A
+    fancy mineral
+  notify_22: notify &x&f&f&e&8&1&7&l✔ Quest Finished! &6You have completed; &x&3&1&e&d&9&6I
+    am not bragging!
+  notify_23: notify &x&f&f&e&8&1&7&l✔ Quest Finished! &6You have completed; &x&3&1&e&d&9&6Safety
+    First!
+  notify_24: notify &x&f&f&e&8&1&7&l✔ Quest Finished! &6You have completed; &x&3&1&e&d&9&6Serial
+    Killer
+  notify_25: notify &x&f&f&e&8&1&7&l✔ Quest Finished! &6You have completed; &x&3&1&e&d&9&6Steelworker
+  notify_26: notify &x&f&f&e&8&1&7&l✔ Quest Finished! &6You have completed; &x&3&1&e&d&9&6Strongman
+  notify_27: notify &x&f&f&e&8&1&7&l✔ Quest Finished! &6You have completed; &x&3&1&e&d&9&6Coal
+    Power
+  notify_28: notify &x&f&f&e&8&1&7&l✔ Quest Finished! &6You have completed; &x&3&1&e&d&9&6Wither
+    Away
+  notify_29: notify &x&f&f&e&8&1&7&l✔ Quest Finished! &6You have completed; &x&3&1&e&d&9&6Unstoppable
+    Miner
+  notify_30: notify &x&f&f&e&8&1&7&l✔ Quest Finished! &6You have completed; &x&3&1&e&d&9&6Dragon
+    Slayer
+  
+  title: notify &x&3&1&e&d&9&6Quest Finished! category:title
+  subtitle: notify &x&3&1&e&d&9&6Quest Finished! category:subtitle
+  
+  sound: notify io:sound sound:entity.player.levelup soundpitch:1.5

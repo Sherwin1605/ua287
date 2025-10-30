@@ -1,0 +1,19 @@
+Locations:
+  '1':
+    Crate: AdventureCrate
+    World: spawn
+    X: 703
+    Y: 106
+    Z: 828
+  '2':
+    Crate: HeroCrate
+    World: spawn
+    X: 703
+    Y: 106
+    Z: 820
+  '3':
+    Crate: LegendaryCrate
+    World: spawn
+    X: 703
+    Y: 106
+    Z: 824

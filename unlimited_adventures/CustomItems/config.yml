@@ -1,0 +1,6 @@
+# Please DO NOT change version number!
+version: 1
+
+# Set to true if items should require unlocking before they can be forged.
+require_unlocking:
+- false

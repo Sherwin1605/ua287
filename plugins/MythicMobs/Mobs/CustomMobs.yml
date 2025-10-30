@@ -1,0 +1,11 @@
+GrizzlyBear:
+  DisplayName: '&7'
+  Type: POLAR_BEAR
+  Health: 40
+  Damage: 5
+  Drops:
+  - salmon 1to2 0.5
+  - exp 1to4
+  Options:
+    PreventOtherDrops: true
+    AlwaysShowName: false

@@ -1,0 +1,743 @@
+on load:
+	ReputationReload()
+
+
+
+function ReputationReload():
+	load yaml "unlimited_adventures/Guilds/config.yml" as "config"
+	load yaml "unlimited_adventures/Guilds/rewards.yml" as "rewards"
+	load yaml "unlimited_adventures/Guilds/quests.yml" as "quests"
+	load yaml "unlimited_adventures/Guilds/menu.yml" as "menu"
+#	load yaml "unlimited_adventures/Guilds/messages.yml" as "messages"
+	if yaml value "version" from "config" is not set:
+		wait 1 tick
+		ReputationCreateConfigFile()
+		wait 1 ticks
+	if yaml value "version" from "rewards" is not set:
+		wait 1 tick
+		ReputationCreateRewardsFile()
+		wait 2 ticks
+	if yaml value "version" from "quests" is not set:
+		wait 1 tick
+		ReputationCreateQuestsFile()
+		wait 3 ticks
+	if yaml value "version" from "menu" is not set:
+		wait 2 tick
+		ReputationCreateMenuFile()
+		wait 3 ticks
+#	if yaml value "version" from "messages" is not set:
+#		wait 1 tick
+#		ReputationCreateMessagesFile()
+
+	save yaml "config"
+	save yaml "rewards"
+	save yaml "quests"
+	save yaml "menu"
+#	save yaml "messages"
+
+	wait 1 tick
+	clear {reputation::config::*}
+
+
+	load yaml "unlimited_adventures/Guilds/config.yml" as "config"
+	load yaml "unlimited_adventures/Guilds/rewards.yml" as "rewards"
+	load yaml "unlimited_adventures/Guilds/quests.yml" as "quests"
+	load yaml "unlimited_adventures/Guilds/menu.yml" as "menu"
+	load yaml "unlimited_adventures/Guilds/messages.yml" as "messages"
+	
+	if yaml value "version" from "messages" is not set:
+		wait 1 tick
+		ReputationCreateMessagesFile()
+
+	#	Leveling XP requirements
+	if yaml value "leveling.first_level_xp_requirement" from "config" is set:
+		set {reputation::config::first_level_xp_requirement} to yaml value "leveling.first_level_xp_requirement" from "config"
+	if yaml value "leveling.next_level_required_xp_multiplier" from "config" is set:
+		set {reputation::config::next_level_required_xp_multiplier} to yaml value "leveling.next_level_required_xp_multiplier" from "config"
+
+
+
+	#	Quest Amounts
+
+	set {_guilds::*} to "slayers" and "miners" and "ranchers"
+	loop {_guilds::*}:
+		set {_guild} to loop-value
+		set {_difficulty::*} to "easy" and "medium" and "hard"
+		loop {_difficulty::*}:
+			set {_difficulty} to loop-value-2
+			if yaml value "quests.%{_guild}%.%{_difficulty}%" from "config" is set:
+				set {reputation::config::quests::%{_guild}%::%{_difficulty}%::amount} to yaml value "quests.%{_guild}%.%{_difficulty}%" from "config"
+
+
+
+	#	Quest XP Rewards
+	loop yaml node keys "xp_rewards" from "config":
+		set {_source} to loop-value
+		if yaml value "xp_rewards.%{_source}%" from "config" is set:
+			set {reputation::config::xp_rewards::%{_source}%} to yaml value "xp_rewards.%{_source}%" from "config"
+
+	#	Quest Gold Rewards
+	loop yaml node keys "gold_rewards" from "config":
+		set {_source} to loop-value
+		if yaml value "gold_rewards.%{_source}%" from "config" is set:
+			set {reputation::config::gold_rewards::%{_source}%} to yaml value "gold_rewards.%{_source}%" from "config"
+
+
+
+
+	#	Reputation Level Rewards
+	set {_guilds::*} to "slayers" and "miners" and "ranchers"
+	loop {_guilds::*}:
+		set {_guild} to loop-value
+		clear {reputation::rewards::%{_guild}%::*}
+
+		loop 50 times:
+			set {_level_nr} to loop-number-2
+			set {_reward_nr} to 0
+			loop 10 times:
+				add 1 to {_reward_nr}
+				if yaml value "%{_guild}%.%{_level_nr}%.%{_reward_nr}%" from "rewards" is set:
+					set {_var} to yaml value "%{_guild}%.%{_level_nr}%.%{_reward_nr}%" from "rewards"
+					if {_var} contains "gold ":
+						if {_var} doesn't contain "golden" or "ingot" or "raw" or "ore" or "block" or "sword" or "axe" or "pickaxe" or "shovel" or "hoe" or "nugget":
+							set {reputation::rewards::%{_guild}%::%{_level_nr}%::%{_reward_nr}%} to {_var}
+					if {_var} contains "gems ":
+						set {reputation::rewards::%{_guild}%::%{_level_nr}%::%{_reward_nr}%} to {_var}
+					if {_var} contains "command ":
+						set {reputation::rewards::%{_guild}%::%{_level_nr}%::%{_reward_nr}%} to {_var}
+					if {reputation::rewards::%{_guild}%::%{_level_nr}%::%{_reward_nr}%} is not set:
+						set {reputation::rewards::%{_guild}%::%{_level_nr}%::%{_reward_nr}%} to {_var} parsed as item
+
+	#	Quest Info
+
+	set {_guilds::*} to "slayers" and "miners" and "ranchers"
+	loop {_guilds::*}:
+		set {_guild} to loop-value
+
+		set {_difficulty::*} to "easy" and "medium" and "hard"
+		loop {_difficulty::*}:
+			set {_difficulty} to loop-value-2
+
+			loop 25 times:
+				set {_quest_nr} to loop-number-3
+				if yaml value "%{_guild}%.%{_difficulty}%.%{_quest_nr}%" from "quests" is set:
+					set {reputation::config::quest::%{_guild}%::%{_difficulty}%::%{_quest_nr}%::description} to yaml value "%{_guild}%.%{_difficulty}%.%{_quest_nr}%" from "quests"
+
+	#	Reputation Level Rewards Descriptions
+		set {_level_nr} to 0
+		loop 9 times:
+			add 1 to {_level_nr}
+			set {_reward_nr} to 0
+			loop 5 times:
+				add 1 to {_reward_nr}
+				if yaml value "%{_guild}%.%{_level_nr}%.%{_reward_nr}%" from "menu" is set:
+					set {reputation::rewards::%{_guild}%::%{_level_nr}%::%{_reward_nr}%::description} to yaml value "%{_guild}%.%{_level_nr}%.%{_reward_nr}%" from "menu"
+
+	clear {reputation::messages::*}
+	loop yaml nodes from "messages":
+		set {reputation::messages::%loop-value%} to yaml value loop-value from "messages"
+
+
+
+
+	save yaml "config"
+	save yaml "rewards"
+	save yaml "quests"
+	save yaml "menu"
+	save yaml "messages"
+
+
+function ReputationCreateConfigFile():
+	load yaml "unlimited_adventures/Guilds/config.yml" as "config"
+	
+	set yaml value "version" from "config" to 1
+	set the comments of yaml node "version" from "config" to "Please DO NOT change version number!"
+
+	set yaml value "leveling.first_level_xp_requirement" from "config" to 100
+	set yaml value "leveling.next_level_required_xp_multiplier" from "config" to 1.03
+
+	set yaml value "quests.slayers.easy" from "config" to 11
+	set yaml value "quests.slayers.medium" from "config" to 11
+	set yaml value "quests.slayers.hard" from "config" to 7
+	set yaml value "quests.miners.easy" from "config" to 10
+	set yaml value "quests.miners.medium" from "config" to 7
+	set yaml value "quests.miners.hard" from "config" to 4
+	set yaml value "quests.ranchers.easy" from "config" to 8
+	set yaml value "quests.ranchers.medium" from "config" to 12
+	set yaml value "quests.ranchers.hard" from "config" to 6
+
+	set yaml value "xp_rewards.easy_quest" from "config" to 50
+	set yaml value "xp_rewards.medium_quest" from "config" to 100
+	set yaml value "xp_rewards.hard_quest" from "config" to 200
+
+	set yaml value "gold_rewards.easy_quest" from "config" to 250
+	set yaml value "gold_rewards.medium_quest" from "config" to 500
+	set yaml value "gold_rewards.hard_quest" from "config" to 1000
+
+	set the comments of yaml node "leveling" from "config" to "" and "Here you can configure different Reputation settings. Remember to follow the formatting." and "In case of any issues, feel free to contact us on the Ender Nerds Discord server." and ""
+	set the comments of yaml node "xp_rewards" from "config" to "" and "This section is responsible for XP rewards from quests." and ""
+	set the comments of yaml node "gold_rewards" from "config" to "" and "This section is responsible for Gold rewards from quests." and ""
+	
+	save yaml "config"
+
+function ReputationCreateRewardsFile():
+	load yaml "unlimited_adventures/Guilds/rewards.yml" as "rewards"
+
+	set yaml value "version" from "rewards" to 1
+	set the comments of yaml node "version" from "rewards" to "Please DO NOT change version number!"
+
+	set yaml value "slayers.1.1" from "rewards" to "diamond sword"
+	set yaml value "slayers.2.1" from "rewards" to "diamond boots"
+	set yaml value "slayers.3.1" from "rewards" to "diamond helmet"
+	set yaml value "slayers.4.1" from "rewards" to "diamond leggings"
+	set yaml value "slayers.5.1" from "rewards" to "diamond chestplate"
+	set yaml value "slayers.6.1" from "rewards" to "netherite ingot"
+	set yaml value "slayers.7.1" from "rewards" to "4 of enchanted golden apple"
+	set yaml value "slayers.8.1" from "rewards" to "diamond chestplate of protection 4"
+	set yaml value "slayers.9.1" from "rewards" to "diamond sword of sharpness 6"
+	set yaml value "miners.1.1" from "rewards" to "diamond pickaxe"
+	set yaml value "miners.2.1" from "rewards" to "4 of diamond"
+	set yaml value "miners.3.1" from "rewards" to "64 of tnt"
+	set yaml value "miners.4.1" from "rewards" to "diamond pickaxe of efficiency 5"
+	set yaml value "miners.5.1" from "rewards" to "2 of netherite ingot"
+	set yaml value "miners.6.1" from "rewards" to "8 of diamond"
+	set yaml value "miners.7.1" from "rewards" to "diamond helmet of blast protection 4"
+	set yaml value "miners.8.1" from "rewards" to "diamond boots of swift sneak 3"
+	set yaml value "miners.9.1" from "rewards" to "diamond pickaxe of efficiency 6"
+	set yaml value "ranchers.1.1" from "rewards" to "diamond axe"
+	set yaml value "ranchers.2.1" from "rewards" to "diamond hoe"
+	set yaml value "ranchers.3.1" from "rewards" to "fishing rod of lure 3"
+	set yaml value "ranchers.4.1" from "rewards" to "32 of golden carrot"
+	set yaml value "ranchers.5.1" from "rewards" to "8 of golden apple"
+	set yaml value "ranchers.6.1" from "rewards" to "diamond horse armor"
+	set yaml value "ranchers.7.1" from "rewards" to "diamond boots of protection 4 and feather falling 4"
+	set yaml value "ranchers.8.1" from "rewards" to "totem of undying"
+	set yaml value "ranchers.9.1" from "rewards" to "elytra"
+	set the comments of yaml node "slayers" from "rewards" to "" and "Feel free to set up your own rewards for the Reputation system. Remember to follow the formatting." and "Use 'command' word in order to use a command on reward claim. You can get a player's name by typing PLAYER_NAME. Example here:" and "command eco give PLAYER_NAME 100" and "To give player gold, use 'gold' word followed by a number." and "To give player gems, use 'gems' word followed by a number." and "To give items, an example would be: '10 of diamond'" and "In case of any issues, feel free to contact us on the Ender Nerds Discord server." and ""
+	save yaml "rewards"
+
+
+
+
+function ReputationCreateQuestsFile():
+	load yaml "unlimited_adventures/Guilds/quests.yml" as "quests"
+
+	set yaml value "version" from "quests" to 1
+	set the comments of yaml node "version" from "quests" to "Please DO NOT change version number!"
+
+
+	set yaml value "slayers.easy.1" from "quests" to "Kill 10 Zombies"
+	set yaml value "slayers.easy.2" from "quests" to "Kill 10 Skeletons"
+	set yaml value "slayers.easy.3" from "quests" to "Kill 8 Spiders"
+	set yaml value "slayers.easy.4" from "quests" to "Kill 6 Creepers"
+	set yaml value "slayers.easy.5" from "quests" to "Kill a Player"
+	set yaml value "slayers.easy.6" from "quests" to "Kill an Enderman"
+	set yaml value "slayers.easy.7" from "quests" to "Kill 2 Husks"
+	set yaml value "slayers.easy.8" from "quests" to "Kill 2 Strays"
+	set yaml value "slayers.easy.9" from "quests" to "Kill a Phantom"
+	set yaml value "slayers.easy.10" from "quests" to "Kill 2 Piglins"
+	set yaml value "slayers.easy.11" from "quests" to "Kill 2 Drowneds"
+
+	set yaml value "slayers.medium.1" from "quests" to "Kill 3 Endermen"
+	set yaml value "slayers.medium.2" from "quests" to "Kill 6 Piglins"
+	set yaml value "slayers.medium.3" from "quests" to "Kill 4 Wither Skeletons"
+	set yaml value "slayers.medium.4" from "quests" to "Kill 6 Blazes"
+	set yaml value "slayers.medium.5" from "quests" to "Kill a Witch"
+	set yaml value "slayers.medium.6" from "quests" to "Kill 5 Drowneds"
+	set yaml value "slayers.medium.7" from "quests" to "Kill 8 Husks"
+	set yaml value "slayers.medium.8" from "quests" to "Kill 6 Strays"
+	set yaml value "slayers.medium.9" from "quests" to "Kill 5 Phantoms"
+	set yaml value "slayers.medium.10" from "quests" to "Kill 4 Pillagers"
+	set yaml value "slayers.medium.11" from "quests" to "Kill 2 Silverfishes"
+
+	set yaml value "slayers.hard.1" from "quests" to "Kill 2 Slimes"
+	set yaml value "slayers.hard.2" from "quests" to "Kill 3 Ghasts"
+	set yaml value "slayers.hard.3" from "quests" to "Kill 2 Shulkers"
+	set yaml value "slayers.hard.4" from "quests" to "Kill a Ravager"
+	set yaml value "slayers.hard.5" from "quests" to "Kill a Guardian"
+	set yaml value "slayers.hard.6" from "quests" to "Kill 3 Piglin Brutes"
+	set yaml value "slayers.hard.7" from "quests" to "Kill 5 Players"
+	
+	wait 2 tick
+
+	set yaml value "miners.easy.1" from "quests" to "Mine 15 Copper Ores"
+	set yaml value "miners.easy.2" from "quests" to "Mine 15 Iron Ores"
+	set yaml value "miners.easy.3" from "quests" to "Mine 10 Gold Ores"
+	set yaml value "miners.easy.4" from "quests" to "Mine 25 Coal Ores"
+	set yaml value "miners.easy.5" from "quests" to "Mine 30 Redstone Ores"
+	set yaml value "miners.easy.6" from "quests" to "Smelt 25 Iron Ingots"
+	set yaml value "miners.easy.7" from "quests" to "Smelt 20 Copper Ingots"
+	set yaml value "miners.easy.8" from "quests" to "Smelt 15 Gold Ingots"
+	set yaml value "miners.easy.9" from "quests" to "Mine 3 Lapis Ores"
+	set yaml value "miners.easy.10" from "quests" to "Mine 250 Stone"
+
+	set yaml value "miners.medium.1" from "quests" to "Mine 4 Emerald Ores"
+	set yaml value "miners.medium.2" from "quests" to "Mine 12 Lapis Ores"
+	set yaml value "miners.medium.3" from "quests" to "Mine 15 Glowstone"
+	set yaml value "miners.medium.4" from "quests" to "Smelt 40 Iron Ingots"
+	set yaml value "miners.medium.5" from "quests" to "Smelt 40 Gold Ingots"
+	set yaml value "miners.medium.6" from "quests" to "Craft a Diamond Pickaxe"
+	set yaml value "miners.medium.7" from "quests" to "Mine 30 Gold Ores"
+
+	set yaml value "miners.hard.1" from "quests" to "Mine 5 Diamond Ores"
+	set yaml value "miners.hard.2" from "quests" to "Mine an Ancient Debris"
+	set yaml value "miners.hard.3" from "quests" to "Mine an Amethyst Cluster"
+	set yaml value "miners.hard.4" from "quests" to "Mine 8 Obsidian"
+
+	wait 2 tick
+
+	set yaml value "ranchers.easy.1" from "quests" to "Harvest 12 Wheat Crops"
+	set yaml value "ranchers.easy.2" from "quests" to "Harvest 10 Carrot Crops"
+	set yaml value "ranchers.easy.3" from "quests" to "Harvest 10 Potato Crops"
+	set yaml value "ranchers.easy.4" from "quests" to "Craft 4 Breads"
+	set yaml value "ranchers.easy.5" from "quests" to "Craft a Golden Carrot"
+	set yaml value "ranchers.easy.6" from "quests" to "Cook 5 Potatoes"
+	set yaml value "ranchers.easy.7" from "quests" to "Collect 8 Cactuses"
+	set yaml value "ranchers.easy.8" from "quests" to "Collect 5 Sugar Canes"
+
+	set yaml value "ranchers.medium.1" from "quests" to "Harvest 5 Melons"
+	set yaml value "ranchers.medium.2" from "quests" to "Harvest 5 Pumpkins"
+	set yaml value "ranchers.medium.3" from "quests" to "Harvest 10 Beetroot Crops"
+	set yaml value "ranchers.medium.4" from "quests" to "Harvest 10 Kelp Crops"
+	set yaml value "ranchers.medium.5" from "quests" to "Breed Pigs"
+	set yaml value "ranchers.medium.6" from "quests" to "Breed Cows"
+	set yaml value "ranchers.medium.7" from "quests" to "Breed Chickens"
+	set yaml value "ranchers.medium.8" from "quests" to "Breed Sheeps"
+	set yaml value "ranchers.medium.9" from "quests" to "Craft 5 Hay Bales"
+	set yaml value "ranchers.medium.10" from "quests" to "Fish 5 Cods"
+	set yaml value "ranchers.medium.11" from "quests" to "Fish 4 Salmons"
+	set yaml value "ranchers.medium.12" from "quests" to "Shear 3 Sheeps"
+
+	set yaml value "ranchers.hard.1" from "quests" to "Tame a Wolf"
+	set yaml value "ranchers.hard.2" from "quests" to "Fish 3 Pufferfishes"
+	set yaml value "ranchers.hard.3" from "quests" to "Collect a Bee Nest"
+	set yaml value "ranchers.hard.4" from "quests" to "Harvest 64 Carrots"
+	set yaml value "ranchers.hard.5" from "quests" to "Harvest 64 Beetroots"
+	set yaml value "ranchers.hard.6" from "quests" to "Harvest 64 Potatoes"
+
+
+
+	set the comments of yaml node "slayers" from "quests" to "" and "Feel free to set up your own Quest Info for the Reputation system. Remember to follow the formatting." and "In case of any issues, feel free to contact us on the Ender Nerds Discord server." and ""
+	save yaml "quests"
+
+
+
+function ReputationCreateMenuFile():
+	load yaml "unlimited_adventures/Guilds/menu.yml" as "menu"
+
+	set yaml value "version" from "menu" to 1
+	set the comments of yaml node "version" from "menu" to "Please DO NOT change version number!"
+
+	set yaml value "slayers.1.1" from "menu" to "Diamond Sword"
+	set yaml value "slayers.2.1" from "menu" to "Diamond Boots"
+	set yaml value "slayers.3.1" from "menu" to "Diamond Helmet"
+	set yaml value "slayers.4.1" from "menu" to "Diamond Leggings"
+	set yaml value "slayers.5.1" from "menu" to "Diamond Chestplate"
+	set yaml value "slayers.6.1" from "menu" to "Netherite Ingot"
+	set yaml value "slayers.7.1" from "menu" to "4 Enchanted Golden Apples"
+	set yaml value "slayers.8.1" from "menu" to "Diamond Chestplate of Protection IV"
+	set yaml value "slayers.9.1" from "menu" to "Diamond Sword of Sharpness VI"
+	set yaml value "miners.1.1" from "menu" to "Diamond Pickaxe"
+	set yaml value "miners.2.1" from "menu" to "4 Diamonds"
+	set yaml value "miners.3.1" from "menu" to "64 TNT"
+	set yaml value "miners.4.1" from "menu" to "Diamond Pickaxe of Efficiency V"
+	set yaml value "miners.5.1" from "menu" to "2 Netherite Ingots"
+	set yaml value "miners.6.1" from "menu" to "8 Diamonds"
+	set yaml value "miners.7.1" from "menu" to "Diamond Helmet of Blast Protection IV"
+	set yaml value "miners.8.1" from "menu" to "Diamond Boots of Swift Sneak III"
+	set yaml value "miners.9.1" from "menu" to "Diamond Pickaxe of Efficiency VI"
+	set yaml value "ranchers.1.1" from "menu" to "Diamond Axe"
+	set yaml value "ranchers.2.1" from "menu" to "Diamond Hoe"
+	set yaml value "ranchers.3.1" from "menu" to "Fishing Rod of Lure III"
+	set yaml value "ranchers.4.1" from "menu" to "32 Golden Carrots"
+	set yaml value "ranchers.5.1" from "menu" to "8 Golden Apples"
+	set yaml value "ranchers.6.1" from "menu" to "Diamond Horse Armor"
+	set yaml value "ranchers.7.1" from "menu" to "Diamond Boots of Protection IV and Feather Falling IV"
+	set yaml value "ranchers.8.1" from "menu" to "Totem of Undying"
+	set yaml value "ranchers.9.1" from "menu" to "Elytra"
+	set the comments of yaml node "slayers" from "menu" to "" and "Here you can configure the menu names of rewards in Reputation system. Remember to follow the formatting." and "In case of any issues, feel free to contact us on the Ender Nerds Discord server." and ""
+	save yaml "menu"
+
+function ReputationCreateMessagesFile():
+	load yaml "unlimited_adventures/Guilds/messages.yml" as "messages"
+
+	set yaml value "version" from "messages" to 1
+	set the comments of yaml node "version" from "messages" to "Please DO NOT change version number!"
+
+	set yaml value "slayers" from "messages" to "slayers"
+	set yaml value "miners" from "messages" to "miners"
+	set yaml value "ranchers" from "messages" to "ranchers"
+	
+	set yaml value "reputation_level_now" from "messages" to "<##ffe608>&lGUILD_NAME &fYour reputation level is now: &a&lGUILD_LEVEL!"
+	set yaml value "adventure_pass_level_up" from "messages" to "&f▶ <##ffe608>Adventure Pass <##2bad52>&lLEVEL UP!"
+	set yaml value "slayers_reputation_reward_unlocked" from "messages" to "&f▶ &c&lSlayers <##ffe608>Reputation Reward <##2bad52>&lUNLOCKED!"
+	set yaml value "miners_reputation_reward_unlocked" from "messages" to "&f▶ &b&lMiners <##ffe608>Reputation Reward <##2bad52>&lUNLOCKED!"
+	set yaml value "ranchers_reputation_reward_unlocked" from "messages" to "&f▶ &6&lRanchers <##ffe608>Reputation Reward <##2bad52>&lUNLOCKED!"
+	set yaml value "no_space" from "messages" to "<##ffe608>&lGUILD_NAME ▶ &cYou don't have space for this reward!"
+	set yaml value "reward_claim" from "messages" to "<##ffe608>&lGUILD_NAME ▶ &aClaimed reward for achieving <##31ed96>Reputation Level GUILD_LEVEL"
+	set yaml value "quest_finished" from "messages" to "&6&lGUILD_NAME ▶ &fYou have finished the &aDIFFICULTY_LEVEL Quest!"
+	set yaml value "rewards" from "messages" to "&fRewards:"
+	set yaml value "xp_reward" from "messages" to "&f• &9XP_REWARD XP"
+	set yaml value "gold_reward" from "messages" to "&f• &eGOLD_REWARD Gold &f"
+	set yaml value "quest_finished_subtitle" from "messages" to "&aDIFFICULTY_LEVEL Quest &fFinished!"
+
+	save yaml "messages"
+
+
+function difficultyText(text: string) :: string:
+	if {_text} is "slayers":
+		set {_final} to {reputation::messages::slayers}
+	if {_text} is "Slayers":
+		set {_final} to capitalize({reputation::messages::slayers})
+	if {_text} is "miners":
+		set {_final} to {reputation::messages::miners}
+	if {_text} is "Miners":
+		set {_final} to capitalize({reputation::messages::miners})
+	if {_text} is "ranchers":
+		set {_final} to {reputation::messages::ranchers}
+	if {_text} is "Ranchers":
+		set {_final} to capitalize({reputation::messages::ranchers})
+	return {_final}
+
+
+
+
+
+
+on join:
+	if {reputation::slayers::level::%uuid of player%} is not set:
+		ReputationResetPlayer(player)
+		stop
+	ReputationCheckQuests(player)
+
+
+
+function ReputationCheckQuests(player: player):
+	if {reputation::slayers::quest::easy::date::%uuid of {_player}%} is not set:
+		ReputationResetQuests({_player})
+	if difference between {reputation::slayers::quest::easy::date::%uuid of {_player}%} and now > 24 hours:
+		ReputationResetQuests({_player})
+
+function ReputationResetPlayer(player: player):
+	set {_guilds::*} to "slayers" and "miners" and "ranchers"
+	loop {_guilds::*}:
+		set {reputation::%loop-value%::level::%uuid of {_player}%} to 0
+		set {reputation::%loop-value%::xp::%uuid of {_player}%} to 0
+		set {reputation::%loop-value%::xp_need::%uuid of {_player}%} to {reputation::config::first_level_xp_requirement}
+		delete {reputation::%loop-value%::rewards::%uuid of {_player}%::*}
+		delete {reputation::%loop-value%::rewards_claimed::%uuid of {_player}%::*}
+	ReputationResetQuests({_player})
+
+
+
+
+
+function ReputationResetQuests(player: player):
+	set {_guilds::*} to "slayers" and "miners" and "ranchers"
+	loop {_guilds::*}:
+		set {_guild} to loop-value
+		set {_difficulty::*} to "easy" and "medium" and "hard"
+		loop {_difficulty::*}:
+			set {_difficulty} to loop-value-2
+			set {reputation::%{_guild}%::quest::%{_difficulty}%::date::%uuid of {_player}%} to now
+
+
+			#	Removes old objective if needed
+			delete {_quest_nr}
+			set {_quest_nr} to {reputation::%{_guild}%::quest::%{_difficulty}%::number::%uuid of {_player}%}
+			if {_quest_nr} is set:
+				if {_quest_nr} is not 999:
+					execute console command "/q objective %{_player}% del reputation.%{_guild}%_%{_difficulty}%_%{_quest_nr}%"
+			wait 1 tick
+
+			#	Gives the new objective
+			set {_nr} to random integer between 1 and {reputation::config::quests::%{_guild}%::%{_difficulty}%::amount}
+			execute console command "/q objective %{_player}% add reputation.%{_guild}%_%{_difficulty}%_%{_nr}%"
+			set {reputation::%{_guild}%::quest::%{_difficulty}%::number::%uuid of {_player}%} to {_nr}
+
+
+command /reputation [<text>] [<player>] [<text>]:
+	permission: admin
+	trigger:
+		set {_player} to player-arg
+		if arg 1 is "stats" or "info":
+			send "&f Slayers Level: &a%{reputation::slayers::level::%uuid of {_player}%}%  &fXP: &a%{reputation::slayers::xp::%uuid of {_player}%}% &f/ &a%{reputation::slayers::xp_need::%uuid of {_player}%}%" to sender
+			send "&f Miners Level: &a%{reputation::miners::level::%uuid of {_player}%}%  &fXP: &a%{reputation::miners::xp::%uuid of {_player}%}% &f/ &a%{reputation::miners::xp_need::%uuid of {_player}%}%" to sender
+			send "&f Ranchers Level: &a%{reputation::ranchers::level::%uuid of {_player}%}%  &fXP: &a%{reputation::ranchers::xp::%uuid of {_player}%}% &f/ &a%{reputation::ranchers::xp_need::%uuid of {_player}%}%" to sender
+		if arg 1 is "sound":
+			if arg 3 is "easyquest":
+				ReputationSound({_player}, "quest_finished")
+			if arg 3 is "mediumquest":
+				ReputationSound({_player}, "quest_finished")
+			if arg 3 is "hardquest":
+				ReputationSound({_player}, "quest_finished")
+			if arg 3 is "levelup":
+				ReputationSound({_player}, "levelup")
+
+		if arg 1 contains "givexp":
+			if arg 1 is "givexp":
+				set {_amount} to 100
+			if arg 1 is "give10xp":
+				set {_amount} to 10
+			if arg 1 is "give15xp":
+				set {_amount} to 15
+			if arg 1 is "give20xp":
+				set {_amount} to 20
+			if arg 1 is "give25xp":
+				set {_amount} to 25
+			if arg 1 is "give30xp":
+				set {_amount} to 30
+			if arg 1 is "give40xp":
+				set {_amount} to 40
+			if arg 1 is "give50xp":
+				set {_amount} to 50
+			if arg 1 is "give100xp":
+				set {_amount} to 100
+			if arg 1 is "give150xp":
+				set {_amount} to 150
+			if arg 1 is "give200xp":
+				set {_amount} to 200
+
+			if arg 3 is "slayers":
+				ReputationGiveXP({_player}, "slayers", {_amount})
+			if arg 3 is "miners":
+				ReputationGiveXP({_player}, "miners", {_amount})
+			if arg 3 is "ranchers":
+				ReputationGiveXP({_player}, "ranchers", {_amount})
+
+		if arg 1 is "resetquests":
+			if arg 2 is set:
+				ReputationResetQuests({_player})
+				send "&f Resetting the quests for &a%{_player}%" to sender
+		if arg 1 is "reset":
+			ReputationResetPlayer({_player})
+			send "&f Resetting the reputation data for &a%{_player}%" to sender
+
+on tab complete of "/reputation":
+	set tab completions for position 1 to "stats" and "info" and "givexp" and "sound" and "resetquests" and "reset"
+	set tab completions for position 2 to all players
+	if tab arg-1 = "sound" or "givexp" or "give10xp" or "give15xp" or "give20xp" or "give25xp" or "give30xp" or "give40xp" or "give50xp":
+		set tab completions for position 3 to "slayers" and "miners" and "ranchers"
+
+command /reputationquestfinished [<player>] [<string>] [<string>]:
+	permission: admin
+	trigger:
+		set {_player} to player-arg
+		set {_guild} to arg-2
+		set {_difficulty} to arg-3
+		ReputationQuestFinished({_player}, {_guild}, {_difficulty})
+
+
+function ReputationQuestFinished(player: player, guild: string, difficulty: string):
+	
+	if {_difficulty} is "easy":
+		set {_experience} to 50
+		set {_gold} to 250
+	if {_difficulty} is "medium":
+		set {_experience} to 100
+		set {_gold} to 500
+	if {_difficulty} is "hard":
+		set {_experience} to 200
+		set {_gold} to 1000
+	ReputationGiveXP({_player}, {_guild}, {_experience})
+	add {_gold} to balance of {_player}
+
+	set {reputation::%{_guild}%::quest::%{_difficulty}%::number::%uuid of {_player}%} to 999
+
+	ReputationQuestFinishedMessage({_player}, {_guild}, {_difficulty})
+
+
+
+
+function ReputationGiveXP(player: player, guild: string, experience: integer):
+	
+
+	add {_experience} to {reputation::%{_guild}%::xp::%uuid of {_player}%}
+	if {reputation::%{_guild}%::xp::%uuid of {_player}%} >= {reputation::%{_guild}%::xp_need::%uuid of {_player}%}:
+		ReputationLevelUp({_player}, {_guild})
+
+
+function ReputationLevelUp(player: player, guild: string):
+	if {reputation::%{_guild}%::level::%uuid of {_player}%} > 45:
+		stop
+	loop 5 times:
+		if {reputation::%{_guild}%::level::%uuid of {_player}%} < 45:
+			if {reputation::%{_guild}%::xp::%uuid of {_player}%} >= {reputation::%{_guild}%::xp_need::%uuid of {_player}%}:
+				add 1 to {reputation::%{_guild}%::level::%uuid of {_player}%}
+				set {reputation::%{_guild}%::xp::%uuid of {_player}%} to {reputation::%{_guild}%::xp::%uuid of {_player}%}-{reputation::%{_guild}%::xp_need::%uuid of {_player}%}
+				set {reputation::%{_guild}%::xp_need::%uuid of {_player}%} to round({reputation::%{_guild}%::xp_need::%uuid of {_player}%}*{reputation::config::next_level_required_xp_multiplier})
+				ReputationLevelUpReward({_player}, {_guild})
+	
+	ReputationSound({_player}, "levelup")
+	ReputationLevelUpMessage({_player}, {_guild})
+	set metadata value "guild_levelup_date" of {_player} to now
+
+
+function ReputationLevelUpReward(player: player, guild: string):
+	BattlePassLevelUp({_player})
+
+	set {_level} to {reputation::%{_guild}%::level::%uuid of {_player}%}
+	if mod({_level}, 5) is 0:
+		set {_reward_nr} to {_level}/5
+		add "_%{_reward_nr}%_" to {reputation::%{_guild}%::rewards::%uuid of {_player}%::*}
+
+function ReputationLevelUpMessage(player: player, guild: string):
+	
+	set {_guild_text} to capitalize(difficultyText({_guild}))
+
+	wait 1 tick
+	send "" to {_player}
+	set {_msg} to {reputation::messages::reputation_level_now}
+	replace "GUILD_NAME" with "%{_guild_text}%" in {_msg}
+	replace "GUILD_LEVEL" with "%{reputation::%{_guild}%::level::%uuid of {_player}%}%" in {_msg}
+	send {_msg} to {_player}
+	send "%{reputation::messages::adventure_pass_level_up}%" to {_player}
+
+	if {reputation::%{_guild}%::level::%uuid of {_player}%} >= 5:
+		if mod({reputation::%{_guild}%::level::%uuid of {_player}%}, 5) = 0:
+			if {_guild} is "slayers":
+				send "%{reputation::messages::slayers_reputation_reward_unlocked}%" to {_player}
+			if {_guild} is "miners":
+				send "%{reputation::messages::miners_reputation_reward_unlocked}%" to {_player}
+			if {_guild} is "ranchers":
+				send "%{reputation::messages::ranchers_reputation_reward_unlocked}%" to {_player}
+	send "" to {_player}
+
+
+
+command /reputationclaimreward [<player>] [<string>] [<integer>]:
+	permission: admin
+	trigger:
+		set {_player} to player-arg
+		set {_guild} to arg-2
+		set {_level} to arg-3
+		ReputationClaimReward({_player}, {_guild}, {_level})
+
+on tab complete of "/reputationclaimreward":
+	set tab completions for position 1 to all players
+	set tab completions for position 2 to "slayers" and "miners" and "ranchers"
+	set tab completions for position 3 to 1
+
+
+
+function ReputationClaimReward(player: player, guild: string, level: integer):
+	
+	set {_guild_text} to capitalize(difficultyText({_guild}))
+
+	#	Make sure if someone has the reward
+	if {reputation::%{_guild}%::rewards::%uuid of {_player}%::*} doesn't contain "_%{_level}%_":
+		stop
+
+	loop {reputation::rewards::%{_guild}%::%{_level}%::*}:
+
+		set {_reward} to loop-value
+#		send "Reward: %{_reward}%  %loop-value%" to {_player}
+
+
+		if {_reward} contains "gold":
+			if {_reward} doesn't contain "golden" or "ingot" or "raw" or "ore" or "block" or "sword" or "axe" or "pickaxe" or "shovel" or "hoe" or "nugget":
+				replace all "gold " with "" in {_reward}
+				set {_amount} to {_reward} parsed as integer
+				add {_amount} to balance of {_player}
+				delete {_reward}
+		if {_reward} contains "gems":
+			replace all "gems " with "" in {_reward}
+			set {_amount} to {_reward} parsed as integer
+			PremiumCurrency({_player}, "add", {_amount})
+			delete {_reward}
+		if {_reward} contains "command":
+			replace all "command " with "" in {_reward}
+			replace all "PLAYER_NAME" with "%{_player}%" in {_reward}
+			set {_command} to {_reward}
+			execute console command "%{_command}%"
+			delete {_reward}
+		if {_reward} is set:
+			replace all "PLAYER_NAME" with "%{_player}%" in {_reward}
+			if {_player} has space for {_reward}:
+				give {_reward} to {_player}
+			else:
+#				send "<##ffe608>&l%{_guild_text}% ▶ &cYou don't have space for this reward!" to {_player}
+				set {_msg} to "%{reputation::messages::no_space}%"
+				replace "GUILD_NAME" with "%{_guild_text}%" in {_msg}
+				send "%{_msg}%" to {_player}
+				play sound "block.note_block.didgeridoo" with volume 0.7 and pitch 1 to {_player}
+				stop
+
+	remove "_%{_level}%_" from {reputation::%{_guild}%::rewards::%uuid of {_player}%::*}
+	add "_%{_level}%_" to {reputation::%{_guild}%::rewards_claimed::%uuid of {_player}%::*}
+	
+	
+	send " " to {_player}
+	set {_msg} to "%{reputation::messages::reward_claim}%"
+	replace "GUILD_NAME" with "%{_guild_text}%" in {_msg}
+	replace "GUILD_LEVEL" with "%{_level}%" in {_msg}
+	send "%{_msg}%" to {_player}
+#	send "<##ffe608>&l%{_guild_text}% ▶ &aClaimed reward for achieving <##31ed96>Reputation Level %{_level}%" to {_player}
+	send " " to {_player}
+	
+	
+	play sound "entity.experience_orb.pickup" with volume 0.7 and pitch 1 to {_player}
+	play sound "item.armor.equip_iron" with volume 1 and pitch 1 to {_player}
+
+
+
+
+
+
+
+
+function ReputationQuestFinishedMessage(player: player, guild: string, difficulty: string):
+	set {_guild_text} to capitalize(difficultyText({_guild}))
+	set {_difficulty_text} to capitalize({_difficulty})
+
+	send " " to {_player}
+#	send "&6&l%{_guild_text}% > &fYou have finished the &a%{_difficulty_text}% Quest!" to {_player}
+	set {_msg} to "%{reputation::messages::quest_finished}%"
+	replace "GUILD_NAME" with "%{_guild_text}%" in {_msg}
+	replace "DIFFICULTY_LEVEL" with "%{_difficulty_text}%" in {_msg}
+	send "%{_msg}%" to {_player}
+	send " " to {_player}
+#	send "&fRewards:" to {_player}
+	send "%{reputation::messages::rewards}%" to {_player}
+
+	set {_msg} to "%{reputation::messages::xp_reward}%"
+	replace all "XP_REWARD" with "%{reputation::config::xp_rewards::%{_difficulty}%_quest}%" in {_msg}
+	send {_msg} to {_player}
+
+	set {_msg} to "%{reputation::messages::gold_reward}%"
+	replace all "GOLD_REWARD" with "%{reputation::config::gold_rewards::%{_difficulty}%_quest}%" in {_msg}
+	send {_msg} to {_player}
+
+	send "" to {_player}
+
+
+
+	set {_subtitle} to "%{reputation::messages::quest_finished_subtitle}%"
+	replace all "DIFFICULTY_LEVEL" with "%{_difficulty_text}%" in {_subtitle}
+	send title "&6&l%{_guild_text}%" with subtitle {_subtitle} to {_player} for 3 seconds
+
+#	send title "&6&l%{_guild_text}%" with subtitle "&a%{_difficulty_text}% Quest &fFinished!" to {_player} for 3 seconds
+
+
+	
+	if difference between metadata value "guild_levelup_date" of {_player} and now < 0.5 second:
+		stop
+	play sound "custom.quest_finished_2" with volume 0.8 and pitch 1 to {_player}
+
+
+
+
+
+
+
+function ReputationSound(player: player, sound: string):
+	if {_sound} is "quest_finished":
+		play sound "custom.quest_finished_2" with volume 0.6 and pitch 1 to {_player}
+	if {_sound} is "levelup":
+		play sound "custom.level_up" with volume 0.6 and pitch 1 to {_player}
+
+
+
+
+
+

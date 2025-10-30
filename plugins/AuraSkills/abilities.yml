@@ -1,20 +1,20 @@
 abilities:
   auraskills/bountiful_harvest:
     enabled: true
-    base_value: 4.0
-    value_per_level: 2.0
+    base_value: 10.0
+    value_per_level: 5.0
     unlock: 2
-    level_up: 1
-    max_level: 50
+    level_up: 5
+    max_level: 0
   auraskills/farmer:
-    enabled: false
+    enabled: true
     base_value: 10.0
     value_per_level: 10.0
     unlock: 3
     level_up: 5
     max_level: 0
   auraskills/scythe_master:
-    enabled: false
+    enabled: true
     base_value: 3.0
     value_per_level: 2.0
     unlock: 4
@@ -24,26 +24,26 @@ abilities:
     enabled: true
     base_value: 1.0
     value_per_level: 2.0
-    unlock: 3
+    unlock: 5
     level_up: 5
     max_level: 0
   auraskills/growth_aura:
     enabled: true
     base_value: 12.0
-    value_per_level: 11.0
+    value_per_level: 12.0
     unlock: '{start}+5'
     level_up: 5
     max_level: 0
     radius: 30
   auraskills/lumberjack:
     enabled: true
-    base_value: 4.0
-    value_per_level: 2.0
+    base_value: 10.0
+    value_per_level: 5.0
     unlock: 2
-    level_up: 1
-    max_level: 50
+    level_up: 5
+    max_level: 0
   auraskills/forager:
-    enabled: false
+    enabled: true
     base_value: 10.0
     value_per_level: 10.0
     unlock: 3
@@ -51,20 +51,20 @@ abilities:
     max_level: 0
   auraskills/axe_master:
     enabled: true
-    base_value: 2.0
-    value_per_level: 1.0
-    unlock: 3
-    level_up: 2
-    max_level: 25
+    base_value: 4.0
+    value_per_level: 3.0
+    unlock: 4
+    level_up: 5
+    max_level: 0
   auraskills/valor:
     enabled: true
-    base_value: 4.0
-    value_per_level: 2.0
-    unlock: 4
-    level_up: 2
-    max_level: 25
+    base_value: 1.0
+    value_per_level: 1.0
+    unlock: 5
+    level_up: 5
+    max_level: 0
   auraskills/shredder:
-    enabled: false
+    enabled: true
     base_value: 3.0
     value_per_level: 3.0
     unlock: 6
@@ -72,13 +72,13 @@ abilities:
     max_level: 0
   auraskills/lucky_miner:
     enabled: true
-    base_value: 4.0
-    value_per_level: 2.0
+    base_value: 3.0
+    value_per_level: 3.0
     unlock: 2
-    level_up: 1
-    max_level: 50
+    level_up: 5
+    max_level: 0
   auraskills/miner:
-    enabled: false
+    enabled: true
     base_value: 10.0
     value_per_level: 10.0
     unlock: 3
@@ -86,34 +86,34 @@ abilities:
     max_level: 0
   auraskills/pick_master:
     enabled: true
-    base_value: 2.0
-    value_per_level: 1.0
-    unlock: 3
-    level_up: 2
-    max_level: 25
+    base_value: 3.0
+    value_per_level: 2.0
+    unlock: 4
+    level_up: 5
+    max_level: 0
   auraskills/stamina:
-    enabled: false
+    enabled: true
     base_value: 1.0
     value_per_level: 1.0
-    unlock: 4
-    level_up: 3
+    unlock: 5
+    level_up: 5
     max_level: 0
   auraskills/hardened_armor:
     enabled: true
-    base_value: 2.0
-    value_per_level: 1.0
-    unlock: 4
-    level_up: 2
+    base_value: 3.0
+    value_per_level: 3.0
+    unlock: 6
+    level_up: 5
     max_level: 0
   auraskills/lucky_catch:
     enabled: true
-    base_value: 4.0
-    value_per_level: 2.0
+    base_value: 10.0
+    value_per_level: 5.0
     unlock: 2
-    level_up: 1
+    level_up: 5
     max_level: 0
   auraskills/fisher:
-    enabled: false
+    enabled: true
     base_value: 10.0
     value_per_level: 10.0
     unlock: 3
@@ -122,13 +122,13 @@ abilities:
   auraskills/treasure_hunter:
     enabled: true
     base_value: 1.0
-    value_per_level: 0.5
-    unlock: 3
-    level_up: 2
+    value_per_level: 1.0
+    unlock: 4
+    level_up: 5
     max_level: 0
     scale_base_value_chance: false
   auraskills/grappler:
-    enabled: false
+    enabled: true
     base_value: 50.0
     value_per_level: 100.0
     unlock: 5
@@ -136,10 +136,10 @@ abilities:
     max_level: 0
   auraskills/epic_catch:
     enabled: true
-    base_value: 0.1
-    value_per_level: 0.3
-    unlock: 4
-    level_up: 2
+    base_value: 0.4
+    value_per_level: 0.4
+    unlock: 6
+    level_up: 5
     max_level: 0
     scale_base_value_chance: false
   auraskills/bigger_scoop:
@@ -188,7 +188,7 @@ abilities:
     max_level: 0
     delay_sec: 3
   auraskills/archer:
-    enabled: false
+    enabled: true
     base_value: 10.0
     value_per_level: 10.0
     unlock: 3
@@ -196,20 +196,20 @@ abilities:
     max_level: 0
   auraskills/bow_master:
     enabled: true
-    base_value: 2.0
-    value_per_level: 1.0
-    unlock: 2
-    level_up: 1
+    base_value: 3.0
+    value_per_level: 2.0
+    unlock: 4
+    level_up: 5
     max_level: 0
   auraskills/piercing:
     enabled: true
-    base_value: 2.0
-    value_per_level: 1.0
-    unlock: 3
-    level_up: 2
+    base_value: 3.0
+    value_per_level: 3.0
+    unlock: 5
+    level_up: 5
     max_level: 0
   auraskills/stun:
-    enabled: false
+    enabled: true
     base_value: 2.0
     value_per_level: 1.0
     unlock: 6
@@ -217,13 +217,13 @@ abilities:
     max_level: 0
   auraskills/shielding:
     enabled: true
-    base_value: 1.0
-    value_per_level: 0.75
-    unlock: 3
-    level_up: 3
+    base_value: 2.0
+    value_per_level: 3.0
+    unlock: 2
+    level_up: 5
     max_level: 0
   auraskills/defender:
-    enabled: false
+    enabled: true
     base_value: 10.0
     value_per_level: 10.0
     unlock: 3
@@ -231,24 +231,24 @@ abilities:
     max_level: 0
   auraskills/mob_master:
     enabled: true
-    base_value: 1.0
-    value_per_level: 0.5
-    unlock: 2
-    level_up: 1
+    base_value: 2.0
+    value_per_level: 3.0
+    unlock: 4
+    level_up: 5
     max_level: 0
   auraskills/immunity:
     enabled: true
     base_value: 0.5
-    value_per_level: 0.3
-    unlock: 4
-    level_up: 3
+    value_per_level: 0.4
+    unlock: 5
+    level_up: 5
     max_level: 0
   auraskills/no_debuff:
-    enabled: false
-    base_value: 2.0
-    value_per_level: 2.0
-    unlock: 5
-    level_up: 3
+    enabled: true
+    base_value: 5.0
+    value_per_level: 5.0
+    unlock: 6
+    level_up: 5
     max_level: 0
   auraskills/parry:
     enabled: true
@@ -260,7 +260,7 @@ abilities:
     time_ms: 250
     enable_sound: true
   auraskills/fighter:
-    enabled: false
+    enabled: true
     base_value: 10.0
     value_per_level: 10.0
     unlock: 3
@@ -268,22 +268,22 @@ abilities:
     max_level: 0
   auraskills/sword_master:
     enabled: true
-    base_value: 2.0
-    value_per_level: 1.0
-    unlock: 2
-    level_up: 1
+    base_value: 3.0
+    value_per_level: 2.0
+    unlock: 4
+    level_up: 5
     max_level: 0
   auraskills/first_strike:
     enabled: true
-    base_value: 12.0
-    value_per_level: 3.0
-    unlock: 3
-    level_up: 2
+    base_value: 20.0
+    value_per_level: 8.0
+    unlock: 5
+    level_up: 5
     max_level: 0
-    enable_message: false
+    enable_message: true
     cooldown_ticks: 6000
   auraskills/bleed:
-    enabled: false
+    enabled: true
     base_value: 3.0
     value_per_level: 3.0
     secondary_base_value: 0.5
@@ -374,14 +374,14 @@ abilities:
     max_level: 0
   auraskills/alchemist:
     enabled: true
-    base_value: 2.0
-    value_per_level: 1.0
+    base_value: 3.0
+    value_per_level: 4.0
     unlock: 2
-    level_up: 1
+    level_up: 5
     max_level: 0
     add_item_lore: true
   auraskills/brewer:
-    enabled: false
+    enabled: true
     base_value: 10.0
     value_per_level: 10.0
     unlock: 3
@@ -390,35 +390,35 @@ abilities:
   auraskills/splasher:
     enabled: true
     base_value: 0.5
-    value_per_level: 0.3
-    unlock: 3
-    level_up: 3
+    value_per_level: 0.25
+    unlock: 4
+    level_up: 5
     max_level: 0
   auraskills/lingering:
     enabled: true
     base_value: 5.0
-    value_per_level: 3.0
+    value_per_level: 4.0
     secondary_base_value: 3.0
     secondary_value_per_level: 2.0
-    unlock: 4
-    level_up: 3
+    unlock: 5
+    level_up: 5
     max_level: 0
   auraskills/wise_effect:
     enabled: true
     base_value: 1.0
     value_per_level: 1.0
-    unlock: 5
-    level_up: 3
+    unlock: 6
+    level_up: 5
     max_level: 0
   auraskills/xp_convert:
     enabled: true
     base_value: 20.0
-    value_per_level: -0.5
-    unlock: 3
-    level_up: 2
+    value_per_level: -0.75
+    unlock: 2
+    level_up: 5
     max_level: 0
   auraskills/enchanter:
-    enabled: false
+    enabled: true
     base_value: 10.0
     value_per_level: 10.0
     unlock: 3
@@ -426,21 +426,21 @@ abilities:
     max_level: 0
   auraskills/xp_warrior:
     enabled: true
-    base_value: 2.0
-    value_per_level: 1.0
-    unlock: 2
-    level_up: 1
+    base_value: 5.0
+    value_per_level: 4.0
+    unlock: 4
+    level_up: 5
     max_level: 0
   auraskills/enchanted_strength:
     enabled: true
     base_value: 0.5
     value_per_level: 0.5
-    unlock: 4
-    level_up: 2
+    unlock: 5
+    level_up: 5
     max_level: 0
     excluded_enchantments: []
   auraskills/lucky_table:
-    enabled: false
+    enabled: true
     base_value: 5.0
     value_per_level: 1.0
     unlock: 6
@@ -492,7 +492,7 @@ abilities:
     max_level: 0
     enable_message: true
   auraskills/disenchanter:
-    enabled: false
+    enabled: true
     base_value: 10.0
     value_per_level: 7.0
     unlock: 2
@@ -500,27 +500,27 @@ abilities:
     max_level: 0
   auraskills/forger:
     enabled: true
-    base_value: 1.0
-    value_per_level: 1.0
-    unlock: 2
-    level_up: 1
+    base_value: 10.0
+    value_per_level: 10.0
+    unlock: 3
+    level_up: 5
     max_level: 0
   auraskills/repairing:
-    enabled: false
+    enabled: true
     base_value: 5.0
     value_per_level: 4.0
     unlock: 4
     level_up: 5
     max_level: 0
   auraskills/anvil_master:
-    enabled: false
+    enabled: true
     base_value: 43.0
     value_per_level: 3.0
     unlock: 5
     level_up: 5
     max_level: 0
   auraskills/skill_mender:
-    enabled: false
+    enabled: true
     base_value: 2.0
     value_per_level: 1.0
     unlock: 6

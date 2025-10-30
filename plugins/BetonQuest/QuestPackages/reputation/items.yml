@@ -1,0 +1,46 @@
+items:
+  bread: BREAD
+  golden_carrot: GOLDEN_CARROT
+  hay_bale: HAY_BLOCK
+  
+  
+  
+  
+  
+  arrow: ARROW
+  bone_meal: BONE_MEAL
+  bow: BOW
+  cod: RAW_COD
+  cake: CAKE
+  cookie: COOKIE
+  cooked_chicken: COOKED_CHICKEN
+  coal_block: COAL_BLOCK
+  diamond: DIAMOND
+  diamond_block: DIAMOND_BLOCK
+  diamond_pickaxe: DIAMOND_PICKAXE
+  diamond_helmet: DIAMOND_HELMET
+  diamond_sword: DIAMOND_SWORD
+  ender_chest: ENDER_CHEST
+  experience_bottle: EXPERIENCE_BOTTLE
+  elytra: ELYTRA
+  fortune_2: ENCHANTED_BOOK enchants:LOOT_BONUS_BLOCKS:2
+  golden_apple: GOLDEN_APPLE
+  GOLD_INGOT: GOLD_INGOT
+  gold_block: GOLD_BLOCK
+  IRON_INGOT: IRON_INGOT
+  POTATO: POTATO
+  COPPER_INGOT: COPPER_INGOT
+  iron_sword: IRON_SWORD
+  iron_block: IRON_BLOCK
+  luck_of_the_sea: ENCHANTED_BOOK enchants:LURE:2
+  obsidian: OBSIDIAN
+  steak: COOKED_BEEF
+  strength_potion_2: POTION type:STRENGTH upgraded
+  smite_3: ENCHANTED_BOOK enchants:DAMAGE_UNDEAD:3
+  speed_potion: POTION type:SPEED
+  pumpkin_pie: PUMPKIN_PIE
+  tnt: TNT
+  note_block: NOTE_BLOCK
+  netherite_scrap: NETHERITE_SCRAP
+  unbreaking_3: ENCHANTED_BOOK enchants:DURABILITY:3
+  turtle_master: POTION type:TURTLE_MASTER upgraded

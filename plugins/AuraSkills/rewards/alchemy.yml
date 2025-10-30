@@ -1,27 +1,12 @@
 patterns:
   - type: stat
-    stat: wisdom
+    stat: health
     value: 1
     pattern:
       start: 2
       interval: 1
-      stop: 19
   - type: stat
     stat: wisdom
-    value: 2
-    pattern:
-      start: 20
-      interval: 1
-      stop: 39
-  - type: stat
-    stat: wisdom
-    value: 3
-    pattern:
-      start: 40
-      interval: 1
-
-  - type: stat
-    stat: luck
     value: 1
     pattern:
       start: 2

@@ -1,0 +1,77 @@
+on load:
+	ParticlesReload()
+
+
+
+	
+function ParticlesCreateConfigFile():
+	load yaml "unlimited_adventures/AdventureCore/spawn_particles.yml" as "config"
+
+	set yaml value "version" from "config" to 1
+	set the comments of yaml node "version" from "config" to "Please DO NOT change version number!"
+
+	set yaml value "particles.enabled" from "config" to true
+	set the comments of yaml node "particles" from "config" to "" and "In this file you can turn off the spawn particles." and ""
+	save yaml "config"
+
+
+
+function ParticlesReload():
+	load yaml "unlimited_adventures/AdventureCore/spawn_particles.yml" as "config"
+	if yaml value "version" from "config" is not set:
+		wait 1 tick
+		ParticlesCreateConfigFile()
+	
+	
+	if yaml value "particles.enabled" from "config" is set:
+		set {particles::enabled} to yaml value "particles.enabled" from "config"
+	save yaml "config"
+
+
+
+
+
+
+every 5 seconds:
+	if {particles::enabled} is true:
+		set {_big_waterfall} to location(639, 59.5, 963, "spawn")
+		set {_wilderness_portal} to location(757, 78, 1043, "spawn")
+		set {_ranchers_garden} to location(810, 98, 820, "spawn")
+		set {_ancient_traveler} to location(780, 85, 885, "spawn")
+		set {_mine} to location(706, 72, 852, "spawn")
+		loop 20 times:
+			draw 50 cloud at {_big_waterfall} with offset vector(0.5, 0.5, 2.5) with extra 0.02
+			draw 300 ash at {_wilderness_portal} with offset vector(4, 2, 2) with extra 0
+			draw 10 spore blossom air at {_ranchers_garden} with offset vector(6, 2, 8) with extra 0
+			draw 7 white ash at {_ancient_traveler} with offset vector(3, 2, 3) with extra 0
+			draw 50 ash at {_mine} with offset vector(7, 3, 7) with extra 0
+			wait 0.25 second
+
+
+
+command /particlesreload:
+	permission: admin
+	trigger:
+		ParticlesReload()
+
+
+
+
+every second:
+	loop {players::*}:
+		CaveParticles(loop-value)
+
+
+function CaveParticles(player: player):
+	if world of {_player} is not "spawn":
+		if light level at {_player} <= 14:
+			if y coordinate of {_player} < 30:
+				if highest block at {_player} is set:
+					loop 2 times:
+						draw 100 ash at location 3 meter above {_player} with offset vector(7, 2, 7) with extra 0
+						wait 0.5 second
+
+
+
+
+

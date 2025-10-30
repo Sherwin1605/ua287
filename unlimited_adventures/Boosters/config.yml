@@ -1,0 +1,19 @@
+# Please DO NOT change version number!
+version: 1
+
+# 
+# Pinata will drop X random items from the list below. (drops can repeat)
+# You can configure how many items will Pinata drop at random.
+# 
+pinata:
+    drops-amount: 10
+    drops-list:
+    - 2 diamonds
+    - golden apple
+    - 4 emeralds
+    - 8 gold ingots
+    - netherite scrap
+    - 4 slime balls
+    - 8 experience bottles
+    - 4 golden carrots
+    - name tag

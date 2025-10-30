@@ -159,12 +159,10 @@ settings:
     bid-command-name: "bid"
     auction-command-name: "auction"
 
-
     # Remember, you can always add command aliases, just please use this.
-    # This example is for the set command, but you can add any command.
-    custom-command-aliases:
-      sell-command-aliases:
-      - "sale"
+    # This example is for the sell command, but you can add any command.
+    # sell-command-aliases:
+    #   - "sale"
 
     sell-command-syntax: "%prefix% &b/%label% %args-0% <price> [currency] [amount]"
     bid-command-syntax: "%prefix% &b/%label% %args-0% <price> [amount]"
@@ -237,7 +235,9 @@ settings:
       nbt: []
       # Blacklist specific item names instead of actual item stacks/materials.
       # You do not need to include colours here.
-      names: []
+      names:
+      - "Server Menu"
+      - "&aBackpack"
       # Blacklist specific custom model data instead of actual item stacks/materials.
       #custom-model-data: ["1000", "1001", "1002"]
       custom-model-data: []
@@ -274,13 +274,12 @@ settings:
     # Should the auction house disallow items that have item contents? (Items with items inside of them such as a chest or a shulker box)
     disallow-item-contents: false
     # What are the blacklisted gamemodes players cannot auction in?
-    blacklisted-gamemodes:
-    - "CREATIVE"
+    blacklisted-gamemodes: []
     # What is the cooldown in seconds for selling an item? Set this to -1 to disable.
     # This is highly recommended having at least at 1 second to prevent some bukkit item dupes.
-    cooldown: 5
+    cooldown: 2
     # What is the cooldown in seconds for purchasing an item? Set this to -1 to disable.
-    purchase-cooldown: 5
+    purchase-cooldown: 2
     # How should the quantity type work in the sell/bid command?
     # Options:
     # DISABLED - The player cannot choose how much they want to auction.
@@ -328,8 +327,7 @@ settings:
     # You can list the auction ids here that you want to be unlimited. This will never ran out of stock or expire!
     unlimited-items-id: []
     # What are the commands that will be executed when an auction is listed?
-    commands:
-    - "[broadcast] &e%player%&b is now selling an &e%item% x%amount%&b for &e%price%&b! (/ah)!"
+    commands: []
     # What are the commands that will be executed when someone has purchased an auction? Executed as the buyer.
     commands-purchase: []
     # What are the commands that will be executed when someone has purchased an auction? Executed as the seller. Only when the seller is online.
@@ -339,10 +337,10 @@ settings:
       # This is how much they will need to sell an item, otherwise if they don't have that it will not sell the item and send the message
       # in lang folder. Make sure you have an economy plugin and vault supports that economy plugin!
       # Set this to -1 to disable.
-      sell-price: 500
+      sell-price: 5
       # Should the sell price act as a percentage of the cost of the auction?
       # auction-price * (sell-price / 100)
-      sell-price-rate: false
+      sell-price-rate: true
       # Here you can choose specific ranks that the price they need to pay, if you have not put a rank there the payment will be the payment will be above.
       # WARNING This will not work if you're using the default Bukkit Permissions system due to vault not supporting groups.
       # Please list the ranks from the highest to the lowest, as if your groups inherit each other than it'll find the first one on the list instead of the highest one.
@@ -354,8 +352,7 @@ settings:
 #        vip: 1
 
     # Should players not be able to set sell in these worlds?
-    disabled-worlds:
-    - "world_nether"
+    disabled-worlds: []
 
   bidding:
     # What is the cooldown in seconds for bidding an item? Set this to -1 to disable.

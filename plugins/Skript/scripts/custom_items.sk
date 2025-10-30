@@ -1,0 +1,992 @@
+on load:
+	ForgeReload()
+	ForgeItemsReload()
+
+
+function ForgeReload():
+	load yaml "unlimited_adventures/CustomItems/config.yml" as "config"
+	load yaml "unlimited_adventures/CustomItems/recipes.yml" as "recipes"
+	load yaml "unlimited_adventures/CustomItems/items.yml" as "items"
+	load yaml "unlimited_adventures/CustomItems/drops.yml" as "drops"
+
+	if yaml value "version" from "config" is not set:
+		wait 1 tick
+		ForgeCreateConfigFile()
+	if yaml value "version" from "recipes" is not set:
+		wait 1 tick
+		ForgeCreateRecipesFile()
+		wait 3 tick
+	if yaml value "version" from "items" is not set:
+		wait 1 tick
+		ForgeCreateItemsFile()
+		wait 3 seconds
+	if yaml value "version" from "drops" is not set:
+		wait 1 tick
+		ForgeCreateDropsFile()
+		wait 0.5 second
+
+#	wait 1 tick
+
+	#	Forge Config
+	if yaml value "require_unlocking" from "config" is set:
+		set {forge::config::require_unlocking} to yaml value "require_unlocking" from "config"
+
+	#	Recipes
+	loop yaml node keys "recipes" from "recipes":
+		set {forge::recipe::%loop-value%::*} to yaml list "recipes.%loop-value%" from "recipes"
+
+
+
+
+	#	Drops Config
+
+	clear {forge::drops::*}
+
+	#	Global
+	clear {forge::global::mobs::*}
+	loop yaml node keys "global" from "drops":
+		set {_mob} to loop-value
+		add {_mob} to {forge::global::mobs::*}
+		loop yaml node keys "global.%{_mob}%" from "drops":
+			set {_item} to loop-value-2
+			set {forge::drops::global::%{_mob}%::%{_item}%} to yaml value "global.%{_mob}%.%{_item}%" from "drops"
+
+
+
+	#	Items Config
+	clear {forge::items_list::*}
+	clear {forge::backpacks_list::*}
+	clear {forge::accessories_list::*}
+	set {_stats::*} to "strength" and "health" and "regeneration" and "luck" and "wisdom" and "toughness" and "movement_speed" and "fuel" and "night_vision" and "haste" and "oxygen"
+	loop yaml node keys "items" from "items":
+		add 1 to {_nr}
+		add loop-value to {forge::items_list::*}
+		if yaml value "items.%loop-value%.accessory" from "items" is set:
+			add loop-value to {forge::accessories_list::*}
+
+		if yaml value "items.%loop-value%.item" from "items" is set:
+			set {forge::item::%loop-value%::item} to yaml value "items.%loop-value%.item" from "items" parsed as item
+		if yaml value "items.%loop-value%.name" from "items" is set:
+			set {forge::item::%loop-value%::name} to yaml value "items.%loop-value%.name" from "items"
+		if yaml value "items.%loop-value%.custom_model_data" from "items" is set:
+			set {forge::item::%loop-value%::custom_model_data} to yaml value "items.%loop-value%.custom_model_data" from "items"
+		if yaml value "items.%loop-value%.model_custom_model_data" from "items" is set:
+			set {forge::item::%loop-value%::model_custom_model_data} to yaml value "items.%loop-value%.model_custom_model_data" from "items"
+		if yaml value "items.%loop-value%.rows" from "items" is set:
+			set {forge::item::%loop-value%::rows} to yaml value "items.%loop-value%.rows" from "items"
+			add loop-value to {forge::backpacks_list::*}
+		if yaml value "items.%loop-value%.attack_damage" from "items" is set:
+			set {forge::item::%loop-value%::attack_damage} to yaml value "items.%loop-value%.attack_damage" from "items"
+		if yaml value "items.%loop-value%.attack_speed" from "items" is set:
+			set {forge::item::%loop-value%::attack_speed} to yaml value "items.%loop-value%.attack_speed" from "items"
+		if yaml value "items.%loop-value%.armor" from "items" is set:
+			set {forge::item::%loop-value%::armor} to yaml value "items.%loop-value%.armor" from "items"
+		if yaml value "items.%loop-value%.armor_toughness" from "items" is set:
+			set {forge::item::%loop-value%::armor_toughness} to yaml value "items.%loop-value%.armor_toughness" from "items"
+		if yaml value "items.%loop-value%.knockback_resistance" from "items" is set:
+			set {forge::item::%loop-value%::knockback_resistance} to yaml value "items.%loop-value%.knockback_resistance" from "items"
+		if yaml value "items.%loop-value%.unbreakable" from "items" is set:
+			set {forge::item::%loop-value%::unbreakable} to yaml value "items.%loop-value%.unbreakable" from "items"
+		
+		if yaml list "items.%loop-value%.lore" from "items" is set:
+			set {forge::item::%loop-value%::lore::*} to yaml list "items.%loop-value%.lore" from "items"
+
+
+		#	Accessories
+		loop {_stats::*}:
+			if yaml value "items.%loop-value-1%.%loop-value-2%" from "items" is set:
+				set {forge::item::%loop-value-1%::%loop-value-2%} to yaml value "items.%loop-value-1%.%loop-value-2%" from "items"
+			else:
+				if {forge::item::%loop-value-1%::%loop-value-2%} is set:
+					delete {forge::item::%loop-value-1%::%loop-value-2%}
+
+		if mod({_nr}, 3) is 0:
+			wait 1 tick
+
+
+
+
+
+	save yaml "config"
+	save yaml "recipes"
+	save yaml "items"
+	save yaml "drops"
+
+
+
+
+
+
+
+
+function ForgeCreateConfigFile():
+	load yaml "unlimited_adventures/CustomItems/config.yml" as "config"
+
+	set yaml value "version" from "config" to 1
+	set the comments of yaml node "version" from "config" to "Please DO NOT change version number!"
+
+	set yaml list "require_unlocking" from "config" to false
+
+	set the comments of yaml node "require_unlocking" from "config" to "Set to true if items should require unlocking before they can be forged."
+	save yaml "config"
+
+
+
+function ForgeCreateRecipesFile():
+	load yaml "unlimited_adventures/CustomItems/recipes.yml" as "recipes"
+
+	set yaml value "version" from "recipes" to 1
+	set the comments of yaml node "version" from "recipes" to "Please DO NOT change version number!"
+
+
+	#	Items
+
+	set yaml list "recipes.dragonscale_sword" from "recipes" to "2 of custom:dragonscale"
+	set yaml list "recipes.dragonscale_axe" from "recipes" to "3 of custom:dragonscale"
+	set yaml list "recipes.dragonscale_helmet" from "recipes" to "5 of custom:dragonscale"
+	set yaml list "recipes.dragonscale_chestplate" from "recipes" to "8 of custom:dragonscale"
+	set yaml list "recipes.dragonscale_leggings" from "recipes" to "7 of custom:dragonscale"
+	set yaml list "recipes.dragonscale_boots" from "recipes" to "4 of custom:dragonscale"
+
+	set yaml list "recipes.random_teleportation_scroll" from "recipes" to "paper" and "2 of lapis lazuli" and "2 of amethyst shard"
+	set yaml list "recipes.home_teleportation_scroll" from "recipes" to "paper" and "2 of lapis lazuli" and "2 of amethyst shard" and "2 of gold ingot"
+	set yaml list "recipes.portal_stone" from "recipes" to "echo shard" and "4 of amethyst shard" and "4 of ender eye"
+
+
+	#	Backpacks
+	set yaml list "recipes.traveler_backpack" from "recipes" to "10 of leather" and "2 of iron ingots"
+	set yaml list "recipes.adventure_backpack" from "recipes" to "custom:traveler_backpack" and "5 of iron ingots" and "10 of string"
+	set yaml list "recipes.hero_backpack" from "recipes" to "custom:adventure_backpack" and "2 of diamond" and "5 of gold ingots"
+
+	set yaml list "recipes.bone_sword" from "recipes" to "10 of custom:skeleton_skull"
+
+
+	#	Accessories
+	set yaml list "recipes.wool_scarf" from "recipes" to "10 white wool" and "10 red wool" and "10 strings"
+	set yaml list "recipes.lightning_boots" from "recipes" to "custom:hermes_boots" and "custom:rocket_boots"
+	set yaml list "recipes.miner_helmet_lamp" from "recipes" to "custom:miner_helmet" and "custom:flashlight"
+	set yaml list "recipes.talisman_of_vitality" from "recipes" to "custom:philosopher_stone" and "custom:silver_chain"
+
+
+
+
+	set the comments of yaml node "recipes" from "recipes" to " " and "Forge Items crafting recipes:" and " "
+	save yaml "recipes"
+
+
+
+function ForgeCreateDropsFile():
+	load yaml "unlimited_adventures/CustomItems/drops.yml" as "drops"
+
+	set yaml value "version" from "drops" to 1
+	set the comments of yaml node "version" from "drops" to "Please DO NOT change version number!"
+
+	set yaml value "global.zombie.zombie_brain" from "drops" to 1
+	
+	set yaml value "global.skeleton.skeleton_skull" from "drops" to 1
+	set yaml value "global.spider.spider_venom" from "drops" to 1
+
+	set yaml value "global.zombie.shackle" from "drops" to 0.4
+	set yaml value "global.skeleton.bone_necklace" from "drops" to 0.4
+	set yaml value "global.spider.ninja_cloak" from "drops" to 0.5
+	set yaml value "global.creeper.rocket_boots" from "drops" to 0.5
+	set yaml value "global.enderman.hermes_boots" from "drops" to 0.6
+	set yaml value "global.stray.shiver_bracelet" from "drops" to 0.5
+	set yaml value "global.husk.magic_bracelet" from "drops" to 0.5
+	set yaml value "global.witch.vitality_ring" from "drops" to 1.5
+	set yaml value "global.witch.speed_ring" from "drops" to 1.5
+	set yaml value "global.piglin.gold_tooth" from "drops" to 1
+	set yaml value "global.piglin.gold_pouch" from "drops" to 0.5
+	set yaml value "global.piglin_brute.gold_tooth" from "drops" to 2
+	set yaml value "global.piglin_brute.gold_pouch" from "drops" to 1
+	set yaml value "global.wither_skeleton.dark_magic_necklace" from "drops" to 1
+	set yaml value "global.blaze.philosopher_stone" from "drops" to 0.75
+	set yaml value "global.ghast.silver_chain" from "drops" to 1
+	set yaml value "global.strider.magma_boots" from "drops" to 1
+	set yaml value "global.magma_cube.molten_dice" from "drops" to 0.5
+	set yaml value "global.drowned.diving_mask" from "drops" to 1
+	set yaml value "global.guardian.diving_mask" from "drops" to 5
+	set yaml value "global.elder_guardian.diving_mask" from "drops" to 50
+	set yaml value "global.ravager.horseshoe" from "drops" to 3
+	set yaml value "global.warden.sculk_shield" from "drops" to 5
+	set yaml value "global.warden.echo_shard" from "drops" to 20
+	set yaml value "global.ender_dragon.dragonscale" from "drops" to 500
+	set yaml value "global.ender_dragon.ender_gauntlet" from "drops" to 10
+	set yaml value "global.wither.wither_crown" from "drops" to 10
+
+
+	set the comments of yaml node "global" from "drops" to " " and "You can modify percentage chances for various item drops from mobs" and "You can add your own drops, just follow the formatting!" and " "
+
+	save yaml "drops"
+
+
+
+
+
+
+function ForgeCreateItemsFile():
+#	send "ForgeCreateItemsFile()" to all players
+	load yaml "unlimited_adventures/CustomItems/items.yml" as "items"
+
+	set yaml value "version" from "items" to 1
+	set the comments of yaml node "version" from "items" to "Please DO NOT change version number!"
+
+	#	Backpacks & Items
+
+	set yaml value "items.traveler_backpack.name" from "items" to "&aTraveler's Backpack"
+	set yaml value "items.traveler_backpack.item" from "items" to "stick"
+	set yaml value "items.traveler_backpack.custom_model_data" from "items" to 501
+	set yaml value "items.traveler_backpack.model_custom_model_data" from "items" to 101
+	set yaml list "items.traveler_backpack.lore" from "items" to "" and "&7Basic backpack. Can fit 9 items."
+	set yaml value "items.traveler_backpack.rows" from "items" to 1
+
+	set yaml value "items.adventure_backpack.name" from "items" to "&aAdventurer's Backpack"
+	set yaml value "items.adventure_backpack.item" from "items" to "stick"
+	set yaml value "items.adventure_backpack.custom_model_data" from "items" to 502
+	set yaml value "items.adventure_backpack.model_custom_model_data" from "items" to 102
+	set yaml list "items.adventure_backpack.lore" from "items" to "" and "&7Sizeable backpack. Can fit 18 items."
+	set yaml value "items.adventure_backpack.rows" from "items" to 2
+
+	set yaml value "items.hero_backpack.name" from "items" to "&aHero's Backpack"
+	set yaml value "items.hero_backpack.item" from "items" to "stick"
+	set yaml value "items.hero_backpack.custom_model_data" from "items" to 503
+	set yaml value "items.hero_backpack.model_custom_model_data" from "items" to 103
+	set yaml list "items.hero_backpack.lore" from "items" to "" and "&7Big backpack. Can fit 27 items."
+	set yaml value "items.hero_backpack.rows" from "items" to 3
+
+
+	set yaml value "items.random_teleportation_scroll.name" from "items" to "&aRandom Teleportation Scroll"
+	set yaml value "items.random_teleportation_scroll.item" from "items" to "stick"
+	set yaml value "items.random_teleportation_scroll.custom_model_data" from "items" to 741
+	set yaml list "items.random_teleportation_scroll.lore" from "items" to "" and "&7Right-click to teleport to a random location."
+
+
+	set yaml value "items.home_teleportation_scroll.name" from "items" to "&aHome Teleportation Scroll"
+	set yaml value "items.home_teleportation_scroll.item" from "items" to "stick"
+	set yaml value "items.home_teleportation_scroll.custom_model_data" from "items" to 742
+	set yaml list "items.home_teleportation_scroll.lore" from "items" to "" and "&7Right-click to teleport to your bed location."
+
+
+	set yaml value "items.portal_stone.name" from "items" to "&aPortal Stone"
+	set yaml value "items.portal_stone.item" from "items" to "stick"
+	set yaml value "items.portal_stone.custom_model_data" from "items" to 743
+	set yaml list "items.portal_stone.lore" from "items" to "" and "&7Right-click on ground to create a portal." and "&7Put candles in the corners to 'code' the portal."
+
+
+
+
+	#	Items
+
+	set yaml value "items.bone_sword.name" from "items" to "&aBone Sword"
+	set yaml value "items.bone_sword.item" from "items" to "diamond sword of knockback 5"
+	set yaml value "items.bone_sword.custom_model_data" from "items" to 730
+
+
+	set yaml value "items.dragonscale_sword.name" from "items" to "&aDragonscale Sword"
+	set yaml value "items.dragonscale_sword.item" from "items" to "netherite sword"
+	set yaml list "items.dragonscale_sword.lore" from "items" to "" and "&7Legendary sword made out of" and "&7the ominous scales of a dragon." and "" and "<##b12222>9 Attack Damage 🗡"
+	set yaml value "items.dragonscale_sword.custom_model_data" from "items" to 731
+	set yaml value "items.dragonscale_sword.attack_damage" from "items" to 9
+	set yaml value "items.dragonscale_sword.attack_speed" from "items" to -2.4
+	set yaml value "items.dragonscale_sword.unbreakable" from "items" to true
+
+	set yaml value "items.dragonscale_axe.name" from "items" to "&aDragonscale Axe"
+	set yaml value "items.dragonscale_axe.item" from "items" to "netherite axe"
+	set yaml list "items.dragonscale_axe.lore" from "items" to "" and "&7Legendary axe made out of" and "&7the ominous scales of a dragon." and "" and "<##b12222>11 Attack Damage 🗡"
+	set yaml value "items.dragonscale_axe.custom_model_data" from "items" to 732
+	set yaml value "items.dragonscale_axe.attack_damage" from "items" to 11
+	set yaml value "items.dragonscale_axe.attack_speed" from "items" to -3
+	set yaml value "items.dragonscale_axe.unbreakable" from "items" to true
+
+	set yaml value "items.cursed_pickaxe.name" from "items" to "&aCursed Pickaxe"
+	set yaml value "items.cursed_pickaxe.item" from "items" to "netherite pickaxe of efficiency 5"
+	set yaml list "items.cursed_pickaxe.lore" from "items" to "" and "&7A powerful pickaxe that once" and "&7belonged to the cursed miner." and "" and "<##b12222>8 Attack Damage 🗡"
+	set yaml value "items.cursed_pickaxe.custom_model_data" from "items" to 733
+	set yaml value "items.cursed_pickaxe.attack_damage" from "items" to 8
+	set yaml value "items.cursed_pickaxe.attack_speed" from "items" to -2.4
+	set yaml value "items.cursed_pickaxe.unbreakable" from "items" to true
+
+	wait 2 tick
+
+	set yaml value "items.dracula_sword.name" from "items" to "&aDracula Sword"
+	set yaml value "items.dracula_sword.item" from "items" to "netherite sword"
+	set yaml list "items.dracula_sword.lore" from "items" to "" and "&7Mythical vampire sword that belonged" and "&7to the terrifying Dracula Lord." and "" and "<##b12222>10 Attack Damage 🗡"
+	set yaml value "items.dracula_sword.custom_model_data" from "items" to 732
+	set yaml value "items.dracula_sword.attack_damage" from "items" to 10
+	set yaml value "items.dracula_sword.attack_speed" from "items" to -2.6
+	set yaml value "items.dracula_sword.unbreakable" from "items" to true
+
+	set yaml value "items.ankh_scepter.name" from "items" to "&aAnkh Scepter"
+	set yaml value "items.ankh_scepter.item" from "items" to "netherite axe"
+	set yaml list "items.ankh_scepter.lore" from "items" to "" and "&7Pharaoh's mighty scepter." and "&7A symbol of power." and "" and "<##b12222>12 Attack Damage 🗡"
+	set yaml value "items.ankh_scepter.custom_model_data" from "items" to 733
+	set yaml value "items.ankh_scepter.attack_damage" from "items" to 12
+	set yaml value "items.ankh_scepter.attack_speed" from "items" to -3
+	set yaml value "items.ankh_scepter.unbreakable" from "items" to true
+
+	set yaml value "items.dragonscale_helmet.name" from "items" to "&aDragonscale Helmet"
+	set yaml value "items.dragonscale_helmet.item" from "items" to "chainmail helmet"
+	set yaml value "items.dragonscale_helmet.armor" from "items" to 3
+	set yaml value "items.dragonscale_helmet.armor_toughness" from "items" to 4
+	set yaml value "items.dragonscale_helmet.knockback_resistance" from "items" to 0.1
+	set yaml value "items.dragonscale_helmet.unbreakable" from "items" to true
+	set yaml list "items.dragonscale_helmet.lore" from "items" to "" and "&7Legendary helmet made out of" and "&7the ominous scales of a dragon."
+	set yaml value "items.dragonscale_helmet.custom_model_data" from "items" to 733
+
+	set yaml value "items.dragonscale_chestplate.name" from "items" to "&aDragonscale Chestplate"
+	set yaml value "items.dragonscale_chestplate.item" from "items" to "chainmail chestplate"
+	set yaml value "items.dragonscale_chestplate.armor" from "items" to 8
+	set yaml value "items.dragonscale_chestplate.armor_toughness" from "items" to 4
+	set yaml value "items.dragonscale_chestplate.knockback_resistance" from "items" to 0.1
+	set yaml value "items.dragonscale_chestplate.unbreakable" from "items" to true
+	set yaml list "items.dragonscale_chestplate.lore" from "items" to "" and "&7Legendary chestplate made out of" and "&7the ominous scales of a dragon."
+	set yaml value "items.dragonscale_chestplate.custom_model_data" from "items" to 734
+
+	set yaml value "items.dragonscale_leggings.name" from "items" to "&aDragonscale Leggings"
+	set yaml value "items.dragonscale_leggings.item" from "items" to "chainmail leggings"
+	set yaml value "items.dragonscale_leggings.armor" from "items" to 6
+	set yaml value "items.dragonscale_leggings.armor_toughness" from "items" to 4
+	set yaml value "items.dragonscale_leggings.knockback_resistance" from "items" to 0.1
+	set yaml value "items.dragonscale_leggings.unbreakable" from "items" to true
+	set yaml list "items.dragonscale_leggings.lore" from "items" to "" and "&7Legendary leggings made out of" and "&7the ominous scales of a dragon."
+	set yaml value "items.dragonscale_leggings.custom_model_data" from "items" to 735
+
+	set yaml value "items.dragonscale_boots.name" from "items" to "&aDragonscale Boots"
+	set yaml value "items.dragonscale_boots.item" from "items" to "chainmail boots"
+	set yaml value "items.dragonscale_boots.armor" from "items" to 3
+	set yaml value "items.dragonscale_boots.armor_toughness" from "items" to 4
+	set yaml value "items.dragonscale_boots.knockback_resistance" from "items" to 0.1
+	set yaml value "items.dragonscale_boots.unbreakable" from "items" to true
+	set yaml list "items.dragonscale_boots.lore" from "items" to "" and "&7Legendary boots made out of" and "&7the ominous scales of a dragon."
+	set yaml value "items.dragonscale_boots.custom_model_data" from "items" to 736
+
+	wait 2 tick
+
+	#	Accessories / Gear
+
+	set yaml value "items.hermes_boots.name" from "items" to "&aHermes Boots"
+	set yaml value "items.hermes_boots.item" from "items" to "stick"
+	set yaml value "items.hermes_boots.custom_model_data" from "items" to 701
+	set yaml list "items.hermes_boots.lore" from "items" to "" and "&7Increases movement speed by 5%%" and "" and "<##8f64de>ᴀᴄᴄᴇssᴏʀʏ ɪᴛᴇᴍ"
+	set yaml value "items.hermes_boots.movement_speed" from "items" to 5
+	set yaml value "items.hermes_boots.accessory" from "items" to true
+
+
+	set yaml value "items.rocket_boots.name" from "items" to "&aRocket Boots"
+	set yaml value "items.rocket_boots.item" from "items" to "stick"
+	set yaml value "items.rocket_boots.custom_model_data" from "items" to 702
+	set yaml list "items.rocket_boots.lore" from "items" to "" and "&7Allows flight." and "&eSneak to propel yourself upwards." and "" and "<##8f64de>ᴀᴄᴄᴇssᴏʀʏ ɪᴛᴇᴍ"
+	set yaml value "items.rocket_boots.fuel" from "items" to 25
+	set yaml value "items.rocket_boots.accessory" from "items" to true
+
+	set yaml value "items.lightning_boots.name" from "items" to "&aLightning Boots"
+	set yaml value "items.lightning_boots.item" from "items" to "stick"
+	set yaml value "items.lightning_boots.custom_model_data" from "items" to 703
+	set yaml list "items.lightning_boots.lore" from "items" to "" and "&7Increases movement speed by 5%%" and "&7Allows flight." and "&eSneak to propel yourself upwards." and "" and "<##8f64de>ᴀᴄᴄᴇssᴏʀʏ ɪᴛᴇᴍ"
+	set yaml value "items.lightning_boots.movement_speed" from "items" to 5
+	set yaml value "items.lightning_boots.fuel" from "items" to 25
+	set yaml value "items.lightning_boots.accessory" from "items" to true
+
+	set yaml value "items.flashlight.name" from "items" to "&aFlashlight"
+	set yaml value "items.flashlight.item" from "items" to "stick"
+	set yaml value "items.flashlight.custom_model_data" from "items" to 704
+	set yaml list "items.flashlight.lore" from "items" to "" and "&7Allows to see in the dark." and "" and "<##8f64de>ᴀᴄᴄᴇssᴏʀʏ ɪᴛᴇᴍ"
+	set yaml value "items.flashlight.night_vision" from "items" to true
+	set yaml value "items.flashlight.accessory" from "items" to true
+
+	set yaml value "items.miner_helmet.name" from "items" to "&aMiner's Helmet"
+	set yaml value "items.miner_helmet.item" from "items" to "stick"
+	set yaml value "items.miner_helmet.custom_model_data" from "items" to 705
+	set yaml list "items.miner_helmet.lore" from "items" to "" and "&7Increases mining speed." and "" and "<##8f64de>ᴀᴄᴄᴇssᴏʀʏ ɪᴛᴇᴍ"
+	set yaml value "items.miner_helmet.haste" from "items" to true
+	set yaml value "items.miner_helmet.accessory" from "items" to true
+
+	set yaml value "items.miner_helmet_lamp.name" from "items" to "&aMiner's Helmet Lamp"
+	set yaml value "items.miner_helmet_lamp.item" from "items" to "stick"
+	set yaml value "items.miner_helmet_lamp.custom_model_data" from "items" to 706
+	set yaml list "items.miner_helmet_lamp.lore" from "items" to "" and "&7Allows to see in the dark." and "&7Increases mining speed." and "" and "<##8f64de>ᴀᴄᴄᴇssᴏʀʏ ɪᴛᴇᴍ"
+	set yaml value "items.miner_helmet_lamp.haste" from "items" to true
+	set yaml value "items.miner_helmet_lamp.night_vision" from "items" to true
+	set yaml value "items.miner_helmet_lamp.accessory" from "items" to true
+
+	wait 1 tick
+
+
+
+	set yaml value "items.diving_mask.name" from "items" to "&aDiving Mask"
+	set yaml value "items.diving_mask.item" from "items" to "stick"
+	set yaml value "items.diving_mask.custom_model_data" from "items" to 707
+	set yaml list "items.diving_mask.lore" from "items" to "" and "&7Let's you hold your breath longer." and "" and "&a+20 seconds underwater" and "" and "<##8f64de>ᴀᴄᴄᴇssᴏʀʏ ɪᴛᴇᴍ"
+	set yaml value "items.diving_mask.oxygen" from "items" to 20
+	set yaml value "items.diving_mask.accessory" from "items" to true
+
+	set yaml value "items.ninja_cloak.name" from "items" to "&aNinja Cloak"
+	set yaml value "items.ninja_cloak.item" from "items" to "stick"
+	set yaml value "items.ninja_cloak.custom_model_data" from "items" to 708
+	set yaml list "items.ninja_cloak.lore" from "items" to "" and "&7Increases strength." and "" and "<##b12222>+5 Strength 🗡" and "" and "<##8f64de>ᴀᴄᴄᴇssᴏʀʏ ɪᴛᴇᴍ"
+	set yaml value "items.ninja_cloak.strength" from "items" to 5
+	set yaml value "items.ninja_cloak.accessory" from "items" to true
+
+	set yaml value "items.gold_tooth.name" from "items" to "&aGold Tooth"
+	set yaml value "items.gold_tooth.item" from "items" to "stick"
+	set yaml value "items.gold_tooth.custom_model_data" from "items" to 709
+	set yaml list "items.gold_tooth.lore" from "items" to "" and "&7Regenerates life faster." and "" and "<##f2601c>+5 Regeneration 🍖" and "" and "<##8f64de>ᴀᴄᴄᴇssᴏʀʏ ɪᴛᴇᴍ"
+	set yaml value "items.gold_tooth.regeneration" from "items" to 5
+	set yaml value "items.gold_tooth.accessory" from "items" to true
+
+	set yaml value "items.vitality_ring.name" from "items" to "&aRing of Vitality"
+	set yaml value "items.vitality_ring.item" from "items" to "stick"
+	set yaml value "items.vitality_ring.custom_model_data" from "items" to 711
+	set yaml list "items.vitality_ring.lore" from "items" to "" and "&7Increases health." and "" and "<##df5252>+4 Health ❤" and "" and "<##8f64de>ᴀᴄᴄᴇssᴏʀʏ ɪᴛᴇᴍ"
+	set yaml value "items.vitality_ring.health" from "items" to 4
+	set yaml value "items.vitality_ring.accessory" from "items" to true
+
+	set yaml value "items.speed_ring.name" from "items" to "&aRing of Speed"
+	set yaml value "items.speed_ring.item" from "items" to "stick"
+	set yaml value "items.speed_ring.custom_model_data" from "items" to 712
+	set yaml list "items.speed_ring.lore" from "items" to "" and "&7Increases movement speed by 5%%" and "" and "<##8f64de>ᴀᴄᴄᴇssᴏʀʏ ɪᴛᴇᴍ"
+	set yaml value "items.speed_ring.movement_speed" from "items" to 5
+	set yaml value "items.speed_ring.accessory" from "items" to true
+
+	set yaml value "items.wool_scarf.name" from "items" to "&aWool Scarf"
+	set yaml value "items.wool_scarf.item" from "items" to "stick"
+	set yaml value "items.wool_scarf.custom_model_data" from "items" to 713
+	set yaml list "items.wool_scarf.lore" from "items" to "" and "&7Increases health." and "" and "<##df5252>+4 Health ❤" and "" and "<##8f64de>ᴀᴄᴄᴇssᴏʀʏ ɪᴛᴇᴍ"
+	set yaml value "items.wool_scarf.health" from "items" to 4
+	set yaml value "items.wool_scarf.accessory" from "items" to true
+
+	set yaml value "items.magic_bracelet.name" from "items" to "&aMagic Bracelet"
+	set yaml value "items.magic_bracelet.item" from "items" to "stick"
+	set yaml value "items.magic_bracelet.custom_model_data" from "items" to 714
+	set yaml list "items.magic_bracelet.lore" from "items" to "" and "&7Increases wisdom." and "" and "<##6586e8>+5 Wisdom " and "" and "<##8f64de>ᴀᴄᴄᴇssᴏʀʏ ɪᴛᴇᴍ"
+	set yaml value "items.magic_bracelet.wisdom" from "items" to 5
+	set yaml value "items.magic_bracelet.accessory" from "items" to true
+
+	wait 2 tick
+
+	set yaml value "items.knight_shield.name" from "items" to "&aKnight's Shield"
+	set yaml value "items.knight_shield.item" from "items" to "stick"
+	set yaml value "items.knight_shield.custom_model_data" from "items" to 715
+	set yaml list "items.knight_shield.lore" from "items" to "" and "&7Increases toughness." and "" and "<##58d09c>+10 Toughness 🛡" and "" and "<##8f64de>ᴀᴄᴄᴇssᴏʀʏ ɪᴛᴇᴍ"
+	set yaml value "items.knight_shield.toughness" from "items" to 10
+	set yaml value "items.knight_shield.accessory" from "items" to true
+
+	set yaml value "items.philosopher_stone.name" from "items" to "&aPhilosopher's Stone"
+	set yaml value "items.philosopher_stone.item" from "items" to "stick"
+	set yaml value "items.philosopher_stone.custom_model_data" from "items" to 716
+	set yaml list "items.philosopher_stone.lore" from "items" to "" and "&7Increases health." and "" and "<##df5252>+5 Health ❤" and "" and "<##8f64de>ᴀᴄᴄᴇssᴏʀʏ ɪᴛᴇᴍ"
+	set yaml value "items.philosopher_stone.health" from "items" to 5
+	set yaml value "items.philosopher_stone.accessory" from "items" to true
+
+	set yaml value "items.silver_chain.name" from "items" to "&aSilver Chain"
+	set yaml value "items.silver_chain.item" from "items" to "stick"
+	set yaml value "items.silver_chain.custom_model_data" from "items" to 717
+	set yaml list "items.silver_chain.lore" from "items" to "" and "&7Increases regeneration." and "" and "<##f2601c>+5 Regeneration 🍖" and "" and "<##8f64de>ᴀᴄᴄᴇssᴏʀʏ ɪᴛᴇᴍ"
+	set yaml value "items.silver_chain.regeneration" from "items" to 5
+	set yaml value "items.silver_chain.accessory" from "items" to true
+
+	set yaml value "items.talisman_of_vitality.name" from "items" to "&aTalisman of Vitality"
+	set yaml value "items.talisman_of_vitality.item" from "items" to "stick"
+	set yaml value "items.talisman_of_vitality.custom_model_data" from "items" to 718
+	set yaml list "items.talisman_of_vitality.lore" from "items" to "" and "&7Increases health and regeneration." and "" and "<##df5252>+5 Health ❤" and "<##f2601c>+5 Regeneration 🍖" and "" and "<##8f64de>ᴀᴄᴄᴇssᴏʀʏ ɪᴛᴇᴍ"
+	set yaml value "items.talisman_of_vitality.health" from "items" to 5
+	set yaml value "items.talisman_of_vitality.regeneration" from "items" to 5
+	set yaml value "items.talisman_of_vitality.accessory" from "items" to true
+
+	set yaml value "items.dark_magic_necklace.name" from "items" to "&aDark Magic Necklace"
+	set yaml value "items.dark_magic_necklace.item" from "items" to "stick"
+	set yaml value "items.dark_magic_necklace.custom_model_data" from "items" to 719
+	set yaml list "items.dark_magic_necklace.lore" from "items" to "" and "&7Increases wisdom." and "" and "<##6586e8>+10 Wisdom " and "" and "<##8f64de>ᴀᴄᴄᴇssᴏʀʏ ɪᴛᴇᴍ"
+	set yaml value "items.dark_magic_necklace.wisdom" from "items" to 10
+	set yaml value "items.dark_magic_necklace.accessory" from "items" to true
+
+	set yaml value "items.shiver_bracelet.name" from "items" to "&aShiver Bracelet"
+	set yaml value "items.shiver_bracelet.item" from "items" to "stick"
+	set yaml value "items.shiver_bracelet.custom_model_data" from "items" to 720
+	set yaml list "items.shiver_bracelet.lore" from "items" to "" and "&7Increases strength." and "" and "<##b12222>+6 Strength 🗡" and "" and "<##8f64de>ᴀᴄᴄᴇssᴏʀʏ ɪᴛᴇᴍ"
+	set yaml value "items.shiver_bracelet.strength" from "items" to 6
+	set yaml value "items.shiver_bracelet.accessory" from "items" to true
+
+	wait 1 tick
+
+	set yaml value "items.bone_necklace.name" from "items" to "&aBone Necklace"
+	set yaml value "items.bone_necklace.item" from "items" to "stick"
+	set yaml value "items.bone_necklace.custom_model_data" from "items" to 721
+	set yaml list "items.bone_necklace.lore" from "items" to "" and "&7Increases luck." and "" and "<##4cb61b>+5 Luck " and "" and "<##8f64de>ᴀᴄᴄᴇssᴏʀʏ ɪᴛᴇᴍ"
+	set yaml value "items.bone_necklace.luck" from "items" to 5
+	set yaml value "items.bone_necklace.accessory" from "items" to true
+
+	set yaml value "items.shackle.name" from "items" to "&aShackle"
+	set yaml value "items.shackle.item" from "items" to "stick"
+	set yaml value "items.shackle.custom_model_data" from "items" to 722
+	set yaml list "items.shackle.lore" from "items" to "" and "&7Increases toughness." and "" and "<##58d09c>+5 Toughness 🛡" and "" and "<##8f64de>ᴀᴄᴄᴇssᴏʀʏ ɪᴛᴇᴍ"
+	set yaml value "items.shackle.toughness" from "items" to 5
+	set yaml value "items.shackle.accessory" from "items" to true
+
+	set yaml value "items.gold_pouch.name" from "items" to "&aGold Pouch"
+	set yaml value "items.gold_pouch.item" from "items" to "stick"
+	set yaml value "items.gold_pouch.custom_model_data" from "items" to 723
+	set yaml list "items.gold_pouch.lore" from "items" to "" and "&7Increases health and luck." and "" and "<##df5252>+4 Health ❤" and "<##4cb61b>+4 Luck " and "" and "<##8f64de>ᴀᴄᴄᴇssᴏʀʏ ɪᴛᴇᴍ"
+	set yaml value "items.gold_pouch.health" from "items" to 4
+	set yaml value "items.gold_pouch.luck" from "items" to 4
+	set yaml value "items.gold_pouch.accessory" from "items" to true
+
+	set yaml value "items.magma_boots.name" from "items" to "&aMagma Boots"
+	set yaml value "items.magma_boots.item" from "items" to "stick"
+	set yaml value "items.magma_boots.custom_model_data" from "items" to 724
+	set yaml list "items.magma_boots.lore" from "items" to "" and "&7Increases toughness and regeneration." and "" and "<##58d09c>+5 Toughness 🛡" and "<##f2601c>+5 Regeneration 🍖" and "" and "<##8f64de>ᴀᴄᴄᴇssᴏʀʏ ɪᴛᴇᴍ"
+	set yaml value "items.magma_boots.toughness" from "items" to 5
+	set yaml value "items.magma_boots.regeneration" from "items" to 5
+	set yaml value "items.magma_boots.accessory" from "items" to true
+
+	set yaml value "items.wither_crown.name" from "items" to "&aWither Crown"
+	set yaml value "items.wither_crown.item" from "items" to "stick"
+	set yaml value "items.wither_crown.custom_model_data" from "items" to 725
+	set yaml list "items.wither_crown.lore" from "items" to "" and "&7Increases health." and "" and "<##df5252>+15 Health ❤" and "" and "<##8f64de>ᴀᴄᴄᴇssᴏʀʏ ɪᴛᴇᴍ"
+	set yaml value "items.wither_crown.health" from "items" to 15
+	set yaml value "items.wither_crown.accessory" from "items" to true
+
+	set yaml value "items.sculk_shield.name" from "items" to "&aSculk Shield"
+	set yaml value "items.sculk_shield.item" from "items" to "stick"
+	set yaml value "items.sculk_shield.custom_model_data" from "items" to 726
+	set yaml list "items.sculk_shield.lore" from "items" to "" and "&7Increases toughness." and "" and "<##58d09c>+15 Toughness 🛡" and "" and "<##8f64de>ᴀᴄᴄᴇssᴏʀʏ ɪᴛᴇᴍ"
+	set yaml value "items.sculk_shield.toughness" from "items" to 15
+	set yaml value "items.sculk_shield.accessory" from "items" to true
+
+	wait 2 tick
+
+	set yaml value "items.ender_gauntlet.name" from "items" to "&aEnder Gauntlet"
+	set yaml value "items.ender_gauntlet.item" from "items" to "stick"
+	set yaml value "items.ender_gauntlet.custom_model_data" from "items" to 727
+	set yaml list "items.ender_gauntlet.lore" from "items" to "" and "&7Increases strength." and "" and "<##b12222>+15 Strength 🗡" and "" and "<##8f64de>ᴀᴄᴄᴇssᴏʀʏ ɪᴛᴇᴍ"
+	set yaml value "items.ender_gauntlet.strength" from "items" to 15
+	set yaml value "items.ender_gauntlet.accessory" from "items" to true
+
+	set yaml value "items.blood_vial.name" from "items" to "&aBlood Vial"
+	set yaml value "items.blood_vial.item" from "items" to "stick"
+	set yaml value "items.blood_vial.custom_model_data" from "items" to 728
+	set yaml list "items.blood_vial.lore" from "items" to "" and "&7Increases regeneration and health." and "" and "<##f2601c>+8 Regeneration 🍖" and "<##df5252>+4 Health ❤" and "" and "<##8f64de>ᴀᴄᴄᴇssᴏʀʏ ɪᴛᴇᴍ"
+	set yaml value "items.blood_vial.regeneration" from "items" to 8
+	set yaml value "items.blood_vial.health" from "items" to 4
+	set yaml value "items.blood_vial.accessory" from "items" to true
+
+	set yaml value "items.cloak_of_wrath.name" from "items" to "&aCloak of Wrath"
+	set yaml value "items.cloak_of_wrath.item" from "items" to "stick"
+	set yaml value "items.cloak_of_wrath.custom_model_data" from "items" to 729
+	set yaml list "items.cloak_of_wrath.lore" from "items" to "" and "&7Increases strength and toughness." and "" and "<##b12222>+8 Strength 🗡" and "<##58d09c>+4 Toughness 🛡" and "" and "<##8f64de>ᴀᴄᴄᴇssᴏʀʏ ɪᴛᴇᴍ"
+	set yaml value "items.cloak_of_wrath.strength" from "items" to 8
+	set yaml value "items.cloak_of_wrath.toughness" from "items" to 4
+	set yaml value "items.cloak_of_wrath.accessory" from "items" to true
+
+	set yaml value "items.molten_dice.name" from "items" to "&aMolten Dice"
+	set yaml value "items.molten_dice.item" from "items" to "stick"
+	set yaml value "items.molten_dice.custom_model_data" from "items" to 730
+	set yaml list "items.molten_dice.lore" from "items" to "" and "&7Increases luck." and "" and "<##4cb61b>+10 Luck " and "" and "<##8f64de>ᴀᴄᴄᴇssᴏʀʏ ɪᴛᴇᴍ"
+	set yaml value "items.molten_dice.luck" from "items" to 10
+	set yaml value "items.molten_dice.accessory" from "items" to true
+
+	set yaml value "items.horseshoe.name" from "items" to "&aHorseshoe"
+	set yaml value "items.horseshoe.item" from "items" to "stick"
+	set yaml value "items.horseshoe.custom_model_data" from "items" to 731
+	set yaml list "items.horseshoe.lore" from "items" to "" and "&7Increases luck." and "" and "<##4cb61b>+15 Luck " and "" and "<##8f64de>ᴀᴄᴄᴇssᴏʀʏ ɪᴛᴇᴍ"
+	set yaml value "items.horseshoe.luck" from "items" to 15
+	set yaml value "items.horseshoe.accessory" from "items" to true
+
+	set yaml value "items.sunstone_ring.name" from "items" to "&aSunstone Ring"
+	set yaml value "items.sunstone_ring.item" from "items" to "stick"
+	set yaml value "items.sunstone_ring.custom_model_data" from "items" to 732
+	set yaml list "items.sunstone_ring.lore" from "items" to "" and "&7Increases wisdom and toughness." and "" and "<##6586e8>+5 Wisdom " and "<##58d09c>+2 Toughness 🛡" and "" and "<##8f64de>ᴀᴄᴄᴇssᴏʀʏ ɪᴛᴇᴍ"
+	set yaml value "items.sunstone_ring.wisdom" from "items" to 5
+	set yaml value "items.sunstone_ring.toughness" from "items" to 2
+	set yaml value "items.sunstone_ring.accessory" from "items" to true
+
+	wait 1 tick
+
+	set yaml value "items.zephyr_veil.name" from "items" to "&aZephyr Veil"
+	set yaml value "items.zephyr_veil.item" from "items" to "stick"
+	set yaml value "items.zephyr_veil.custom_model_data" from "items" to 733
+	set yaml list "items.zephyr_veil.lore" from "items" to "" and "&7Increases movement speed by 10%%" and "" and "<##8f64de>ᴀᴄᴄᴇssᴏʀʏ ɪᴛᴇᴍ"
+	set yaml value "items.zephyr_veil.movement_speed" from "items" to 10
+	set yaml value "items.zephyr_veil.accessory" from "items" to true
+
+	set yaml value "items.jungle_amulet.name" from "items" to "&aJungle Amulet"
+	set yaml value "items.jungle_amulet.item" from "items" to "stick"
+	set yaml value "items.jungle_amulet.custom_model_data" from "items" to 734
+	set yaml list "items.jungle_amulet.lore" from "items" to "" and "&7Increases movement speed by 5%%" and "" and "<##8f64de>ᴀᴄᴄᴇssᴏʀʏ ɪᴛᴇᴍ"
+	set yaml value "items.jungle_amulet.movement_speed" from "items" to 5
+	set yaml value "items.jungle_amulet.accessory" from "items" to true
+
+	set yaml value "items.golem_heart.name" from "items" to "&aGolem's Heart"
+	set yaml value "items.golem_heart.item" from "items" to "stick"
+	set yaml value "items.golem_heart.custom_model_data" from "items" to 735
+	set yaml list "items.golem_heart.lore" from "items" to "" and "&7Increases health." and "" and "<##df5252>+10 Health ❤" and "" and "<##8f64de>ᴀᴄᴄᴇssᴏʀʏ ɪᴛᴇᴍ"
+	set yaml value "items.golem_heart.health" from "items" to 10
+	set yaml value "items.golem_heart.accessory" from "items" to true
+
+	set yaml value "items.ankh_charm.name" from "items" to "&aAnkh Charm"
+	set yaml value "items.ankh_charm.item" from "items" to "stick"
+	set yaml value "items.ankh_charm.custom_model_data" from "items" to 736
+	set yaml list "items.ankh_charm.lore" from "items" to "" and "&7Increases strength and regeneration." and "" and "<##b12222>+8 Strength 🗡" and "<##f2601c>+8 Regeneration 🍖" and "" and "<##8f64de>ᴀᴄᴄᴇssᴏʀʏ ɪᴛᴇᴍ"
+	set yaml value "items.ankh_charm.strength" from "items" to 8
+	set yaml value "items.ankh_charm.regeneration" from "items" to 8
+	set yaml value "items.ankh_charm.accessory" from "items" to true
+
+	set yaml value "items.vampire_signet.name" from "items" to "&aVampire's Signet"
+	set yaml value "items.vampire_signet.item" from "items" to "stick"
+	set yaml value "items.vampire_signet.custom_model_data" from "items" to 737
+	set yaml list "items.vampire_signet.lore" from "items" to "" and "&7Increases health and regeneration." and "" and "<##df5252>+10 Health ❤" and "<##f2601c>+10 Regeneration 🍖" and "" and "<##8f64de>ᴀᴄᴄᴇssᴏʀʏ ɪᴛᴇᴍ"
+	set yaml value "items.vampire_signet.health" from "items" to 10
+	set yaml value "items.vampire_signet.regeneration" from "items" to 10
+	set yaml value "items.vampire_signet.accessory" from "items" to true
+
+	#	Dungeon Keys
+
+	set yaml value "items.skeleton_key.name" from "items" to "&aSkeleton Key"
+	set yaml value "items.skeleton_key.item" from "items" to "stick"
+	set yaml value "items.skeleton_key.custom_model_data" from "items" to 651
+	set yaml list "items.skeleton_key.lore" from "items" to "" and "&7A key that allows you to enter the Abandoned Mining Site" and "&7Can be used to enter the dungeon." and "" and "<##e6ab4e>ᴅᴜɴɢᴇᴏɴ ᴋᴇʏ"
+
+	set yaml value "items.dracula_key.name" from "items" to "&aDracula Key"
+	set yaml value "items.dracula_key.item" from "items" to "stick"
+	set yaml value "items.dracula_key.custom_model_data" from "items" to 652
+	set yaml list "items.dracula_key.lore" from "items" to "" and "&7A key that allows you to enter the Dracula's Manor" and "&7Can be used to enter the dungeon." and "" and "<##e6ab4e>ᴅᴜɴɢᴇᴏɴ ᴋᴇʏ"
+
+	wait 2 tick
+
+	set yaml value "items.desert_key.name" from "items" to "&aDesert Key"
+	set yaml value "items.desert_key.item" from "items" to "stick"
+	set yaml value "items.desert_key.custom_model_data" from "items" to 653
+	set yaml list "items.desert_key.lore" from "items" to "" and "&7A key that allows you to enter the Desert Ruins" and "&7Can be used to enter the dungeon." and "" and "<##e6ab4e>ᴅᴜɴɢᴇᴏɴ ᴋᴇʏ"
+
+	set yaml value "items.jungle_key.name" from "items" to "&aJungle Key"
+	set yaml value "items.jungle_key.item" from "items" to "stick"
+	set yaml value "items.jungle_key.custom_model_data" from "items" to 654
+	set yaml list "items.jungle_key.lore" from "items" to "" and "&7A key that allows you to enter the Jungle Dungeon" and "&7Can be used to enter the dungeon." and "" and "<##e6ab4e>ᴅᴜɴɢᴇᴏɴ ᴋᴇʏ"
+
+
+
+	#	Ingredients
+
+
+
+
+	set yaml value "items.zombie_brain.name" from "items" to "&aZombie Brain"
+	set yaml value "items.zombie_brain.item" from "items" to "stick"
+	set yaml value "items.zombie_brain.custom_model_data" from "items" to 601
+	set yaml list "items.zombie_brain.lore" from "items" to "" and "&7A rare Zombie drop." and "&7Can be sold or used in forging." and "" and "<##e6ab4e>ᴄʀᴀғᴛɪɴɢ sᴜᴘᴘʟʏ"
+
+	set yaml value "items.skeleton_skull.name" from "items" to "&aSkeleton Skull"
+	set yaml value "items.skeleton_skull.item" from "items" to "skeleton skull"
+	set yaml list "items.skeleton_skull.lore" from "items" to "" and "&7A rare Skeleton drop." and "&7Can be sold or used in forging." and "" and "<##e6ab4e>ᴄʀᴀғᴛɪɴɢ sᴜᴘᴘʟʏ"
+
+	set yaml value "items.spider_venom.name" from "items" to "&aSpider Venom"
+	set yaml value "items.spider_venom.item" from "items" to "stick"
+	set yaml value "items.spider_venom.custom_model_data" from "items" to 602
+	set yaml list "items.spider_venom.lore" from "items" to "" and "&7A rare Spider drop." and "&7Can be sold or used in forging." and "" and "<##e6ab4e>ᴄʀᴀғᴛɪɴɢ sᴜᴘᴘʟʏ"
+
+
+	set yaml value "items.dragonscale.name" from "items" to "&aDragonscale"
+	set yaml value "items.dragonscale.item" from "items" to "stick"
+	set yaml value "items.dragonscale.custom_model_data" from "items" to 603
+	set yaml list "items.dragonscale.lore" from "items" to "" and "&7A piece that broke off from" and "&7the armor of a legendary beast." and "&7Can be sold or used in forging." and "" and "<##e6ab4e>ᴄʀᴀғᴛɪɴɢ sᴜᴘᴘʟʏ"
+
+
+
+
+
+
+
+	#	Comments
+
+	set the comments of yaml node "items" from "items" to "Configuration file for items from Forge, Backpacks & Accessories"
+	save yaml "items"
+
+
+
+
+
+
+
+
+
+
+command /forge [<player>] [<text>]:
+	permission: admin
+	trigger:
+		set {_player} to player-arg
+
+#		stop
+		#	Loops through all recipes to then compare them to command argument
+		loop {forge::items_list::*}:
+			set {_crafted_item} to loop-value-1
+			
+			if arg 2 is {_crafted_item}:
+
+				#	Stops the code if player doesn't have all ingredients
+				if ForgeCanCraft({_player}, {_crafted_item}) is not true:
+#					send "insufficient ingredients" to {_player}
+					stop
+
+				#	Takes needed ingredients from the player
+
+				loop all items in {_player}'s inventory:
+					add loop-item to {_player_items::*}
+
+				loop {forge::recipe::%{_crafted_item}%::*}:
+
+					set {_ingredient} to loop-value-2
+					set {_amount} to GetIngredientAmount({_ingredient})
+					set {_item} to GetIngredientItem({_ingredient})
+
+					loop {_player_items::*}:
+						set {_p_item} to loop-value-3
+						if "%type of {_p_item}%" is "%type of {_item}%":
+							if "%custom model data of {_p_item}%" is "%custom model data of {_item}%":
+								if item amount of {_p_item} >= {_amount}:
+									set {_n} to nbt compound of {_p_item}
+									if compound list tag "items" of {_n} is set:
+										set {_bp_items::*} to compound list tag "items" of {_n}
+									remove {_amount} of {_p_item} from {_player}
+									exit loop
+
+				#	Gives player the crafting product
+
+				if {forge::item::%{_crafted_item}%::rows} is set:
+					set {_crafted_item} to GenerateBackpack({_crafted_item})
+				else:
+					set {_crafted_item} to {item::%{_crafted_item}%}
+				if {_bp_items::*} is set:
+					set {_n} to nbt compound of {_crafted_item}
+#					send "full nbt compound: %{_n}%" to {_player}
+#					send "items list tag %compound list tag "items" of {_n}%" to {_player}
+#					send "var items: %{_bp_items::*}%" to {_player}
+					set compound list tag "items" of {_n} to {_bp_items::*}
+#					send "&a%compound list tag "items" of {_n}%" to {_player}
+				if {_player} has space for {_crafted_item}:
+					give {_crafted_item} to {_player}
+				else:
+					drop {_crafted_item} at {_player}
+					send "&f &fYou don't have space for more items!" to {_player}
+				play sound "entity.villager.work_toolsmith" with volume 1 and pitch 1.2 at {_player}
+				ForgeUpdateCraftableItems({_player})
+
+
+
+
+function ForgeCanCraft(player: player, item: string) :: boolean:
+	
+	loop {forge::recipe::%{_item}%::*}:
+		set {_boolean} to false
+		set {_amount} to GetIngredientAmount(loop-value)
+		set {_item_type} to GetIngredientItem(loop-value)
+
+		if {_player}'s inventory contains {_amount} of {_item_type} with custom model data {_item_type}:
+			set {_boolean} to true
+		else:
+			return false
+	return true
+
+
+
+
+
+
+function ForgeUpdateCraftableItems(player: player):
+	if difference between metadata value "forge_updatecraftableitems_cooldown" of {_player} and now < 0.3 second:
+		stop
+	set metadata value "forge_updatecraftableitems_cooldown" of {_player} to now
+	
+#	loop all items in {_player}'s inventory:
+#		add loop-item to {_player_items::*}
+	
+	load yaml "unlimited_adventures/CustomItems/recipes.yml" as "recipes"
+	loop yaml node keys "recipes" from "recipes":
+		add loop-value to {_list_of_craftable_items::*}
+	save yaml "recipes"
+	wait 1 tick
+
+	loop {_list_of_craftable_items::*}:
+		set {_item} to loop-value
+		add 1 to {_loop_nr}
+		loop {forge::recipe::%{_item}%::*}:
+			
+			set {_ingredient} to loop-value-2
+			set {_amount} to GetIngredientAmount({_ingredient})
+			set {_item_type} to GetIngredientItem({_ingredient})
+
+			set {_boolean} to false
+
+			if {_player}'s inventory contains {_amount} of {_item_type} with custom model data {_item_type}:
+				set {_boolean} to true
+			else:
+				exit loop
+
+		if {_boolean} is true:
+			add {_item} to {_items_player_can_craft::*}
+		if mod({_loop_nr}, 8) is 0:
+			wait 1 tick
+
+	set metadata value "forge_craftable_items" of {_player} to "%{_items_player_can_craft::*}%"
+
+
+
+
+
+function IsForgeIngredient(item: string) :: boolean:
+	loop {forge::items_list::*}:
+		if {_item} is loop-value:
+			return true
+			stop
+	return false
+
+
+command /forgeupdatecraftableitems [<player>]:
+	permission: admin
+	trigger:
+		ForgeUpdateCraftableItems(player-arg)
+
+
+
+
+
+
+
+
+function MobForgeDrops(victim: entity):
+	set {_victim_name} to "%{_victim}%"
+	replace all " " with "_" in {_victim_name}
+
+	if {forge::global::mobs::*} contains {_victim_name}:
+		loop {forge::drops::global::%{_victim_name}%::*}:
+			set {_chance} to loop-value
+			if difference between {booster::luck::date} and now < {booster::luck::duration}:
+				set {_chance} to {_chance}*2
+#				send "chance: %{_chance}%  item: %loop-index%" to all players
+			if {_chance} <= 100:
+				chance of {_chance}%:
+					if {item::*} contains loop-index:
+						drop 1 of {item::%loop-index%} at {_victim}
+					else:
+						set {_item} to loop-index
+						replace all "_" with " " in {_item}
+						set {_item} to {_item} parsed as item
+						drop 1 of {_item} at {_victim}
+			else:
+				set {_amount} to round({_chance}/100)
+				if {_victim} is a ender dragon:
+					wait 15 seconds
+					drop {_amount} of {item::%loop-index%} at {_victim}
+				else:
+					drop {_amount} of {item::%loop-index%} at {_victim}
+
+
+
+
+
+
+
+
+
+
+
+
+
+command /customitemsreload:
+	aliases: forgereload
+	permission: admin
+	trigger:
+		ForgeReload()
+		wait 3 seconds
+		send "&f &fConfig of Custom Items has been reloaded!" to sender
+
+
+
+
+command /forgeunlock [<player>] [<text>]:
+	aliases: unlockforge
+	permission: admin
+	trigger:
+		loop {forge::items_list::*}:
+			if arg-2 is loop-value:
+				set {forge::recipe::%loop-value%::unlocked::%uuid of player-arg%} to true
+				exit loop
+
+
+on tab complete of "/forgeunlock":
+	set {_list::*} to {forge::items_list::*}
+	loop {forge::items_list::*}:
+		if {forge::recipe::%loop-value%::unlocked::%uuid of player%} is true:
+			remove loop-value from {_list::*}
+	set tab completions for position 2 to {_list::*}
+
+
+
+
+
+
+function ForgeItemsReload():
+	#	Forge Items (Backpacks, Accessories, Weapons, Tools, etc.)
+	loop 20 times:
+		wait 0.5 second
+		if {forge::items_list::*} is not set:
+			continue
+	set {_item_nr} to 0
+	loop {forge::items_list::*}:
+		add 1 to {_item_nr}
+		set {_flags} to false
+		set {_item} to loop-value
+
+		if {forge::item::%{_item}%::item} is set:
+		
+			#	Item
+			set {item::%{_item}%} to {forge::item::%{_item}%::item}
+			#	Name
+			if {forge::item::%{_item}%::name} is set:
+				set name of {item::%{_item}%} to {forge::item::%{_item}%::name}
+			#	Custom Model Data
+			if {forge::item::%{_item}%::custom_model_data} is set:
+				set custom model data of {item::%{_item}%} to {forge::item::%{_item}%::custom_model_data}
+			#	Armor value (armor & toughness)
+			if {_item} contains "helmet":
+				set {_part} to "head"
+			if {_item} contains "chestplate":
+				set {_part} to "chest"
+			if {_item} contains "leggings":
+				set {_part} to "legs"
+			if {_item} contains "boots":
+				set {_part} to "feet"
+			if {_item} contains "sword" or "axe":
+				set {_part} to "mainhand"
+			if {forge::item::%{_item}%::attack_damage} is set:
+				set {item::%{_item}%} to AddItemAttribute({item::%{_item}%}, "generic.attack_damage", {forge::item::%{_item}%::attack_damage}, 0, {_part})
+				set {_flags} to true
+			if {forge::item::%{_item}%::attack_speed} is set:
+				set {item::%{_item}%} to AddItemAttribute({item::%{_item}%}, "generic.attack_speed", {forge::item::%{_item}%::attack_speed}, 0, {_part})
+				set {_flags} to true
+			if {forge::item::%{_item}%::armor} is set:
+				set {item::%{_item}%} to AddItemAttribute({item::%{_item}%}, "generic.armor", {forge::item::%{_item}%::armor}, 0, {_part})
+			if {forge::item::%{_item}%::armor_toughness} is set:
+				set {item::%{_item}%} to AddItemAttribute({item::%{_item}%}, "generic.armor_toughness", {forge::item::%{_item}%::armor_toughness}, 0, {_part})
+			if {forge::item::%{_item}%::knockback_resistance} is set:
+				set {item::%{_item}%} to AddItemAttribute({item::%{_item}%}, "generic.knockback_resistance", {forge::item::%{_item}%::knockback_resistance}, 0, {_part})
+			if {forge::item::%{_item}%::unbreakable} is true:
+				set {item::%{_item}%} to unbreakable {item::%{_item}%}
+
+			if {_flags} is true:
+#				add attributes flag to hidden item flags of {item::%{_item}%}
+				add hide attributes to item flags of {item::%{_item}%}
+
+			#	Lore
+			set {_nr} to 0
+			loop {forge::item::%loop-value%::lore::*}:
+				add 1 to {_nr}
+				set line {_nr} of lore of {item::%{_item}%} to colored loop-value-2
+
+
+		if mod({_item_nr}, 5) is 0:
+			wait 1 tick
+
+
+
+
+

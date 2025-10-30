@@ -1,0 +1,58 @@
+# Please DO NOT change version number!
+version: 1
+
+#  
+# Forge Items crafting recipes:
+#  
+recipes:
+    dragonscale_sword:
+    - 2 of custom:dragonscale
+    dragonscale_axe:
+    - 3 of custom:dragonscale
+    dragonscale_helmet:
+    - 5 of custom:dragonscale
+    dragonscale_chestplate:
+    - 8 of custom:dragonscale
+    dragonscale_leggings:
+    - 7 of custom:dragonscale
+    dragonscale_boots:
+    - 4 of custom:dragonscale
+    random_teleportation_scroll:
+    - paper
+    - 2 of lapis lazuli
+    - 2 of amethyst shard
+    home_teleportation_scroll:
+    - paper
+    - 2 of lapis lazuli
+    - 2 of amethyst shard
+    - 2 of gold ingot
+    portal_stone:
+    - echo shard
+    - 4 of amethyst shard
+    - 4 of ender eye
+    traveler_backpack:
+    - 10 of leather
+    - 2 of iron ingots
+    adventure_backpack:
+    - custom:traveler_backpack
+    - 5 of iron ingots
+    - 10 of string
+    hero_backpack:
+    - custom:adventure_backpack
+    - 2 of diamond
+    - 5 of gold ingots
+    bone_sword:
+    - 10 of custom:skeleton_skull
+    wool_scarf:
+    - 10 white wool
+    - 10 red wool
+    - 10 strings
+    lightning_boots:
+    - custom:hermes_boots
+    - custom:rocket_boots
+    miner_helmet_lamp:
+    - custom:miner_helmet
+    - custom:flashlight
+    talisman_of_vitality:
+    - custom:philosopher_stone
+    - custom:silver_chain

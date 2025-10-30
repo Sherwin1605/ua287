@@ -1,0 +1,280 @@
+panels:
+  sell_menu_farming:
+    perm: default
+    rows: 5
+    title: '&f'
+    empty: AIR
+    sound-on-open: BLOCK_NOTE_BLOCK_HAT
+    item:
+
+
+      '0':
+        material: STICK
+        customdata: 1
+        name: '&c← Previous Menu'
+        commands:
+        - open= main_menu
+      
+      
+      
+      '38':
+        material: STICK
+        customdata: 1
+        name: '&a← Previous Page'
+        commands:
+        - open= sell_menu_minerals
+      '42':
+        material: STICK
+        customdata: 2
+        name: '&aNext Page →'
+        commands:
+        - open= sell_menu_mob_drops
+
+      
+      
+      
+      '10':
+        material: WHEAT
+        stack: 16
+        name: '%color_menu_primary%Wheat'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7SELL &f&l16 &7FOR %color_gold%60 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - sell= 60 WHEAT 16
+      '11':
+        material: POTATO
+        stack: 16
+        name: '%color_menu_primary%Potato'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7SELL &f&l16 &7FOR %color_gold%80 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - sell= 80 POTATO 16
+      '12':
+        material: CARROT
+        stack: 16
+        name: '%color_menu_primary%Carrot'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7SELL &f&l16 &7FOR %color_gold%80 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - sell= 80 CARROT 16
+      '13':
+        material: BEETROOT
+        stack: 16
+        name: '%color_menu_primary%Beetroot'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7SELL &f&l16 &7FOR %color_gold%80 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - sell= 80 BEETROOT 16
+      '14':
+        material: MELON_SLICE
+        stack: 16
+        name: '%color_menu_primary%Melon'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7SELL &f&l16 &7FOR %color_gold%35 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - sell= 35 MELON_SLICE 16
+      '15':
+        material: PUMPKIN
+        stack: 8
+        name: '%color_menu_primary%Pumpkin'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7SELL &f&l8 &7FOR %color_gold%40 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - sell= 40 PUMPKIN 8
+      '16':
+        material: CACTUS
+        stack: 16
+        name: '%color_menu_primary%Cactus'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7SELL &f&l16 &7FOR %color_gold%20 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - sell= 20 CACTUS 16
+      
+      
+      
+      
+      '19':
+        material: SWEET_BERRIES
+        stack: 16
+        name: '%color_menu_primary%Sweet Berries'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7SELL &f&l16 &7FOR %color_gold%25 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - sell= 25 SWEET_BERRIES 16
+      '20':
+        material: SUGAR_CANE
+        stack: 16
+        name: '%color_menu_primary%Sugar Cane'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7SELL &f&l16 &7FOR %color_gold%20 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - sell= 20 SUGAR_CANE 16
+      '21':
+        material: BAMBOO
+        stack: 16
+        name: '%color_menu_primary%Bamboo'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7SELL &f&l16 &7FOR %color_gold%10 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - sell= 10 BAMBOO 16
+      '22':
+        material: COCOA_BEANS
+        stack: 16
+        name: '%color_menu_primary%Cocoa Beans'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7SELL &f&l16 &7FOR %color_gold%25 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - sell= 25 COCOA_BEANS 16
+      '23':
+        material: APPLE
+        stack: 16
+        name: '%color_menu_primary%Apple'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7SELL &f&l16 &7FOR %color_gold%120 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - sell= 120 APPLE 16
+      '24':
+        material: GOLDEN_APPLE
+        stack: 1
+        name: '%color_menu_primary%Golden Apple'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7SELL &f&l1 &7FOR %color_gold%100 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - sell= 100 GOLDEN_APPLE 1
+      '25':
+        material: HONEYCOMB
+        stack: 16
+        name: '%color_menu_primary%Honeycomb'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7SELL &f&l16 &7FOR %color_gold%120 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - sell= 120 HONEYCOMB 16
+      
+      
+      
+      
+      '28':
+        material: EGG
+        stack: 16
+        name: '%color_menu_primary%Egg'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7SELL &f&l16 &7FOR %color_gold%40 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - sell= 40 EGG 16
+      '29':
+        material: PORKCHOP
+        stack: 16
+        name: '%color_menu_primary%Raw Porkchop'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7SELL &f&l16 &7FOR %color_gold%90 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - sell= 90 PORKCHOP 16
+      '30':
+        material: BEEF
+        stack: 16
+        name: '%color_menu_primary%Raw Beef'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7SELL &f&l16 &7FOR %color_gold%90 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - sell= 90 BEEF 16
+      '31':
+        material: MUTTON
+        stack: 16
+        name: '%color_menu_primary%Raw Mutton'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7SELL &f&l16 &7FOR %color_gold%90 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - sell= 90 MUTTON 16
+      '32':
+        material: CHICKEN
+        stack: 16
+        name: '%color_menu_primary%Raw Chicken'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7SELL &f&l16 &7FOR %color_gold%90 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - sell= 90 CHICKEN 16
+      '33':
+        material: COD
+        stack: 16
+        name: '%color_menu_primary%Raw Cod'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7SELL &f&l16 &7FOR %color_gold%100 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - sell= 100 COD 16
+      '34':
+        material: SALMON
+        stack: 16
+        name: '%color_menu_primary%Raw Salmon'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7SELL &f&l16 &7FOR %color_gold%100 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - sell= 100 SALMON 16
+        
+        
+        
+        
+      
+

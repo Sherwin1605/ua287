@@ -50,9 +50,9 @@ recent:
     material: "OAK_SIGN"
 
     item:
-      material: "OAK_SIGN"
-      data: 0
-      name: "&bSearch"
+      material: "STICK"
+      data: 18
+      name: "{#31ed96}Search"
       lore:
       - "&eClick&b to search for an auction."
       - " "
@@ -81,7 +81,7 @@ recent:
     - "&bID: &e[id]"
     - "&bSeller: &e[seller]"
     - "&bAmount: &e[amount]x"
-    - "&bPrice: &e[price] [price_item]"
+    - "&bPrice: &e[price] Gold &f [price_item]"
     - "&bBought on: &e[date]"
     - "&7--------------------------"
 
@@ -107,7 +107,7 @@ recent:
     - "&bID: &e[id]"
     - "&bSeller: &e[seller]"
     - "&bAmount: &e[amount]x"
-    - "&bPrice: &e[price] [price_item]"
+    - "&bPrice: &e[price] Gold &f &6[price_item]"
     - "&bSold on: &e[date]"
     - "&7--------------------------"
     # What are the commands that are ran when a player clicks on an auction?
@@ -145,7 +145,7 @@ recent:
   items:
     1:
       name: " "
-      material: "BLACK_STAINED_GLASS_PANE"
+      material: "LIGHT_BLUE_STAINED_GLASS_PANE"
       data: 3
       slot:
       - 45
@@ -156,7 +156,7 @@ recent:
       glowing: false
     2:
       name: " "
-      material: "BLACK_STAINED_GLASS_PANE"
+      material: "YELLOW_STAINED_GLASS_PANE"
       data: 4
       slot:
       - 46

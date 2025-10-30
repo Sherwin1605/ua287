@@ -220,7 +220,7 @@ Messages:
   ShovelBasicClaimMode:
     Text: Shovel returned to basic claims mode.
   RemainingBlocks:
-    Text: ௜ $cYou may claim up to {0} more blocks.
+    Text: You may claim up to {0} more blocks.
     Notes: '0: remaining blocks'
   CreativeBasicsVideo2:
     Text: 'Click for Land Claim Help: {0}'
@@ -300,7 +300,7 @@ Messages:
   ClaimsDisabledWorld:
     Text: Land claims are disabled in this world.
   ClaimStart:
-    Text: ௜ $cClaim corner set!  Use the shovel again at the opposite corner to claim
+    Text: Claim corner set!  Use the shovel again at the opposite corner to claim
       a rectangle of land.  To cancel, put your shovel away.
   NewClaimTooNarrow:
     Text: This claim would be too small.  Any claim must be at least {0} blocks wide.

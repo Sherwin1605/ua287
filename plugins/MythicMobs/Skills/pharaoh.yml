@@ -1,0 +1,142 @@
+### Standard Kick Attack
+
+pharaoh_attack_parse:
+  Conditions:
+  - offgcd
+  - onground
+  - hasaura{n=skill_used} false
+  - targetwithin{d=5} true
+  Skills:
+  - CancelEvent
+  - skill{s=pharaoh_attack}
+  
+pharaoh_attack:
+  Conditions:
+  - targetwithin{d=5} true
+  Skills:
+  - gcd{ticks=50}
+  - look{headOnly=false;immediately=true} @target
+  - randomskill{s=pharaoh_attack_animation_1,pharaoh_attack_animation_2}
+  - setspeed{speed=0.8;type=walking} @self
+  - skill{s=dracula_kick_animation_1}
+  - sound{s=entity.zoglin.attack;p=1.5;v=0.6} @self
+  - delay 12
+  - sound{s=entity.zombie.attack_wooden_door;p=1;v=1} @self
+  - damage{amount=24} @target
+  - throw{velocity=12;velocityY=0.8} @PlayersInRadius{r=4}
+  - setspeed{speed=1;type=walking} @self
+
+pharaoh_cancel_attack:
+  Skills:
+  - CancelEvent
+
+pharaoh_attack_animation_1:
+  Skills:
+  - state{s=attack;li=1} @self
+
+pharaoh_attack_animation_2:
+  Skills:
+  - state{s=attack_2;li=1} @self
+
+
+
+### Throw Ability
+
+pharaoh_throw_parse:
+  Conditions:
+  - offgcd
+  - targetwithin{d=4} true
+  - hasaura{n=skill_used} false
+  - hasaura{n=throw_used} false
+  Skills:
+  - CancelEvent
+  - skill{s=pharaoh_throw}
+
+pharaoh_throw:
+  Skills:
+  - gcd{ticks=50}
+  - aura{auraname=skill_used;d=80} @self
+  - aura{auraname=throw_used;d=300} @self
+  - look{headOnly=false;force=true}
+  - state{state=throw;li=1;n=false;speed=1} @self
+  - sound{s=entity.zombie.attack_wooden_door;p=1;v=2} @self
+  - sound{s=entity.goat.long_jump;p=0.5;v=2} @self
+  - sound{s=entity.goat.long_jump;p=1;v=2} @self
+  - delay 12
+  - damage{amount=32} @target @PlayersInRadius{r=5}
+  - throw{velocity=10;velocityY=15} @PlayersInRadius{r=5}
+
+
+### Ground Slam
+
+pharaoh_ground_slam_parse:
+  Conditions:
+  - offgcd
+  - targetwithin{d=5} true
+  - hasaura{n=skill_used} false
+  - hasaura{n=ground_slam_used} false
+  Skills:
+  - CancelEvent
+  - skill{s=pharaoh_ground_slam}
+
+pharaoh_ground_slam:
+  Skills:
+  - gcd{ticks=120}
+  - aura{auraname=skill_used;d=160} @self
+  - aura{auraname=ground_slam_used;d=300} @self
+  - look{headOnly=false;force=true}
+  - state{state=ground_slam;li=1;n=false;speed=1} @self
+  - sound{s=entity.polar_bear.hurt;p=0.5;v=2} @self
+  - sound{s=entity.polar_bear.hurt;p=1;v=2} @self
+  - delay 15
+  - sound{s=block.note_block.didgeridoo;p=0.5;v=2} @self
+  - delay 3
+  - sound{s=block.note_block.didgeridoo;p=0.7;v=2} @self
+  - delay 3
+  - sound{s=block.note_block.didgeridoo;p=0.9;v=2} @self
+  - delay 3
+  - sound{s=block.note_block.didgeridoo;p=1.1;v=2} @self
+  - delay 3
+  - sound{s=block.note_block.didgeridoo;p=1.3;v=2} @self
+  - delay 3
+  - sound{s=block.note_block.didgeridoo;p=1.5;v=2} @self
+  - delay 3
+  - sound{s=block.note_block.didgeridoo;p=1.7;v=2} @self
+  - delay 3
+  - sound{s=block.note_block.didgeridoo;p=1.9;v=2} @self
+  - delay 3
+  - sound{s=entity.zombie.break_wooden_door;p=0.5;v=3} @self
+  - sound{s=entity.zombie.break_wooden_door;p=1;v=3} @self
+  - sound{s=entity.zombie.attack_iron_door;p=0.5;v=3} @self
+  - damage{amount=50} @PlayersInRadius{r=4}
+  - damage{amount=35} @PlayersInRadius{r=8}
+  - damage{amount=20} @PlayersInRadius{r=12}
+  - throw{velocity=5;velocityY=10} @PlayersInRadius{r=8}
+
+
+
+
+### Hurt Events
+
+pharaoh_hurt:
+  Conditions:
+  - onground{} true cancel
+  Skills:
+  - randomskill{s=pharaoh_hurt_1,pharaoh_hurt_2;sync=true}
+
+pharaoh_hurt_1:
+  Skills:
+  - state{state=hurt;li=1;n=false;speed=1} @self
+
+pharaoh_hurt_2:
+  Skills:
+  - state{state=hurt_2;li=1;n=false;speed=1} @self
+
+
+pharaoh_chase:
+  Conditions:
+  - targetnotwithin{d=20} true
+  Skills:
+  - setspeed{speed=2;type=walking} @self
+  - delay 20
+  - setspeed{speed=1;type=walking} @self

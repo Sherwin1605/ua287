@@ -1,0 +1,12 @@
+# Please DO NOT change version number!
+version: 1
+
+no_permission: You don't have access to that command.
+
+no_space: You don't have space for this reward.
+
+reward_claim_title: Cogratulations!
+
+reward_claim: "You claimed your reward for joining §x&3&1&e&d&9&6DAY_NUMBER DAYS §x&7&d&f&f&4&9in a row!"
+
+reward_claim_first_day: "You claimed your reward for joining §x&3&1&e&d&9&6FIRST DAY §x&7&d&f&f&4&9in a row!"

@@ -6,12 +6,12 @@
 
 category:
   # Should you enable a category gui meaning items will have to sort into a category?
-  enabled: false
+  enabled: true
   # What is the name of the gui?
   name: "category"
   # If you don't want the category menu to be disabled entirely, but you don't want it to open up on prompt
   # then you can select the default category it'll open up or set it to main if you want the main menu.
-  prompt-category: "main"
+  prompt-category: "all"
   # The title of the gui (Can use color codes)
   title: "&b&lPlayer Auctions"
   # What is the size of this GUI? (multiples of 9 can only go up to 54)

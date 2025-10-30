@@ -1,6 +1,6 @@
 mana_abilities:
   auraskills/replenish:
-    enabled: false
+    enabled: true
     base_value: 5.0
     value_per_level: 5.0
     base_cooldown: 200
@@ -17,7 +17,7 @@ mana_abilities:
     show_particles: true
     prevent_unripe_break: true
   auraskills/treecapitator:
-    enabled: false
+    enabled: true
     base_value: 5.0
     value_per_level: 5.0
     base_cooldown: 200
@@ -31,9 +31,8 @@ mana_abilities:
     check_offhand: true
     sneak_offhand_bypass: true
     max_blocks_multiplier: 1
-    give_xp: true
   auraskills/speed_mine:
-    enabled: false
+    enabled: true
     base_value: 5.0
     value_per_level: 5.0
     base_cooldown: 200
@@ -48,7 +47,7 @@ mana_abilities:
     sneak_offhand_bypass: true
     haste_level: 10
   auraskills/sharp_hook:
-    enabled: false
+    enabled: true
     base_value: 0.5
     value_per_level: 0.5
     base_cooldown: 2
@@ -62,7 +61,7 @@ mana_abilities:
     enable_sound: true
     disable_health_check: false
   auraskills/terraform:
-    enabled: false
+    enabled: true
     base_value: 5.0
     value_per_level: 4.0
     base_cooldown: 200
@@ -77,7 +76,7 @@ mana_abilities:
     sneak_offhand_bypass: true
     max_blocks: 61
   auraskills/charged_shot:
-    enabled: false
+    enabled: true
     base_value: 0.5
     value_per_level: 0.3
     base_cooldown: 0
@@ -91,7 +90,7 @@ mana_abilities:
     enable_sound: true
     always_enabled: false
   auraskills/absorption:
-    enabled: false
+    enabled: true
     base_value: 2.0
     value_per_level: 3.0
     base_cooldown: 200
@@ -103,7 +102,7 @@ mana_abilities:
     max_level: 0
     enable_particles: true
   auraskills/lightning_blade:
-    enabled: false
+    enabled: true
     base_value: 5.0
     value_per_level: 5.0
     base_cooldown: 200
@@ -118,4 +117,4 @@ mana_abilities:
     require_sneak: false
     check_offhand: true
     sneak_offhand_bypass: true
-file_version: 3
+file_version: 2

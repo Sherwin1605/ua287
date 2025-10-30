@@ -1,0 +1,166 @@
+events:
+  obj_1: folder track_obj,obj_1_title,obj_1_desc_1,obj_1_desc_2,quests.start_quest_1,reset_finished_quests
+  obj_2: folder track_obj,obj_2_title,obj_2_desc_1,obj_2_desc_2,quests.start_quest_2
+  obj_3: folder track_obj,obj_3_title,obj_3_desc_1,obj_3_desc_2,quests.start_quest_3
+  obj_4: folder track_obj,obj_4_title,obj_4_desc_1,obj_4_desc_2,quests.start_quest_4
+  obj_5: folder track_obj,obj_5_title,obj_5_desc_1,obj_5_desc_2,quests.start_quest_5
+  obj_6: folder track_obj,obj_6_title,obj_6_desc_1,obj_6_desc_2,quests.start_quest_6
+  obj_7: folder track_obj,obj_7_title,obj_7_desc_1,obj_7_desc_2,quests.start_quest_7
+  obj_8: folder track_obj,obj_8_title,obj_8_desc_1,obj_8_desc_2,quests.start_quest_8
+  obj_9: folder track_obj,obj_9_title,obj_9_desc_1,obj_9_desc_2,quests.start_quest_9
+  obj_10: folder track_obj,obj_10_title,obj_10_desc_1,obj_10_desc_2,quests.start_quest_10
+  obj_11: folder track_obj,obj_11_title,obj_11_desc_1,obj_11_desc_2,quests.start_quest_11
+  obj_12: folder track_obj,obj_12_title,obj_12_desc_1,obj_12_desc_2,quests.start_quest_12
+  obj_13: folder track_obj,obj_13_title,obj_13_desc_1,obj_13_desc_2,quests.start_quest_13
+  obj_14: folder track_obj,obj_14_title,obj_14_desc_1,obj_14_desc_2,quests.start_quest_14
+  obj_15: folder track_obj,obj_15_title,obj_15_desc_1,obj_15_desc_2,quests.start_quest_15
+  obj_16: folder track_obj,obj_16_title,obj_16_desc_1,obj_16_desc_2,quests.start_quest_16
+  obj_17: folder track_obj,obj_17_title,obj_17_desc_1,obj_17_desc_2,quests.start_quest_17
+  obj_18: folder track_obj,obj_18_title,obj_18_desc_1,obj_18_desc_2,quests.start_quest_18
+  obj_19: folder track_obj,obj_19_title,obj_19_desc_1,obj_19_desc_2,quests.start_quest_19
+  obj_20: folder track_obj,obj_20_title,obj_20_desc_1,obj_20_desc_2,quests.start_quest_20
+  obj_21: folder track_obj,obj_21_title,obj_21_desc_1,obj_21_desc_2,quests.start_quest_21
+  obj_22: folder track_obj,obj_22_title,obj_22_desc_1,obj_22_desc_2,quests.start_quest_22
+  obj_23: folder track_obj,obj_23_title,obj_23_desc_1,obj_23_desc_2,quests.start_quest_23
+  obj_24: folder track_obj,obj_24_title,obj_24_desc_1,obj_24_desc_2,quests.start_quest_24
+  obj_25: folder track_obj,obj_25_title,obj_25_desc_1,obj_25_desc_2,quests.start_quest_25
+  obj_26: folder track_obj,obj_26_title,obj_26_desc_1,obj_26_desc_2,quests.start_quest_26
+  obj_27: folder track_obj,obj_27_title,obj_27_desc_1,obj_27_desc_2,quests.start_quest_27
+  obj_28: folder track_obj,obj_28_title,obj_28_desc_1,obj_28_desc_2,quests.start_quest_28
+  obj_29: folder track_obj,obj_29_title,obj_29_desc_1,obj_29_desc_2,quests.start_quest_29
+  obj_30: folder track_obj,obj_30_title,obj_30_desc_1,obj_30_desc_2,quests.start_quest_30
+  track_obj: objective add questInfo
+  
+  quest_finished: point finishedQuests +1
+  reset_finished_quests: point finishedQuests *0
+  
+  obj_1_title: variable questInfo QuestTitle "&aStory begins"
+  obj_1_desc_1: variable questInfo QuestDesc1 " &f&7Visit the &eQuestsmaster &7and"
+  obj_1_desc_2: variable questInfo QuestDesc2 " &f&7accept your first quest!"
+  
+  obj_2_title: variable questInfo QuestTitle "&aIt all begins in a cave"
+  obj_2_desc_1: variable questInfo QuestDesc1 " &f&7You need to go underground"
+  obj_2_desc_2: variable questInfo QuestDesc2 " &f&7and mine &f100 Stone"
+  
+  obj_3_title: variable questInfo QuestTitle "&aArm yourself!"
+  obj_3_desc_1: variable questInfo QuestDesc1 " &f&7To survive, you need a weapon."
+  obj_3_desc_2: variable questInfo QuestDesc2 " &f&fIron Sword &7will do for now."
+  
+  obj_4_title: variable questInfo QuestTitle "&aEarn your Bread!"
+  obj_4_desc_1: variable questInfo QuestDesc1 "&f &7You need to gather a stable supply"
+  obj_4_desc_2: variable questInfo QuestDesc2 "&f &7of food. Grow wheat and craft
+    a &fBread."
+  
+  obj_5_title: variable questInfo QuestTitle "&aBow Up!"
+  obj_5_desc_1: variable questInfo QuestDesc1 "&f &7In order to fight your foes"
+  obj_5_desc_2: variable questInfo QuestDesc2 "&f &7effectively, you should use a
+    &fBow!"
+  
+  obj_6_title: variable questInfo QuestTitle "&aIf I'm missin' I've gone fishin'"
+  obj_6_desc_1: variable questInfo QuestDesc1 "&f &7Catch &f5 Cods&7, and remember."
+  obj_6_desc_2: variable questInfo QuestDesc2 "&f &7It's not only fun, but also healthy!"
+  
+  obj_7_title: variable questInfo QuestTitle "&aCreepy Mission"
+  obj_7_desc_1: variable questInfo QuestDesc1 "&f &7Creepers are not good."
+  obj_7_desc_2: variable questInfo QuestDesc2 "&f &7You need to &feliminate 10 of
+    them!"
+  
+  obj_8_title: variable questInfo QuestTitle "&aLooney Tunes"
+  obj_8_desc_1: variable questInfo QuestDesc1 "&f &7Craft a &fNote Block"
+  obj_8_desc_2: variable questInfo QuestDesc2 "&f &7and play some tunes!"
+  
+  obj_9_title: variable questInfo QuestTitle "&aSweet Life"
+  obj_9_desc_1: variable questInfo QuestDesc1 "&f &7You can't bake yourself a sweet
+    life,"
+  obj_9_desc_2: variable questInfo QuestDesc2 "&f &7but you can bake yourself a &fCake&7!"
+  
+  obj_10_title: variable questInfo QuestTitle "&aGolden Tooth"
+  obj_10_desc_1: variable questInfo QuestDesc1 "&f &7Eat a &fGolden Apple."
+  obj_10_desc_2: variable questInfo QuestDesc2 "&f &7Watch out for your teeth though!"
+  
+  obj_11_title: variable questInfo QuestTitle "&aDwarf's Quest"
+  obj_11_desc_1: variable questInfo QuestDesc1 "&f &7You need to go to the mine"
+  obj_11_desc_2: variable questInfo QuestDesc2 "&f &7and look for some &fDiamonds&7."
+  
+  obj_12_title: variable questInfo QuestTitle "&aMultidimensional Storage"
+  obj_12_desc_1: variable questInfo QuestDesc1 "&f &7Ender Chest &7is a safe storage"
+  obj_12_desc_2: variable questInfo QuestDesc2 "&f &7place. You should craft one!"
+  
+  obj_13_title: variable questInfo QuestTitle "&aFinger Lickin' Good"
+  obj_13_desc_1: variable questInfo QuestDesc1 "&f &7Not the chicken wings!"
+  obj_13_desc_2: variable questInfo QuestDesc2 "&f &7Make me a delicious &fPumpkin
+    Pie&7!"
+  
+  obj_14_title: variable questInfo QuestTitle "&aApocalypse Prevention"
+  obj_14_desc_1: variable questInfo QuestDesc1 "&f &7Zombie population is out of control."
+  obj_14_desc_2: variable questInfo QuestDesc2 "&f &7You need to &fkill 40 &7to keep
+    it down."
+  
+  obj_15_title: variable questInfo QuestTitle "&aI'm an Alchemist"
+  obj_15_desc_1: variable questInfo QuestDesc1 "&f &7Brew one &fSpeed Potion &7to"
+  obj_15_desc_2: variable questInfo QuestDesc2 "&f &7let yourself travel faster."
+  
+  obj_16_title: variable questInfo QuestTitle "&aShiny Gems"
+  obj_16_desc_1: variable questInfo QuestDesc1 "&f &7Pay a visit in the mine"
+  obj_16_desc_2: variable questInfo QuestDesc2 "&f &7and mine an &fEmerald Ore&7."
+  
+  obj_17_title: variable questInfo QuestTitle "&aTake care of your vision"
+  obj_17_desc_1: variable questInfo QuestDesc1 "&f &7Carrots &7are good for"
+  obj_17_desc_2: variable questInfo QuestDesc2 "&f &7your eyes, &fharvest 25 &7of
+    them!"
+  
+  obj_18_title: variable questInfo QuestTitle "&aStaring Competition"
+  obj_18_desc_1: variable questInfo QuestDesc1 "&f &7Wait for the night and"
+  obj_18_desc_2: variable questInfo QuestDesc2 "&f &7hunt down 8 Endermans&7."
+  
+  obj_19_title: variable questInfo QuestTitle "&aSpooky Scary Skeletons"
+  obj_19_desc_1: variable questInfo QuestDesc1 "&f &7Go to the Nether and"
+  obj_19_desc_2: variable questInfo QuestDesc2 "&f &7slay 10 Wither Skeletons&7."
+  
+  obj_20_title: variable questInfo QuestTitle "&aExperienced"
+  obj_20_desc_1: variable questInfo QuestDesc1 "&f &7Gather enough XP"
+  obj_20_desc_2: variable questInfo QuestDesc2 "&f &7to &freach Level 30&7."
+  
+  obj_21_title: variable questInfo QuestTitle "&aA fancy mineral"
+  obj_21_desc_1: variable questInfo QuestDesc1 "&f &7Go to the nether and"
+  obj_21_desc_2: variable questInfo QuestDesc2 "&f &7dig down &f40 Quartz Ores&7."
+  
+  obj_22_title: variable questInfo QuestTitle "&aI am not bragging!"
+  obj_22_desc_1: variable questInfo QuestDesc1 "&f &7This one will be hard,"
+  obj_22_desc_2: variable questInfo QuestDesc2 "&f &7craft a Diamond Block&7!"
+  
+  obj_23_title: variable questInfo QuestTitle "&aSafety First!"
+  obj_23_desc_1: variable questInfo QuestDesc1 "&f &7Enchant a &fDiamond Helmet"
+  obj_23_desc_2: variable questInfo QuestDesc2 "&f &7with &fProtection IV&7."
+  
+  obj_24_title: variable questInfo QuestTitle "&aSerial Killer"
+  obj_24_desc_1: variable questInfo QuestDesc1 "&f &7Find the courage"
+  obj_24_desc_2: variable questInfo QuestDesc2 "&f &7and &fKill 5 Players&7."
+  
+  obj_25_title: variable questInfo QuestTitle "&aSteelworker"
+  obj_25_desc_1: variable questInfo QuestDesc1 "&f &7It's hardware time!"
+  obj_25_desc_2: variable questInfo QuestDesc2 "&f &7Smelt 100 Iron Ingots&7."
+  
+  obj_26_title: variable questInfo QuestTitle "&aStrongman"
+  obj_26_desc_1: variable questInfo QuestDesc1 "&f &7Brew &f3 Strength Potions"
+  obj_26_desc_2: variable questInfo QuestDesc2 "&f &7of tier II."
+  
+  obj_27_title: variable questInfo QuestTitle "&aCoal Power"
+  obj_27_desc_1: variable questInfo QuestDesc1 "&f &7Craft &f64 Coal Blocks&7."
+  obj_27_desc_2: variable questInfo QuestDesc2 "&f &7"
+  
+  obj_28_title: variable questInfo QuestTitle "&aWither Away"
+  obj_28_desc_1: variable questInfo QuestDesc1 "&f &7Prepare for a hard fight."
+  obj_28_desc_2: variable questInfo QuestDesc2 "&f &7You have to &fKill The Wither"
+  
+  obj_29_title: variable questInfo QuestTitle "&aUnstoppable Miner"
+  obj_29_desc_1: variable questInfo QuestDesc1 "&f &7Arm yourself with patience,"
+  obj_29_desc_2: variable questInfo QuestDesc2 "&f &7you have to &fMine 50 Obsidian&7."
+  
+  obj_30_title: variable questInfo QuestTitle "&aDragon Slayer"
+  obj_30_desc_1: variable questInfo QuestDesc1 "&f &7Go to The End and"
+  obj_30_desc_2: variable questInfo QuestDesc2 "&f &7slay an &fEnder Dragon&7."
+  
+  obj_31_title: variable questInfo QuestTitle "&aCongrats!"
+  obj_31_desc_1: variable questInfo QuestDesc1 "&f &7You have finished all Quests."
+  obj_31_desc_2: variable questInfo QuestDesc2 "&f &7You can be proud now!"

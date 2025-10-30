@@ -1,0 +1,36 @@
+# Please DO NOT change version number!
+version: 1
+
+'1':
+    '1': gold 100
+    '2': command reputation give10xp PLAYER_NAME ranchers
+
+'2':
+    '1': gold 200
+    '2': 10 of cooked beef
+    '3': command reputation give15xp PLAYER_NAME slayers
+
+'3':
+    '1': gold 300
+    '2': 8 of iron ingot
+    '3': command reputation give20xp PLAYER_NAME miners
+
+'4':
+    '1': gold 400
+    '2': 1 of golden apple
+    '3': command reputation give25xp PLAYER_NAME ranchers
+
+'5':
+    '1': gold 500
+    '2': 16 of experience bottle
+    '3': command reputation give30xp PLAYER_NAME slayers
+
+'6':
+    '1': gold 750
+    '2': 4 of emerald
+    '3': command reputation give40xp PLAYER_NAME miners
+
+'7':
+    '1': gold 1000
+    '2': 1 of diamond
+    '3': command reputation give50xp PLAYER_NAME ranchers

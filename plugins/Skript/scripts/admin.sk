@@ -1,0 +1,201 @@
+command /admintool [<text>]:
+	permission: admin
+	aliases: adminstuff, administratortool, atool, etool
+	trigger:
+		if arg 1 is set:
+			if arg 1 is "butcher" or "butch" or "kill" or "killer":
+				if name of player's tool contains "&cadmin&fTool":
+					set name of player's tool to "&aSuper Butcher &f| &cadmin&fTool"
+		else:
+			give stick named "&cadmin&fTool" to player
+			send "&9Charles» &7Here is your &dsexy &7admin's stick :D" to player
+
+on right click holding stick:
+	if name of player's tool contains "&cadmin&fTool":
+		cancel event
+		if player has permission "admin":
+			if name of player's tool contains "&bFreeezer":
+				set name of player's tool to "&aDe-&bFreezer &f| &cadmin&fTool"
+				stop
+			if name of player's tool contains "&aSuper Butcher":
+				set name of player's tool to "&bFreeezer &f| &cadmin&fTool"
+				stop
+			if name of player's tool contains "&aDe-&bFreezer":
+				set name of player's tool to "&aSuper Butcher &f| &cadmin&fTool"
+				stop
+			else:
+				set name of player's tool to "&aSuper Butcher &f| &cadmin&fTool"
+				stop
+
+
+on left click holding stick:
+	if name of player's tool contains "&cadmin&fTool":
+		cancel event
+		if player has permission "admin":
+			if name of player's tool contains "&aSuper Butcher":
+				if player is sneaking:
+					loop all entities in radius 5 of target block:
+						if loop-entity is not player:
+							kill loop-entity
+							add 1 to {_entities}
+				else:
+					loop all entities in radius 0.7 of target block:
+						if loop-entity is not player:
+							kill loop-entity
+							add 1 to {_entities}
+				if {_entities} is 1:
+					send "&9Charles» &7I've killed &f%{_entities}% &7entity for you!" to player
+				if {_entities} > 1:
+					send "&9Charles» &7I've killed &f%{_entities}% &7entities for you!" to player
+			if name of player's tool contains "&bFreeezer":
+				loop all entities in radius 5 of target block:
+					remove slowness from loop-entity
+					apply potion of slowness of tier 50 without any particles to the loop-entity for 999 days
+					add 1 to {_entities}
+				if {_entities} is 1:
+					send "&9Charles» &7I've frozen &f%{_entities}% &7entity for you!" to player
+				if {_entities} > 1:
+					send "&9Charles» &7I've frozen &f%{_entities}% &7entities for you!" to player
+			if name of player's tool contains "&aDe-&bFreezer":
+				loop all entities in radius 5 of target block:
+					remove slowness from loop-entity
+					add 1 to {_entities}
+				if {_entities} is 1:
+					send "&9Charles» &7I've thawed &f%{_entities}% &7entity for you!" to player
+				if {_entities} > 1:
+					send "&9Charles» &7I've thawed &f%{_entities}% &7entities for you!" to player
+
+
+
+on command:
+	if command is "pl" or "plugins" or "bukkit:pl" or "bukkit:plugins" or "help" or "bukkit:help" or "versions" or "ver" or "bukkit:?" or "bukkit:about" or "about" or "?" or "version":
+		if player has permission "admin.plugins":
+			stop
+		else:
+			cancel event
+			if {server::test_server} is true:
+				send " " to player
+				send "&6&lCustom Features" to player
+				send "&7• Dungeons" to player
+				send "&7• Adventure Apparel 3D &8(Backpacks & Waist Tools)" to player
+				send "&7• Dynamic Ambient Sounds" to player
+				send "&7• Mob Variants, New Bosses & Loot Balloons" to player
+				send "&7• New Items & Accessories" to player
+				send " " to player
+				send "&f&lOther features" to player
+				send "&7• GUI Menus: Command Panels" to player
+				send "&7• NPC's: Citizens" to player
+				send "&7• Other plugins: Aura Skills 2.0, Player Auctions, BetonQuest, ChatManager, Crazy Crates" to player
+			else:
+				send "&cYou don't have necessary permission for this command!" to player
+
+
+
+
+
+
+
+
+
+command /setspawn:
+	permission: admin
+	trigger:
+		execute player command "setwarp spawn"
+		execute player command "mv setspawn"
+		send " " to player
+		send "&f You have set the location of spawn!" to player
+		set {location::spawn} to location of player
+
+
+
+
+
+
+
+
+command /givecustomitem [<text>] [<player>] [<integer>]:
+	permission: admin
+	trigger:
+		if player-arg is set:
+			set {_player} to player-arg
+		else:
+			set {_player} to sender
+		if arg 3 is set:
+			set {_amount} to arg-3
+		else:
+			set {_amount} to 1
+
+		set {_item} to {item::%arg-1%}
+		give {_amount} of {_item} to {_player}
+		
+
+on tab complete of "/givecustomitem":
+	set tab completions for position 1 to {forge::items_list::*}
+
+command /getitems:
+	aliases: getitem
+	permission: admin
+	trigger:
+		open chest inventory with 6 rows named "&2Special Items" to player
+
+		set {_nr} to -1
+		loop {forge::items_list::*}:
+			if {forge::item::%loop-value%::rows} is set:
+				add 1 to {_nr}
+				set slot {_nr} of player's current inventory to GenerateBackpack(loop-value)
+
+		set {_nr} to 6
+		loop {forge::items_list::*}:
+			if {forge::item::%loop-value%::rows} is not set:
+				add 1 to {_nr}
+				set slot {_nr} of player's current inventory to {item::%loop-value%}
+
+		set slot 3 of player's current inventory to {item::pinata}
+		set slot 4 of player's current inventory to {item::skeleton_key}
+		set slot 5 of player's current inventory to {item::dracula_key}
+		set slot 6 of player's current inventory to {item::desert_key}
+
+
+
+
+
+function GenerateBackpack(type: string) :: item:
+	if {forge::item::%{_type}%::rows} is set:
+		set {_item} to {item::%{_type}%}
+		set {_n} to nbt compound of {_item}
+		set int tag "item_id" of {_n} to random integer between -999999999 and 999999999
+	return {_item}
+
+
+command /testserver:
+	permission: admin
+	trigger:
+		if {server::test_server} is not true:
+			set {server::test_server} to true
+			send "&aTest server mode enabled" to player
+			load yaml "plugins/AdventureCore/test_server.yml" as "test_server"
+			set yaml value "test-server-enabled" from "test_server" to {server::test_server}
+			save yaml "test_server"
+			stop
+		if {server::test_server} is true:
+			set {server::test_server} to false
+			send "&cTest server mode disabled" to player
+			load yaml "plugins/AdventureCore/test_server.yml" as "test_server"
+			set yaml value "test-server-enabled" from "test_server" to {server::test_server}
+			save yaml "test_server"
+
+
+
+on load:
+	TestServerToggle()
+
+function TestServerToggle():
+	load yaml "plugins/AdventureCore/test_server.yml" as "test_server"
+
+	if yaml value "version" from "test_server" is not set:
+		set yaml value "test-server-enabled" from "test_server" to false
+
+	if yaml value "test-server-enabled" from "test_server" is set:
+		set {server::test_server} to yaml value "test-server-enabled" from "test_server"
+
+	save yaml "test_server"

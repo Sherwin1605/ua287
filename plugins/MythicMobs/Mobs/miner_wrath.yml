@@ -1,0 +1,55 @@
+miner_wrath:
+  Type: VINDICATOR
+  Display: '&c&lMiner''s Wrath'
+  Health: 600
+  Damage: 0
+  MaxCombatDistance: 150
+  AIGoalSelectors:
+  - clear
+  - meleeattack{attackReach=5}
+  - randomstroll
+  AITargetSelectors:
+  - clear
+  - players
+  Options:  
+    Persistent: true
+    Despawn: chunk
+    Collidable: true
+    MovementSpeed: 0.3
+    PreventOtherDrops: true
+    Silent: true
+    PreventRenaming: true
+    PreventLeashing: true
+    AlwaysShowName: false
+    KnockbackResistance: 0.65
+  BossBar:
+    Enabled: true
+    Title: '&c&lMiner''s Wrath'
+    Range: 40
+    Color: RED
+    Style: SOLID
+  Modules:
+    ThreatTable: true
+  Skills:
+  ### Applies the model when spawned.
+  - model{mid=miner_wrath;n=name;step=1} @self ~onSpawn
+  - model{mid=miner_wrath;n=name;step=1} @self ~onLoad
+  
+  ### Hurt Skills & Sounds
+  - sound{s=entity.zoglin.hurt;p=0.8;v=1} @self ~onDamaged
+  - randomskill{s=miner_wrath_hurt,miner_wrath_hurt_2;sync=true} ~onDamaged
+  - skill{s=miner_wrath_hit_from_afar;sync=true} ~onDamaged
+  
+  ### Death Skills & Sounds
+  - sound{s=entity.zoglin.death;p=0.8;v=1} @self ~onDeath
+  
+  ### Attack Skills
+  - skill{s=miner_wrath_attack_parse;sync=true} ~onTimer:10
+  - skill{s=miner_wrath_cancel_attack;sync=true} ~onAttack
+
+  ### Abilities Skills
+  - skill{s=miner_wrath_kick_parse;sync=true} @target ~onTimer:20
+  - skill{s=miner_wrath_pickaxe_smash_parse;sync=true} @target ~onTimer:22
+
+  ##  Chase Player
+  - skill{s=miner_wrath_chase;sync=true;cd=1} @self ~onTimer:20

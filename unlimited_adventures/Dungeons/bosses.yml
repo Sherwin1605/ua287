@@ -1,0 +1,87 @@
+# Please DO NOT change version number!
+version: 1
+
+miner_wrath:
+    name: Miner's Wrath
+    respawn_delay: 300
+    despawn_delay: 2700
+    loot:
+        common_loot:
+        - 38 of iron ingot
+        - 24 of gold ingot
+        - 27 of bread
+        - diamond helmet of protection 2
+        - diamond chestplate of protection 2
+        - diamond leggings of protection 2
+        - diamond boots of protection 2
+        - custom:skeleton_skull
+        - custom:flashlight
+        - custom:miner_helmet
+        - custom:miner_helmet_lamp
+        rare_loot:
+        - 5 of diamond
+        - 11 of emerald
+        - 19 of amethyst shard
+        - diamond pickaxe of efficiency 4
+        epic_loot:
+        - custom:cursed_pickaxe
+        common_amount: 6
+        rare_amount: 2
+        epic_chance: 25
+
+dracula:
+    name: Lord Dracula
+    respawn_delay: 300
+    despawn_delay: 2700
+    loot:
+        common_loot:
+        - 5 of gold block
+        - 5 of golden apple
+        - diamond helmet of protection 4
+        - diamond chestplate of protection 3
+        - diamond leggings of protection 3
+        - diamond boots of protection 4
+        - custom:skeleton_skull
+        - custom:blood_vial
+        - custom:philosopher_stone
+        rare_loot:
+        - 10 of diamond
+        - 27 of emerald
+        - custom:cloak_of_wrath
+        - custom:vampire_signet
+        epic_loot:
+        - custom:dracula_sword
+        common_amount: 5
+        rare_amount: 2
+        epic_chance: 20
+
+pharaoh:
+    name: Pharaoh
+    respawn_delay: 300
+    despawn_delay: 2700
+    loot:
+        common_loot:
+        - 1 of diamond block
+        - 8 of gold block
+        - 10 of golden apple
+        - 2 of netherite ingot
+        - netherite helmet
+        - netherite chestplate
+        - netherite leggings
+        - netherite boots
+        - custom:ring_of_vitality
+        - custom:ring_of_speed
+        - custom:gold_tooth
+        - custom:magic_bracelet
+        rare_loot:
+        - 2 of netherite ingot
+        - 3 of diamond block
+        - 5 of emerald block
+        - netherite axe of efficiency 5
+        - custom:ankh_charm
+        - enchanted golden apple
+        epic_loot:
+        - custom:ankh_scepter
+        common_amount: 8
+        rare_amount: 3
+        epic_chance: 15

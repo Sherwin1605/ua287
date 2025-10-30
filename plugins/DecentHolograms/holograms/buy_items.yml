@@ -1,0 +1,14 @@
+location: spawn:823,563:70,569:895,948
+enabled: true
+display-range: 48
+update-range: 48
+update-interval: 20
+facing: 0.0
+down-origin: false
+pages:
+- lines:
+  - content: '#31ed96🪣 #31ed96&lBuy Items #31ed96🪣'
+    height: 0.3
+  - content: '#7dff49&lRIGHT-CLICK'
+    height: 0.3
+  actions: {}

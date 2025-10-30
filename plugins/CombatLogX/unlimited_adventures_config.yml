@@ -1,0 +1,21 @@
+# Please DO NOT change version number!
+version: 1
+
+# 
+# A list of commands that will be prevented during combat.
+# 
+blocked_commands:
+- spawn
+- warp
+- home
+- rtp
+- tpr
+- tprandom
+- wild
+- wilderness
+- randomteleport
+- randomtp
+
+messages:
+    command_in_combat: "&cYou can't use commands during combat!"
+    ui_message: "&c&lIN COMBAT &fDo not logout for TIMER seconds!"

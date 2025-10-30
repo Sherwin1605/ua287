@@ -1,0 +1,85 @@
+# |------------------------------------------------------------------------
+# |                       CommandPanels Config File
+# |                           By RockyHawk v5.2
+# | https://www.spigotmc.org/resources/command-panels-custom-guis.67788/
+# |
+# |        auto-update and minor-updates-only is HEAVILY RECOMMENDED
+# |------------------------------------------------------------------------
+config:
+  enable-import-command: false
+  allow-unsafe-mini-message: false
+  refresh-panels: true
+  refresh-delay: 20
+  panel-blocks: true
+  ingame-editor: true
+  hotbar-items: true
+  custom-commands: true
+  auto-register-commands: false
+  auto-update-panels: false
+  server-ping-timeout: 10
+  stop-sound: false
+  disabled-world-message: true
+  update-notifications: false
+  panel-snooper: false
+  format:
+    disabled: '&cThis feature is disabled in your plugin config.'
+    tag: ''
+    perms: '&f &cNo permission.'
+    reload: '&f &aCommand Panels Reloaded.'
+    nopanel: '&f &cPanel not found.'
+    noitem: '&f &cPanel doesn''t have clickable item.'
+    notitem: '&f &cPlayer not found.'
+    error: '&f &cError found in Command Panels config.'
+    offline: Offline
+    offlineHeadValue: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmU1Mjg2YzQ3MGY2NmZmYTFhMTgzMzFjYmZmYjlhM2MyYTQ0MjRhOGM3MjU5YzQ0MzZmZDJlMzU1ODJhNTIyIn19fQ==
+    input: '&f &cYour Input is too long!'
+input:
+  input-cancel: cancel
+  input-cancelled: '&cCancelled!'
+  max-input-length: -1
+  input-message:
+  - '&aEnter Input for Command'
+  - '&cType &4%cp-args% &cto Cancel the command'
+hexcodes:
+  start_tag: '#'
+  end_tag: ''
+placeholders:
+  primary:
+    start: '%'
+    end: '%'
+  secondary:
+    start: '{'
+    end: '}'
+updater:
+  auto-update: false
+  minor-updates-only: true
+  update-checks: false
+purchase:
+  permission:
+    enable: true
+    success: '&aYou have successfully passed the permission check for "%cp-args%".'
+    failure: '&cInefficient Permissions'
+  currency:
+    enable: true
+    success: '&f &fPurchased an item for &e%cp-args% gold &f'
+    failure: '&f &cInsufficient gold!'
+  data:
+    enable: true
+    success: '&f &fPurchased an item for &e%cp-args% gold &f'
+    failure: '&f &cInsufficient gold!'
+  tokens:
+    enable: true
+    success: '&f &fSuccessfully bought for &a%cp-args% Tokens.'
+    failure: '&f &cInsufficient tokens!'
+  coins:
+    enable: true
+    success: '&f &fSuccessfully bought for &a%cp-args% Coins.'
+    failure: '&f &cInsufficient coins!'
+  item:
+    enable: true
+    success: '&f &fYou have sold &a%cp-args%.'
+    failure: '&f &cInsufficient items!'
+  xp:
+    enable: true
+    success: '&f &fSuccessfully bought for &a%cp-args% Experience.'
+    failure: '&f &cInsufficient experience!'

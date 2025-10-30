@@ -1,0 +1,989 @@
+panels:
+  forge:
+    perm: default
+    rows: 5
+    title: '&f'
+    commands:
+    - forge
+    - forgemenu
+    - theforge
+    empty: AIR
+    sound-on-open: ENTITY_VILLAGER_WORK_TOOLSMITH
+    commands-on-open:
+    - console= forgeupdatecraftableitems %cp-player-name%
+    - delay= 1 refresh
+    item:
+
+
+      '0':
+        material: STICK
+        customdata: 1
+        name: '&c← Previous Menu'
+        commands:
+        - open= main_menu
+      
+      
+      
+      '8':
+        material: STICK
+        customdata: 11
+        name: '%color_menu_primary%What is Forge?'
+        lore:
+        - ''
+        - '&7Forge is a special place in which'
+        - '&7you can combine various ingredients'
+        - '&7to create very powerful items.'
+      
+      
+      '19':
+        material: STICK
+        customdata: 501
+
+        value0: '%valiant_craftingunlocked_traveler_backpack%'
+        compare0: 'true'
+        name: '%color_menu_primary%Traveler''s Backpack'
+        lore:
+        - ''
+        - '&7Basic backpack. Can fit 9 items.'
+        - ''
+        - ''
+        - '&fɪɴɢʀᴇᴅɪᴇɴᴛѕ:'
+        - '&7• 10 Leather'
+        - '&7• 2 Iron Ingots'
+        - ''
+        - '&c&lYou don''t have required items!'
+        has0:
+          material: STICK
+          customdata: 501
+          value0: '%valiant_cancraft_traveler_backpack%'
+          compare0: 'true'
+          name: '%color_menu_primary%Traveler''s Backpack'
+          lore:
+          - ''
+          - '&7Basic backpack. Can fit 9 items.'
+          - ''
+          - ''
+          - '&fɪɴɢʀᴇᴅɪᴇɴᴛѕ:'
+          - '&7• 10 Leather'
+          - '&7• 2 Iron Ingots'
+          - ''
+          - '%color_menu_purchase%&lClick to craft!'
+          commands:
+          - console= forge %cp-player-name% traveler_backpack
+          - delay= 1 refresh
+      
+      '20':
+        material: STICK
+        customdata: 133
+        name: '%color_menu_primary%Adventurer''s Backpack'
+        lore:
+        - ''
+        - '&7Sizeable backpack. Can fit 18 items.'
+        - ''
+        - ''
+        - '&fɪɴɢʀᴇᴅɪᴇɴᴛѕ:'
+        - '&7• Traveler''s Backpack'
+        - '&7• 5 Iron Ingots'
+        - '&7• 10 Strings'
+        - ''
+        - '&c&lNOT UNLOCKED'
+        has0:
+          material: STICK
+          customdata: 502
+          value0: '%valiant_craftingunlocked_adventure_backpack%'
+          compare0: 'true'
+          name: '%color_menu_primary%Adventurer''s Backpack'
+          lore:
+          - ''
+          - '&7Sizeable backpack. Can fit 18 items.'
+          - ''
+          - ''
+          - '&fɪɴɢʀᴇᴅɪᴇɴᴛѕ:'
+          - '&7• Traveler''s Backpack'
+          - '&7• 5 Iron Ingots'
+          - '&7• 10 Strings'
+          - ''
+          - '&c&lYou don''t have required items!'
+          has1:
+            material: STICK
+            customdata: 502
+            value0: '%valiant_cancraft_adventure_backpack%'
+            compare0: 'true'
+            name: '%color_menu_primary%Adventurer''s Backpack'
+            lore:
+            - ''
+            - '&7Sizeable backpack. Can fit 18 items.'
+            - ''
+            - ''
+            - '&fɪɴɢʀᴇᴅɪᴇɴᴛѕ:'
+            - '&7• Traveler''s Backpack'
+            - '&7• 5 Iron Ingots'
+            - '&7• 10 Strings'
+            - ''
+            - '%color_menu_purchase%&lClick to craft!'
+            commands:
+            - console= forge %cp-player-name% adventure_backpack
+            - delay= 1 refresh
+      
+      
+      
+      
+      
+      '21':
+        material: STICK
+        customdata: 133
+        name: '%color_menu_primary%Hero''s Backpack'
+        lore:
+        - ''
+        - '&7Big backpack. Can fit 27 items.'
+        - ''
+        - ''
+        - '&fɪɴɢʀᴇᴅɪᴇɴᴛѕ:'
+        - '&7• Adventurer''s Backpack'
+        - '&7• 2 Diamonds'
+        - '&7• 5 Gold Ingots'
+        - ''
+        - '&c&lNOT UNLOCKED'
+        has0:
+          material: STICK
+          customdata: 503
+          value0: '%valiant_craftingunlocked_hero_backpack%'
+          compare0: 'true'
+          name: '%color_menu_primary%Hero''s Backpack'
+          lore:
+          - ''
+          - '&7Big backpack. Can fit 27 items.'
+          - ''
+          - ''
+          - '&fɪɴɢʀᴇᴅɪᴇɴᴛѕ:'
+          - '&7• Adventurer''s Backpack'
+          - '&7• 2 Diamonds'
+          - '&7• 5 Gold Ingots'
+          - ''
+          - '&c&lYou don''t have required items!'
+          has1:
+            material: STICK
+            customdata: 503
+            value0: '%valiant_cancraft_hero_backpack%'
+            compare0: 'true'
+            name: '%color_menu_primary%Hero''s Backpack'
+            lore:
+            - ''
+            - '&7Big backpack. Can fit 27 items.'
+            - ''
+            - ''
+            - '&fɪɴɢʀᴇᴅɪᴇɴᴛѕ:'
+            - '&7• Adventurer''s Backpack'
+            - '&7• 2 Diamonds'
+            - '&7• 5 Gold Ingots'
+            - ''
+            - '%color_menu_purchase%&lClick to craft!'
+            commands:
+            - console= forge %cp-player-name% hero_backpack
+            - delay= 1 refresh
+      
+      
+      
+      
+      
+      
+      '22':
+        material: STICK
+        customdata: 133
+        name: '%color_menu_primary%Wool Scarf'
+        lore:
+        - ''
+        - '&7Increases health.'
+        - ''
+        - '#df5252+4 Health ❤'
+        - ''
+        - '#8f64deᴀᴄᴄᴇssᴏʀʏ ɪᴛᴇᴍ'
+        - ''
+        - ''
+        - '&fɪɴɢʀᴇᴅɪᴇɴᴛѕ:'
+        - '&7• 10 Red Wool'
+        - '&7• 10 White Wool'
+        - '&7• 10 Strings'
+        - ''
+        - '&c&lNOT UNLOCKED'
+        has0:
+          material: STICK
+          customdata: 713
+          value0: '%valiant_craftingunlocked_wool_scarf%'
+          compare0: 'true'
+          name: '%color_menu_primary%Wool Scarf'
+          lore:
+          - ''
+          - '&7Increases health.'
+          - ''
+          - '#df5252+4 Health ❤'
+          - ''
+          - '#8f64deᴀᴄᴄᴇssᴏʀʏ ɪᴛᴇᴍ'
+          - ''
+          - ''
+          - '&fɪɴɢʀᴇᴅɪᴇɴᴛѕ:'
+          - '&7• 10 Red Wool'
+          - '&7• 10 White Wool'
+          - '&7• 10 Strings'
+          - ''
+          - '&c&lYou don''t have required items!'
+          has1:
+            material: STICK
+            customdata: 713
+            value0: '%valiant_cancraft_wool_scarf%'
+            compare0: 'true'
+            name: '%color_menu_primary%Wool Scarf'
+            lore:
+            - ''
+            - '&7Increases health.'
+            - ''
+            - '#df5252+4 Health ❤'
+            - ''
+            - '#8f64deᴀᴄᴄᴇssᴏʀʏ ɪᴛᴇᴍ'
+            - ''
+            - ''
+            - '&fɪɴɢʀᴇᴅɪᴇɴᴛѕ:'
+            - '&7• 10 Red Wool'
+            - '&7• 10 White Wool'
+            - '&7• 10 Strings'
+            - ''
+            - '%color_menu_purchase%&lClick to craft!'
+            commands:
+            - console= forge %cp-player-name% wool_scarf
+            - delay= 1 refresh
+      
+      
+      
+      
+      
+      '23':
+        material: STICK
+        customdata: 133
+        name: '%color_menu_primary%Bone Sword'
+        lore:
+        - ''
+        - '&7Knockback V'
+        - ''
+        - ''
+        - '&fɪɴɢʀᴇᴅɪᴇɴᴛѕ:'
+        - '&7• 10 Skeleton Skulls'
+        - ''
+        - '&c&lNOT UNLOCKED'
+        has0:
+          material: DIAMOND_SWORD
+          customdata: 730
+          value0: '%valiant_craftingunlocked_bone_sword%'
+          compare0: 'true'
+          name: '%color_menu_primary%Bone Sword'
+          lore:
+          - ''
+          - '&7Knockback V'
+          - ''
+          - ''
+          - '&fɪɴɢʀᴇᴅɪᴇɴᴛѕ:'
+          - '&7• 10 Skeleton Skulls'
+          - ''
+          - '&c&lYou don''t have required items!'
+          has1:
+            material: DIAMOND_SWORD
+            customdata: 730
+            value0: '%valiant_cancraft_bone_sword%'
+            compare0: 'true'
+            name: '%color_menu_primary%Bone Sword'
+            lore:
+            - ''
+            - '&7Knockback V'
+            - ''
+            - ''
+            - '&fɪɴɢʀᴇᴅɪᴇɴᴛѕ:'
+            - '&7• 10 Skeleton Skulls'
+            - ''
+            - '%color_menu_purchase%&lClick to craft!'
+            commands:
+            - console= forge %cp-player-name% bone_sword
+            - delay= 1 refresh
+      
+      
+      '24':
+        material: STICK
+        customdata: 741
+        name: '%color_menu_primary%Random Teleportation Scroll'
+        lore:
+        - ''
+        - '&7Use this scroll to teleport yourself to a random place.'
+        - ''
+        - ''
+        - '&fɪɴɢʀᴇᴅɪᴇɴᴛѕ:'
+        - '&7• Paper'
+        - '&7• 2 Amethyst Shards'
+        - '&7• 2 Lapis Lazuli'
+        - ''
+        - '&c&lNOT UNLOCKED'
+        has0:
+          material: STICK
+          customdata: 741
+          value0: '%valiant_craftingunlocked_random_teleportation_scroll%'
+          compare0: 'true'
+          name: '%color_menu_primary%Random Teleportation Scroll'
+          lore:
+          - ''
+          - '&7Use this scroll to teleport yourself to a random place.'
+          - ''
+          - ''
+          - '&fɪɴɢʀᴇᴅɪᴇɴᴛѕ:'
+          - '&7• Paper'
+          - '&7• 2 Amethyst Shards'
+          - '&7• 2 Lapis Lazuli'
+          - ''
+          - '&c&lYou don''t have required items!'
+          has1:
+            material: STICK
+            customdata: 741
+            value0: '%valiant_cancraft_random_teleportation_scroll%'
+            compare0: 'true'
+            name: '%color_menu_primary%Random Teleportation Scroll'
+            lore:
+            - ''
+            - '&7Use this scroll to teleport yourself to a random place.'
+            - ''
+            - ''
+            - '&fɪɴɢʀᴇᴅɪᴇɴᴛѕ:'
+            - '&7• Paper'
+            - '&7• 2 Amethyst Shards'
+            - '&7• 2 Lapis Lazuli'
+            - ''
+            - '%color_menu_purchase%&lClick to craft!'
+            commands:
+            - console= forge %cp-player-name% random_teleportation_scroll
+            - delay= 1 refresh
+
+      '25':
+        material: STICK
+        customdata: 742
+        name: '%color_menu_primary%Home Teleportation Scroll'
+        lore:
+        - ''
+        - '&7Use this scroll to teleport yourself to your bed.'
+        - ''
+        - ''
+        - '&fɪɴɢʀᴇᴅɪᴇɴᴛѕ:'
+        - '&7• Paper'
+        - '&7• 2 Amethyst Shards'
+        - '&7• 2 Lapis Lazuli'
+        - '&7• 2 Gold Ingots'
+        - ''
+        - '&c&lNOT UNLOCKED'
+        has0:
+          material: STICK
+          customdata: 742
+          value0: '%valiant_craftingunlocked_home_teleportation_scroll%'
+          compare0: 'true'
+          name: '%color_menu_primary%Home Teleportation Scroll'
+          lore:
+          - ''
+          - '&7Use this scroll to teleport yourself to your bed.'
+          - ''
+          - ''
+          - '&fɪɴɢʀᴇᴅɪᴇɴᴛѕ:'
+          - '&7• Paper'
+          - '&7• 2 Amethyst Shards'
+          - '&7• 2 Lapis Lazuli'
+          - '&7• 2 Gold Ingots'
+          - ''
+          - '&c&lYou don''t have required items!'
+          has1:
+            material: STICK
+            customdata: 742
+            value0: '%valiant_cancraft_home_teleportation_scroll%'
+            compare0: 'true'
+            name: '%color_menu_primary%Home Teleportation Scroll'
+            lore:
+            - ''
+            - '&7Use this scroll to teleport yourself to your bed.'
+            - ''
+            - ''
+            - '&fɪɴɢʀᴇᴅɪᴇɴᴛѕ:'
+            - '&7• Paper'
+            - '&7• 2 Amethyst Shards'
+            - '&7• 2 Lapis Lazuli'
+            - '&7• 2 Gold Ingots'
+            - ''
+            - '%color_menu_purchase%&lClick to craft!'
+            commands:
+            - console= forge %cp-player-name% home_teleportation_scroll
+            - delay= 1 refresh
+      
+      
+      
+      
+      
+      
+      '28':
+        material: STICK
+        customdata: 133
+        name: '%color_menu_primary%Lightning Boots'
+        lore:
+        - ''
+        - '&7Increases movement speed by 5%'
+        - '&7Allows flight.'
+        - '&eSneak to propel yourself upwards.'
+        - ''
+        - '#8f64deᴀᴄᴄᴇssᴏʀʏ ɪᴛᴇᴍ'
+        - ''
+        - ''
+        - '&fɪɴɢʀᴇᴅɪᴇɴᴛѕ:'
+        - '&7• Hermes Boots'
+        - '&7• Rocket Boots'
+        - ''
+        - '&c&lNOT UNLOCKED'
+        has0:
+          material: STICK
+          customdata: 703
+          value0: '%valiant_craftingunlocked_lightning_boots%'
+          compare0: 'true'
+          name: '%color_menu_primary%Lightning Boots'
+          lore:
+          - ''
+          - '&7Increases movement speed by 5%'
+          - '&7Allows flight.'
+          - '&eSneak to propel yourself upwards.'
+          - ''
+          - '#8f64deᴀᴄᴄᴇssᴏʀʏ ɪᴛᴇᴍ'
+          - ''
+          - ''
+          - '&fɪɴɢʀᴇᴅɪᴇɴᴛѕ:'
+          - '&7• Hermes Boots'
+          - '&7• Rocket Boots'
+          - ''
+          - '&c&lYou don''t have required items!'
+          has1:
+            material: STICK
+            customdata: 703
+            value0: '%valiant_cancraft_lightning_boots%'
+            compare0: 'true'
+            name: '%color_menu_primary%Lightning Boots'
+            lore:
+            - ''
+            - '&7Increases movement speed by 5%'
+            - '&7Allows flight.'
+            - '&eSneak to propel yourself upwards.'
+            - ''
+            - '#8f64deᴀᴄᴄᴇssᴏʀʏ ɪᴛᴇᴍ'
+            - ''
+            - ''
+            - '&fɪɴɢʀᴇᴅɪᴇɴᴛѕ:'
+            - '&7• Hermes Boots'
+            - '&7• Rocket Boots'
+            - ''
+            - '%color_menu_purchase%&lClick to craft!'
+            commands:
+            - console= forge %cp-player-name% lightning_boots
+            - delay= 1 refresh
+      '29':
+        material: STICK
+        customdata: 133
+        name: '%color_menu_primary%Miner''s Helmet Lamp'
+        lore:
+        - ''
+        - '&7Allows to see in the dark.'
+        - '&7Increases mining speed.'
+        - ''
+        - '#8f64deᴀᴄᴄᴇssᴏʀʏ ɪᴛᴇᴍ'
+        - ''
+        - ''
+        - '&fɪɴɢʀᴇᴅɪᴇɴᴛѕ:'
+        - '&7• Miner''s Helmet'
+        - '&7• Flashlight'
+        - ''
+        - '&c&lNOT UNLOCKED'
+        has0:
+          material: STICK
+          customdata: 706
+          value0: '%valiant_craftingunlocked_miner_helmet_lamp%'
+          compare0: 'true'
+          name: '%color_menu_primary%Miner''s Helmet Lamp'
+          lore:
+          - ''
+          - '&7Allows to see in the dark.'
+          - '&7Increases mining speed.'
+          - ''
+          - '#8f64deᴀᴄᴄᴇssᴏʀʏ ɪᴛᴇᴍ'
+          - ''
+          - ''
+          - '&fɪɴɢʀᴇᴅɪᴇɴᴛѕ:'
+          - '&7• Miner''s Helmet'
+          - '&7• Flashlight'
+          - ''
+          - '&c&lYou don''t have required items!'
+          has1:
+            material: STICK
+            customdata: 706
+            value0: '%valiant_cancraft_miner_helmet_lamp%'
+            compare0: 'true'
+            name: '%color_menu_primary%Miner''s Helmet Lamp'
+            lore:
+            - ''
+            - '&7Allows to see in the dark.'
+            - '&7Increases mining speed.'
+            - ''
+            - '#8f64deᴀᴄᴄᴇssᴏʀʏ ɪᴛᴇᴍ'
+            - ''
+            - ''
+            - '&fɪɴɢʀᴇᴅɪᴇɴᴛѕ:'
+            - '&7• Miner''s Helmet'
+            - '&7• Flashlight'
+            - ''
+            - '%color_menu_purchase%&lClick to craft!'
+            commands:
+            - console= forge %cp-player-name% miner_helmet_lamp
+            - delay= 1 refresh
+      
+      
+      
+      
+      '30':
+        material: STICK
+        customdata: 133
+        name: '%color_menu_primary%Talisman of Vitality'
+        lore:
+        - ''
+        - '&7Increases health and regeneration.'
+        - ''
+        - '#8f64deᴀᴄᴄᴇssᴏʀʏ ɪᴛᴇᴍ'
+        - ''
+        - ''
+        - '&fɪɴɢʀᴇᴅɪᴇɴᴛѕ:'
+        - '&7• Philosopher''s Stone'
+        - '&7• Silver Chain'
+        - ''
+        - '&c&lNOT UNLOCKED'
+        has0:
+          material: STICK
+          customdata: 718
+          value0: '%valiant_craftingunlocked_talisman_of_vitality%'
+          compare0: 'true'
+          name: '%color_menu_primary%Talisman of Vitality'
+          lore:
+          - ''
+          - '&7Increases health and regeneration.'
+          - ''
+          - '#8f64deᴀᴄᴄᴇssᴏʀʏ ɪᴛᴇᴍ'
+          - ''
+          - ''
+          - '&fɪɴɢʀᴇᴅɪᴇɴᴛѕ:'
+          - '&7• Philosopher''s Stone'
+          - '&7• Silver Chain'
+          - ''
+          - '&c&lYou don''t have required items!'
+          has1:
+            material: STICK
+            customdata: 718
+            value0: '%valiant_cancraft_talisman_of_vitality%'
+            compare0: 'true'
+            name: '%color_menu_primary%Talisman of Vitality'
+            lore:
+            - ''
+            - '&7Increases health and regeneration.'
+            - ''
+            - '#8f64deᴀᴄᴄᴇssᴏʀʏ ɪᴛᴇᴍ'
+            - ''
+            - ''
+            - '&fɪɴɢʀᴇᴅɪᴇɴᴛѕ:'
+            - '&7• Philosopher''s Stone'
+            - '&7• Silver Chain'
+            - ''
+            - '%color_menu_purchase%&lClick to craft!'
+            commands:
+            - console= forge %cp-player-name% talisman_of_vitality
+            - delay= 1 refresh
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      '31':
+        material: STICK
+        customdata: 133
+        name: ' '
+      '32':
+        material: STICK
+        customdata: 133
+        name: ' '
+      '33':
+        material: STICK
+        customdata: 133
+        name: ' '
+      '34':
+        material: STICK
+        customdata: 743
+        name: '%color_menu_primary%Portal Stone'
+        lore:
+        - ''
+        - '&7Right-click on ground to create a portal.'
+        - '&7Put candles in the corners to ''code'' the portal.'
+        - ''
+        - ''
+        - '&fɪɴɢʀᴇᴅɪᴇɴᴛѕ:'
+        - '&7• Echo Shard'
+        - '&7• 4 Amethyst Shards'
+        - '&7• 4 Eyes of Ender'
+        - ''
+        - '&c&lNOT UNLOCKED'
+        has0:
+          material: STICK
+          customdata: 743
+          value0: '%valiant_craftingunlocked_portal_stone%'
+          compare0: 'true'
+          name: '%color_menu_primary%Portal Stone'
+          lore:
+          - ''
+          - '&7Right-click on ground to create a portal.'
+          - '&7Put candles in the corners to ''code'' the portal.'
+          - ''
+          - ''
+          - '&fɪɴɢʀᴇᴅɪᴇɴᴛѕ:'
+          - '&7• Echo Shard'
+          - '&7• 4 Amethyst Shards'
+          - '&7• 4 Eyes of Ender'
+          - ''
+          - '&c&lYou don''t have required items!'
+          has1:
+            material: STICK
+            customdata: 743
+            value0: '%valiant_cancraft_portal_stone%'
+            compare0: 'true'
+            name: '%color_menu_primary%Portal Stone'
+            lore:
+            - ''
+            - '&7Right-click on ground to create a portal.'
+            - '&7Put candles in the corners to ''code'' the portal.'
+            - ''
+            - ''
+            - '&fɪɴɢʀᴇᴅɪᴇɴᴛѕ:'
+            - '&7• Echo Shard'
+            - '&7• 4 Amethyst Shards'
+            - '&7• 4 Eyes of Ender'
+            - ''
+            - '%color_menu_purchase%&lClick to craft!'
+            commands:
+            - console= forge %cp-player-name% portal_stone
+            - delay= 1 refresh
+      
+      
+      
+      
+      
+      
+      
+      
+      '37':
+        material: STICK
+        customdata: 133
+        name: '%color_menu_primary%Dragonscale Sword'
+        lore:
+        - ''
+        - '&7Legendary sword made out of'
+        - '&7the ominous scales of a dragon.'
+        - ''
+        - ''
+        - '&fɪɴɢʀᴇᴅɪᴇɴᴛѕ:'
+        - '&7• 2 Dragonscales'
+        - ''
+        - '&c&lNOT UNLOCKED'
+        has0:
+          material: NETHERITE_SWORD
+          customdata: 731
+          value0: '%valiant_craftingunlocked_dragonscale_sword%'
+          compare0: 'true'
+          name: '%color_menu_primary%Dragonscale Sword'
+          lore:
+          - ''
+          - '&7Legendary sword made out of'
+          - '&7the ominous scales of a dragon.'
+          - ''
+          - ''
+          - '&fɪɴɢʀᴇᴅɪᴇɴᴛѕ:'
+          - '&7• 2 Dragonscales'
+          - ''
+          - '&c&lYou don''t have required items!'
+          has1:
+            material: NETHERITE_SWORD
+            customdata: 731
+            value0: '%valiant_cancraft_dragonscale_sword%'
+            compare0: 'true'
+            name: '%color_menu_primary%Dragonscale Sword'
+            lore:
+            - ''
+            - '&7Legendary sword made out of'
+            - '&7the ominous scales of a dragon.'
+            - ''
+            - ''
+            - '&fɪɴɢʀᴇᴅɪᴇɴᴛѕ:'
+            - '&7• 2 Dragonscales'
+            - ''
+            - '%color_menu_purchase%&lClick to craft!'
+            commands:
+            - console= forge %cp-player-name% dragonscale_sword
+            - delay= 1 refresh
+      '38':
+        material: STICK
+        customdata: 133
+        name: '%color_menu_primary%Dragonscale Axe'
+        lore:
+        - ''
+        - '&7Legendary axe made out of'
+        - '&7the ominous scales of a dragon.'
+        - ''
+        - ''
+        - '&fɪɴɢʀᴇᴅɪᴇɴᴛѕ:'
+        - '&7• 3 Dragonscales'
+        - ''
+        - '&c&lNOT UNLOCKED'
+        has0:
+          material: NETHERITE_AXE
+          customdata: 732
+          value0: '%valiant_craftingunlocked_dragonscale_axe%'
+          compare0: 'true'
+          name: '%color_menu_primary%Dragonscale Axe'
+          lore:
+          - ''
+          - '&7Legendary axe made out of'
+          - '&7the ominous scales of a dragon.'
+          - ''
+          - ''
+          - '&fɪɴɢʀᴇᴅɪᴇɴᴛѕ:'
+          - '&7• 3 Dragonscales'
+          - ''
+          - '&c&lYou don''t have required items!'
+          has1:
+            material: NETHERITE_AXE
+            customdata: 732
+            value0: '%valiant_cancraft_dragonscale_axe%'
+            compare0: 'true'
+            name: '%color_menu_primary%Dragonscale Axe'
+            lore:
+            - ''
+            - '&7Legendary axe made out of'
+            - '&7the ominous scales of a dragon.'
+            - ''
+            - ''
+            - '&fɪɴɢʀᴇᴅɪᴇɴᴛѕ:'
+            - '&7• 3 Dragonscales'
+            - ''
+            - '%color_menu_purchase%&lClick to craft!'
+            commands:
+            - console= forge %cp-player-name% dragonscale_axe
+            - delay= 1 refresh
+      '39':
+        material: STICK
+        customdata: 133
+        name: '%color_menu_primary%Dragonscale Helmet'
+        lore:
+        - ''
+        - '&7Legendary helmet made out of'
+        - '&7the ominous scales of a dragon.'
+        - ''
+        - ''
+        - '&fɪɴɢʀᴇᴅɪᴇɴᴛѕ:'
+        - '&7• 5 Dragonscales'
+        - ''
+        - '&c&lNOT UNLOCKED'
+        has0:
+          material: CHAINMAIL_HELMET
+          customdata: 733
+          value0: '%valiant_craftingunlocked_dragonscale_helmet%'
+          compare0: 'true'
+          name: '%color_menu_primary%Dragonscale Helmet'
+          lore:
+          - ''
+          - '&7Legendary helmet made out of'
+          - '&7the ominous scales of a dragon.'
+          - ''
+          - ''
+          - '&fɪɴɢʀᴇᴅɪᴇɴᴛѕ:'
+          - '&7• 5 Dragonscales'
+          - ''
+          - '&c&lYou don''t have required items!'
+          has1:
+            material: CHAINMAIL_HELMET
+            customdata: 733
+            value0: '%valiant_cancraft_dragonscale_helmet%'
+            compare0: 'true'
+            name: '%color_menu_primary%Dragonscale Helmet'
+            lore:
+            - ''
+            - '&7Legendary helmet made out of'
+            - '&7the ominous scales of a dragon.'
+            - ''
+            - ''
+            - '&fɪɴɢʀᴇᴅɪᴇɴᴛѕ:'
+            - '&7• 5 Dragonscales'
+            - ''
+            - '%color_menu_purchase%&lClick to craft!'
+            commands:
+            - console= forge %cp-player-name% dragonscale_helmet
+            - delay= 1 refresh
+      '40':
+        material: STICK
+        customdata: 133
+        name: '%color_menu_primary%Dragonscale Chestplate'
+        lore:
+        - ''
+        - '&7Legendary chestplate made out of'
+        - '&7the ominous scales of a dragon.'
+        - ''
+        - ''
+        - '&fɪɴɢʀᴇᴅɪᴇɴᴛѕ:'
+        - '&7• 8 Dragonscales'
+        - ''
+        - '&c&lNOT UNLOCKED'
+        has0:
+          material: CHAINMAIL_CHESTPLATE
+          customdata: 734
+          value0: '%valiant_craftingunlocked_dragonscale_chestplate%'
+          compare0: 'true'
+          name: '%color_menu_primary%Dragonscale Chestplate'
+          lore:
+          - ''
+          - '&7Legendary chestplate made out of'
+          - '&7the ominous scales of a dragon.'
+          - ''
+          - ''
+          - '&fɪɴɢʀᴇᴅɪᴇɴᴛѕ:'
+          - '&7• 8 Dragonscales'
+          - ''
+          - '&c&lYou don''t have required items!'
+          has1:
+            material: CHAINMAIL_CHESTPLATE
+            customdata: 734
+            value0: '%valiant_cancraft_dragonscale_chestplate%'
+            compare0: 'true'
+            name: '%color_menu_primary%Dragonscale Chestplate'
+            lore:
+            - ''
+            - '&7Legendary chestplate made out of'
+            - '&7the ominous scales of a dragon.'
+            - ''
+            - ''
+            - '&fɪɴɢʀᴇᴅɪᴇɴᴛѕ:'
+            - '&7• 8 Dragonscales'
+            - ''
+            - '%color_menu_purchase%&lClick to craft!'
+            commands:
+            - console= forge %cp-player-name% dragonscale_chestplate
+            - delay= 1 refresh
+      
+      
+      
+      '41':
+        material: STICK
+        customdata: 133
+        name: '%color_menu_primary%Dragonscale Leggings'
+        lore:
+        - ''
+        - '&7Legendary leggings made out of'
+        - '&7the ominous scales of a dragon.'
+        - ''
+        - ''
+        - '&fɪɴɢʀᴇᴅɪᴇɴᴛѕ:'
+        - '&7• 7 Dragonscales'
+        - ''
+        - '&c&lNOT UNLOCKED'
+        has0:
+          material: CHAINMAIL_LEGGINGS
+          customdata: 735
+          value0: '%valiant_craftingunlocked_dragonscale_leggings%'
+          compare0: 'true'
+          name: '%color_menu_primary%Dragonscale Leggings'
+          lore:
+          - ''
+          - '&7Legendary leggings made out of'
+          - '&7the ominous scales of a dragon.'
+          - ''
+          - ''
+          - '&fɪɴɢʀᴇᴅɪᴇɴᴛѕ:'
+          - '&7• 7 Dragonscales'
+          - ''
+          - '&c&lYou don''t have required items!'
+          has1:
+            material: CHAINMAIL_LEGGINGS
+            customdata: 735
+            value0: '%valiant_cancraft_dragonscale_leggings%'
+            compare0: 'true'
+            name: '%color_menu_primary%Dragonscale Leggings'
+            lore:
+            - ''
+            - '&7Legendary leggings made out of'
+            - '&7the ominous scales of a dragon.'
+            - ''
+            - ''
+            - '&fɪɴɢʀᴇᴅɪᴇɴᴛѕ:'
+            - '&7• 7 Dragonscales'
+            - ''
+            - '%color_menu_purchase%&lClick to craft!'
+            commands:
+            - console= forge %cp-player-name% dragonscale_leggings
+            - delay= 1 refresh
+            
+            
+      '42':
+        material: STICK
+        customdata: 133
+        name: '%color_menu_primary%Dragonscale Boots'
+        lore:
+        - ''
+        - '&7Legendary boots made out of'
+        - '&7the ominous scales of a dragon.'
+        - ''
+        - ''
+        - '&fɪɴɢʀᴇᴅɪᴇɴᴛѕ:'
+        - '&7• 4 Dragonscales'
+        - ''
+        - '&c&lNOT UNLOCKED'
+        has0:
+          material: CHAINMAIL_BOOTS
+          customdata: 736
+          value0: '%valiant_craftingunlocked_dragonscale_boots%'
+          compare0: 'true'
+          name: '%color_menu_primary%Dragonscale Boots'
+          lore:
+          - ''
+          - '&7Legendary boots made out of'
+          - '&7the ominous scales of a dragon.'
+          - ''
+          - ''
+          - '&fɪɴɢʀᴇᴅɪᴇɴᴛѕ:'
+          - '&7• 4 Dragonscales'
+          - ''
+          - '&c&lYou don''t have required items!'
+          has1:
+            material: CHAINMAIL_BOOTS
+            customdata: 736
+            value0: '%valiant_cancraft_dragonscale_boots%'
+            compare0: 'true'
+            name: '%color_menu_primary%Dragonscale Boots'
+            lore:
+            - ''
+            - '&7Legendary boots made out of'
+            - '&7the ominous scales of a dragon.'
+            - ''
+            - ''
+            - '&fɪɴɢʀᴇᴅɪᴇɴᴛѕ:'
+            - '&7• 4 Dragonscales'
+            - ''
+            - '%color_menu_purchase%&lClick to craft!'
+            commands:
+            - console= forge %cp-player-name% dragonscale_boots
+            - delay= 1 refresh
+      '43':
+        material: STICK
+        customdata: 133
+        name: ' '
+      
+      
+      

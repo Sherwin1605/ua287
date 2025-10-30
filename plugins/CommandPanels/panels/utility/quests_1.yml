@@ -1,0 +1,713 @@
+panels:
+  quests_1:
+    perm: default
+    rows: 5
+    title: '&f'
+    commands:
+    - questsmenu
+    - quests
+    - quest
+    - playerquests
+    - betonquest
+    empty: AIR
+    sound-on-open: ITEM_BOOK_PAGE_TURN
+    item:
+
+
+      '0':
+        material: STICK
+        customdata: 1
+        name: '&c← Previous Menu'
+        commands:
+        - open= main_menu
+      
+      
+      '42':
+        material: STICK
+        customdata: 2
+        name: '&aNext Page →'
+        commands:
+        - open= quests_2
+      
+      
+      
+      '11':
+        material: STICK
+        customdata: 22
+        name: '&e⏳ Story Begins'
+        lore:
+        - ''
+        - '&7Visit the &eQuestmaster &7and'
+        - '&7accept your first Quest!'
+        - ''
+        - '&a★ &fReward: &7200 Gold'
+        - ''
+        - '&e⏳ &7This Quest is in progress.'
+        - ''
+        - '&8✎ Hint: You can find Questmaster'
+        - '&8somewhere on the spawn.'
+        has0:
+          value0: '%betonquest_valiant:point.finishedQuests.amount% ISGREATER'
+          compare0: 1
+          material: STICK
+          customdata: 23
+          name: '%color_menu_item_unlocked%Finished Quest'
+          lore:
+          - ''
+          - '&8Visit the Questmaster and'
+          - '&8accept your first Quest!'
+          - ''
+          - '&7★&m Reward: 200 Gold'
+          - ''
+          - '%color_menu_unlocked%&l✔ Quest Finished'
+          - ''
+          - '&8✎ Hint: You can find Questmaster'
+          - '&8somewhere on the spawn.'
+      
+      '12':
+        material: STICK
+        customdata: 21
+        name: '&cLocked Quest'
+        lore:
+        - ''
+        - '&7This quest is not unlocked yet!'
+        - ''
+        - '&8▶ You need to finish previous'
+        - '&8quest in order to unlock it!'
+        has0:
+          value0: '%betonquest_valiant:point.finishedQuests.amount% ISGREATER'
+          compare0: 1
+          material: STICK
+          customdata: 22
+          name: '&e⏳ It all begins in a cave'
+          lore:
+          - ''
+          - '&7You need to go underground'
+          - '&7and mine &f100 Stone.'
+          - ''
+          - '&a★ &fReward: &710 Steaks'
+          - ''
+          - '&e⏳ &7This Quest is in progress.'
+          - ''
+          - '&8✎ Hint: Craft a pickaxe'
+          - '&8and just go down!'
+          has1:
+            value0: '%betonquest_valiant:point.finishedQuests.amount% ISGREATER'
+            compare0: 2
+            material: STICK
+            customdata: 23
+            name: '%color_menu_item_unlocked%Finished Quest'
+            lore:
+            - ''
+            - '&8You need to go underground'
+            - '&8and mine 100 Stone.'
+            - ''
+            - '&7★&m Reward: 10 Steak'
+            - ''
+            - '%color_menu_unlocked%&l✔ Quest Finished'
+            - ''
+            - '&8✎ Hint: Craft a pickaxe'
+            - '&8and just go down!'
+      
+      '13':
+        material: STICK
+        customdata: 21
+        name: '&cLocked Quest'
+        lore:
+        - ''
+        - '&7This quest is not unlocked yet!'
+        - ''
+        - '&8▶ You need to finish previous'
+        - '&8quest in order to unlock it!'
+        has0:
+          value0: '%betonquest_valiant:point.finishedQuests.amount% ISGREATER'
+          compare0: 2
+          material: STICK
+          customdata: 22
+          name: '&e⏳ Arm Yourself!'
+          lore:
+          - ''
+          - '&7To survive, you need a weapon.'
+          - '&fIron Sword &7will do for now.'
+          - ''
+          - '&a★ &fReward: &75 Iron Ingots'
+          - ''
+          - '&e⏳ &7This Quest is in progress.'
+          - ''
+          - '&8✎ Hint: Use a crafting table'
+          - '&8in order to craft an Iron Sword.'
+          has1:
+            value0: '%betonquest_valiant:point.finishedQuests.amount% ISGREATER'
+            compare0: 3
+            material: STICK
+            customdata: 23
+            name: '%color_menu_item_unlocked%Finished Quest'
+            lore:
+            - ''
+            - '&8To survive, you need a weapon.'
+            - '&8Iron Sword will do for now.'
+            - ''
+            - '&7★&m Reward: 5 Iron Ingots'
+            - ''
+            - '%color_menu_unlocked%&l✔ Quest Finished'
+            - ''
+            - '&8✎ Hint: Use a crafting table'
+            - '&8in order to craft an Iron Sword.'
+      
+      
+      '14':
+        material: STICK
+        customdata: 21
+        name: '&cLocked Quest'
+        lore:
+        - ''
+        - '&7This quest is not unlocked yet!'
+        - ''
+        - '&8▶ You need to finish previous'
+        - '&8quest in order to unlock it!'
+        has0:
+          value0: '%betonquest_valiant:point.finishedQuests.amount% ISGREATER'
+          compare0: 3
+          material: STICK
+          customdata: 22
+          name: '&e⏳ Earn your Bread'
+          lore:
+          - ''
+          - '&7You need to gather a stable supply'
+          - '&7of food. Grow &fwheat &7and craft a &fBread.'
+          - ''
+          - '&a★ &fReward: &732 Bone Meal'
+          - ''
+          - '&e⏳ &7This Quest is in progress.'
+          - ''
+          - '&8✎ Hint: You need 3 Wheat in order'
+          - '&8to craft yourself a loaf of Bread.'
+          has1:
+            value0: '%betonquest_valiant:point.finishedQuests.amount% ISGREATER'
+            compare0: 4
+            material: STICK
+            customdata: 23
+            name: '%color_menu_item_unlocked%Finished Quest'
+            lore:
+            - ''
+            - '&8You need to gather a stable supply'
+            - '&8of food. Grow wheat and craft a Bread.'
+            - ''
+            - '&7★&m Reward: 32 Bone Meal'
+            - ''
+            - '%color_menu_unlocked%&l✔ Quest Finished'
+            - ''
+            - '&8✎ Hint: You need 3 Wheat in order'
+            - '&8to craft yourself a loaf of Bread.'
+        
+        
+        
+      '15':
+        material: STICK
+        customdata: 21
+        name: '&cLocked Quest'
+        lore:
+        - ''
+        - '&7This quest is not unlocked yet!'
+        - ''
+        - '&8▶ You need to finish previous'
+        - '&8quest in order to unlock it!'
+        has0:
+          value0: '%betonquest_valiant:point.finishedQuests.amount% ISGREATER'
+          compare0: 4
+          material: STICK
+          customdata: 22
+          name: '&e⏳ Bow Up!'
+          lore:
+          - ''
+          - '&7In order to fight your foes'
+          - '&7effectively you should use a &fBow!'
+          - ''
+          - '&a★ &fReward: &732 Arrows'
+          - ''
+          - '&e⏳ &7This Quest is in progress.'
+          - ''
+          - '&8✎ Hint: You need 3 strings for a Bow.'
+          - '&8Gather them by killing Spiders.'
+          has1:
+            value0: '%betonquest_valiant:point.finishedQuests.amount% ISGREATER'
+            compare0: 5
+            material: STICK
+            customdata: 23
+            name: '%color_menu_item_unlocked%Finished Quest'
+            lore:
+            - ''
+            - '&8In order to fight your foes'
+            - '&8effectively you should use a Bow!'
+            - ''
+            - '&7★&m Reward: 32 Arrows'
+            - ''
+            - '%color_menu_unlocked%&l✔ Quest Finished'
+            - ''
+            - '&8✎ Hint: You need 3 strings for a Bow.'
+            - '&8Gather them by killing Spiders.'
+      
+      
+      
+      '20':
+        material: STICK
+        customdata: 21
+        name: '&cLocked Quest'
+        lore:
+        - ''
+        - '&7This quest is not unlocked yet!'
+        - ''
+        - '&8▶ You need to finish previous'
+        - '&8quest in order to unlock it!'
+        has0:
+          value0: '%betonquest_valiant:point.finishedQuests.amount% ISGREATER'
+          compare0: 5
+          material: STICK
+          customdata: 22
+          name: '&e⏳ If I''m missin'' I''ve gone fishin'''
+          lore:
+          - ''
+          - '&7Catch &f5 Cods, &7and remember.'
+          - '&7It''s not only fun, but also healthy!'
+          - ''
+          - '&a★ &fReward: &7Enchanted Book: Luck of The Sea II'
+          - ''
+          - '&e⏳ &7This Quest is in progress.'
+          - ''
+          - '&8✎ Hint: Craft yourself a Fishing Rod'
+          - '&8and find a quiet place to fish.'
+          has1:
+            value0: '%betonquest_valiant:point.finishedQuests.amount% ISGREATER'
+            compare0: 6
+            material: STICK
+            customdata: 23
+            name: '%color_menu_item_unlocked%Finished Quest'
+            lore:
+            - ''
+            - '&8Catch 5 Cods, and remember. '
+            - '&8It''s not only fun, but also healthy!'
+            - ''
+            - '&7★&m Reward: Enchanted Book: Luck of The Sea II'
+            - ''
+            - '%color_menu_unlocked%&l✔ Quest Finished'
+            - ''
+            - '&8✎ Hint: Craft yourself a Fishing Rod'
+            - '&8and find a quiet place to fish.'
+        
+        
+      '21':
+        material: STICK
+        customdata: 21
+        name: '&cLocked Quest'
+        lore:
+        - ''
+        - '&7This quest is not unlocked yet!'
+        - ''
+        - '&8▶ You need to finish previous'
+        - '&8quest in order to unlock it!'
+        has0:
+          value0: '%betonquest_valiant:point.finishedQuests.amount% ISGREATER'
+          compare0: 6
+          material: STICK
+          customdata: 22
+          name: '&e⏳ Creepy Mission'
+          lore:
+          - ''
+          - '&fCreepers &7are not good.'
+          - '&7You need to &fkill 10 &7of them!'
+          - ''
+          - '&a★ &fReward: &71000 Gold'
+          - ''
+          - '&e⏳ &7This Quest is in progress.'
+          - ''
+          - '&8✎ Hint: Gear up, wait for the night'
+          - '&8and then go on a hunt!'
+          has1:
+            value0: '%betonquest_valiant:point.finishedQuests.amount% ISGREATER'
+            compare0: 7
+            material: STICK
+            customdata: 23
+            name: '%color_menu_item_unlocked%Finished Quest'
+            lore:
+            - ''
+            - '&8Creepers are not good.'
+            - '&8You need to kill 10 of them!'
+            - ''
+            - '&7★&m Reward: 1000 Gold'
+            - ''
+            - '%color_menu_unlocked%&l✔ Quest Finished'
+            - ''
+            - '&8✎ Hint: Gear up, wait for the night'
+            - '&8and then go on a hunt!'
+      
+      
+      
+      '22':
+        material: STICK
+        customdata: 21
+        name: '&cLocked Quest'
+        lore:
+        - ''
+        - '&7This quest is not unlocked yet!'
+        - ''
+        - '&8▶ You need to finish previous'
+        - '&8quest in order to unlock it!'
+        has0:
+          value0: '%betonquest_valiant:point.finishedQuests.amount% ISGREATER'
+          compare0: 7
+          material: STICK
+          customdata: 22
+          name: '&e⏳ Looney Tunes'
+          lore:
+          - ''
+          - '&7Craft a &fNote Block'
+          - '&7and play some tunes!'
+          - ''
+          - '&a★ &fReward: &710 Gold Ingots'
+          - ''
+          - '&e⏳ &7This Quest is in progress.'
+          - ''
+          - '&8✎ Hint: You will need one redstone'
+          - '&8and a few planks for the Note Block.'
+          has1:
+            value0: '%betonquest_valiant:point.finishedQuests.amount% ISGREATER'
+            compare0: 8
+            material: STICK
+            customdata: 23
+            name: '%color_menu_item_unlocked%Finished Quest'
+            lore:
+            - ''
+            - '&8Craft a Note Block'
+            - '&8and play some tunes!'
+            - ''
+            - '&7★&m Reward: 10 Gold Ingots'
+            - ''
+            - '%color_menu_unlocked%&l✔ Quest Finished'
+            - ''
+            - '&8✎ Hint: You will need one redstone'
+            - '&8and a few planks for the Note Block.'
+            
+            
+            
+      '23':
+        material: STICK
+        customdata: 21
+        name: '&cLocked Quest'
+        lore:
+        - ''
+        - '&7This quest is not unlocked yet!'
+        - ''
+        - '&8▶ You need to finish previous'
+        - '&8quest in order to unlock it!'
+        has0:
+          value0: '%betonquest_valiant:point.finishedQuests.amount% ISGREATER'
+          compare0: 8
+          material: STICK
+          customdata: 22
+          name: '&e⏳ Sweet Life'
+          lore:
+          - ''
+          - '&7You can''t bake yourself a sweet life,'
+          - '&7but you can bake yourself a &fCake&7!'
+          - ''
+          - '&a★ &fReward: &7250 Gold'
+          - ''
+          - '&e⏳ &7This Quest is in progress.'
+          - ''
+          - '&8✎ Hint: You need wheat, milk,'
+          - '&8sugar and wheat to bake a Cake!'
+          has1:
+            value0: '%betonquest_valiant:point.finishedQuests.amount% ISGREATER'
+            compare0: 9
+            material: STICK
+            customdata: 23
+            name: '%color_menu_item_unlocked%Finished Quest'
+            lore:
+            - ''
+            - '&8You can''t bake yourself a sweet life,'
+            - '&8but you can bake yourself a Cake!'
+            - ''
+            - '&7★&m Reward: 250 Gold'
+            - ''
+            - '%color_menu_unlocked%&l✔ Quest Finished'
+            - ''
+            - '&8✎ Hint: You need wheat, milk,'
+            - '&8sugar and wheat to bake a Cake!'
+            
+            
+            
+      '24':
+        material: STICK
+        customdata: 21
+        name: '&cLocked Quest'
+        lore:
+        - ''
+        - '&7This quest is not unlocked yet!'
+        - ''
+        - '&8▶ You need to finish previous'
+        - '&8quest in order to unlock it!'
+        has0:
+          value0: '%betonquest_valiant:point.finishedQuests.amount% ISGREATER'
+          compare0: 9
+          material: STICK
+          customdata: 22
+          name: '&e⏳ Golden Tooth'
+          lore:
+          - ''
+          - '&7Eat a &fGolden Apple&7.'
+          - '&7Watch out for your teeth though&7!'
+          - ''
+          - '&a★ &fReward: &7Strength Potion II'
+          - ''
+          - '&e⏳ &7This Quest is in progress.'
+          - ''
+          - '&8✎ Hint: Golden Apple''s crafting'
+          - '&8is pretty obvious...'
+          has1:
+            value0: '%betonquest_valiant:point.finishedQuests.amount% ISGREATER'
+            compare0: 10
+            material: STICK
+            customdata: 23
+            name: '%color_menu_item_unlocked%Finished Quest'
+            lore:
+            - ''
+            - '&8Eat a Golden Apple.'
+            - '&8Watch out for your teeth though!'
+            - ''
+            - '&7★&m Reward: Strength Potion II'
+            - ''
+            - '%color_menu_unlocked%&l✔ Quest Finished'
+            - ''
+            - '&8✎ Hint: Golden Apple''s crafting'
+            - '&8is pretty obvious...'
+      
+      
+      '29':
+        material: STICK
+        customdata: 21
+        name: '&cLocked Quest'
+        lore:
+        - ''
+        - '&7This quest is not unlocked yet!'
+        - ''
+        - '&8▶ You need to finish previous'
+        - '&8quest in order to unlock it!'
+        has0:
+          value0: '%betonquest_valiant:point.finishedQuests.amount% ISGREATER'
+          compare0: 10
+          material: STICK
+          customdata: 22
+          name: '&e⏳ Dwarf''s Quest'
+          lore:
+          - ''
+          - '&7You need to go to the mine'
+          - '&7and look for some &fDiamonds&7.'
+          - ''
+          - '&a★ &fReward: &7Enchanted Book: Fortune 2'
+          - ''
+          - '&e⏳ &7This Quest is in progress.'
+          - ''
+          - '&8✎ Hint: Go to the mine and arm'
+          - '&8yourself with patience for this one!'
+          has1:
+            value0: '%betonquest_valiant:point.finishedQuests.amount% ISGREATER'
+            compare0: 11
+            material: STICK
+            customdata: 23
+            name: '%color_menu_item_unlocked%Finished Quest'
+            lore:
+            - ''
+            - '&8You need to go to the mine'
+            - '&8and look for some Diamonds.'
+            - ''
+            - '&7★&m Reward: Enchanted Book: Fortune 2'
+            - ''
+            - '%color_menu_unlocked%&l✔ Quest Finished'
+            - ''
+            - '&8✎ Hint: Go to the mine and arm'
+            - '&8yourself with patience for this one!'
+      
+      '30':
+        material: STICK
+        customdata: 21
+        name: '&cLocked Quest'
+        lore:
+        - ''
+        - '&7This quest is not unlocked yet!'
+        - ''
+        - '&8▶ You need to finish previous'
+        - '&8quest in order to unlock it!'
+        has0:
+          value0: '%betonquest_valiant:point.finishedQuests.amount% ISGREATER'
+          compare0: 11
+          material: STICK
+          customdata: 22
+          name: '&e⏳ Multidimensional Storage'
+          lore:
+          - ''
+          - '&fEnder Chest &7is a safe storage'
+          - '&7place. You should craft one!'
+          - ''
+          - '&a★ &fReward: &71000 Gold'
+          - ''
+          - '&e⏳ &7This Quest is in progress.'
+          - ''
+          - '&8✎ Hint: Combine obsidian and ender'
+          - '&8eye to get the Ender Chest!'
+          has1:
+            value0: '%betonquest_valiant:point.finishedQuests.amount% ISGREATER'
+            compare0: 12
+            material: STICK
+            customdata: 23
+            name: '%color_menu_item_unlocked%Finished Quest'
+            lore:
+            - ''
+            - '&8Ender Chest is a safe storage'
+            - '&8place. You should craft one!'
+            - ''
+            - '&7★&m Reward: 1000 Gold'
+            - ''
+            - '%color_menu_unlocked%&l✔ Quest Finished'
+            - ''
+            - '&8✎ Hint: Combine obsidian and ender'
+            - '&8eye to get the Ender Chest!'
+      
+      '31':
+        material: STICK
+        customdata: 21
+        name: '&cLocked Quest'
+        lore:
+        - ''
+        - '&7This quest is not unlocked yet!'
+        - ''
+        - '&8▶ You need to finish previous'
+        - '&8quest in order to unlock it!'
+        has0:
+          value0: '%betonquest_valiant:point.finishedQuests.amount% ISGREATER'
+          compare0: 12
+          material: STICK
+          customdata: 22
+          name: '&e⏳ Finger Lickin'' Good'
+          lore:
+          - ''
+          - '&7Not the chicken wings!'
+          - '&7Make me a delicious &fPumpkin Pie&7!'
+          - ''
+          - '&a★ &fReward: &7KFC Trip!'
+          - ''
+          - '&e⏳ &7This Quest is in progress.'
+          - ''
+          - '&8✎ Hint: Pumpkin, sugar and egg!'
+          - '&8Very easy!'
+          has1:
+            value0: '%betonquest_valiant:point.finishedQuests.amount% ISGREATER'
+            compare0: 13
+            material: STICK
+            customdata: 23
+            name: '%color_menu_item_unlocked%Finished Quest'
+            lore:
+            - ''
+            - '&8Not the chicken wings!'
+            - '&8Make me a delicious Pumpkin Pie!'
+            - ''
+            - '&7★&m Reward: KFC Trip!'
+            - ''
+            - '%color_menu_unlocked%&l✔ Quest Finished'
+            - ''
+            - '&8✎ Hint: Pumpkin, sugar and egg!'
+            - '&8Very easy!'
+      
+      
+      '32':
+        material: STICK
+        customdata: 21
+        name: '&cLocked Quest'
+        lore:
+        - ''
+        - '&7This quest is not unlocked yet!'
+        - ''
+        - '&8▶ You need to finish previous'
+        - '&8quest in order to unlock it!'
+        has0:
+          value0: '%betonquest_valiant:point.finishedQuests.amount% ISGREATER'
+          compare0: 13
+          material: STICK
+          customdata: 22
+          name: '&e⏳ Apocalypse Prevention'
+          lore:
+          - ''
+          - '&7Zombie population is out of control.'
+          - '&7You need to &fKill 40 &7to keep it down.'
+          - ''
+          - '&a★ &fReward: &7Enchanted Book: Smite 3'
+          - ''
+          - '&e⏳ &7This Quest is in progress.'
+          - ''
+          - '&8✎ Hint: Sharpen your sword,'
+          - '&8you will need it!'
+          has1:
+            value0: '%betonquest_valiant:point.finishedQuests.amount% ISGREATER'
+            compare0: 14
+            material: STICK
+            customdata: 23
+            name: '%color_menu_item_unlocked%Finished Quest'
+            lore:
+            - ''
+            - '&8Zombie population is out of control.'
+            - '&8You need to Kill 40 to keep it down.'
+            - ''
+            - '&7★&m Reward: Enchanted Book: Smite 3'
+            - ''
+            - '%color_menu_unlocked%&l✔ Quest Finished'
+            - ''
+            - '&8✎ Hint: Sharpen your sword,'
+            - '&8you will need it!'
+      
+      
+      '33':
+        material: STICK
+        customdata: 21
+        name: '&cLocked Quest'
+        lore:
+        - ''
+        - '&7This quest is not unlocked yet!'
+        - ''
+        - '&8▶ You need to finish previous'
+        - '&8quest in order to unlock it!'
+        has0:
+          value0: '%betonquest_valiant:point.finishedQuests.amount% ISGREATER'
+          compare0: 14
+          material: STICK
+          customdata: 22
+          name: '&e⏳ Alchemist''s Job'
+          lore:
+          - ''
+          - '&7Brew one &fSpeed Potion &7to'
+          - '&7let yourself travel faster.'
+          - ''
+          - '&a★ &fReward: &716 Experience Bottles'
+          - ''
+          - '&e⏳ &7This Quest is in progress.'
+          - ''
+          - '&8✎ Hint: Combine Netherwart and'
+          - '&8Sugar in a Brewing Stand!'
+          has1:
+            value0: '%betonquest_valiant:point.finishedQuests.amount% ISGREATER'
+            compare0: 15
+            material: STICK
+            customdata: 23
+            name: '%color_menu_item_unlocked%Finished Quest'
+            lore:
+            - ''
+            - '&8Brew one Speed Potion to'
+            - '&8let yourself travel faster.'
+            - ''
+            - '&7★&m Reward: 16 Experience Bottles'
+            - ''
+            - '%color_menu_unlocked%&l✔ Quest Finished'
+            - ''
+            - '&8✎ Hint: Combine Netherwart and'
+            - '&8Sugar in a Brewing Stand!'
+      
+
+      

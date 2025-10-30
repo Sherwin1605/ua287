@@ -34,12 +34,13 @@ languages:
 - ru
 - it
 - ko
+- cs
 try_detect_client_language: true
 hooks:
   HolographicDisplays:
-    enabled: true
-  DecentHolograms:
     enabled: false
+  DecentHolograms:
+    enabled: true
   LuckPerms:
     enabled: true
   PlaceholderAPI:
@@ -58,23 +59,18 @@ hooks:
     - spawn
     blocked_check_replace_regions:
     - Example
-  MythicMobs:
-    enabled: true
-    handle_damage_increase: true
-    handle_damage_reduction: true
-    prevent_regular_xp: false
 action_bar:
-  enabled: true
+  enabled: false
   idle: true
-  ability: false
-  xp: true
-  maxed: true
+  ability: true
+  xp: false
+  maxed: false
   update_period: 5
   round_xp: false
   placeholder_api: true
   use_suffix: true
 boss_bar:
-  enabled: false
+  enabled: true
   mode: multi
   stay_time: 60
   update_every: 1
@@ -83,40 +79,26 @@ boss_bar:
   placeholder_api: true
   use_suffix: true
   format:
-  - FARMING GREEN PROGRESS
-  - FORAGING RED PROGRESS
-  - MINING PURPLE PROGRESS
-  - FISHING BLUE PROGRESS
+  - FARMING YELLOW PROGRESS
+  - FORAGING YELLOW PROGRESS
+  - MINING YELLOW PROGRESS
+  - FISHING YELLOW PROGRESS
   - EXCAVATION YELLOW PROGRESS
-  - ARCHERY PINK PROGRESS
-  - DEFENSE BLUE PROGRESS
-  - FIGHTING RED PROGRESS
-  - ENDURANCE PURPLE PROGRESS
-  - AGILITY WHITE PROGRESS
-  - ALCHEMY PINK PROGRESS
-  - ENCHANTING PURPLE PROGRESS
-  - SORCERY BLUE PROGRESS
-  - HEALING WHITE PROGRESS
+  - ARCHERY YELLOW PROGRESS
+  - DEFENSE YELLOW PROGRESS
+  - FIGHTING YELLOW PROGRESS
+  - ENDURANCE YELLOW PROGRESS
+  - AGILITY YELLOW PROGRESS
+  - ALCHEMY YELLOW PROGRESS
+  - ENCHANTING YELLOW PROGRESS
+  - SORCERY YELLOW PROGRESS
+  - HEALING YELLOW PROGRESS
   - FORGING YELLOW PROGRESS
   xp_format: '#.#'
   percent_format: '#.##'
-  money_format: '0.00'
-jobs:
-  enabled: false
-  selection:
-    require_selection: true
-    default_job_limit: 2
-    disable_unselected_xp: false
-  income:
-    use_xp: true
-    use_expression: false
-    default:
-      income_per_xp: 0.1
-      expression: 0.1*xp
-    use_final_xp: true
 enable_roman_numerals: false
 damage_holograms:
-  enabled: false
+  enabled: true
   scaling: true
   decimal:
     display_when_less_than: 1
@@ -168,10 +150,10 @@ auto_save:
   interval_ticks: 12000
 leveler:
   title:
-    enabled: false
-    fade_in: 5
-    stay: 100
-    fade_out: 5
+    enabled: true
+    fade_in: 3
+    stay: 60
+    fade_out: 3
   sound:
     enabled: true
     type: ENTITY_PLAYER_LEVELUP
@@ -201,18 +183,16 @@ requirement:
     prevent_weapon_use: true
     prevent_block_place: true
     prevent_interact: true
-    global: []
   armor:
     prevent_armor_equip: true
-    global: []
 critical:
   enabled:
-    sword: false
-    bow: false
-    axe: false
-    pickaxe: false
-    shovel: false
-    hoe: false
+    sword: true
+    bow: true
+    axe: true
+    pickaxe: true
+    shovel: true
+    hoe: true
     hand: false
     other: false
 source:
@@ -231,12 +211,10 @@ menus:
     show_trait_values_directly: true
 loot:
   update_loot_tables: true
-  directly_to_inventory: false
-check_for_updates: true
+check_for_updates: false
 automatic_backups:
   enabled: true
   minimum_interval_hours: 24
-  max_users: 50000
 save_blank_profiles: false
 metadata:
   config_migration_complete: true

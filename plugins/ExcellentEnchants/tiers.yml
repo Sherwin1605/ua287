@@ -1,6 +1,6 @@
 common:
   Name: 'Common'
-  Color: 'WHITE'
+  Color: '#dae7eb'
   Priority: 1
   Obtain_Chance:
     ENCHANTING: 80.0
@@ -10,7 +10,7 @@ common:
     MOB_SPAWNING: 80.0
 rare:
   Name: 'Rare'
-  Color: 'GREEN'
+  Color: '#53bd73'
   Priority: 2
   Obtain_Chance:
     ENCHANTING: 50.0
@@ -20,7 +20,7 @@ rare:
     MOB_SPAWNING: 50.0
 exotic:
   Name: 'Exotic'
-  Color: 'YELLOW'
+  Color: '#4a88c7'
   Priority: 3
   Obtain_Chance:
     ENCHANTING: 25.0
@@ -30,7 +30,7 @@ exotic:
     MOB_SPAWNING: 25.0
 legendary:
   Name: 'Legendary'
-  Color: 'GOLD'
+  Color: '#fcb40a'
   Priority: 4
   Obtain_Chance:
     ENCHANTING: 10.0
@@ -40,7 +40,7 @@ legendary:
     MOB_SPAWNING: 10.0
 cursed:
   Name: 'Cursed'
-  Color: 'RED'
+  Color: '#e03448'
   Priority: 0
   Obtain_Chance:
     ENCHANTING: 0.0

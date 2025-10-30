@@ -1,0 +1,21 @@
+nm_plushie_cassowary:
+
+  Id: PAPER
+  Model: 1002
+  Display: '&fCassowary Plushie'
+  
+  Type: FURNITURE
+  Furniture:
+    Type: ITEM_FRAME
+    Material: PAPER
+    Model: 1002
+    Health: 2
+    #Barriers:
+    #- 0,0,0 
+    
+  FurnitureSkills:
+  - sound{s=block.wool.place;p=1.8;v=0.8} @selflocation ~onBlockPlace
+  - sound{s=block.wool.hit;p=1.8;v=0.8} @selflocation ~onDamaged
+  - sound{s=block.wool.step;p=1.8;v=0.8} @selflocation ~onBlockRotate
+  - sound{s=block.wool.break;p=1.8;v=0.8} @selflocation ~onBlockBreak
+  - sound{s=entity.axolotl.hurt;p=1.8;v=0.8} @selflocation ~onInteract

@@ -1,0 +1,84 @@
+# Please DO NOT change version number!
+version: 1
+
+# Should the Ambient Sounds be enabled?
+enabled: true
+
+forest-biomes:
+- forest
+- flower forest
+- birch forest
+- old growth birch forest
+- dark forest
+- taiga
+- old growth pine taiga
+- old growth spruce taiga
+- jungle
+- sparse jungle
+- bamboo jungle
+
+green-biomes:
+- forest
+- flower forest
+- birch forest
+- old growth birch forest
+- dark forest
+- taiga
+- old growth pine taiga
+- old growth spruce taiga
+- jungle
+- sparse jungle
+- bamboo jungle
+- swamp
+- mangrove swamp
+- river
+- plains
+- sunflower plains
+- spawn
+
+arid-biomes:
+- desert
+- savanna
+- savanna plateau
+- windswept savanna
+- mesa
+- wooded badlands
+- eroded badlands
+
+winter-biomes:
+- snowy plains
+- ice spikes
+- frozen river
+- grove
+- snowy slopes
+- snowy taiga
+- frozen peaks
+- jagged peaks
+- snowy beach
+- frozen ocean
+- deep frozen ocean
+
+high-biomes:
+- jagged peaks
+- frozen peaks
+- stony peaks
+- meadow
+- windswept hills
+- windswept gravelly hills
+- windswept forest
+- windswept savanna
+
+ocean-biomes:
+- ocean
+- deep ocean
+- warm ocean
+- lukewarm ocean
+- deep lukewarm ocean
+- cold ocean
+- deep cold ocean
+- frozen ocean
+- deep frozen ocean
+- mushroom fields
+- beach
+- snowy beach
+- stony shore

@@ -1,0 +1,238 @@
+
+on load:
+	DailyRewardsReload()
+
+
+
+
+function DailyRewardsCreateRewardsFile():
+	load yaml "unlimited_adventures/DailyRewards/rewards.yml" as "rewards"
+
+	set yaml value "version" from "rewards" to 1
+	set the comments of yaml node "version" from "rewards" to "Please DO NOT change version number!"
+
+	set yaml value "1.1" from "rewards" to "gold 100"
+	set yaml value "1.2" from "rewards" to "command reputation give10xp PLAYER_NAME ranchers"
+	set yaml value "2.1" from "rewards" to "gold 200"
+	set yaml value "2.2" from "rewards" to "10 of cooked beef"
+	set yaml value "2.3" from "rewards" to "command reputation give15xp PLAYER_NAME slayers"
+	set yaml value "3.1" from "rewards" to "gold 300"
+	set yaml value "3.2" from "rewards" to "8 of iron ingot"
+	set yaml value "3.3" from "rewards" to "command reputation give20xp PLAYER_NAME miners"
+	set yaml value "4.1" from "rewards" to "gold 400"
+	set yaml value "4.2" from "rewards" to "1 of golden apple"
+	set yaml value "4.3" from "rewards" to "command reputation give25xp PLAYER_NAME ranchers"
+	set yaml value "5.1" from "rewards" to "gold 500"
+	set yaml value "5.2" from "rewards" to "16 of experience bottle"
+	set yaml value "5.3" from "rewards" to "command reputation give30xp PLAYER_NAME slayers"
+	set yaml value "6.1" from "rewards" to "gold 750"
+	set yaml value "6.2" from "rewards" to "4 of emerald"
+	set yaml value "6.3" from "rewards" to "command reputation give40xp PLAYER_NAME miners"
+	set yaml value "7.1" from "rewards" to "gold 1000"
+	set yaml value "7.2" from "rewards" to "1 of diamond"
+	set yaml value "7.3" from "rewards" to "command reputation give50xp PLAYER_NAME ranchers"
+	set the comments of yaml node "1" from "rewards" to "" and "Feel free to set up your own rewards for the Daily Rewards system. Remember to follow the formatting." and "Use 'command' word in order to use a command on reward claim. You can get a player's name by typing PLAYER_NAME. Example here:" and "command eco give PLAYER_NAME 100" and "To give player gold, use 'gold' word followed by a number." and "To give items, an example would be: '10 of diamond'" and "In case of any issues, feel free to contact us on the Ender Nerds Discord server." and ""
+
+
+	set yaml value "1.1" from "rewards" to "gold 100"
+	
+	save yaml "rewards"
+
+
+function DailyRewardsCreateMessagesFile():
+	load yaml "unlimited_adventures/DailyRewards/messages.yml" as "messages"
+
+	set yaml value "version" from "messages" to 1
+	set the comments of yaml node "version" from "messages" to "Please DO NOT change version number!"
+
+	set yaml value "no_permission" from "messages" to "You don't have access to that command."
+	set yaml value "no_space" from "messages" to "You don't have space for this reward."
+	set yaml value "reward_claim_title" from "messages" to "Cogratulations!"
+	set yaml value "reward_claim" from "messages" to "You claimed your reward for joining <##31ed96>DAY_NUMBER DAYS <##7dff49>in a row!"
+	set yaml value "reward_claim_first_day" from "messages" to "You claimed your reward for joining <##31ed96>FIRST DAY <##7dff49>in a row!"
+
+	save yaml "messages"
+
+
+function DailyRewardsReload():
+	load yaml "unlimited_adventures/DailyRewards/rewards.yml" as "rewards"
+	load yaml "unlimited_adventures/DailyRewards/messages.yml" as "messages"
+
+	if yaml value "version" from "rewards" is not set:
+		wait 1 tick
+		DailyRewardsCreateRewardsFile()
+	if yaml value "version" from "messages" is not set:
+		wait 1 tick
+		DailyRewardsCreateMessagesFile()
+
+	clear {daily_rewards::rewards::*}
+
+	loop 7 times:
+		set {_day_nr} to loop-number
+		loop 25 times:
+			set {_reward_nr} to loop-number-2
+			if yaml value "%{_day_nr}%.%{_reward_nr}%" from "rewards" is set:
+				set {_var} to yaml value "%{_day_nr}%.%{_reward_nr}%" from "rewards"
+				if {_var} contains "gold ":
+					if {_var} doesn't contain "golden" or "ingot" or "raw" or "ore" or "block" or "sword" or "axe" or "pickaxe" or "shovel" or "hoe" or "nugget":
+						set {daily_rewards::rewards::%{_day_nr}%::%{_reward_nr}%} to {_var}
+				if {_var} contains "gems ":
+					set {daily_rewards::rewards::%{_day_nr}%::%{_reward_nr}%} to {_var}
+				if {_var} contains "command ":
+					set {daily_rewards::rewards::%{_day_nr}%::%{_reward_nr}%} to {_var}
+				if {daily_rewards::rewards::%{_day_nr}%::%{_reward_nr}%} is not set:
+					set {daily_rewards::rewards::%{_day_nr}%::%{_reward_nr}%} to {_var} parsed as item
+
+	clear {daily_rewards::messages::*}
+	loop yaml nodes from "messages":
+		set {daily_rewards::messages::%loop-value%} to yaml value loop-value from "messages"
+
+	save yaml "rewards"
+	save yaml "messages"
+
+
+
+
+
+
+
+
+
+
+
+
+on join:
+	if {daily_rewards::date::%uuid of player%} is not set:
+		set {daily_rewards::date::%uuid of player%} to now
+		subtract 24 hours from {daily_rewards::date::%uuid of player%}
+		set {daily_rewards::day_number::%uuid of player%} to 1
+		wait 1 tick
+	if difference between {daily_rewards::date::%uuid of player%} and now >= 49 hours:
+		set {daily_rewards::date::%uuid of player%} to now
+		subtract 24 hours from {daily_rewards::date::%uuid of player%}
+		set {daily_rewards::day_number::%uuid of player%} to 1
+
+
+
+command /dailyrewards [<text>] [<player>]:
+	aliases: ndailyrewards, dailybonus, dailyreward, reward, rewards, daily
+	trigger:
+		set {_player} to player-arg
+		if arg 1 is not set:
+			if arg 2 is not set:
+				execute player command "cp daily_rewards"
+		else:
+			if sender doesn't have permission "admin":
+				send "&c%{daily_rewards::messages::no_permission}%" to sender
+				stop
+
+			if arg 1 is "reset":
+				set {daily_rewards::date::%uuid of {_player}%} to now
+				subtract 24 hours from {daily_rewards::date::%uuid of {_player}%}
+				set {daily_rewards::day_number::%uuid of {_player}%} to 1
+				send "&aYou have resetted your rewards data!" to {_player}
+			if arg 1 is "claim":
+				DailyRewardsClaim({_player})
+			if arg 1 is "revert24":
+				subtract 23 hours and 59 minutes from {daily_rewards::date::%uuid of {_player}%}
+				send "&aYou have reverted your daily reward clock by 24 hours!" to {_player}
+				send "&a%placeholder "valiant_dailyrewards_timeuntilclaim" from {_player}%" to {_player}
+			if arg 1 is "revert1":
+				subtract 1 hour from {daily_rewards::date::%uuid of {_player}%}
+				send "&aYou have reverted your daily reward clock by 1 hour!" to {_player}
+				send "&a%placeholder "valiant_dailyrewards_timeuntilclaim" from {_player}%" to {_player}
+			if arg 1 is "add1" or "forward1":
+				add 1 hour to {daily_rewards::date::%uuid of {_player}%}
+				send "&aYou have forwarded your daily reward clock by 1 hour!" to {_player}
+				send "&a%placeholder "valiant_dailyrewards_timeuntilclaim" from {_player}%" to {_player}
+			if arg 1 is "add24" or "forward24":
+				add 23 hours and 59 minutes to {daily_rewards::date::%uuid of {_player}%}
+				send "&aYou have forwarded your daily reward clock by 24 hour!" to {_player}
+				send "&a%placeholder "valiant_dailyrewards_timeuntilclaim" from {_player}%" to {_player}
+			if arg 1 is "reload":
+				DailyRewardsReload()
+				send "&aDaily Rewards have been reloaded!" to sender
+			if arg 1 is "regeneratefile":
+				DailyRewardsCreateRewardsFile()
+				wait 1 second
+				DailyRewardsReload()
+				send "&aDaily Rewards config file has been regenerated!" to sender
+			if arg 1 is "help":
+				send "&f/dailyrewards reset &7- reset your rewards data" to sender
+				send "&f/dailyrewards claim &7- claim your reward" to sender
+				send "&f/dailyrewards revert24 &7- revert your Daily Rewards clock by 24 hours" to sender
+				send "&f/dailyrewards revert1 &7- revert your Daily Rewards clock by 1 hour" to sender
+				send "&f/dailyrewards add1 &7- add 1 hour to your Daily Rewards clock" to sender
+				send "&f/dailyrewards add24 &7- add 24 hour to your Daily Rewards clock" to sender
+				send "&f/dailyrewards reload &7- reload the Daily Rewards config" to sender
+
+
+
+
+on tab complete of "/dailyrewards":
+	set tab completions for position 1 to "reset" and "claim" and "revert24" and "revert1" and "forward1" and "forward24" and "reload" and "help"
+	if tab arg-1 = "reset" or "claim" or "revert24" or "revert1" or "forward1" or "forward24":
+		set tab completions for position 2 to all players
+
+
+
+
+
+function DailyRewardsClaim(player: player):
+	if difference between {daily_rewards::date::%uuid of {_player}%} and now >= 24 hours:
+		loop 10 times:
+			if {daily_rewards::rewards::%{daily_rewards::day_number::%uuid of {_player}%}%::%loop-number%} is set:
+				set {_reward} to {daily_rewards::rewards::%{daily_rewards::day_number::%uuid of {_player}%}%::%loop-number%}
+				if {_reward} contains "gold ":
+					if {_reward} doesn't contain "golden" or "ingot" or "raw" or "ore" or "block" or "sword" or "axe" or "pickaxe" or "shovel" or "hoe" or "nugget":
+						replace all "gold " with "" in {_reward}
+						set {_amount} to {_reward} parsed as integer
+						add {_amount} to balance of {_player}
+						delete {_reward}
+				if {_reward} contains "gems":
+					replace all "gems " with "" in {_reward}
+					set {_amount} to {_reward} parsed as integer
+					PremiumCurrency({_player}, "add", {_amount})
+					delete {_reward}
+				if {_reward} contains "command":
+					replace all "command " with "" in {_reward}
+					replace all "PLAYER_NAME" with "%{_player}%" in {_reward}
+					replace all "DAY_NUMBER" with "%{daily_rewards::day_number::%uuid of {_player}%}%" in {_reward}
+					set {_command} to {_reward}
+					execute console command "%{_command}%"
+					delete {_reward}
+				if {_reward} is set:
+					replace all "PLAYER_NAME" with "%{_player}%" in {_reward}
+					replace all "DAY_NUMBER" with "%{daily_rewards::day_number::%uuid of {_player}%}%" in {_reward}
+					if {_player} has space for {_reward}:
+						give {_reward} to {_player}
+					else:
+						send "&f &c%{daily_rewards::messages::no_space}%" to {_player}
+						play sound "block.note_block.didgeridoo" with volume 0.7 and pitch 1 to {_player}
+						stop
+
+		set {daily_rewards::date::%uuid of {_player}%} to now
+
+
+		if {daily_rewards::day_number::%uuid of {_player}%} > 1:
+			send " " to {_player}
+			send "<##ffe817>⯪ <##ffe817>&l%{daily_rewards::messages::reward_claim_title}% <##ffe817>⯫ " to {_player}
+			set {_msg} to {daily_rewards::messages::reward_claim}
+			replace all "DAY_NUMBER" with "%{daily_rewards::day_number::%uuid of {_player}%}%" in {_msg}
+			send "<##7dff49>%{_msg}%" to {_player}
+			send " " to {_player}
+		else:
+			send " " to {_player}
+			send "<##ffe817>⯪ <##ffe817>&l%{daily_rewards::messages::reward_claim_title}% <##ffe817>⯫" to {_player}
+			set {_msg} to {daily_rewards::messages::reward_claim_first_day}
+			replace all "DAY_NUMBER" with "%{daily_rewards::day_number::%uuid of {_player}%}%" in {_msg}
+			send "<##7dff49>%{_msg}%" to {_player}
+			send " " to {_player}
+
+		play sound "entity.experience_orb.pickup" with volume 0.3 and pitch 1 to {_player}
+		play sound "item.armor.equip_iron" with volume 0.8 and pitch 1 to {_player}
+		play sound "block.ender_chest.open" with volume 0.1 and pitch 1 to {_player}
+
+		add 1 to {daily_rewards::day_number::%uuid of {_player}%}
+		if {daily_rewards::day_number::%uuid of {_player}%} > 7:
+			set {daily_rewards::day_number::%uuid of {_player}%} to 1

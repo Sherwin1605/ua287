@@ -513,15 +513,12 @@ commands:
   updateleaderboards:
     already_updating: "<yellow>Le classement est déjà en train d'etre mis à jour!"
     updated: "<green>Classement mis à jour!"
-  version: "<white>Vous êtes sur la version <aqua>{current_version}<white> d'AuraSkills. La dernière version est <aqua>{latest_version}"
+  version: "<white>Vous êtes sur la version <aqua>{current_version}<white> d'Aurelium Skills. La dernière version est <aqua>{latest_version}"
   xp:
     add: "<aqua>{amount} <gray>XP de <aqua>{skill} ont été ajoutée au joueur {player}"
     set: "<gray>XP de <aqua>{skill} <gray>pour le joueur {player} <gray>défini sur {amount}"
     remove: "<aqua>{amount} <gray>XP de <aqua>{skill} <gray>ont été supprimé du joueur <gold>{player}"
-  manaability:
-    cooldown_reset: "<gray>Cooldown for <aqua>{ability} <gray>has been reset for player <gold>{player}"
   unknown_skill: "<yellow>Compétence inconnue!"
-  unknown_mana_ability: "<yellow>Unknown mana ability!"
   unknown_stat: "<yellow>Statistiques inconnues !"
   no_profile: "<yellow>Le joueur n’a pas de profil de compétences. Veuillez essayer de rejoindre le jeu ou de redémarrer le serveur."
 leveler:

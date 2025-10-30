@@ -1,0 +1,464 @@
+panels:
+  profile_menu:
+    perm: default
+    rows: 5
+    title: '&f%valiant_player_rank_profile_font%'
+    commands:
+    - stats
+    - stat
+    - playerstats
+    - mystats
+    - statistics
+    - mystatistics
+    - displaystats
+    - displaystatistics
+    - profile_menu
+    - myprofile
+    - profile
+    - playerprofile
+    empty: AIR
+    sound-on-open: BLOCK_NOTE_BLOCK_HAT
+    item:
+      
+      
+      
+      '0':
+        material: STICK
+        customdata: 1
+        name: '&c← Previous Menu'
+        commands:
+        - open= main_menu
+      
+      
+      
+      
+      
+      '9':
+        material: cps= self
+        customdata: 1
+        name: '&7'
+      
+      
+      
+      '17':
+        material: '%armor_material_HELMET%'
+      '26':
+        material: '%armor_material_CHESTPLATE%'
+      '35':
+        material: '%armor_material_LEGGINGS%'
+      '44':
+        material: '%armor_material_BOOTS%'
+        
+      
+      
+      '12':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%Your Gold'
+        lore:
+        - ' '
+        - '#e0e841%vault_eco_balance% Gold &f'
+      '13':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%Your Gems'
+        lore:
+        - ' '
+        - '#e84848%valiant_gems% Gems &f'
+      '14':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%Your Crates'
+        lore:
+        - ' '
+        - '%color_menu_primary%• &7Adventure Crate: %color_ultra%%crazycrates_AdventureCrate%'
+        - '%color_menu_primary%• &7Hero Crate: %color_hero%%crazycrates_HeroCrate%'
+        - '%color_menu_primary%• &7Legendary Crate: %color_legend%%crazycrates_LegendaryCrate%'
+      
+      
+      '21':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%Playtime'
+        lore:
+        - ' '
+        - '&f%statistic_hours_played% hours'
+      
+      '22':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%First Join'
+        lore:
+        - ' '
+        - '&f%player_first_played_formatted%'
+        
+
+
+      '30':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%Survival'
+        lore:
+        - ' '
+        - '%color_menu_primary%• &7Mob Kills: &f%statistic_mob_kills%'
+        - '%color_menu_primary%• &7Mined Blocks: &f%statistic_mine_block%'
+        - '%color_menu_primary%• &7Crafted Items: &f%statistic_craft_item%'
+        - '%color_menu_primary%• &7Opened Chests: &f%statistic_chest_opened%'
+        - '%color_menu_primary%• &7Fishes Caught: &f%statistic_fish_caught%'
+        - '%color_menu_primary%• &7Jumps: &f%statistic_jump%'
+
+
+
+      '31':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%Combat'
+        lore:
+        - ' '
+        - '%color_menu_primary%• &7Player Kills: &f%statistic_player_kills%'
+        - '%color_menu_primary%• &7Deaths: &f%statistic_deaths%'
+        - '%color_menu_primary%• &7Damage Dealt: &f%statistic_damage_dealt%'
+        - '%color_menu_primary%• &7Damage Taken: &f%statistic_damage_taken%'
+        - '%color_menu_primary%• &7Enchanted Items: &f%statistic_item_enchanted%'
+        - '%color_menu_primary%• &7Time since Death: &f%statistic_time_since_death%'
+
+      '32':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%Quest'
+        lore:
+        - ' '
+        - '&fCurrent Quest: #6c6cf3%betonquest_valiant:objective.questInfo.QuestTitle%'
+        - ''
+        - '%betonquest_valiant:objective.questInfo.QuestDesc1%'
+        - '%betonquest_valiant:objective.questInfo.QuestDesc2%'
+        - ' '
+        - '&fFinished Quests: &7[&f%betonquest_valiant:point.finishedQuests.amount%&7/&f30&7]'
+      
+      
+      
+      '33':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%Your Skills'
+        lore:
+        - ''
+        - '#b12222🗡 Strength &f%aureliumskills_strength_int%'
+        - '#df5252❤ Health &f%aureliumskills_health_int%'
+        - '#f2601c🍖 Regeneration &f%aureliumskills_regeneration_int%'
+        - '#4cb61b☘ Luck &f%aureliumskills_luck_int%'
+        - '#6586e8✿ Wisdom &f%aureliumskills_wisdom_int%'
+        - '#58d09c🛡 Toughness &f%aureliumskills_toughness_int%'
+
+
+
+
+
+
+
+
+
+
+
+
+
+#
+#
+#      Settings
+#
+#
+
+
+
+
+
+
+      '39':
+        material: STICK
+        customdata: 151
+        name: '%color_menu_primary%Top-Screen UI'
+        lore:
+        - ' '
+        - '&7Should the Top-Screen UI be visible?'
+        - ''
+        - '%color_menu_purchase%&lClick to toggle'
+        commands:
+        - tab:tab bossbar
+        - refresh
+        has0:
+          value0: '%tab_bossbar_visible%'
+          compare0: Enabled
+          material: STICK
+          customdata: 151
+          name: '%color_menu_primary%Top-Screen UI'
+          lore:
+          - ' '
+          - '&7Should the Top-Screen UI be visible?'
+          - ''
+          - '%color_menu_purchase%&lClick to toggle'
+          - '&a[ENABLED]'
+          commands:
+          - tab:tab bossbar
+          - sound= BLOCK_NOTE_BLOCK_BIT 1 0.8
+          - refresh
+        has1:
+          value0: '%tab_bossbar_visible%'
+          compare0: Disabled
+          material: STICK
+          customdata: 141
+          name: '%color_menu_primary%Top-Screen UI'
+          lore:
+          - ' '
+          - '&7Should the Top-Screen UI be visible?'
+          - ''
+          - '%color_menu_purchase%&lClick to toggle'
+          - '&7[DISABLED]'
+          commands:
+          - tab:tab bossbar
+          - sound= BLOCK_NOTE_BLOCK_BIT 1 1.2
+          - refresh
+        
+        
+
+
+      '40':
+        material: STICK
+        customdata: 152
+        name: '%color_menu_primary%Sidebar'
+        lore:
+        - ' '
+        - '&7Should the sidebar be visible?'
+        - ''
+        - '%color_menu_purchase%&lClick to toggle'
+        commands:
+        - tab:tab scoreboard
+        - sound= BLOCK_NOTE_BLOCK_BIT 1 1
+        - refresh
+        has0:
+          value0: '%tab_scoreboard_visible%'
+          compare0: Enabled
+          material: STICK
+          customdata: 152
+          name: '%color_menu_primary%Sidebar'
+          lore:
+          - ' '
+          - '&7Should the sidebar be visible?'
+          - ''
+          - '%color_menu_purchase%&lClick to toggle'
+          - '&a[ENABLED]'
+          commands:
+          - tab:tab scoreboard
+          - sound= BLOCK_NOTE_BLOCK_BIT 1 0.8
+          - refresh
+        has1:
+          value0: '%tab_scoreboard_visible%'
+          compare0: Disabled
+          material: STICK
+          customdata: 142
+          name: '%color_menu_primary%Sidebar'
+          lore:
+          - ' '
+          - '&7Should the sidebar be visible?'
+          - ''
+          - '%color_menu_purchase%&lClick to toggle'
+          - '&7[DISABLED]'
+          commands:
+          - tab:tab scoreboard
+          - sound= BLOCK_NOTE_BLOCK_BIT 1 1.2
+          - refresh
+
+
+
+      
+
+      '41':
+        material: STICK
+        customdata: 154
+        name: '%color_menu_primary%Auto Tool'
+        lore:
+        - ' '
+        - '&7Should we automatically change the'
+        - '&7tool you are using to match the'
+        - '&7block you are trying to break?'
+        - ''
+        - '&c❌ &fYou need &f rank to use this!'
+        has0:
+          value0: '%cp-player-name% HASPERM'
+          compare0: 'besttools.use'
+          material: STICK
+          customdata: 154
+          name: '%color_menu_primary%Auto Tool'
+          lore:
+          - ' '
+          - '&7Should we automatically change the'
+          - '&7tool you are using to match the'
+          - '&7block you are trying to break?'
+          - ''
+          - '%color_menu_purchase%&lClick to toggle'
+          has0:
+            value0: '%besttools_btenabled%'
+            compare0: yes
+            material: STICK
+            customdata: 154
+            name: '%color_menu_primary%Auto Tool'
+            lore:
+            - ' '
+            - '&7Should we automatically change the'
+            - '&7tool you are using to match the'
+            - '&7block you are trying to break?'
+            - ''
+            - '%color_menu_purchase%&lClick to toggle'
+            - '&a[ENABLED]'
+            commands:
+            - besttool
+            - sound= BLOCK_NOTE_BLOCK_BIT 1 0.8
+            - refresh
+          has1:
+            value0: '%besttools_btenabled%'
+            compare0: no
+            material: STICK
+            customdata: 144
+            name: '%color_menu_primary%Auto Tool'
+            lore:
+            - ' '
+            - '&7Should we automatically change the'
+            - '&7tool you are using to match the'
+            - '&7block you are trying to break?'
+            - ''
+            - '%color_menu_purchase%&lClick to toggle'
+            - '&7[DISABLED]'
+            commands:
+            - besttool
+            - sound= BLOCK_NOTE_BLOCK_BIT 1 1.2
+            - refresh
+        
+      '42':
+        material: STICK
+        customdata: 155
+        name: '%color_menu_primary%Lumberjack'
+        lore:
+        - ' '
+        - '&7Do you want to use tree gravity'
+        - '&7when chopping down trees?'
+        - ''
+        - '&c❌ &fYou need &f rank to use this!'
+        has0:
+          value0: '%cp-player-name% HASPERM'
+          compare0: 'lumberjack.use'
+          material: STICK
+          customdata: 155
+          name: '%color_menu_primary%Lumberjack'
+          lore:
+          - ' '
+          - '&7Do you want to use tree gravity'
+          - '&7when chopping down trees?'
+          - ''
+          - '%color_menu_purchase%&lClick to toggle'
+          commands:
+          - lumberjack
+          - sound= BLOCK_NOTE_BLOCK_BIT 1 1
+          - refresh
+          has0:
+            value0: '%lumberjack_enabled%'
+            compare0: yes
+            material: STICK
+            customdata: 155
+            name: '%color_menu_primary%Lumberjack'
+            lore:
+            - ''
+            - '&7Do you want to use tree gravity'
+            - '&7when chopping down trees?'
+            - ''
+            - '%color_menu_purchase%&lClick to toggle'
+            - '&a[ENABLED]'
+            commands:
+            - lumberjack
+            - sound= BLOCK_NOTE_BLOCK_BIT 1 0.8
+            - refresh
+          has1:
+            value0: '%lumberjack_enabled%'
+            compare0: no
+            material: STICK
+            customdata: 145
+            name: '%color_menu_primary%Lumberjack'
+            lore:
+            - ''
+            - '&7Do you want to use tree gravity'
+            - '&7when chopping down trees?'
+            - ''
+            - '%color_menu_purchase%&lClick to toggle'
+            - '&7[DISABLED]'
+            commands:
+            - lumberjack
+            - sound= BLOCK_NOTE_BLOCK_BIT 1 1.2
+            - refresh
+
+
+
+
+      
+      
+      
+      
+      
+      
+      '43':
+        customdata: 158
+        material: STICK
+        name: '%color_menu_primary%Incoming Private Messages'
+        lore:
+        - ' '
+        - '&7Should players be able to'
+        - '&7send you private messages?'
+        - ''
+        - '&c❌ &fYou need &f rank to use this!'
+        has0:
+          value0: '%cp-player-name% HASPERM'
+          compare0: 'group.legend'
+          customdata: 158
+          material: STICK
+          name: '%color_menu_primary%Incoming Private Messages'
+          lore:
+          - ' '
+          - '&7Should players be able to'
+          - '&7send you private messages?'
+          - ''
+          - '%color_menu_purchase%&lClick to toggle'
+          commands:
+          - togglepm
+          - sound= BLOCK_NOTE_BLOCK_BIT 1 1
+          - refresh
+          has0:
+            value0: '%chatmanager_toggle_pm%'
+            compare0: 'Enabled'
+            customdata: 158
+            material: STICK
+            name: '%color_menu_primary%Incoming Private Messages'
+            lore:
+            - ' '
+            - '&7Should players be able to'
+            - '&7send you private messages?'
+            - ''
+            - '%color_menu_purchase%&lClick to toggle'
+            - '&a[ENABLED]'
+            commands:
+            - togglepm
+            - sound= BLOCK_NOTE_BLOCK_BIT 1 0.8
+            - refresh
+          has1:
+            value0: '%chatmanager_toggle_pm%'
+            compare0: 'Disabled'
+            customdata: 148
+            material: STICK
+            name: '%color_menu_primary%Incoming Private Messages'
+            lore:
+            - ' '
+            - '&7Should players be able to'
+            - '&7send you private messages?'
+            - ''
+            - '%color_menu_purchase%&lClick to toggle'
+            - '&7[DISABLED]'
+            commands:
+            - togglepm
+            - sound= BLOCK_NOTE_BLOCK_BIT 1 1.2
+            - refresh

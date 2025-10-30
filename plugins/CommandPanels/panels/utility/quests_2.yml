@@ -1,0 +1,719 @@
+panels:
+  quests_2:
+    perm: default
+    rows: 5
+    title: '&f'
+    empty: AIR
+    sound-on-open: ITEM_BOOK_PAGE_TURN
+    item:
+
+
+      '0':
+        material: STICK
+        customdata: 1
+        name: '&c← Previous Menu'
+        commands:
+        - open= main_menu
+      
+      
+      '38':
+        material: STICK
+        customdata: 1
+        name: '&a← Previous Page'
+        commands:
+        - open= quests_1
+      
+      
+      
+      '11':
+        material: STICK
+        customdata: 21
+        name: '&cLocked Quest'
+        lore:
+        - ''
+        - '&7This quest is not unlocked yet!'
+        - ''
+        - '&8▶ You need to finish previous'
+        - '&8quest in order to unlock it!'
+        has0:
+          value0: '%betonquest_valiant:point.finishedQuests.amount% ISGREATER'
+          compare0: 15
+          material: STICK
+          customdata: 22
+          name: '&e⏳ Shiny Gems'
+          lore:
+          - ''
+          - '&7Pay a visit in the mine'
+          - '&7and mine an &fEmerald Ore&7.'
+          - ''
+          - '&a★ &fReward: &71500 Gold'
+          - ''
+          - '&e⏳ &7This Quest is in progress.'
+          - ''
+          - '&8✎ Hint: You need to mine in'
+          - '&8Extreme Hills biome to find emeralds.'
+          has1:
+            value0: '%betonquest_valiant:point.finishedQuests.amount% ISGREATER'
+            compare0: 16
+            material: STICK
+            customdata: 23
+            name: '%color_menu_item_unlocked%Finished Quest'
+            lore:
+            - ''
+            - '&8Pay a visit in the mine'
+            - '&8and mine an Emerald Ore.'
+            - ''
+            - '&7★&m Reward: 1500 Gold'
+            - ''
+            - '%color_menu_unlocked%&l✔ Quest Finished'
+            - ''
+            - '&8✎ Hint: You need to mine in'
+            - '&8Extreme Hills biome to find emeralds.'
+      
+      '12':
+        material: STICK
+        customdata: 21
+        name: '&cLocked Quest'
+        lore:
+        - ''
+        - '&7This quest is not unlocked yet!'
+        - ''
+        - '&8▶ You need to finish previous'
+        - '&8quest in order to unlock it!'
+        has0:
+          value0: '%betonquest_valiant:point.finishedQuests.amount% ISGREATER'
+          compare0: 16
+          material: STICK
+          customdata: 22
+          name: '&e⏳ Take care of your vision'
+          lore:
+          - ''
+          - '&fCarrots &7are good for'
+          - '&7your eyes, &fharvest 25 &7of them!'
+          - ''
+          - '&a★ &fReward: &73 Golden Apples'
+          - ''
+          - '&e⏳ &7This Quest is in progress.'
+          - ''
+          - '&8✎ Hint: You can find'
+          - '&8carrots in villages.'
+          has1:
+            value0: '%betonquest_valiant:point.finishedQuests.amount% ISGREATER'
+            compare0: 17
+            material: STICK
+            customdata: 23
+            name: '%color_menu_item_unlocked%Finished Quest'
+            lore:
+            - ''
+            - '&8Carrots are good for'
+            - '&8your eyes, harvest 25 of them!'
+            - ''
+            - '&7★&m Reward: 3 Golden Apples'
+            - ''
+            - '%color_menu_unlocked%&l✔ Quest Finished'
+            - ''
+            - '&8✎ Hint: You can find'
+            - '&8carrots in villages.'
+      
+      '13':
+        material: STICK
+        customdata: 21
+        name: '&cLocked Quest'
+        lore:
+        - ''
+        - '&7This quest is not unlocked yet!'
+        - ''
+        - '&8▶ You need to finish previous'
+        - '&8quest in order to unlock it!'
+        has0:
+          value0: '%betonquest_valiant:point.finishedQuests.amount% ISGREATER'
+          compare0: 17
+          material: STICK
+          customdata: 22
+          name: '&e⏳ Staring Competition'
+          lore:
+          - ''
+          - '&7Wait for the night and'
+          - '&fhunt down 8 Endermans&7.'
+          - ''
+          - '&a★ &fReward: &732 Obsidian'
+          - ''
+          - '&e⏳ &7This Quest is in progress.'
+          - ''
+          - '&8✎ Hint: Be careful, endermans'
+          - '&8are strong opponents!'
+          has1:
+            value0: '%betonquest_valiant:point.finishedQuests.amount% ISGREATER'
+            compare0: 18
+            material: STICK
+            customdata: 23
+            name: '%color_menu_item_unlocked%Finished Quest'
+            lore:
+            - ''
+            - '&8Wait for the night and'
+            - '&8hunt down 8 Endermans.'
+            - ''
+            - '&7★&m Reward: 32 Obsidian'
+            - ''
+            - '%color_menu_unlocked%&l✔ Quest Finished'
+            - ''
+            - '&8✎ Hint: Be careful, endermans'
+            - '&8are strong opponents!'
+      
+      
+      '14':
+        material: STICK
+        customdata: 21
+        name: '&cLocked Quest'
+        lore:
+        - ''
+        - '&7This quest is not unlocked yet!'
+        - ''
+        - '&8▶ You need to finish previous'
+        - '&8quest in order to unlock it!'
+        has0:
+          value0: '%betonquest_valiant:point.finishedQuests.amount% ISGREATER'
+          compare0: 18
+          material: STICK
+          customdata: 22
+          name: '&e⏳ Spooky Scary Skeletons'
+          lore:
+          - ''
+          - '&7Go to the Nether and'
+          - '&fslay 10 Wither Skeletons&7.'
+          - ''
+          - '&a★ &fReward: &732 Experience Bottles'
+          - ''
+          - '&e⏳ &7This Quest is in progress.'
+          - ''
+          - '&8✎ Hint: Prepare a proper gear because'
+          - '&8wither skeletons are dangerous!'
+          has1:
+            value0: '%betonquest_valiant:point.finishedQuests.amount% ISGREATER'
+            compare0: 19
+            material: STICK
+            customdata: 23
+            name: '%color_menu_item_unlocked%Finished Quest'
+            lore:
+            - ''
+            - '&8Go to the Nether and'
+            - '&8slay 10 Wither Skeletons.'
+            - ''
+            - '&7★&m Reward: 32 Experience Bottles'
+            - ''
+            - '%color_menu_unlocked%&l✔ Quest Finished'
+            - ''
+            - '&8✎ Hint: Prepare a proper gear because'
+            - '&8wither skeletons are dangerous!'
+        
+        
+        
+      '15':
+        material: STICK
+        customdata: 21
+        name: '&cLocked Quest'
+        lore:
+        - ''
+        - '&7This quest is not unlocked yet!'
+        - ''
+        - '&8▶ You need to finish previous'
+        - '&8quest in order to unlock it!'
+        has0:
+          value0: '%betonquest_valiant:point.finishedQuests.amount% ISGREATER'
+          compare0: 19
+          material: STICK
+          customdata: 22
+          name: '&e⏳ Experienced'
+          lore:
+          - ''
+          - '&7Gather enough XP'
+          - '&7to &freach Level 30.'
+          - ''
+          - '&a★ &fReward: &71000 Gold'
+          - ''
+          - '&e⏳ &7This Quest is in progress.'
+          - ''
+          - '&8✎ Hint: Kill monsters'
+          - '&8in order to gain XP.'
+          has1:
+            value0: '%betonquest_valiant:point.finishedQuests.amount% ISGREATER'
+            compare0: 20
+            material: STICK
+            customdata: 23
+            name: '%color_menu_item_unlocked%Finished Quest'
+            lore:
+            - ''
+            - '&8Gather enough XP'
+            - '&8to reach Level 30.'
+            - ''
+            - '&7★&m Reward: 1000 Gold'
+            - ''
+            - '%color_menu_unlocked%&l✔ Quest Finished'
+            - ''
+            - '&8✎ Hint: Kill monsters'
+            - '&8in order to gain XP.'
+      
+      
+      
+      '20':
+        material: STICK
+        customdata: 21
+        name: '&cLocked Quest'
+        lore:
+        - ''
+        - '&7This quest is not unlocked yet!'
+        - ''
+        - '&8▶ You need to finish previous'
+        - '&8quest in order to unlock it!'
+        has0:
+          value0: '%betonquest_valiant:point.finishedQuests.amount% ISGREATER'
+          compare0: 20
+          material: STICK
+          customdata: 22
+          name: '&e⏳ A fancy mineral'
+          lore:
+          - ''
+          - '&7Go to the nether and'
+          - '&7dig down &f40 Quartz Ores&7.'
+          - ''
+          - '&a★ &fReward: &716 Experience Bottles'
+          - ''
+          - '&e⏳ &7This Quest is in progress.'
+          - ''
+          - '&8✎ Hint: Quartz is easily'
+          - '&8found in the Nether.'
+          has1:
+            value0: '%betonquest_valiant:point.finishedQuests.amount% ISGREATER'
+            compare0: 21
+            material: STICK
+            customdata: 23
+            name: '%color_menu_item_unlocked%Finished Quest'
+            lore:
+            - ''
+            - '&8Go to the nether and'
+            - '&8dig down &f40 Quartz Ores&7.'
+            - ''
+            - '&7★&m Reward: 16 Experience Bottles'
+            - ''
+            - '%color_menu_unlocked%&l✔ Quest Finished'
+            - ''
+            - '&8✎ Hint: Quartz is easily'
+            - '&8found in the Nether.'
+        
+        
+      '21':
+        material: STICK
+        customdata: 21
+        name: '&cLocked Quest'
+        lore:
+        - ''
+        - '&7This quest is not unlocked yet!'
+        - ''
+        - '&8▶ You need to finish previous'
+        - '&8quest in order to unlock it!'
+        has0:
+          value0: '%betonquest_valiant:point.finishedQuests.amount% ISGREATER'
+          compare0: 21
+          material: STICK
+          customdata: 22
+          name: '&e⏳ I am not bragging!'
+          lore:
+          - ''
+          - '&7This one will be hard,'
+          - '&fcraft a Diamond Block&7!'
+          - ''
+          - '&a★ &fReward: &71 Diamond'
+          - ''
+          - '&e⏳ &7This Quest is in progress.'
+          - ''
+          - '&8✎ Hint: Combine 9 diamonds'
+          - '&8into a block!'
+          has1:
+            value0: '%betonquest_valiant:point.finishedQuests.amount% ISGREATER'
+            compare0: 22
+            material: STICK
+            customdata: 23
+            name: '%color_menu_item_unlocked%Finished Quest'
+            lore:
+            - ''
+            - '&8This one will be hard,'
+            - '&8craft a Diamond Block!'
+            - ''
+            - '&7★&m Reward: 1 Diamond'
+            - ''
+            - '%color_menu_unlocked%&l✔ Quest Finished'
+            - ''
+            - '&8✎ Hint: Combine 9 diamonds'
+            - '&8into a block!'
+      
+      
+      
+      '22':
+        material: STICK
+        customdata: 21
+        name: '&cLocked Quest'
+        lore:
+        - ''
+        - '&7This quest is not unlocked yet!'
+        - ''
+        - '&8▶ You need to finish previous'
+        - '&8quest in order to unlock it!'
+        has0:
+          value0: '%betonquest_valiant:point.finishedQuests.amount% ISGREATER'
+          compare0: 22
+          material: STICK
+          customdata: 22
+          name: '&e⏳ Safety First!'
+          lore:
+          - ''
+          - '&7Enchant a &fDiamond Helmet'
+          - '&7with &fProtection IV&7.'
+          - ''
+          - '&a★ &fReward: &7Enchanted Book: Unbreaking III'
+          - ''
+          - '&e⏳ &7This Quest is in progress.'
+          - ''
+          - '&8✎ Hint: You will need a lot'
+          - '&8of XP to finish this quest.'
+          has1:
+            value0: '%betonquest_valiant:point.finishedQuests.amount% ISGREATER'
+            compare0: 23
+            material: STICK
+            customdata: 23
+            name: '%color_menu_item_unlocked%Finished Quest'
+            lore:
+            - ''
+            - '&8Enchant a Diamond Helmet'
+            - '&8with Protection IV.'
+            - ''
+            - '&7★&m Reward: Enchanted Book: Unbreaking III'
+            - ''
+            - '%color_menu_unlocked%&l✔ Quest Finished'
+            - ''
+            - '&8✎ Hint: You will need a lot'
+            - '&8of XP to finish this quest.'
+            
+            
+            
+      '23':
+        material: STICK
+        customdata: 21
+        name: '&cLocked Quest'
+        lore:
+        - ''
+        - '&7This quest is not unlocked yet!'
+        - ''
+        - '&8▶ You need to finish previous'
+        - '&8quest in order to unlock it!'
+        has0:
+          value0: '%betonquest_valiant:point.finishedQuests.amount% ISGREATER'
+          compare0: 23
+          material: STICK
+          customdata: 22
+          name: '&e⏳ Serial Killer'
+          lore:
+          - ''
+          - '&7Find the courage'
+          - '&7and &fKill 5 Players&7.'
+          - ''
+          - '&a★ &fReward: &7Diamond Sword'
+          - ''
+          - '&e⏳ &7This Quest is in progress.'
+          - ''
+          - '&8✎ Hint: You will need proper'
+          - '&8equipment to fight other players!'
+          has1:
+            value0: '%betonquest_valiant:point.finishedQuests.amount% ISGREATER'
+            compare0: 24
+            material: STICK
+            customdata: 23
+            name: '%color_menu_item_unlocked%Finished Quest'
+            lore:
+            - ''
+            - '&8Find the courage'
+            - '&8and Kill 5 Players.'
+            - ''
+            - '&7★&m Reward: Diamond Sword'
+            - ''
+            - '%color_menu_unlocked%&l✔ Quest Finished'
+            - ''
+            - '&8✎ Hint: You will need proper'
+            - '&8equipment to fight other players!'
+            
+            
+            
+      '24':
+        material: STICK
+        customdata: 21
+        name: '&cLocked Quest'
+        lore:
+        - ''
+        - '&7This quest is not unlocked yet!'
+        - ''
+        - '&8▶ You need to finish previous'
+        - '&8quest in order to unlock it!'
+        has0:
+          value0: '%betonquest_valiant:point.finishedQuests.amount% ISGREATER'
+          compare0: 24
+          material: STICK
+          customdata: 22
+          name: '&e⏳ Steelworker'
+          lore:
+          - ''
+          - '&7It''s hardware time!'
+          - '&fSmelt 100 Iron Ingots&7.'
+          - ''
+          - '&a★ &fReward: &71500 Gold'
+          - ''
+          - '&e⏳ &7This Quest is in progress.'
+          - ''
+          - '&8✎ Hint: Spend enough time underground'
+          - '&8and you will finish this quest!'
+          has1:
+            value0: '%betonquest_valiant:point.finishedQuests.amount% ISGREATER'
+            compare0: 25
+            material: STICK
+            customdata: 23
+            name: '%color_menu_item_unlocked%Finished Quest'
+            lore:
+            - ''
+            - '&8It''s hardware time!'
+            - '&8Smelt 100 Iron Ingots.'
+            - ''
+            - '&7★&m Reward: 1500 Gold'
+            - ''
+            - '%color_menu_unlocked%&l✔ Quest Finished'
+            - ''
+            - '&8✎ Hint: Spend enough time underground'
+            - '&8and you will finish this quest!'
+      
+      
+      '29':
+        material: STICK
+        customdata: 21
+        name: '&cLocked Quest'
+        lore:
+        - ''
+        - '&7This quest is not unlocked yet!'
+        - ''
+        - '&8▶ You need to finish previous'
+        - '&8quest in order to unlock it!'
+        has0:
+          value0: '%betonquest_valiant:point.finishedQuests.amount% ISGREATER'
+          compare0: 25
+          material: STICK
+          customdata: 22
+          name: '&e⏳ Strongman'
+          lore:
+          - ''
+          - '&7Brew &f3 Strength Potions'
+          - '&7of tier II.'
+          - ''
+          - '&a★ &fReward: &7Potion of Turtle Master'
+          - ''
+          - '&e⏳ &7This Quest is in progress.'
+          - ''
+          - '&8✎ Hint: Nether wart and blaze'
+          - '&8powder produce a Strength Potion.'
+          has1:
+            value0: '%betonquest_valiant:point.finishedQuests.amount% ISGREATER'
+            compare0: 26
+            material: STICK
+            customdata: 23
+            name: '%color_menu_item_unlocked%Finished Quest'
+            lore:
+            - ''
+            - '&8Brew 3 Strength Potions'
+            - '&8of tier II.'
+            - ''
+            - '&7★&m Reward: Potion of Turtle Master'
+            - ''
+            - '%color_menu_unlocked%&l✔ Quest Finished'
+            - ''
+            - '&8✎ Hint: Nether wart and blaze'
+            - '&8powder produce a Strength Potion.'
+      
+      '30':
+        material: STICK
+        customdata: 21
+        name: '&cLocked Quest'
+        lore:
+        - ''
+        - '&7This quest is not unlocked yet!'
+        - ''
+        - '&8▶ You need to finish previous'
+        - '&8quest in order to unlock it!'
+        has0:
+          value0: '%betonquest_valiant:point.finishedQuests.amount% ISGREATER'
+          compare0: 26
+          material: STICK
+          customdata: 22
+          name: '&e⏳ Coal Power'
+          lore:
+          - ''
+          - '&7Craft &f64 Coal Blocks&7.'
+          - '&7'
+          - ''
+          - '&a★ &fReward: &71 Diamond'
+          - ''
+          - '&e⏳ &7This Quest is in progress.'
+          - ''
+          - '&8✎ Hint: It''s not complicated,'
+          - '&8just enter the mine.'
+          has1:
+            value0: '%betonquest_valiant:point.finishedQuests.amount% ISGREATER'
+            compare0: 27
+            material: STICK
+            customdata: 23
+            name: '%color_menu_item_unlocked%Finished Quest'
+            lore:
+            - ''
+            - '&8Craft 64 Coal Blocks.'
+            - '&8'
+            - ''
+            - '&7★&m Reward: 1 Diamond'
+            - ''
+            - '%color_menu_unlocked%&l✔ Quest Finished'
+            - ''
+            - '&8✎ Hint: It''s not complicated,'
+            - '&8just enter the mine.'
+      
+      '31':
+        material: STICK
+        customdata: 21
+        name: '&cLocked Quest'
+        lore:
+        - ''
+        - '&7This quest is not unlocked yet!'
+        - ''
+        - '&8▶ You need to finish previous'
+        - '&8quest in order to unlock it!'
+        has0:
+          value0: '%betonquest_valiant:point.finishedQuests.amount% ISGREATER'
+          compare0: 27
+          material: STICK
+          customdata: 22
+          name: '&e⏳ Wither Away'
+          lore:
+          - ''
+          - '&7Prepare for a hard fight'
+          - '&7you have to &fKill The Wither&7.'
+          - ''
+          - '&a★ &fReward: &71 Netherite Scrap'
+          - ''
+          - '&e⏳ &7This Quest is in progress.'
+          - ''
+          - '&8✎ Hint: You will need very'
+          - '&8powerful gear to defeat Wither.'
+          has1:
+            value0: '%betonquest_valiant:point.finishedQuests.amount% ISGREATER'
+            compare0: 28
+            material: STICK
+            customdata: 23
+            name: '%color_menu_item_unlocked%Finished Quest'
+            lore:
+            - ''
+            - '&8Prepare for a hard fight'
+            - '&8you have to Kill The Wither.'
+            - ''
+            - '&7★&m Reward: 1 Netherite Scrap'
+            - ''
+            - '%color_menu_unlocked%&l✔ Quest Finished'
+            - ''
+            - '&8✎ Hint: You will need very'
+            - '&8powerful gear to defeat Wither.'
+      
+      
+      '32':
+        material: STICK
+        customdata: 21
+        name: '&cLocked Quest'
+        lore:
+        - ''
+        - '&7This quest is not unlocked yet!'
+        - ''
+        - '&8▶ You need to finish previous'
+        - '&8quest in order to unlock it!'
+        has0:
+          value0: '%betonquest_valiant:point.finishedQuests.amount% ISGREATER'
+          compare0: 28
+          material: STICK
+          customdata: 22
+          name: '&e⏳ Unstoppable Miner'
+          lore:
+          - ''
+          - '&7Arm yourself with patience,'
+          - '&7you have to &fMine 50 Obsidian&7.'
+          - ''
+          - '&a★ &fReward: &71 Diamond'
+          - ''
+          - '&e⏳ &7This Quest is in progress.'
+          - ''
+          - '&8✎ Hint: Obsidian is hard, but'
+          - '&8this quest is not THIS hard!'
+          has1:
+            value0: '%betonquest_valiant:point.finishedQuests.amount% ISGREATER'
+            compare0: 29
+            material: STICK
+            customdata: 23
+            name: '%color_menu_item_unlocked%Finished Quest'
+            lore:
+            - ''
+            - '&8Arm yourself with patience,'
+            - '&8you have to Mine 50 Obsidian.'
+            - ''
+            - '&7★&m Reward: 1 Diamond'
+            - ''
+            - '%color_menu_unlocked%&l✔ Quest Finished'
+            - ''
+            - '&8✎ Hint: Obsidian is hard, but'
+            - '&8this quest is not THIS hard!'
+      
+      
+      '33':
+        material: STICK
+        customdata: 21
+        name: '&cLocked Quest'
+        lore:
+        - ''
+        - '&7This quest is not unlocked yet!'
+        - ''
+        - '&8▶ You need to finish previous'
+        - '&8quest in order to unlock it!'
+        has0:
+          value0: '%betonquest_valiant:point.finishedQuests.amount% ISGREATER'
+          compare0: 29
+          material: STICK
+          customdata: 22
+          name: '&e⏳ Dragon Slayer'
+          lore:
+          - ''
+          - '&7Go to The End and'
+          - '&fSlay an Ender Dragon&7.'
+          - ''
+          - '&a★ &fReward: &7Elytra'
+          - ''
+          - '&e⏳ &7This Quest is in progress.'
+          - ''
+          - '&8✎ Hint: This is the Ultimate Quest'
+          - '&8you need to prepare extremely well.'
+          has1:
+            value0: '%betonquest_valiant:point.finishedQuests.amount% ISGREATER'
+            compare0: 30
+            material: STICK
+            customdata: 23
+            name: '%color_menu_item_unlocked%Finished Quest'
+            lore:
+            - ''
+            - '&8Go to The End and'
+            - '&8Slay an Ender Dragon.'
+            - ''
+            - '&7★&m Reward: Elytra'
+            - ''
+            - '%color_menu_unlocked%&l✔ Quest Finished'
+            - ''
+            - '&8✎ Hint: This is the Ultimate Quest'
+            - '&8you need to prepare extremely well.'
+      
+
+      

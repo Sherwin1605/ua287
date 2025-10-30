@@ -1,0 +1,8 @@
+nm_cassowary_drops:
+  MinItems: 2
+  MaxItems: 3
+  Drops:
+  - EXP 3-8 100%
+  - FEATHER 4-9 80%
+  - nm_cassowary_horn 1 40%
+#IDNTJDZEpXUIRkclZEZTZEbZpWVxEERNFTR61EMRRlT5lVVaFjTjhEdKlVeuV1TvlnM0dXN

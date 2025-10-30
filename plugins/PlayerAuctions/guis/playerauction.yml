@@ -10,7 +10,7 @@ pauction:
   # What is the name of the gui?
   name: "playerauctions"
   # The title of the gui (Can use color codes) the variable "[category]" will only work if it is enabled.
-  title: "ᴘʟᴀʏᴇʀ ᴀᴜᴄᴛɪᴏɴ ([page]/[pages])"
+  title: "&f"
   # What is the size of this GUI? (multiples of 9 can only go up to 54)
   size: 54
   # What are the actions when this menu is opened up?
@@ -35,7 +35,7 @@ pauction:
     # You will need ProtocolLib for this to work.
     enabled: true
     # What is the title for the inventory?
-    title: "&b&lSearch [search] - [category] ([page]/[pages])"
+    title: "&f  [search]"
     # What are the premade lines in the sign? %search% is the variable they have to enter the auction in.
     lines:
     - "%search%"
@@ -46,17 +46,17 @@ pauction:
     material: "OAK_SIGN"
 
     item:
-      material: "OAK_SIGN"
-      data: 0
-      name: "&aSearch"
+      material: "STICK"
+      custom-model-data: 18
+      name: "{#31ed96}Search"
       lore:
-      - "&7Click to search for an auction."
-      - "&a"
-      - "&7You can search for:"
-      - "&e Full IGN"
-      - "&e Item name/Item type"
-      - "&e Auction ID"
-      slot: 45
+      - " "
+      - "&7You can search for auctions by:"
+      - "&f• &7Full player name"
+      - "&f• &7Item name/Item type"
+      - " "
+      - "&a&lClick to search!"
+      slot: 46
       amount: 1
       glowing: false
 
@@ -69,50 +69,44 @@ pauction:
     # What is the title of the inventory?
     title: "&b&lPreview"
     # The variable "[preview]" will display the message below if the auction can be previewed.
-    preview: "&eRight click&b to preview contents."
+    preview: "&eRight click&7 to preview contents."
     # The variable "[preview]" will display the message below if the actuin cannot be previewed.
     no-preview: ""
 
   icon:
     price-per-item: "([price_item] per item)"
     none-price-per-item: ""
-    enchants-entry: "&b[enchant] [level]\n"
+    enchants-entry: "&d[enchant] [level]\n"
     no-enchants-entry: "&cNone"
-    repair-cost: "&bRepair Cost: &e[repair_cost] XP"
+    repair-cost: "&7Repair Cost: &9[repair_cost] XP"
     no-repair-cost: ""
 
     item-flags:
     - "HIDE_ATTRIBUTES"
     name: ""
     lore:
-    - "&8&m                                           "
-    - "&a[delauction]"
-    - "&eClick&7 to purchase."
+    - "[lore]"
     - " "
-    - "&7ID: &e[id]"
-    - "&7Seller: &e[seller]"
-    - "&7Amount: &e[amount]x"
-    - "&7Price: &e[price] [price_item]"
-    - "&7Expires in: &e[expire]"
-    - "&7Auctioned on: &e[date]"
-    - "&7Category: &e[categories]"
-    - "&8&m                                           "
+    - "&7Seller: &f[seller]"
+    - "&7Amount: &f[amount]"
+    - "&7Price: &e[price] Gold &f &6[price_item]"
+    - "&7Expires in: &9[expire]"
+    - " "
+    - "&a&lClick to purchase!"
+    - "[delauction]"
 
     lore-bidding:
-    - "&8&m                                           "
-    - "&a[delauction]"
-    - "&eClick&7 to offer a bid."
+    - "[lore]"
     - " "
-    - "&7ID: &e[id]"
-    - "&7Seller: &e[seller]"
-    - "&7Highest bidder: &e[bidder]"
-    - "&7Current bid: &e[price]"
-    - "&7Expires in: &e[expire]"
-    - "&7Auctioned on: &e[date]"
-    - "&7Category: &e[categories]"
-    - "&8&m                                           "
+    - "&7Seller: &f[seller]"
+    - "&7Highest bidder: &f[bidder]"
+    - "&7Current bid: &e[price] Gold &f"
+    - "&7Expires in: &9[expire]"
+    - " "
+    - "&a&lClick to offer a bid!"
+    - "[delauction]"
     # The variable "[delauction]" will display the message below if they do have permission to cancel the auction.
-    del-auction: "&eShift+Right&b to cancel this auction.\n[preview]"
+    del-auction: "&c&l❌ Shift + Right to cancel this auction.\n[preview]"
     # The variable "[delauction]" will display the message below if they don't have permission to cancel the auction.
     del-not-auction: "[preview]"
     # What are the commands that are ran when a player clicks on an auction?
@@ -120,70 +114,59 @@ pauction:
 
   clickable-items:
     next-page:
-      name: "&aNext Page"
-      material: "ARROW"
-      data: 0
-      lore: []
+      name: "&aNext Page →"
+      material: "STICK"
+      custom-model-data: 2
       slot: 50
       amount: 1
       glowing: false
     previous-page:
-      name: "&aPrevious page"
-      material: "ARROW"
-      data: 0
-      lore: []
+      name: "&a← Previous page"
+      material: "STICK"
+      custom-model-data: 1
       slot: 48
       amount: 1
       glowing: false
     refresh:
-      name: "&6Refresh"
-      material: "SUNFLOWER"
-      data: 0
-      lore: []
+      name: "{#31ed96}Refresh"
+      material: "AIR"
+      custom-model-data: 46
       slot: 49
       amount: 1
       glowing: false
       cooldown: 3
-    category:
-      name: "&bCategory menu"
-      material: "BOOK"
-      data: 0
-      lore:
-      - "&eClick&b to go back to the category menu."
-      slot: 46
-      amount: 1
-      glowing: false
     category-swapper:
-      name: "&bCategory"
-      material: "BOOK"
-      data: 0
+      name: "{#31ed96}Category"
+      material: "STICK"
+      custom-model-data: 45
       lore:
-      - "&eClick&b to switch through the categories."
       - " "
       - "%categories%"
-      slot: 51
+      - " "
+      - "&a&lClick to switch!"
+      slot: 52
       amount: 1
       glowing: false
-      current-category: "&e%category%"
-      other-category: "&d%category%"
+      current-category: "&a%category%"
+      other-category: "&f%category%"
     myauctions:
-      name: "&eMy auctions"
-      material: "BEACON"
-      data: 0
+      name: "{#31ed96}My auctions"
+      material: "STICK"
+      custom-model-data: 49
       lore:
-      - "&7Click to view your auctions."
-      slot: 53
+      - " "
+      - "&7Click to view your auctions"
+      slot: 49
       amount: 1
       glowing: false
     sort:
-      name: "&3Sort"
-      material: "HOPPER"
-      data: 0
+      name: "{#31ed96}Sort"
+      material: "STICK"
+      custom-model-data: 17
       lore:
-      - "&7Sort the GUI in a specific format."
-      - "&a"
-      - "&7Current: &e&n%sort%"
-      slot: 52
+      - " "
+      - "&7Current: &f%sort%"
+      slot: 53
       amount: 1
       glowing: false
       # This is the name of the next page item
@@ -198,15 +181,13 @@ pauction:
 
   items:
     1:
-      name: " "
-      material: "BLACK_STAINED_GLASS_PANE"
-      slot:
-      - 46
-      - 47
-      - 51
-      - 53
+      name: "&c← Previous Menu"
+      material: "STICK"
+      custom-model-data: 44
+      slot: 45
       amount: 1
-      glowing: false
+      commands:
+      - "[player] cp main_menu"
       # This is the name of the item.
       # This is the item material. To disable set this to AIR
       # This is the data item

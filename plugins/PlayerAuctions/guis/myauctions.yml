@@ -10,7 +10,7 @@ myauctions:
   # What is the name of the gui?
   name: "myauctions"
   # The title of the gui (Can use color codes)
-  title: "ᴍʏ ᴀᴜᴄᴛɪᴏɴ ([page]/[pages])"
+  title: "&f"
   # What is the size of this GUI? (multiples of 9 can only go up to 54)
   size: 54
   # What are the actions when this menu is opened up?
@@ -29,11 +29,11 @@ myauctions:
 
   limit-placeholder:
     enabled: true
-    material: "BARRIER"
+    material: "STICK"
     data: 0
-    name: "&c&lLimit reached!"
+    name: "&4&lSlot locked!"
     lore:
-    - "&cYou can't place any more auctions!"
+    - "&cYou can't use this auction slot."
   available-placeholder:
     enabled: false
     material: "DIAMOND"
@@ -46,9 +46,9 @@ myauctions:
   search:
     # Should the feature be enabled?
     # You will need ProtocolLib for this to work.
-    enabled: false
+    enabled: true
     # What is the title for the inventory?
-    title: "&b&lSearch [search] - ([page]/[pages])"
+    title: "&f  [search]"
     # What are the premade lines in the sign? %search% is the variable they have to enter the auction in.
     lines:
     - "%search%"
@@ -59,23 +59,23 @@ myauctions:
     material: "OAK_SIGN"
     
     item:
-      material: "OAK_SIGN"
-      data: 0
-      name: "&bSearch"
+      material: "STICK"
+      custom-model-data: 18
+      name: "{#31ed96}Search"
       lore:
-      - "&eClick&b to search for an auction."
       - " "
-      - "&bYou can search for auctions by:"
-      - "&e* Full IGN"
-      - "&e* Item name/Item type"
-      - "&e* Auction ID"
-      slot: 45
+      - "&7You can search for auctions by:"
+      - "&f• &7Full player name"
+      - "&f• &7Item name/Item type"
+      - " "
+      - "&a&lClick to search!"
+      slot: 46
       glowing: false
 
   icon:
     price-per-item: "([price_item] per item)"
     none-price-per-item: ""
-    enchants-entry: "&b[enchant] [level]\n"
+    enchants-entry: "&d[enchant] [level]\n"
     no-enchants-entry: "&cNone"
     repair-cost: "&bRepair Cost: &e[repair_cost] XP"
     no-repair-cost: "&bRepair Cost: &cNone"
@@ -85,61 +85,58 @@ myauctions:
     lore:
     - "[lore]"
     - "&b[preview]"
-    - "&bClick to cancel your auction."
     - " "
-    - "&bID: &e[id]"
-    - "&bAmount: &e[amount]x"
-    - "&bPrice: &e[price] [price_item]"
-    - "&bExpires in: &e[expire]"
-    - "&bAuctioned on: &e[date]"
+    - "&7Amount: &f[amount]"
+    - "&7Price: &e[price] Gold &f &6[price_item]"
+    - "&7Expires in: &9[expire]"
+    - " "
+    - "&a&lClick to cancel your auction!"
     # What are the commands that are ran when a player clicks on an auction?
     commands: []
 
   clickable-items:
     next-page:
-      name: "&bNext Page"
-      material: "ARROW"
-      data: 0
-      lore:
-      - "&eClick&b to go to the next page."
+      name: "&aNext Page →"
+      material: "STICK"
+      custom-model-data: 2
       slot: 50
       amount: 1
       glowing: false
     previous-page:
-      name: "&bPrevious page"
-      material: "BARRIER"
-      data: 0
-      lore:
-      - "&eClick&b to go to the previous page."
+      name: "&a← Previous Page"
+      material: "STICK"
+      custom-model-data: 1
       slot: 48
       amount: 1
       glowing: false
     menu:
-      name: "&bMenu"
-      material: "BOOK"
-      data: 0
+      name: "{#31ed96}Menu"
+      material: "AIR"
+      custom-model-data: 403
       lore:
-      - "&eClick&b to go back to the menu."
+      - " "
+      - "&7Click to go back to the menu."
       slot: 49
       amount: 1
       glowing: false
     expired:
-      name: "&bExpired"
-      material: "CLOCK"
-      data: 0
+      name: "{#31ed96}Expired"
+      material: "STICK"
+      custom-model-data: 4
       lore:
-      - "&eClick&b to view your expired auctions."
-      slot: 53
+      - " "
+      - "&7Click to view your expired auctions."
+      slot: 49
       amount: 1
       glowing: false
     sort:
-      name: "&bSort"
-      material: "HOPPER"
-      data: 0
+      name: "{#31ed96}Sort"
+      material: "STICK"
+      custom-model-data: 17
       lore:
-      - "&eClick&b to sort the GUI in a specific format."
-      - "&bCurrent: &e%sort%"
-      slot: 52
+      - " "
+      - "&7Current: &f%sort%"
+      slot: 53
       amount: 1
       glowing: false
       # This is the name of the next page item
@@ -152,18 +149,31 @@ myauctions:
 
   items:
     1:
-      name: " "
-      material: "BLACK_STAINED_GLASS_PANE"
-      data: 3
-      slot:
-      - 45
-      - 47
-      - 52
-      - 46
-      - 51
-      - 53
+      name: "&c← Previous Menu"
+      material: "STICK"
+      custom-model-data: 44
+      slot: 45
       amount: 1
-      glowing: false
+      commands:
+      - "[player] cp main_menu"
+    2:
+      name: ""
+      material: "STICK"
+      custom-model-data: 100
+      slot: 47
+      amount: 1
+    3:
+      name: ""
+      material: "STICK"
+      custom-model-data: 100
+      slot: 51
+      amount: 1
+    4:
+      name: ""
+      material: "STICK"
+      custom-model-data: 100
+      slot: 52
+      amount: 1
       # This is the name of the item.
       # This is the item material. To disable set this to AIR
       # This is the data item

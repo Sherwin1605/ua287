@@ -1,0 +1,301 @@
+panels:
+  reputation:
+    perm: default
+    rows: 5
+    title: '&f'
+    commands:
+    - reputation
+    - guilds
+    - guilds
+    - clans
+    empty: AIR
+    sound-on-open: ENTITY_VILLAGER_YES
+    item:
+
+
+      '0':
+        material: STICK
+        customdata: 1
+        name: '&c← Previous Menu'
+        commands:
+        - open= main_menu
+      
+      
+      
+      '8':
+        material: STICK
+        customdata: 11
+        name: '%color_menu_primary%Reputation'
+        lore:
+        - ''
+        - '&7There are 3 guilds out there.'
+        - '&7You can complete quests for the'
+        - '&7guilds to earn their trust and gold.'
+        - ''
+        - '&7Each reputation level unlocks'
+        - '&7an Adventure Pass reward.'
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      '9':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%🗡 Slayers'
+        commands:
+        - open= slayers
+      '10':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%🗡 Slayers'
+        commands:
+        - open= slayers
+      '11':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%🗡 Slayers'
+        commands:
+        - open= slayers
+      '18':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%🗡 Slayers'
+        commands:
+        - open= slayers
+      '19':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%🗡 Slayers'
+        commands:
+        - open= slayers
+      '20':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%🗡 Slayers'
+        commands:
+        - open= slayers
+      '27':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%🗡 Slayers'
+        commands:
+        - open= slayers
+      '28':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%🗡 Slayers'
+        commands:
+        - open= slayers
+      '29':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%🗡 Slayers'
+        commands:
+        - open= slayers
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      '12':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%⛏ Miners'
+        commands:
+        - open= miners
+      '13':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%⛏ Miners'
+        commands:
+        - open= miners
+      '14':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%⛏ Miners'
+        commands:
+        - open= miners
+      '21':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%⛏ Miners'
+        commands:
+        - open= miners
+      '22':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%⛏ Miners'
+        commands:
+        - open= miners
+      '23':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%⛏ Miners'
+        commands:
+        - open= miners
+      '30':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%⛏ Miners'
+        commands:
+        - open= miners
+      '31':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%⛏ Miners'
+        commands:
+        - open= miners
+      '32':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%⛏ Miners'
+        commands:
+        - open= miners
+      
+      
+      
+      
+      
+      
+      
+      
+      '15':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%🪓 Ranchers'
+        commands:
+        - open= ranchers
+      '16':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%🪓 Ranchers'
+        commands:
+        - open= ranchers
+      '17':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%🪓 Ranchers'
+        commands:
+        - open= ranchers
+      '24':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%🪓 Ranchers'
+        commands:
+        - open= ranchers
+      '25':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%🪓 Ranchers'
+        commands:
+        - open= ranchers
+      '26':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%🪓 Ranchers'
+        commands:
+        - open= ranchers
+      '33':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%🪓 Ranchers'
+        commands:
+        - open= ranchers
+      '34':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%🪓 Ranchers'
+        commands:
+        - open= ranchers
+      '35':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%🪓 Ranchers'
+        commands:
+        - open= ranchers
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      '36':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%⭐ Adventure Pass'
+        commands:
+        - open= adventure_pass
+      '37':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%⭐ Adventure Pass'
+        commands:
+        - open= adventure_pass
+      '38':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%⭐ Adventure Pass'
+        commands:
+        - open= adventure_pass
+      '39':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%⭐ Adventure Pass'
+        commands:
+        - open= adventure_pass
+      '40':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%⭐ Adventure Pass'
+        commands:
+        - open= adventure_pass
+      '41':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%⭐ Adventure Pass'
+        commands:
+        - open= adventure_pass
+      '42':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%⭐ Adventure Pass'
+        commands:
+        - open= adventure_pass
+      '43':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%⭐ Adventure Pass'
+        commands:
+        - open= adventure_pass
+      '44':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%⭐ Adventure Pass'
+        commands:
+        - open= adventure_pass
+      
+      
+      
+      

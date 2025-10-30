@@ -1,0 +1,750 @@
+panels:
+  premium_store_confirm:
+    perm: default
+    rows: 5
+    title: '&f'
+    empty: AIR
+    sound-on-open: BLOCK_NOTE_BLOCK_XYLOPHONE
+    item:
+
+      
+      
+      
+      
+      
+      
+      
+      
+      '19':
+        material: STICK
+        customdata: 100
+        name: '&a&lCONFIRM PURCHASE'
+        lore:
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to purchase!'
+        has0:
+          value0: '%cp-data-item_name%'
+          compare0: ultra_rank
+          material: STICK
+          customdata: 100
+          name: '&a&lCONFIRM PURCHASE'
+          lore:
+          - ' '
+          - '&fRank: '
+          - '&fPrice: %color_gems%%cp-data-item_price% Gems &f'
+          - ' '
+          - '&cYou don''t have enough gems!'
+          has1:
+            value0: '%valiant_premium_currency% ISGREATER'
+            compare0: '%cp-data-item_price%'
+            material: STICK
+            customdata: 100
+            name: '&a&lCONFIRM PURCHASE'
+            lore:
+            - ' '
+            - '&fRank: '
+            - '&fPrice: %color_gems%%cp-data-item_price% Gems &f'
+            - ' '
+            - '%color_menu_purchase%&l✔ Click to purchase!'
+            commands:
+            - console= premiumcurrency %cp-player-name% reduce %cp-data-item_price%
+            - console= buyrank %cp-player-name% ultra
+            - cpc
+        has1:
+          value0: '%cp-data-item_name%'
+          compare0: hero_rank
+          material: STICK
+          customdata: 100
+          name: '&a&lCONFIRM PURCHASE'
+          lore:
+          - ' '
+          - '&fRank: '
+          - '&fPrice: %color_gems%%cp-data-item_price% Gems &f'
+          - ' '
+          - '&cYou don''t have enough gems!'
+          has1:
+            value0: '%valiant_premium_currency% ISGREATER'
+            compare0: '%cp-data-item_price%'
+            material: STICK
+            customdata: 100
+            name: '&a&lCONFIRM PURCHASE'
+            lore:
+            - ' '
+            - '&fRank: '
+            - '&fPrice: %color_gems%%cp-data-item_price% Gems &f'
+            - ' '
+            - '%color_menu_purchase%&l✔ Click to purchase!'
+            commands:
+            - console= premiumcurrency %cp-player-name% reduce %cp-data-item_price%
+            - console= buyrank %cp-player-name% hero
+            - cpc
+        has2:
+          value0: '%cp-data-item_name%'
+          compare0: legend_rank
+          material: STICK
+          customdata: 100
+          name: '&a&lCONFIRM PURCHASE'
+          lore:
+          - ' '
+          - '&fRank: '
+          - '&fPrice: %color_gems%%cp-data-item_price% Gems &f'
+          - ' '
+          - '&cYou don''t have enough gems!'
+          has1:
+            value0: '%valiant_premium_currency% ISGREATER'
+            compare0: '%cp-data-item_price%'
+            material: STICK
+            customdata: 100
+            name: '&a&lCONFIRM PURCHASE'
+            lore:
+            - ' '
+            - '&fRank: '
+            - '&fPrice: %color_gems%%cp-data-item_price% Gems &f'
+            - ' '
+            - '%color_menu_purchase%&l✔ Click to purchase!'
+            commands:
+            - console= premiumcurrency %cp-player-name% reduce %cp-data-item_price%
+            - console= buyrank %cp-player-name% legend
+            - cpc
+        has3:
+          value0: '%cp-data-item_name%'
+          compare0: adventure_crate
+          material: STICK
+          customdata: 100
+          name: '&a&lCONFIRM PURCHASE'
+          lore:
+          - ' '
+          - '&fCrate: %color_ultra%&l2x Adventure Crate'
+          - '&fPrice: %color_gems%%cp-data-item_price% Gems &f'
+          - ' '
+          - '&cYou don''t have enough gems!'
+          has1:
+            value0: '%valiant_premium_currency% ISGREATER'
+            compare0: '%cp-data-item_price%'
+            material: STICK
+            customdata: 100
+            name: '&a&lCONFIRM PURCHASE'
+            lore:
+            - ' '
+            - '&fCrate: %color_ultra%&l2x Adventure Crate'
+            - '&fPrice: %color_gems%%cp-data-item_price% Gems &f'
+            - ' '
+            - '%color_menu_purchase%&l✔ Click to purchase!'
+            commands:
+            - console= premiumcurrency %cp-player-name% reduce %cp-data-item_price%
+            - console= crazycrates give v AdventureCrate 2 %cp-player-name%
+            - sound= BLOCK_NOTE_BLOCK_PLING 0.2 1.5
+            - sound= BLOCK_NOTE_BLOCK_HARP 0.5 1.5
+            - sound= BLOCK_NOTE_BLOCK_BASS 0.5 1.5
+            - open= premium_store
+        has4:
+          value0: '%cp-data-item_name%'
+          compare0: hero_crate
+          material: STICK
+          customdata: 100
+          name: '&a&lCONFIRM PURCHASE'
+          lore:
+          - ' '
+          - '&fCrate: %color_hero%&l2x Hero Crate'
+          - '&fPrice: %color_gems%%cp-data-item_price% Gems &f'
+          - ' '
+          - '&cYou don''t have enough gems!'
+          has1:
+            value0: '%valiant_premium_currency% ISGREATER'
+            compare0: '%cp-data-item_price%'
+            material: STICK
+            customdata: 100
+            name: '&a&lCONFIRM PURCHASE'
+            lore:
+            - ' '
+            - '&fCrate: %color_hero%&l2x Hero Crate'
+            - '&fPrice: %color_gems%%cp-data-item_price% Gems &f'
+            - ' '
+            - '%color_menu_purchase%&l✔ Click to purchase!'
+            commands:
+            - console= premiumcurrency %cp-player-name% reduce %cp-data-item_price%
+            - console= crazycrates give v HeroCrate 2 %cp-player-name%
+            - sound= BLOCK_NOTE_BLOCK_PLING 0.2 1.5
+            - sound= BLOCK_NOTE_BLOCK_HARP 0.5 1.5
+            - sound= BLOCK_NOTE_BLOCK_BASS 0.5 1.5
+            - open= premium_store
+        has5:
+          value0: '%cp-data-item_name%'
+          compare0: legendary_crate
+          material: STICK
+          customdata: 100
+          name: '&a&lCONFIRM PURCHASE'
+          lore:
+          - ' '
+          - '&fCrate: %color_legend%&l2x Legendary Crate'
+          - '&fPrice: %color_gems%%cp-data-item_price% Gems &f'
+          - ' '
+          - '&cYou don''t have enough gems!'
+          has1:
+            value0: '%valiant_premium_currency% ISGREATER'
+            compare0: '%cp-data-item_price%'
+            material: STICK
+            customdata: 100
+            name: '&a&lCONFIRM PURCHASE'
+            lore:
+            - ' '
+            - '&fCrate: %color_legend%&l2x Legendary Crate'
+            - '&fPrice: %color_gems%%cp-data-item_price% Gems &f'
+            - ' '
+            - '%color_menu_purchase%&l✔ Click to purchase!'
+            commands:
+            - console= premiumcurrency %cp-player-name% reduce %cp-data-item_price%
+            - console= crazycrates give v LegendaryCrate 2 %cp-player-name%
+            - sound= BLOCK_NOTE_BLOCK_PLING 0.2 1.5
+            - sound= BLOCK_NOTE_BLOCK_HARP 0.5 1.5
+            - sound= BLOCK_NOTE_BLOCK_BASS 0.5 1.5
+            - open= premium_store
+        has6:
+          value0: '%cp-data-item_name%'
+          compare0: adventure_pass
+          material: STICK
+          customdata: 100
+          name: '&a&lCONFIRM PURCHASE'
+          lore:
+          - ' '
+          - '&fAdventure Pass: %color_adventure_pass_premium%&lPREMIUM PASS'
+          - '&fPrice: %color_gems%%cp-data-item_price% Gems &f'
+          - ' '
+          - '&cYou don''t have enough gems!'
+          has1:
+            value0: '%valiant_premium_currency% ISGREATER'
+            compare0: '%cp-data-item_price%'
+            material: STICK
+            customdata: 100
+            name: '&a&lCONFIRM PURCHASE'
+            lore:
+            - ' '
+            - '&fAdventure Pass: %color_adventure_pass_premium%&lPREMIUM PASS'
+            - '&fPrice: %color_gems%%cp-data-item_price% Gems &f'
+            - ' '
+            - '%color_menu_purchase%&l✔ Click to purchase!'
+            commands:
+            - console= premiumcurrency %cp-player-name% reduce %cp-data-item_price%
+            - console= battlepassgivepremium %cp-player-name%
+            - sound= BLOCK_NOTE_BLOCK_PLING 0.2 1.5
+            - sound= BLOCK_NOTE_BLOCK_HARP 0.5 1.5
+            - sound= BLOCK_NOTE_BLOCK_BASS 0.5 1.5
+            - open= adventure_pass
+        has7:
+          value0: '%cp-data-item_name%'
+          compare0: luck_booster
+          material: STICK
+          customdata: 100
+          name: '&a&lCONFIRM PURCHASE'
+          lore:
+          - ' '
+          - '&fBooster: %color_luck_booster%&lLuck Booster'
+          - '&fPrice: %color_gems%%cp-data-item_price% Gems &f'
+          - ' '
+          - '&cYou don''t have enough gems!'
+          has1:
+            value0: '%valiant_premium_currency% ISGREATER'
+            compare0: '%cp-data-item_price%'
+            material: STICK
+            customdata: 100
+            name: '&a&lCONFIRM PURCHASE'
+            lore:
+            - ' '
+            - '&fBooster: %color_luck_booster%&lLuck Booster'
+            - '&fPrice: %color_gems%%cp-data-item_price% Gems &f'
+            - ' '
+            - '%color_menu_purchase%&l✔ Click to purchase!'
+            commands:
+            - console= premiumcurrency %cp-player-name% reduce %cp-data-item_price%
+            - console= activatebooster %cp-player-name% luck 6
+            - sound= BLOCK_NOTE_BLOCK_PLING 0.2 1.5
+            - sound= BLOCK_NOTE_BLOCK_HARP 0.5 1.5
+            - sound= BLOCK_NOTE_BLOCK_BASS 0.5 1.5
+            - cpc
+        has8:
+          value0: '%cp-data-item_name%'
+          compare0: protection_booster
+          material: STICK
+          customdata: 100
+          name: '&a&lCONFIRM PURCHASE'
+          lore:
+          - ' '
+          - '&fBooster: %color_protection_booster%&lProtection Booster'
+          - '&fPrice: %color_gems%%cp-data-item_price% Gems &f'
+          - ' '
+          - '&cYou don''t have enough gems!'
+          has1:
+            value0: '%valiant_premium_currency% ISGREATER'
+            compare0: '%cp-data-item_price%'
+            material: STICK
+            customdata: 100
+            name: '&a&lCONFIRM PURCHASE'
+            lore:
+            - ' '
+            - '&fBooster: %color_protection_booster%&lProtection Booster'
+            - '&fPrice: %color_gems%%cp-data-item_price% Gems &f'
+            - ' '
+            - '%color_menu_purchase%&l✔ Click to purchase!'
+            commands:
+            - console= premiumcurrency %cp-player-name% reduce %cp-data-item_price%
+            - console= activatebooster %cp-player-name% protection 6
+            - sound= BLOCK_NOTE_BLOCK_PLING 0.2 1.5
+            - sound= BLOCK_NOTE_BLOCK_HARP 0.5 1.5
+            - sound= BLOCK_NOTE_BLOCK_BASS 0.5 1.5
+            - cpc
+        has9:
+          value0: '%cp-data-item_name%'
+          compare0: xp_booster
+          material: STICK
+          customdata: 100
+          name: '&a&lCONFIRM PURCHASE'
+          lore:
+          - ' '
+          - '&fBooster: %color_adventure_pass_booster%&lAdventure Pass Booster'
+          - '&fPrice: %color_gems%%cp-data-item_price% Gems &f'
+          - ' '
+          - '&cYou don''t have enough gems!'
+          has1:
+            value0: '%valiant_premium_currency% ISGREATER'
+            compare0: '%cp-data-item_price%'
+            material: STICK
+            customdata: 100
+            name: '&a&lCONFIRM PURCHASE'
+            lore:
+            - ' '
+            - '&fBooster: %color_adventure_pass_booster%&lAdventure Pass Booster'
+            - '&fPrice: %color_gems%%cp-data-item_price% Gems &f'
+            - ' '
+            - '%color_menu_purchase%&l✔ Click to purchase!'
+            commands:
+            - console= premiumcurrency %cp-player-name% reduce %cp-data-item_price%
+            - console= activatebooster %cp-player-name% adventure_pass 6
+            - sound= BLOCK_NOTE_BLOCK_PLING 0.2 1.5
+            - sound= BLOCK_NOTE_BLOCK_HARP 0.5 1.5
+            - sound= BLOCK_NOTE_BLOCK_BASS 0.5 1.5
+            - cpc
+        has10:
+          value0: '%cp-data-item_name%'
+          compare0: pinata
+          material: STICK
+          customdata: 100
+          name: '&a&lCONFIRM PURCHASE'
+          lore:
+          - ' '
+          - '&fItem: &d&lPinata'
+          - '&fPrice: %color_gems%%cp-data-item_price% Gems &f'
+          - ' '
+          - '&cYou don''t have enough gems!'
+          has1:
+            value0: '%valiant_premium_currency% ISGREATER'
+            compare0: '%cp-data-item_price%'
+            material: STICK
+            customdata: 100
+            name: '&a&lCONFIRM PURCHASE'
+            lore:
+            - ' '
+            - '&fItem: &d&lPinata'
+            - '&fPrice: %color_gems%%cp-data-item_price% Gems &f'
+            - ' '
+            - '%color_menu_purchase%&l✔ Click to purchase!'
+            commands:
+            - console= premiumcurrency %cp-player-name% reduce %cp-data-item_price%
+            - console= buypinata %cp-player-name%
+            - sound= BLOCK_NOTE_BLOCK_PLING 0.2 1.5
+            - sound= BLOCK_NOTE_BLOCK_HARP 0.5 1.5
+            - sound= BLOCK_NOTE_BLOCK_BASS 0.5 1.5
+            - cpc
+      
+      
+      '20':
+        material: STICK
+        customdata: 100
+        name: '&a&lCONFIRM PURCHASE'
+        lore:
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to purchase!'
+        has0:
+          value0: '%cp-data-item_name%'
+          compare0: ultra_rank
+          material: STICK
+          customdata: 100
+          name: '&a&lCONFIRM PURCHASE'
+          lore:
+          - ' '
+          - '&fRank: '
+          - '&fPrice: %color_gems%%cp-data-item_price% Gems &f'
+          - ' '
+          - '&cYou don''t have enough gems!'
+          has1:
+            value0: '%valiant_premium_currency% ISGREATER'
+            compare0: '%cp-data-item_price%'
+            material: STICK
+            customdata: 100
+            name: '&a&lCONFIRM PURCHASE'
+            lore:
+            - ' '
+            - '&fRank: '
+            - '&fPrice: %color_gems%%cp-data-item_price% Gems &f'
+            - ' '
+            - '%color_menu_purchase%&l✔ Click to purchase!'
+            commands:
+            - console= premiumcurrency %cp-player-name% reduce %cp-data-item_price%
+            - console= buyrank %cp-player-name% ultra
+            - cpc
+        has1:
+          value0: '%cp-data-item_name%'
+          compare0: hero_rank
+          material: STICK
+          customdata: 100
+          name: '&a&lCONFIRM PURCHASE'
+          lore:
+          - ' '
+          - '&fRank: '
+          - '&fPrice: %color_gems%%cp-data-item_price% Gems &f'
+          - ' '
+          - '&cYou don''t have enough gems!'
+          has1:
+            value0: '%valiant_premium_currency% ISGREATER'
+            compare0: '%cp-data-item_price%'
+            material: STICK
+            customdata: 100
+            name: '&a&lCONFIRM PURCHASE'
+            lore:
+            - ' '
+            - '&fRank: '
+            - '&fPrice: %color_gems%%cp-data-item_price% Gems &f'
+            - ' '
+            - '%color_menu_purchase%&l✔ Click to purchase!'
+            commands:
+            - console= premiumcurrency %cp-player-name% reduce %cp-data-item_price%
+            - console= buyrank %cp-player-name% hero
+            - cpc
+        has2:
+          value0: '%cp-data-item_name%'
+          compare0: legend_rank
+          material: STICK
+          customdata: 100
+          name: '&a&lCONFIRM PURCHASE'
+          lore:
+          - ' '
+          - '&fRank: '
+          - '&fPrice: %color_gems%%cp-data-item_price% Gems &f'
+          - ' '
+          - '&cYou don''t have enough gems!'
+          has1:
+            value0: '%valiant_premium_currency% ISGREATER'
+            compare0: '%cp-data-item_price%'
+            material: STICK
+            customdata: 100
+            name: '&a&lCONFIRM PURCHASE'
+            lore:
+            - ' '
+            - '&fRank: '
+            - '&fPrice: %color_gems%%cp-data-item_price% Gems &f'
+            - ' '
+            - '%color_menu_purchase%&l✔ Click to purchase!'
+            commands:
+            - console= premiumcurrency %cp-player-name% reduce %cp-data-item_price%
+            - console= buyrank %cp-player-name% legend
+            - cpc
+        has3:
+          value0: '%cp-data-item_name%'
+          compare0: adventure_crate
+          material: STICK
+          customdata: 100
+          name: '&a&lCONFIRM PURCHASE'
+          lore:
+          - ' '
+          - '&fCrate: %color_ultra%&l2x Adventure Crate'
+          - '&fPrice: %color_gems%%cp-data-item_price% Gems &f'
+          - ' '
+          - '&cYou don''t have enough gems!'
+          has1:
+            value0: '%valiant_premium_currency% ISGREATER'
+            compare0: '%cp-data-item_price%'
+            material: STICK
+            customdata: 100
+            name: '&a&lCONFIRM PURCHASE'
+            lore:
+            - ' '
+            - '&fCrate: %color_ultra%&l2x Adventure Crate'
+            - '&fPrice: %color_gems%%cp-data-item_price% Gems &f'
+            - ' '
+            - '%color_menu_purchase%&l✔ Click to purchase!'
+            commands:
+            - console= premiumcurrency %cp-player-name% reduce %cp-data-item_price%
+            - console= crazycrates give v AdventureCrate 2 %cp-player-name%
+            - sound= BLOCK_NOTE_BLOCK_PLING 0.2 1.5
+            - sound= BLOCK_NOTE_BLOCK_HARP 0.5 1.5
+            - sound= BLOCK_NOTE_BLOCK_BASS 0.5 1.5
+            - open= premium_store
+        has4:
+          value0: '%cp-data-item_name%'
+          compare0: hero_crate
+          material: STICK
+          customdata: 100
+          name: '&a&lCONFIRM PURCHASE'
+          lore:
+          - ' '
+          - '&fCrate: %color_hero%&l2x Hero Crate'
+          - '&fPrice: %color_gems%%cp-data-item_price% Gems &f'
+          - ' '
+          - '&cYou don''t have enough gems!'
+          has1:
+            value0: '%valiant_premium_currency% ISGREATER'
+            compare0: '%cp-data-item_price%'
+            material: STICK
+            customdata: 100
+            name: '&a&lCONFIRM PURCHASE'
+            lore:
+            - ' '
+            - '&fCrate: %color_hero%&l2x Hero Crate'
+            - '&fPrice: %color_gems%%cp-data-item_price% Gems &f'
+            - ' '
+            - '%color_menu_purchase%&l✔ Click to purchase!'
+            commands:
+            - console= premiumcurrency %cp-player-name% reduce %cp-data-item_price%
+            - console= crazycrates give v HeroCrate 2 %cp-player-name%
+            - sound= BLOCK_NOTE_BLOCK_PLING 0.2 1.5
+            - sound= BLOCK_NOTE_BLOCK_HARP 0.5 1.5
+            - sound= BLOCK_NOTE_BLOCK_BASS 0.5 1.5
+            - open= premium_store
+        has5:
+          value0: '%cp-data-item_name%'
+          compare0: legendary_crate
+          material: STICK
+          customdata: 100
+          name: '&a&lCONFIRM PURCHASE'
+          lore:
+          - ' '
+          - '&fCrate: %color_legend%&l2x Legendary Crate'
+          - '&fPrice: %color_gems%%cp-data-item_price% Gems &f'
+          - ' '
+          - '&cYou don''t have enough gems!'
+          has1:
+            value0: '%valiant_premium_currency% ISGREATER'
+            compare0: '%cp-data-item_price%'
+            material: STICK
+            customdata: 100
+            name: '&a&lCONFIRM PURCHASE'
+            lore:
+            - ' '
+            - '&fCrate: %color_legend%&l2x Legendary Crate'
+            - '&fPrice: %color_gems%%cp-data-item_price% Gems &f'
+            - ' '
+            - '%color_menu_purchase%&l✔ Click to purchase!'
+            commands:
+            - console= premiumcurrency %cp-player-name% reduce %cp-data-item_price%
+            - console= crazycrates give v LegendaryCrate 2 %cp-player-name%
+            - sound= BLOCK_NOTE_BLOCK_PLING 0.2 1.5
+            - sound= BLOCK_NOTE_BLOCK_HARP 0.5 1.5
+            - sound= BLOCK_NOTE_BLOCK_BASS 0.5 1.5
+            - open= premium_store
+        has6:
+          value0: '%cp-data-item_name%'
+          compare0: adventure_pass
+          material: STICK
+          customdata: 100
+          name: '&a&lCONFIRM PURCHASE'
+          lore:
+          - ' '
+          - '&fAdventure Pass: %color_adventure_pass_premium%&lPREMIUM PASS'
+          - '&fPrice: %color_gems%%cp-data-item_price% Gems &f'
+          - ' '
+          - '&cYou don''t have enough gems!'
+          has1:
+            value0: '%valiant_premium_currency% ISGREATER'
+            compare0: '%cp-data-item_price%'
+            material: STICK
+            customdata: 100
+            name: '&a&lCONFIRM PURCHASE'
+            lore:
+            - ' '
+            - '&fAdventure Pass: %color_adventure_pass_premium%&lPREMIUM PASS'
+            - '&fPrice: %color_gems%%cp-data-item_price% Gems &f'
+            - ' '
+            - '%color_menu_purchase%&l✔ Click to purchase!'
+            commands:
+            - console= premiumcurrency %cp-player-name% reduce %cp-data-item_price%
+            - console= battlepassgivepremium %cp-player-name%
+            - sound= BLOCK_NOTE_BLOCK_PLING 0.2 1.5
+            - sound= BLOCK_NOTE_BLOCK_HARP 0.5 1.5
+            - sound= BLOCK_NOTE_BLOCK_BASS 0.5 1.5
+            - set-data= page %valiant_battlepass_page% %cp-player-name%
+            - open= adventure_pass
+        has7:
+          value0: '%cp-data-item_name%'
+          compare0: luck_booster
+          material: STICK
+          customdata: 100
+          name: '&a&lCONFIRM PURCHASE'
+          lore:
+          - ' '
+          - '&fBooster: %color_luck_booster%&lLuck Booster'
+          - '&fPrice: %color_gems%%cp-data-item_price% Gems &f'
+          - ' '
+          - '&cYou don''t have enough gems!'
+          has1:
+            value0: '%valiant_premium_currency% ISGREATER'
+            compare0: '%cp-data-item_price%'
+            material: STICK
+            customdata: 100
+            name: '&a&lCONFIRM PURCHASE'
+            lore:
+            - ' '
+            - '&fBooster: %color_luck_booster%&lLuck Booster'
+            - '&fPrice: %color_gems%%cp-data-item_price% Gems &f'
+            - ' '
+            - '%color_menu_purchase%&l✔ Click to purchase!'
+            commands:
+            - console= premiumcurrency %cp-player-name% reduce %cp-data-item_price%
+            - console= activatebooster %cp-player-name% luck 6
+            - sound= BLOCK_NOTE_BLOCK_PLING 0.2 1.5
+            - sound= BLOCK_NOTE_BLOCK_HARP 0.5 1.5
+            - sound= BLOCK_NOTE_BLOCK_BASS 0.5 1.5
+            - cpc
+        has8:
+          value0: '%cp-data-item_name%'
+          compare0: protection_booster
+          material: STICK
+          customdata: 100
+          name: '&a&lCONFIRM PURCHASE'
+          lore:
+          - ' '
+          - '&fBooster: %color_protection_booster%&lProtection Booster'
+          - '&fPrice: %color_gems%%cp-data-item_price% Gems &f'
+          - ' '
+          - '&cYou don''t have enough gems!'
+          has1:
+            value0: '%valiant_premium_currency% ISGREATER'
+            compare0: '%cp-data-item_price%'
+            material: STICK
+            customdata: 100
+            name: '&a&lCONFIRM PURCHASE'
+            lore:
+            - ' '
+            - '&fBooster: %color_protection_booster%&lProtection Booster'
+            - '&fPrice: %color_gems%%cp-data-item_price% Gems &f'
+            - ' '
+            - '%color_menu_purchase%&l✔ Click to purchase!'
+            commands:
+            - console= premiumcurrency %cp-player-name% reduce %cp-data-item_price%
+            - console= activatebooster %cp-player-name% protection 6
+            - sound= BLOCK_NOTE_BLOCK_PLING 0.2 1.5
+            - sound= BLOCK_NOTE_BLOCK_HARP 0.5 1.5
+            - sound= BLOCK_NOTE_BLOCK_BASS 0.5 1.5
+            - cpc
+        has9:
+          value0: '%cp-data-item_name%'
+          compare0: xp_booster
+          material: STICK
+          customdata: 100
+          name: '&a&lCONFIRM PURCHASE'
+          lore:
+          - ' '
+          - '&fBooster: %color_adventure_pass_booster%&lAdventure Pass Booster'
+          - '&fPrice: %color_gems%%cp-data-item_price% Gems &f'
+          - ' '
+          - '&cYou don''t have enough gems!'
+          has1:
+            value0: '%valiant_premium_currency% ISGREATER'
+            compare0: '%cp-data-item_price%'
+            material: STICK
+            customdata: 100
+            name: '&a&lCONFIRM PURCHASE'
+            lore:
+            - ' '
+            - '&fBooster: %color_adventure_pass_booster%&lAdventure Pass Booster'
+            - '&fPrice: %color_gems%%cp-data-item_price% Gems &f'
+            - ' '
+            - '%color_menu_purchase%&l✔ Click to purchase!'
+            commands:
+            - console= premiumcurrency %cp-player-name% reduce %cp-data-item_price%
+            - console= activatebooster %cp-player-name% adventure_pass 6
+            - sound= BLOCK_NOTE_BLOCK_PLING 0.2 1.5
+            - sound= BLOCK_NOTE_BLOCK_HARP 0.5 1.5
+            - sound= BLOCK_NOTE_BLOCK_BASS 0.5 1.5
+            - cpc
+        has10:
+          value0: '%cp-data-item_name%'
+          compare0: pinata
+          material: STICK
+          customdata: 100
+          name: '&a&lCONFIRM PURCHASE'
+          lore:
+          - ' '
+          - '&fItem: &d&lPinata'
+          - '&fPrice: %color_gems%%cp-data-item_price% Gems &f'
+          - ' '
+          - '&cYou don''t have enough gems!'
+          has1:
+            value0: '%valiant_premium_currency% ISGREATER'
+            compare0: '%cp-data-item_price%'
+            material: STICK
+            customdata: 100
+            name: '&a&lCONFIRM PURCHASE'
+            lore:
+            - ' '
+            - '&fItem: &d&lPinata'
+            - '&fPrice: %color_gems%%cp-data-item_price% Gems &f'
+            - ' '
+            - '%color_menu_purchase%&l✔ Click to purchase!'
+            commands:
+            - console= premiumcurrency %cp-player-name% reduce %cp-data-item_price%
+            - console= buypinata %cp-player-name%
+            - sound= BLOCK_NOTE_BLOCK_PLING 0.2 1.5
+            - sound= BLOCK_NOTE_BLOCK_HARP 0.5 1.5
+            - sound= BLOCK_NOTE_BLOCK_BASS 0.5 1.5
+            - cpc
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      '24':
+        material: STICK
+        customdata: 100
+        name: '&c&lCANCEL PURCHASE'
+        lore:
+        - ' '
+        - '%color_menu_cancel%&l❌ Click to cancel!'
+        commands:
+        - open= premium_store
+        has0:
+          value0: '%cp-data-item_name%'
+          compare0: adventure_pass
+          material: STICK
+          customdata: 100
+          name: '&c&lCANCEL PURCHASE'
+          lore:
+          - ' '
+          - '%color_menu_cancel%&l❌ Click to cancel!'
+          commands:
+          - open= premium_store
+      '25':
+        material: STICK
+        customdata: 100
+        name: '&c&lCANCEL PURCHASE'
+        lore:
+        - ' '
+        - '%color_menu_cancel%&l❌ Click to cancel!'
+        commands:
+        - open= premium_store
+        has0:
+          value0: '%cp-data-item_name%'
+          compare0: adventure_pass
+          material: STICK
+          customdata: 100
+          name: '&c&lCANCEL PURCHASE'
+          lore:
+          - ' '
+          - '%color_menu_cancel%&l❌ Click to cancel!'
+          commands:
+          - open= premium_store
+
+
+

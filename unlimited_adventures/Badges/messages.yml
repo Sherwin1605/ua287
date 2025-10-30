@@ -1,0 +1,44 @@
+# Please DO NOT change version number!
+version: 1
+
+mining_level_up: "§x&f&f&e&8&1&7&lBadges ▶ §x&3&1&e&d&9&6Your Mining Badge is now: LEVEL Badge!"
+
+crafting_level_up: "§x&f&f&e&8&1&7&lBadges ▶ §x&3&1&e&d&9&6Your Crafting Badge is now: LEVEL Badge!"
+
+survival_level_up: "§x&f&f&e&8&1&7&lBadges ▶ §x&3&1&e&d&9&6Your Survival Badge is now: LEVEL Badge!"
+
+caving_level_up: "§x&f&f&e&8&1&7&lBadges ▶ §x&3&1&e&d&9&6Your Caving Badge is now: LEVEL Badge!"
+
+hunting_level_up: "§x&f&f&e&8&1&7&lBadges ▶ §x&3&1&e&d&9&6Your Hunting Badge is now: LEVEL Badge!"
+
+claim_reward_text: "§x&7&d&f&f&4&9Claim the rewards in Badges Menu!"
+
+reward_claimed: "§x&f&f&e&8&1&7&lBadges ▶ §x&3&1&e&d&9&6You claimed your reward for achieving:"
+
+mining_badge_level: "§x&f&f&e&8&1&7&lBadges ▶ LEVEL Mining Badge"
+
+crafting_badge_level: "§x&f&f&e&8&1&7&lBadges ▶ LEVEL Crafting Badge"
+
+survival_badge_level: "§x&f&f&e&8&1&7&lBadges ▶ LEVEL Survival Badge"
+
+caving_badge_level: "§x&f&f&e&8&1&7&lBadges ▶ LEVEL Caving Badge"
+
+hunting_badge_level: "§x&f&f&e&8&1&7&lBadges ▶ LEVEL Hunting Badge"
+
+level_1: "§x&a&5&7&b&3&d&lWooden"
+
+level_2: "§x&b&1&b&1&b&1&lStone"
+
+level_3: "§x&6&a&6&c&7&b&lCoal"
+
+level_4: "§x&d&c&7&d&7&0&lCopper"
+
+level_5: "§x&7&a&9&9&9&e&lIron"
+
+level_6: "&6&lGold"
+
+level_7: "§x&0&0&d&3&f&f&lDiamond"
+
+level_8: "§x&6&6&f&f&3&2&lEmerald"
+
+level_9: "§x&f&f&2&a&2&a&lNetherite"

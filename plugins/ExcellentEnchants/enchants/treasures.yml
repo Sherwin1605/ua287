@@ -69,6 +69,9 @@ Anvil:
   # You can use formulas/expressions here: https://github.com/nulli0n/NexEngine-spigot/wiki/Configuration-Tips#scalable-sections
   # Level placeholder: %enchantment_level%
   Merge_Cost: '%enchantment_level%'
+  # Sets max. enchantment level that can be obtained by combining 2 items with this enchantment.
+  # Set this to '-1' to remove merge limit and just use 'Max Level' instead.
+  Max_Merge_Level: -1
 Villagers:
   # Chance for this enchantment to be obtained via Villagers
   Chance: 50.0
@@ -112,3 +115,5 @@ Mob_Spawning:
 # A list of conflicting enchantment names.
 # Conflicting enchantments can not be combined on anvils and obtained together on the same item.
 Conflicts: []
+# Sets whether or not this enchantment will be hidden from Enchants GUI.
+Hide_From_List: false

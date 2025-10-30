@@ -10,7 +10,7 @@ bidding:
   # What is the name of the gui?
   name: "bidding"
   # The title of the gui (Can use color codes)
-  title: "&b&lBidding"
+  title: "&f"
   # What is the size of this GUI? (multiples of 9 can only go up to 54)
   size: 27
   # What are the actions when this menu is opened up?
@@ -37,92 +37,89 @@ bidding:
     - "an amount."
 
     item:
-      material: "OAK_SIGN"
-      data: 0
-      name: "&bEnter an amount"
+      material: "STICK"
+      custom-model-data: 47
+      name: "{#31ed96}Your Bid"
       lore:
-      - "&eClick&b to enter an amount to bid."
+      - " "
+      - "&a&lClick to enter your bid!"
       slot: 22
       glowing: false
 
   clickable-items:
     accept:
-      name: "&aConfirm Bid"
-      material: "LIME_WOOL"
-      data: 5
+      name: "&a&lCONFIRM BID"
+      material: "STICK"
+      custom-model-data: 3
       lore:
-      - "&eClick&b to confirm this offer for a total of &e[price]&b!"
       - " "
-      - "&bBid price before: &e[original]"
-      - "&bYou added: &e[added]"
+      - "&fYour Bid: &e[price] Gold &f"
+      - "&7Previous Bid: &e[original] Gold &f"
+      - " "
+      - "&a&lClick to confirm!"
       slot: 11
       glowing: false
     deny:
-      name: "&cStop bid"
+      name: "&c&lCANCEL BID"
       material: "RED_WOOL"
       data: 14
       lore:
-      - "&cClick to stop offering."
+      - " "
+      - "&c&lClick to cancel!"
       slot: 15
       glowing: false
     add-1:
-      name: "&aAdd $1"
-      material: "LIME_STAINED_GLASS_PANE"
-      data: 5
+      name: "&aAdd &e1 Gold &f"
+      material: "STICK"
+      custom-model-data: 41
       lore:
-      - "&aClick to add a $1 offer."
       - " "
-      - "&bCurrent offer: &e[price]"
+      - "&7Current offer: &e[price] Gold &f"
       slot: 0
       glowing: false
     add-10:
-      name: "&aAdd $10"
-      material: "LIME_STAINED_GLASS_PANE"
-      data: 5
+      name: "&aAdd &e10 Gold &f"
+      material: "STICK"
+      custom-model-data: 39
       lore:
-      - "&aClick to add a $10 offer."
       - " "
-      - "&bCurrent offer: &e[price]"
+      - "&7Current offer: &e[price] Gold &f"
       slot: 9
       glowing: false
     add-100:
-      name: "&aAdd $100"
-      material: "LIME_STAINED_GLASS_PANE"
-      data: 5
+      name: "&aAdd &e100 Gold &f"
+      material: "STICK"
+      custom-model-data: 40
       lore:
-      - "&aClick to add a $100 offer."
       - " "
-      - "&bCurrent offer: &e[price]"
+      - "&7Current offer: &e[price] Gold &f"
       slot: 18
       glowing: false
     remove-1:
-      name: "&cRemove $1"
-      material: "RED_STAINED_GLASS_PANE"
-      data: 14
+      name: "&cRemove &e1 Gold &f"
+      material: "STICK"
+      custom-model-data: 41
       lore:
-      - "&cClick to remove your $1 offer."
       - " "
-      - "&bCurrent offer: &e[price]"
+      - "&7Current offer: &e[price] Gold &f"
       slot: 8
       glowing: false
     remove-10:
-      name: "&cRemove $10"
-      material: "RED_STAINED_GLASS_PANE"
-      data: 14
+      name: "&cRemove &e10 Gold &f"
+      material: "STICK"
+      custom-model-data: 39
       lore:
-      - "&cClick to remove your $10 offer."
       - " "
-      - "&bCurrent offer: &e[price]"
+      - "&7Current offer: &e[price] Gold &f"
       slot: 17
       glowing: false
     remove-100:
-      name: "&cRemove $100"
-      material: "RED_STAINED_GLASS_PANE"
-      data: 14
+      name: "&cRemove &e100 Gold &f"
+      material: "STICK"
+      custom-model-data: 40
       lore:
-      - "&cClick to remove your $100 offer."
       - " "
-      - "&bCurrent offer: &e[price]"
+      - "&7Current offer: &e[price] Gold &f"
       slot: 26
       glowing: false
       # If you wish to disable any of these please set them the material to "AIR"

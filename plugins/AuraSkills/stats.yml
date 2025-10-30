@@ -3,12 +3,12 @@ stats:
     enabled: true
     traits:
       auraskills/attack_damage:
-        modifier: 0.25
+        modifier: 0.5
   auraskills/health:
     enabled: true
     traits:
       auraskills/hp:
-        modifier: 1
+        modifier: 0.4
   auraskills/regeneration:
     enabled: true
     traits:
@@ -17,48 +17,46 @@ stats:
       auraskills/hunger_regen:
         modifier: 0.005
       auraskills/mana_regen:
-        modifier: 0.02
+        modifier: 0.1
   auraskills/luck:
     enabled: true
     traits:
       auraskills/farming_luck:
-        modifier: 1
+        modifier: 0.5
       auraskills/foraging_luck:
-        modifier: 1
+        modifier: 0.5
       auraskills/mining_luck:
-        modifier: 1
+        modifier: 0.5
       auraskills/fishing_luck:
-        modifier: 1
+        modifier: 0.5
       auraskills/excavation_luck:
         modifier: 0.5
   auraskills/wisdom:
     enabled: true
     traits:
       auraskills/experience_bonus:
-        modifier: 0.4
+        modifier: 0.01
       auraskills/anvil_discount:
-        modifier: 0.1
+        modifier: 0.25
       auraskills/max_mana:
         modifier: 2.0
-      auraskills/mana_regen:
-        modifier: 0.1
   auraskills/toughness:
-    enabled: false
+    enabled: true
     traits:
       auraskills/damage_reduction:
         modifier: 0.3
   auraskills/crit_chance:
-    enabled: false
+    enabled: true
     traits:
       auraskills/crit_chance:
         modifier: 1
   auraskills/crit_damage:
-    enabled: false
+    enabled: true
     traits:
       auraskills/crit_damage:
         modifier: 1
   auraskills/speed:
-    enabled: false
+    enabled: true
     traits:
       auraskills/movement_speed:
         modifier: 1
@@ -67,7 +65,7 @@ traits:
     enabled: true
     hand_damage: true
     bow_damage: true
-    display_damage_with_health_scaling: false
+    display_damage_with_health_scaling: true
     use_percent: true
   auraskills/hp:
     enabled: true
@@ -75,10 +73,10 @@ traits:
     hearts:
       '10': 20
       '11': 22
-      '12': 26
-      '13': 32
-      '14': 40
-      '15': 52
+      '12': 24
+      '13': 26
+      '14': 30
+      '15': 34
       '16': 66
       '17': 84
       '18': 104
@@ -88,7 +86,6 @@ traits:
     update_delay: 0
     force_base_health: false
     keep_full_on_increase: false
-    ensure_scaling_disabled: true
   auraskills/saturation_regen:
     enabled: true
     use_custom_delay: false
@@ -118,7 +115,7 @@ traits:
     enabled: true
   auraskills/max_mana:
     enabled: true
-    allow_overflow: false
+    allow_overflow: true
     base: 20
   auraskills/damage_reduction:
     enabled: true
@@ -135,6 +132,6 @@ traits:
   auraskills/luck:
     enabled: true
   auraskills/double_drop:
-    enabled: false
+    enabled: true
     max_percent: 100
-file_version: 3
+file_version: 2

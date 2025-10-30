@@ -1,12 +1,12 @@
 patterns:
   - type: stat
-    stat: luck
+    stat: health
     value: 1
     pattern:
       start: 2
       interval: 1
   - type: stat
-    stat: health
+    stat: strength
     value: 1
     pattern:
       start: 2

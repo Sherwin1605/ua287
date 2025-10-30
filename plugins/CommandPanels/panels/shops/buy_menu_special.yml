@@ -1,0 +1,160 @@
+panels:
+  buy_menu_special:
+    perm: default
+    rows: 5
+    title: '&f'
+    empty: AIR
+    sound-on-open: BLOCK_NOTE_BLOCK_HAT
+    panelType:
+    - static
+    item:
+
+
+      '0':
+        material: STICK
+        customdata: 1
+        name: '&c← Previous Menu'
+        commands:
+        - open= main_menu
+      
+      
+      '38':
+        material: STICK
+        customdata: 1
+        name: '&a← Previous Page'
+        commands:
+        - open= buy_menu_farming
+      
+      
+     
+      
+      
+      '10':
+        material: SLIME_BALL
+        stack: 4
+        name: '%color_menu_primary%Slimeball'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7BUY &f&l4 &7FOR %color_gold%100 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to buy'
+        commands:
+        - buy= 100 SLIME_BALL 4
+      '11':
+        material: LEAD
+        stack: 1
+        name: '%color_menu_primary%Lead'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7BUY &f&l1 &7FOR %color_gold%250 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to buy'
+        commands:
+        - buy= 250 LEAD 1
+      '12':
+        material: NAME_TAG
+        stack: 1
+        name: '%color_menu_primary%Name Tag'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7BUY &f&l1 &7FOR %color_gold%200 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to buy'
+        commands:
+        - buy= 200 NAME_TAG 1
+      '13':
+        material: SADDLE
+        stack: 1
+        name: '%color_menu_primary%Saddle'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7BUY &f&l1 &7FOR %color_gold%200 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to buy'
+        commands:
+        - buy= 200 SADDLE 1
+      '14':
+        material: EXPERIENCE_BOTTLE
+        stack: 4
+        name: '%color_menu_primary%Bottle o'' Enchanting'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7BUY &f&l4 &7FOR %color_gold%160 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to buy'
+        commands:
+        - buy= 160 EXPERIENCE_BOTTLE 4
+      '15':
+        material: cps= eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOGQ1MmRkZTI3ODVlNTcxZDE3YTFkNmQxZDcwZmRiNzVkM2YzZmQwMjM1OTdkNTY2MTQ3YTg1YjEwMzZlYjk4MyJ9fX0=
+        name: '%color_menu_primary%x100 Claim Blocks'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7BUY &f&l100 &7FOR %color_gold%500 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to buy'
+        commands:
+        - buyclaimblocks 100
+      '16':
+        material: FIREWORK_ROCKET
+        stack: 4
+        name: '%color_menu_primary%Firework'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7BUY &f&l4 &7FOR %color_gold%100 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to buy'
+        commands:
+        - buy= 100 FIREWORK_ROCKET 4
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      '19':
+        material: WHITE_WOOL
+        stack: 16
+        name: '%color_menu_primary%White Wool'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7BUY &f&l16 &7FOR %color_gold%100 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to buy'
+        commands:
+        - buy= 100 WHITE_WOOL 16
+      '20':
+        material: TNT
+        stack: 8
+        name: '%color_menu_primary%TNT'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7BUY &f&l8 &7FOR %color_gold%1000 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to buy'
+        commands:
+        - buy= 1000 TNT 8
+      '21':
+        material: IRON_HORSE_ARMOR
+        stack: 1
+        name: '%color_menu_primary%Iron Horse Armor'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7BUY &f&l1 &7FOR %color_gold%500 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to buy'
+        commands:
+        - buy= 500 IRON_HORSE_ARMOR 1
+      '22':
+        material: DIAMOND_HORSE_ARMOR
+        stack: 1
+        name: '%color_menu_primary%Diamond Horse Armor'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7BUY &f&l1 &7FOR %color_gold%2500 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to buy'
+        commands:
+        - buy= 2500 DIAMOND_HORSE_ARMOR 1

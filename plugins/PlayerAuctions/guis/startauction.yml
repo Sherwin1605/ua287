@@ -6,11 +6,11 @@
 
 startauction:
   # Should we enable the gui?
-  enabled: false
+  enabled: true
   # What is the name of the gui?
   name: "startauction"
   # The title of the gui (Can use color codes)
-  title: "&b&lStart Auction"
+  title: "&f"
   # What is the size of this GUI? (multiples of 9 can only go up to 54)
   size: 27
   # What are the actions when this menu is opened up?
@@ -37,12 +37,13 @@ startauction:
     - "a price."
 
     item:
-      material: "OAK_SIGN"
-      data: 0
-      name: "&bEnter an amount to auction."
+      material: "STICK"
+      custom-model-data: 47
+      name: "{#31ed96}Item Price"
       lore:
-      - "&eClick&b to enter a price to auction."
-      slot: 22
+      - " "
+      - "&a&lClick to enter a price!"
+      slot: 23
       amount: 1
       glowing: false
 
@@ -58,132 +59,125 @@ startauction:
     - "%search%"
     - "----------------"
     - "Please enter"
-    - "a amount."
+    - "item amount."
 
     item:
-      material: "OAK_SIGN"
+      material: "STICK"
       data: 0
-      name: "&bEnter an amount to auction"
+      name: "{#31ed96}Item Amount"
       lore:
-      - "&eClick&b to enter a amount to auction."
-      slot: 4
+      - " "
+      - "&a&lClick to enter item amount!"
+      slot: 21
       amount: 1
       glowing: false
 
   clickable-items:
     accept:
-      name: "&aConfirm Auction"
-      material: "LIME_WOOL"
-      data: 5
+      name: "&a&lCONFIRM AUCTION"
+      material: "STICK"
+      custom-model-data: 3
       lore:
-      - "&eClick&b to put this item on the auction for &e[price]&b!"
+      - " "
+      - "&fPrice: &e[price] Gold &f"
+      - " "
+      - "&a&l✔ Click to confirm!"
       slot: 11
       amount: 1
       glowing: false
     deny:
-      name: "&cStop Auction"
-      material: "RED_WOOL"
-      data: 14
+      name: "&c&lCANCEL AUCTION"
+      material: "STICK"
+      custom-model-data: 16
       lore:
-      - "&cClick to stop."
+      - " "
+      - "&c&l❌ Click to cancel!"
       slot: 15
       amount: 1
       glowing: false
     sell:
-      name: "&aChange to bidding"
-      material: "DIAMOND"
-      data: 0
+      name: "{#31ed96}Auction Type"
+      material: "STICK"
+      custom-model-data: 20
       lore:
-      - "&eClick&b to change the auction type to bidding."
-      - "&bYou are currently &b&lSELLING"
-      slot: 3
+      - " "
+      - "&7Currently: &e&lSELLING"
+      - " "
+      - "&a&lClick to change!"
+      slot: 4
       amount: 1
       glowing: false
     bid:
-      name: "&aChange to selling"
-      material: "EMERALD"
-      data: 0
+      name: "{#31ed96}Auction Type"
+      material: "STICK"
+      custom-model-data: 19
       lore:
-      - "&eClick&b to change the auction type to selling."
-      - "&bYou are currently &a&lBIDDING"
-      slot: 3
-      amount: 1
-      glowing: false
-    currency:
-      name: "&bCurrency"
-      material: "GOLD_INGOT"
-      data: 0
-      lore:
-      - "&eClick&b to select the currency for this auction."
-      - "&bCurrent: &e[currency]"
-      slot: 5
+      - " "
+      - "&7Currently: &6&lBIDDING"
+      - " "
+      - "&a&lClick to change!"
+      slot: 4
       amount: 1
       glowing: false
     add-1:
-      name: "&aAdd $1"
-      material: "LIME_STAINED_GLASS_PANE"
-      data: 5
+      name: "&aAdd &e1 Gold &f"
+      material: "STICK"
+      custom-model-data: 41
       lore:
-      - "&aClick to add a $1 to the auction."
       - " "
-      - "&bCurrent price: &e[price]"
+      - "&7Current price: &e[price] Gold &f"
       slot: 0
       amount: 1
       glowing: false
     add-10:
-      name: "&aAdd $10"
-      material: "LIME_STAINED_GLASS_PANE"
-      data: 5
+      name: "&aAdd &e10 Gold &f"
+      material: "STICK"
+      custom-model-data: 39
       lore:
-      - "&aClick to add a $10 to the auction."
       - " "
-      - "&bCurrent price: &e[price]"
+      - "&7Current price: &e[price] Gold &f"
       slot: 9
-      amount: 10
+      amount: 1
       glowing: false
     add-100:
-      name: "&aAdd $100"
-      material: "LIME_STAINED_GLASS_PANE"
-      data: 5
+      name: "&aAdd &e100 Gold &f"
+      material: "STICK"
+      custom-model-data: 40
       lore:
-      - "&aClick to add a $100 to the auction."
       - " "
-      - "&bCurrent price: &e[price]"
+      - "&7Current price: &e[price] Gold &f"
       slot: 18
-      amount: 64
+      amount: 1
       glowing: false
     remove-1:
-      name: "&cRemove $1"
-      material: "RED_STAINED_GLASS_PANE"
-      data: 14
+      name: "&cRemove &e1 Gold &f"
+      material: "STICK"
+      custom-model-data: 41
       lore:
-      - "&cClick to remove $1 from the auction."
       - " "
-      - "&bCurrent price: &e[price]"
+      - "&7Current price: &e[price] Gold &f"
       slot: 8
       amount: 1
       glowing: false
     remove-10:
-      name: "&cRemove $10"
-      material: "RED_STAINED_GLASS_PANE"
-      data: 14
+      name: "&cRemove &e10 Gold &f"
+      material: "STICK"
+      custom-model-data: 39
       lore:
-      - "&cClick to remove $10 from the auction."
       - " "
-      - "&bCurrent price: &e[price]"
+      - "&7Current price: &e[price] Gold &f"
       slot: 17
-      amount: 10
+      amount: 1
       glowing: false
     remove-100:
-      name: "&cRemove $100"
-      material: "RED_STAINED_GLASS_PANE"
-      data: 14
+      name: "&cRemove &e100 Gold &f"
+      material: "STICK"
+      custom-model-data: 40
       lore:
-      - "&cClick to remove $100 from the auction."
       - " "
-      - "&bCurrent price: &e[price]"
+      - "&7Current price: &e[price] Gold &f"
       slot: 26
-      amount: 64
+      amount: 1
       glowing: false
       # If you wish to disable any of these please set them the material to "AIR"
       # this is the material of the next page item. valid material names: https://javadocs.olziedev.com/spigot/latest/org/bukkit/Material.html

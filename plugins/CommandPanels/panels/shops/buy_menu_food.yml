@@ -1,0 +1,150 @@
+panels:
+  buy_menu_food:
+    perm: default
+    rows: 5
+    title: '&f'
+    empty: AIR
+    sound-on-open: BLOCK_NOTE_BLOCK_HAT
+    item:
+
+
+      '0':
+        material: STICK
+        customdata: 1
+        name: '&c← Previous Menu'
+        commands:
+        - open= main_menu
+      
+      
+      '38':
+        material: STICK
+        customdata: 1
+        name: '&a← Previous Page'
+        commands:
+        - open= buy_menu_combat
+      '42':
+        material: STICK
+        customdata: 2
+        name: '&aNext Page →'
+        commands:
+        - open= buy_menu_farming
+      
+
+      
+      
+      
+      '10':
+        material: BAKED_POTATO
+        stack: 8
+        name: '%color_menu_primary%Baked Potato'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7BUY &f&l8 &7FOR %color_gold%100 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to buy'
+        commands:
+        - buy= 100 BAKED_POTATO 8
+      '11':
+        material: BREAD
+        stack: 8
+        name: '%color_menu_primary%Bread'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7BUY &f&l8 &7FOR %color_gold%120 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to buy'
+        commands:
+        - buy= 120 BREAD 8
+      '12':
+        material: COOKED_BEEF
+        stack: 8
+        name: '%color_menu_primary%Steak'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7BUY &f&l8 &7FOR %color_gold%200 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to buy'
+        commands:
+        - buy= 200 COOKED_BEEF 8
+      '13':
+        material: COOKED_COD
+        stack: 8
+        name: '%color_menu_primary%Cooked Cod'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7BUY &f&l8 &7FOR %color_gold%140 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to buy'
+        commands:
+        - buy= 140 COOKED_COD 8
+      '14':
+        material: COOKIE
+        stack: 4
+        name: '%color_menu_primary%Cookie'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7BUY &f&l4 &7FOR %color_gold%45 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to buy'
+        commands:
+        - buy= 45 COOKIE 4
+      '15':
+        material: RABBIT_STEW
+        name: '%color_menu_primary%Rabbit Stew'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7BUY &f&l1 &7FOR %color_gold%25 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to buy'
+        commands:
+        - buy= 25 RABBIT_STEW 1
+      '16':
+        material: PUMPKIN_PIE
+        stack: 2
+        name: '%color_menu_primary%Pumpkin Pie'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7BUY &f&l2 &7FOR %color_gold%50 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to buy'
+        commands:
+        - buy= 50 PUMPKIN_PIE 2
+      
+      
+      
+      
+      
+      
+      
+      '19':
+        material: GOLDEN_CARROT
+        stack: 2
+        name: '%color_menu_primary%Golden Carrot'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7BUY &f&l2 &7FOR %color_gold%60 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to buy'
+        commands:
+        - buy= 60 GOLDEN_CARROT 2
+      '20':
+        material: GOLDEN_APPLE
+        name: '%color_menu_primary%Golden Apple'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7BUY &f&l1 &7FOR %color_gold%200 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to buy'
+        commands:
+        - buy= 200 GOLDEN_APPLE 1
+      '21':
+        material: CAKE
+        name: '%color_menu_primary%Cake'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7BUY &f&l1 &7FOR %color_gold%120 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to buy'
+        commands:
+        - buy= 120 CAKE 1
+      

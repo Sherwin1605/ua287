@@ -1,43 +1,14 @@
 patterns:
   - type: stat
-    stat: strength
+    stat: luck
     value: 1
     pattern:
       start: 2
       interval: 1
-      stop: 19
   - type: stat
     stat: strength
-    value: 2
-    pattern:
-      start: 20
-      interval: 1
-      stop: 39
-  - type: stat
-    stat: strength
-    value: 3
-    pattern:
-      start: 40
-      interval: 1
-
-  - type: stat
-    stat: regeneration
     value: 1
     pattern:
       start: 2
-      interval: 2
-      stop: 19
-  - type: stat
-    stat: regeneration
-    value: 2
-    pattern:
-      start: 20
-      interval: 2
-      stop: 39
-  - type: stat
-    stat: regeneration
-    value: 3
-    pattern:
-      start: 40
       interval: 2
 levels:

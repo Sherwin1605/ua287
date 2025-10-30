@@ -20,7 +20,7 @@ abilities:
     desc: "從蔬菜增加{value}% 飽和度"
     info: "+{value} 飽和度"
   growth_aura:
-    name: 生長光環
+    name: Growth Aura
     desc: "Crops with growth stages within {radius} blocks of you grow {value}% faster."
     info: "+{value}% Growth"
   lumberjack:
@@ -144,7 +144,7 @@ abilities:
     desc: "有{value}% 機率消除傷害性藥水效果"
     info: "{value}% 無負面狀態"
   parry:
-    name: 格擋
+    name: Parry
     desc: "Missing a sword swing within {time}s before being hit reduces damage by {value}% and cancels knockback."
     info: "{value}% Dmg Reduction"
     parried: "<red>Attack parried"
@@ -518,10 +518,7 @@ commands:
     add: "<gray>已增加玩家 <gray>{player} <aqua>{amount} {skill} <gray>經驗"
     set: "<gray>已設定玩家 <gray>{player} <aqua>{amount} {skill} <gray>經驗"
     remove: "<gray>已刪除玩家 <gray>{player} <aqua>{amount} {skill} <gray>經驗"
-  manaability:
-    cooldown_reset: "<gray>Cooldown for <aqua>{ability} <gray>has been reset for player <gold>{player}"
   unknown_skill: "<yellow>未知的技能!"
-  unknown_mana_ability: "<yellow>Unknown mana ability!"
   unknown_stat: "<yellow>Unknown stat!"
   no_profile: "<yellow>玩家沒有技能資料!"
 leveler:

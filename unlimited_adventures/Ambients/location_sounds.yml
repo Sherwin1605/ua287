@@ -1,0 +1,30 @@
+# Please DO NOT change version number!
+version: 2
+
+dungeon_1_bridge_creak:
+    sound: ambient.dungeons.bridge_creak
+    location: -8, 2, -44, dungeons
+    delay: 15
+    amplitude: 8
+    volume: 2
+
+dungeon_1_bridge_lava:
+    sound: ambient.dungeons.lava_ambient
+    location: -7, -13, -40, dungeons
+    delay: 8.5
+    amplitude: 0
+    volume: 3
+
+pyramid_outside_wind:
+    sound: ambient.medium_wind.desert
+    location: 25, -41, -1626, dungeons
+    delay: 8.5
+    amplitude: 0
+    volume: 0.5
+
+pyramid_ambience:
+    sound: ambient.cave_ambience
+    location: -90, -58, -1626, dungeons
+    delay: 8.5
+    amplitude: 0
+    volume: 1

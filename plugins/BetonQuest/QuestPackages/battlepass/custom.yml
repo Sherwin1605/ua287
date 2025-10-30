@@ -1,0 +1,23 @@
+notifications:
+
+  new_journal_entry:
+    io: advancement
+    frame: challenge
+    icon: map
+  
+  
+  info:
+    io: chat
+    sound: BLOCK_CHEST_CLOSE
+    
+  title:
+    io: title
+    fadeIn: 10
+    stay: 50
+    fadeOut: 20
+    #subtitle:
+  subtitle:
+      io: subtitle
+      fadeIn: 10
+      stay: 50
+      fadeOut: 20

@@ -1,0 +1,65 @@
+on load:
+	CombatLogReload()
+	
+function CombatLogCreateConfigFile():
+	load yaml "plugins/CombatLogX/unlimited_adventures_config.yml" as "config"
+
+	set yaml value "version" from "config" to 1
+	set the comments of yaml node "version" from "config" to "Please DO NOT change version number!"
+
+	set yaml list "blocked_commands" from "config" to "spawn" and "warp" and "home" and "rtp" and "tpr" and "tprandom" and "wild" and "wilderness" and "randomteleport" and "randomtp"
+	set yaml value "messages.command_in_combat" from "config" to "&cYou can't use commands during combat!"
+	set yaml value "messages.ui_message" from "config" to "&c&lIN COMBAT &fDo not logout for TIMER seconds!"
+
+
+	set the comments of yaml node "blocked_commands" from "config" to "" and "A list of commands that will be prevented during combat." and ""
+	save yaml "config"
+
+
+
+function CombatLogReload():
+	load yaml "plugins/CombatLogX/unlimited_adventures_config.yml" as "config"
+	if yaml value "version" from "config" is not set:
+		wait 1 tick
+		CombatLogCreateConfigFile()
+	
+	
+	if yaml value "messages.enabled" from "config" is set:
+		set {combatlog::messages::blocked_commands::*} to yaml value "particles.enabled" from "config"
+	if yaml list "blocked_commands" from "config" is set:
+		set {combatlog::config::blocked_commands::*} to yaml list "blocked_commands" from "config"
+
+	clear {combatlog::messages::*}
+	loop yaml node key "messages" from "config":
+		set {combatlog::messages::%loop-value%} to yaml value "messages.%loop-value%" from "config"
+
+	save yaml "config"
+
+
+
+on command:
+	if full command contains "mv tp":
+		set {_block} to true
+	loop {combatlog::config::blocked_commands::*}:
+		if full command is loop-value:
+			set {_block} to true
+			exit loop
+
+	if {_block} is true:
+		set {_in_combat} to placeholder "combatlogx_in_combat" from sender
+		if {_in_combat} is "&aYes":
+			send {combatlog::messages::command_in_combat} to sender
+			cancel event
+
+
+command /combattagsound [<player>]:
+	permission: admin
+	trigger:
+		play sound "block.note_block.didgeridoo" with volume 0.5 and pitch 1 to player-arg
+		play sound "entity.blaze.hurt" with volume 0.7 and pitch 1.5 to player-arg
+
+
+
+
+
+

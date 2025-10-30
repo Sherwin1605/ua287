@@ -1,0 +1,32 @@
+# Please DO NOT change version number!
+version: 1
+
+dungeon_locked: "&7You haven't unlocked this Dungeon yet! Finish previous Dungeon to unlock."
+
+no_key: "&7You don't have the key!"
+
+not_unlocked: "&7This floor is not unlocked yet!"
+
+floor_unlocked: "&aA passage to the next floor has been unlocked!"
+
+dungeon_unlocked: "&aYou have unlocked the &6DUNGEON_NAME &aDungeon!"
+
+new_floor_discovered_title: "&6New Floor Discovered!"
+
+new_floor_discovered_text: "&aYou have discovered &eFLOOR_NAME&a!"
+
+key_drop_title: "&aYou have found the Dungeon Key!"
+
+key_drop_text: "&fFloor: &aFLOOR_NUMBER &fUnlocked!"
+
+protection_booster_text: "Your items were saved by the active §x&0&0&7&8&f&8&lProtection Booster!"
+
+boss_slain: "&6BOSS &cBOSS_NAME &6has been slain!"
+
+boss_spawn: "&6BOSS &cBOSS_NAME &6has just spawned!"
+
+tutorial:
+- You can progress the dungeons by defeating enemies.
+- Keep killing monsters.
+
+cant_teleport: "&cYou cannot teleport to &6PLAYER_NAME &csince he is in a Dungeon!"

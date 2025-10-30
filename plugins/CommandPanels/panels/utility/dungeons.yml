@@ -1,0 +1,895 @@
+panels:
+  dungeons:
+    perm: default
+    rows: 5
+    title: '&f %valiant_dungeon_image_1%%valiant_dungeon_image_4%%valiant_dungeon_image_7%'
+    commands:
+    - dungeons
+    - dungeon
+    empty: AIR
+    sound-on-open: ENTITY_SKELETON_AMBIENT
+    item:
+
+
+
+      '0':
+        material: STICK
+        customdata: 1
+        name: '&c← Previous Menu'
+        commands:
+        - open= main_menu
+      
+      '8':
+        material: STICK
+        customdata: 11
+        name: '%color_menu_primary%How to unlock the Dungeon?'
+        lore:
+        - ''
+        - '&a• &7You can drop a &6Dungeon Key &7by'
+        - '&7  defeating bosses in &2Wilderness&7.'
+      
+      
+      '18':
+        material: STICK
+        customdata: 100
+        name: '&7Abandoned Mining Site'
+        lore:
+        - ' '
+        - '&7❌ You haven''t unlocked this dungeon yet!'
+        has0:
+          value0: '%valiant_dungeon_unlocked_1%'
+          compare0: 'true'
+          material: STICK
+          customdata: 100
+          name: '&7Abandoned Mining Site'
+          lore:
+          - ' '
+          - '&7❌ You have to find a key to enter this Dungeon!'
+          has1:
+            value0: '%valiant_dungeon_can_enter_1%'
+            compare0: 'true'
+            material: STICK
+            customdata: 100
+            name: '%color_menu_item_unlocked%Abandoned Mining Site'
+            lore:
+            - ' '
+            - '&7Difficulty: &f☠&7☠☠'
+            - '&7PVP: &aDisabled'
+            - ' '
+            - '%color_menu_purchase%&lClick to enter!'
+            commands:
+            - console= dungeons playerteleport %cp-player-name% 1
+      '19':
+        material: STICK
+        customdata: 100
+        name: '&7Abandoned Mining Site'
+        lore:
+        - ' '
+        - '&7❌ You haven''t unlocked this dungeon yet!'
+        has0:
+          value0: '%valiant_dungeon_unlocked_1%'
+          compare0: 'true'
+          material: STICK
+          customdata: 100
+          name: '&7Abandoned Mining Site'
+          lore:
+          - ' '
+          - '&7❌ You have to find a key to enter this Dungeon!'
+          has1:
+            value0: '%valiant_dungeon_can_enter_1%'
+            compare0: 'true'
+            material: STICK
+            customdata: 100
+            name: '%color_menu_item_unlocked%Abandoned Mining Site'
+            lore:
+            - ' '
+            - '&7Difficulty: &f☠&7☠☠'
+            - '&7PVP: &aDisabled'
+            - ' '
+            - '%color_menu_purchase%&lClick to enter!'
+            commands:
+            - console= dungeons playerteleport %cp-player-name% 1
+      '20':
+        material: STICK
+        customdata: 100
+        name: '&7Abandoned Mining Site'
+        lore:
+        - ' '
+        - '&7❌ You haven''t unlocked this dungeon yet!'
+        has0:
+          value0: '%valiant_dungeon_unlocked_1%'
+          compare0: 'true'
+          material: STICK
+          customdata: 100
+          name: '&7Abandoned Mining Site'
+          lore:
+          - ' '
+          - '&7❌ You have to find a key to enter this Dungeon!'
+          has1:
+            value0: '%valiant_dungeon_can_enter_1%'
+            compare0: 'true'
+            material: STICK
+            customdata: 100
+            name: '%color_menu_item_unlocked%Abandoned Mining Site'
+            lore:
+            - ' '
+            - '&7Difficulty: &f☠&7☠☠'
+            - '&7PVP: &aDisabled'
+            - ' '
+            - '%color_menu_purchase%&lClick to enter!'
+            commands:
+            - console= dungeons playerteleport %cp-player-name% 1
+      '27':
+        material: STICK
+        customdata: 100
+        name: '&7Abandoned Mining Site'
+        lore:
+        - ' '
+        - '&7❌ You haven''t unlocked this dungeon yet!'
+        has0:
+          value0: '%valiant_dungeon_unlocked_1%'
+          compare0: 'true'
+          material: STICK
+          customdata: 100
+          name: '&7Abandoned Mining Site'
+          lore:
+          - ' '
+          - '&7❌ You have to find a key to enter this Dungeon!'
+          has1:
+            value0: '%valiant_dungeon_can_enter_1%'
+            compare0: 'true'
+            material: STICK
+            customdata: 100
+            name: '%color_menu_item_unlocked%Abandoned Mining Site'
+            lore:
+            - ' '
+            - '&7Difficulty: &f☠&7☠☠'
+            - '&7PVP: &aDisabled'
+            - ' '
+            - '%color_menu_purchase%&lClick to enter!'
+            commands:
+            - console= dungeons playerteleport %cp-player-name% 1
+      '28':
+        material: STICK
+        customdata: 100
+        name: '&7Abandoned Mining Site'
+        lore:
+        - ' '
+        - '&7❌ You haven''t unlocked this dungeon yet!'
+        has0:
+          value0: '%valiant_dungeon_unlocked_1%'
+          compare0: 'true'
+          material: STICK
+          customdata: 100
+          name: '&7Abandoned Mining Site'
+          lore:
+          - ' '
+          - '&7❌ You have to find a key to enter this Dungeon!'
+          has1:
+            value0: '%valiant_dungeon_can_enter_1%'
+            compare0: 'true'
+            material: STICK
+            customdata: 100
+            name: '%color_menu_item_unlocked%Abandoned Mining Site'
+            lore:
+            - ' '
+            - '&7Difficulty: &f☠&7☠☠'
+            - '&7PVP: &aDisabled'
+            - ' '
+            - '%color_menu_purchase%&lClick to enter!'
+            commands:
+            - console= dungeons playerteleport %cp-player-name% 1
+      '29':
+        material: STICK
+        customdata: 100
+        name: '&7Abandoned Mining Site'
+        lore:
+        - ' '
+        - '&7❌ You haven''t unlocked this dungeon yet!'
+        has0:
+          value0: '%valiant_dungeon_unlocked_1%'
+          compare0: 'true'
+          material: STICK
+          customdata: 100
+          name: '&7Abandoned Mining Site'
+          lore:
+          - ' '
+          - '&7❌ You have to find a key to enter this Dungeon!'
+          has1:
+            value0: '%valiant_dungeon_can_enter_1%'
+            compare0: 'true'
+            material: STICK
+            customdata: 100
+            name: '%color_menu_item_unlocked%Abandoned Mining Site'
+            lore:
+            - ' '
+            - '&7Difficulty: &f☠&7☠☠'
+            - '&7PVP: &aDisabled'
+            - ' '
+            - '%color_menu_purchase%&lClick to enter!'
+            commands:
+            - console= dungeons playerteleport %cp-player-name% 1
+      '36':
+        material: STICK
+        customdata: 100
+        name: '&7Abandoned Mining Site'
+        lore:
+        - ' '
+        - '&7❌ You haven''t unlocked this dungeon yet!'
+        has0:
+          value0: '%valiant_dungeon_unlocked_1%'
+          compare0: 'true'
+          material: STICK
+          customdata: 100
+          name: '&7Abandoned Mining Site'
+          lore:
+          - ' '
+          - '&7❌ You have to find a key to enter this Dungeon!'
+          has1:
+            value0: '%valiant_dungeon_can_enter_1%'
+            compare0: 'true'
+            material: STICK
+            customdata: 100
+            name: '%color_menu_item_unlocked%Abandoned Mining Site'
+            lore:
+            - ' '
+            - '&7Difficulty: &f☠&7☠☠'
+            - '&7PVP: &aDisabled'
+            - ' '
+            - '%color_menu_purchase%&lClick to enter!'
+            commands:
+            - console= dungeons playerteleport %cp-player-name% 1
+      '37':
+        material: STICK
+        customdata: 100
+        name: '&7Abandoned Mining Site'
+        lore:
+        - ' '
+        - '&7❌ You haven''t unlocked this dungeon yet!'
+        has0:
+          value0: '%valiant_dungeon_unlocked_1%'
+          compare0: 'true'
+          material: STICK
+          customdata: 100
+          name: '&7Abandoned Mining Site'
+          lore:
+          - ' '
+          - '&7❌ You have to find a key to enter this Dungeon!'
+          has1:
+            value0: '%valiant_dungeon_can_enter_1%'
+            compare0: 'true'
+            material: STICK
+            customdata: 100
+            name: '%color_menu_item_unlocked%Abandoned Mining Site'
+            lore:
+            - ' '
+            - '&7Difficulty: &f☠&7☠☠'
+            - '&7PVP: &aDisabled'
+            - ' '
+            - '%color_menu_purchase%&lClick to enter!'
+            commands:
+            - console= dungeons playerteleport %cp-player-name% 1
+      '38':
+        material: STICK
+        customdata: 100
+        name: '&7Abandoned Mining Site'
+        lore:
+        - ' '
+        - '&7❌ You haven''t unlocked this dungeon yet!'
+        has0:
+          value0: '%valiant_dungeon_unlocked_1%'
+          compare0: 'true'
+          material: STICK
+          customdata: 100
+          name: '&7Abandoned Mining Site'
+          lore:
+          - ' '
+          - '&7❌ You have to find a key to enter this Dungeon!'
+          has1:
+            value0: '%valiant_dungeon_can_enter_1%'
+            compare0: 'true'
+            material: STICK
+            customdata: 100
+            name: '%color_menu_item_unlocked%Abandoned Mining Site'
+            lore:
+            - ' '
+            - '&7Difficulty: &f☠&7☠☠'
+            - '&7PVP: &aDisabled'
+            - ' '
+            - '%color_menu_purchase%&lClick to enter!'
+            commands:
+            - console= dungeons playerteleport %cp-player-name% 1
+
+
+
+
+
+      '21':
+        material: STICK
+        customdata: 100
+        name: '&7Dracula''s Manor'
+        lore:
+        - ' '
+        - '&7❌ You haven''t unlocked this dungeon yet!'
+        has0:
+          value0: '%valiant_dungeon_unlocked_4%'
+          compare0: 'true'
+          material: STICK
+          customdata: 100
+          name: '&7Dracula''s Manor'
+          lore:
+          - ' '
+          - '&7❌ You have to find a key to enter this Dungeon!'
+          commands:
+          - console= dungeons playerteleport %cp-player-name% 4
+          has1:
+            value0: '%valiant_dungeon_can_enter_4%'
+            compare0: 'true'
+            material: STICK
+            customdata: 100
+            name: '%color_menu_item_unlocked%Dracula''s Manor'
+            lore:
+            - ' '
+            - '&7Difficulty: &f☠☠&7☠'
+            - '&7PVP: &aDisabled'
+            - ' '
+            - '%color_menu_purchase%&lClick to enter!'
+            commands:
+            - console= dungeons playerteleport %cp-player-name% 4
+      '22':
+        material: STICK
+        customdata: 100
+        name: '&7Dracula''s Manor'
+        lore:
+        - ' '
+        - '&7❌ You haven''t unlocked this dungeon yet!'
+        has0:
+          value0: '%valiant_dungeon_unlocked_4%'
+          compare0: 'true'
+          material: STICK
+          customdata: 100
+          name: '&7Dracula''s Manor'
+          lore:
+          - ' '
+          - '&7❌ You have to find a key to enter this Dungeon!'
+          commands:
+          - console= dungeons playerteleport %cp-player-name% 4
+          has1:
+            value0: '%valiant_dungeon_can_enter_4%'
+            compare0: 'true'
+            material: STICK
+            customdata: 100
+            name: '%color_menu_item_unlocked%Dracula''s Manor'
+            lore:
+            - ' '
+            - '&7Difficulty: &f☠☠&7☠'
+            - '&7PVP: &aDisabled'
+            - ' '
+            - '%color_menu_purchase%&lClick to enter!'
+            commands:
+            - console= dungeons playerteleport %cp-player-name% 4
+      '23':
+        material: STICK
+        customdata: 100
+        name: '&7Dracula''s Manor'
+        lore:
+        - ' '
+        - '&7❌ You haven''t unlocked this dungeon yet!'
+        has0:
+          value0: '%valiant_dungeon_unlocked_4%'
+          compare0: 'true'
+          material: STICK
+          customdata: 100
+          name: '&7Dracula''s Manor'
+          lore:
+          - ' '
+          - '&7❌ You have to find a key to enter this Dungeon!'
+          commands:
+          - console= dungeons playerteleport %cp-player-name% 4
+          has1:
+            value0: '%valiant_dungeon_can_enter_4%'
+            compare0: 'true'
+            material: STICK
+            customdata: 100
+            name: '%color_menu_item_unlocked%Dracula''s Manor'
+            lore:
+            - ' '
+            - '&7Difficulty: &f☠☠&7☠'
+            - '&7PVP: &aDisabled'
+            - ' '
+            - '%color_menu_purchase%&lClick to enter!'
+            commands:
+            - console= dungeons playerteleport %cp-player-name% 4
+      '30':
+        material: STICK
+        customdata: 100
+        name: '&7Dracula''s Manor'
+        lore:
+        - ' '
+        - '&7❌ You haven''t unlocked this dungeon yet!'
+        has0:
+          value0: '%valiant_dungeon_unlocked_4%'
+          compare0: 'true'
+          material: STICK
+          customdata: 100
+          name: '&7Dracula''s Manor'
+          lore:
+          - ' '
+          - '&7❌ You have to find a key to enter this Dungeon!'
+          commands:
+          - console= dungeons playerteleport %cp-player-name% 4
+          has1:
+            value0: '%valiant_dungeon_can_enter_4%'
+            compare0: 'true'
+            material: STICK
+            customdata: 100
+            name: '%color_menu_item_unlocked%Dracula''s Manor'
+            lore:
+            - ' '
+            - '&7Difficulty: &f☠☠&7☠'
+            - '&7PVP: &aDisabled'
+            - ' '
+            - '%color_menu_purchase%&lClick to enter!'
+            commands:
+            - console= dungeons playerteleport %cp-player-name% 4
+      '31':
+        material: STICK
+        customdata: 100
+        name: '&7Dracula''s Manor'
+        lore:
+        - ' '
+        - '&7❌ You haven''t unlocked this dungeon yet!'
+        has0:
+          value0: '%valiant_dungeon_unlocked_4%'
+          compare0: 'true'
+          material: STICK
+          customdata: 100
+          name: '&7Dracula''s Manor'
+          lore:
+          - ' '
+          - '&7❌ You have to find a key to enter this Dungeon!'
+          commands:
+          - console= dungeons playerteleport %cp-player-name% 4
+          has1:
+            value0: '%valiant_dungeon_can_enter_4%'
+            compare0: 'true'
+            material: STICK
+            customdata: 100
+            name: '%color_menu_item_unlocked%Dracula''s Manor'
+            lore:
+            - ' '
+            - '&7Difficulty: &f☠☠&7☠'
+            - '&7PVP: &aDisabled'
+            - ' '
+            - '%color_menu_purchase%&lClick to enter!'
+            commands:
+            - console= dungeons playerteleport %cp-player-name% 4
+      '32':
+        material: STICK
+        customdata: 100
+        name: '&7Dracula''s Manor'
+        lore:
+        - ' '
+        - '&7❌ You haven''t unlocked this dungeon yet!'
+        has0:
+          value0: '%valiant_dungeon_unlocked_4%'
+          compare0: 'true'
+          material: STICK
+          customdata: 100
+          name: '&7Dracula''s Manor'
+          lore:
+          - ' '
+          - '&7❌ You have to find a key to enter this Dungeon!'
+          commands:
+          - console= dungeons playerteleport %cp-player-name% 4
+          has1:
+            value0: '%valiant_dungeon_can_enter_4%'
+            compare0: 'true'
+            material: STICK
+            customdata: 100
+            name: '%color_menu_item_unlocked%Dracula''s Manor'
+            lore:
+            - ' '
+            - '&7Difficulty: &f☠☠&7☠'
+            - '&7PVP: &aDisabled'
+            - ' '
+            - '%color_menu_purchase%&lClick to enter!'
+            commands:
+            - console= dungeons playerteleport %cp-player-name% 4
+      '39':
+        material: STICK
+        customdata: 100
+        name: '&7Dracula''s Manor'
+        lore:
+        - ' '
+        - '&7❌ You haven''t unlocked this dungeon yet!'
+        has0:
+          value0: '%valiant_dungeon_unlocked_4%'
+          compare0: 'true'
+          material: STICK
+          customdata: 100
+          name: '&7Dracula''s Manor'
+          lore:
+          - ' '
+          - '&7❌ You have to find a key to enter this Dungeon!'
+          commands:
+          - console= dungeons playerteleport %cp-player-name% 4
+          has1:
+            value0: '%valiant_dungeon_can_enter_4%'
+            compare0: 'true'
+            material: STICK
+            customdata: 100
+            name: '%color_menu_item_unlocked%Dracula''s Manor'
+            lore:
+            - ' '
+            - '&7Difficulty: &f☠☠&7☠'
+            - '&7PVP: &aDisabled'
+            - ' '
+            - '%color_menu_purchase%&lClick to enter!'
+            commands:
+            - console= dungeons playerteleport %cp-player-name% 4
+      '40':
+        material: STICK
+        customdata: 100
+        name: '&7Dracula''s Manor'
+        lore:
+        - ' '
+        - '&7❌ You haven''t unlocked this dungeon yet!'
+        has0:
+          value0: '%valiant_dungeon_unlocked_4%'
+          compare0: 'true'
+          material: STICK
+          customdata: 100
+          name: '&7Dracula''s Manor'
+          lore:
+          - ' '
+          - '&7❌ You have to find a key to enter this Dungeon!'
+          commands:
+          - console= dungeons playerteleport %cp-player-name% 4
+          has1:
+            value0: '%valiant_dungeon_can_enter_4%'
+            compare0: 'true'
+            material: STICK
+            customdata: 100
+            name: '%color_menu_item_unlocked%Dracula''s Manor'
+            lore:
+            - ' '
+            - '&7Difficulty: &f☠☠&7☠'
+            - '&7PVP: &aDisabled'
+            - ' '
+            - '%color_menu_purchase%&lClick to enter!'
+            commands:
+            - console= dungeons playerteleport %cp-player-name% 4
+      '41':
+        material: STICK
+        customdata: 100
+        name: '&7Dracula''s Manor'
+        lore:
+        - ' '
+        - '&7❌ You haven''t unlocked this dungeon yet!'
+        has0:
+          value0: '%valiant_dungeon_unlocked_4%'
+          compare0: 'true'
+          material: STICK
+          customdata: 100
+          name: '&7Dracula''s Manor'
+          lore:
+          - ' '
+          - '&7❌ You have to find a key to enter this Dungeon!'
+          commands:
+          - console= dungeons playerteleport %cp-player-name% 4
+          has1:
+            value0: '%valiant_dungeon_can_enter_4%'
+            compare0: 'true'
+            material: STICK
+            customdata: 100
+            name: '%color_menu_item_unlocked%Dracula''s Manor'
+            lore:
+            - ' '
+            - '&7Difficulty: &f☠☠&7☠'
+            - '&7PVP: &aDisabled'
+            - ' '
+            - '%color_menu_purchase%&lClick to enter!'
+            commands:
+            - console= dungeons playerteleport %cp-player-name% 4
+
+
+
+
+
+      '24':
+        material: STICK
+        customdata: 100
+        name: '&7Ancient Ruins'
+        lore:
+        - ' '
+        - '&7❌ You haven''t unlocked this dungeon yet!'
+        has0:
+          value0: '%valiant_dungeon_unlocked_7%'
+          compare0: 'true'
+          material: STICK
+          customdata: 100
+          name: '&7Ancient Ruins'
+          lore:
+          - ' '
+          - '&7❌ You have to find a key to enter this Dungeon!'
+          commands:
+          - console= dungeons playerteleport %cp-player-name% 7
+          has1:
+            value0: '%valiant_dungeon_can_enter_7%'
+            compare0: 'true'
+            material: STICK
+            customdata: 100
+            name: '%color_menu_item_unlocked%Ancient Ruins'
+            lore:
+            - ' '
+            - '&7Difficulty: &f☠☠☠'
+            - '&7PVP: &aDisabled'
+            - ' '
+            - '%color_menu_purchase%&lClick to enter!'
+            commands:
+            - console= dungeons playerteleport %cp-player-name% 7
+      '25':
+        material: STICK
+        customdata: 100
+        name: '&7Ancient Ruins'
+        lore:
+        - ' '
+        - '&7❌ You haven''t unlocked this dungeon yet!'
+        has0:
+          value0: '%valiant_dungeon_unlocked_7%'
+          compare0: 'true'
+          material: STICK
+          customdata: 100
+          name: '&7Ancient Ruins'
+          lore:
+          - ' '
+          - '&7❌ You have to find a key to enter this Dungeon!'
+          commands:
+          - console= dungeons playerteleport %cp-player-name% 7
+          has1:
+            value0: '%valiant_dungeon_can_enter_7%'
+            compare0: 'true'
+            material: STICK
+            customdata: 100
+            name: '%color_menu_item_unlocked%Ancient Ruins'
+            lore:
+            - ' '
+            - '&7Difficulty: &f☠☠☠'
+            - '&7PVP: &aDisabled'
+            - ' '
+            - '%color_menu_purchase%&lClick to enter!'
+            commands:
+            - console= dungeons playerteleport %cp-player-name% 7
+      '26':
+        material: STICK
+        customdata: 100
+        name: '&7Ancient Ruins'
+        lore:
+        - ' '
+        - '&7❌ You haven''t unlocked this dungeon yet!'
+        has0:
+          value0: '%valiant_dungeon_unlocked_7%'
+          compare0: 'true'
+          material: STICK
+          customdata: 100
+          name: '&7Ancient Ruins'
+          lore:
+          - ' '
+          - '&7❌ You have to find a key to enter this Dungeon!'
+          commands:
+          - console= dungeons playerteleport %cp-player-name% 7
+          has1:
+            value0: '%valiant_dungeon_can_enter_7%'
+            compare0: 'true'
+            material: STICK
+            customdata: 100
+            name: '%color_menu_item_unlocked%Ancient Ruins'
+            lore:
+            - ' '
+            - '&7Difficulty: &f☠☠☠'
+            - '&7PVP: &aDisabled'
+            - ' '
+            - '%color_menu_purchase%&lClick to enter!'
+            commands:
+            - console= dungeons playerteleport %cp-player-name% 7
+      '33':
+        material: STICK
+        customdata: 100
+        name: '&7Ancient Ruins'
+        lore:
+        - ' '
+        - '&7❌ You haven''t unlocked this dungeon yet!'
+        has0:
+          value0: '%valiant_dungeon_unlocked_7%'
+          compare0: 'true'
+          material: STICK
+          customdata: 100
+          name: '&7Ancient Ruins'
+          lore:
+          - ' '
+          - '&7❌ You have to find a key to enter this Dungeon!'
+          commands:
+          - console= dungeons playerteleport %cp-player-name% 7
+          has1:
+            value0: '%valiant_dungeon_can_enter_7%'
+            compare0: 'true'
+            material: STICK
+            customdata: 100
+            name: '%color_menu_item_unlocked%Ancient Ruins'
+            lore:
+            - ' '
+            - '&7Difficulty: &f☠☠☠'
+            - '&7PVP: &aDisabled'
+            - ' '
+            - '%color_menu_purchase%&lClick to enter!'
+            commands:
+            - console= dungeons playerteleport %cp-player-name% 7
+      '34':
+        material: STICK
+        customdata: 100
+        name: '&7Ancient Ruins'
+        lore:
+        - ' '
+        - '&7❌ You haven''t unlocked this dungeon yet!'
+        has0:
+          value0: '%valiant_dungeon_unlocked_7%'
+          compare0: 'true'
+          material: STICK
+          customdata: 100
+          name: '&7Ancient Ruins'
+          lore:
+          - ' '
+          - '&7❌ You have to find a key to enter this Dungeon!'
+          commands:
+          - console= dungeons playerteleport %cp-player-name% 7
+          has1:
+            value0: '%valiant_dungeon_can_enter_7%'
+            compare0: 'true'
+            material: STICK
+            customdata: 100
+            name: '%color_menu_item_unlocked%Ancient Ruins'
+            lore:
+            - ' '
+            - '&7Difficulty: &f☠☠☠'
+            - '&7PVP: &aDisabled'
+            - ' '
+            - '%color_menu_purchase%&lClick to enter!'
+            commands:
+            - console= dungeons playerteleport %cp-player-name% 7
+      '35':
+        material: STICK
+        customdata: 100
+        name: '&7Ancient Ruins'
+        lore:
+        - ' '
+        - '&7❌ You haven''t unlocked this dungeon yet!'
+        has0:
+          value0: '%valiant_dungeon_unlocked_7%'
+          compare0: 'true'
+          material: STICK
+          customdata: 100
+          name: '&7Ancient Ruins'
+          lore:
+          - ' '
+          - '&7❌ You have to find a key to enter this Dungeon!'
+          commands:
+          - console= dungeons playerteleport %cp-player-name% 7
+          has1:
+            value0: '%valiant_dungeon_can_enter_7%'
+            compare0: 'true'
+            material: STICK
+            customdata: 100
+            name: '%color_menu_item_unlocked%Ancient Ruins'
+            lore:
+            - ' '
+            - '&7Difficulty: &f☠☠☠'
+            - '&7PVP: &aDisabled'
+            - ' '
+            - '%color_menu_purchase%&lClick to enter!'
+            commands:
+            - console= dungeons playerteleport %cp-player-name% 7
+      '42':
+        material: STICK
+        customdata: 100
+        name: '&7Ancient Ruins'
+        lore:
+        - ' '
+        - '&7❌ You haven''t unlocked this dungeon yet!'
+        has0:
+          value0: '%valiant_dungeon_unlocked_7%'
+          compare0: 'true'
+          material: STICK
+          customdata: 100
+          name: '&7Ancient Ruins'
+          lore:
+          - ' '
+          - '&7❌ You have to find a key to enter this Dungeon!'
+          commands:
+          - console= dungeons playerteleport %cp-player-name% 7
+          has1:
+            value0: '%valiant_dungeon_can_enter_7%'
+            compare0: 'true'
+            material: STICK
+            customdata: 100
+            name: '%color_menu_item_unlocked%Ancient Ruins'
+            lore:
+            - ' '
+            - '&7Difficulty: &f☠☠☠'
+            - '&7PVP: &aDisabled'
+            - ' '
+            - '%color_menu_purchase%&lClick to enter!'
+            commands:
+            - console= dungeons playerteleport %cp-player-name% 7
+      '43':
+        material: STICK
+        customdata: 100
+        name: '&7Ancient Ruins'
+        lore:
+        - ' '
+        - '&7❌ You haven''t unlocked this dungeon yet!'
+        has0:
+          value0: '%valiant_dungeon_unlocked_7%'
+          compare0: 'true'
+          material: STICK
+          customdata: 100
+          name: '&7Ancient Ruins'
+          lore:
+          - ' '
+          - '&7❌ You have to find a key to enter this Dungeon!'
+          commands:
+          - console= dungeons playerteleport %cp-player-name% 7
+          has1:
+            value0: '%valiant_dungeon_can_enter_7%'
+            compare0: 'true'
+            material: STICK
+            customdata: 100
+            name: '%color_menu_item_unlocked%Ancient Ruins'
+            lore:
+            - ' '
+            - '&7Difficulty: &f☠☠☠'
+            - '&7PVP: &aDisabled'
+            - ' '
+            - '%color_menu_purchase%&lClick to enter!'
+            commands:
+            - console= dungeons playerteleport %cp-player-name% 7
+      '44':
+        material: STICK
+        customdata: 100
+        name: '&7Ancient Ruins'
+        lore:
+        - ' '
+        - '&7❌ You haven''t unlocked this dungeon yet!'
+        has0:
+          value0: '%valiant_dungeon_unlocked_7%'
+          compare0: 'true'
+          material: STICK
+          customdata: 100
+          name: '&7Ancient Ruins'
+          lore:
+          - ' '
+          - '&7❌ You have to find a key to enter this Dungeon!'
+          commands:
+          - console= dungeons playerteleport %cp-player-name% 7
+          has1:
+            value0: '%valiant_dungeon_can_enter_7%'
+            compare0: 'true'
+            material: STICK
+            customdata: 100
+            name: '%color_menu_item_unlocked%Ancient Ruins'
+            lore:
+            - ' '
+            - '&7Difficulty: &f☠☠☠'
+            - '&7PVP: &aDisabled'
+            - ' '
+            - '%color_menu_purchase%&lClick to enter!'
+            commands:
+            - console= dungeons playerteleport %cp-player-name% 7
+
+      
+      
+
+        
+        
+        
+

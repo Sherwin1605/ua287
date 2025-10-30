@@ -1,0 +1,12 @@
+location: spawn:831,776:70,861:901,340
+enabled: true
+display-range: 48
+update-range: 48
+update-interval: 20
+facing: 0.0
+down-origin: false
+pages:
+- lines:
+  - content: '&7Use /pa auction - to auction an item!'
+    height: 0.3
+  actions: {}

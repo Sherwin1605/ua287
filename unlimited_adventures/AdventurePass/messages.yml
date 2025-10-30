@@ -1,0 +1,10 @@
+# Please DO NOT change version number!
+version: 1
+
+no_space: "§x&f&f&e&6&0&8&lAdventure Pass ▶ &cYou don't have space for this reward!"
+
+claim_reward: "§x&f&f&e&6&0&8&lAdventure Pass ▶ &aClaimed reward for achieving §x&3&1&e&d&9&6Level ADVENTURE_PASS_LEVEL"
+
+premium_upgrade_1: "§x&f&f&e&6&0&8&lAdventure Pass ▶ §x&3&1&e&d&9&6&lCongratulations!"
+
+premium_upgrade_2: "&fYou have upgraded to &e&lAdventure Pass PREMIUM!"

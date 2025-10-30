@@ -513,15 +513,12 @@ commands:
   updateleaderboards:
     already_updating: "<yellow>Leaderboard вже оновлено!"
     updated: "<green>Дошку Лідера оновлено!"
-  version: "<white>Ви знаходитесь на версії з навичками AuraSkills <aqua>{current_version}<white>. Остання версія <aqua>{latest_version}"
+  version: "<white>Ви знаходитесь на версії з навичками Aurelium <aqua>{current_version}<white>. Остання версія <aqua>{latest_version}"
   xp:
     add: "<gray> Додано <aqua>{amount} {skill} <gray>ХРдля гравця <gray>{player}"
     set: "<gray>Set <aqua>{skill} <gray>XP для гравця <gray>{player} <gray>to {amount}"
     remove: "\"<gray>Видалено{amount} {skill} <gray>XP з гравця <gold>{player}\"1"
-  manaability:
-    cooldown_reset: "<gray>Cooldown for <aqua>{ability} <gray>has been reset for player <gold>{player}"
   unknown_skill: "<yellow>Невідома навичка!"
-  unknown_mana_ability: "<yellow>Unknown mana ability!"
   unknown_stat: "<yellow>Unknown stat!"
   no_profile: "<yellow>У гравця немає профілю навичок. Будь ласка, спробуйте ще раз під'єднатися до гри або перезавантажте сервер."
 leveler:

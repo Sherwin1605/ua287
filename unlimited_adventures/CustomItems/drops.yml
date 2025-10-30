@@ -1,0 +1,60 @@
+# Please DO NOT change version number!
+version: 1
+
+#  
+# You can modify percentage chances for various item drops from mobs
+# You can add your own drops, just follow the formatting!
+#  
+global:
+    zombie:
+        zombie_brain: 1
+        shackle: 0.4
+    skeleton:
+        skeleton_skull: 1
+        bone_necklace: 0.4
+    spider:
+        spider_venom: 1
+        ninja_cloak: 0.5
+    creeper:
+        rocket_boots: 0.5
+    enderman:
+        hermes_boots: 0.6
+    stray:
+        shiver_bracelet: 0.5
+    husk:
+        magic_bracelet: 0.5
+    witch:
+        vitality_ring: 1.5
+        speed_ring: 1.5
+    piglin:
+        gold_tooth: 1
+        gold_pouch: 0.5
+    piglin_brute:
+        gold_tooth: 2
+        gold_pouch: 1
+    wither_skeleton:
+        dark_magic_necklace: 1
+    blaze:
+        philosopher_stone: 0.75
+    ghast:
+        silver_chain: 1
+    strider:
+        magma_boots: 1
+    magma_cube:
+        molten_dice: 0.5
+    drowned:
+        diving_mask: 1
+    guardian:
+        diving_mask: 5
+    elder_guardian:
+        diving_mask: 50
+    ravager:
+        horseshoe: 3
+    warden:
+        sculk_shield: 5
+        echo_shard: 20
+    ender_dragon:
+        dragonscale: 500
+        ender_gauntlet: 10
+    wither:
+        wither_crown: 10

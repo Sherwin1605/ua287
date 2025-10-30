@@ -10,7 +10,7 @@ expiredauctions:
   # What is the name of the gui?
   name: "expiredauctions"
   # The title of the gui (Can use color codes)
-  title: "&b&lExpired Auctions ([page]/[pages])"
+  title: "&f"
   # What is the size of this GUI? (multiples of 9 can only go up to 54)
   size: 54
   # What are the actions when this menu is opened up?
@@ -31,7 +31,7 @@ expiredauctions:
     # You will need ProtocolLib for this to work.
     enabled: true
     # What is the title for the inventory?
-    title: "&b&lSearch [search] - ([page]/[pages])"
+    title: "&f  [search]"
     # What are the premade lines in the sign? %search% is the variable they have to enter the auction in.
     lines:
     - "%search%"
@@ -42,17 +42,17 @@ expiredauctions:
     material: "OAK_SIGN"
 
     item:
-      material: "OAK_SIGN"
-      data: 0
-      name: "&bSearch"
+      material: "STICK"
+      custom-model-data: 18
+      name: "{#31ed96}Search"
       lore:
-      - "&eClick&b to search for an auction."
       - " "
-      - "&bYou can search for auctions by:"
-      - "&e* Full IGN"
-      - "&e* Item name/Item type"
-      - "&e* Auction ID"
-      slot: 45
+      - "&7You can search for auctions by:"
+      - "&f• &7Full player name"
+      - "&f• &7Item name/Item type"
+      - " "
+      - "&a&lClick to search!"
+      slot: 46
       amount: 1
       glowing: false
 
@@ -63,50 +63,47 @@ expiredauctions:
     lore:
     - "[lore]"
     - "&b[preview]"
-    - "&bClick to collect your auction."
     - " "
-    - "&bID: &e[id]"
-    - "&bAmount: &e[amount]x"
-    - "&bPrice was worth: &e[price]"
-    - "&bAuctioned on: &e[date]"
+    - "&7Amount: &f[amount]"
+    - "&7Price was: &e[price] Gold &f"
+    - "&7Auctioned on: &9[date]"
+    - " "
+    - "&a&lClick to collect your auction!"
     # What are the commands that are ran when a player clicks on an auction?
     commands: []
 
   clickable-items:
     next-page:
-      name: "&bNext Page"
-      material: "ARROW"
-      data: 0
-      lore:
-      - "&eClick&b to go to the next page."
+      name: "&aNext Page →"
+      material: "STICK"
+      custom-model-data: 2
       slot: 50
       amount: 1
       glowing: false
     previous-page:
-      name: "&bPrevious page"
-      material: "BARRIER"
-      data: 0
-      lore:
-      - "&eClick&b to go to the previous page."
+      name: "&a← Previous page"
+      material: "STICK"
+      custom-model-data: 1
       slot: 48
       amount: 1
       glowing: false
     menu:
-      name: "&bMenu"
-      material: "BOOK"
-      data: 0
+      name: "{#31ed96}Menu"
+      material: "STICK"
+      custom-model-data: 45
       lore:
-      - "&eClick&b to go back to the menu."
+      - " "
+      - "&7Click to go back to the menu."
       slot: 49
       amount: 1
       glowing: false
     sort:
-      name: "&bSort"
-      material: "HOPPER"
-      data: 0
+      name: "{#31ed96}Sort"
+      material: "STICK"
+      custom-model-data: 17
       lore:
-      - "&eClick&b to sort the GUI in a specific format."
-      - "&bCurrent: &e%sort%"
+      - " "
+      - "&7Current: &f%sort%"
       slot: 53
       amount: 1
       glowing: false
@@ -119,24 +116,13 @@ expiredauctions:
 
   items:
     1:
-      name: " "
-      material: "BLACK_STAINED_GLASS_PANE"
-      data: 3
-      slot:
-      - 45
-      - 47
-      - 52
+      name: "&c← Previous Menu"
+      material: "STICK"
+      custom-model-data: 44
+      slot: 45
       amount: 1
-      glowing: false
-    2:
-      name: " "
-      material: "BLACK_STAINED_GLASS_PANE"
-      data: 4
-      slot:
-      - 46
-      - 51
-      - 53
-      amount: 1
+      commands:
+      - "[player] cp main_menu"
       # This is the name of the item.
       # This is the item material. To disable set this to AIR
       # This is the data item

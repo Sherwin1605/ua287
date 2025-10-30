@@ -1,0 +1,130 @@
+import:
+  org.apache.commons.io.FileUtils
+  java.io.File
+
+
+
+
+
+
+
+
+
+
+on load:
+	CheckUpdate()
+
+
+command /updatechange [<number>]:
+	permission: admin
+	trigger:
+		set {setup::version} to arg-1
+		send "&fChanged server version to %arg-1%" to sender
+
+
+
+function CheckUpdate():
+	if {setup::version} is not set:
+		set {setup::version} to 2.6
+	if {setup::version} is not greater or equal to 1.2:
+		set {setup::version} to 1.2
+		loop 10 times:
+			execute console command "/rg flag dungeon_%loop-number% -w spawn chest-access allow"
+		send "&f[&aUnlimited Adventures&f] &fApplying changes from version 1.2" to console
+	if {setup::version} is not greater or equal to 2.0:
+		set {setup::version} to 2.0
+	if {setup::version} is not greater or equal to 2.1:
+		set {setup::version} to 2.1
+		execute console command "/lp group default permission set essentials.rtp false"
+		wait 1 tick
+		execute console command "/lp group default permission set core.rtp true"
+		wait 1 tick
+		execute console command "/lp group default permission set chatmanager.message true"
+		wait 1 tick
+		execute console command "/lp group default permission set chatmanager.reply true"
+		wait 1 tick
+		send "&f[&aUnlimited Adventures&f] &fApplying changes from version 2.1" to console
+	if {setup::version} is not greater or equal to 2.11:
+		set {setup::version} to 2.11
+		set {hotfix::backpack_removal} to true
+		send "&f[&aUnlimited Adventures&f] &fApplying changes from version 2.11" to console
+		send "&f[&aUnlimited Adventures&f] &fApplying changes from version 2.1" to console
+	if {setup::version} is not greater or equal to 2.5:
+		set {setup::version} to 2.5
+		set {hotfix::backpack_removal} to false
+		execute console command "/dh delete teleportation_npc"
+		execute console command "/dh delete jobs_npc"
+		send "&f[&aUnlimited Adventures&f] &fApplying changes from version 2.5" to console
+	if {setup::version} is not greater or equal to 2.6:
+		set {setup::version} to 2.6
+		set {setup::spawn_moved} to false
+
+		wait 1 tick
+		execute console command "/lp group default permission set core.spawn true"
+		execute console command "/lp group default permission set essentials.delhome false"
+		execute console command "/lp group default permission set essentials.home false"
+		execute console command "/lp group default permission set essentials.sethome false"
+		execute console command "/lp group default permission set essentials.rtp false"
+		execute console command "/lp group default permission set essentials.tpa false"
+		execute console command "/lp group default permission set essentials.tpaccept false"
+		execute console command "/lp group default permission set essentials.tpahere false"
+		execute console command "/lp group default permission set essentials.tpdeny false"
+		execute console command "/lp group default permission set essentials.warp false"
+		execute console command "/lp group default permission set essentials.warp.list false"
+		execute console command "/lp group ultra permission set essentials.sethome.multiple.ultra false"
+		execute console command "/lp group hero permission set essentials.sethome.multiple.hero false"
+		execute console command "/lp group legend permission set essentials.sethome.multiple.legend false"
+		execute console command "/lp group moderator permission set core.rtp true"
+		execute console command "/lp group moderator permission set core.wild true"
+
+		execute console command "/dh delete badges_npc"
+		execute console command "/dh delete dungeon_portal_1"
+		execute console command "/dh delete dungeons_tip"
+		execute console command "/dh delete profile_npc"
+		execute console command "/dh delete zombie_brute_respawn_time"
+		execute console command "/dh delete skeleton_king_respawn_time"
+		execute console command "/dh delete skills_npc"
+		execute console command "/dh delete teleportation_npc"
+#		execute console command "/dh delete random_tp"
+
+		send "&f[&aUnlimited Adventures&f] &fApplying changes from version 2.6" to console
+
+
+
+
+every 3 seconds:
+	if {setup::spawn_moved} is false:
+		loop {players::*}:
+			if loop-value is op:
+				SpawnConfig(loop-value)
+				exit loop
+
+
+command /testspawnconfig:
+	permission: admin
+	trigger:
+		SpawnConfig(player)
+
+function SpawnConfig(player: player):
+	wait 0.7 second
+	play sound "block.note_block.pling" with volume 1 and pitch 1 to {_player}
+	send " " to {_player}
+	send "&aDon't move! The new spawn is being configured..." to {_player}
+	send " " to {_player}
+	wait 0.7 second
+	play sound "block.note_block.pling" with volume 1 and pitch 1.33 to {_player}
+	apply blindness without any particles to {_player} for 2.5 seconds
+	wait 0.7 second
+	KillBacktool({_player})
+	teleport {_player} to location(752.5, 68, 912.5, "spawn", 180, 0)
+	execute {_player} command "setwarp spawn"
+	execute {_player} command "mv setspawn"
+	set {location::spawn} to location of {_player}
+	play sound "block.note_block.pling" with volume 1 and pitch 1.66 to {_player}
+	wait 0.3 second
+	play sound "block.note_block.pling" with volume 1 and pitch 2 to {_player}
+	send " " to {_player}
+	send "&f &6&lNew spawn has been configured automatically!" to {_player}
+	send " " to {_player}
+	set {setup::spawn_moved} to true
+

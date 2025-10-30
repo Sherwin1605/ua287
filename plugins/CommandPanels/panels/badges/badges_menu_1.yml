@@ -1,0 +1,754 @@
+panels:
+  badges_menu_1:
+    perm: default
+    rows: 5
+    title: '&f'
+    commands:
+    - badges
+    - playerbadges
+    - pbadges
+    - valiantbadges
+    - yourbadges
+    empty: AIR
+    sound-on-open: BLOCK_NOTE_BLOCK_HAT
+    item:
+
+      '0':
+        material: STICK
+        customdata: 1
+        name: '&c← Previous Menu'
+        commands:
+        - open= main_menu
+      
+
+      
+      
+      '42':
+        material: STICK
+        customdata: 2
+        name: '&aNext Page →'
+        commands:
+        - open= badges_menu_2
+      
+      
+      
+      
+      '11':
+        material: STICK
+        customdata: 260
+        name: '&7Wooden Mining Badge'
+        lore:
+        - ' '
+        - '&fRequirements:'
+        - '&f• &7Mined Stone: 100'
+        - ''
+        - '&fRewards:'
+        - '&f• &7100 Gold '
+        has0:
+          value0: '%valiant_badges_level_mining% ISGREATER'
+          compare0: '1'
+          material: STICK
+          customdata: 251
+          name: '#a57b3d&lWooden Mining Badge'
+          lore:
+          - ' '
+          - '&8Requirements:'
+          - '&8• &mMined Stone: 100'
+          - ''
+          - '&8Rewards:'
+          - '&8• &8&m100 Gold '
+          - ''
+          - '%color_menu_unlocked%&lReward Claimed'
+          has1:
+            value0: '%valiant_badges_rewardavailable_mining_1%'
+            compare0: 'true'
+            material: STICK
+            customdata: 270
+            name: '&6Wooden Mining Badge'
+            lore:
+            - ' '
+            - '&8Requirements:'
+            - '&8• &mMined Stone: 100'
+            - ''
+            - '&6&lRewards:'
+            - '&e• &f100 Gold '
+            - ''
+            - '%color_menu_purchase%&l✔ Click to claim reward!'
+            commands:
+            - console= claimbadgesreward %cp-player-name% mining 1
+            - refresh
+      
+      '20':
+        material: STICK
+        customdata: 260
+        name: '&7Stone Mining Badge'
+        lore:
+        - ' '
+        - '&fRequirements:'
+        - '&f• &7Mined Stone: 500'
+        - ''
+        - '&fRewards:'
+        - '&f• &7150 Gold '
+        has0:
+          value0: '%valiant_badges_level_mining% ISGREATER'
+          compare0: '2'
+          material: STICK
+          customdata: 252
+          name: '#b1b1b1&lStone Mining Badge'
+          lore:
+          - ' '
+          - '&8Requirements:'
+          - '&8• &mMined Stone: 500'
+          - ''
+          - '&8Rewards:'
+          - '&8• &8&m150 Gold '
+          - ''
+          - '%color_menu_unlocked%&lReward Claimed'
+          has1:
+            value0: '%valiant_badges_rewardavailable_mining_2%'
+            compare0: 'true'
+            material: STICK
+            customdata: 270
+            name: '&6Stone Mining Badge'
+            lore:
+            - ' '
+            - '&8Requirements:'
+            - '&8• &mMined Stone: 500'
+            - ''
+            - '&6&lRewards:'
+            - '&e• &f150 Gold '
+            - ''
+            - '%color_menu_purchase%&l✔ Click to claim reward!'
+            commands:
+            - console= claimbadgesreward %cp-player-name% mining 2
+            - refresh
+      
+      '29':
+        material: STICK
+        customdata: 260
+        name: '&7Coal Mining Badge'
+        lore:
+        - ' '
+        - '&fRequirements:'
+        - '&f• &7Mined Gravel: 100'
+        - ''
+        - '&fRewards:'
+        - '&f• &7200 Gold '
+        has0:
+          value0: '%valiant_badges_level_mining% ISGREATER'
+          compare0: '3'
+          material: STICK
+          customdata: 253
+          name: '#6a6c7b&lCoal Mining Badge'
+          lore:
+          - ' '
+          - '&8Requirements:'
+          - '&8• &mMined Gravel: 100'
+          - ''
+          - '&8Rewards:'
+          - '&8• &8&m200 Gold '
+          - ''
+          - '%color_menu_unlocked%&lReward Claimed'
+          has1:
+            value0: '%valiant_badges_rewardavailable_mining_3%'
+            compare0: 'true'
+            material: STICK
+            customdata: 270
+            name: '&6Coal Mining Badge'
+            lore:
+            - ' '
+            - '&8Requirements:'
+            - '&8• &mMined Gravel: 100'
+            - ''
+            - '&6&lRewards:'
+            - '&e• &f200 Gold '
+            - ''
+            - '%color_menu_purchase%&l✔ Click to claim reward!'
+            commands:
+            - console= claimbadgesreward %cp-player-name% mining 3
+            - refresh
+      
+      
+      
+      
+      
+      
+      
+      
+      '12':
+        material: STICK
+        customdata: 260
+        name: '&7Wooden Crafting Badge'
+        lore:
+        - ' '
+        - '&fRequirements:'
+        - '&f• &7Crafted Items: 10'
+        - ''
+        - '&fRewards:'
+        - '&f• &7100 Gold '
+        has0:
+          value0: '%valiant_badges_level_crafting% ISGREATER'
+          compare0: '1'
+          material: STICK
+          customdata: 261
+          name: '#a57b3d&lWooden Crafting Badge'
+          lore:
+          - ' '
+          - '&8Requirements:'
+          - '&8• &mCrafted Items: 10'
+          - ''
+          - '&8Rewards:'
+          - '&8• &8&m100 Gold '
+          - ''
+          - '%color_menu_unlocked%&lReward Claimed'
+          has1:
+            value0: '%valiant_badges_rewardavailable_crafting_1%'
+            compare0: 'true'
+            material: STICK
+            customdata: 270
+            name: '&6Wooden Crafting Badge'
+            lore:
+            - ' '
+            - '&8Requirements:'
+            - '&8• &mCrafted Items: 10'
+            - ''
+            - '&6&lRewards:'
+            - '&e• &f100 Gold '
+            - ''
+            - '%color_menu_purchase%&l✔ Click to claim reward!'
+            commands:
+            - console= claimbadgesreward %cp-player-name% crafting 1
+            - refresh
+      
+      '21':
+        material: STICK
+        customdata: 260
+        name: '&7Stone Crafting Badge'
+        lore:
+        - ' '
+        - '&fRequirements:'
+        - '&f• &7Crafted Items: 50'
+        - ''
+        - '&fRewards:'
+        - '&f• &7150 Gold '
+        has0:
+          value0: '%valiant_badges_level_crafting% ISGREATER'
+          compare0: '2'
+          material: STICK
+          customdata: 262
+          name: '#b1b1b1&lStone Crafting Badge'
+          lore:
+          - ' '
+          - '&8Requirements:'
+          - '&8• &mCrafted Items: 50'
+          - ''
+          - '&8Rewards:'
+          - '&8• &8&m150 Gold '
+          - ''
+          - '%color_menu_unlocked%&lReward Claimed'
+          has1:
+            value0: '%valiant_badges_rewardavailable_crafting_2%'
+            compare0: 'true'
+            material: STICK
+            customdata: 270
+            name: '&6Stone Crafting Badge'
+            lore:
+            - ' '
+            - '&8Requirements:'
+            - '&8• &mCrafted Items: 50'
+            - ''
+            - '&6&lRewards:'
+            - '&e• &f150 Gold '
+            - ''
+            - '%color_menu_purchase%&l✔ Click to claim reward!'
+            commands:
+            - console= claimbadgesreward %cp-player-name% crafting 2
+            - refresh
+      
+      '30':
+        material: STICK
+        customdata: 260
+        name: '&7Coal Crafting Badge'
+        lore:
+        - ' '
+        - '&fRequirements:'
+        - '&f• &7Crafted Items: 150'
+        - ''
+        - '&fRewards:'
+        - '&f• &7200 Gold '
+        has0:
+          value0: '%valiant_badges_level_crafting% ISGREATER'
+          compare0: '3'
+          material: STICK
+          customdata: 263
+          name: '#6a6c7b&lCoal Crafting Badge'
+          lore:
+          - ' '
+          - '&8Requirements:'
+          - '&8• &mCrafted Items: 150'
+          - ''
+          - '&8Rewards:'
+          - '&8• &8&m200 Gold '
+          - ''
+          - '%color_menu_unlocked%&lReward Claimed'
+          has1:
+            value0: '%valiant_badges_rewardavailable_crafting_3%'
+            compare0: 'true'
+            material: STICK
+            customdata: 270
+            name: '&6Coal Crafting Badge'
+            lore:
+            - ' '
+            - '&8Requirements:'
+            - '&8• &mCrafted Items: 150'
+            - ''
+            - '&6&lRewards:'
+            - '&e• &f200 Gold '
+            - ''
+            - '%color_menu_purchase%&l✔ Click to claim reward!'
+            commands:
+            - console= claimbadgesreward %cp-player-name% crafting 3
+            - refresh
+      
+      
+      
+      
+      '13':
+        material: STICK
+        customdata: 260
+        name: '&7Wooden Survival Badge'
+        lore:
+        - ' '
+        - '&fRequirements:'
+        - '&f• &7Chopped Oak Logs: 10'
+        - ''
+        - '&fRewards:'
+        - '&f• &7100 Gold '
+        has0:
+          value0: '%valiant_badges_level_survival% ISGREATER'
+          compare0: '1'
+          material: STICK
+          customdata: 271
+          name: '#a57b3d&lWooden Survival Badge'
+          lore:
+          - ' '
+          - '&8Requirements:'
+          - '&8• &mChopped Oak Logs: 10'
+          - ''
+          - '&8Rewards:'
+          - '&8• &8&m100 Gold '
+          - ''
+          - '%color_menu_unlocked%&lReward Claimed'
+          has1:
+            value0: '%valiant_badges_rewardavailable_survival_1%'
+            compare0: 'true'
+            material: STICK
+            customdata: 270
+            name: '&6Wooden Survival Badge'
+            lore:
+            - ' '
+            - '&8Requirements:'
+            - '&8• &mChopped Oak Logs: 10'
+            - ''
+            - '&6&lRewards:'
+            - '&e• &f100 Gold '
+            - ''
+            - '%color_menu_purchase%&l✔ Click to claim reward!'
+            commands:
+            - console= claimbadgesreward %cp-player-name% survival 1
+            - refresh
+      
+      '22':
+        material: STICK
+        customdata: 260
+        name: '&7Stone Survival Badge'
+        lore:
+        - ' '
+        - '&fRequirements:'
+        - '&f• &7Chopped Oak Logs: 50'
+        - ''
+        - '&fRewards:'
+        - '&f• &7150 Gold '
+        has0:
+          value0: '%valiant_badges_level_survival% ISGREATER'
+          compare0: '2'
+          material: STICK
+          customdata: 272
+          name: '#b1b1b1&lStone Survival Badge'
+          lore:
+          - ' '
+          - '&8Requirements:'
+          - '&8• &mChopped Oak Logs: 50'
+          - ''
+          - '&8Rewards:'
+          - '&8• &8&m150 Gold '
+          - ''
+          - '%color_menu_unlocked%&lReward Claimed'
+          has1:
+            value0: '%valiant_badges_rewardavailable_survival_2%'
+            compare0: 'true'
+            material: STICK
+            customdata: 270
+            name: '&6Stone Survival Badge'
+            lore:
+            - ' '
+            - '&8Requirements:'
+            - '&8• &mChopped Oak Logs: 50'
+            - ''
+            - '&6&lRewards:'
+            - '&e• &f150 Gold '
+            - ''
+            - '%color_menu_purchase%&l✔ Click to claim reward!'
+            commands:
+            - console= claimbadgesreward %cp-player-name% survival 2
+            - refresh
+      
+      '31':
+        material: STICK
+        customdata: 260
+        name: '&7Coal Survival Badge'
+        lore:
+        - ' '
+        - '&fRequirements:'
+        - '&f• &7Chopped Oak Logs: 120'
+        - ''
+        - '&fRewards:'
+        - '&f• &7200 Gold '
+        has0:
+          value0: '%valiant_badges_level_survival% ISGREATER'
+          compare0: '3'
+          material: STICK
+          customdata: 273
+          name: '#6a6c7b&lCoal Survival Badge'
+          lore:
+          - ' '
+          - '&8Requirements:'
+          - '&8• &mChopped Oak Logs: 120'
+          - ''
+          - '&8Rewards:'
+          - '&8• &8&m200 Gold '
+          - ''
+          - '%color_menu_unlocked%&lReward Claimed'
+          has1:
+            value0: '%valiant_badges_rewardavailable_survival_3%'
+            compare0: 'true'
+            material: STICK
+            customdata: 270
+            name: '&6Coal Survival Badge'
+            lore:
+            - ' '
+            - '&8Requirements:'
+            - '&8• &mChopped Oak Logs: 120'
+            - ''
+            - '&6&lRewards:'
+            - '&e• &f200 Gold '
+            - ''
+            - '%color_menu_purchase%&l✔ Click to claim reward!'
+            commands:
+            - console= claimbadgesreward %cp-player-name% survival 3
+            - refresh
+      
+      
+      
+      
+      
+      
+      '14':
+        material: STICK
+        customdata: 260
+        name: '&7Wooden Caving Badge'
+        lore:
+        - ' '
+        - '&fRequirements:'
+        - '&f• &7Mined Iron Ore: 10'
+        - ''
+        - '&fRewards:'
+        - '&f• &7100 Gold '
+        has0:
+          value0: '%valiant_badges_level_caving% ISGREATER'
+          compare0: '1'
+          material: STICK
+          customdata: 281
+          name: '#a57b3d&lWooden Caving Badge'
+          lore:
+          - ' '
+          - '&8Requirements:'
+          - '&8• &mMined Iron Ore: 10'
+          - ''
+          - '&8Rewards:'
+          - '&8• &8&m100 Gold '
+          - ''
+          - '%color_menu_unlocked%&lReward Claimed'
+          has1:
+            value0: '%valiant_badges_rewardavailable_caving_1%'
+            compare0: 'true'
+            material: STICK
+            customdata: 270
+            name: '&6Wooden Caving Badge'
+            lore:
+            - ' '
+            - '&8Requirements:'
+            - '&8• &mMined Iron Ore: 10'
+            - ''
+            - '&6&lRewards:'
+            - '&e• &f100 Gold '
+            - ''
+            - '%color_menu_purchase%&l✔ Click to claim reward!'
+            commands:
+            - console= claimbadgesreward %cp-player-name% caving 1
+            - refresh
+      
+      '23':
+        material: STICK
+        customdata: 260
+        name: '&7Stone Caving Badge'
+        lore:
+        - ' '
+        - '&fRequirements:'
+        - '&f• &7Mined Coal Ore: 50'
+        - ''
+        - '&fRewards:'
+        - '&f• &7150 Gold '
+        has0:
+          value0: '%valiant_badges_level_caving% ISGREATER'
+          compare0: '2'
+          material: STICK
+          customdata: 282
+          name: '#b1b1b1&lStone Caving Badge'
+          lore:
+          - ' '
+          - '&8Requirements:'
+          - '&8• &mMined Coal Ore: 50'
+          - ''
+          - '&8Rewards:'
+          - '&8• &8&m150 Gold '
+          - ''
+          - '%color_menu_unlocked%&lReward Claimed'
+          has1:
+            value0: '%valiant_badges_rewardavailable_caving_2%'
+            compare0: 'true'
+            material: STICK
+            customdata: 270
+            name: '&6Stone Caving Badge'
+            lore:
+            - ' '
+            - '&8Requirements:'
+            - '&8• &mMined Coal Ore: 50'
+            - ''
+            - '&6&lRewards:'
+            - '&e• &f150 Gold '
+            - ''
+            - '%color_menu_purchase%&l✔ Click to claim reward!'
+            commands:
+            - console= claimbadgesreward %cp-player-name% caving 2
+            - refresh
+      
+      '32':
+        material: STICK
+        customdata: 260
+        name: '&7Coal Caving Badge'
+        lore:
+        - ' '
+        - '&fRequirements:'
+        - '&f• &7Mined Copper Ore: 100'
+        - ''
+        - '&fRewards:'
+        - '&f• &7200 Gold '
+        has0:
+          value0: '%valiant_badges_level_caving% ISGREATER'
+          compare0: '3'
+          material: STICK
+          customdata: 283
+          name: '#6a6c7b&lCoal Caving Badge'
+          lore:
+          - ' '
+          - '&8Requirements:'
+          - '&8• &mMined Copper Ore: 100'
+          - ''
+          - '&8Rewards:'
+          - '&8• &8&m200 Gold '
+          - ''
+          - '%color_menu_unlocked%&lReward Claimed'
+          has1:
+            value0: '%valiant_badges_rewardavailable_caving_3%'
+            compare0: 'true'
+            material: STICK
+            customdata: 270
+            name: '&6Coal Caving Badge'
+            lore:
+            - ' '
+            - '&8Requirements:'
+            - '&8• &mMined Copper Ore: 100'
+            - ''
+            - '&6&lRewards:'
+            - '&e• &f200 Gold '
+            - ''
+            - '%color_menu_purchase%&l✔ Click to claim reward!'
+            commands:
+            - console= claimbadgesreward %cp-player-name% caving 3
+            - refresh
+      
+      
+      
+
+      
+      
+      '15':
+        material: STICK
+        customdata: 260
+        name: '&7Wooden Hunting Badge'
+        lore:
+        - ' '
+        - '&fRequirements:'
+        - '&f• &7Mob Kills: 20'
+        - ''
+        - '&fRewards:'
+        - '&f• &7100 Gold '
+        has0:
+          value0: '%valiant_badges_level_hunting% ISGREATER'
+          compare0: '1'
+          material: STICK
+          customdata: 291
+          name: '#a57b3d&lWooden Hunting Badge'
+          lore:
+          - ' '
+          - '&8Requirements:'
+          - '&8• &mMob Kills: 20'
+          - ''
+          - '&8Rewards:'
+          - '&8• &8&m100 Gold '
+          - ''
+          - '%color_menu_unlocked%&lReward Claimed'
+          has1:
+            value0: '%valiant_badges_rewardavailable_hunting_1%'
+            compare0: 'true'
+            material: STICK
+            customdata: 270
+            name: '&6Wooden Hunting Badge'
+            lore:
+            - ' '
+            - '&8Requirements:'
+            - '&8• &mMob Kills: 20'
+            - ''
+            - '&6&lRewards:'
+            - '&e• &f100 Gold '
+            - ''
+            - '%color_menu_purchase%&l✔ Click to claim reward!'
+            commands:
+            - console= claimbadgesreward %cp-player-name% hunting 1
+            - refresh
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      '24':
+        material: STICK
+        customdata: 260
+        name: '&7Stone Hunting Badge'
+        lore:
+        - ' '
+        - '&fRequirements:'
+        - '&f• &7Killed Zombies: 25'
+        - ''
+        - '&fRewards:'
+        - '&f• &7150 Gold '
+        has0:
+          value0: '%valiant_badges_level_hunting% ISGREATER'
+          compare0: '2'
+          material: STICK
+          customdata: 292
+          name: '#b1b1b1&lStone Hunting Badge'
+          lore:
+          - ' '
+          - '&8Requirements:'
+          - '&8• &mKilled Zombies: 25'
+          - ''
+          - '&8Rewards:'
+          - '&8• &8&m150 Gold '
+          - ''
+          - '%color_menu_unlocked%&lReward Claimed'
+          has1:
+            value0: '%valiant_badges_rewardavailable_hunting_2%'
+            compare0: 'true'
+            material: STICK
+            customdata: 270
+            name: '&6Stone Hunting Badge'
+            lore:
+            - ' '
+            - '&8Requirements:'
+            - '&8• &mKilled Zombies: 25'
+            - ''
+            - '&6&lRewards:'
+            - '&e• &f150 Gold '
+            - ''
+            - '%color_menu_purchase%&l✔ Click to claim reward!'
+            commands:
+            - console= claimbadgesreward %cp-player-name% hunting 2
+            - refresh
+      
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      '33':
+        material: STICK
+        customdata: 260
+        name: '&7Coal Hunting Badge'
+        lore:
+        - ' '
+        - '&fRequirements:'
+        - '&f• &7Killed Skeletons: 40'
+        - ''
+        - '&fRewards:'
+        - '&f• &7200 Gold '
+        has0:
+          value0: '%valiant_badges_level_hunting% ISGREATER'
+          compare0: '3'
+          material: STICK
+          customdata: 293
+          name: '#6a6c7b&lCoal Hunting Badge'
+          lore:
+          - ' '
+          - '&8Requirements:'
+          - '&8• &mKilled Skeletons: 40'
+          - ''
+          - '&8Rewards:'
+          - '&8• &8&m200 Gold '
+          - ''
+          - '%color_menu_unlocked%&lReward Claimed'
+          has1:
+            value0: '%valiant_badges_rewardavailable_hunting_3%'
+            compare0: 'true'
+            material: STICK
+            customdata: 270
+            name: '&6Coal Hunting Badge'
+            lore:
+            - ' '
+            - '&8Requirements:'
+            - '&8• &mKilled Skeletons: 40'
+            - ''
+            - '&6&lRewards:'
+            - '&e• &f200 Gold '
+            - ''
+            - '%color_menu_purchase%&l✔ Click to claim reward!'
+            commands:
+            - console= claimbadgesreward %cp-player-name% hunting 3
+            - refresh
+
+
+        
+        
+        
+

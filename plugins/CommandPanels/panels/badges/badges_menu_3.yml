@@ -1,0 +1,746 @@
+panels:
+  badges_menu_3:
+    perm: default
+    rows: 5
+    title: '&f'
+    empty: AIR
+    sound-on-open: BLOCK_NOTE_BLOCK_HAT
+    item:
+
+
+      '0':
+        material: STICK
+        customdata: 1
+        name: '&c← Previous Menu'
+        commands:
+        - open= main_menu
+      
+
+      '38':
+        material: STICK
+        customdata: 1
+        name: '&a← Previous Page'
+        commands:
+        - open= badges_menu_2  
+      
+      
+      
+      '11':
+        material: STICK
+        customdata: 260
+        name: '&7Diamond Mining Badge'
+        lore:
+        - ' '
+        - '&fRequirements:'
+        - '&f• &7Mined Glowstone: 50'
+        - ''
+        - '&fRewards:'
+        - '&f• &7400 Gold '
+        has0:
+          value0: '%valiant_badges_level_mining% ISGREATER'
+          compare0: '7'
+          material: STICK
+          customdata: 257
+          name: '#00d3ff&lDiamond Mining Badge'
+          lore:
+          - ' '
+          - '&8Requirements:'
+          - '&8• &mMined Glowstone: 50'
+          - ''
+          - '&8Rewards:'
+          - '&8• &8&m400 Gold '
+          - ''
+          - '%color_menu_unlocked%&lReward Claimed'
+          has1:
+            value0: '%valiant_badges_rewardavailable_mining_7%'
+            compare0: 'true'
+            material: STICK
+            customdata: 270
+            name: '&6Diamond Mining Badge'
+            lore:
+            - ' '
+            - '&8Requirements:'
+            - '&8• &mMined Glowstone: 50'
+            - ''
+            - '&6&lRewards:'
+            - '&e• &f400 Gold '
+            - ''
+            - '%color_menu_purchase%&l✔ Click to claim reward!'
+            commands:
+            - console= claimbadgesreward %cp-player-name% mining 7
+            - refresh
+      
+      '20':
+        material: STICK
+        customdata: 260
+        name: '&7Emerald Mining Badge'
+        lore:
+        - ' '
+        - '&fRequirements:'
+        - '&f• &7Mined End Stone: 50'
+        - ''
+        - '&fRewards:'
+        - '&f• &7450 Gold '
+        has0:
+          value0: '%valiant_badges_level_mining% ISGREATER'
+          compare0: '8'
+          material: STICK
+          customdata: 258
+          name: '#66ff32&lEmerald Mining Badge'
+          lore:
+          - ' '
+          - '&8Requirements:'
+          - '&8• &mMined End Stone: 50'
+          - ''
+          - '&8Rewards:'
+          - '&8• &8&m450 Gold '
+          - ''
+          - '%color_menu_unlocked%&lReward Claimed'
+          has1:
+            value0: '%valiant_badges_rewardavailable_mining_8%'
+            compare0: 'true'
+            material: STICK
+            customdata: 270
+            name: '&6Emerald Mining Badge'
+            lore:
+            - ' '
+            - '&8Requirements:'
+            - '&8• &mMined End Stone: 50'
+            - ''
+            - '&6&lRewards:'
+            - '&e• &f450 Gold '
+            - ''
+            - '%color_menu_purchase%&l✔ Click to claim reward!'
+            commands:
+            - console= claimbadgesreward %cp-player-name% mining 8
+            - refresh
+      
+      '29':
+        material: STICK
+        customdata: 260
+        name: '&7Netherite Mining Badge'
+        lore:
+        - ' '
+        - '&fRequirements:'
+        - '&f• &7Mined Obsidian: 50'
+        - ''
+        - '&fRewards:'
+        - '&f• &7500 Gold '
+        has0:
+          value0: '%valiant_badges_level_mining% ISGREATER'
+          compare0: '9'
+          material: STICK
+          customdata: 259
+          name: '#ff2a2a&lNetherite Mining Badge'
+          lore:
+          - ' '
+          - '&8Requirements:'
+          - '&8• &mMined Obsidian: 50'
+          - ''
+          - '&8Rewards:'
+          - '&8• &8&m500 Gold '
+          - ''
+          - '%color_menu_unlocked%&lReward Claimed'
+          has1:
+            value0: '%valiant_badges_rewardavailable_mining_9%'
+            compare0: 'true'
+            material: STICK
+            customdata: 270
+            name: '&6Netherite Mining Badge'
+            lore:
+            - ' '
+            - '&8Requirements:'
+            - '&8• &mMined Obsidian: 50'
+            - ''
+            - '&6&lRewards:'
+            - '&e• &f500 Gold '
+            - ''
+            - '%color_menu_purchase%&l✔ Click to claim reward!'
+            commands:
+            - console= claimbadgesreward %cp-player-name% mining 9
+            - refresh
+      
+      
+      
+      
+      
+      
+      
+      
+      '12':
+        material: STICK
+        customdata: 260
+        name: '&7Diamond Crafting Badge'
+        lore:
+        - ' '
+        - '&fRequirements:'
+        - '&f• &7Craft End Crystal'
+        - ''
+        - '&fRewards:'
+        - '&f• &7400 Gold '
+        has0:
+          value0: '%valiant_badges_level_crafting% ISGREATER'
+          compare0: '7'
+          material: STICK
+          customdata: 267
+          name: '#00d3ff&lDiamond Crafting Badge'
+          lore:
+          - ' '
+          - '&8Requirements:'
+          - '&8• &mCraft End Crystal'
+          - ''
+          - '&8Rewards:'
+          - '&8• &8&m400 Gold '
+          - ''
+          - '%color_menu_unlocked%&lReward Claimed'
+          has1:
+            value0: '%valiant_badges_rewardavailable_crafting_7%'
+            compare0: 'true'
+            material: STICK
+            customdata: 270
+            name: '&6Diamond Crafting Badge'
+            lore:
+            - ' '
+            - '&8Requirements:'
+            - '&8• &mCraft End Crystal'
+            - ''
+            - '&6&lRewards:'
+            - '&e• &f400 Gold '
+            - ''
+            - '%color_menu_purchase%&l✔ Click to claim reward!'
+            commands:
+            - console= claimbadgesreward %cp-player-name% crafting 7
+            - refresh
+      
+      '21':
+        material: STICK
+        customdata: 260
+        name: '&7Emerald Crafting Badge'
+        lore:
+        - ' '
+        - '&fRequirements:'
+        - '&f• &7Craft Emerald Block'
+        - ''
+        - '&fRewards:'
+        - '&f• &7450 Gold '
+        has0:
+          value0: '%valiant_badges_level_crafting% ISGREATER'
+          compare0: '8'
+          material: STICK
+          customdata: 268
+          name: '#66ff32&lEmerald Crafting Badge'
+          lore:
+          - ' '
+          - '&8Requirements:'
+          - '&8• &mCrafted Emerald Block'
+          - ''
+          - '&8Rewards:'
+          - '&8• &8&m450 Gold '
+          - ''
+          - '%color_menu_unlocked%&lReward Claimed'
+          has1:
+            value0: '%valiant_badges_rewardavailable_crafting_8%'
+            compare0: 'true'
+            material: STICK
+            customdata: 270
+            name: '&6Emerald Crafting Badge'
+            lore:
+            - ' '
+            - '&8Requirements:'
+            - '&8• &mCrafted Emerald Block'
+            - ''
+            - '&6&lRewards:'
+            - '&e• &f450 Gold '
+            - ''
+            - '%color_menu_purchase%&l✔ Click to claim reward!'
+            commands:
+            - console= claimbadgesreward %cp-player-name% crafting 8
+            - refresh
+      
+      '30':
+        material: STICK
+        customdata: 260
+        name: '&7Netherite Crafting Badge'
+        lore:
+        - ' '
+        - '&fRequirements:'
+        - '&f• &7Craft Beacon'
+        - ''
+        - '&fRewards:'
+        - '&f• &7500 Gold '
+        has0:
+          value0: '%valiant_badges_level_crafting% ISGREATER'
+          compare0: '9'
+          material: STICK
+          customdata: 269
+          name: '#ff2a2a&lNetherite Crafting Badge'
+          lore:
+          - ' '
+          - '&8Requirements:'
+          - '&8• &mCraft Beacon'
+          - ''
+          - '&8Rewards:'
+          - '&8• &8&m500 Gold '
+          - ''
+          - '%color_menu_unlocked%&lReward Claimed'
+          has1:
+            value0: '%valiant_badges_rewardavailable_crafting_9%'
+            compare0: 'true'
+            material: STICK
+            customdata: 270
+            name: '&6Netherite Crafting Badge'
+            lore:
+            - ' '
+            - '&8Requirements:'
+            - '&8• &mCraft Beacon'
+            - ''
+            - '&6&lRewards:'
+            - '&e• &f500 Gold '
+            - ''
+            - '%color_menu_purchase%&l✔ Click to claim reward!'
+            commands:
+            - console= claimbadgesreward %cp-player-name% crafting 9
+            - refresh
+      
+      
+      
+      
+      '13':
+        material: STICK
+        customdata: 260
+        name: '&7Diamond Survival Badge'
+        lore:
+        - ' '
+        - '&fRequirements:'
+        - '&f• &7Chopped Oak Logs: 500'
+        - ''
+        - '&fRewards:'
+        - '&f• &7400 Gold '
+        has0:
+          value0: '%valiant_badges_level_survival% ISGREATER'
+          compare0: '7'
+          material: STICK
+          customdata: 277
+          name: '#00d3ff&lDiamond Survival Badge'
+          lore:
+          - ' '
+          - '&8Requirements:'
+          - '&8• &mChopped Oak Logs: 500'
+          - ''
+          - '&8Rewards:'
+          - '&8• &8&m400 Gold '
+          - ''
+          - '%color_menu_unlocked%&lReward Claimed'
+          has1:
+            value0: '%valiant_badges_rewardavailable_survival_7%'
+            compare0: 'true'
+            material: STICK
+            customdata: 270
+            name: '&6Diamond Survival Badge'
+            lore:
+            - ' '
+            - '&8Requirements:'
+            - '&8• &mChopped Oak Logs: 500'
+            - ''
+            - '&6&lRewards:'
+            - '&e• &f400 Gold '
+            - ''
+            - '%color_menu_purchase%&l✔ Click to claim reward!'
+            commands:
+            - console= claimbadgesreward %cp-player-name% survival 7
+            - refresh
+      
+      '22':
+        material: STICK
+        customdata: 260
+        name: '&7Emerald Survival Badge'
+        lore:
+        - ' '
+        - '&fRequirements:'
+        - '&f• &7Chopped Oak Logs: 750'
+        - ''
+        - '&fRewards:'
+        - '&f• &7450 Gold '
+        has0:
+          value0: '%valiant_badges_level_survival% ISGREATER'
+          compare0: '8'
+          material: STICK
+          customdata: 278
+          name: '#66ff32&lEmerald Survival Badge'
+          lore:
+          - ' '
+          - '&8Requirements:'
+          - '&8• &mChopped Oak Logs: 750'
+          - ''
+          - '&8Rewards:'
+          - '&8• &8&m450 Gold '
+          - ''
+          - '%color_menu_unlocked%&lReward Claimed'
+          has1:
+            value0: '%valiant_badges_rewardavailable_survival_8%'
+            compare0: 'true'
+            material: STICK
+            customdata: 270
+            name: '&6Emerald Survival Badge'
+            lore:
+            - ' '
+            - '&8Requirements:'
+            - '&8• &mChopped Oak Logs: 750'
+            - ''
+            - '&6&lRewards:'
+            - '&e• &f450 Gold '
+            - ''
+            - '%color_menu_purchase%&l✔ Click to claim reward!'
+            commands:
+            - console= claimbadgesreward %cp-player-name% survival 8
+            - refresh
+      
+      '31':
+        material: STICK
+        customdata: 260
+        name: '&7Netherite Survival Badge'
+        lore:
+        - ' '
+        - '&fRequirements:'
+        - '&f• &7Chopped Oak Logs: 1000'
+        - ''
+        - '&fRewards:'
+        - '&f• &7500 Gold '
+        has0:
+          value0: '%valiant_badges_level_survival% ISGREATER'
+          compare0: '9'
+          material: STICK
+          customdata: 279
+          name: '#ff2a2a&lNetherite Survival Badge'
+          lore:
+          - ' '
+          - '&8Requirements:'
+          - '&8• &mChopped Oak Logs: 1000'
+          - ''
+          - '&8Rewards:'
+          - '&8• &8&m500 Gold '
+          - ''
+          - '%color_menu_unlocked%&lReward Claimed'
+          has1:
+            value0: '%valiant_badges_rewardavailable_survival_9%'
+            compare0: 'true'
+            material: STICK
+            customdata: 270
+            name: '&6Netherite Survival Badge'
+            lore:
+            - ' '
+            - '&8Requirements:'
+            - '&8• &mChopped Oak Logs: 1000'
+            - ''
+            - '&6&lRewards:'
+            - '&e• &f500 Gold '
+            - ''
+            - '%color_menu_purchase%&l✔ Click to claim reward!'
+            commands:
+            - console= claimbadgesreward %cp-player-name% survival 9
+            - refresh
+      
+      
+      
+      
+      
+      
+      '14':
+        material: STICK
+        customdata: 260
+        name: '&7Diamond Caving Badge'
+        lore:
+        - ' '
+        - '&fRequirements:'
+        - '&f• &7Mined Diamond Ore: 10'
+        - ''
+        - '&fRewards:'
+        - '&f• &7400 Gold '
+        has0:
+          value0: '%valiant_badges_level_caving% ISGREATER'
+          compare0: '7'
+          material: STICK
+          customdata: 287
+          name: '#00d3ff&lDiamond Caving Badge'
+          lore:
+          - ' '
+          - '&8Requirements:'
+          - '&8• &mMined Diamond Ore: 10'
+          - ''
+          - '&8Rewards:'
+          - '&8• &8&m400 Gold '
+          - ''
+          - '%color_menu_unlocked%&lReward Claimed'
+          has1:
+            value0: '%valiant_badges_rewardavailable_caving_7%'
+            compare0: 'true'
+            material: STICK
+            customdata: 270
+            name: '&6Diamond Caving Badge'
+            lore:
+            - ' '
+            - '&8Requirements:'
+            - '&8• &mMined Diamond Ore: 10'
+            - ''
+            - '&6&lRewards:'
+            - '&e• &f400 Gold '
+            - ''
+            - '%color_menu_purchase%&l✔ Click to claim reward!'
+            commands:
+            - console= claimbadgesreward %cp-player-name% caving 7
+            - refresh
+      
+      '23':
+        material: STICK
+        customdata: 260
+        name: '&7Emerald Caving Badge'
+        lore:
+        - ' '
+        - '&fRequirements:'
+        - '&f• &7Mined Emerald Ore: 5'
+        - ''
+        - '&fRewards:'
+        - '&f• &7450 Gold '
+        has0:
+          value0: '%valiant_badges_level_caving% ISGREATER'
+          compare0: '8'
+          material: STICK
+          customdata: 288
+          name: '#66ff32&lEmerald Caving Badge'
+          lore:
+          - ' '
+          - '&8Requirements:'
+          - '&8• &mMined Emerald Ore: 5'
+          - ''
+          - '&8Rewards:'
+          - '&8• &8&m450 Gold '
+          - ''
+          - '%color_menu_unlocked%&lReward Claimed'
+          has1:
+            value0: '%valiant_badges_rewardavailable_caving_8%'
+            compare0: 'true'
+            material: STICK
+            customdata: 270
+            name: '&6Emerald Caving Badge'
+            lore:
+            - ' '
+            - '&8Requirements:'
+            - '&8• &mMined Emerald Ore: 5'
+            - ''
+            - '&6&lRewards:'
+            - '&e• &f450 Gold '
+            - ''
+            - '%color_menu_purchase%&l✔ Click to claim reward!'
+            commands:
+            - console= claimbadgesreward %cp-player-name% caving 8
+            - refresh
+      
+      '32':
+        material: STICK
+        customdata: 260
+        name: '&7Netherite Caving Badge'
+        lore:
+        - ' '
+        - '&fRequirements:'
+        - '&f• &7Mined Ancient Debris: 5'
+        - ''
+        - '&fRewards:'
+        - '&f• &7500 Gold '
+        has0:
+          value0: '%valiant_badges_level_caving% ISGREATER'
+          compare0: '9'
+          material: STICK
+          customdata: 289
+          name: '#ff2a2a&lNetherite Caving Badge'
+          lore:
+          - ' '
+          - '&8Requirements:'
+          - '&8• &mMined Ancient Debris: 5'
+          - ''
+          - '&8Rewards:'
+          - '&8• &8&m500 Gold '
+          - ''
+          - '%color_menu_unlocked%&lReward Claimed'
+          has1:
+            value0: '%valiant_badges_rewardavailable_caving_9%'
+            compare0: 'true'
+            material: STICK
+            customdata: 270
+            name: '&6Netherite Caving Badge'
+            lore:
+            - ' '
+            - '&8Requirements:'
+            - '&8• &mMined Ancient Debris: 5'
+            - ''
+            - '&6&lRewards:'
+            - '&e• &f500 Gold '
+            - ''
+            - '%color_menu_purchase%&l✔ Click to claim reward!'
+            commands:
+            - console= claimbadgesreward %cp-player-name% caving 9
+            - refresh
+      
+      
+      
+
+      
+      
+      '15':
+        material: STICK
+        customdata: 260
+        name: '&7Diamond Hunting Badge'
+        lore:
+        - ' '
+        - '&fRequirements:'
+        - '&f• &7Killed Ghasts: 10'
+        - ''
+        - '&fRewards:'
+        - '&f• &7400 Gold '
+        has0:
+          value0: '%valiant_badges_level_hunting% ISGREATER'
+          compare0: '7'
+          material: STICK
+          customdata: 297
+          name: '#00d3ff&lDiamond Hunting Badge'
+          lore:
+          - ' '
+          - '&8Requirements:'
+          - '&8• &mKilled Ghasts: 10'
+          - ''
+          - '&8Rewards:'
+          - '&8• &8&m400 Gold '
+          - ''
+          - '%color_menu_unlocked%&lReward Claimed'
+          has1:
+            value0: '%valiant_badges_rewardavailable_hunting_7%'
+            compare0: 'true'
+            material: STICK
+            customdata: 270
+            name: '&6Diamond Hunting Badge'
+            lore:
+            - ' '
+            - '&8Requirements:'
+            - '&8• &mKilled Ghasts: 10'
+            - ''
+            - '&6&lRewards:'
+            - '&e• &f400 Gold '
+            - ''
+            - '%color_menu_purchase%&l✔ Click to claim reward!'
+            commands:
+            - console= claimbadgesreward %cp-player-name% hunting 7
+            - refresh
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      '24':
+        material: STICK
+        customdata: 260
+        name: '&7Emerald Hunting Badge'
+        lore:
+        - ' '
+        - '&fRequirements:'
+        - '&f• &7Killed Blazes: 50'
+        - ''
+        - '&fRewards:'
+        - '&f• &7450 Gold '
+        has0:
+          value0: '%valiant_badges_level_hunting% ISGREATER'
+          compare0: '8'
+          material: STICK
+          customdata: 298
+          name: '#66ff32&lEmerald Hunting Badge'
+          lore:
+          - ' '
+          - '&8Requirements:'
+          - '&8• &mKilled Blazes: 50'
+          - ''
+          - '&8Rewards:'
+          - '&8• &8&m450 Gold '
+          - ''
+          - '%color_menu_unlocked%&lReward Claimed'
+          has1:
+            value0: '%valiant_badges_rewardavailable_hunting_8%'
+            compare0: 'true'
+            material: STICK
+            customdata: 270
+            name: '&6Emerald Hunting Badge'
+            lore:
+            - ' '
+            - '&8Requirements:'
+            - '&8• &mKilled Blazes: 50'
+            - ''
+            - '&6&lRewards:'
+            - '&e• &f450 Gold '
+            - ''
+            - '%color_menu_purchase%&l✔ Click to claim reward!'
+            commands:
+            - console= claimbadgesreward %cp-player-name% hunting 8
+            - refresh
+      
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      '33':
+        material: STICK
+        customdata: 260
+        name: '&7Netherite Hunting Badge'
+        lore:
+        - ' '
+        - '&fRequirements:'
+        - '&f• &7Killed Shulkers: 10'
+        - ''
+        - '&fRewards:'
+        - '&f• &7500 Gold '
+        has0:
+          value0: '%valiant_badges_level_hunting% ISGREATER'
+          compare0: '9'
+          material: STICK
+          customdata: 299
+          name: '#ff2a2a&lNetherite Hunting Badge'
+          lore:
+          - ' '
+          - '&8Requirements:'
+          - '&8• &mKilled Shulkers: 10'
+          - ''
+          - '&8Rewards:'
+          - '&8• &8&m500 Gold '
+          - ''
+          - '%color_menu_unlocked%&lReward Claimed'
+          has1:
+            value0: '%valiant_badges_rewardavailable_hunting_9%'
+            compare0: 'true'
+            material: STICK
+            customdata: 270
+            name: '&6Netherite Hunting Badge'
+            lore:
+            - ' '
+            - '&8Requirements:'
+            - '&8• &mKilled Shulkers: 10'
+            - ''
+            - '&6&lRewards:'
+            - '&e• &f500 Gold '
+            - ''
+            - '%color_menu_purchase%&l✔ Click to claim reward!'
+            commands:
+            - console= claimbadgesreward %cp-player-name% hunting 9
+            - refresh
+
+
+        
+        
+        
+

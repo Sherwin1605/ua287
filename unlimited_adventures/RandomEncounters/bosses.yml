@@ -1,0 +1,321 @@
+# Please DO NOT change version number!
+version: 1
+
+# Spawn chance is the chance for any mob to become a boss
+# Spawn cooldown is the time in seconds before a boss can spawn again
+# Drops are items that will drop when boss is slain
+# Rare drops is a list of rare drops, only one item from the list will drop.
+# Drop amount is the amount of items that will be randomised from the 'Drops' list.
+skeleton_chieftain:
+    enabled: true
+    spawn_chance: 4
+    spawn_cooldown: 900
+    tier_1:
+        health: 60
+        skill_power_multiplier: 1
+        weapon: iron axe of knockback 1
+        chestplate: iron chestplate of projectile protection 4
+        leggings: leather leggings of projectile protection 4
+        boots: iron boots of projectile protection 4 and depth strider 5
+        drops:
+        - 21 of bone
+        - 16 of iron ingot
+        - 12 of gold ingot
+        - 1 of diamond
+        - 6 of emerald
+        - diamond boots
+        - diamond helmet
+        - diamond sword
+        - custom:skeleton_skull
+        rare_drops:
+        - custom:bone_necklace
+        - 5 of diamond
+        - diamond leggings
+        - diamond axe
+        drop_amount: 3
+        skeleton_key_chance: 30
+    tier_2:
+        health: 100
+        skill_power_multiplier: 1.5
+        weapon: diamond axe of sharpness 1 and knockback 1
+        chestplate: diamond chestplate of projectile protection 4
+        leggings: leather leggings of projectile protection 4
+        boots: diamond boots of projectile protection 4 and depth strider 5
+        drops:
+        - 42 of bone
+        - 32 of iron ingot
+        - 24 of gold ingot
+        - 2 of diamond
+        - 12 of emerald
+        - diamond chestplate
+        - diamond leggings
+        - diamond sword of sharpness 2
+        - custom:skeleton_skull
+        rare_drops:
+        - custom:bone_necklace
+        - 10 of diamond
+        - diamond chestplate of protection 3
+        - diamond axe of efficiency 5
+        drop_amount: 4
+        skeleton_key_chance: 60
+    tier_3:
+        health: 150
+        skill_power_multiplier: 2
+        weapon: netherite axe of sharpness 3 and knockback 2
+        chestplate: netherite chestplate of projectile protection 4
+        leggings: leather leggings of projectile protection 4
+        boots: netherite boots of projectile protection 4 and depth strider 5
+        drops:
+        - 64 of bone
+        - 7 of iron block
+        - 3 of gold block
+        - 3 of diamond
+        - 2 of emerald block
+        - diamond chestplate of protection 3
+        - diamond leggings of protection 3
+        - diamond sword of sharpness 4
+        - custom:skeleton_skull
+        rare_drops:
+        - custom:cloak_of_wrath
+        - 15 of diamond
+        - diamond chestplate of protection 4
+        - diamond axe of efficiency 5 and sharpness 5
+        drop_amount: 5
+        skeleton_key_chance: 100
+
+nosferatu:
+    enabled: true
+    spawn_chance: 4
+    spawn_cooldown: 900
+    tier_1:
+        health: 60
+        skill_power_multiplier: 1
+        weapon: iron sword
+        chestplate: leather chestplate of projectile protection 4
+        leggings: leather leggings of projectile protection 4
+        boots: leather boots of projectile protection 4 and depth strider 5
+        drops:
+        - 3 of golden apple
+        - 16 of iron ingot
+        - 12 of gold ingot
+        - 1 of diamond
+        - 6 of emerald
+        - diamond boots
+        - diamond helmet
+        - diamond sword
+        - custom:zombie_brain
+        rare_drops:
+        - custom:gold_tooth
+        - 5 of diamond
+        - diamond leggings
+        - diamond sword
+        drop_amount: 3
+        dracula_key_chance: 30
+    tier_2:
+        health: 100
+        skill_power_multiplier: 1.5
+        weapon: diamond sword of sharpness 1
+        chestplate: iron chestplate chestplate of projectile protection 4 and protection 2
+        leggings: leather leggings of projectile protection 4 and protection 2
+        boots: iron boots of projectile protection 4 and protection 2 and depth strider 5
+        drops:
+        - 5 of golden apple
+        - 32 of iron ingot
+        - 24 of gold ingot
+        - 2 of diamond
+        - 12 of emerald
+        - diamond boots of protection 2
+        - diamond helmet of protection 2
+        - diamond sword of sharpness 2
+        - custom:zombie_brain
+        rare_drops:
+        - custom:gold_tooth
+        - 10 of diamond
+        - diamond leggings of protection 4
+        - diamond sword of sharpness 2
+        drop_amount: 4
+        dracula_key_chance: 60
+    tier_3:
+        health: 150
+        skill_power_multiplier: 2
+        weapon: netherite sword of sharpness 3
+        chestplate: diamond chestplate of projectile protection 4 and protection 4
+        leggings: leather leggings of projectile protection 4 and protection 4
+        boots: diamond boots of projectile protection 4 and protection 4 and depth strider 5
+        drops:
+        - 7 of golden apple
+        - 7 of iron block
+        - 5 of gold block
+        - 4 of diamond
+        - 2 of emerald block
+        - diamond boots of protection 4
+        - diamond helmet of protection 4
+        - diamond sword of sharpness 4
+        - custom:zombie_brain
+        rare_drops:
+        - custom:blood_vial
+        - 15 of diamond
+        - diamond chestplate of protection 4
+        - diamond sword of sharpness 5
+        drop_amount: 5
+        dracula_key_chance: 100
+
+desert_outcast:
+    enabled: true
+    spawn_chance: 4
+    spawn_cooldown: 900
+    tier_1:
+        health: 70
+        skill_power_multiplier: 1
+        weapon: iron sword of knockback 1
+        chestplate: leather chestplate of projectile protection 4
+        leggings: iron leggings of projectile protection 4
+        boots: leather boots of projectile protection 4 and depth strider 5
+        drops:
+        - 6 of cooked beef
+        - 24 of gold ingot
+        - 12 of iron ingot
+        - 2 of diamond
+        - 8 of emerald
+        - diamond boots
+        - diamond helmet
+        - diamond sword
+        - custom:zombie_brain
+        - custom:skeleton_skull
+        - custom:spider_venom
+        rare_drops:
+        - custom:sunstone_ring
+        - 5 of diamond
+        - diamond leggings
+        - diamond sword
+        drop_amount: 3
+        desert_key_chance: 30
+    tier_2:
+        health: 120
+        skill_power_multiplier: 1.5
+        weapon: diamond sword of sharpness 2 and knockback 1
+        chestplate: leather chestplate of projectile protection 4
+        leggings: diamond leggings of projectile protection 4
+        boots: leather boots of projectile protection 4 and depth strider 5
+        drops:
+        - 12 of cooked beef
+        - 48 of gold ingot
+        - 24 of iron ingot
+        - 4 of diamond
+        - 16 of emerald
+        - diamond chestplate
+        - diamond leggings
+        - diamond sword of sharpness 2
+        - custom:zombie_brain
+        - custom:skeleton_skull
+        - custom:spider_venom
+        rare_drops:
+        - custom:sunstone_ring
+        - 10 of diamond
+        - diamond chestplate of protection 3
+        - diamond sword of sharpness 3
+        drop_amount: 4
+        desert_key_chance: 60
+    tier_3:
+        health: 200
+        skill_power_multiplier: 2
+        weapon: netherite sword of sharpness 4 and knockback 2
+        chestplate: leather chestplate of projectile protection 4
+        leggings: netherite leggings of projectile protection 4
+        boots: leather boots of projectile protection 4 and depth strider 5
+        drops:
+        - 24 of cooked beef
+        - 9 of gold block
+        - 3 of iron block
+        - 6 of diamond
+        - 3 of emerald block
+        - diamond chestplate of protection 3
+        - diamond leggings of protection 3
+        - diamond sword of sharpness 4
+        - custom:zombie_brain
+        - custom:skeleton_skull
+        - custom:spider_venom
+        rare_drops:
+        - custom:zephyr_veil
+        - 15 of diamond
+        - diamond chestplate of protection 4
+        - diamond sword of sharpness 5
+        drop_amount: 5
+        desert_key_chance: 100
+
+golem:
+    enabled: true
+    spawn_chance: 4
+    spawn_cooldown: 900
+    tier_1:
+        health: 100
+        strength: 0
+        skill_power_multiplier: 1
+        helmet: leather helmet of projectile protection 4
+        chestplate: leather chestplate of projectile protection 4
+        leggings: leather leggings of projectile protection 4
+        boots: leather boots of projectile protection 4 and depth strider 5
+        drops:
+        - 3 of iron blocks
+        - 1 of diamond
+        - 10 of emerald
+        - diamond leggings
+        - diamond helmet
+        - diamond sword
+        - shield of unbreaking 1
+        - 1 of golden apple
+        - 10 of bread
+        rare_drops:
+        - custom:jungle_amulet
+        - 5 of diamond
+        - diamond leggings
+        - diamond axe
+        drop_amount: 3
+    tier_2:
+        health: 150
+        strength: 1
+        skill_power_multiplier: 1.5
+        helmet: leather helmet of projectile protection 4
+        chestplate: leather chestplate of projectile protection 4
+        leggings: leather leggings of projectile protection 4
+        boots: leather boots of projectile protection 4 and depth strider 5
+        drops:
+        - 6 of iron blocks
+        - 2 of diamond
+        - 20 of emerald
+        - diamond leggings of protection 2
+        - diamond helmet of protection 2
+        - diamond sword of sharpness 2
+        - shield of unbreaking 2
+        - 2 of golden apple
+        - 20 of bread
+        rare_drops:
+        - custom:jungle_amulet
+        - 10 of diamond
+        - diamond chestplate of protection 3
+        - diamond axe of efficiency 5
+        drop_amount: 4
+    tier_3:
+        health: 250
+        strength: 2
+        skill_power_multiplier: 2
+        helmet: leather helmet of projectile protection 4
+        chestplate: leather chestplate of projectile protection 4
+        leggings: leather leggings of projectile protection 4
+        boots: leather boots of projectile protection 4 and depth strider 5
+        drops:
+        - 10 of iron blocks
+        - 3 of diamond
+        - 40 of emerald
+        - diamond leggings of protection 4
+        - diamond helmet of protection 4
+        - diamond sword of sharpness 4
+        - shield of unbreaking 3
+        - 4 of golden apple
+        - 40 of bread
+        rare_drops:
+        - custom:golem_heart
+        - 15 of diamond
+        - diamond chestplate of protection 4
+        - diamond axe of efficiency 5 and sharpness 5
+        drop_amount: 5

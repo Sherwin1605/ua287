@@ -4,7 +4,6 @@
 
 SkeletonKingSword:
   Id: DIAMOND_SWORD
-  Data: 0
   Display: '&3Greatsword of the Skeleton King'
   Lore:
   - '&6A powerful sword used by'
@@ -19,8 +18,6 @@ SkeletonKingSword:
       MovementSpeed: 0.1
 KingsCrown:
   Id: GOLDEN_HELMET
-  Data: 0
-  Amount: 1
   Display: '&dCrown of the King'
   Lore:
   - '&6A kingly crowl that grants'

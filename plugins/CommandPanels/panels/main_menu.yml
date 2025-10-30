@@ -1,0 +1,513 @@
+panels:
+  main_menu:
+    perm: default
+    rows: 6
+    title: '&f'
+    commands:
+    - menu
+    - main_menu
+    - help_menu
+    - server_menu
+    - servermenu
+    empty: AIR
+    sound-on-open: BLOCK_NOTE_BLOCK_HAT
+    open-with-item:
+      material: STICK
+      customdata: 311
+      name: '%color_menu_primary%Server Menu'
+      enchanted: true
+      lore:
+      - ' '
+      - '%color_accent_color%&lClick to open!'
+      stationary: 8
+      commands:
+      - open= main_menu
+    item:
+
+      
+
+      '0':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%☠ Dungeons'
+        commands:
+        - open= dungeons
+      '1':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%☠ Dungeons'
+        commands:
+        - open= dungeons
+      '2':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%☠ Dungeons'
+        commands:
+        - open= dungeons
+      '9':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%☠ Dungeons'
+        commands:
+        - open= dungeons
+      '10':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%☠ Dungeons'
+        commands:
+        - open= dungeons
+      '11':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%☠ Dungeons'
+        commands:
+        - open= dungeons
+      
+      
+      
+      
+      '3':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%🏹 Guilds'
+        commands:
+        - open= reputation
+      '4':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%🏹 Guilds'
+        commands:
+        - open= reputation
+      '5':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%🏹 Guilds'
+        commands:
+        - open= reputation
+      '12':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%🏹 Guilds'
+        commands:
+        - open= reputation
+      '13':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%🏹 Guilds'
+        commands:
+        - open= reputation
+      '14':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%🏹 Guilds'
+        commands:
+        - open= reputation
+
+
+
+
+
+
+
+      '6':
+        material: STICK
+        customdata: 100
+        stack: 1
+        name: '%color_menu_primary%🔥 Ancient Traveler'
+        commands:
+          - open= ancient_traveler
+      '7':
+        material: STICK
+        customdata: 100
+        stack: 1
+        name: '%color_menu_primary%🔥 Ancient Traveler'
+        commands:
+          - open= ancient_traveler
+      '8':
+        material: STICK
+        customdata: 100
+        stack: 1
+        name: '%color_menu_primary%🔥 Ancient Traveler'
+        commands:
+          - open= ancient_traveler
+      '15':
+        material: STICK
+        customdata: 100
+        stack: 1
+        name: '%color_menu_primary%🔥 Ancient Traveler'
+        commands:
+          - open= ancient_traveler
+      '16':
+        material: STICK
+        customdata: 100
+        stack: 1
+        name: '%color_menu_primary%🔥 Ancient Traveler'
+        commands:
+          - open= ancient_traveler
+      '17':
+        material: STICK
+        customdata: 100
+        stack: 1
+        name: '%color_menu_primary%🔥 Ancient Traveler'
+        commands:
+          - open= ancient_traveler
+
+
+      
+      
+      
+
+
+
+
+
+      '18':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%✉ Story'
+        commands:
+        - open= quests_1
+      '19':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%✉ Story'
+        commands:
+        - open= quests_1
+      '20':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%✉ Story'
+        commands:
+        - open= quests_1
+      '27':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%✉ Story'
+        commands:
+        - open= quests_1
+      '28':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%✉ Story'
+        commands:
+        - open= quests_1
+      '29':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%✉ Story'
+        commands:
+        - open= quests_1
+      '36':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%✉ Story'
+        commands:
+        - open= quests_1
+      '37':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%✉ Story'
+        commands:
+        - open= quests_1
+      '38':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%✉ Story'
+        commands:
+        - open= quests_1
+
+
+      
+      
+      
+      
+      
+      '21':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%🗡 Gear'
+        commands:
+        - gear
+      '22':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%🗡 Gear'
+        commands:
+        - gear
+      '23':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%🗡 Gear'
+        commands:
+        - gear
+      '30':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%🗡 Gear'
+        commands:
+        - gear
+      '31':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%🗡 Gear'
+        commands:
+        - gear
+      '32':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%🗡 Gear'
+        commands:
+        - gear
+      '39':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%🗡 Gear'
+        commands:
+        - gear
+      '40':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%🗡 Gear'
+        commands:
+        - gear
+      '41':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%🗡 Gear'
+        commands:
+        - gear
+
+
+
+
+
+
+
+
+
+
+
+      
+      
+      '24':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%🛡 The Forge'
+        commands:
+        - open= forge
+      '25':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%🛡 The Forge'
+        commands:
+        - open= forge
+      '26':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%🛡 The Forge'
+        commands:
+        - open= forge
+      '33':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%🛡 The Forge'
+        commands:
+        - open= forge
+      '34':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%🛡 The Forge'
+        commands:
+        - open= forge
+      '35':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%🛡 The Forge'
+        commands:
+        - open= forge
+      '42':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%🛡 The Forge'
+        commands:
+        - open= forge
+      '43':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%🛡 The Forge'
+        commands:
+        - open= forge
+      '44':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%🛡 The Forge'
+        commands:
+        - open= forge
+      
+      
+      
+      
+      
+
+
+
+
+
+
+
+
+
+
+      
+      
+      '45':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%⛏ Kits Menu'
+        commands:
+        - open= kits
+        has3:
+          value0: '%cp-player-name% HASPERM'
+          compare0: 'essentials.kits.player AND'
+          value1: '%essentials_kit_is_available_player%'
+          compare1: 'yes'
+          material: STICK
+          customdata: 100
+          name: '%color_menu_primary%⛏ Kits Menu'
+          lore:
+          - ''
+          - '&f⛏ Player Kit %color_accent_color%is available!'
+          commands:
+          - open= kits
+        has2:
+          value0: '%cp-player-name% HASPERM'
+          compare0: 'essentials.kits.knight AND'
+          value1: '%essentials_kit_is_available_knight%'
+          compare1: 'yes'
+          material: STICK
+          customdata: 100
+          name: '%color_menu_primary%⛏ Kits Menu'
+          lore:
+          - ''
+          - '%color_knight%☆ Knight Kit %color_accent_color%is available!'
+          commands:
+          - open= kits
+        has1:
+          value0: '%cp-player-name% HASPERM'
+          compare0: 'essentials.kits.hero AND'
+          value1: '%essentials_kit_is_available_hero%'
+          compare1: 'yes'
+          material: STICK
+          customdata: 100
+          name: '%color_menu_primary%⛏ Kits Menu'
+          lore:
+          - ''
+          - '%color_hero%⯪ Hero Kit %color_accent_color%is available!'
+          commands:
+          - open= kits
+        has0:
+          value0: '%cp-player-name% HASPERM'
+          compare0: 'essentials.kits.legend AND'
+          value1: '%essentials_kit_is_available_legend%'
+          compare1: 'yes'
+          material: STICK
+          customdata: 100
+          name: '%color_menu_primary%⛏ Kits Menu'
+          lore:
+          - ''
+          - '%color_legend%★ Legend Kit %color_accent_color%is available!'
+          commands:
+          - open= kits
+      
+      
+      '46':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%⛨ Daily Rewards'
+        commands:
+        - open= daily_rewards
+        has0:
+          value0: '%valiant_dailyrewards_canclaim%'
+          compare0: 'true'
+          material: STICK
+          customdata: 100
+          name: '%color_menu_primary%⛨ Daily Rewards'
+          lore:
+          - ''
+          - '%color_accent_color%▶ You have unclaimed Daily Reward!'
+          commands:
+          - open= daily_rewards
+      
+      '47':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%🪣 Badges'
+        commands:
+        - open= badges_menu_1
+        has0:
+          value0: '%valiant_badges_rewardavailable%'
+          compare0: 'true'
+          material: STICK
+          customdata: 100
+          name: '%color_menu_primary%🪣 Badges'
+          lore:
+          - ''
+          - '%color_accent_color%▶ You have unclaimed rewards!'
+          commands:
+          - open= badges_menu_1
+      
+      '48':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%🧪 Skills'
+        commands:
+          - sound= BLOCK_NOTE_BLOCK_HAT
+          - skills
+      
+      '49':
+        material: STICK
+        customdata: 100
+        stack: 1
+        name: '%color_menu_primary%🪣 Sell Items'
+        commands:
+          - open= sell_menu_mining
+      '50':
+        material: STICK
+        customdata: 100
+        stack: 1
+        name: '%color_menu_primary%🪣 Buy Items'
+        commands:
+          - open= buy_menu_combat
+      
+      '51':
+        material: STICK
+        customdata: 100
+        stack: 1
+        name: '%color_menu_primary%☆ Auction House'
+        commands:
+          - pa
+          - sound= BLOCK_NOTE_BLOCK_BELL 0.8 0.7
+      
+      '52':
+        material: STICK
+        customdata: 100
+        stack: 1
+        name: '%color_menu_primary%☆ Premium Store'
+        commands:
+        - open= premium_store
+
+      '53':
+        material: STICK
+        customdata: 100
+        name: '%color_menu_primary%⭐ Your Profile'
+        commands:
+            - open= profile_menu
+      
+
+
+
+
+
+
+
+

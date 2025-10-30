@@ -1,0 +1,187 @@
+# Please DO NOT change version number!
+version: 1
+
+dungeon_1:
+    '1':
+        chest_common_loot:
+        - 10 of iron ingot
+        - 8 of lapis lazuli
+        - 4 of bread
+        - 5 of apple
+        - 10 of gunpowder
+        - 9 of string
+        - 4 of slime ball
+        - 8 of bone
+        - custom:zombie_brain
+        - custom:skeleton_skull
+        - custom_spider_venom
+        chest_rare_loot:
+        - 2 of diamond
+        - 5 of emerald
+        - diamond sword
+        chest_common_amount: 5
+        chest_rare_amount: 1
+        chest_respawn_delay: 300
+    '2':
+        chest_common_loot:
+        - 12 of iron ingot
+        - 10 of lapis lazuli
+        - 5 of bread
+        - 7 of apple
+        - 15 of gunpowder
+        - 14 of string
+        - 6 of slime ball
+        - 14 of bone
+        - custom:zombie_brain
+        - custom:skeleton_skull
+        - custom_spider_venom
+        chest_rare_loot:
+        - 2 of diamond
+        - 7 of emerald
+        - diamond sword
+        - diamond pickaxe
+        chest_common_amount: 5
+        chest_rare_amount: 1
+        chest_respawn_delay: 300
+    '3':
+        chest_common_loot:
+        - 14 of iron ingot
+        - 12 of lapis lazuli
+        - 6 of bread
+        - 10 of apple
+        - 20 of gunpowder
+        - 21 of string
+        - 10 of slime ball
+        - 20 of bone
+        - custom:zombie_brain
+        - custom:skeleton_skull
+        - custom_spider_venom
+        chest_rare_loot:
+        - 3 of diamond
+        - 12 of emerald
+        - diamond sword
+        - diamond pickaxe
+        - diamond chestplate
+        chest_common_amount: 5
+        chest_rare_amount: 1
+        chest_respawn_delay: 300
+
+dungeon_2:
+    '1':
+        chest_common_loot:
+        - 6 of bread
+        - 10 of apple
+        - 20 of gunpowder
+        - 21 of string
+        - 10 of slime ball
+        - 26 of bone
+        - custom:zombie_brain
+        - custom:skeleton_skull
+        - custom_spider_venom
+        chest_rare_loot:
+        - 4 of diamond
+        - 12 of emerald
+        - diamond pickaxe
+        - diamond chestplate
+        - diamond leggings
+        chest_common_amount: 5
+        chest_rare_amount: 1
+        chest_respawn_delay: 300
+    '2':
+        chest_common_loot:
+        - 8 of bread
+        - 12 of apple
+        - 24 of gunpowder
+        - 24 of string
+        - 12 of slime ball
+        - 42 of bone
+        - custom:zombie_brain
+        - custom:skeleton_skull
+        - custom_spider_venom
+        chest_rare_loot:
+        - 4 of diamond
+        - 16 of emerald
+        - diamond axe
+        - diamond chestplate
+        - diamond leggings
+        - diamond boots
+        chest_common_amount: 5
+        chest_rare_amount: 1
+        chest_respawn_delay: 300
+    '3':
+        chest_common_loot:
+        - 12 of bread
+        - 16 of apple
+        - 32 of gunpowder
+        - 32 of string
+        - 15 of slime ball
+        - 58 of bone
+        - custom:zombie_brain
+        - custom:skeleton_skull
+        - custom_spider_venom
+        chest_rare_loot:
+        - 5 of diamond
+        - 16 of emerald
+        - diamond helmet
+        - diamond chestplate
+        - diamond leggings
+        - diamond boots
+        chest_common_amount: 5
+        chest_rare_amount: 1
+        chest_respawn_delay: 300
+
+dungeon_3:
+    '1':
+        chest_common_loot:
+        - 25 of gold ingot
+        - golden apple
+        - 5 of cooked beef
+        - custom:zombie_brain
+        - custom:skeleton_skull
+        - custom_spider_venom
+        chest_rare_loot:
+        - 5 of diamond
+        - 20 of emerald
+        - diamond helmet
+        - diamond chestplate
+        - diamond leggings
+        - diamond boots
+        chest_common_amount: 5
+        chest_rare_amount: 1
+        chest_respawn_delay: 300
+    '2':
+        chest_common_loot:
+        - 32 of gold ingot
+        - 2 of golden apple
+        - 7 of cooked beef
+        - custom:zombie_brain
+        - custom:skeleton_skull
+        - custom_spider_venom
+        chest_rare_loot:
+        - 5 of diamond
+        - 24 of emerald
+        - diamond helmet
+        - diamond chestplate
+        - diamond leggings
+        - diamond boots
+        chest_common_amount: 5
+        chest_rare_amount: 1
+        chest_respawn_delay: 300
+    '3':
+        chest_common_loot:
+        - 40 of gold ingot
+        - 3 of golden apple
+        - 10 of cooked beef
+        - custom:zombie_brain
+        - custom:skeleton_skull
+        - custom_spider_venom
+        chest_rare_loot:
+        - 6 of diamond
+        - 30 of emerald
+        - diamond helmet
+        - diamond chestplate
+        - diamond leggings
+        - diamond boots
+        chest_common_amount: 5
+        chest_rare_amount: 1
+        chest_respawn_delay: 300

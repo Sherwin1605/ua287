@@ -1,0 +1,294 @@
+function capitalize(text: text) :: text:
+
+	set {_char} to the first character of {_text}
+	set {_char} to {letters::uppercase::%{_char}%}
+
+	set {_remaining} to ""
+	set {_remaining} to the last (length of {_text} - 1) characters of {_text}
+	if {_remaining} is set:
+		return "%{_char}%%{_remaining}%"
+	else:
+		return "%{_char}%"
+
+function SpawnParticles(particle: string, loc: location, count: int):
+	if {_particle} is "crit":
+		draw {_count} crit at {_loc} with offset vector(0, 0, 0) with extra 1
+	if {_particle} is "totem":
+		draw {_count} totem of undying at {_loc} with offset vector(0, 0, 0) with extra 1
+	if {_particle} is "happy villager":
+		draw {_count} happy villager at {_loc} with offset vector(1, 1, 1) with extra 0
+
+function GetTime(type: string) :: string:
+	set {_now} to now formatted with "dd.MM.yyyy hh:mm"
+
+	if {_type} contains "day":
+		set {_time} to first 2 characters of {_now}
+	if {_type} contains "month":
+		set {_time} to first 5 characters of {_now}
+		set {_time} to last 2 characters of {_time}
+	if {_type} contains "year":
+		set {_time} to first 10 characters of {_now}
+		set {_time} to last 4 characters of {_time}
+
+	if {_type} contains "minute":
+		set {_time} to last 2 characters of {_now}
+	if {_type} contains "hour":
+		set {_time} to last 5 characters of {_now}
+		set {_time} to first 2 characters of {_time}
+
+	return {_time}
+
+function Time(string: string) :: timespan:
+	return {_string} parsed as timespan
+
+function roundTime(timeString: string) :: string:
+	set {_timeString::*} to {_timeString} split at " "
+	loop {_timeString::*}:
+		if "%loop-value parsed as a number%" is not "<none>":
+			replace "%loop-value%" in {_timeString} with "%rounded (loop-value parsed as number)%"
+	return {_timeString}
+
+
+function shortenTime(time: string) :: string:
+	replace all "and " with "" in {_time}
+	replace all "seconds" with "sec." in {_time}
+	replace all "minutes" with "m." in {_time}
+	replace all "hours" with "h." in {_time}
+	replace all "second" with "sec." in {_time}
+	replace all "minute" with "m." in {_time}
+	replace all "hour" with "h." in {_time}
+	return {_time}
+
+
+function RandomPos(loc: location, x1: number, x2: number, y1: number, y2: number, z1: number, z2: number) :: location:
+	add random number between {_x1} and {_x2} to x coordinate of {_loc}
+	add random number between {_y1} and {_y2} to y coordinate of {_loc}
+	add random number between {_z1} and {_z2} to z coordinate of {_loc}
+	return {_loc}
+
+# # Add Item Attribute
+# adds an attribute to an item and then returns it.
+# list of slot names, attributes and operations can be found here: https://minecraft.fandom.com/wiki/Attribute
+function AddItemAttribute(item: item, attribute: string, amount: number, operation: integer, slot: string) :: item:
+  set {_nbt} to (nbt compound of {_item})
+  set {_attributes::*} to (compound list tag "AttributeModifiers" of {_nbt})
+  set {_new.attribute} to (nbt compound from "{Slot:%{_slot}%, AttributeName:%{_attribute}%, Name:%{_attribute}%, Amount:%{_amount}%, Operation:%{_operation}%, UUID:[I; %RandomUUID()%]}")
+  add {_new.attribute} to {_attributes::*}
+  set (compound list tag "AttributeModifiers" of {_nbt}) to {_attributes::*}
+  return {_item}
+  
+# # Remove Item Attribute
+# removes the attribute of an item whether it is there or not and returns it.
+function RemoveItemAttribute(item: item, attribute: string) :: item:
+  set {_nbt} to (nbt compound of {_item})
+  set {_attributes::*} to (compound list tag "AttributeModifiers" of {_nbt})
+  loop {_attributes::*}:
+    if string tag "Name" of loop-value is {_attribute}:
+      delete {_attributes::%loop-index%}
+  set (compound list tag "AttributeModifiers" of {_nbt}) to {_attributes::*}
+  return {_item}
+
+# # Get Item Attribute
+# gets the 'amount' of an attribute on an item, if the item doesn't have that attribute, it returns <none>.
+function GetItemAttribute(item: item, attribute: string) :: object: # number doesn't work
+  set {_nbt} to (nbt compound of {_item})
+  set {_attributes::*} to (compound list tag "AttributeModifiers" of {_nbt})
+  loop {_attributes::*}:
+    if (string tag "Name" of loop-value) is {_attribute}:
+      set {_amount} to (int tag "Amount" of loop-value)
+      return {_amount}   
+
+# Meant for internal use, ignore it.
+function RandomUUID() :: string:
+  loop 4 times:
+    set {_uuid::%loop-value%} to "%a random integer between -500000 and 500000%"
+  return (join {_uuid::*} with ", ")
+
+
+
+function GetMessage(msg:: objects) :: objects:
+#		set {_msg::*} to colored {boosters::messages::%{_type}%_booster_message::*}
+	replace all "[" with "" in {_msg::*}
+	replace all "]" with "" in {_msg::*}
+#	loop {_msg::*}:
+#		send "%loop-value%" to all players
+	return {_msg::*}
+
+
+function GetItem(text_item: string) :: item:
+	if {_text_item} contains "custom:":
+		replace all "custom:" with "" in {_text_item}
+		set {_item} to {item::%{_text_item}%}
+		return {_item}
+	else:
+		if {_text_item} contains "unbreakable":
+			replace all "unbreakable " with "" in {_text_item}
+			set {_item} to {_text_item} parsed as item
+			set {_item} to unbreakable {_item}
+		else:
+			set {_item} to {_text_item} parsed as item
+		return {_item}
+
+function GetIngredientItem(item: string) :: item:
+	set {_nr} to -1
+	loop 10 times:
+		add 1 to {_nr}
+		replace all "%{_nr}%" in {_item} with ""
+	replace all " of " in {_item} with ""
+	set {_item} to GetItem({_item})
+	return {_item}
+
+function GetIngredientAmount(item: string) :: integer:
+	set {_amount} to 1
+	if {_item} contains " of ":
+		loop 100 times:
+			if {_item} contains "%loop-number% of ":
+				set {_amount} to loop-number
+	return {_amount}
+
+function GetRandomPlayer() :: player:
+	return random element out of all players
+
+function PlayerHasItem(player: player, ingredient: string) :: boolean:
+	set {_boolean} to false
+
+	set {_amount} to GetIngredientAmount({_ingredient})
+	set {_item} to GetIngredientItem({_ingredient})
+
+#	send "&b%{_amount}% &fof &a%{_item}%" to {_player}
+	loop all items in {_player}'s inventory:
+		if "%type of loop-item%" is "%type of {_item}%":
+			if "%custom model data of loop-item%" is "%custom model data of {_item}%":
+				if item amount of loop-item >= {_amount}:
+					set {_boolean} to true
+	return {_boolean}
+
+on load:
+	MotdReload()
+	set {players::*} to all players
+
+on script load:
+	set {_letters} to "Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz"
+	set {_letter-pairs::*} to {_letters} split at " "
+	loop {_letter-pairs::*}:
+		set {_pair::*} to loop-value split at ""
+ 
+		set {_uppercase} to {_pair::1}
+		set {_lowercase} to {_pair::2}
+
+		set {letters::uppercase::%{_lowercase}%} to {_uppercase}
+		set {letters::lowercase::%{_uppercase}%} to {_lowercase}
+ 
+on script unload:
+	delete {letters::*}
+
+on first join:
+	wait 1 second
+#	kick player due to "&aFirst-time verification passed! Please join again!"
+	kick player due to "&aPlease join again!"
+
+on join:
+	if "%region at player%" contains "dungeon":
+		execute console command "mv tp %player% spawn"
+		set metadata value "dungeons_was_in_dungeon" of player to true
+	set metadata value "can_teleport" of player to false
+	set {players::*} to all players
+	draw 15 cloud at location 1 meter above player with offset vector(0, 0, 0) with extra 0.3
+	play sound "entity.chicken.egg" with volume 1 and pitch 1 at player
+	set metadata value "dungeons_preview_spawns" of player to false
+	remove blindness from player
+	send title " " with subtitle " " to player for 1 second
+	ServerConnectJingle(player)
+
+on quit:
+	draw 10 cloud at location 1 meter above player with offset vector(0, 0, 0) with extra 0.2
+	play sound "entity.chicken.egg" with volume 1 and pitch 2 at player
+	KillBacktool(player)
+	wait 2 tick
+	set {players::*} to all players
+	KillBacktool(player)
+
+
+
+
+
+function ServerConnectJingle(player: player):
+	loop 15 times:
+		wait 1 second
+		if {_player} has resource pack:
+			wait 2 second
+
+			#	Display visitors count
+			if {server::test_server} is true:
+				execute console command "displayvisitorcount %{_player}%"
+
+			if metadata value "dungeons_was_in_dungeon" of {_player} is not true:
+				play sound "custom.server_connect_2" with volume 0.4 and pitch 1 to {_player}
+			if metadata value "dungeons_was_in_dungeon" of {_player} is true:
+				set metadata value "dungeons_was_in_dungeon" of {_player} to false
+				wait 2 seconds
+				send " " to {_player}
+				send "&cLast time you have logged out in a Dungeon!" to {_player}
+				send "&fFor your own safety, we have teleported you back to spawn." to {_player}
+				wait 10 ticks
+				play sound "minecraft:block.note_block.guitar" with volume 1 and pitch 0.9 to {_player}
+				wait 4 ticks
+				play sound "minecraft:block.note_block.guitar" with volume 1 and pitch 0.7 to {_player}
+				wait 4 ticks
+				play sound "minecraft:block.note_block.guitar" with volume 1 and pitch 0.5 to {_player}
+	
+			exit loop
+
+
+
+
+
+
+command /spawn:
+	permission: core.spawn
+	trigger:
+		PerformSpawnTeleport(player)
+		
+
+
+
+
+
+on tab complete:
+	if event-string contains "/ver":
+		if player doesn't have permission "admin":
+			cancel event
+
+
+#	Server MOTD
+
+on server list ping:
+	if {motd::enabled} is true:
+		set {_text} to "%{motd::line::1}% %nl% %{motd::line::2}%"
+		set the motd to {_text}
+#		set the motd to "%{motd::line::1}% %nl% %{motd::line::2}%"
+
+function MotdReload():
+	load yaml "unlimited_adventures/AdventureCore/motd.yml" as "motd"
+
+	if yaml value "motd_line.1" from "motd" is not set:
+		wait 1 tick
+		MotdCreateConfig()
+
+	set {motd::enabled} to yaml value "enabled" from "motd"
+	set {motd::line::1} to yaml value "motd_line.1" from "motd"
+	set {motd::line::2} to yaml value "motd_line.2" from "motd"
+	save yaml "motd"
+
+function MotdCreateConfig():
+	load yaml "unlimited_adventures/AdventureCore/motd.yml" as "motd"
+	set yaml value "enabled" from "motd" to true
+	set yaml value "motd_line.1" from "motd" to "            §x&6&d&d&4&4&4&lUNLIMITED ADVENTURES &f[§x&a&c&e&6&7&31.20.4&f]"
+	set yaml value "motd_line.2" from "motd" to "   §x&f&f&c&8&0&0⭐ Ambient Sounds §x&9&0&e&3&4&e🪣 3D Backpacks §x&f&7&4&1&5&4☠ §x&f&7&4&1&5&4Dungeons"
+	save yaml "motd"
+
+command /motdreload:
+	permission: admin
+	trigger:
+		MotdReload()
+		send "&aServer MOTD reloaded!" to sender

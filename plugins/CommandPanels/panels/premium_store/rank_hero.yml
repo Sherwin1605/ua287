@@ -1,0 +1,198 @@
+
+panels:
+  rank_hero:
+    perm: default
+    rows: 5
+    title: '&f%valiant_rank_hero_font%'
+    commands:
+    - herorank
+    - rankhero
+    empty: AIR
+    sound-on-open: BLOCK_NOTE_BLOCK_HAT
+    item:
+      
+      
+      '0':
+        material: STICK
+        customdata: 1
+        name: '&c← Previous Menu'
+        commands:
+        - open= premium_store
+      
+
+      '8':
+        material: STICK
+        customdata: 11
+        name: '%color_hero%&lHero &7[LIFETIME]'
+        lore:
+        - '&8LIFETIME RANK'
+        - ''
+        - '&7Hero rank has been created to'
+        - '&7give a proper reward to our most'
+        - '&7generous community members.'
+        
+      '40':
+        material: STICK
+        customdata: 100
+        name: '&6&lBuy the Rank!'
+        lore:
+        - ''
+        - '&7You can purchase this rank in'
+        - '&7order to support the server!'
+        - ''
+        - '&fPrice: %color_gems%1850 Gems &f'
+        - ''
+        - '&cNOT ENOUGH GEMS'
+        - '%color_menu_purchase%&lClick to buy more!'
+        commands:
+        - open= premium_store
+        has1:        
+          value0: '%valiant_premium_currency% ISGREATER'
+          compare0: '1850'
+          material: STICK
+          customdata: 100
+          name: '&6&lBuy the Rank!'
+          lore:
+          - ''
+          - '&7You can purchase this rank in'
+          - '&7order to support the server!'
+          - ''
+          - '&fPrice: %color_gems%1850 Gems &f'
+          - ''
+          - '%color_menu_purchase%&lClick to purchase!'
+          commands:
+          - set-data= item_name hero_rank %cp-player-name%
+          - set-data= item_price 1850 %cp-player-name%
+          - open= premium_store_confirm
+        has0:
+          value0: '%cp-player-name% HASPERM'
+          compare0: 'weight.2'
+          material: STICK
+          customdata: 100
+          name: '&6&lRank Purchased'
+          lore:
+          - ''
+          - '&7You have already purchased'
+          - '&7this rank. Thank You!'
+          - ''
+          - '&8Price: 1850 Gems '
+          - ''
+          - '%color_menu_unlocked%&lPurchased'
+
+
+
+
+
+      '12':
+        material: STICK
+        customdata: 100
+        name: '%color_hero%Hero Visual Pack'
+        lore:
+        - ''
+        - '&f• &7Unique Prefix: &f'
+        - '&f• &7Nickname Colour: &eGold'
+        - '&f• &7Outstanding &fwhite &7chat colour'
+        - ''
+        - '&7Your prefix & nickname &7will be visible on:'
+        - '&fChat&7, &fTablist &7& &fIn-Game &7(above your head)'
+
+      
+      '13':
+        material: STICK
+        customdata: 100
+        name: '%color_hero%Hero Kit'
+        lore:
+        - ''
+        - '&7A high-quality equipement set'
+        - '&7prepared for a true hero.'
+        - ''
+        - '&7Contents:'
+        - '&7• %color_hero%Diamond Tools'
+        - '&7• %color_hero%Iron Armor'
+        - '&7• %color_hero%x16 Fireworks'
+        - '&7• %color_hero%x32 Arrows'
+        - '&7• %color_hero%x8 Steaks'
+        - ''
+        - '&e⌚ &7You can claim this kit every 9 hours.'
+      
+      '14':
+        material: STICK
+        customdata: 100
+        name: '&aFlight on Spawn'
+        lore:
+        - ''
+        - '&7Raise up above the ground to'
+        - '&7admire the spawn and have a'
+        - '&7better look at all the players!'
+        
+      '21':
+        material: STICK
+        customdata: 100
+        name: '&aPortable Crafting Table'
+        lore:
+        - ''
+        - '&7Execute &f/craft &7to open a portable'
+        - '&7crafting table wherever you are!'
+
+      '22':
+        material: STICK
+        customdata: 100
+        name: '&aPortable Anvil'
+        lore:
+        - ''
+        - '&7Execute &f/anvil &7to open'
+        - '&7the portable anvil menu.'
+
+      '23':
+        material: STICK
+        customdata: 100
+        name: '&aPersonal Settings'
+        lore:
+        - ''
+        - '&7Access additional settings to get more'
+        - '&7control over your server experience.'
+        - ''
+        - '&7• &f/autotool &7- toggles auto tool'
+        - '&7• &f/lumberjack &7- toggles tree physics'
+        - ''
+        - '&7You can toggle your settings'
+        - '&7in the &9&lYour Profile &7menu.'
+
+      
+      
+      '30':
+        material: STICK
+        customdata: 100
+        name: '&aPortable Trash Can'
+        lore:
+        - ''
+        - '&7Execute &f/disposal &7to open a'
+        - '&7portable trash can and get rid'
+        - '&7of unnecessary items quickly!'
+
+
+      
+      '31':
+        material: STICK
+        customdata: 100
+        name: '&aPortable Grindstone'
+        lore:
+        - ''
+        - '&7Execute &f/grindstone &7to open'
+        - '&7the portable grindstone menu.'
+      
+      '32':
+        material: STICK
+        customdata: 100
+        name: '&aPortable Ender Chest'
+        lore:
+        - ''
+        - '&7Execute &f/enderchest &7to open'
+        - '&7your ender chest from any place!'
+      
+        
+        
+        
+        
+        
+      

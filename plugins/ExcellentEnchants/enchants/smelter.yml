@@ -20,19 +20,9 @@ Level:
   Max: 5
 Settings:
   # A chance that this enchantment will be triggered.
-  Trigger_Chance:
-    # Start modifier value.
-    Base: 0.0
-    # Additional value calculated by enchantment level step (see below). Formula: <per_level> * <step>
-    Per_Level: 0.0
-    # Defines level step for 'Per_Level' value calculation. Formula: <enchant_level> / <step>
-    Step: 1.0
-    # Sets a limit for the final (base & per level calculations) value.
-    # Set '-1' for no limit.
-    Cap: -1
-    # Sets action performed between 'Base' and final 'Per_Level' values.
-    # Available types: ADD, MULTIPLY
-    Action: ADD
+  # You can use formulas/expressions here: https://github.com/nulli0n/NexEngine-spigot/wiki/Configuration-Tips#scalable-sections
+  # Level placeholder: %enchantment_level%
+  Trigger_Chance: 25.0 + %enchantment_level% * 10
   # Table of Original -> Smelted items.
   # Syntax: 'Material Source : Material Result'.
   # Note: Material source is material name of the dropped item, not the broken block!
@@ -51,38 +41,9 @@ Settings:
     # Spigot Sounds: https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Sound.html
     Name: 'null'
     # Sound volume. From 0.0 to 1.0.
-    Volume: 0.8
+    Volume: 0.800000011920929
     # Sound speed. From 0.5 to 2.0
     Pitch: 1.0
-  # The rarity is an attribute of an enchantment.
-  # It affects the chance of getting an enchantment from enchanting or loots as well as the combination cost in anvil.
-  Rarity: UNCOMMON
-  # Enchantment name.
-  Name: Smelter
-  # Enchantment description.
-  # You can use 'Enchantment' placeholders: https://nightexpress.gitbook.io/excellentenchants/utility/placeholders
-  Description:
-  - Smelts mined blocks with %enchantment_trigger_chance%% chance.
-  Level:
-    # Min. enchantment level.
-    Min: 1
-    # Max. enchantment level.
-    Max: 5
-  # Sets whether or not this enchantment will be hidden from Enchants GUI.
-  Hide_From_List: false
-  # Makes this enchantment exclusive for ones in the list.
-  # Conflicting enchantments can not be combined on anvils and obtained together on the same item.
-  Conflicts:
-  - divine_touch
-  - silk_touch
-  VisualEffects:
-    # Enables enchantment visual effects (mostly particles).
-    Enabled: true
-  # Sets whether or not enchantment will have no effect when crouching.
-  Disable_On_Crouch: true
-  # List of blocks that are immune to smelter effect.
-  Exempted_Blocks:
-  - stone
 # Sets whether this enchantment is a treasure enchantment.
 # Treasure enchantments can only be received via looting, trading, or fishing.
 Is_Treasure: false
@@ -106,6 +67,9 @@ Anvil:
   # You can use formulas/expressions here: https://github.com/nulli0n/NexEngine-spigot/wiki/Configuration-Tips#scalable-sections
   # Level placeholder: %enchantment_level%
   Merge_Cost: '%enchantment_level%'
+  # Sets max. enchantment level that can be obtained by combining 2 items with this enchantment.
+  # Set this to '-1' to remove merge limit and just use 'Max Level' instead.
+  Max_Merge_Level: -1
 Villagers:
   # Chance for this enchantment to be obtained via Villagers
   Chance: 50.0
@@ -146,50 +110,5 @@ Mob_Spawning:
     # Maximal level when obtained via Mob_Spawning
     # Can not be greater than enchantment max. level. Set -1 to use enchantment max. level.
     Max: -1
-Distribution:
-  # Sets whether this enchantment is a treasure enchantment.
-  # Treasure enchantments can only be received via looting, trading, or fishing.
-  Treasure: false
-  Enchanting_Table:
-    # =============== Vanilla Distribution Mode ===============
-    # Sets min. **modified** level cost for this enchantment to be selected in enchanting table.
-    # Explanation: https://minecraft.wiki/w/Enchanting_mechanics#How_enchantments_are_chosen
-    # Vanilla costs: https://minecraft.wiki/w/Enchanting/Levels
-    # =============== Custom Distribution Mode ===============
-    # Sets min. **plain** level cost for this enchantment to be selected in enchanting table.
-    Min_Cost:
-      # Start modifier value.
-      Base: -8.0
-      # Additional value calculated by enchantment level step (see below). Formula: <per_level> * <step>
-      Per_Level: 8.0
-      # Defines level step for 'Per_Level' value calculation. Formula: <enchant_level> / <step>
-      Step: 1.0
-      # Sets a limit for the final (base & per level calculations) value.
-      # Set '-1' for no limit.
-      Cap: -1.0
-      # Sets action performed between 'Base' and final 'Per_Level' values.
-      # Available types: ADD, MULTIPLY
-      Action: ADD
-    # =============== Vanilla Distribution Mode ===============
-    # Sets max. **modified** level cost for this enchantment to be selected in enchanting table.
-    # Explanation: https://minecraft.wiki/w/Enchanting_mechanics#How_enchantments_are_chosen
-    # Vanilla costs: https://minecraft.wiki/w/Enchanting/Levels
-    # =============== Custom Distribution Mode ===============
-    # Sets max. **plain** level cost for this enchantment to be selected in enchanting table.
-    Max_Cost:
-      # Start modifier value.
-      Base: 7.0
-      # Additional value calculated by enchantment level step (see below). Formula: <per_level> * <step>
-      Per_Level: 9.0
-      # Defines level step for 'Per_Level' value calculation. Formula: <enchant_level> / <step>
-      Step: 1.0
-      # Sets a limit for the final (base & per level calculations) value.
-      # Set '-1' for no limit.
-      Cap: -1.0
-      # Sets action performed between 'Base' and final 'Per_Level' values.
-      # Available types: ADD, MULTIPLY
-      Action: ADD
-  # Sets whether or not this enchantment can be populated in villager trades.
-  Tradeable: true
-  # Sets whether or not this enchantment can be populated in enchanting table.
-  Discoverable: true
+# Sets whether or not this enchantment will be hidden from Enchants GUI.
+Hide_From_List: false

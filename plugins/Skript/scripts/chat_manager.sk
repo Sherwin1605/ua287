@@ -1,0 +1,28 @@
+
+
+
+
+
+
+command /clearchat:
+	aliases: cleanchat, cc
+	permission: admin.clearchat
+	trigger:
+		loop 100 times:
+			send " " to all players
+		send "&eChat has been cleared by &a%sender%" to all players
+		loop 4 times:
+			send " " to all players
+#		play sound "minecraft:item.spyglass.use" with volume 1 and pitch 2 to sender
+		play sound "minecraft:block.composter.ready" with volume 1 and pitch 2 to sender
+
+
+
+on death:
+	set death message to "☠ &c%death message%"
+
+
+
+
+
+

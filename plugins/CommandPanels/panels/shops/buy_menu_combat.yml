@@ -1,0 +1,228 @@
+panels:
+  buy_menu_combat:
+    perm: default
+    rows: 5
+    title: '&f'
+    commands:
+    - buymenu
+    - bmenu
+    empty: AIR
+    sound-on-open: BLOCK_NOTE_BLOCK_HAT
+    item:
+
+
+      '0':
+        material: STICK
+        customdata: 1
+        name: '&c← Previous Menu'
+        commands:
+        - open= main_menu
+      
+      '42':
+        material: STICK
+        customdata: 2
+        name: '&aNext Page →'
+        commands:
+        - open= buy_menu_food
+      
+      
+
+      
+      
+      
+      '10':
+        material: IRON_SWORD
+        name: '%color_menu_primary%Iron Sword'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7BUY &f&l1 &7FOR %color_gold%40 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to buy'
+        commands:
+        - buy= 40 IRON_SWORD 1
+      '11':
+        material: IRON_AXE
+        name: '%color_menu_primary%Iron Axe'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7BUY &f&l1 &7FOR %color_gold%60 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to buy'
+        commands:
+        - buy= 60 IRON_AXE 1
+      '12':
+        material: IRON_PICKAXE
+        name: '%color_menu_primary%Iron Pickaxe'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7BUY &f&l1 &7FOR %color_gold%60 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to buy'
+        commands:
+        - buy= 60 IRON_PICKAXE 1
+      '13':
+        material: IRON_HELMET
+        name: '%color_menu_primary%Iron Helmet'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7BUY &f&l1 &7FOR %color_gold%100 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to buy'
+        commands:
+        - buy= 100 IRON_HELMET 1
+      '14':
+        material: IRON_CHESTPLATE
+        name: '%color_menu_primary%Iron Chestplate'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7BUY &f&l1 &7FOR %color_gold%160 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to buy'
+        commands:
+        - buy= 160 IRON_CHESTPLATE 1
+      '15':
+        material: IRON_LEGGINGS
+        name: '%color_menu_primary%Iron Leggings'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7BUY &f&l1 &7FOR %color_gold%140 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to buy'
+        commands:
+        - buy= 140 IRON_LEGGINGS 1
+      '16':
+        material: IRON_BOOTS
+        name: '%color_menu_primary%Iron Boots'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7BUY &f&l1 &7FOR %color_gold%80 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to buy'
+        commands:
+        - buy= 80 IRON_BOOTS 1
+      
+      
+      
+      
+      
+      
+      '19':
+        material: DIAMOND_SWORD
+        name: '%color_menu_primary%Diamond Sword'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7BUY &f&l1 &7FOR %color_gold%800 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to buy'
+        commands:
+        - buy= 800 DIAMOND_SWORD 1
+      '20':
+        material: DIAMOND_AXE
+        name: '%color_menu_primary%Diamond Axe'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7BUY &f&l1 &7FOR %color_gold%1200 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to buy'
+        commands:
+        - buy= 1200 DIAMOND_AXE 1
+      '21':
+        material: DIAMOND_PICKAXE
+        name: '%color_menu_primary%Diamond Pickaxe'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7BUY &f&l1 &7FOR %color_gold%1200 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to buy'
+        commands:
+        - buy= 1200 DIAMOND_PICKAXE 1
+      '22':
+        material: DIAMOND_HELMET
+        name: '%color_menu_primary%Diamond Helmet'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7BUY &f&l1 &7FOR %color_gold%2000 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to buy'
+        commands:
+        - buy= 2000 DIAMOND_HELMET 1
+      '23':
+        material: DIAMOND_CHESTPLATE
+        name: '%color_menu_primary%Diamond Chestplate'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7BUY &f&l1 &7FOR %color_gold%3200 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to buy'
+        commands:
+        - buy= 3200 DIAMOND_CHESTPLATE 1
+      '24':
+        material: DIAMOND_LEGGINGS
+        name: '%color_menu_primary%Diamond Leggings'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7BUY &f&l1 &7FOR %color_gold%2800 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to buy'
+        commands:
+        - buy= 2800 DIAMOND_LEGGINGS 1
+      '25':
+        material: DIAMOND_BOOTS
+        name: '%color_menu_primary%Diamond Boots'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7BUY &f&l1 &7FOR %color_gold%1600 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to buy'
+        commands:
+        - buy= 1600 DIAMOND_BOOTS 1
+      
+      
+      
+      
+      
+      '28':
+        material: BOW
+        name: '%color_menu_primary%Bow'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7BUY &f&l1 &7FOR %color_gold%100 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to buy'
+        commands:
+        - buy= 100 BOW 1
+      '29':
+        material: CROSSBOW
+        name: '%color_menu_primary%Crossbow'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7BUY &f&l1 &7FOR %color_gold%120 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to buy'
+        commands:
+        - buy= 120 CROSSBOW 1
+      '30':
+        material: SHIELD
+        name: '%color_menu_primary%Shield'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7BUY &f&l1 &7FOR %color_gold%50 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to buy'
+        commands:
+        - buy= 50 SHIELD 1
+      '31':
+        material: ARROW
+        stack: 32
+        name: '%color_menu_primary%Arrows'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7BUY &f&l32 &7FOR %color_gold%60 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to buy'
+        commands:
+        - buy= 60 ARROW 32
+      
+      
+      
+

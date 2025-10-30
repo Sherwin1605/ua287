@@ -1,0 +1,334 @@
+Crate:
+  # Type of crate -> CSGO/QuadCrate/QuickCrate/Roulette/CrateOnTheGo/FireCracker/Wonder/Wheel/War
+
+    # Make sure to check out the wiki for anything not explained here.
+  # https://github.com/Crazy-Crew/Crazy-Crates/wiki
+
+    # See CosmicCrateExample.yml to see how the Cosmic CrateType works.
+  CrateType: FireCracker
+  # Name of the Inventory if a GUI crate.
+  CrateName: '#fed53b&lLegendary Crate'
+  # The name of the inventory that will be in the preview GUI.
+  Preview-Name: '&f'
+  # Starting amount of keys when the player 1st joins.
+  StartingKeys: 0
+  # Max amount of crates that can be opened at once using /cc max-open
+  Max-Mass-Open: 10
+  # If the crate shows in the /cc GUI.
+  # If the type is QuickCrate/CrateOnTheGo/FireCracker, They will not work as they require a Physical Crate.
+  InGUI: true
+  # Slot the item is in the GUI.
+  Slot: 25
+  # Enables/Disables the Broadcasts message when they open a crate.
+  OpeningBroadCast: true
+  # Message that is broadcast when opening the crate.
+  BroadCast: '%prefix%&6%player%&r &fis opening a #fed53b&lLegendary Crate&7.'
+  # Item the crate is in the GUI
+  Item: CHEST
+  # If the crate in the main /cc GUI is glowing or not.
+  Glowing: false
+  # Name of the item in the GUI.
+  Name: '#fed53b&lLegendary Crate'
+  # The lore of the item in the GUI.
+  Lore:
+  - ''
+  - '&7A chest found in the dark'
+  - '&7depths of a mysterious cave.'
+  - '&7Open it to discover what kind'
+  - '&7of valuables lay hidden inside.'
+  - ''
+  - '#fed53b▶ &fYour keys: #fed53b%Keys%'
+  - ''
+  - '&e&lLEFT-CLICK &6&lTO OPEN'
+  - '&e&lRIGHT-CLICK &6&lTO PREVIEW'
+  Preview:
+    # Turn on and off the preview for this crate.
+    Toggle: true
+    # How many lines the Crate Preview should have. Including Header and Bottom (Between 3 and 6)
+    ChestLines: 3
+    Glass:
+      # Turn the glass boarder in the preview on and off.
+      Toggle: false
+      # The name of the border item.
+      Name: ' '
+      # The item that shows in the boarder. Can be glass or any other item.
+      Item: YELLOW_STAINED_GLASS_PANE
+  PhysicalKey:
+    # Name of the Key.
+    Name: '#fed53b&lLegendary Crate &b&lKey'
+    # Lore of the Key.
+    Lore:
+    - '&7A special Key'
+    - '&7For a special Crate.'
+    # The item the key is.
+    Item: TRIPWIRE_HOOK
+    # Makes the key look enchanted.
+    Glowing: true
+  # Settings for the holograms.
+  Hologram:
+    # Toggle on and off the holograms for the crates.
+    Toggle: false
+    # The height of the hologram above the crate.
+    Height: 1.5
+    # The message that will be displayed.
+    Message:
+    - '&6&lLegendary Crate'
+  # All the prizes that can be gotten in the Crate.
+  Prizes:
+    '1':
+      DisplayName: '&6Legendary Sword'
+      DisplayItem: DIAMOND_SWORD
+      DisplayAmount: 1
+      Lore:
+      - '&7Sharpness IV'
+      - '&7Fire Aspect II'
+      - '&7Unbreaking III'
+      MaxRange: 100
+      Chance: 5
+      Editor-Items:
+      - ==: org.bukkit.inventory.ItemStack
+        v: 3105
+        type: DIAMOND_SWORD
+        meta:
+          ==: ItemMeta
+          display-name: '{"text":"§6Legendary Sword"}'
+          meta-type: UNSPECIFIC
+          enchants:
+            FIRE_ASPECT: 2
+            DAMAGE_ALL: 4
+            DURABILITY: 3
+    '2':
+      DisplayName: '&6Legendary Bow'
+      DisplayItem: BOW
+      DisplayAmount: 1
+      Lore:
+      - '&7Power IV'
+      - '&7Unbreaking III'
+      - '&7Flame'
+      - '&7Punch'
+      - '&7Infinity'
+      MaxRange: 100
+      Chance: 5
+      Editor-Items:
+      - ==: org.bukkit.inventory.ItemStack
+        v: 3105
+        type: BOW
+        meta:
+          ==: ItemMeta
+          display-name: '{"text":"§6Legendary Bow"}'
+          meta-type: UNSPECIFIC
+          enchants:
+            ARROW_FIRE: 1
+            ARROW_INFINITE: 1
+            ARROW_DAMAGE: 4
+            ARROW_KNOCKBACK: 1
+            DURABILITY: 3
+    '3':
+      DisplayName: '&6Legendary Chestplate'
+      DisplayItem: DIAMOND_CHESTPLATE
+      DisplayAmount: 1
+      Lore:
+      - '&7Protection III'
+      - '&7Unbreaking III'
+      MaxRange: 100
+      Chance: 10
+      Items:
+      Editor-Items:
+      - ==: org.bukkit.inventory.ItemStack
+        v: 3105
+        type: DIAMOND_CHESTPLATE
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"text":"§6Legendary Chestplate"}'
+          enchants:
+            PROTECTION_ENVIRONMENTAL: 3
+            DURABILITY: 3
+    '4':
+      DisplayName: '&6Legendary Leggings'
+      DisplayItem: DIAMOND_LEGGINGS
+      DisplayAmount: 1
+      Lore:
+      - '&7Protection III'
+      - '&7Unbreaking III'
+      MaxRange: 100
+      Chance: 10
+      Items:
+      Editor-Items:
+      - ==: org.bukkit.inventory.ItemStack
+        v: 3105
+        type: DIAMOND_LEGGINGS
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"text":"§6Legendary Leggings"}'
+          enchants:
+            PROTECTION_ENVIRONMENTAL: 3
+            DURABILITY: 3
+    '5':
+      DisplayName: '&7Diamond'
+      DisplayItem: DIAMOND
+      DisplayAmount: 6
+      MaxRange: 100
+      Chance: 10
+      Items:
+      - Item:DIAMOND, Amount:6
+    '6':
+      DisplayName: '&7Totem of Undying'
+      DisplayItem: TOTEM_OF_UNDYING
+      DisplayAmount: 1
+      MaxRange: 100
+      Chance: 10
+      Items:
+      - Item:TOTEM_OF_UNDYING, Amount:1
+    '7':
+      DisplayName: '&7Block of Diamond'
+      DisplayItem: DIAMOND_BLOCK
+      DisplayAmount: 1
+      MaxRange: 100
+      Chance: 10
+      Items:
+      - Item:DIAMOND_BLOCK, Amount:1
+    '8':
+      DisplayName: '&7Block of Emerald'
+      DisplayItem: EMERALD_BLOCK
+      DisplayAmount: 4
+      MaxRange: 100
+      Chance: 10
+      Items:
+      - Item:EMERALD_BLOCK, Amount:4
+    '9':
+      DisplayName: '&eBottle o'' Enchanting'
+      DisplayItem: EXPERIENCE_BOTTLE
+      DisplayAmount: 64
+      MaxRange: 100
+      Chance: 10
+      Items:
+      - Item:EXPERIENCE_BOTTLE, Amount:64
+    '10':
+      DisplayName: '&eEnchanted Book'
+      DisplayItem: ENCHANTED_BOOK
+      DisplayAmount: 1
+      Lore:
+      - '&7Efficiency V'
+      MaxRange: 100
+      Chance: 10
+      Editor-Items:
+      - ==: org.bukkit.inventory.ItemStack
+        v: 3105
+        type: ENCHANTED_BOOK
+        meta:
+          ==: ItemMeta
+          meta-type: ENCHANTED
+          stored-enchants:
+            DIG_SPEED: 5
+    '11':
+      DisplayName: '&eEnchanted Book'
+      DisplayItem: ENCHANTED_BOOK
+      DisplayAmount: 1
+      Lore:
+      - '&7Fortune III'
+      MaxRange: 100
+      Chance: 10
+      Editor-Items:
+      - ==: org.bukkit.inventory.ItemStack
+        v: 3105
+        type: ENCHANTED_BOOK
+        meta:
+          ==: ItemMeta
+          meta-type: ENCHANTED
+          stored-enchants:
+            LOOT_BONUS_BLOCKS: 3
+    '12':
+      DisplayName: '&eEnchanted Book'
+      DisplayItem: ENCHANTED_BOOK
+      DisplayAmount: 1
+      Lore:
+      - '&7Protection IV'
+      MaxRange: 100
+      Chance: 10
+      Editor-Items:
+      - ==: org.bukkit.inventory.ItemStack
+        v: 3105
+        type: ENCHANTED_BOOK
+        meta:
+          ==: ItemMeta
+          meta-type: ENCHANTED
+          stored-enchants:
+            PROTECTION_ENVIRONMENTAL: 4
+    '13':
+      DisplayName: '&eEnchanted Book'
+      DisplayItem: ENCHANTED_BOOK
+      DisplayAmount: 1
+      Lore:
+      - '&7Power V'
+      MaxRange: 100
+      Chance: 10
+      Editor-Items:
+      - ==: org.bukkit.inventory.ItemStack
+        v: 3105
+        type: ENCHANTED_BOOK
+        meta:
+          ==: ItemMeta
+          meta-type: ENCHANTED
+          stored-enchants:
+            ARROW_DAMAGE: 5
+    '14':
+      DisplayName: '&aNetherite Ingot'
+      DisplayItem: NETHERITE_INGOT
+      DisplayAmount: 2
+      MaxRange: 100
+      Chance: 5
+      Items:
+      - Item:NETHERITE_INGOT, Amount:2
+    '15':
+      DisplayName: '&e&lBag of Gold'
+      DisplayItem: RAW_GOLD
+      DisplayAmount: 1
+      Lore:
+      - '&7A bag filled with shiny gold.'
+      - ' '
+      - '&fContains: &e2 500 Gold '
+      MaxRange: 100
+      Chance: 5
+      Firework: true
+      Commands:
+      - eco give %player% 2500
+    '16':
+      DisplayName: '&e&lCrate of Gold'
+      DisplayItem: GOLD_INGOT
+      DisplayAmount: 1
+      Lore:
+      - '&7A huge crate filled with shiny gold.'
+      - ' '
+      - '&fContains: &e5 000 Gold '
+      MaxRange: 100
+      Chance: 2
+      Firework: true
+      Commands:
+      - eco give %player% 5000
+    '17':
+      DisplayName: '&d&lChest of Gold'
+      DisplayItem: GOLD_BLOCK
+      DisplayAmount: 1
+      Lore:
+      - '&7An enormous chest brimming'
+      - '&7with shiny gold coins.'
+      - ' '
+      - '&fContains: &e10 000 Gold '
+      MaxRange: 100
+      Chance: 1
+      Firework: true
+      Commands:
+      - eco give %player% 10000
+    '18':
+      DisplayName: '&b&lDiamond Bundle'
+      DisplayItem: DIAMOND_BLOCK
+      DisplayAmount: 3
+      Lore:
+      - ''
+      - '&fContains: &b3x Diamond Blocks'
+      MaxRange: 100
+      Chance: 1
+      Items:
+      - Item:DIAMOND_BLOCK, Amount:3

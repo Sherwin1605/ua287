@@ -5,7 +5,7 @@
 ############################################################
 
 # This is the config file for EssentialsX.
-# This config was generated for version 2.19.4.
+# This config was generated for version 2.19.7.
 
 # If you want to use special characters in this document, such as accented letters, you MUST save the file as UTF-8, not ANSI.
 # If you receive an error when Essentials loads, ensure that:
@@ -24,10 +24,10 @@
 
 # A color code between 0-9 or a-f. Set to 'none' to disable.
 # In 1.16+ you can use hex color codes here as well. (For example, #613e1d is brown).
-ops-name-color: '4'
+ops-name-color: 'none'
 
 # The character(s) to prefix all nicknames, so that you know they are not true usernames.
-nickname-prefix: '~'
+nickname-prefix: ''
 
 # The maximum length allowed in nicknames. The nickname prefix is included in this.
 max-nick-length: 15
@@ -47,7 +47,7 @@ ignore-colors-in-max-nick-length: false
 hide-displayname-in-vanish: true
 
 # Disable this if you have any other plugin, that modifies the displayname of a user.
-change-displayname: false
+change-displayname: true
 
 # This option will cause Essentials to show players' displaynames instead of usernames when tab completing Essentials commands.
 change-tab-complete-name: false
@@ -91,14 +91,14 @@ force-safe-teleport-location: false
 teleport-passenger-dismount: true
 
 # The delay, in seconds, required between /home, /tp, etc.
-teleport-cooldown: 4
+teleport-cooldown: 0
 
 # The delay, in seconds, before a user actually teleports. If the user moves or gets attacked in this timeframe, the teleport is cancelled.
 teleport-delay: 0
 
 # The delay, in seconds, a player can't be attacked by other players after they have been teleported by a command.
 # This will also prevent the player attacking other players.
-teleport-invulnerability: 4
+teleport-invulnerability: 2
 
 # Whether to make all teleportations go to the center of the block; where the x and z coordinates decimal become .5
 teleport-to-center: true
@@ -443,7 +443,7 @@ debug: false
 # For example, to set language to English, set locale to en, to use the file "messages_en.properties".
 # Don't forget to remove the # in front of the line.
 # For more information, visit http://wiki.ess3.net/wiki/Locale
-#locale: en
+locale: en
 
 # Turn off god mode when people leave the server.
 remove-god-on-disconnect: false
@@ -503,7 +503,7 @@ afk-list-name: "none"
 broadcast-afk-message: true
 
 # You can disable the death messages of Minecraft here.
-death-messages: false
+death-messages: true
 
 # How should essentials handle players with the essentials.keepinv permission who have items with
 # curse of vanishing when they die?
@@ -604,10 +604,10 @@ register-back-in-listener: false
 login-attack-delay: 5
 
 #Set the max fly speed, values range from 0.1 to 1.0
-max-fly-speed: 1
+max-fly-speed: 0.8
 
 #Set the max walk speed, values range from 0.1 to 1.0
-max-walk-speed: 1
+max-walk-speed: 0.8
 
 #Set the maximum amount of mail that can be sent within a minute.
 mails-per-minute: 1000
@@ -640,7 +640,7 @@ last-message-reply-vanished: false
 milk-bucket-easter-egg: true
 
 # Toggles whether or not the fly status message should be sent to players on join
-send-fly-enable-on-join: true
+send-fly-enable-on-join: false
 
 # Set to true to enable per-world permissions for setting time for individual worlds with essentials commands.
 # This applies to /time, /day, /eday, /night, /enight, /etime.
@@ -659,6 +659,7 @@ world-time-permissions: false
 #  '^ban([^ip])( .*)?': 60 # 60 seconds /ban cooldown.
 # Note: If you have a command that starts with ^, then you can escape it using backslash (\). e.g. \^command: 123
 command-cooldowns:
+  ah sell: 5
 #  feed: 100 # 100 second cooldown on /feed command
 #  '*': 5 # 5 Second cooldown on all commands
 
@@ -704,7 +705,7 @@ tpa-accept-cancellation: 120
 # The maximum number of simultaneous tpa requests that can be pending for any player.
 # Once past this threshold, old requests will instantly time out.
 # Defaults to 5.
-tpa-max-requests: 5
+tpa-max-requests: 2
 
 # Allow players to set hats by clicking on their helmet slot.
 allow-direct-hat: true
@@ -733,7 +734,7 @@ max-projectile-speed: 8
 # Should EssentialsX check for updates?
 # If set to true, EssentialsX will show notifications when a new version is available.
 # This uses the public GitHub API and no identifying information is sent or stored.
-update-check: true
+update-check: false
 
 ############################################################
 # +------------------------------------------------------+ #
@@ -758,12 +759,10 @@ world-home-permissions: false
 # Create the 'home-rank' below, and give the matching permission: essentials.sethome.multiple.<home-rank>
 # For more information, visit http://wiki.ess3.net/wiki/Multihome
 sethome-multiple:
-  default: 2
-  rank1: 3
-  rank2: 4
-  rank3: 5
-  rank4: 6
-  rank5: 7
+  default: 1
+  ultra: 2
+  hero: 3
+  legend: 4
 
 # In this example someone with 'essentials.sethome.multiple' and 'essentials.sethome.multiple.vip' will have 5 homes.
 # Remember, they MUST have both permission nodes in order to be able to set multiple homes.
@@ -777,7 +776,7 @@ compass-towards-home-perm: false
 
 # If no home is set, would you like to send the player to spawn?
 # If set to false, players will not be teleported when they run /home without setting a home first.
-spawn-if-no-home: true
+spawn-if-no-home: false
 
 # Should players be asked to provide confirmation for homes which they attempt to overwrite?
 confirm-home-overwrite: false
@@ -810,7 +809,7 @@ currency-symbol: ''
 
 # Enable this to make the currency symbol appear at the end of the amount rather than at the start.
 # For example, the euro symbol typically appears after the current amount.
-currency-symbol-suffix: true
+currency-symbol-suffix: false
 
 # Set the maximum amount of money a player can have.
 # The amount is always limited to 10 trillion because of the limitations of a java double.
@@ -818,7 +817,7 @@ max-money: 10000000000000
 
 # Set the minimum amount of money a player can have (must be above the negative of max-money).
 # Setting this to 0, will disable overdrafts/loans completely.  Users need 'essentials.eco.loan' perm to go below 0.
-min-money: 0
+min-money: -10000
 
 # Enable this to log all interactions with trade/buy/sell signs and sell command.
 economy-log-enabled: false
@@ -828,7 +827,7 @@ economy-log-enabled: false
 economy-log-update-enabled: false
 
 # Minimum acceptable amount to be used in /pay.
-minimum-pay-amount: 0.001
+minimum-pay-amount: 1
 
 # Enable this to block users who try to /pay another user which ignore them.
 pay-excludes-ignore-list: false
@@ -836,7 +835,7 @@ pay-excludes-ignore-list: false
 # Whether or not users with a balance less than or equal to $0 should be shown in balance-top.
 # Setting to false will not show people with balances <= 0 in balance-top.
 # NOTE: After reloading the config, you must also run '/baltop force' for this to appear
-show-zero-baltop: true
+show-zero-baltop: false
 
 # The format of currency, excluding symbols. See currency-symbol-format-locale for symbol configuration.
 #
@@ -858,13 +857,13 @@ show-zero-baltop: true
 ############################################################
 
 # Show other plugins commands in help.
-non-ess-in-help: false
+non-ess-in-help: true
 
 # Hide plugins which do not give a permission.
 # You can override a true value here for a single plugin by adding a permission to a user/group.
 # The individual permission is: essentials.help.<plugin>, anyone with essentials.* or '*' will see all help regardless.
 # You can use negative permissions to remove access to just a single plugins help if the following is enabled.
-hide-permissionless-help: false
+hide-permissionless-help: true
 
 ############################################################
 # +------------------------------------------------------+ #
@@ -904,7 +903,7 @@ chat:
   # {TEAMPREFIX} - The sender's scoreboard team prefix.
   # {TEAMSUFFIX} - The sender's scoreboard team suffix.
 
-  format: '<{DISPLAYNAME}> {MESSAGE}'
+  format: '&7<{DISPLAYNAME}>&f: &7{MESSAGE}'
   #format: '&7[{GROUP}]&r {DISPLAYNAME}&7:&r {MESSAGE}'
   #format: '&7{PREFIX}&r {DISPLAYNAME}&r &7{SUFFIX}&r: {MESSAGE}'
 
@@ -1141,16 +1140,16 @@ newbies:
   # If so, use this format, replacing {DISPLAYNAME} with the player name.
   # If not, set to ''
   #announce-format: ''
-  announce-format: ''
+  announce-format: '&dWelcome {DISPLAYNAME}&d to the server!'
 
   # When we spawn for the first time, which spawnpoint do we use?
   # Set to "none" if you want to use the spawn point of the world.
-  spawnpoint: default
+  spawnpoint: newbies
 
   # Do we want to give users anything on first join? Set to '' to disable
   # This kit will be given regardless of cost and permissions, and will not trigger the kit delay.
   #kit: ''
-  kit: ''
+  kit: tools
 
 # What priority should we use for handling respawns?
 # Set this to none, if you want vanilla respawning behaviour.

@@ -1,0 +1,90 @@
+
+
+
+
+every second:
+	loop {players::*}:
+		UpdateInterface(loop-value)
+		DisplayInterface(loop-value)
+
+
+function UpdateInterface(player: player):
+	loop 4 times:
+		set {_in_combat} to placeholder "combatlogx_in_combat" from {_player}
+		set {_timer} to placeholder "combatlogx_time_left" from {_player}
+		set {_location} to metadata value "location" of {_player}
+		if world of {_player} is "dungeons":
+			set {_floor} to GetPlayerFloor({_player})
+			set {_dungeon_floor} to FindFloor({_floor})
+			set {_dungeon_nr} to FindDungeon({_floor})
+			set {_killed_monsters} to {dungeons::killed_monsters::%uuid of {_player}%}
+			set {_required_kills} to {dungeons::config::dungeon_%{_dungeon_nr}%::%{_dungeon_floor}%::monster_kills_required}
+			set {_bosses::*} to "miner_wrath" and "dracula" and "pharaoh"
+			loop {_bosses::*}:
+				set {_boss} to loop-value-2
+				if {dungeons::loc::boss_spawn::%{_floor}%::%{_boss}%} is set:
+					if {dungeons::loc::boss_spawn::%{_floor}%::%{_boss}%} is set:
+						add {dungeons::config::dungeon_%{_dungeon_nr}%::%{_dungeon_floor}%::extra_kills_per_player}*size of GetPlayersInFloor({_floor}) to {_required_kills}
+						set {_boss_floor} to true
+						exit loop
+
+			#	Dungeons Status
+			if {_boss_floor} is true:
+				if {dungeons::boss_alive::%{_floor}%::%{_boss}%} is true:
+					set {_status} to "&e&lBOSS SPAWNED!"
+				else:
+					if difference between {dungeons::boss_death_date::%{_floor}%::%{_boss}%} and now >= {dungeons::config::boss::%{_boss}%::respawn_delay}:
+						set {_status} to "&f☠ %{_killed_monsters}%/%{_required_kills}%"
+					else:
+						set {_status} to "&8☠ %{_killed_monsters}%/%{_required_kills}%"
+			else:
+				if {_killed_monsters} >= {_required_kills}:
+					set {_status} to "&e&lNEXT FLOOR UNLOCKED!"
+				else:
+					set {_status} to "&f☠ %{_killed_monsters}%/%{_required_kills}%"
+
+			set metadata value "ui_content_dungeons" of {_player} to "&f⛏ %{_location}%  %{_status}%"
+
+		wait 0.25 second
+
+
+function DisplayInterface(player: player):
+	loop 20 times:
+		if {server::test_server} is true:
+			if difference between metadata value "display_visitor_count" of {_player} and now < 4 seconds:
+				set {_visitors} to placeholder "valiant_visitors_count" from {_player}
+				set metadata value "ui_content" of {_player} to "&f&lVisitors today: &e&l%{_visitors}%"
+		else:
+			#	Combat Log
+			if metadata value "in_combat" of {_player} is true:
+				set {_msg} to {combatlog::messages::ui_message}
+				replace all "TIMER" with "%{_timer}%" in {_msg}
+				set metadata value "ui_content" of {_player} to {_msg}
+				set metadata value "in_combat" of {_player} to true
+			else:
+				#	Dungeons
+				if world of {_player} is "dungeons":
+					set metadata value "ui_content" of {_player} to metadata value "ui_content_dungeons" of {_player}
+				
+				# 	Spawn
+				if world of {_player} is "spawn":
+					if {premium_currency::%uuid of {_player}%} is set:
+						set {_gems} to {premium_currency::%uuid of {_player}%}
+					else:
+						set {_gems} to 0
+					set {_location} to metadata value "location" of {_player}
+					set metadata value "ui_content" of {_player} to "&f %{_location}%  &f %{colors::gold}%%floor({_player}'s money)%  &f %{colors::gems}%%{_gems}%"
+
+				#	Wilderness
+				if world of {_player} is not "spawn" or "dungeons":
+					set metadata value "ui_content" of {_player} to metadata value "compass" of {_player}
+
+				set metadata value "in_combat" of {_player} to false
+
+		wait 1 tick
+
+
+command /displayvisitorcount [<player>]:
+	permission: admin
+	trigger:
+		set metadata value "display_visitor_count" of player-arg to now

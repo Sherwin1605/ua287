@@ -1,31 +1,56 @@
 Command:
   List:
     Desc: List of all custom enchantments.
-    Usage: '[player]'
-    DoneOthers: <light_gray>Opened enchantments GUI for <light_yellow>%player_name%</light_yellow>.</light_gray>
-  GetFuel:
-    Desc: Get enchantment fuel item.
-    Usage: <enchant> [amount]
-    Done: <light_gray>You got <light_yellow>x%amount% %name%</light_yellow>.</light_gray>
   Enchant:
-    Usage: <enchant> <level> [player] [slot]
+    Usage: <enchant> <level>
     Desc: Enchants the item in your hand.
     Done:
-      Self: <light_gray><light_yellow>%item%</light_yellow> enchanted with <light_yellow>%enchant% %level%</light_yellow>!</light_gray>
-      Others: <light_gray><light_yellow>%player_display_name%</light_yellow>'s <light_yellow>%item%</light_yellow> enchanted with <light_yellow>%enchant% %level%</light_yellow>!</light_gray>
+      Self: '#fdba5e%item%#ffeea2 enchanted with %enchant% %level%#ffeea2!'
+      Others: '#fdba5e%player_display_name%#ffeea2''s #fdba5e%item%#ffeea2 enchanted with %enchant% %level%#ffeea2!'
     Error:
-      NoItem: <red>There is no item to enchant!</red>
+      NoItem: '#fd5e5eYou must hold an item to enchant it!'
   Book:
     Usage: <player> <enchant> <level>
     Desc: Gives custom enchanted book.
-    Done: <light_gray>Given <light_yellow>%enchant%</light_yellow> enchanted book to <light_yellow>%player_display_name%</light_yellow>.</light_gray>
-  RarityBook:
+    Done: Given &6%enchant%&7 enchanted book to &6%player_display_name%&7.
+  TierBook:
     Usage: <player> <tier> <level>
-    Desc: Give an enchanted book with enchantment of specified rarity.
-    Done: <light_gray>Given <light_yellow>%name%</light_yellow> enchanted book to <light_yellow>%player_display_name%</light_yellow>.</light_gray>
+    Desc: Gives an enchanted book.
+    Error: '&cInvalid tier!'
+    Done: Given &6%tier_name%&7 enchanted book to &6%player_display_name%&7.
 Error:
-  InvalidEnchantment: <red>Invalid enchantment.</red>
-  InvalidRarity: <red>Invalid rarity!</red>
+  NoEnchant: '&cInvalid enchantment.'
+FitItemType:
+  HELMET: Helmet
+  CHESTPLATE: Chestplate
+  LEGGINGS: Leggings
+  BOOTS: Boots
+  ELYTRA: Elytra
+  WEAPON: Weapon
+  TOOL: Tool
+  ARMOR: Armor
+  UNIVERSAL: Universal
+  SWORD: Sword
+  TRIDENT: Trident
+  AXE: Axe
+  BOW: Bow
+  CROSSBOW: Crossbow
+  HOE: Hoe
+  PICKAXE: Pickaxe
+  SHOVEL: Shovel
+  FISHING_ROD: Fishing Rod
+# Here you can create your own custom placeholders to use it in language config.
+# Key = Placeholder, Value = Replacer.
+Placeholders:
+  '%red%': '#fd5e5e'
+  '%green%': '#aefd5e'
+  '%gray%': '#d4d9d8'
+ObtainType:
+  ENCHANTING: Enchanting
+  VILLAGER: Villager
+  LOOT_GENERATION: Loot Generation
+  FISHING: Fishing
+  MOB_SPAWNING: Mob Spawning
 ItemCategory:
   HELMET: Helmet
   CHESTPLATE: Chestplate
@@ -41,7 +66,6 @@ ItemCategory:
   PICKAXE: Pickaxe
   SHOVEL: Shovel
   FISHING_ROD: Fishing Rod
-  SHIELD: Shield
   TOOL: Tool
 EnchantmentTarget:
   ALL: All
@@ -59,14 +83,3 @@ EnchantmentTarget:
   TRIDENT: Trident
   CROSSBOW: Crossbow
   VANISHABLE: Vanishable
-DistributionWay:
-  ENCHANTING: Enchanting
-  VILLAGER: Villager
-  LOOT_GENERATION: Loot Generation
-  FISHING: Fishing
-  MOB_EQUIPMENT: Mob Equipment
-Rarity:
-  COMMON: Common
-  UNCOMMON: Uncommon
-  RARE: Rare
-  VERY_RARE: Very Rare

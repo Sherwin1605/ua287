@@ -50,7 +50,7 @@ Configuration:
     RandomSpawning: 1
     Scanner: 10
     Cleanup: 600
-    Bars: 20
+    Bars: 5
   
   # ================================================================================
   # Built-in compatibility with other plugins

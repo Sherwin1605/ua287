@@ -1,0 +1,36 @@
+# Please DO NOT change version number!
+version: 2
+
+color:
+    menu_primary: '#31ed96'
+    menu_secondary: '#7dff49'
+    menu_blue: '#5979ff'
+    menu_title: '#009e73'
+    menu_title_blue: '#5979ff'
+    menu_unlocked: "&2"
+    menu_purchase: "&a"
+    menu_cancel: "&c"
+    primary_color: '#31ed96'
+    accent_color: '#7dff49'
+    server_name: '#6dd444'
+    server_name_1: '#b1f073'
+    server_name_2: '#f0ffd1'
+    server_name_accent: '#ace673'
+    adventure_pass_xp: '#26c95f'
+    adventure_pass_name: '#ffe608'
+    adventure_pass_premium: '#ebd142'
+    menu_item_unlocked: '#2bad52'
+    menu_item_selected: '#ffe817'
+    gems: '#e84848'
+    gold: '#e0e841'
+    player: '#a6acc4'
+    ultra: '#41c967'
+    hero: '#50ecf3'
+    legend: '#fed53b'
+    helper: '#4f8fdd'
+    moderator: '#55df41'
+    admin: '#e13434'
+    owner: '#f21d47'
+    luck_booster: '#2ddd4a'
+    protection_booster: '#0078f8'
+    adventure_pass_booster: '#fca044'

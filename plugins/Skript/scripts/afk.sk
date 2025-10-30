@@ -1,0 +1,65 @@
+on load:
+	AfkReload()
+
+
+function AfkReload():
+	load yaml "unlimited_adventures/AdventureCore/afk.yml" as "config"
+	if yaml value "version" from "config" is not set:
+		wait 1 tick
+		AfkCreateConfigFile()
+
+	#	Config
+	clear {afk::config::*}
+	set {afk::config::detect_afk} to yaml value "detect_afk" from "config"
+	set {afk::config::afk_delay} to yaml value "afk_delay" from "config"
+	set {afk::config::afk_delay} to "%{afk::config::afk_delay}% seconds" parsed as timespan
+	set {afk::config::fullscreen_afk_popup} to yaml value "detect_afk" from "config"
+	set {afk::config::afk_tag_ingame} to yaml value "detect_afk" from "config"
+	
+	save yaml "config"
+
+
+
+function AfkCreateConfigFile():
+	load yaml "unlimited_adventures/AdventureCore/afk.yml" as "config"
+
+	set yaml value "version" from "config" to 1
+	set the comments of yaml node "version" from "config" to "Please DO NOT change version number!"
+
+	set yaml value "detect_afk" from "config" to true
+	set yaml value "afk_delay" from "config" to 180
+	set yaml value "fullscreen_afk_popup" from "config" to true
+	set yaml value "afk_tag_ingame" from "config" to true
+
+	set the comments of yaml node "detect_afk" from "config" to "" and "Choose if you want the server to automatically detect AFK players." and ""
+	save yaml "config"
+
+
+
+every 10 second:
+	if {afk::config::detect_afk} is true:
+		loop {players::*}:
+			ActivityCheckPeriodical(loop-value)
+
+function ActivityCheckPeriodical(player: player):
+	if difference between metadata value "last_activity" of {_player} and now >= {afk::config::afk_delay}:
+		if metadata value "inactive" of {_player} is not true:
+			set metadata value "inactive" of {_player} to true
+			if {afk::config::fullscreen_afk_popup} is true:
+				send title "You are inactive" with subtitle "&7Move to go back to game!" to {_player} for 10 hours
+				apply potion of blindness without any particles to {_player} for 10 hours
+
+
+function ActivityCheck(player: player):
+	if {afk::config::detect_afk} is true:
+		if metadata value "inactive" of {_player} is true:
+			set metadata value "inactive" of {_player} to false
+			remove blindness from {_player}
+			set {_player}'s gamemode to metadata value "afk_previous_gamemode" of {_player}
+			send title "" with subtitle "&eYou are back!" to {_player} for 1 second
+			wait 2 ticks
+			play sound "block.note_block.bit" with volume 0.6 and pitch 1.4 to {_player}
+			wait 2 ticks
+			play sound "block.note_block.bit" with volume 0.75 and pitch 1.7 to {_player}
+			wait 2 ticks
+			play sound "block.note_block.bit" with volume 0.9 and pitch 2 to {_player}

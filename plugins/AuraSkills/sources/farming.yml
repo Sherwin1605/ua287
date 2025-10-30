@@ -83,7 +83,7 @@ sources:
     blocks:
     - kelp
     - kelp_plant
-    xp: 0.5
+    xp: 0.3
     trigger: break
     check_replace: true
     menu_item:

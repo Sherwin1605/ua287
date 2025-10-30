@@ -149,7 +149,7 @@ sources:
   ender_dragon:
     xp: 7000.0
   wither:
-    xp: 7000.0
+    xp: 5000.0
   axolotl:
     xp: 3.5
   glow_squid:
@@ -163,6 +163,4 @@ sources:
   tadpole:
     xp: 1.2
   warden:
-    xp: 10000.0
-  armadillo:
-    xp: 3.0
+    xp: 3000.0

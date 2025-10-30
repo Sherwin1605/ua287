@@ -1,0 +1,723 @@
+# Please DO NOT change version number!
+version: 1
+
+# Configuration file for items from Forge, Backpacks & Accessories
+items:
+    traveler_backpack:
+        name: "&aTraveler's Backpack"
+        item: stick
+        custom_model_data: 501
+        model_custom_model_data: 101
+        lore:
+        - ''
+        - "&7Basic backpack. Can fit 9 items."
+        rows: 1
+    adventure_backpack:
+        name: "&aAdventurer's Backpack"
+        item: stick
+        custom_model_data: 502
+        model_custom_model_data: 102
+        lore:
+        - ''
+        - "&7Sizeable backpack. Can fit 18 items."
+        rows: 2
+    hero_backpack:
+        name: "&aHero's Backpack"
+        item: stick
+        custom_model_data: 503
+        model_custom_model_data: 103
+        lore:
+        - ''
+        - "&7Big backpack. Can fit 27 items."
+        rows: 3
+    random_teleportation_scroll:
+        name: "&aRandom Teleportation Scroll"
+        item: stick
+        custom_model_data: 741
+        lore:
+        - ''
+        - "&7Right-click to teleport to a random location."
+    home_teleportation_scroll:
+        name: "&aHome Teleportation Scroll"
+        item: stick
+        custom_model_data: 742
+        lore:
+        - ''
+        - "&7Right-click to teleport to your bed location."
+    portal_stone:
+        name: "&aPortal Stone"
+        item: stick
+        custom_model_data: 743
+        lore:
+        - ''
+        - "&7Right-click on ground to create a portal."
+        - "&7Put candles in the corners to 'code' the portal."
+    bone_sword:
+        name: "&aBone Sword"
+        item: diamond sword of knockback 5
+        custom_model_data: 730
+    dragonscale_sword:
+        name: "&aDragonscale Sword"
+        item: netherite sword
+        lore:
+        - ''
+        - "&7Legendary sword made out of"
+        - "&7the ominous scales of a dragon."
+        - ''
+        - "§x&b&1&2&2&2&29 Attack Damage 🗡"
+        custom_model_data: 731
+        attack_damage: 9
+        attack_speed: -2.4
+        unbreakable: true
+    dragonscale_axe:
+        name: "&aDragonscale Axe"
+        item: netherite axe
+        lore:
+        - ''
+        - "&7Legendary axe made out of"
+        - "&7the ominous scales of a dragon."
+        - ''
+        - "§x&b&1&2&2&2&211 Attack Damage 🗡"
+        custom_model_data: 732
+        attack_damage: 11
+        attack_speed: -3
+        unbreakable: true
+    cursed_pickaxe:
+        name: "&aCursed Pickaxe"
+        item: netherite pickaxe of efficiency 5
+        lore:
+        - ''
+        - "&7A powerful pickaxe that once"
+        - "&7belonged to the cursed miner."
+        - ''
+        - "§x&b&1&2&2&2&28 Attack Damage 🗡"
+        custom_model_data: 733
+        attack_damage: 8
+        attack_speed: -2.4
+        unbreakable: true
+    dracula_sword:
+        name: "&aDracula Sword"
+        item: netherite sword
+        lore:
+        - ''
+        - "&7Mythical vampire sword that belonged"
+        - "&7to the terrifying Dracula Lord."
+        - ''
+        - "§x&b&1&2&2&2&210 Attack Damage 🗡"
+        custom_model_data: 732
+        attack_damage: 10
+        attack_speed: -2.6
+        unbreakable: true
+    ankh_scepter:
+        name: "&aAnkh Scepter"
+        item: netherite axe
+        lore:
+        - ''
+        - "&7Pharaoh's mighty scepter."
+        - "&7A symbol of power."
+        - ''
+        - "§x&b&1&2&2&2&212 Attack Damage 🗡"
+        custom_model_data: 733
+        attack_damage: 12
+        attack_speed: -3
+        unbreakable: true
+    dragonscale_helmet:
+        name: "&aDragonscale Helmet"
+        item: chainmail helmet
+        armor: 3
+        armor_toughness: 4
+        knockback_resistance: 0.1
+        unbreakable: true
+        lore:
+        - ''
+        - "&7Legendary helmet made out of"
+        - "&7the ominous scales of a dragon."
+        custom_model_data: 733
+    dragonscale_chestplate:
+        name: "&aDragonscale Chestplate"
+        item: chainmail chestplate
+        armor: 8
+        armor_toughness: 4
+        knockback_resistance: 0.1
+        unbreakable: true
+        lore:
+        - ''
+        - "&7Legendary chestplate made out of"
+        - "&7the ominous scales of a dragon."
+        custom_model_data: 734
+    dragonscale_leggings:
+        name: "&aDragonscale Leggings"
+        item: chainmail leggings
+        armor: 6
+        armor_toughness: 4
+        knockback_resistance: 0.1
+        unbreakable: true
+        lore:
+        - ''
+        - "&7Legendary leggings made out of"
+        - "&7the ominous scales of a dragon."
+        custom_model_data: 735
+    dragonscale_boots:
+        name: "&aDragonscale Boots"
+        item: chainmail boots
+        armor: 3
+        armor_toughness: 4
+        knockback_resistance: 0.1
+        unbreakable: true
+        lore:
+        - ''
+        - "&7Legendary boots made out of"
+        - "&7the ominous scales of a dragon."
+        custom_model_data: 736
+    hermes_boots:
+        name: "&aHermes Boots"
+        item: stick
+        custom_model_data: 701
+        lore:
+        - ''
+        - "&7Increases movement speed by 5%"
+        - ''
+        - "§x&8&f&6&4&d&eᴀᴄᴄᴇssᴏʀʏ ɪᴛᴇᴍ"
+        movement_speed: 5
+        accessory: true
+    rocket_boots:
+        name: "&aRocket Boots"
+        item: stick
+        custom_model_data: 702
+        lore:
+        - ''
+        - "&7Allows flight."
+        - "&eSneak to propel yourself upwards."
+        - ''
+        - "§x&8&f&6&4&d&eᴀᴄᴄᴇssᴏʀʏ ɪᴛᴇᴍ"
+        fuel: 25
+        accessory: true
+    lightning_boots:
+        name: "&aLightning Boots"
+        item: stick
+        custom_model_data: 703
+        lore:
+        - ''
+        - "&7Increases movement speed by 5%"
+        - "&7Allows flight."
+        - "&eSneak to propel yourself upwards."
+        - ''
+        - "§x&8&f&6&4&d&eᴀᴄᴄᴇssᴏʀʏ ɪᴛᴇᴍ"
+        movement_speed: 5
+        fuel: 25
+        accessory: true
+    flashlight:
+        name: "&aFlashlight"
+        item: stick
+        custom_model_data: 704
+        lore:
+        - ''
+        - "&7Allows to see in the dark."
+        - ''
+        - "§x&8&f&6&4&d&eᴀᴄᴄᴇssᴏʀʏ ɪᴛᴇᴍ"
+        night_vision: true
+        accessory: true
+    miner_helmet:
+        name: "&aMiner's Helmet"
+        item: stick
+        custom_model_data: 705
+        lore:
+        - ''
+        - "&7Increases mining speed."
+        - ''
+        - "§x&8&f&6&4&d&eᴀᴄᴄᴇssᴏʀʏ ɪᴛᴇᴍ"
+        haste: true
+        accessory: true
+    miner_helmet_lamp:
+        name: "&aMiner's Helmet Lamp"
+        item: stick
+        custom_model_data: 706
+        lore:
+        - ''
+        - "&7Allows to see in the dark."
+        - "&7Increases mining speed."
+        - ''
+        - "§x&8&f&6&4&d&eᴀᴄᴄᴇssᴏʀʏ ɪᴛᴇᴍ"
+        haste: true
+        night_vision: true
+        accessory: true
+    diving_mask:
+        name: "&aDiving Mask"
+        item: stick
+        custom_model_data: 707
+        lore:
+        - ''
+        - "&7Let's you hold your breath longer."
+        - ''
+        - "&a+20 seconds underwater"
+        - ''
+        - "§x&8&f&6&4&d&eᴀᴄᴄᴇssᴏʀʏ ɪᴛᴇᴍ"
+        oxygen: 20
+        accessory: true
+    ninja_cloak:
+        name: "&aNinja Cloak"
+        item: stick
+        custom_model_data: 708
+        lore:
+        - ''
+        - "&7Increases strength."
+        - ''
+        - "§x&b&1&2&2&2&2+5 Strength 🗡"
+        - ''
+        - "§x&8&f&6&4&d&eᴀᴄᴄᴇssᴏʀʏ ɪᴛᴇᴍ"
+        strength: 5
+        accessory: true
+    gold_tooth:
+        name: "&aGold Tooth"
+        item: stick
+        custom_model_data: 709
+        lore:
+        - ''
+        - "&7Regenerates life faster."
+        - ''
+        - "§x&f&2&6&0&1&c+5 Regeneration 🍖"
+        - ''
+        - "§x&8&f&6&4&d&eᴀᴄᴄᴇssᴏʀʏ ɪᴛᴇᴍ"
+        regeneration: 5
+        accessory: true
+    vitality_ring:
+        name: "&aRing of Vitality"
+        item: stick
+        custom_model_data: 711
+        lore:
+        - ''
+        - "&7Increases health."
+        - ''
+        - "§x&d&f&5&2&5&2+4 Health ❤"
+        - ''
+        - "§x&8&f&6&4&d&eᴀᴄᴄᴇssᴏʀʏ ɪᴛᴇᴍ"
+        health: 4
+        accessory: true
+    speed_ring:
+        name: "&aRing of Speed"
+        item: stick
+        custom_model_data: 712
+        lore:
+        - ''
+        - "&7Increases movement speed by 5%"
+        - ''
+        - "§x&8&f&6&4&d&eᴀᴄᴄᴇssᴏʀʏ ɪᴛᴇᴍ"
+        movement_speed: 5
+        accessory: true
+    wool_scarf:
+        name: "&aWool Scarf"
+        item: stick
+        custom_model_data: 713
+        lore:
+        - ''
+        - "&7Increases health."
+        - ''
+        - "§x&d&f&5&2&5&2+4 Health ❤"
+        - ''
+        - "§x&8&f&6&4&d&eᴀᴄᴄᴇssᴏʀʏ ɪᴛᴇᴍ"
+        health: 4
+        accessory: true
+    magic_bracelet:
+        name: "&aMagic Bracelet"
+        item: stick
+        custom_model_data: 714
+        lore:
+        - ''
+        - "&7Increases wisdom."
+        - ''
+        - "§x&6&5&8&6&e&8+5 Wisdom "
+        - ''
+        - "§x&8&f&6&4&d&eᴀᴄᴄᴇssᴏʀʏ ɪᴛᴇᴍ"
+        wisdom: 5
+        accessory: true
+    knight_shield:
+        name: "&aKnight's Shield"
+        item: stick
+        custom_model_data: 715
+        lore:
+        - ''
+        - "&7Increases toughness."
+        - ''
+        - "§x&5&8&d&0&9&c+10 Toughness 🛡"
+        - ''
+        - "§x&8&f&6&4&d&eᴀᴄᴄᴇssᴏʀʏ ɪᴛᴇᴍ"
+        toughness: 10
+        accessory: true
+    philosopher_stone:
+        name: "&aPhilosopher's Stone"
+        item: stick
+        custom_model_data: 716
+        lore:
+        - ''
+        - "&7Increases health."
+        - ''
+        - "§x&d&f&5&2&5&2+5 Health ❤"
+        - ''
+        - "§x&8&f&6&4&d&eᴀᴄᴄᴇssᴏʀʏ ɪᴛᴇᴍ"
+        health: 5
+        accessory: true
+    silver_chain:
+        name: "&aSilver Chain"
+        item: stick
+        custom_model_data: 717
+        lore:
+        - ''
+        - "&7Increases regeneration."
+        - ''
+        - "§x&f&2&6&0&1&c+5 Regeneration 🍖"
+        - ''
+        - "§x&8&f&6&4&d&eᴀᴄᴄᴇssᴏʀʏ ɪᴛᴇᴍ"
+        regeneration: 5
+        accessory: true
+    talisman_of_vitality:
+        name: "&aTalisman of Vitality"
+        item: stick
+        custom_model_data: 718
+        lore:
+        - ''
+        - "&7Increases health and regeneration."
+        - ''
+        - "§x&d&f&5&2&5&2+5 Health ❤"
+        - "§x&f&2&6&0&1&c+5 Regeneration 🍖"
+        - ''
+        - "§x&8&f&6&4&d&eᴀᴄᴄᴇssᴏʀʏ ɪᴛᴇᴍ"
+        health: 5
+        regeneration: 5
+        accessory: true
+    dark_magic_necklace:
+        name: "&aDark Magic Necklace"
+        item: stick
+        custom_model_data: 719
+        lore:
+        - ''
+        - "&7Increases wisdom."
+        - ''
+        - "§x&6&5&8&6&e&8+10 Wisdom "
+        - ''
+        - "§x&8&f&6&4&d&eᴀᴄᴄᴇssᴏʀʏ ɪᴛᴇᴍ"
+        wisdom: 10
+        accessory: true
+    shiver_bracelet:
+        name: "&aShiver Bracelet"
+        item: stick
+        custom_model_data: 720
+        lore:
+        - ''
+        - "&7Increases strength."
+        - ''
+        - "§x&b&1&2&2&2&2+6 Strength 🗡"
+        - ''
+        - "§x&8&f&6&4&d&eᴀᴄᴄᴇssᴏʀʏ ɪᴛᴇᴍ"
+        strength: 6
+        accessory: true
+    bone_necklace:
+        name: "&aBone Necklace"
+        item: stick
+        custom_model_data: 721
+        lore:
+        - ''
+        - "&7Increases luck."
+        - ''
+        - "§x&4&c&b&6&1&b+5 Luck "
+        - ''
+        - "§x&8&f&6&4&d&eᴀᴄᴄᴇssᴏʀʏ ɪᴛᴇᴍ"
+        luck: 5
+        accessory: true
+    shackle:
+        name: "&aShackle"
+        item: stick
+        custom_model_data: 722
+        lore:
+        - ''
+        - "&7Increases toughness."
+        - ''
+        - "§x&5&8&d&0&9&c+5 Toughness 🛡"
+        - ''
+        - "§x&8&f&6&4&d&eᴀᴄᴄᴇssᴏʀʏ ɪᴛᴇᴍ"
+        toughness: 5
+        accessory: true
+    gold_pouch:
+        name: "&aGold Pouch"
+        item: stick
+        custom_model_data: 723
+        lore:
+        - ''
+        - "&7Increases health and luck."
+        - ''
+        - "§x&d&f&5&2&5&2+4 Health ❤"
+        - "§x&4&c&b&6&1&b+4 Luck "
+        - ''
+        - "§x&8&f&6&4&d&eᴀᴄᴄᴇssᴏʀʏ ɪᴛᴇᴍ"
+        health: 4
+        luck: 4
+        accessory: true
+    magma_boots:
+        name: "&aMagma Boots"
+        item: stick
+        custom_model_data: 724
+        lore:
+        - ''
+        - "&7Increases toughness and regeneration."
+        - ''
+        - "§x&5&8&d&0&9&c+5 Toughness 🛡"
+        - "§x&f&2&6&0&1&c+5 Regeneration 🍖"
+        - ''
+        - "§x&8&f&6&4&d&eᴀᴄᴄᴇssᴏʀʏ ɪᴛᴇᴍ"
+        toughness: 5
+        regeneration: 5
+        accessory: true
+    wither_crown:
+        name: "&aWither Crown"
+        item: stick
+        custom_model_data: 725
+        lore:
+        - ''
+        - "&7Increases health."
+        - ''
+        - "§x&d&f&5&2&5&2+15 Health ❤"
+        - ''
+        - "§x&8&f&6&4&d&eᴀᴄᴄᴇssᴏʀʏ ɪᴛᴇᴍ"
+        health: 15
+        accessory: true
+    sculk_shield:
+        name: "&aSculk Shield"
+        item: stick
+        custom_model_data: 726
+        lore:
+        - ''
+        - "&7Increases toughness."
+        - ''
+        - "§x&5&8&d&0&9&c+15 Toughness 🛡"
+        - ''
+        - "§x&8&f&6&4&d&eᴀᴄᴄᴇssᴏʀʏ ɪᴛᴇᴍ"
+        toughness: 15
+        accessory: true
+    ender_gauntlet:
+        name: "&aEnder Gauntlet"
+        item: stick
+        custom_model_data: 727
+        lore:
+        - ''
+        - "&7Increases strength."
+        - ''
+        - "§x&b&1&2&2&2&2+15 Strength 🗡"
+        - ''
+        - "§x&8&f&6&4&d&eᴀᴄᴄᴇssᴏʀʏ ɪᴛᴇᴍ"
+        strength: 15
+        accessory: true
+    blood_vial:
+        name: "&aBlood Vial"
+        item: stick
+        custom_model_data: 728
+        lore:
+        - ''
+        - "&7Increases regeneration and health."
+        - ''
+        - "§x&f&2&6&0&1&c+8 Regeneration 🍖"
+        - "§x&d&f&5&2&5&2+4 Health ❤"
+        - ''
+        - "§x&8&f&6&4&d&eᴀᴄᴄᴇssᴏʀʏ ɪᴛᴇᴍ"
+        regeneration: 8
+        health: 4
+        accessory: true
+    cloak_of_wrath:
+        name: "&aCloak of Wrath"
+        item: stick
+        custom_model_data: 729
+        lore:
+        - ''
+        - "&7Increases strength and toughness."
+        - ''
+        - "§x&b&1&2&2&2&2+8 Strength 🗡"
+        - "§x&5&8&d&0&9&c+4 Toughness 🛡"
+        - ''
+        - "§x&8&f&6&4&d&eᴀᴄᴄᴇssᴏʀʏ ɪᴛᴇᴍ"
+        strength: 8
+        toughness: 4
+        accessory: true
+    molten_dice:
+        name: "&aMolten Dice"
+        item: stick
+        custom_model_data: 730
+        lore:
+        - ''
+        - "&7Increases luck."
+        - ''
+        - "§x&4&c&b&6&1&b+10 Luck "
+        - ''
+        - "§x&8&f&6&4&d&eᴀᴄᴄᴇssᴏʀʏ ɪᴛᴇᴍ"
+        luck: 10
+        accessory: true
+    horseshoe:
+        name: "&aHorseshoe"
+        item: stick
+        custom_model_data: 731
+        lore:
+        - ''
+        - "&7Increases luck."
+        - ''
+        - "§x&4&c&b&6&1&b+15 Luck "
+        - ''
+        - "§x&8&f&6&4&d&eᴀᴄᴄᴇssᴏʀʏ ɪᴛᴇᴍ"
+        luck: 15
+        accessory: true
+    sunstone_ring:
+        name: "&aSunstone Ring"
+        item: stick
+        custom_model_data: 732
+        lore:
+        - ''
+        - "&7Increases wisdom and toughness."
+        - ''
+        - "§x&6&5&8&6&e&8+5 Wisdom "
+        - "§x&5&8&d&0&9&c+2 Toughness 🛡"
+        - ''
+        - "§x&8&f&6&4&d&eᴀᴄᴄᴇssᴏʀʏ ɪᴛᴇᴍ"
+        wisdom: 5
+        toughness: 2
+        accessory: true
+    zephyr_veil:
+        name: "&aZephyr Veil"
+        item: stick
+        custom_model_data: 733
+        lore:
+        - ''
+        - "&7Increases movement speed by 10%"
+        - ''
+        - "§x&8&f&6&4&d&eᴀᴄᴄᴇssᴏʀʏ ɪᴛᴇᴍ"
+        movement_speed: 10
+        accessory: true
+    jungle_amulet:
+        name: "&aJungle Amulet"
+        item: stick
+        custom_model_data: 734
+        lore:
+        - ''
+        - "&7Increases movement speed by 5%"
+        - ''
+        - "§x&8&f&6&4&d&eᴀᴄᴄᴇssᴏʀʏ ɪᴛᴇᴍ"
+        movement_speed: 5
+        accessory: true
+    golem_heart:
+        name: "&aGolem's Heart"
+        item: stick
+        custom_model_data: 735
+        lore:
+        - ''
+        - "&7Increases health."
+        - ''
+        - "§x&d&f&5&2&5&2+10 Health ❤"
+        - ''
+        - "§x&8&f&6&4&d&eᴀᴄᴄᴇssᴏʀʏ ɪᴛᴇᴍ"
+        health: 10
+        accessory: true
+    ankh_charm:
+        name: "&aAnkh Charm"
+        item: stick
+        custom_model_data: 736
+        lore:
+        - ''
+        - "&7Increases strength and regeneration."
+        - ''
+        - "§x&b&1&2&2&2&2+8 Strength 🗡"
+        - "§x&f&2&6&0&1&c+8 Regeneration 🍖"
+        - ''
+        - "§x&8&f&6&4&d&eᴀᴄᴄᴇssᴏʀʏ ɪᴛᴇᴍ"
+        strength: 8
+        regeneration: 8
+        accessory: true
+    vampire_signet:
+        name: "&aVampire's Signet"
+        item: stick
+        custom_model_data: 737
+        lore:
+        - ''
+        - "&7Increases health and regeneration."
+        - ''
+        - "§x&d&f&5&2&5&2+10 Health ❤"
+        - "§x&f&2&6&0&1&c+10 Regeneration 🍖"
+        - ''
+        - "§x&8&f&6&4&d&eᴀᴄᴄᴇssᴏʀʏ ɪᴛᴇᴍ"
+        health: 10
+        regeneration: 10
+        accessory: true
+    skeleton_key:
+        name: "&aSkeleton Key"
+        item: stick
+        custom_model_data: 651
+        lore:
+        - ''
+        - "&7A key that allows you to enter the Abandoned Mining Site"
+        - "&7Can be used to enter the dungeon."
+        - ''
+        - "§x&e&6&a&b&4&eᴅᴜɴɢᴇᴏɴ ᴋᴇʏ"
+    dracula_key:
+        name: "&aDracula Key"
+        item: stick
+        custom_model_data: 652
+        lore:
+        - ''
+        - "&7A key that allows you to enter the Dracula's Manor"
+        - "&7Can be used to enter the dungeon."
+        - ''
+        - "§x&e&6&a&b&4&eᴅᴜɴɢᴇᴏɴ ᴋᴇʏ"
+    desert_key:
+        name: "&aDesert Key"
+        item: stick
+        custom_model_data: 653
+        lore:
+        - ''
+        - "&7A key that allows you to enter the Desert Ruins"
+        - "&7Can be used to enter the dungeon."
+        - ''
+        - "§x&e&6&a&b&4&eᴅᴜɴɢᴇᴏɴ ᴋᴇʏ"
+    jungle_key:
+        name: "&aJungle Key"
+        item: stick
+        custom_model_data: 654
+        lore:
+        - ''
+        - "&7A key that allows you to enter the Jungle Dungeon"
+        - "&7Can be used to enter the dungeon."
+        - ''
+        - "§x&e&6&a&b&4&eᴅᴜɴɢᴇᴏɴ ᴋᴇʏ"
+    zombie_brain:
+        name: "&aZombie Brain"
+        item: stick
+        custom_model_data: 601
+        lore:
+        - ''
+        - "&7A rare Zombie drop."
+        - "&7Can be sold or used in forging."
+        - ''
+        - "§x&e&6&a&b&4&eᴄʀᴀғᴛɪɴɢ sᴜᴘᴘʟʏ"
+    skeleton_skull:
+        name: "&aSkeleton Skull"
+        item: skeleton skull
+        lore:
+        - ''
+        - "&7A rare Skeleton drop."
+        - "&7Can be sold or used in forging."
+        - ''
+        - "§x&e&6&a&b&4&eᴄʀᴀғᴛɪɴɢ sᴜᴘᴘʟʏ"
+    spider_venom:
+        name: "&aSpider Venom"
+        item: stick
+        custom_model_data: 602
+        lore:
+        - ''
+        - "&7A rare Spider drop."
+        - "&7Can be sold or used in forging."
+        - ''
+        - "§x&e&6&a&b&4&eᴄʀᴀғᴛɪɴɢ sᴜᴘᴘʟʏ"
+    dragonscale:
+        name: "&aDragonscale"
+        item: stick
+        custom_model_data: 603
+        lore:
+        - ''
+        - "&7A piece that broke off from"
+        - "&7the armor of a legendary beast."
+        - "&7Can be sold or used in forging."
+        - ''
+        - "§x&e&6&a&b&4&eᴄʀᴀғᴛɪɴɢ sᴜᴘᴘʟʏ"

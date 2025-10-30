@@ -1,0 +1,288 @@
+panels:
+  sell_menu_mob_drops:
+    perm: default
+    rows: 5
+    title: '&f'
+    empty: AIR
+    sound-on-open: BLOCK_NOTE_BLOCK_HAT
+    
+    custom-item:
+      zombie_brain:
+        itemType:
+        - noAttributes
+        material: STICK
+        customdata: 601
+        name: '&aZombie Brain'
+      skeleton_skull:
+        itemType:
+        - noAttributes
+        material: SKELETON_SKULL
+        name: '&aSkeleton Skull'
+      spider_venom:
+        itemType:
+        - noAttributes
+        material: STICK
+        customdata: 602
+        name: '&aSpider Venom'
+      dragonscale:
+        itemType:
+        - noAttributes
+        material: STICK
+        customdata: 603
+        name: '&aDragonscale'
+    
+    
+    
+    item:
+    
+    
+    
+      '0':
+        material: STICK
+        customdata: 1
+        name: '&c← Previous Menu'
+        commands:
+        - open= main_menu
+      
+      '38':
+        material: STICK
+        customdata: 1
+        name: '&a← Previous Page'
+        commands:
+        - open= sell_menu_farming
+
+
+      
+      
+      
+      '10':
+        material: ROTTEN_FLESH
+        stack: 16
+        name: '%color_menu_primary%Rotten Flesh'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7SELL &f&l16 &7FOR %color_gold%20 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - sell= 20 ROTTEN_FLESH 16
+      '11':
+        material: BONE
+        stack: 16
+        name: '%color_menu_primary%Bone'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7SELL &f&l16 &7FOR %color_gold%25 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - sell= 25 BONE 16
+      '12':
+        material: STRING
+        stack: 16
+        name: '%color_menu_primary%String'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7SELL &f&l16 &7FOR %color_gold%30 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - sell= 30 STRING 16
+      '13':
+        material: GUNPOWDER
+        stack: 16
+        name: '%color_menu_primary%Gunpowder'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7SELL &f&l16 &7FOR %color_gold%40 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - sell= 40 GUNPOWDER 16
+      '14':
+        material: SPIDER_EYE
+        stack: 1
+        name: '%color_menu_primary%Spider Eye'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7SELL &f&l1 &7FOR %color_gold%15 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - sell= 15 SPIDER_EYE 1
+      '15':
+        material: PHANTOM_MEMBRANE
+        stack: 4
+        name: '%color_menu_primary%Phantom Membrane'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7SELL &f&l4 &7FOR %color_gold%20 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - sell= 20 PHANTOM_MEMBRANE 4
+      '16':
+        material: INK_SAC
+        stack: 4
+        name: '%color_menu_primary%Ink Sac'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7SELL &f&l4 &7FOR %color_gold%30 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - sell= 30 INK_SAC 4
+      
+      
+      
+      
+      '19':
+        material: ENDER_PEARL
+        stack: 4
+        name: '%color_menu_primary%Ender Pearl'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7SELL &f&l4 &7FOR %color_gold%50 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - sell= 50 ENDER_PEARL 4
+      '20':
+        material: SLIME_BALL
+        stack: 4
+        name: '%color_menu_primary%Slimeball'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7SELL &f&l4 &7FOR %color_gold%30 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - sell= 30 SLIME_BALL 4
+      '21':
+        material: RABBIT_FOOT
+        stack: 1
+        name: '%color_menu_primary%Rabbit''s Foot'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7SELL &f&l1 &7FOR %color_gold%25 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - sell= 25 RABBIT_FOOT 1
+      '22':
+        material: SCUTE
+        stack: 1
+        name: '%color_menu_primary%Scute'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7SELL &f&l1 &7FOR %color_gold%60 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - sell= 60 SCUTE 1
+      '23':
+        material: BLAZE_ROD
+        stack: 2
+        name: '%color_menu_primary%Blaze Rod'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7SELL &f&l2 &7FOR %color_gold%25 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - sell= 25 BLAZE_ROD 2
+      '24':
+        material: MAGMA_CREAM
+        stack: 2
+        name: '%color_menu_primary%Magma Cream'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7SELL &f&l2 &7FOR %color_gold%15 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - sell= 15 MAGMA_CREAM 2
+      '25':
+        material: GHAST_TEAR
+        stack: 1
+        name: '%color_menu_primary%Ghast Tear'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7SELL &f&l1 &7FOR %color_gold%40 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - sell= 40 GHAST_TEAR 1
+      '28':
+        material: SHULKER_SHELL
+        stack: 1
+        name: '%color_menu_primary%Shulker Shell'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7SELL &f&l1 &7FOR %color_gold%50 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - sell= 50 SHULKER_SHELL 1
+      '29':
+        material: WITHER_SKELETON_SKULL
+        stack: 1
+        name: '%color_menu_primary%Wither Skeleton Skull'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7SELL &f&l1 &7FOR %color_gold%300 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - sell= 300 WITHER_SKELETON_SKULL 1
+      '30':
+        material: STICK
+        customdata: 601
+        name: '%color_menu_primary%Zombie Brain'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7SELL &f&l1 &7FOR %color_gold%100 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - item-paywall= zombie_brain 1
+        - console= eco give %cp-player-name% 100
+        
+      '31':
+        material: SKELETON_SKULL
+        name: '%color_menu_primary%Skeleton Skull'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7SELL &f&l1 &7FOR %color_gold%120 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - sell= 120 SKELETON_SKULL 1
+
+      '32':
+        material: STICK
+        customdata: 602
+        name: '%color_menu_primary%Spider Venom'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7SELL &f&l1 &7FOR %color_gold%150 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - item-paywall= spider_venom 1
+        - console= eco give %cp-player-name% 150
+
+      '33':
+        material: STICK
+        customdata: 603
+        name: '%color_menu_primary%Dragonscale'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7SELL &f&l1 &7FOR %color_gold%1000 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - item-paywall= dragonscale 1
+        - console= eco give %cp-player-name% 1000
+
+

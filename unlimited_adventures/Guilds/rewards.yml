@@ -1,0 +1,71 @@
+# Please DO NOT change version number!
+version: 1
+
+# 
+# Feel free to set up your own rewards for the Reputation system. Remember to follow the formatting.
+# Use 'command' word in order to use a command on reward claim. You can get a player's name by typing PLAYER_NAME. Example here:
+# command eco give PLAYER_NAME 100
+# To give player gold, use 'gold' word followed by a number.
+# To give player gems, use 'gems' word followed by a number.
+# To give items, an example would be: '10 of diamond'
+# In case of any issues, feel free to contact us on the Valiant Studio Discord server.
+# 
+slayers:
+    '1':
+        '1': diamond sword
+    '2':
+        '1': diamond boots
+    '3':
+        '1': diamond helmet
+    '4':
+        '1': diamond leggings
+    '5':
+        '1': diamond chestplate
+    '6':
+        '1': netherite ingot
+    '7':
+        '1': 4 of enchanted golden apple
+    '8':
+        '1': diamond chestplate of protection 4
+    '9':
+        '1': diamond sword of sharpness 6
+
+miners:
+    '1':
+        '1': diamond pickaxe
+    '2':
+        '1': 4 of diamond
+    '3':
+        '1': 64 of tnt
+    '4':
+        '1': diamond pickaxe of efficiency 5
+    '5':
+        '1': 2 of netherite ingot
+    '6':
+        '1': 8 of diamond
+    '7':
+        '1': diamond helmet of blast protection 4
+    '8':
+        '1': diamond boots of swift sneak 3
+    '9':
+        '1': diamond pickaxe of efficiency 6
+
+ranchers:
+    '1':
+        '1': diamond axe
+    '2':
+        '1': diamond hoe
+    '3':
+        '1': fishing rod of lure 3
+    '4':
+        '1': 32 of golden carrot
+    '5':
+        '1': 8 of golden apple
+    '6':
+        '1': diamond horse armor
+    '7':
+        '1': diamond boots of protection 4 and feather falling 4
+    '8':
+        '1': totem of undying
+    '9':
+        '1': elytra

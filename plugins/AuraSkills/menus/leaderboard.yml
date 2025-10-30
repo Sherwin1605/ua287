@@ -1,17 +1,17 @@
 title: '{{leaderboard_title}}'
 size: 5
 fill:
-  enabled: true
-  material: clay_ball
-  nbt:
-    CustomModelData: 1
+  enabled: false
+  material: black_stained_glass_pane
 items:
   back:
-    material: arrow
-    pos: 4,4
+    material: stick
+    pos: 0,0
     display_name: '<green>{{back}}'
     lore:
       - '<gray>{{back_click}}'
+    nbt:
+      CustomModelData: 1
 templates:
   leaderboard_player:
     material: player_head
@@ -36,6 +36,6 @@ templates:
         pos: 3,6
       10:
         pos: 3,7
-    display_name: '<yellow>{place}. <gold>{player}'
+    display_name: '<#7dff49>{place}. <green>{player}'
     lore:
       - '<gray>{{level}}: <white>{level}'

@@ -1,0 +1,12 @@
+# Please DO NOT change version number!
+version: 1
+
+ranks:
+    player: ''
+    ultra: 
+    hero: 
+    legend: 
+    helper: 
+    moderator: 
+    admin: 
+    owner: 

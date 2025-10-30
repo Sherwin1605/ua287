@@ -1,0 +1,13 @@
+# Please DO NOT change version number!
+version: 1
+
+# 
+# Choose if you want the server to automatically detect AFK players.
+# 
+detect_afk: true
+
+afk_delay: 180
+
+fullscreen_afk_popup: true
+
+afk_tag_ingame: true

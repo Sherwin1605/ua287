@@ -1,0 +1,187 @@
+panels:
+  sell_menu_minerals:
+    perm: default
+    rows: 5
+    title: '&f'
+    empty: AIR
+    sound-on-open: BLOCK_NOTE_BLOCK_HAT
+    item:
+
+
+      '0':
+        material: STICK
+        customdata: 1
+        name: '&c← Previous Menu'
+        commands:
+        - open= main_menu
+      
+      '38':
+        material: STICK
+        customdata: 1
+        name: '&a← Previous Page'
+        commands:
+        - open= sell_menu_mining
+      '42':
+        material: STICK
+        customdata: 2
+        name: '&aNext Page →'
+        commands:
+        - open= sell_menu_farming
+      
+      
+      
+      
+      
+      '10':
+        material: COPPER_INGOT
+        stack: 16
+        name: '%color_menu_primary%Copper Ingot'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7SELL &f&l16 &7FOR %color_gold%80 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - sell= 80 COPPER_INGOT 16
+      '11':
+        material: IRON_INGOT
+        stack: 16
+        name: '%color_menu_primary%Iron Ingot'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7SELL &f&l16 &7FOR %color_gold%90 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - sell= 90 IRON_INGOT 16
+      '12':
+        material: GOLD_INGOT
+        stack: 16
+        name: '%color_menu_primary%Gold Ingot'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7SELL &f&l16 &7FOR %color_gold%110 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - sell= 110 GOLD_INGOT 16
+      '13':
+        material: FLINT
+        stack: 16
+        name: '%color_menu_primary%Flint'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7SELL &f&l16 &7FOR %color_gold%60 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - sell= 60 FLINT 16
+      '14':
+        material: COAL
+        stack: 16
+        name: '%color_menu_primary%Coal'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7SELL &f&l16 &7FOR %color_gold%60 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - sell= 60 COAL 16
+      '15':
+        material: REDSTONE
+        stack: 16
+        name: '%color_menu_primary%Redstone'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7SELL &f&l16 &7FOR %color_gold%30 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - sell= 30 REDSTONE 16
+      '16':
+        material: GLOWSTONE_DUST
+        stack: 16
+        name: '%color_menu_primary%Glowstone'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7SELL &f&l16 &7FOR %color_gold%50 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - sell= 50 GLOWSTONE_DUST 16
+        
+        
+        
+        
+      
+      '19':
+        material: LAPIS_LAZULI
+        stack: 16
+        name: '%color_menu_primary%Lapis Lazuli'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7SELL &f&l16 &7FOR %color_gold%40 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - sell= 40 LAPIS_LAZULI 16
+      '20':
+        material: QUARTZ
+        stack: 16
+        name: '%color_menu_primary%Quartz'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7SELL &f&l16 &7FOR %color_gold%50 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - sell= 50 QUARTZ 16
+      '21':
+        material: AMETHYST_SHARD
+        name: '%color_menu_primary%Amethyst Shard'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7SELL &f&l1 &7FOR %color_gold%20 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - sell= 20 AMETHYST_SHARD 1
+      '22':
+        material: EMERALD
+        name: '%color_menu_primary%Emerald'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7SELL &f&l1 &7FOR %color_gold%60 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - sell= 60 EMERALD 1
+      '23':
+        material: DIAMOND
+        name: '%color_menu_primary%Diamond'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7SELL &f&l1 &7FOR %color_gold%200 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - sell= 200 DIAMOND 1
+      '24':
+        material: NETHERITE_INGOT
+        name: '%color_menu_primary%Netherite Ingot'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7SELL &f&l1 &7FOR %color_gold%500 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to sell'
+        commands:
+        - sell= 500 NETHERITE_INGOT 1
+        
+        
+        
+        
+      
+      '30':
+        material: AIR
+        name: ' '
+        duplicate: "30-33"

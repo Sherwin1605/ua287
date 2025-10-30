@@ -1,0 +1,333 @@
+# Please DO NOT change version number!
+version: 1
+
+'1':
+    lore: 32 Cooked Beef
+    material: COOKED_BEEF
+    amount: 32
+
+'2':
+    lore: 250 Gold
+    material: STICK
+    customdata: 91
+
+'3':
+    lore: 16 Iron Ingots
+    material: IRON_INGOT
+    amount: 16
+
+'4':
+    lore: 250 Gold
+    material: STICK
+    customdata: 91
+
+'5':
+    lore: 16 Gold Ingots
+    material: GOLD_INGOT
+    amount: 16
+
+'6':
+    lore: 8 Slime Blocks
+    material: SLIME_BLOCK
+    amount: 8
+
+'7':
+    lore: 100 Gems
+    material: STICK
+    customdata: 92
+
+'8':
+    lore: 250 Gold
+    material: STICK
+    customdata: 91
+
+'9':
+    lore: 16 Experience Bottles
+    material: EXPERIENCE_BOTTLE
+    amount: 16
+
+'10':
+    lore: 250 Gold
+    material: STICK
+    customdata: 91
+
+'11':
+    lore: 3 Golden Apples
+    material: GOLDEN_APPLE
+    amount: 3
+
+'12':
+    lore: 3 Iron Blocks
+    material: IRON_BLOCK
+    amount: 3
+
+'13':
+    lore: Nametag
+    material: NAME_TAG
+
+'14':
+    lore: 8 TNT
+    material: TNT
+    amount: 8
+
+'15':
+    lore: Spyglass
+    material: SPYGLASS
+
+'16':
+    lore: 100 Gems
+    material: STICK
+    customdata: 92
+
+'17':
+    lore: 250 Gold
+    material: STICK
+    customdata: 91
+
+'18':
+    lore: 8 Ender Pearls
+    material: ENDER_PEARL
+    amount: 8
+
+'19':
+    lore: Diamond Sword
+    material: DIAMOND_SWORD
+
+'20':
+    lore: 250 Gold
+    material: STICK
+    customdata: 91
+
+'21':
+    lore: 32 Golden Carrots
+    material: GOLDEN_CARROT
+    amount: 32
+
+'22':
+    lore: 2 Diamonds
+    material: DIAMOND
+    amount: 2
+
+'23':
+    lore: 32 Experience Bottles
+    material: EXPERIENCE_BOTTLE
+    amount: 32
+
+'24':
+    lore: 250 Gold
+    material: STICK
+    customdata: 91
+
+'25':
+    lore: 5 Iron Blocks
+    material: IRON_BLOCK
+    amount: 5
+
+'26':
+    lore: 16 Obsidian
+    material: OBSIDIAN
+    amount: 16
+
+'27':
+    lore: Netherite Scrap
+    material: NETHERITE_SCRAP
+
+'28':
+    lore: 32 Fireworks
+    material: FIREWORK_ROCKET
+    amount: 32
+
+'29':
+    lore: 32 TNT
+    material: TNT
+    amount: 32
+
+'30':
+    lore: 8 Emeralds
+    material: EMERALD
+    amount: 8
+
+'31':
+    lore: 16 Spectral Arrows
+    material: SPECTRAL_ARROW
+    amount: 16
+
+'32':
+    lore: 250 Gold
+    material: STICK
+    customdata: 91
+
+'33':
+    lore: 2 Diamonds
+    material: DIAMOND
+    amount: 2
+
+'34':
+    lore: Emerald Block
+    material: EMERALD_BLOCK
+
+'35':
+    lore: 100 Gems
+    material: STICK
+    customdata: 92
+
+'36':
+    lore: 16 Arrows of Slowness
+    material: TIPPED_ARROW
+    amount: 16
+
+'37':
+    lore: 64 Experience Bottles
+    material: EXPERIENCE_BOTTLE
+    amount: 64
+
+'38':
+    lore: Diamond Boots
+    material: DIAMOND_BOOTS
+
+'39':
+    lore: 3 Gold Blocks
+    material: GOLD_BLOCK
+    amount: 3
+
+'40':
+    lore: 250 Gold
+    material: STICK
+    customdata: 91
+
+'41':
+    lore: 2 Shulker Shells
+    material: SHULKER_SHELL
+    amount: 2
+
+'42':
+    lore: 5 Golden Apples
+    material: GOLDEN_APPLE
+    amount: 5
+
+'43':
+    lore: 16 Emeralds
+    material: EMERALD
+    amount: 16
+
+'44':
+    lore: Netherite Scrap
+    material: NETHERITE_SCRAP
+
+'45':
+    lore: 32 Obsidian
+    material: OBSIDIAN
+    amount: 32
+
+'46':
+    lore: 4 Diamonds
+    material: DIAMOND
+    amount: 4
+
+'47':
+    lore: 5 Emerald Blocks
+    material: EMERALD_BLOCK
+    amount: 5
+
+'48':
+    lore: 250 Gold
+    material: STICK
+    customdata: 91
+
+'49':
+    lore: 100 Gems
+    material: STICK
+    customdata: 92
+
+'50':
+    lore: 64 Experience Bottles
+    material: EXPERIENCE_BOTTLE
+    amount: 64
+
+'51':
+    lore: Diamond Pickaxe
+    material: DIAMOND_PICKAXE
+
+'52':
+    lore: 5 Gold Blocks
+    material: GOLD_BLOCK
+    amount: 5
+
+'53':
+    lore: Diamond Horse Armor
+    material: DIAMOND_HORSE_ARMOR
+
+'54':
+    lore: 250 Gold
+    material: STICK
+    customdata: 91
+
+'55':
+    lore: Potion of Strength II (01:30)
+    material: POTION
+
+'56':
+    lore: Diamond Block
+    material: DIAMOND_BLOCK
+
+'57':
+    lore: Enchanted Golden Apple
+    material: ENCHANTED_GOLDEN_APPLE
+
+'58':
+    lore: Diamond Axe
+    material: DIAMOND_AXE
+
+'59':
+    lore: 2 Netherite Scrap
+    material: NETHERITE_SCRAP
+    amount: 2
+
+'60':
+    lore: Diamond Helmet
+    material: DIAMOND_HELMET
+
+'61':
+    lore: 5 Diamonds
+    material: DIAMOND
+    amount: 5
+
+'62':
+    lore: Totem of Undying
+    material: TOTEM_OF_UNDYING
+
+'63':
+    lore: 100 Gems
+    material: STICK
+    customdata: 92
+
+'64':
+    lore: 16 Golden Apples
+    material: GOLDEN_APPLE
+    amount: 16
+
+'65':
+    lore: Diamond Leggings
+    material: DIAMOND_LEGGINGS
+
+'66':
+    lore: 64 Experience Bottles
+    material: EXPERIENCE_BOTTLE
+    amount: 64
+
+'67':
+    lore: Trident
+    material: TRIDENT
+
+'68':
+    lore: Diamond Chestplate
+    material: DIAMOND_CHESTPLATE
+
+'69':
+    lore: 3 Netherite Scrap
+    material: NETHERITE_SCRAP
+    amount: 3
+
+'70':
+    lore: Elytra
+    material: ELYTRA

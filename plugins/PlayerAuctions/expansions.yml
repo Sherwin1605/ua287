@@ -204,16 +204,16 @@ currencies:
     # What version of this expansion do you want to download/use?
     version: "latest"
     # The name that is used in-game to decide what currency to use.
-    name: "money"
+    name: "gold"
     # The prefix of the price variable, this is how you want the variable to show when using the money currency.
-    prefix: "$%price%"
+    prefix: "%price%"
     # The minimum amount they need to at least pay when using this currency in the confirmation GUI. Set to -1 to ignore.
     min-price-purchase: -1
     # What's the minimum amount the player can add to the offer of a bid?
     # This is to stop people from adding for example $1 when the bid is about to end to win the bid.
-    min-bid-amount: 1000
+    min-bid-amount: 10
     # What is the minimum price for an auction?
-    min-price-auction: 1000
+    min-price-auction: 1
     # What is the maximum price for an auction?
     max-price-auction: 9999999
     # How should the plugin interact with vault, by default the plugin uses player names due to some limitations with economy plugins.

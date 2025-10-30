@@ -1,0 +1,938 @@
+on load:
+	wait 10 seconds
+	AmbientsReload()
+
+command /ambientsreload:
+	permission: admin
+	trigger:
+		AmbientsReload()
+		wait 2 seconds
+		if {ambients::enabled} is true:
+			send "&f &fAmbient Sounds config file has been reloaded! &a(Ambients Enabled)" to sender
+		if {ambients::enabled} is false:
+			send "&f &fAmbient Sounds config file has been reloaded! &c(Ambients Disabled)" to sender
+
+function AmbientsReload():
+	load yaml "unlimited_adventures/Ambients/config.yml" as "config"
+	load yaml "unlimited_adventures/Ambients/sounds.yml" as "sounds"
+	load yaml "unlimited_adventures/Ambients/location_sounds.yml" as "location_sounds"
+	
+	if yaml value "version" from "config" is not set:
+		wait 1 tick
+		AmbientsCreateConfigFile()
+	if yaml value "version" from "sounds" is 2:
+		wait 1 tick
+	else:
+		wait 1 tick
+		AmbientsCreateSoundsFile()
+		wait 5 ticks
+	if yaml value "version" from "location_sounds" is 2:
+		wait 1 tick
+	else:
+		wait 1 tick
+		AmbientsCreateLocationSoundsFile()
+		wait 2 ticks
+
+
+
+	clear {ambients::*}
+
+	set {ambients::enabled} to yaml value "enabled" from "config"
+	set {ambients::biomes::forests::*} to yaml list "forest-biomes" from "config"
+	set {ambients::biomes::green::*} to yaml list "green-biomes" from "config"
+	set {ambients::biomes::arid::*} to yaml list "arid-biomes" from "config"
+	set {ambients::biomes::winter::*} to yaml list "winter-biomes" from "config"
+	set {ambients::biomes::high::*} to yaml list "high-biomes" from "config"
+	set {ambients::biomes::ocean::*} to yaml list "ocean-biomes" from "config"
+
+	set {_nr1} to 0
+	loop yaml node keys "" from "sounds":
+		set {_sound} to loop-value
+		set {_sound_name} to yaml value "%{_sound}%.sound" from "sounds"
+		set {ambients::%{_sound}%::sound} to yaml value "%{_sound}%.sound" from "sounds"
+		if yaml list "%{_sound}%.worlds" from "sounds" is set:
+			set {ambients::%{_sound}%::worlds::*} to yaml list "%{_sound}%.worlds" from "sounds"
+		if yaml list "%{_sound}%.biomes" from "sounds" is set:
+			set {ambients::%{_sound}%::biomes::*} to yaml list "%{_sound}%.biomes" from "sounds"
+		if yaml list "%{_sound}%.levels" from "sounds" is set:
+			set {ambients::%{_sound}%::levels::*} to yaml list "%{_sound}%.levels" from "sounds"
+		if yaml list "%{_sound}%.time_of_day" from "sounds" is set:
+			set {ambients::%{_sound}%::time_of_day::*} to yaml list "%{_sound}%.time_of_day" from "sounds"
+		if yaml list "%{_sound}%.weather" from "sounds" is set:
+			set {ambients::%{_sound}%::weather::*} to yaml list "%{_sound}%.weather" from "sounds"
+		set {_time} to yaml value "%{_sound}%.delay" from "sounds"
+		set {ambients::%{_sound}%::delay} to Time("%{_time}% seconds")
+		set {ambients::%{_sound}%::amplitude} to yaml value "%{_sound}%.amplitude" from "sounds"
+		if yaml value "%{_sound}%.volume" from "sounds" is set:
+			set {ambients::%{_sound}%::volume} to yaml value "%{_sound}%.volume" from "sounds"
+		if yaml value "%{_sound}%.pitch" from "sounds" is set:
+			set {ambients::%{_sound}%::pitch} to yaml value "%{_sound}%.pitch" from "sounds"
+		if yaml value "%{_sound}%.play_when_submerged" from "sounds" is set:
+			set {ambients::%{_name}%::play_when_submerged} to yaml value "%{_sound}%.play_when_submerged" from "sounds"
+		if yaml value "%{_sound}%.prevent_stacking" from "sounds" is set:
+			set {_time} to yaml value "%{_sound}%.prevent_stacking" from "sounds"
+			set {ambients::%{_sound}%::prevent_stacking} to Time("%{_time}% seconds")
+		add {_sound} to {ambients::sounds::*}
+		
+		add 1 to {_nr1}
+		if mod({_nr1}, 5) = 0:
+			wait 1 tick
+
+
+	clear {location_sounds::*}
+
+	loop yaml node keys "" from "location_sounds":
+		set {_sound} to loop-value
+		set {_sound_name} to yaml value "%{_sound}%.sound" from "location_sounds"
+		set {location_sounds::%{_sound}%::sound} to yaml value "%{_sound}%.sound" from "location_sounds"
+		if yaml value "%{_sound}%.location" from "location_sounds" is set:
+			set {_loc::*} to yaml value "%{_sound}%.location" from "location_sounds" split at ", "
+			set {location_sounds::%{_sound}%::location} to location({_loc::1} parsed as number, {_loc::2} parsed as number, {_loc::3} parsed as number, {_loc::4})
+#			send "%{location_sounds::%{_sound}%::location}%" to all players
+		set {_time} to yaml value "%{_sound}%.delay" from "location_sounds"
+		set {location_sounds::%{_sound}%::delay} to Time("%{_time}% seconds")
+		set {location_sounds::%{_sound}%::amplitude} to yaml value "%{_sound}%.amplitude" from "location_sounds"
+		if yaml value "%{_sound}%.volume" from "location_sounds" is set:
+			set {location_sounds::%{_sound}%::volume} to yaml value "%{_sound}%.volume" from "location_sounds"
+		if yaml value "%{_sound}%.pitch" from "location_sounds" is set:
+			set {location_sounds::%{_sound}%::pitch} to yaml value "%{_sound}%.pitch" from "location_sounds"
+		if yaml value "%{_sound}%.play_when_submerged" from "location_sounds" is set:
+			set {location_sounds::%{_name}%::play_when_submerged} to yaml value "%{_sound}%.play_when_submerged" from "location_sounds"
+		add {_sound} to {location_sounds::sounds::*}
+
+		add 1 to {_nr2}
+		if mod({_nr2}, 5) = 0:
+			wait 1 tick
+
+
+
+
+	save yaml "config"
+	save yaml "sounds"
+	save yaml "location_sounds"
+
+
+every second:
+	loop {players::*}:
+		AmbientTickPlayer(loop-value)
+		LocationSoundsTickPlayer(loop-value)
+
+
+
+function AmbientTickPlayer(player: player):
+	if {ambients::enabled} is false:
+		stop
+
+	set {_biome} to {_player}'s biome
+	set {_world} to world of {_player}
+	set {_weather} to weather in {_player}'s world
+	set {_region} to "%region at {_player}%"
+	replace all "in world %{_world}%" in {_region} with ""
+
+
+	set {_level} to "surface"
+	if y coordinate of {_player} > 64+90:
+		set {_level} to "sky"
+	if y coordinate of {_player} < 64-20:
+		set {_level} to "underground"
+
+	if {_region} contains "dungeon":
+		set {_biome} to "dungeons"
+		set {_level} to "surface"
+		set {_outside} to false
+
+	if {_region} contains "spawn":
+#		set {_biome} to "spawn"
+		set {_level} to "surface"
+#		if y coordinate of {_player} > 100:
+#			set {_level} to "sky"
+
+
+	set {_current_time} to "night"
+	if {_player}'s world's time > 5:00:
+		set {_current_time} to "morning"
+	if {_player}'s world's time > 10:00:
+		set {_current_time} to "noon"
+	if {_player}'s world's time > 16:00:
+		set {_current_time} to "evening"
+	if {_player}'s world's time > 20:00:
+		set {_current_time} to "night"
+
+
+
+	if {ambients::sounds::*} is set:
+		loop {ambients::sounds::*}:
+			set {_name} to loop-value
+			set {_sound_name} to {ambients::%{_name}%::sound}
+
+			if {ambients::%{_name}%::play_when_submerged} is not true:
+				if block above {_player} is water or falling water:
+					stop sound {_sound_name} for {_player}
+
+			if {ambients::%{_name}%::worlds::*} is set:
+				set {_worlds::*} to {ambients::%{_name}%::worlds::*}
+				if {_worlds::*} doesn't contain {_world}:
+#					send "wrong world" to {_player}
+					continue loop
+
+			if BiomeCheck({_player}, {_name}) is false:
+#				send "wrong biome" to {_player}
+				continue loop
+
+			if {ambients::%{_name}%::levels::*} is set:
+				set {_levels::*} to {ambients::%{_name}%::levels::*}
+				if {_levels::*} doesn't contain {_level}:
+#					send "wrong level" to {_player}
+					continue loop
+
+			if {ambients::%{_name}%::weather::*} is set:
+				set {_weather::*} to {ambients::%{_name}%::weather::*}
+				if {_weather::*} doesn't contain "%{_weather}%":
+#					send "wrong weather" to {_player}
+					continue loop
+			
+			if {ambients::%{_name}%::time_of_day::*} is set:
+				set {_time_of_day::*} to {ambients::%{_name}%::time_of_day::*}
+				if {_time_of_day::*} doesn't contain {_current_time}:
+#					send "wrong time" to {_player}
+					continue loop
+
+			if {ambients::%{_name}%::play_when_submerged} is not true:
+				if block above {_player} is water or falling water:
+#					send "can't be submerged!" to {_player}
+					continue loop
+
+			if {ambients::%{_name}%::prevent_stacking} is set:
+				if difference between metadata value "ambients_lastsound_cooldown" of {_player} and now < {ambients::%{_name}%::prevent_stacking}:
+					continue loop
+
+			set {_delay} to {ambients::%{_name}%::delay}
+			set {_amplitude} to {ambients::%{_name}%::amplitude}
+			
+			set {_playsound} to false
+			if metadata value "ambients_%{_name}%_cooldown" of {_player} is not set:
+				chance of 20%:
+					set {_playsound} to true
+			else if difference between metadata value "ambients_%{_name}%_cooldown" of {_player} and now >= {_delay}:
+				set {_playsound} to true
+			if {_playsound} is true:
+				set {_now} to now
+				add Time("%random number between 0-{_amplitude} and {_amplitude}% seconds") to {_now}
+				set metadata value "ambients_lastsound_cooldown" of {_player} to {_now}
+				set metadata value "ambients_%{_name}%_cooldown" of {_player} to {_now}
+
+				set {_loc} to location of {_player}
+				add random number between -10 and 10 to x coordinate of {_loc}
+				add random number between 0 and 5 to y coordinate of {_loc}
+				add random number between -10 and 10 to z coordinate of {_loc}
+				set {_volume} to 1
+				if {ambients::%{_name}%::volume} is set:
+					set {_volume} to {ambients::%{_name}%::volume}
+				set {_pitch} to 1
+				if {ambients::%{_name}%::pitch} is set:
+					set {_pitch} to {ambients::%{_name}%::pitch}
+				set {_pitch} to random number between {_pitch}*0.9 and {_pitch}*1.1
+				set {_range1} to 0-{_volume}*0.1
+				set {_range2} to {_volume}*0.1
+				play sound {_sound_name} in ambient category with volume ({_volume} + random number between {_range1} and {_range2}) and pitch {_pitch} at {_loc} to {_player}
+
+#				send "%{_sound_name}% (%{_name}%)" to {_player}
+
+
+
+
+
+
+
+
+function LocationSoundsTickPlayer(player: player):
+	if {ambients::enabled} is false:
+		stop
+
+
+
+
+	if {location_sounds::sounds::*} is set:
+		loop {location_sounds::sounds::*}:
+			set {_name} to loop-value
+			set {_sound_name} to {location_sounds::%{_name}%::sound}
+
+
+			if world of {_player} is not world of {location_sounds::%{_name}%::location}:
+				continue loop
+			if distance between {location_sounds::%{_name}%::location} and {_player} > 50:
+				continue loop
+
+			if {location_sounds::%{_name}%::play_when_submerged} is not true:
+				if block above {_player} is water or falling water:
+#					stop sound {_sound_name} for {_player}
+					continue loop
+
+
+			set {_delay} to {location_sounds::%{_name}%::delay}
+			set {_amplitude} to {location_sounds::%{_name}%::amplitude}
+			
+			set {_playsound} to false
+			if metadata value "location_sounds_%{_name}%_cooldown" of {_player} is not set:
+				chance of 20%:
+					set {_playsound} to true
+			else if difference between metadata value "location_sounds_%{_name}%_cooldown" of {_player} and now >= {_delay}:
+				set {_playsound} to true
+			if {_playsound} is true:
+				set {_now} to now
+				add Time("%random number between 0-{_amplitude} and {_amplitude}% seconds") to {_now}
+				set metadata value "location_sounds_%{_name}%_cooldown" of {_player} to {_now}
+
+				set {_loc} to {location_sounds::%{_name}%::location}
+				add random number between -10 and 10 to x coordinate of {_loc}
+				add random number between 0 and 5 to y coordinate of {_loc}
+				add random number between -10 and 10 to z coordinate of {_loc}
+				set {_volume} to 1
+				if {location_sounds::%{_name}%::volume} is set:
+					set {_volume} to {location_sounds::%{_name}%::volume}
+				set {_pitch} to 1
+				if {location_sounds::%{_name}%::pitch} is set:
+					set {_pitch} to {location_sounds::%{_name}%::pitch}
+				set {_pitch} to random integer between {_pitch}*0.9 and {_pitch}*1.1
+				set {_range1} to 0-{_volume}*0.1
+				set {_range2} to {_volume}*0.1
+				play sound {_sound_name} in ambient category with volume ({_volume} + random number between {_range1} and {_range2}) and pitch {_pitch} at {_loc} to {_player}
+
+#				send "%{_sound_name}% (%{_name}%)" to {_player}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function BiomeCheck(player: player, name: string) :: boolean:
+	set {_biome_correct} to false
+
+	if {ambients::%{_name}%::biomes::*} is not set:
+		set {_biome_correct} to true
+		return {_biome_correct}
+
+	set {_biome} to {_player}'s biome
+
+	set {_world} to world of {_player}
+	set {_region} to "%region at {_player}%"
+	replace all " in world %{_world}%" in {_region} with ""
+	if {_region} contains "dungeon":
+		set {_biome} to "dungeons"
+		set {_dungeon} to {_region}
+
+	if {_region} contains "spawn":
+		set {_biome} to "spawn"
+
+	
+	set {_biomes::*} to {ambients::%{_name}%::biomes::*}
+
+
+	#	Checking if biomes list contains current biome, and doesn't exclude it:
+	if {_biomes::*} contains "%{_biome}%":
+		if {_biomes::*} doesn't contain "!%{_biome}%":
+			set {_biome_correct} to true
+
+	#	Checking if biomes list contains current dungeon, and doesn't exclude it:
+
+	if "%{_biomes::*}%" contains "dungeon":
+		if "%{_biomes::*}%" contains "%{_dungeon}%":
+			if {_biomes::*} contains {_dungeon}:
+				if {_biomes::*} doesn't contain "!%{_dungeon}%":
+					set {_biome_correct} to true
+
+
+	#	Checking if biomes list contains any of the biome groups:
+	if {_biomes::*} contains "all forests" or "all forest biomes" or "forest biomes":
+		if {ambients::biomes::forests::*} contains "%{_biome}%":
+			set {_biome_correct} to true
+	if {_biomes::*} contains "all green" or "all green biomes" or "green biomes":
+		if {ambients::biomes::green::*} contains "%{_biome}%":
+			set {_biome_correct} to true
+	if {_biomes::*} contains "all winter" or "all winter biomes" or "winter biomes":
+		if {ambients::biomes::winter::*} contains "%{_biome}%":
+			set {_biome_correct} to true
+	if {_biomes::*} contains "all arid" or "all arid biomes" or "arid biomes":
+		if {ambients::biomes::arid::*} contains "%{_biome}%":
+			set {_biome_correct} to true
+	if {_biomes::*} contains "all high" or "all high biomes" or "high biomes":
+		if {ambients::biomes::high::*} contains "%{_biome}%":
+			set {_biome_correct} to true
+	if {_biomes::*} contains "all ocean" or "all ocean biomes" or "ocean biomes":
+		if {ambients::biomes::ocean::*} contains "%{_biome}%":
+			set {_biome_correct} to true
+
+	return {_biome_correct}
+
+
+
+
+
+
+on step on grass block or dirt or coarse dirt:
+	if player is sprinting:
+		BirdsTakeoffRunningThroughForest(player)
+	if block at player is short grass or any flower:
+		chance of 25%:
+			play sound "custom.bush_trampling" with volume random number between 0.3 and 0.5 and pitch random number between 0.9 and 1.4 at player
+	if block at player is tall grass:
+		chance of 50%:
+			play sound "custom.bush_trampling" with volume random number between 0.5 and 0.7 and pitch random number between 0.6 and 1.1 at player
+
+
+
+on break of any log:
+	if block 4 meters above event-block is any leaves:
+		BirdsTakeoffSound(player, location of event-block)
+	if block 9 meters above event-block is any leaves:
+		BirdsTakeoffSound(player, location of event-block)
+
+function BirdsTakeoffSound(player: player, loc: location):
+	if difference between metadata value "birds_takeoff_sound" of {_player} and now < 30 seconds:
+		stop
+	chance of 30%:
+		set metadata value "birds_takeoff_sound" of {_player} to now
+		set {_loc} to location 4 meters above {_loc}
+		play sound "custom.birds_takeoff" with volume random number between 0.6 and 0.9 and pitch random number between 0.9 and 1.1 at {_loc}
+
+function BirdsTakeoffRunningThroughForest(player: player):
+	if difference between metadata value "birds_takeoff_sound" of {_player} and now < 30 seconds:
+		stop
+	if {ambients::biomes::forests::*} contains "%{_player}'s biome%":
+		chance of 5%:
+			set metadata value "birds_takeoff_sound" of {_player} to now
+			play sound "custom.birds_takeoff" with volume random number between 0.6 and 0.9 and pitch random number between 0.9 and 1.1 at location 4 meters above {_player}
+
+
+
+function AmbientsCreateConfigFile():
+	load yaml "unlimited_adventures/Ambients/config.yml" as "config"
+	set yaml value "version" from "config" to 1
+	set yaml value "enabled" from "config" to true
+
+	set yaml list "forest-biomes" from "config" to "forest" and "flower forest" and "birch forest" and "old growth birch forest" and "dark forest" and "taiga"  and "old growth pine taiga" and "old growth spruce taiga" and "jungle" and "sparse jungle" and "bamboo jungle"
+	set yaml list "green-biomes" from "config" to "forest" and "flower forest" and "birch forest" and "old growth birch forest" and "dark forest" and "taiga"  and "old growth pine taiga" and "old growth spruce taiga" and "jungle" and "sparse jungle" and "bamboo jungle" and "swamp" and "mangrove swamp" and "river" and "plains" and "sunflower plains" and "spawn"
+	set yaml list "arid-biomes" from "config" to "desert" and "savanna" and "savanna plateau" and "windswept savanna" and "mesa" and "wooded badlands" and "eroded badlands"
+	set yaml list "winter-biomes" from "config" to "snowy plains" and "ice spikes" and "frozen river" and "grove" and "snowy slopes" and "snowy taiga" and "frozen peaks" and "jagged peaks" and "snowy beach" and "frozen ocean" and "deep frozen ocean"
+	set yaml list "high-biomes" from "config" to "jagged peaks" and "frozen peaks" and "stony peaks" and "meadow" and "windswept hills" and "windswept gravelly hills" and "windswept forest" and "windswept savanna"
+	set yaml list "ocean-biomes" from "config" to "ocean" and "deep ocean" and "warm ocean" and "lukewarm ocean" and "deep lukewarm ocean" and "cold ocean" and "deep cold ocean" and "frozen ocean" and "deep frozen ocean" and "mushroom fields" and "beach" and "snowy beach" and "stony shore"
+
+	set the comments of yaml node "enabled" from "config" to "Should the Ambient Sounds be enabled?"
+	set the comments of yaml node "version" from "config" to "Please DO NOT change version number!"
+	save yaml "config"
+
+
+
+
+
+function AmbientsCreateSoundsFile():
+	load yaml "unlimited_adventures/Ambients/sounds.yml" as "sounds"
+
+	set yaml value "version" from "sounds" to 2
+	set the comments of yaml node "version" from "sounds" to "Please DO NOT change version number!"
+
+	#	Wind
+	set yaml value "regular_wind.sound" from "sounds" to "ambient.medium_wind"
+	set yaml list "regular_wind.biomes" from "sounds" to "green biomes"
+	set yaml list "regular_wind.levels" from "sounds" to "surface"
+	set yaml list "regular_wind.weather" from "sounds" to "clear"
+	set yaml value "regular_wind.delay" from "sounds" to 8.5
+	set yaml value "regular_wind.amplitude" from "sounds" to 0
+	set yaml value "regular_wind.volume" from "sounds" to 0.35
+
+	set yaml value "rain_wind.sound" from "sounds" to "ambient.medium_wind"
+	set yaml list "rain_wind.biomes" from "sounds" to "green biomes" and "forest biomes"
+	set yaml list "rain_wind.levels" from "sounds" to "surface"
+	set yaml list "rain_wind.weather" from "sounds" to "rain"
+	set yaml value "rain_wind.delay" from "sounds" to 8.5
+	set yaml value "rain_wind.amplitude" from "sounds" to 0
+	set yaml value "rain_wind.volume" from "sounds" to 0.6
+
+	set yaml value "thunder_wind.sound" from "sounds" to "ambient.strong_wind"
+	set yaml list "thunder_wind.biomes" from "sounds" to "green biomes" and "forest biomes"
+	set yaml list "thunder_wind.levels" from "sounds" to "surface"
+	set yaml list "thunder_wind.weather" from "sounds" to "thunder"
+	set yaml value "thunder_wind.delay" from "sounds" to 8.5
+	set yaml value "thunder_wind.amplitude" from "sounds" to 0
+	set yaml value "thunder_wind.volume" from "sounds" to 0.25
+
+	set yaml value "sky_wind.sound" from "sounds" to "ambient.strong_wind"
+	set yaml list "sky_wind.biomes" from "sounds" to "green biomes" and "forest biomes"
+	set yaml list "sky_wind.levels" from "sounds" to "sky"
+	set yaml value "sky_wind.delay" from "sounds" to 8.1
+	set yaml value "sky_wind.amplitude" from "sounds" to 0
+	set yaml value "sky_wind.volume" from "sounds" to 0.30
+
+	set yaml value "hills_wind.sound" from "sounds" to "ambient.strong_wind"
+	set yaml list "hills_wind.biomes" from "sounds" to "high biomes"
+	set yaml list "hills_wind.levels" from "sounds" to "surface" and "sky"
+	set yaml value "hills_wind.delay" from "sounds" to 8.5
+	set yaml value "hills_wind.amplitude" from "sounds" to 0
+	set yaml value "hills_wind.volume" from "sounds" to 0.45
+
+	set yaml value "medium_wind_desert.sound" from "sounds" to "ambient.medium_wind.desert"
+	set yaml list "medium_wind_desert.biomes" from "sounds" to "arid biomes"
+	set yaml list "medium_wind_desert.levels" from "sounds" to "surface" and "sky"
+	set yaml list "medium_wind_desert.weather" from "sounds" to "clear"
+	set yaml value "medium_wind_desert.delay" from "sounds" to 16
+	set yaml value "medium_wind_desert.amplitude" from "sounds" to 5
+	set yaml value "medium_wind_desert.volume" from "sounds" to 0.35
+
+
+	set yaml value "winter_wind.sound" from "sounds" to "ambient.winter_wind"
+	set yaml list "winter_wind.biomes" from "sounds" to "winter biomes" and "!ocean biomes"
+	set yaml list "winter_wind.levels" from "sounds" to "surface" and "sky"
+	set yaml value "winter_wind.delay" from "sounds" to 8.5
+	set yaml value "winter_wind.amplitude" from "sounds" to 0
+	set yaml value "winter_wind.volume" from "sounds" to 0.25
+
+
+	set yaml value "ocean_breeze.sound" from "sounds" to "ambient.ocean_wind"
+	set yaml list "ocean_breeze.biomes" from "sounds" to "ocean biomes" and "river"
+	set yaml list "ocean_breeze.levels" from "sounds" to "surface" and "sky"
+	set yaml value "ocean_breeze.delay" from "sounds" to 12
+	set yaml value "ocean_breeze.amplitude" from "sounds" to 3
+	set yaml value "ocean_breeze.volume" from "sounds" to 0.25
+
+	wait 1 tick
+
+	#	Day
+
+	set yaml value "birds.sound" from "sounds" to "ambient.birds"
+	set yaml list "birds.biomes" from "sounds" to "green biomes" and "savanna" and "windswept savanna" and "savanna plateau" and "wooded badlands"
+	set yaml list "birds.levels" from "sounds" to "surface"#	Possibilities: surface, underground & sky
+	set yaml list "birds.time_of_day" from "sounds" to "morning" and "noon" and "evening"#	Possibilities: morning, noon, evening & night
+	set yaml list "birds.weather" from "sounds" to "clear"#	Possibilities: clear, rain & thunder
+	set yaml value "birds.delay" from "sounds" to 20
+	set yaml value "birds.amplitude" from "sounds" to 5
+	set yaml value "birds.prevent_stacking" from "sounds" to 2
+
+	set yaml value "crows.sound" from "sounds" to "ambient.crows"
+	set yaml list "crows.biomes" from "sounds" to "green biomes" and "savanna" and "windswept savanna" and "savanna plateau" and "wooded badlands" and "snowy plains"
+	set yaml list "crows.levels" from "sounds" to "surface"
+	set yaml list "crows.time_of_day" from "sounds" to "morning" and "noon"
+	set yaml list "crows.weather" from "sounds" to "clear"
+	set yaml value "crows.delay" from "sounds" to 50
+	set yaml value "crows.amplitude" from "sounds" to 5
+	set yaml value "crows.prevent_stacking" from "sounds" to 2
+
+	set yaml value "cicada.sound" from "sounds" to "ambient.cicada"
+	set yaml list "cicada.biomes" from "sounds" to "green biomes" and "high biomes"
+	set yaml list "cicada.levels" from "sounds" to "surface"
+	set yaml list "cicada.time_of_day" from "sounds" to "morning" and "noon" and "evening"
+	set yaml list "cicada.weather" from "sounds" to "clear" and "rain"
+	set yaml value "cicada.delay" from "sounds" to 20
+	set yaml value "cicada.amplitude" from "sounds" to 5
+	set yaml value "cicada.prevent_stacking" from "sounds" to 2
+
+	set yaml value "grasshopper.sound" from "sounds" to "ambient.grasshopper"
+	set yaml list "grasshopper.biomes" from "sounds" to "green biomes" and "arid biomes"
+	set yaml list "grasshopper.levels" from "sounds" to "surface"
+	set yaml list "grasshopper.time_of_day" from "sounds" to "noon" and "evening"
+	set yaml list "grasshopper.weather" from "sounds" to "clear" and "rain"
+	set yaml value "grasshopper.delay" from "sounds" to 30
+	set yaml value "grasshopper.amplitude" from "sounds" to 5
+	set yaml value "grasshopper.prevent_stacking" from "sounds" to 2
+
+	set yaml value "woodpecker.sound" from "sounds" to "ambient.woodpecker"
+	set yaml list "woodpecker.biomes" from "sounds" to "forest biomes"
+	set yaml list "woodpecker.levels" from "sounds" to "surface"
+	set yaml list "woodpecker.time_of_day" from "sounds" to "morning" and "noon"
+	set yaml list "woodpecker.weather" from "sounds" to "clear" and "rain"
+	set yaml value "woodpecker.delay" from "sounds" to 40
+	set yaml value "woodpecker.amplitude" from "sounds" to 8
+	set yaml value "woodpecker.prevent_stacking" from "sounds" to 2
+
+
+	#	Night
+
+	set yaml value "crickets.sound" from "sounds" to "ambient.crickets"
+	set yaml list "crickets.biomes" from "sounds" to "green biomes" and "high biomes" and "arid biomes"
+	set yaml list "crickets.levels" from "sounds" to "surface"
+	set yaml list "crickets.time_of_day" from "sounds" to "evening" and "night"
+	set yaml list "crickets.weather" from "sounds" to "clear" and "rain"
+	set yaml value "crickets.delay" from "sounds" to 15
+	set yaml value "crickets.amplitude" from "sounds" to 5
+	set yaml value "crickets.prevent_stacking" from "sounds" to 2
+
+	set yaml value "owl.sound" from "sounds" to "ambient.owl"
+	set yaml list "owl.biomes" from "sounds" to "green biomes"
+	set yaml list "owl.levels" from "sounds" to "surface"
+	set yaml list "owl.time_of_day" from "sounds" to "night"
+	set yaml list "owl.weather" from "sounds" to "clear" and "rain"
+	set yaml value "owl.delay" from "sounds" to 30
+	set yaml value "owl.amplitude" from "sounds" to 7
+	set yaml value "owl.prevent_stacking" from "sounds" to 2
+
+	set yaml value "frog.sound" from "sounds" to "ambient.frog"
+	set yaml list "frog.biomes" from "sounds" to "green biomes"
+	set yaml list "frog.levels" from "sounds" to "surface"
+	set yaml list "frog.time_of_day" from "sounds" to "evening" and "night"
+	set yaml list "frog.weather" from "sounds" to "clear" and "rain"
+	set yaml value "frog.delay" from "sounds" to 25
+	set yaml value "frog.amplitude" from "sounds" to 6
+	set yaml value "frog.prevent_stacking" from "sounds" to 2
+
+	set yaml value "wolf_howl.sound" from "sounds" to "ambient.wolf_howl"
+	set yaml list "wolf_howl.biomes" from "sounds" to "forest biomes" and "high biomes"
+	set yaml list "wolf_howl.levels" from "sounds" to "surface" and "sky"
+	set yaml list "wolf_howl.time_of_day" from "sounds" to "evening" and "night"
+	set yaml value "wolf_howl.delay" from "sounds" to 60
+	set yaml value "wolf_howl.amplitude" from "sounds" to 40
+	set yaml value "wolf_howl.prevent_stacking" from "sounds" to 3
+
+	wait 1 tick
+
+	#	Desert & Winter
+
+	set yaml value "desert_cricket.sound" from "sounds" to "ambient.desert_cricket"
+	set yaml list "desert_cricket.biomes" from "sounds" to "arid biomes"
+	set yaml list "desert_cricket.levels" from "sounds" to "surface"
+	set yaml value "desert_cricket.delay" from "sounds" to 20
+	set yaml value "desert_cricket.amplitude" from "sounds" to 5
+
+	set yaml value "desert_cricket_slowed.sound" from "sounds" to "ambient.desert_cricket_slowed"
+	set yaml list "desert_cricket_slowed.biomes" from "sounds" to "arid biomes"
+	set yaml list "desert_cricket_slowed.levels" from "sounds" to "surface"
+	set yaml value "desert_cricket_slowed.delay" from "sounds" to 25
+	set yaml value "desert_cricket_slowed.amplitude" from "sounds" to 7
+
+	set yaml value "grasshopper_click.sound" from "sounds" to "ambient.grasshopper.click"
+	set yaml list "grasshopper_click.biomes" from "sounds" to "arid biomes"
+	set yaml list "grasshopper_click.levels" from "sounds" to "surface"
+	set yaml value "grasshopper_click.delay" from "sounds" to 25
+	set yaml value "grasshopper_click.amplitude" from "sounds" to 10
+	set yaml value "grasshopper_click.volume" from "sounds" to 0.5
+
+	set yaml value "riser.sound" from "sounds" to "ambient.riser"
+	set yaml list "riser.biomes" from "sounds" to "arid biomes" and "winter biomes"
+	set yaml list "riser.levels" from "sounds" to "surface"
+	set yaml list "riser.time_of_day" from "sounds" to "morning" and "noon"
+	set yaml value "riser.delay" from "sounds" to 90
+	set yaml value "riser.amplitude" from "sounds" to 20
+	set yaml value "riser.volume" from "sounds" to 0.35
+	set yaml value "riser.prevent_stacking" from "sounds" to 2
+
+	set yaml value "western_chord.sound" from "sounds" to "ambient.western_chord"
+	set yaml list "western_chord.biomes" from "sounds" to "arid biomes" and "winter biomes"
+	set yaml list "western_chord.levels" from "sounds" to "surface"
+	set yaml list "western_chord.time_of_day" from "sounds" to "morning" and "noon"
+	set yaml value "western_chord.delay" from "sounds" to 120
+	set yaml value "western_chord.amplitude" from "sounds" to 30
+	set yaml value "western_chord.volume" from "sounds" to 0.4
+	set yaml value "western_chord.prevent_stacking" from "sounds" to 3
+
+	set yaml value "whoosh.sound" from "sounds" to "ambient.whoosh"
+	set yaml list "whoosh.biomes" from "sounds" to "arid biomes" and "winter biomes"
+	set yaml list "whoosh.levels" from "sounds" to "surface"
+	set yaml list "whoosh.time_of_day" from "sounds" to "evening" and "night"
+	set yaml value "whoosh.delay" from "sounds" to 90
+	set yaml value "whoosh.amplitude" from "sounds" to 10
+	set yaml value "whoosh.volume" from "sounds" to 0.35
+	set yaml value "whoosh.prevent_stacking" from "sounds" to 2
+
+	#	Winter
+
+	set yaml value "snowing.sound" from "sounds" to "ambient.snowing"
+	set yaml list "snowing.biomes" from "sounds" to "winter biomes"
+	set yaml list "snowing.levels" from "sounds" to "surface"
+	set yaml list "snowing.weather" from "sounds" to "rain" and "thunder"
+	set yaml value "snowing.delay" from "sounds" to 8.5
+	set yaml value "snowing.amplitude" from "sounds" to 0
+	set yaml value "snowing.volume" from "sounds" to 0.6
+
+	#	Hills
+
+	set yaml value "hills_dirt.sound" from "sounds" to "ambient.dirt"
+	set yaml list "hills_dirt.biomes" from "sounds" to "high biomes"
+	set yaml list "hills_dirt.levels" from "sounds" to "surface"
+	set yaml value "hills_dirt.delay" from "sounds" to 15
+	set yaml value "hills_dirt.amplitude" from "sounds" to 5
+
+	wait 1 tick
+
+	#	Sea
+
+	set yaml value "seagulls.sound" from "sounds" to "ambient.seagulls"
+	set yaml list "seagulls.biomes" from "sounds" to "ocean biomes"
+	set yaml list "seagulls.levels" from "sounds" to "surface"
+	set yaml list "seagulls.time_of_day" from "sounds" to "morning" and "noon" and "evening"
+	set yaml list "seagulls.weather" from "sounds" to "clear" and "rain"
+	set yaml value "seagulls.delay" from "sounds" to 25
+	set yaml value "seagulls.amplitude" from "sounds" to 5
+	set yaml value "seagulls.volume" from "sounds" to 0.6
+
+	set yaml value "sea_waves.sound" from "sounds" to "ambient.waves"
+	set yaml list "sea_waves.biomes" from "sounds" to "ocean biomes"
+	set yaml list "sea_waves.levels" from "sounds" to "surface"
+	set yaml list "sea_waves.weather" from "sounds" to "clear" and "rain"
+	set yaml value "sea_waves.delay" from "sounds" to 20
+	set yaml value "sea_waves.amplitude" from "sounds" to 5
+	set yaml value "sea_waves.volume" from "sounds" to 0.25
+
+
+
+
+	#	Forest
+
+	set yaml value "leaves_rustling.sound" from "sounds" to "ambient.leaves_rustling"
+	set yaml list "leaves_rustling.biomes" from "sounds" to "green biomes" and "savanna" and "windswept savanna" and "savanna plateau" and "wooded badlands"
+	set yaml list "leaves_rustling.levels" from "sounds" to "surface"
+	set yaml list "leaves_rustling.weather" from "sounds" to "clear" and "rain"
+	set yaml value "leaves_rustling.delay" from "sounds" to 16
+	set yaml value "leaves_rustling.amplitude" from "sounds" to 5
+	set yaml value "leaves_rustling.volume" from "sounds" to 0.3
+
+	set yaml value "windy_leaves_rustling.sound" from "sounds" to "ambient.leaves_rustling"
+	set yaml list "windy_leaves_rustling.biomes" from "sounds" to "green biomes" and "savanna" and "windswept savanna" and "savanna plateau" and "wooded badlands"
+	set yaml list "windy_leaves_rustling.levels" from "sounds" to "surface"
+	set yaml list "windy_leaves_rustling.weather" from "sounds" to "thunder"
+	set yaml value "windy_leaves_rustling.delay" from "sounds" to 13
+	set yaml value "windy_leaves_rustling.amplitude" from "sounds" to 4
+	set yaml value "windy_leaves_rustling.volume" from "sounds" to 0.6
+
+	set yaml value "wood_creak.sound" from "sounds" to "ambient.wood_creak"
+	set yaml list "wood_creak.biomes" from "sounds" to "green biomes" and "savanna" and "windswept savanna" and "savanna plateau" and "wooded badlands"
+	set yaml list "wood_creak.levels" from "sounds" to "surface"
+	set yaml list "wood_creak.weather" from "sounds" to "clear" and "rain"
+	set yaml value "wood_creak.delay" from "sounds" to 20
+	set yaml value "wood_creak.amplitude" from "sounds" to 5
+
+	set yaml value "windy_wood_creak.sound" from "sounds" to "ambient.wood_creak"
+	set yaml list "windy_wood_creak.biomes" from "sounds" to "green biomes" and "savanna" and "windswept savanna" and "savanna plateau" and "wooded badlands"
+	set yaml list "windy_wood_creak.levels" from "sounds" to "surface"
+	set yaml list "windy_wood_creak.weather" from "sounds" to "thunder"
+	set yaml value "windy_wood_creak.delay" from "sounds" to 10
+	set yaml value "windy_wood_creak.amplitude" from "sounds" to 5
+
+
+	#	End
+
+	set yaml value "end_hum.sound" from "sounds" to "ambient.cave_ambience"
+	set yaml list "end_hum.worlds" from "sounds" to "world_the_end"
+	set yaml value "end_hum.delay" from "sounds" to 8.5
+	set yaml value "end_hum.amplitude" from "sounds" to 0
+	set yaml value "end_hum.volume" from "sounds" to 0.8
+
+
+
+
+	#	Dungeons
+
+	set yaml value "dungeon_ambience.sound" from "sounds" to "ambient.cave_ambience"
+	set yaml list "dungeon_ambience.biomes" from "sounds" to "deep dark" and "dungeon_1" and "dungeon_2" and "dungeon_5" and "dungeon_6"
+	set yaml value "dungeon_ambience.delay" from "sounds" to 8.5
+	set yaml value "dungeon_ambience.amplitude" from "sounds" to 0
+	set yaml value "dungeon_ambience.volume" from "sounds" to 0.7
+
+	set yaml value "dungeon_ambience_2.sound" from "sounds" to "ambient.dark_cave_ambience"
+	set yaml list "dungeon_ambience_2.biomes" from "sounds" to "dungeon_3"
+	set yaml list "dungeon_ambience_2.levels" from "sounds" to "surface"
+	set yaml value "dungeon_ambience_2.delay" from "sounds" to 9.5
+	set yaml value "dungeon_ambience_2.amplitude" from "sounds" to 0
+	set yaml value "dungeon_ambience_2.volume" from "sounds" to 0.65
+
+	set yaml value "cemetery_wind.sound" from "sounds" to "ambient.winter_wind"
+	set yaml list "cemetery_wind.biomes" from "sounds" to "dungeon_4"
+	set yaml list "cemetery_wind.levels" from "sounds" to "surface" and "sky"
+	set yaml value "cemetery_wind.delay" from "sounds" to 8.5
+	set yaml value "cemetery_wind.amplitude" from "sounds" to 0
+	set yaml value "cemetery_wind.volume" from "sounds" to 0.25
+
+	set yaml value "desert_dungeon_wind.sound" from "sounds" to "ambient.medium_wind.desert"
+	set yaml list "desert_dungeon_wind.biomes" from "sounds" to "dungeon_7" and "dungeon_8"
+	set yaml value "desert_dungeon_wind.delay" from "sounds" to 8.5
+	set yaml value "desert_dungeon_wind.amplitude" from "sounds" to 0
+	set yaml value "desert_dungeon_wind.volume" from "sounds" to 0.25
+
+
+
+
+	wait 1 tick
+
+
+
+
+	set yaml value "dungeon_dirt.sound" from "sounds" to "ambient.dirt"
+	set yaml list "dungeon_dirt.biomes" from "sounds" to "dungeons" and "deep dark"
+	set yaml list "dungeon_dirt.levels" from "sounds" to "surface"
+	set yaml value "dungeon_dirt.delay" from "sounds" to 15
+	set yaml value "dungeon_dirt.amplitude" from "sounds" to 5
+	set yaml value "dungeon_dirt.prevent_stacking" from "sounds" to 2
+
+	set yaml value "dungeon_creaking.sound" from "sounds" to "ambient.scary_creaking"
+	set yaml list "dungeon_creaking.biomes" from "sounds" to "dungeons" and "deep dark"
+	set yaml list "dungeon_creaking.levels" from "sounds" to "surface"
+	set yaml value "dungeon_creaking.delay" from "sounds" to 35
+	set yaml value "dungeon_creaking.amplitude" from "sounds" to 10
+	set yaml value "dungeon_creaking.volume" from "sounds" to 0.7
+	set yaml value "dungeon_creaking.prevent_stacking" from "sounds" to 3
+
+	set yaml value "dungeon_wooden_support_creak.sound" from "sounds" to "ambient.dungeons.wood_creak"
+	set yaml list "dungeon_wooden_support_creak.biomes" from "sounds" to "dungeon_1" and "dungeon_2"
+	set yaml list "dungeon_wooden_support_creak.levels" from "sounds" to "surface"
+	set yaml value "dungeon_wooden_support_creak.delay" from "sounds" to 12
+	set yaml value "dungeon_wooden_support_creak.amplitude" from "sounds" to 7
+	set yaml value "dungeon_wooden_support_creak.volume" from "sounds" to 0.9
+	set yaml value "dungeon_wooden_support_creak.prevent_stacking" from "sounds" to 2
+
+	set yaml value "dungeon_mices.sound" from "sounds" to "ambient.dungeons.mices"
+	set yaml list "dungeon_mices.biomes" from "sounds" to "dungeon_1" and "dungeon_2" and "dungeon_3" and "dungeon_5" and "dungeon_6" and "dungeon_8"
+	set yaml list "dungeon_mices.levels" from "sounds" to "surface"
+	set yaml value "dungeon_mices.delay" from "sounds" to 25
+	set yaml value "dungeon_mices.amplitude" from "sounds" to 7
+	set yaml value "dungeon_mices.prevent_stacking" from "sounds" to 2
+
+	set yaml value "dungeon_rocks.sound" from "sounds" to "ambient.dungeons.rocks"
+	set yaml list "dungeon_rocks.biomes" from "sounds" to "dungeon_1" and "dungeon_2" and "dungeon_3" and "dungeon_5" and "dungeon_9"
+	set yaml list "dungeon_rocks.levels" from "sounds" to "surface"
+	set yaml value "dungeon_rocks.delay" from "sounds" to 20
+	set yaml value "dungeon_rocks.amplitude" from "sounds" to 10
+	set yaml value "dungeon_rocks.prevent_stacking" from "sounds" to 3
+
+	set yaml value "dungeon_water_drips.sound" from "sounds" to "ambient.dungeons.water_drips"
+	set yaml list "dungeon_water_drips.biomes" from "sounds" to "dungeon_1" and "dungeon_2" and "dungeon_3" and "dungeon_5"
+	set yaml list "dungeon_water_drips.levels" from "sounds" to "surface"
+	set yaml value "dungeon_water_drips.delay" from "sounds" to 30
+	set yaml value "dungeon_water_drips.amplitude" from "sounds" to 10
+	set yaml value "dungeon_water_drips.prevent_stacking" from "sounds" to 3
+
+	set yaml value "dungeon_tapping.sound" from "sounds" to "ambient.dungeons.tapping"
+	set yaml list "dungeon_tapping.biomes" from "sounds" to "dungeon_3" and "dungeon_5"
+	set yaml list "dungeon_tapping.levels" from "sounds" to "surface"
+	set yaml value "dungeon_tapping.delay" from "sounds" to 40
+	set yaml value "dungeon_tapping.amplitude" from "sounds" to 10
+	set yaml value "dungeon_tapping.prevent_stacking" from "sounds" to 3
+	set yaml value "dungeon_tapping.volume" from "sounds" to 1
+
+	set yaml value "dungeon_raven.sound" from "sounds" to "ambient.dungeons.raven"
+	set yaml list "dungeon_raven.biomes" from "sounds" to "dungeon_4"
+	set yaml list "dungeon_raven.levels" from "sounds" to "surface"
+	set yaml value "dungeon_raven.delay" from "sounds" to 45
+	set yaml value "dungeon_raven.amplitude" from "sounds" to 10
+	set yaml value "dungeon_raven.prevent_stacking" from "sounds" to 3
+	set yaml value "dungeon_raven.volume" from "sounds" to 0.4
+
+	set yaml value "dungeon_crows.sound" from "sounds" to "ambient.crows"
+	set yaml list "dungeon_crows.biomes" from "sounds" to "dungeon_4"
+	set yaml list "dungeon_crows.levels" from "sounds" to "surface"
+	set yaml list "dungeon_crows.time_of_day" from "sounds" to "morning" and "noon"
+	set yaml list "dungeon_crows.weather" from "sounds" to "clear" and "rain"
+	set yaml value "dungeon_crows.delay" from "sounds" to 50
+	set yaml value "dungeon_crows.amplitude" from "sounds" to 5
+	set yaml value "dungeon_crows.prevent_stacking" from "sounds" to 2
+
+	set yaml value "dungeon_owls.sound" from "sounds" to "ambient.owl"
+	set yaml list "dungeon_owls.biomes" from "sounds" to "dungeon_4"
+	set yaml list "dungeon_owls.levels" from "sounds" to "surface"
+	set yaml list "dungeon_owls.time_of_day" from "sounds" to "night"
+	set yaml list "dungeon_owls.weather" from "sounds" to "clear" and "rain"
+	set yaml value "dungeon_owls.delay" from "sounds" to 30
+	set yaml value "dungeon_owls.amplitude" from "sounds" to 7
+	set yaml value "dungeon_owls.prevent_stacking" from "sounds" to 2
+
+
+	wait 1 tick
+
+
+
+	set yaml value "dungeon_desert_cricket.sound" from "sounds" to "ambient.desert_cricket"
+	set yaml list "dungeon_desert_cricket.biomes" from "sounds" to "dungeon_7" and "dungeon_8" and "dungeon_9"
+	set yaml value "dungeon_desert_cricket.delay" from "sounds" to 20
+	set yaml value "dungeon_desert_cricket.amplitude" from "sounds" to 5
+
+	set yaml value "dungeon_desert_cricket_slowed.sound" from "sounds" to "ambient.desert_cricket_slowed"
+	set yaml list "dungeon_desert_cricket_slowed.biomes" from "sounds" to "dungeon_7" and "dungeon_8" and "dungeon_9"
+	set yaml value "dungeon_desert_cricket_slowed.delay" from "sounds" to 25
+	set yaml value "dungeon_desert_cricket_slowed.amplitude" from "sounds" to 7
+
+	set yaml value "dungeon_grasshopper_click.sound" from "sounds" to "ambient.grasshopper.click"
+	set yaml list "dungeon_grasshopper_click.biomes" from "sounds" to "dungeon_7" and "dungeon_8" and "dungeon_9"
+	set yaml value "dungeon_grasshopper_click.delay" from "sounds" to 25
+	set yaml value "dungeon_grasshopper_click.amplitude" from "sounds" to 10
+	set yaml value "dungeon_grasshopper_click.volume" from "sounds" to 0.5
+
+	set yaml value "dungeon_riser.sound" from "sounds" to "ambient.riser"
+	set yaml list "dungeon_riser.biomes" from "sounds" to "dungeon_7" and "dungeon_8" and "dungeon_9"
+	set yaml list "dungeon_riser.time_of_day" from "sounds" to "morning" and "noon"
+	set yaml value "dungeon_riser.delay" from "sounds" to 90
+	set yaml value "dungeon_riser.amplitude" from "sounds" to 10
+	set yaml value "dungeon_riser.volume" from "sounds" to 0.35
+	set yaml value "dungeon_riser.prevent_stacking" from "sounds" to 2
+
+	set yaml value "dungeon_whoosh.sound" from "sounds" to "ambient.whoosh"
+	set yaml list "dungeon_whoosh.biomes" from "sounds" to "dungeon_7" and "dungeon_8" and "dungeon_9"
+	set yaml list "dungeon_whoosh.time_of_day" from "sounds" to "evening" and "night"
+	set yaml value "dungeon_whoosh.delay" from "sounds" to 90
+	set yaml value "dungeon_whoosh.amplitude" from "sounds" to 10
+	set yaml value "dungeon_whoosh.volume" from "sounds" to 0.35
+	set yaml value "dungeon_whoosh.prevent_stacking" from "sounds" to 2
+
+	set yaml value "dungeon_western_chord.sound" from "sounds" to "ambient.western_chord"
+	set yaml list "dungeon_western_chord.biomes" from "sounds" to "dungeon_7" and "dungeon_8"
+	set yaml list "dungeon_western_chord.levels" from "sounds" to "surface"
+	set yaml list "dungeon_western_chord.time_of_day" from "sounds" to "morning" and "noon"
+	set yaml value "dungeon_western_chord.delay" from "sounds" to 120
+	set yaml value "dungeon_western_chord.amplitude" from "sounds" to 30
+	set yaml value "dungeon_western_chord.volume" from "sounds" to 0.4
+	set yaml value "dungeon_western_chord.prevent_stacking" from "sounds" to 3
+
+	
+
+
+	save yaml "sounds"
+
+
+
+
+function AmbientsCreateLocationSoundsFile():
+	load yaml "unlimited_adventures/Ambients/location_sounds.yml" as "location_sounds"
+
+	set yaml value "version" from "location_sounds" to 2
+	set the comments of yaml node "version" from "location_sounds" to "Please DO NOT change version number!"
+
+
+	set yaml value "dungeon_1_bridge_creak.sound" from "location_sounds" to "ambient.dungeons.bridge_creak"
+	set yaml value "dungeon_1_bridge_creak.location" from "location_sounds" to "-8, 2, -44, dungeons"
+	set yaml value "dungeon_1_bridge_creak.delay" from "location_sounds" to 15
+	set yaml value "dungeon_1_bridge_creak.amplitude" from "location_sounds" to 8
+	set yaml value "dungeon_1_bridge_creak.volume" from "location_sounds" to 2
+
+	set yaml value "dungeon_1_bridge_lava.sound" from "location_sounds" to "ambient.dungeons.lava_ambient"
+	set yaml value "dungeon_1_bridge_lava.location" from "location_sounds" to "-7, -13, -40, dungeons"
+	set yaml value "dungeon_1_bridge_lava.delay" from "location_sounds" to 8.5
+	set yaml value "dungeon_1_bridge_lava.amplitude" from "location_sounds" to 0
+	set yaml value "dungeon_1_bridge_lava.volume" from "location_sounds" to 3
+
+
+	set yaml value "pyramid_outside_wind.sound" from "location_sounds" to "ambient.medium_wind.desert"
+	set yaml value "pyramid_outside_wind.location" from "location_sounds" to "25, -41, -1626, dungeons"
+	set yaml value "pyramid_outside_wind.delay" from "location_sounds" to 8.5
+	set yaml value "pyramid_outside_wind.amplitude" from "location_sounds" to 0
+	set yaml value "pyramid_outside_wind.volume" from "location_sounds" to 0.5
+
+
+	set yaml value "pyramid_ambience.sound" from "location_sounds" to "ambient.cave_ambience"
+	set yaml value "pyramid_ambience.location" from "location_sounds" to "-90, -58, -1626, dungeons"
+	set yaml value "pyramid_ambience.delay" from "location_sounds" to 8.5
+	set yaml value "pyramid_ambience.amplitude" from "location_sounds" to 0
+	set yaml value "pyramid_ambience.volume" from "location_sounds" to 1
+
+	save yaml "location_sounds"
+
+

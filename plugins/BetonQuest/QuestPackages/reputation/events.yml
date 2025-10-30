@@ -1,0 +1,12 @@
+events:
+  finish_slayers_easy: command reputationquestfinished %player% slayers easy
+  finish_slayers_medium: command reputationquestfinished %player% slayers medium
+  finish_slayers_hard: command reputationquestfinished %player% slayers hard
+  
+  finish_miners_easy: command reputationquestfinished %player% miners easy
+  finish_miners_medium: command reputationquestfinished %player% miners medium
+  finish_miners_hard: command reputationquestfinished %player% miners hard
+  
+  finish_ranchers_easy: command reputationquestfinished %player% ranchers easy
+  finish_ranchers_medium: command reputationquestfinished %player% ranchers medium
+  finish_ranchers_hard: command reputationquestfinished %player% ranchers hard

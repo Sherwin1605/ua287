@@ -1,0 +1,39 @@
+# default config.yml for ConsoleSpamFix
+# config version 1.9.0
+
+#Add here the messages you want to hide from your console and logs.
+#Each line represents a new message.
+#NOTE! You dont need to add the full message!
+#The plugin will hide all messages that contain the text added below.
+#  EXAMPLE:
+#
+#    Messages-To-Hide-Filter:
+#    - 'WARNING: unlocalizedName'
+#
+#  All messages that will appear in the server console that contain these words 'WARNING: unlocalizedName' will be hidden and they will not appear on logs or console.
+#  If you have large errors you dont have to type the full error. But the more words you add the more accurate will be and will not hide other messages that may contain the words added in the filter.
+
+Messages-To-Hide-Filter:
+- 'Event fired: folder give_reward_1,notify_1,subtitle,sound,valiant.quest_finished,valiant.obj_2,finish_quest_1_x conditions:first_quest'
+- 'Set essentials.teleport.timer.bypass to true for '
+- 'Objective started!'
+- 'Objective deleted!'
+- 'Event fired: objective start dq_'
+- 'Event fired: objective start wq_'
+- 'accessory_strength'
+- 'accessory_health'
+- 'accessory_regeneration'
+- 'accessory_luck'
+- 'accessory_wisdom'
+- 'accessory_toughness'
+- 'Named entity '
+- '[ModelEngine] [A] --Warning: The cube'
+- '[ExcellentEnchants] Registered enchantment:'
+
+
+#Chat messages with color and format codes support.
+#Minecraft Color and Format Codes: http://minecraft.gamepedia.com/Formatting_codes    
+ChatMessages:
+    NoPermission: '[ConsoleSpamFix] You don''t have permission!'
+    CmdHelp: '[ConsoleSpamFix] Available commands:&6 /csf reload'
+    CmdReload: '[ConsoleSpamFix] Config reload complete!'

@@ -1,4 +1,4 @@
-prefix: '&8[&3DecentHolograms&8] &7'
+prefix: '&f &7'
 no_perm: '{prefix}&cYou are not allowed to use this.'
 only_player: '{prefix}&cThis action can only be executed by player.'
 reloaded: '{prefix}&aSuccessfully reloaded in %1$d ms!'

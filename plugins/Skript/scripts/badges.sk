@@ -1,0 +1,502 @@
+on load:
+	wait 3 seconds
+	BadgesReload()
+
+
+
+function BadgesCreateRewardsFile():
+	load yaml "unlimited_adventures/Badges/rewards.yml" as "rewards"
+	
+	set yaml value "version" from "rewards" to 1
+	set the comments of yaml node "version" from "rewards" to "Please DO NOT change version number!"
+
+	RewardsCreateYamlLine("mining", 1, 1, "command eco give PLAYER_NAME 100")
+	RewardsCreateYamlLine("mining", 2, 1, "command eco give PLAYER_NAME 150")
+	RewardsCreateYamlLine("mining", 3, 1, "command eco give PLAYER_NAME 200")
+	RewardsCreateYamlLine("mining", 4, 1, "command eco give PLAYER_NAME 250")
+	RewardsCreateYamlLine("mining", 5, 1, "command eco give PLAYER_NAME 300")
+	RewardsCreateYamlLine("mining", 6, 1, "command eco give PLAYER_NAME 350")
+	RewardsCreateYamlLine("mining", 7, 1, "command eco give PLAYER_NAME 400")
+	RewardsCreateYamlLine("mining", 8, 1, "command eco give PLAYER_NAME 450")
+	RewardsCreateYamlLine("mining", 9, 1, "command eco give PLAYER_NAME 500")
+	
+	RewardsCreateYamlLine("crafting", 1, 1, "command eco give PLAYER_NAME 100")
+	RewardsCreateYamlLine("crafting", 2, 1, "command eco give PLAYER_NAME 150")
+	RewardsCreateYamlLine("crafting", 3, 1, "command eco give PLAYER_NAME 200")
+	RewardsCreateYamlLine("crafting", 4, 1, "command eco give PLAYER_NAME 250")
+	RewardsCreateYamlLine("crafting", 5, 1, "command eco give PLAYER_NAME 300")
+	RewardsCreateYamlLine("crafting", 6, 1, "command eco give PLAYER_NAME 350")
+	RewardsCreateYamlLine("crafting", 7, 1, "command eco give PLAYER_NAME 400")
+	RewardsCreateYamlLine("crafting", 8, 1, "command eco give PLAYER_NAME 450")
+	RewardsCreateYamlLine("crafting", 9, 1, "command eco give PLAYER_NAME 500")
+	
+	RewardsCreateYamlLine("survival", 1, 1, "command eco give PLAYER_NAME 100")
+	RewardsCreateYamlLine("survival", 2, 1, "command eco give PLAYER_NAME 150")
+	RewardsCreateYamlLine("survival", 3, 1, "command eco give PLAYER_NAME 200")
+	RewardsCreateYamlLine("survival", 4, 1, "command eco give PLAYER_NAME 250")
+	RewardsCreateYamlLine("survival", 5, 1, "command eco give PLAYER_NAME 300")
+	RewardsCreateYamlLine("survival", 6, 1, "command eco give PLAYER_NAME 350")
+	RewardsCreateYamlLine("survival", 7, 1, "command eco give PLAYER_NAME 400")
+	RewardsCreateYamlLine("survival", 8, 1, "command eco give PLAYER_NAME 450")
+	RewardsCreateYamlLine("survival", 9, 1, "command eco give PLAYER_NAME 500")
+	
+	RewardsCreateYamlLine("caving", 1, 1, "command eco give PLAYER_NAME 100")
+	RewardsCreateYamlLine("caving", 2, 1, "command eco give PLAYER_NAME 150")
+	RewardsCreateYamlLine("caving", 3, 1, "command eco give PLAYER_NAME 200")
+	RewardsCreateYamlLine("caving", 4, 1, "command eco give PLAYER_NAME 250")
+	RewardsCreateYamlLine("caving", 5, 1, "command eco give PLAYER_NAME 300")
+	RewardsCreateYamlLine("caving", 6, 1, "command eco give PLAYER_NAME 350")
+	RewardsCreateYamlLine("caving", 7, 1, "command eco give PLAYER_NAME 400")
+	RewardsCreateYamlLine("caving", 8, 1, "command eco give PLAYER_NAME 450")
+	RewardsCreateYamlLine("caving", 9, 1, "command eco give PLAYER_NAME 500")
+	
+	RewardsCreateYamlLine("hunting", 1, 1, "command eco give PLAYER_NAME 100")
+	RewardsCreateYamlLine("hunting", 2, 1, "command eco give PLAYER_NAME 150")
+	RewardsCreateYamlLine("hunting", 3, 1, "command eco give PLAYER_NAME 200")
+	RewardsCreateYamlLine("hunting", 4, 1, "command eco give PLAYER_NAME 250")
+	RewardsCreateYamlLine("hunting", 5, 1, "command eco give PLAYER_NAME 300")
+	RewardsCreateYamlLine("hunting", 6, 1, "command eco give PLAYER_NAME 350")
+	RewardsCreateYamlLine("hunting", 7, 1, "command eco give PLAYER_NAME 400")
+	RewardsCreateYamlLine("hunting", 8, 1, "command eco give PLAYER_NAME 450")
+	RewardsCreateYamlLine("hunting", 9, 1, "command eco give PLAYER_NAME 500")
+	
+	
+	set the comments of yaml node "mining" from "rewards" to "" and "Feel free to set up your own rewards for the Badges system. Remember to follow the formatting." and "Use 'command' word in order to use a command on reward claim. You can get a player's name by typing PLAYER_NAME. Example here:" and "command eco give PLAYER_NAME 100" and "To give player gold, use 'gold' word followed by a number." and "To give items, an example would be: '10 of diamond'" and "In case of any issues, feel free to contact us on the Ender Nerds Discord server." and ""
+	save yaml "rewards"
+
+
+
+function RewardsCreateYamlLine(type: string, level: integer, number: integer, reward: string):
+	set yaml value "%{_type}%.%{_level}%.%{_number}%" from "rewards" to "%{_reward}%"
+
+function BadgesCreateYamlLine(type: string, level: integer, requirement: string, value: string):
+	set yaml value "%{_type}%.%{_level}%.requirement" from "badges" to "%{_requirement}%"
+	set yaml value "%{_type}%.%{_level}%.value" from "badges" to "%{_value}%"
+
+
+
+
+function BadgesCreateBadgesFile():
+	load yaml "unlimited_adventures/Badges/badges.yml" as "badges"
+	
+	set yaml value "version" from "badges" to 1
+	set the comments of yaml node "version" from "badges" to "Please DO NOT change version number!"
+
+	BadgesCreateYamlLine("mining", 1, "statistic_mine_block:STONE", "100")
+	BadgesCreateYamlLine("mining", 2, "statistic_mine_block:STONE", "500")
+	BadgesCreateYamlLine("mining", 3, "statistic_mine_block:GRAVEL", "100")
+	BadgesCreateYamlLine("mining", 4, "statistic_mine_block:SAND", "150")
+	BadgesCreateYamlLine("mining", 5, "statistic_mine_block:DEEPSLATE", "250")
+	BadgesCreateYamlLine("mining", 6, "statistic_mine_block:NETHERRACK", "100")
+	BadgesCreateYamlLine("mining", 7, "statistic_mine_block:GLOWSTONE", "50")
+	BadgesCreateYamlLine("mining", 8, "statistic_mine_block:END_STONE", "50")
+	BadgesCreateYamlLine("mining", 9, "statistic_mine_block:OBSIDIAN", "50")
+	
+	
+	BadgesCreateYamlLine("crafting", 1, "statistic_craft_item", "10")
+	BadgesCreateYamlLine("crafting", 2, "statistic_craft_item", "50")
+	BadgesCreateYamlLine("crafting", 3, "statistic_craft_item", "150")
+	BadgesCreateYamlLine("crafting", 4, "statistic_craft_item:BREAD", "50")
+	BadgesCreateYamlLine("crafting", 5, "statistic_craft_item:IRON_BLOCK", "20")
+	BadgesCreateYamlLine("crafting", 6, "statistic_craft_item:GOLDEN_APPLE", "5")
+	BadgesCreateYamlLine("crafting", 7, "statistic_craft_item:END_CRYSTAL", "1")
+	BadgesCreateYamlLine("crafting", 8, "statistic_craft_item:EMERALD_BLOCK", "1")
+	BadgesCreateYamlLine("crafting", 9, "statistic_craft_item:BEACON", "1")
+	
+	
+	BadgesCreateYamlLine("survival", 1, "statistic_mine_block:OAK_LOG", "10")
+	BadgesCreateYamlLine("survival", 2, "statistic_mine_block:OAK_LOG", "50")
+	BadgesCreateYamlLine("survival", 3, "statistic_mine_block:OAK_LOG", "120")
+	BadgesCreateYamlLine("survival", 4, "statistic_fish_caught", "10")
+	BadgesCreateYamlLine("survival", 5, "statistic_mine_block:OAK_LOG", "250")
+	BadgesCreateYamlLine("survival", 6, "statistic_fish_caught", "30")
+	BadgesCreateYamlLine("survival", 7, "statistic_mine_block:OAK_LOG", "500")
+	BadgesCreateYamlLine("survival", 8, "statistic_mine_block:OAK_LOG", "750")
+	BadgesCreateYamlLine("survival", 9, "statistic_mine_block:OAK_LOG", "1000")
+	
+	
+	BadgesCreateYamlLine("caving", 1, "statistic_mine_block:IRON_ORE", "10")
+	BadgesCreateYamlLine("caving", 2, "statistic_mine_block:COAL_ORE", "50")
+	BadgesCreateYamlLine("caving", 3, "statistic_mine_block:COPPER_ORE", "100")
+	BadgesCreateYamlLine("caving", 4, "statistic_mine_block:GOLD_ORE", "100")
+	BadgesCreateYamlLine("caving", 5, "statistic_mine_block:REDSTONE_ORE", "80")
+	BadgesCreateYamlLine("caving", 6, "statistic_mine_block:LAPIS_ORE", "50")
+	BadgesCreateYamlLine("caving", 7, "statistic_mine_block:DIAMOND_ORE", "10")
+	BadgesCreateYamlLine("caving", 8, "statistic_mine_block:EMERALD_ORE", "5")
+	BadgesCreateYamlLine("caving", 9, "statistic_mine_block:ANCIENT_DEBRIS", "5")
+	
+
+	BadgesCreateYamlLine("hunting", 1, "statistic_mob_kills", "20")
+	BadgesCreateYamlLine("hunting", 2, "statistic_kill_entity:ZOMBIE", "25")
+	BadgesCreateYamlLine("hunting", 3, "statistic_kill_entity:SKELETON", "40")
+	BadgesCreateYamlLine("hunting", 4, "statistic_kill_entity:SPIDER", "50")
+	BadgesCreateYamlLine("hunting", 5, "statistic_kill_entity:CREEPER", "50")
+	BadgesCreateYamlLine("hunting", 6, "statistic_kill_entity:ENDERMAN", "50")
+	BadgesCreateYamlLine("hunting", 7, "statistic_kill_entity:GHAST", "10")
+	BadgesCreateYamlLine("hunting", 8, "statistic_kill_entity:BLAZE", "50")
+	BadgesCreateYamlLine("hunting", 9, "statistic_kill_entity:SHULKER", "10")
+
+	
+	
+	set the comments of yaml node "mining" from "badges" to "" and "Feel free to setup your own requirements for the Badges system. Remember to follow the formatting." and "Requirements are made using placeholders. You can use any PAPI supported placeholders." and "In case of any issues, feel free to contact us on the Ender Nerds Discord server." and ""
+	save yaml "badges"
+
+
+function BadgesCreateMessagesFile():
+	load yaml "unlimited_adventures/Badges/messages.yml" as "messages"
+	
+	set yaml value "version" from "messages" to 1
+	set the comments of yaml node "version" from "messages" to "Please DO NOT change version number!"
+
+	set yaml value "mining_level_up" from "messages" to "<##ffe817>&lBadges ▶ <##31ed96>Your Mining Badge is now: LEVEL Badge!"
+	set yaml value "crafting_level_up" from "messages" to "<##ffe817>&lBadges ▶ <##31ed96>Your Crafting Badge is now: LEVEL Badge!"
+	set yaml value "survival_level_up" from "messages" to "<##ffe817>&lBadges ▶ <##31ed96>Your Survival Badge is now: LEVEL Badge!"
+	set yaml value "caving_level_up" from "messages" to "<##ffe817>&lBadges ▶ <##31ed96>Your Caving Badge is now: LEVEL Badge!"
+	set yaml value "hunting_level_up" from "messages" to "<##ffe817>&lBadges ▶ <##31ed96>Your Hunting Badge is now: LEVEL Badge!"
+
+	set yaml value "claim_reward_text" from "messages" to "<##7dff49>Claim the rewards in Badges Menu!"
+	set yaml value "reward_claimed" from "messages" to "<##ffe817>&lBadges ▶ <##31ed96>You claimed your reward for achieving:"
+	set yaml value "mining_badge_level" from "messages" to "<##ffe817>&lBadges ▶ LEVEL Mining Badge"
+	set yaml value "crafting_badge_level" from "messages" to "<##ffe817>&lBadges ▶ LEVEL Crafting Badge"
+	set yaml value "survival_badge_level" from "messages" to "<##ffe817>&lBadges ▶ LEVEL Survival Badge"
+	set yaml value "caving_badge_level" from "messages" to "<##ffe817>&lBadges ▶ LEVEL Caving Badge"
+	set yaml value "hunting_badge_level" from "messages" to "<##ffe817>&lBadges ▶ LEVEL Hunting Badge"
+
+	set yaml value "level_1" from "messages" to "<##a57b3d>&lWooden"
+	set yaml value "level_2" from "messages" to "<##b1b1b1>&lStone"
+	set yaml value "level_3" from "messages" to "<##6a6c7b>&lCoal"
+	set yaml value "level_4" from "messages" to "<##dc7d70>&lCopper"
+	set yaml value "level_5" from "messages" to "<##7a999e>&lIron"
+	set yaml value "level_6" from "messages" to "&6&lGold"
+	set yaml value "level_7" from "messages" to "<##00d3ff>&lDiamond"
+	set yaml value "level_8" from "messages" to "<##66ff32>&lEmerald"
+	set yaml value "level_9" from "messages" to "<##ff2a2a>&lNetherite"
+
+	save yaml "messages"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function BadgesReload():
+	load yaml "unlimited_adventures/Badges/rewards.yml" as "rewards"
+	load yaml "unlimited_adventures/Badges/badges.yml" as "badges"
+	load yaml "unlimited_adventures/Badges/messages.yml" as "messages"
+	if yaml value "version" from "rewards" is not set:
+		wait 1 tick
+		BadgesCreateRewardsFile()
+	if yaml value "version" from "badges" is not set:
+		wait 1 tick
+		BadgesCreateBadgesFile()
+	if yaml value "messages" from "messages" is not set:
+		wait 1 tick
+		BadgesCreateMessagesFile()
+	
+	clear {player_badges::rewards::*}
+	loop 5 times:
+		if loop-number is 1:
+			set {_type} to "mining"
+		if loop-number is 2:
+			set {_type} to "crafting"
+		if loop-number is 3:
+			set {_type} to "survival"
+		if loop-number is 4:
+			set {_type} to "caving"
+		if loop-number is 5:
+			set {_type} to "hunting"
+		loop 9 times:
+			set {_level} to loop-number-2
+			loop 10 times:
+				set {_reward_nr} to loop-number-3
+				if yaml value "%{_type}%.%{_level}%.%{_reward_nr}%" from "rewards" is set:
+					set {_var} to yaml value "%{_type}%.%{_level}%.%{_reward_nr}%" from "rewards"
+					if {_var} contains "gold ":
+						if {_reward} doesn't contain "golden" or "ingot" or "raw" or "ore" or "block" or "sword" or "axe" or "pickaxe" or "shovel" or "hoe" or "nugget":
+							set {player_badges::rewards::%{_type}%::%{_level}%::%{_reward_nr}%} to {_var}
+#							send "type: %{_type}% lvl: %{_level}% nr: %{_reward_nr}%: %{player_badges::rewards::%{_type}%::%{_level}%::%{_reward_nr}%}%" to all players
+					if {_var} contains "gems ":
+						set {player_badges::rewards::%{_type}%::%{_level}%::%{_reward_nr}%} to {_var}
+					if {_var} contains "command ":
+						set {player_badges::rewards::%{_type}%::%{_level}%::%{_reward_nr}%} to {_var}
+					if {player_badges::rewards::%{_type}%::%{_level}%::%{_reward_nr}%} is not set:
+						set {player_badges::rewards::%{_type}%::%{_level}%::%{_reward_nr}%} to {_var} parsed as item
+	
+	
+	clear {player_badges::badges::*}
+	loop 5 times:
+		if loop-number is 1:
+			set {_type} to "mining"
+		if loop-number is 2:
+			set {_type} to "crafting"
+		if loop-number is 3:
+			set {_type} to "survival"
+		if loop-number is 4:
+			set {_type} to "caving"
+		if loop-number is 5:
+			set {_type} to "hunting"
+		loop 9 times:
+			set {_requirement} to loop-number-2
+			if yaml value "%{_type}%.%{_requirement}%.requirement" from "badges" is set:
+				set {_var} to yaml value "%{_type}%.%{_requirement}%.requirement" from "badges"
+				set {_var2} to yaml value "%{_type}%.%{_requirement}%.value" from "badges"
+				set {player_badges::badges::%{_type}%::%{_requirement}%::requirement} to {_var}
+				set {player_badges::badges::%{_type}%::%{_requirement}%::value} to {_var2}
+	
+
+	clear {badges::messages::*}
+	loop yaml nodes from "messages":
+		if yaml node loop-value from "messages" has list:
+			set {badges::messages::%loop-value%::*} to yaml list loop-value from "messages"
+		else:
+			set {badges::messages::%loop-value%} to yaml value loop-value from "messages"
+
+
+	save yaml "rewards"
+	save yaml "badges"
+	save yaml "messages"
+	
+
+
+
+
+
+every 5 seconds:
+	loop {players::*}:
+		BadgesCheckProgress(loop-value)
+
+
+
+function BadgesCheckProgress(player: player):
+	loop 5 times:
+		if loop-number is 1:
+			set {_type} to "mining"
+		if loop-number is 2:
+			set {_type} to "crafting"
+		if loop-number is 3:
+			set {_type} to "survival"
+		if loop-number is 4:
+			set {_type} to "caving"
+		if loop-number is 5:
+			set {_type} to "hunting"
+		loop 9 times:
+			set {_level} to loop-number-2
+			if {player_badges::badges::%{_type}%::%{_level}%::requirement} is set:
+				if {player_badges::badges::%{_type}%::%{_level}%::value} is set:
+					set {_exists} to true
+					
+					if {player_badges::level::%{_type}%::%uuid of {_player}%} is not set:
+						set {player_badges::level::%{_type}%::%uuid of {_player}%} to 0
+					
+					if {player_badges::level::%{_type}%::%uuid of {_player}%}+1 is {_level}:
+						if {_max_level} is set:
+							if {_level} > {_max_level}:
+								set {_max_level} to {_level}
+						else:
+							set {_max_level} to {_level}
+						set {_player_value} to placeholder "%{player_badges::badges::%{_type}%::%{_level}%::requirement}%" from {_player} parsed as integer
+						if {_player_value} >= {player_badges::badges::%{_type}%::%{_level}%::value}:
+							set {_level_up} to true
+							add 1 to {player_badges::level::%{_type}%::%uuid of {_player}%}
+							add "%{_type}%_%{_level}%" to {player_badges::available_rewards::%uuid of {_player}%::*}
+							
+							if {_types::*} doesn't contain {_type}:
+								add {_type} to {_types::*}
+	
+	if {_level_up} is true:
+		BadgesLevelUpSound({_player}, {_max_level})
+		wait 4 ticks
+		
+		loop {_types::*}:
+			BadgesLevelUp({_player}, "%loop-value%")
+		wait 0.1 second
+		if size of {_types::*} > 1:
+			send " " to {_player}
+			send "%{badges::messages::claim_reward_text}%" to {_player}
+			send " " to {_player}
+		else:
+			send "%{badges::messages::claim_reward_text}%" to {_player}
+			send " " to {_player}
+
+
+
+function BadgesLevelUpSound(player: player, level: integer):
+	play sound "custom.badge_unlocked" with volume 0.4 and pitch 1 to {_player}
+
+
+
+
+
+function Colours():
+	send " " to all players
+	send "<##a57b3d>&lWooden Mining Badge" to all players
+	send "<##b1b1b1>&l Stone Mining Badge" to all players
+	send "<##6a6c7b>&l Coal Mining Badge" to all players
+	send "<##dc7d70>&l Copper Mining Badge" to all players
+	send "<##7a999e>&l Iron Mining Badge" to all players
+	send "&e&l Gold Mining Badge" to all players
+	send "<##00d3ff>&l Diamond Mining Badge" to all players
+	send "<##66ff32>&l Emerald Mining Badge" to all players
+	send "<##ff2a2a>&l Netherite Mining Badge" to all players
+
+
+function BadgesLevelUp(player: player, type: string):
+	send " " to {_player}
+	
+	
+	if {player_badges::level::%{_type}%::%uuid of {_player}%} is set:
+		set {_level} to "%{badges::messages::level_%{player_badges::level::%{_type}%::%uuid of {_player}%}%}%"
+	
+	set {_msg} to {badges::messages::%{_type}%_level_up}
+	replace "LEVEL" with "%{_level}%" in {_msg}
+	send {_msg} to {_player}
+	
+
+
+
+
+function BadgesRewardClaim(player: player, type: string, level: integer):
+
+	loop 10 times:
+		set {_reward_nr} to loop-number
+		
+		set {_reward} to {player_badges::rewards::%{_type}%::%{_level}%::%{_reward_nr}%}
+		if {_reward} contains "gold":
+#			send "reward: %{_reward}%" to {_player}
+			if {_reward} doesn't contain "golden" or "ingot" or "raw" or "ore" or "block" or "sword" or "axe" or "pickaxe" or "shovel" or "hoe" or "nugget":
+				replace all "gold " with "" in {_reward}
+				set {_amount} to {_reward} parsed as integer
+				add {_amount} to balance of {_player}
+#				send "gold amount: %{_amount}%" to {_player}
+				delete {_reward}
+		if {_reward} contains "gems":
+			replace all "gems " with "" in {_reward}
+			set {_amount} to {_reward} parsed as integer
+			PremiumCurrency({_player}, "add", {_amount})
+			delete {_reward}
+		if {_reward} contains "command":
+			replace all "command " with "" in {_reward}
+			replace all "PLAYER_NAME" with name of {_player} in {_reward}
+			set {_command} to {_reward}
+			execute console command "%{_command}%"
+			delete {_reward}
+		if {_reward} is set:
+			replace all "PLAYER_NAME" with name of {_player} in {_reward}
+			if {_player} has space for {_reward}:
+				give {_reward} to {_player}
+			else:
+				send "&f &cYou don't have space for this reward!" to {_player}
+				play sound "block.note_block.didgeridoo" with volume 0.7 and pitch 1 to {_player}
+				stop
+
+	
+
+	remove "%{_type}%_%{_level}%" from {player_badges::available_rewards::%uuid of {_player}%::*}
+	
+
+	if {_level} is set:
+		set {_badge_level} to "%{badges::messages::level_%{_level}%}%"
+
+	send " " to {_player}
+	send "%{badges::messages::reward_claimed}%" to {_player}
+	set {_msg} to {badges::messages::%{_type}%_badge_level}
+	replace "LEVEL" with "%{_badge_level}%" in {_msg}
+	send {_msg} to {_player}
+	send " " to {_player}
+	
+	
+	play sound "entity.experience_orb.pickup" with volume 0.7 and pitch 1 to {_player}
+	play sound "item.armor.equip_iron" with volume 1 and pitch 1 to {_player}
+	play sound "ui.cartography_table.take_result" with volume 1 and pitch 1 to {_player}
+
+
+
+
+
+
+command /claimbadgesreward [<player>] [<text>] [<integer>]:
+	permission: admin
+	trigger:
+		set {_player} to player-arg
+		set {_type} to arg-2
+		set {_level} to arg-3
+		BadgesRewardClaim({_player}, {_type}, {_level})
+
+on tab complete of "/claimbadgesreward":
+	set tab completions for position 1 to all players
+	set tab completions for position 2 to "mining" and "crafting" and "survival" and "caving" and "hunting"
+	set tab completions for position 3 to 1 and 2 and 3 and 4 and 5 and 6 and 7 and 8 and 9
+
+
+
+command /badges [<text>] [<player>] [<integer>]:
+	permission: admin
+	trigger:
+		if player-arg is set:
+			set {_player} to player-arg
+		else:
+			set {_player} to sender
+
+		
+		if arg 1 is "rewardsoundtest":
+			BadgesLevelUpSound({_player}, arg-3)
+		
+		if arg 1 is "claimreward":
+			send "&d&lBadges ▶ &fUse &a/claimbadgesreward &e<playername> <type> <number> &fin order to claim a reward!" to sender
+
+		if arg 1 is "adminlevelup":
+			add 1 to {player_badges::level::mining::%uuid of {_player}%}
+			add 1 to {player_badges::level::crafting::%uuid of {_player}%}
+			add 1 to {player_badges::level::survival::%uuid of {_player}%}
+			add 1 to {player_badges::level::caving::%uuid of {_player}%}
+			add 1 to {player_badges::level::hunting::%uuid of {_player}%}
+			send "&d&lBadges ▶ &aYou have increased all badges levels by 1" to sender
+		
+		if arg 1 is "reset":
+			set {player_badges::level::mining::%uuid of {_player}%} to 0
+			set {player_badges::level::crafting::%uuid of {_player}%} to 0
+			set {player_badges::level::survival::%uuid of {_player}%} to 0
+			set {player_badges::level::caving::%uuid of {_player}%} to 0
+			set {player_badges::level::hunting::%uuid of {_player}%} to 0
+			
+			clear {player_badges::available_rewards::%uuid of {_player}%::*}
+			send "&d&lBadges ▶ &aYour badges and available rewards have been resetted!" to sender
+
+		if arg 1 is "wipealldata":
+			set {player_badges::level::mining::*} to 0
+			set {player_badges::level::crafting::*} to 0
+			set {player_badges::level::survival::*} to 0
+			set {player_badges::level::caving::*} to 0
+			set {player_badges::level::hunting::*} to 0
+			
+			clear {player_badges::available_rewards::*}
+			send "&d&lBadges ▶ &aYour have cleared all data related to badges for &a&lALL PLAYERS!" to sender
+		
+		if arg 1 is "reload":
+			BadgesReload()
+			send "&d&lBadges ▶ &aConfig has been reloaded!" to sender
+		if arg 1 is "regeneratefile":
+			BadgesCreateRewardsFile()
+			BadgesCreateBadgesFile()
+			wait 1 second
+			BadgesReload()
+			send "&d&lBadges ▶ &aConfig file has been regenerated!" to sender
+
+
+on tab complete of "/badges":
+	
+	set tab completions for position 1 to "claimreward" and "adminlevelup" and "reset" and "reload" and "wipealldata"
+	set tab completions for position 2 to all players
+
+
+

@@ -1,0 +1,277 @@
+panels:
+  guides:
+    perm: default
+    rows: 5
+    title: '&f'
+    commands:
+    - guide
+    - guides
+    - help
+    - guidemenu
+    - helpmenu
+    - help_menu
+    empty: AIR
+    sound-on-open: ITEM_BOOK_PAGE_TURN
+    panelType:
+    - static
+    item:
+
+
+
+      '0':
+        material: STICK
+        customdata: 1
+        name: '&c← Previous Menu'
+        commands:
+        - open= main_menu
+      
+
+        
+        
+      '11':
+        material: cps= eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWRmYWQxYzFmODE3NTI0MDAzMjkyYzQxMzFmOGRlODUwMDE5NzQ5MjYzNTQ3OGE4ZjE3NjcxODM0YjNiYzAwOCJ9fX0=
+        name: '%color_menu_primary%How to Claim?'
+        lore:
+        - ' '
+        - '&a• &7You can protect your terrain by claiming it.'
+        - '&a• &7Claimed areas are protected from breaking,'
+        - '  &7griefing and theft of items from chests.'
+        - '&a• &7You need claim blocks to claim terrain.'
+        - '  &7You get some for free but you can buy more.'
+        - ''
+        - '&fHow to use claims:'
+        - '&7• &f/claim &7- claims nearby area,'
+        - '&7• &f/unclaim &7- abandons the claim,'
+        - '&7• &f/trust &e<nickname> &7- to give a'
+        - '  &7player access to your claim,'
+        - '&7• &f/untrust &e<nickname> &7- removes'
+        - '  &7access to your claim from a player.'
+      '12':
+        material: cps= eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTg3ZmNjY2FlNGM1NmIxOTY5ZTZkY2ZkZDdhOTkyMTY2N2ZmYjNjMjU5NjhjZDE4N2UwZDdiYTQ1YmFlMzdmYiJ9fX0=
+        name: '%color_menu_primary%The Forge'
+        lore:
+        - ' '
+        - '&a• &7Forge is a special feature that allows'
+        - '  &7you to combine various ingredients to'
+        - '  &7create very powerful items.'
+        - '&a• &7Use &f/forge &7to access forge menu.'     
+      '14':
+        material: cps= eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjhmMDJhZjEwMWJjYzBlYzViMTU5YjljNzdiMmMwMzA1YjlkMzAwMGQ5MzFmYzUzMjljZmRjMGIwMzc0YjY5MiJ9fX0=
+        name: '%color_menu_primary%Skills'
+        lore:
+        - ''
+        - '&a• &7You can level up awesome skills in'
+        - '  &7order to increase your strength'
+        - '  &7and unlock useful abilities.'
+        - '&a• &7Check out &cSkills &7system by using: &f/skills'
+      '15':
+        material: cps= eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZWZiMmYwZDMzNTlhMmUyOGQxZmVmMzMxZGI0YzZiMTEwZTc2NGY4YzMzMWQzYjYyOGI0ZTAxMWVjOTFiNzVhOSJ9fX0=
+        name: '%color_menu_primary%Accessories'
+        lore:
+        - ''
+        - '&a• &7Accessories are powerful items that'
+        - '  &7you can equip in the &6Gear &7menu.'
+        - '&a• &7Accessory items can be dropped from'
+        - '  &7monsters in the &2Overworld &7and #f74154Dungeons.'
+        - '&a• &7You can also craft and upgrade'
+        - '  &7accessories in &6The Forge &7menu.'
+
+
+
+
+      
+      '20':
+        material: cps= eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzc3ZTQwYmIwYjM3MWIzNzQ1ZGZlNWVkNTIwMzNmZmNmYzhjODJmZWVmYzI1YjM0YmFjN2FlZDFmZjljZTU4ZiJ9fX0
+        name: '%color_menu_primary%Quests'
+        lore:
+        - ' '
+        - '&a• &7Quests are a set of carefully'
+        - '&7  &7prepared tasks that will give'
+        - '&7  &7you a challenge and guide you'
+        - '&7  &7through the server progression.'
+        - '&a• &7When you finish a quest you'
+        - '&7  &7are given a perfect reward'
+        - '&7  &7for your progression stage.'
+      
+      '21':
+        material: cps= eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzllMTA2Njk2YWEzMjMzNjdjN2JlYWNjMDc1ODM4NzAzYTY3NmY4ZTVjNDY0MDA5ZDUzNWMzMGI0NTJhMTlhIn19fQ
+        name: '%color_menu_primary%Adventure Pass'
+        lore:
+        - ' '
+        - '&a• &7Adventure Pass is our unique'
+        - '&7  &7rewards system that is perfectly'
+        - '&7  &7fitted for the survival adventure!'
+        - '&a• &7Each time you gain next reputation level,'
+        - '&7  &7in any Guild, another reward in the'
+        - '&7  &7Adventure Pass will be unlocked.'
+        - ''
+        - '&7&fHow to earn experience:'
+        - '&f• &7Complete quests for Guilds,'
+        - '&f• &7Claim experience from Daily Rewards'
+      
+      '23':
+        material: cps= eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzUyNzIzYWEwNjM3ZWE1MjA0NDQ3YmU1MzYxNTFmNTI5ZmU0OTA2ODI2ZDhjMDY2YzRkY2M1MDA3OWE2NDQ2NSJ9fX0=
+        name: '%color_menu_primary%Player Badges'
+        lore:
+        - ' '
+        - '&a• &7Ambitious players can try to'
+        - '&7  &7unlock badges from 5 categories'
+        - '&7  &7and correct rewards for doing so!'
+        - '&a• &7The amount of badges you have unlocked'
+        - '&7  &7is displayed below your name in-game!'
+        - '&a• &7Are you skilled enough to unlock'
+        - '&7  &7the most powerful, #ff2a2aNetherite Badge&7?'
+
+      '24':
+        material: cps= eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDNlYzlkMjdhYTJiZTk3OTViNWEwMzZiMWJlNjVjODhjZTE0NzI5MDIyNTlmNjE2Yjc1OGQzZjM2OWM4ZjY1OCJ9fX0=
+        name: '%color_menu_primary%Ancient Traveler'
+        lore:
+        - ''
+        - '&a• &6Ancient Traveler &7is selling rare items'
+        - '  &7that you cannot find in any other shop.'
+        - '&a• &7He arrives at the town with new stock every'
+        - '  &7day, so make sure to check him frequently.'
+      
+      
+      
+      
+      
+      
+      
+      '29':
+        material: cps= eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTMxZjhiNzk1MjY3ZjJlMGI2ZTRmMGIzNTIxNTllYzZmMmQ4NjQxOGEyNDZkYmUxMTNlNTM2MmNhNmI3ZWI5In19fQ==
+        name: '%color_menu_primary%Dungeons'
+        lore:
+        - ' '
+        - '&a• &7Wander deep into the #f74154Dungeons &7and'
+        - '&7  &7face all the lurking dangers, powerful'
+        - '&7  &7foes, deadly traps and vast treasures.'
+        - '&a• &7You can drop the &6Dungeon Key &7by'
+        - '&7  &7defeating bosses in the &2Wilderness&7.'
+      
+      '30':
+        material: cps= eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjYyNjUxODc5ZDg3MDQ5OWRhNTBlMzQwMzY4MDBkZGZmZDUyZjNlNGUxOTkzYzVmYzBmYzgyNWQwMzQ0NmQ4YiJ9fX0
+        name: '%color_menu_primary%New Enchantments'
+        lore:
+        - ''
+        - '&a• &7Our server features over'
+        - '  &e&l60 NEW ENCHANTMENTS!'
+        - '&a• &7You can upgrade your items with'
+        - '  &7new powerful enchants to get an'
+        - '  &7advantage over other players.'
+        - ''
+        - '&fHow to get new enchantments:'
+        - '&f• &7Enchant the item with enchanting table,'
+        - '&f• &7Scavenge chests in caves and mineshafts,'
+        - '&f• &7Fish to find enchanted books.'
+
+      '32':
+        material: cps= eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDE3N2E5NGUyYmQwOGJiZDgzOTQ0NjU4YjM0MjAyYjY5YWMzNmMyOGE4NmQyOThjZmNjMDQ0ZWYyOGIzMDlkYiJ9fX0=
+        name: '%color_menu_primary%Auction House'
+        lore:
+        - ''
+        - '&a• &7Auction House is a place where'
+        - '  &7players can put up their items for sale.'
+        - '&a• &7To check out auctions of other'
+        - '  &7players, use command: &f/ah'
+        - ''
+        - '&7To create an auction offer, use:'
+        - ' &f/ah sell &e<price> &7while holding'
+        - '&7the item you''re willing to sell.'
+
+      '33':
+        material: cps= eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZGEwMGM1M2NmNTdjYWNjN2Y1ZThlM2ZlODRiMmY1ZGIxMjJjZDc2ZmNlZDc4MGE5NTNiOTk2MzlmYjMxOTg4MiJ9fX0=
+        name: '%color_menu_primary%Premium Store'
+        lore:
+        - ''
+        - '&a• &7The &6Premium Store &7enables players to'
+        - '  &7purchase &6ranks&7, &6keys&7, &6boosters&7, and'
+        - '  &7other items using acquired #f74154gems&7.'
+        - '&a• &7Conveniently accessible through the'
+        - '  &6Server Menu &7or &6Premium NPC &7at spawn.'
+        - ''
+        - '&7Players can customize their experience'
+        - '&7and unlock various advantages to enhance'
+        - '&7their gameplay within the platform.'
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      '9':
+        material: AIR
+        name: ' '
+        has0:
+          value0: '%cp-player-name% HASPERM'
+          compare0: 'group.helper'
+          material: cps= eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmMzZWJlNzJmZDIzYmUwZWU4N2ZhNGM0YjdjMTQ3MjI0YWM2ZGU4OGJiODQyYzQ2M2RlOTk2Y2Q5NGYxMWVkNyJ9fX0=
+          name: '%color_menu_blue%Ranks'
+          lore:
+          - ''
+          - '&a• &7To set someone''s rank use:'
+          - ' &f/setrank &e<nickname> <rank>'
+          - ''
+          - '&a• &7Available ranks:'
+          - ' &f '
+          - ' &f '
+          - ' &f '
+          - ' &f '
+          - ' '
+          - '&8▶ Visible only by staff'
+      
+      '18':
+        material: AIR
+        name: ' '
+        has0:
+          value0: '%cp-player-name% HASPERM'
+          compare0: 'group.helper'
+          material: cps= eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzRlOGZmMzBlMzkzNzA5ODYzN2MwYWYwM2ExZjJhNmIxN2YwZTgyOGFiMmE1N2EyNjdhMDFkYTQ4NGJhMGM1NyJ9fX0
+          name: '%color_menu_blue%Premium Currency'
+          lore:
+          - ''
+          - '&a• &7To manipulate Premium Currency'
+          - ' &7use: &f/premiumcurrency &7command.'
+          - ''
+          - '&a• &7Available commands:'
+          - ' &f/premiumcurrency &e<nick> set <amount>'
+          - ' &f/premiumcurrency &e<nick> add <amount>'
+          - ' &f/premiumcurrency &e<nick> remove <amount>'
+          - ''
+          - '&8▶ Visible only by staff'
+      
+      '27':
+        material: AIR
+        name: ' '
+        has0:
+          value0: '%cp-player-name% HASPERM'
+          compare0: 'group.helper'
+          material: cps= eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzM5ZWU3MTU0OTc5YjNmODc3MzVhMWM4YWMwODc4MTRiNzkyOGQwNTc2YTI2OTViYTAxZWQ2MTYzMTk0MjA0NSJ9fX0=
+          name: '%color_menu_blue%Join our Discord!'
+          lore:
+          - ''
+          - '&a• &7I warmly encourage you'
+          - '&7  &7to join our &9Discord &7server.'
+          - '&a• &7That''s the spot where you can'
+          - '&7  seek help with %color_server_name%Unlimited Adventures'
+          - '&7  &7setup, or just say hello to us :)'
+          - ''
+          - '%color_menu_purchase%&lClick to get the Discord link!'
+          - ' '
+          - '&8▶ Visible only by staff'
+          commands:
+          - msg= &7
+          - msg= &7         &9⯪ &9&lOur Studio's Discord &9⯫
+          - msg= &7        &e▶ https://discord.gg/wdBFC7Hc6X ◀
+          - msg= &7 
+          - cpc
+          - delay= 2 sound= ENTITY_ITEM_PICKUP 0.7
+      
+      
+          

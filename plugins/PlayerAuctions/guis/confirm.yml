@@ -10,7 +10,7 @@ confirm:
   # What is the name of the gui?
   name: "confirm"
   # The title of the gui (Can use color codes)
-  title: "&b&lConfirm Purchase"
+  title: "&f"
   # What is the size of this GUI? (multiples of 9 can only go up to 54)
   size: 27
   # What are the actions when this menu is opened up?
@@ -43,99 +43,99 @@ confirm:
     - "an amount."
 
     item:
-      material: "OAK_SIGN"
-      data: 0
-      name: "&bEnter an amount"
+      material: "STICK"
+      custom-model-data: 47
+      name: "{#31ed96}Enter an amount"
       lore:
-      - "&eClick&b to enter an amount to purchase."
+      - " "
+      - "&a&lClick to enter an amount!"
       slot: 22
       amount: 1
       glowing: false
 
   clickable-items:
     accept:
-      name: "&aAccept Purchase"
-      material: "LIME_WOOL"
-      data: 5
+      name: "&a&lCONFIRM PURCHASE"
+      material: "STICK"
+      custom-model-data: 3
       lore:
-      - "&eClick&b to purchase &e[amount]x&b for &e[price]&b!"
+      - " "
+      - "&fAmount: &a[amount]"
+      - "&fPrice: &e[price] Gold &f"
+      - " "
+      - "&a&l✔ Click to confirm!"
       slot: 11
       amount: 1
       glowing: false
     deny:
-      name: "&cDeny Purchase"
-      material: "RED_WOOL"
-      data: 14
+      name: "&c&lCANCEL PURCHASE"
+      material: "STICK"
+      custom-model-data: 16
       lore:
-      - "&cClick to deny this purchase."
+      - " "
+      - "&c&l❌ Click to cancel!"
       slot: 15
       amount: 1
       glowing: false
     add-1:
-      name: "&aAdd 1x"
-      material: "LIME_STAINED_GLASS_PANE"
-      data: 5
+      name: "&aAdd 1"
+      material: "STICK"
+      custom-model-data: 41
       lore:
-      - "&aClick to add 1x amount."
       - " "
-      - "&bCurrent amount: &e[amount]x"
+      - "&7Current amount: &f[amount]"
       slot: 0
       amount: 1
       glowing: false
     add-32:
-      name: "&aAdd 32x"
-      material: "LIME_STAINED_GLASS_PANE"
-      data: 5
+      name: "&aAdd 32"
+      material: "STICK"
+      custom-model-data: 42
       lore:
-      - "&aClick to add 32x amount."
       - " "
-      - "&bCurrent amount: &e[amount]x"
+      - "&7Current amount: &f[amount]"
       slot: 9
-      amount: 32
+      amount: 1
       glowing: false
     add-64:
-      name: "&aAdd 64x"
-      material: "LIME_STAINED_GLASS_PANE"
-      data: 5
+      name: "&aAdd 64"
+      material: "STICK"
+      custom-model-data: 43
       lore:
-      - "&aClick to add 64x amount."
       - " "
-      - "&bCurrent amount: &e[amount]x"
+      - "&7Current amount: &f[amount]"
       slot: 18
-      amount: 64
+      amount: 1
       glowing: false
     remove-1:
-      name: "&cRemove 1x"
-      material: "RED_STAINED_GLASS_PANE"
-      data: 14
+      name: "&cRemove 1"
+      material: "STICK"
+      custom-model-data: 41
       lore:
-      - "&cClick to remove 1x amount."
       - " "
-      - "&bCurrent amount: &e[amount]x"
+      - "&7Current amount: &f[amount]"
       slot: 8
       amount: 1
       glowing: false
     remove-32:
-      name: "&cRemove 32x"
-      material: "RED_STAINED_GLASS_PANE"
-      data: 14
+      name: "&cRemove 32"
+      material: "STICK"
+      custom-model-data: 42
       lore:
-      - "&cClick to remove 32x amount."
       - " "
-      - "&bCurrent amount: &e[amount]x"
+      - "&7Current amount: &f[amount]"
       slot: 17
-      amount: 32
+      amount: 1
       glowing: false
     remove-64:
-      name: "&cRemove 64x"
-      material: "RED_STAINED_GLASS_PANE"
-      data: 14
+      name: "&cRemove 64"
+      material: "STICK"
+      custom-model-data: 43
       lore:
-      - "&cClick to remove 64x amount."
       - " "
-      - "&bCurrent amount: &e[amount]x"
+      - "&7Current amount: &f[amount]"
       slot: 26
-      amount: 64
+      amount: 1
       glowing: false
       # If you wish to disable any of these please set them the material to "AIR"
       # this is the material of the next page item. valid material names: https://javadocs.olziedev.com/spigot/latest/org/bukkit/Material.html

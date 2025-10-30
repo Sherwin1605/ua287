@@ -1,0 +1,7 @@
+[1] Follow staff advice at all times
+[2] Be civil and professional
+[3] No vulgar language
+[4] Do not spam or flood
+[5] Use English when talking over chat
+[6] Never use cheats, hacked clients, etc.
+#	This is overriden by ChatManager!

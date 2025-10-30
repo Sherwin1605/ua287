@@ -1,0 +1,6 @@
+# Please DO NOT change version number!
+version: 1
+
+can_teleport_during_pvp: false
+
+teleport_duration: 2

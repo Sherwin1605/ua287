@@ -1,0 +1,7 @@
+# Please DO NOT change version number!
+version: 1
+
+enabled:
+    new_mobs: true
+    new_bosses: true
+    balloons: true

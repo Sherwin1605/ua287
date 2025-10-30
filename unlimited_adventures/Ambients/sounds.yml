@@ -1,0 +1,695 @@
+# Please DO NOT change version number!
+version: 2
+
+regular_wind:
+    sound: ambient.medium_wind
+    biomes:
+    - green biomes
+    levels:
+    - surface
+    weather:
+    - clear
+    delay: 8.5
+    amplitude: 0
+    volume: 0.35
+
+rain_wind:
+    sound: ambient.medium_wind
+    biomes:
+    - green biomes
+    - forest biomes
+    levels:
+    - surface
+    weather:
+    - rain
+    delay: 8.5
+    amplitude: 0
+    volume: 0.6
+
+thunder_wind:
+    sound: ambient.strong_wind
+    biomes:
+    - green biomes
+    - forest biomes
+    levels:
+    - surface
+    weather:
+    - thunder
+    delay: 8.5
+    amplitude: 0
+    volume: 0.25
+
+sky_wind:
+    sound: ambient.strong_wind
+    biomes:
+    - green biomes
+    - forest biomes
+    levels:
+    - sky
+    delay: 8.1
+    amplitude: 0
+    volume: 0.3
+
+hills_wind:
+    sound: ambient.strong_wind
+    biomes:
+    - high biomes
+    levels:
+    - surface
+    - sky
+    delay: 8.5
+    amplitude: 0
+    volume: 0.45
+
+medium_wind_desert:
+    sound: ambient.medium_wind.desert
+    biomes:
+    - arid biomes
+    levels:
+    - surface
+    - sky
+    weather:
+    - clear
+    delay: 16
+    amplitude: 5
+    volume: 0.35
+
+winter_wind:
+    sound: ambient.winter_wind
+    biomes:
+    - winter biomes
+    - '!ocean biomes'
+    levels:
+    - surface
+    - sky
+    delay: 8.5
+    amplitude: 0
+    volume: 0.25
+
+ocean_breeze:
+    sound: ambient.ocean_wind
+    biomes:
+    - ocean biomes
+    - river
+    levels:
+    - surface
+    - sky
+    delay: 12
+    amplitude: 3
+    volume: 0.25
+
+birds:
+    sound: ambient.birds
+    biomes:
+    - green biomes
+    - savanna
+    - windswept savanna
+    - savanna plateau
+    - wooded badlands
+    levels:
+    - surface
+    time_of_day:
+    - morning
+    - noon
+    - evening
+    weather:
+    - clear
+    delay: 20
+    amplitude: 5
+    prevent_stacking: 2
+
+crows:
+    sound: ambient.crows
+    biomes:
+    - green biomes
+    - savanna
+    - windswept savanna
+    - savanna plateau
+    - wooded badlands
+    - snowy plains
+    levels:
+    - surface
+    time_of_day:
+    - morning
+    - noon
+    weather:
+    - clear
+    delay: 50
+    amplitude: 5
+    prevent_stacking: 2
+
+cicada:
+    sound: ambient.cicada
+    biomes:
+    - green biomes
+    - high biomes
+    levels:
+    - surface
+    time_of_day:
+    - morning
+    - noon
+    - evening
+    weather:
+    - clear
+    - rain
+    delay: 20
+    amplitude: 5
+    prevent_stacking: 2
+
+grasshopper:
+    sound: ambient.grasshopper
+    biomes:
+    - green biomes
+    - arid biomes
+    levels:
+    - surface
+    time_of_day:
+    - noon
+    - evening
+    weather:
+    - clear
+    - rain
+    delay: 30
+    amplitude: 5
+    prevent_stacking: 2
+
+woodpecker:
+    sound: ambient.woodpecker
+    biomes:
+    - forest biomes
+    levels:
+    - surface
+    time_of_day:
+    - morning
+    - noon
+    weather:
+    - clear
+    - rain
+    delay: 40
+    amplitude: 8
+    prevent_stacking: 2
+
+crickets:
+    sound: ambient.crickets
+    biomes:
+    - green biomes
+    - high biomes
+    - arid biomes
+    levels:
+    - surface
+    time_of_day:
+    - evening
+    - night
+    weather:
+    - clear
+    - rain
+    delay: 15
+    amplitude: 5
+    prevent_stacking: 2
+
+owl:
+    sound: ambient.owl
+    biomes:
+    - green biomes
+    levels:
+    - surface
+    time_of_day:
+    - night
+    weather:
+    - clear
+    - rain
+    delay: 30
+    amplitude: 7
+    prevent_stacking: 2
+
+frog:
+    sound: ambient.frog
+    biomes:
+    - green biomes
+    levels:
+    - surface
+    time_of_day:
+    - evening
+    - night
+    weather:
+    - clear
+    - rain
+    delay: 25
+    amplitude: 6
+    prevent_stacking: 2
+
+wolf_howl:
+    sound: ambient.wolf_howl
+    biomes:
+    - forest biomes
+    - high biomes
+    levels:
+    - surface
+    - sky
+    time_of_day:
+    - evening
+    - night
+    delay: 60
+    amplitude: 40
+    prevent_stacking: 3
+
+desert_cricket:
+    sound: ambient.desert_cricket
+    biomes:
+    - arid biomes
+    levels:
+    - surface
+    delay: 20
+    amplitude: 5
+
+desert_cricket_slowed:
+    sound: ambient.desert_cricket_slowed
+    biomes:
+    - arid biomes
+    levels:
+    - surface
+    delay: 25
+    amplitude: 7
+
+grasshopper_click:
+    sound: ambient.grasshopper.click
+    biomes:
+    - arid biomes
+    levels:
+    - surface
+    delay: 25
+    amplitude: 10
+    volume: 0.5
+
+riser:
+    sound: ambient.riser
+    biomes:
+    - arid biomes
+    - winter biomes
+    levels:
+    - surface
+    time_of_day:
+    - morning
+    - noon
+    delay: 90
+    amplitude: 20
+    volume: 0.35
+    prevent_stacking: 2
+
+western_chord:
+    sound: ambient.western_chord
+    biomes:
+    - arid biomes
+    - winter biomes
+    levels:
+    - surface
+    time_of_day:
+    - morning
+    - noon
+    delay: 120
+    amplitude: 30
+    volume: 0.4
+    prevent_stacking: 3
+
+whoosh:
+    sound: ambient.whoosh
+    biomes:
+    - arid biomes
+    - winter biomes
+    levels:
+    - surface
+    time_of_day:
+    - evening
+    - night
+    delay: 90
+    amplitude: 10
+    volume: 0.35
+    prevent_stacking: 2
+
+snowing:
+    sound: ambient.snowing
+    biomes:
+    - winter biomes
+    levels:
+    - surface
+    weather:
+    - rain
+    - thunder
+    delay: 8.5
+    amplitude: 0
+    volume: 0.6
+
+hills_dirt:
+    sound: ambient.dirt
+    biomes:
+    - high biomes
+    levels:
+    - surface
+    delay: 15
+    amplitude: 5
+
+seagulls:
+    sound: ambient.seagulls
+    biomes:
+    - ocean biomes
+    levels:
+    - surface
+    time_of_day:
+    - morning
+    - noon
+    - evening
+    weather:
+    - clear
+    - rain
+    delay: 25
+    amplitude: 5
+    volume: 0.6
+
+sea_waves:
+    sound: ambient.waves
+    biomes:
+    - ocean biomes
+    levels:
+    - surface
+    weather:
+    - clear
+    - rain
+    delay: 20
+    amplitude: 5
+    volume: 0.25
+
+leaves_rustling:
+    sound: ambient.leaves_rustling
+    biomes:
+    - green biomes
+    - savanna
+    - windswept savanna
+    - savanna plateau
+    - wooded badlands
+    levels:
+    - surface
+    weather:
+    - clear
+    - rain
+    delay: 16
+    amplitude: 5
+    volume: 0.3
+
+windy_leaves_rustling:
+    sound: ambient.leaves_rustling
+    biomes:
+    - green biomes
+    - savanna
+    - windswept savanna
+    - savanna plateau
+    - wooded badlands
+    levels:
+    - surface
+    weather:
+    - thunder
+    delay: 13
+    amplitude: 4
+    volume: 0.6
+
+wood_creak:
+    sound: ambient.wood_creak
+    biomes:
+    - green biomes
+    - savanna
+    - windswept savanna
+    - savanna plateau
+    - wooded badlands
+    levels:
+    - surface
+    weather:
+    - clear
+    - rain
+    delay: 20
+    amplitude: 5
+
+windy_wood_creak:
+    sound: ambient.wood_creak
+    biomes:
+    - green biomes
+    - savanna
+    - windswept savanna
+    - savanna plateau
+    - wooded badlands
+    levels:
+    - surface
+    weather:
+    - thunder
+    delay: 10
+    amplitude: 5
+
+end_hum:
+    sound: ambient.cave_ambience
+    worlds:
+    - world_the_end
+    delay: 8.5
+    amplitude: 0
+    volume: 0.8
+
+dungeon_ambience:
+    sound: ambient.cave_ambience
+    biomes:
+    - deep dark
+    - dungeon_1
+    - dungeon_2
+    - dungeon_5
+    - dungeon_6
+    delay: 8.5
+    amplitude: 0
+    volume: 0.7
+
+dungeon_ambience_2:
+    sound: ambient.dark_cave_ambience
+    biomes:
+    - dungeon_3
+    levels:
+    - surface
+    delay: 9.5
+    amplitude: 0
+    volume: 0.65
+
+cemetery_wind:
+    sound: ambient.winter_wind
+    biomes:
+    - dungeon_4
+    levels:
+    - surface
+    - sky
+    delay: 8.5
+    amplitude: 0
+    volume: 0.25
+
+desert_dungeon_wind:
+    sound: ambient.medium_wind.desert
+    biomes:
+    - dungeon_7
+    - dungeon_8
+    delay: 8.5
+    amplitude: 0
+    volume: 0.25
+
+dungeon_dirt:
+    sound: ambient.dirt
+    biomes:
+    - dungeons
+    - deep dark
+    levels:
+    - surface
+    delay: 15
+    amplitude: 5
+    prevent_stacking: 2
+
+dungeon_creaking:
+    sound: ambient.scary_creaking
+    biomes:
+    - dungeons
+    - deep dark
+    levels:
+    - surface
+    delay: 35
+    amplitude: 10
+    volume: 0.7
+    prevent_stacking: 3
+
+dungeon_wooden_support_creak:
+    sound: ambient.dungeons.wood_creak
+    biomes:
+    - dungeon_1
+    - dungeon_2
+    levels:
+    - surface
+    delay: 12
+    amplitude: 7
+    volume: 0.9
+    prevent_stacking: 2
+
+dungeon_mices:
+    sound: ambient.dungeons.mices
+    biomes:
+    - dungeon_1
+    - dungeon_2
+    - dungeon_3
+    - dungeon_5
+    - dungeon_6
+    - dungeon_8
+    levels:
+    - surface
+    delay: 25
+    amplitude: 7
+    prevent_stacking: 2
+
+dungeon_rocks:
+    sound: ambient.dungeons.rocks
+    biomes:
+    - dungeon_1
+    - dungeon_2
+    - dungeon_3
+    - dungeon_5
+    - dungeon_9
+    levels:
+    - surface
+    delay: 20
+    amplitude: 10
+    prevent_stacking: 3
+
+dungeon_water_drips:
+    sound: ambient.dungeons.water_drips
+    biomes:
+    - dungeon_1
+    - dungeon_2
+    - dungeon_3
+    - dungeon_5
+    levels:
+    - surface
+    delay: 30
+    amplitude: 10
+    prevent_stacking: 3
+
+dungeon_tapping:
+    sound: ambient.dungeons.tapping
+    biomes:
+    - dungeon_3
+    - dungeon_5
+    levels:
+    - surface
+    delay: 40
+    amplitude: 10
+    prevent_stacking: 3
+    volume: 1
+
+dungeon_raven:
+    sound: ambient.dungeons.raven
+    biomes:
+    - dungeon_4
+    levels:
+    - surface
+    delay: 45
+    amplitude: 10
+    prevent_stacking: 3
+    volume: 0.4
+
+dungeon_crows:
+    sound: ambient.crows
+    biomes:
+    - dungeon_4
+    levels:
+    - surface
+    time_of_day:
+    - morning
+    - noon
+    weather:
+    - clear
+    - rain
+    delay: 50
+    amplitude: 5
+    prevent_stacking: 2
+
+dungeon_owls:
+    sound: ambient.owl
+    biomes:
+    - dungeon_4
+    levels:
+    - surface
+    time_of_day:
+    - night
+    weather:
+    - clear
+    - rain
+    delay: 30
+    amplitude: 7
+    prevent_stacking: 2
+
+dungeon_desert_cricket:
+    sound: ambient.desert_cricket
+    biomes:
+    - dungeon_7
+    - dungeon_8
+    - dungeon_9
+    delay: 20
+    amplitude: 5
+
+dungeon_desert_cricket_slowed:
+    sound: ambient.desert_cricket_slowed
+    biomes:
+    - dungeon_7
+    - dungeon_8
+    - dungeon_9
+    delay: 25
+    amplitude: 7
+
+dungeon_grasshopper_click:
+    sound: ambient.grasshopper.click
+    biomes:
+    - dungeon_7
+    - dungeon_8
+    - dungeon_9
+    delay: 25
+    amplitude: 10
+    volume: 0.5
+
+dungeon_riser:
+    sound: ambient.riser
+    biomes:
+    - dungeon_7
+    - dungeon_8
+    - dungeon_9
+    time_of_day:
+    - morning
+    - noon
+    delay: 90
+    amplitude: 10
+    volume: 0.35
+    prevent_stacking: 2
+
+dungeon_whoosh:
+    sound: ambient.whoosh
+    biomes:
+    - dungeon_7
+    - dungeon_8
+    - dungeon_9
+    time_of_day:
+    - evening
+    - night
+    delay: 90
+    amplitude: 10
+    volume: 0.35
+    prevent_stacking: 2
+
+dungeon_western_chord:
+    sound: ambient.western_chord
+    biomes:
+    - dungeon_7
+    - dungeon_8
+    levels:
+    - surface
+    time_of_day:
+    - morning
+    - noon
+    delay: 120
+    amplitude: 30
+    volume: 0.4
+    prevent_stacking: 3

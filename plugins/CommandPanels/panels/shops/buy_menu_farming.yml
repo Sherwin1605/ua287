@@ -1,0 +1,245 @@
+panels:
+  buy_menu_farming:
+    perm: default
+    rows: 5
+    title: '&f'
+    empty: AIR
+    sound-on-open: BLOCK_NOTE_BLOCK_HAT
+    item:
+
+
+      '0':
+        material: STICK
+        customdata: 1
+        name: '&c← Previous Menu'
+        commands:
+        - open= main_menu
+      
+      
+      '38':
+        material: STICK
+        customdata: 1
+        name: '&a← Previous Page'
+        commands:
+        - open= buy_menu_food
+      '42':
+        material: STICK
+        customdata: 2
+        name: '&aNext Page →'
+        commands:
+        - open= buy_menu_special
+      
+      
+      
+      
+      '10':
+        material: WHEAT_SEEDS
+        stack: 8
+        name: '%color_menu_primary%Wheat Seeds'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7BUY &f&l8 &7FOR %color_gold%40 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to buy'
+        commands:
+        - buy= 40 WHEAT_SEEDS 8
+      '11':
+        material: PUMPKIN_SEEDS
+        stack: 8
+        name: '%color_menu_primary%Pumpkin Seeds'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7BUY &f&l8 &7FOR %color_gold%160 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to buy'
+        commands:
+        - buy= 160 PUMPKIN_SEEDS 8
+      '12':
+        material: MELON_SEEDS
+        stack: 8
+        name: '%color_menu_primary%Melon Seeds'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7BUY &f&l8 &7FOR %color_gold%160 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to buy'
+        commands:
+        - buy= 160 MELON_SEEDS 8
+      '13':
+        material: BEETROOT_SEEDS
+        stack: 8
+        name: '%color_menu_primary%Beetroot Seeds'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7BUY &f&l8 &7FOR %color_gold%200 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to buy'
+        commands:
+        - buy= 200 BEETROOT_SEEDS 8
+      '14':
+        material: COCOA_BEANS
+        stack: 8
+        name: '%color_menu_primary%Cocoa Beans'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7BUY &f&l8 &7FOR %color_gold%240 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to buy'
+        commands:
+        - buy= 240 COCOA_BEANS 8
+      '15':
+        material: NETHER_WART
+        stack: 4
+        name: '%color_menu_primary%Nether Wart'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7BUY &f&l4 &7FOR %color_gold%200 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to buy'
+        commands:
+        - buy= 200 NETHER_WART 4
+      
+      
+      
+      
+      
+      
+      
+      '19':
+        material: POTATO
+        stack: 8
+        name: '%color_menu_primary%Potato'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7BUY &f&l8 &7FOR %color_gold%60 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to buy'
+        commands:
+        - buy= 60 POTATO 8
+      '20':
+        material: CARROT
+        stack: 8
+        name: '%color_menu_primary%Carrot'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7BUY &f&l8 &7FOR %color_gold%60 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to buy'
+        commands:
+        - buy= 60 CARROT 8
+      '21':
+        material: SWEET_BERRIES
+        stack: 8
+        name: '%color_menu_primary%Sweet Berries'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7BUY &f&l8 &7FOR %color_gold%80 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to buy'
+        commands:
+        - buy= 80 SWEET_BERRIES 8
+      '22':
+        material: SUGAR_CANE
+        stack: 8
+        name: '%color_menu_primary%Sugar Cane'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7BUY &f&l8 &7FOR %color_gold%120 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to buy'
+        commands:
+        - buy= 120 SUGAR_CANE 8
+      '23':
+        material: KELP
+        stack: 8
+        name: '%color_menu_primary%Kelp'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7BUY &f&l8 &7FOR %color_gold%60 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to buy'
+        commands:
+        - buy= 60 KELP 8
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      '28':
+        material: OAK_SAPLING
+        stack: 2
+        name: '%color_menu_primary%Oak Sapling'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7BUY &f&l2 &7FOR %color_gold%100 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to buy'
+        commands:
+        - buy= 100 OAK_SAPLING 2
+      '29':
+        material: SPRUCE_SAPLING
+        stack: 2
+        name: '%color_menu_primary%Spruce Sapling'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7BUY &f&l2 &7FOR %color_gold%100 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to buy'
+        commands:
+        - buy= 100 SPRUCE_SAPLING 2
+      '30':
+        material: BIRCH_SAPLING
+        stack: 2
+        name: '%color_menu_primary%Birch Sapling'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7BUY &f&l2 &7FOR %color_gold%100 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to buy'
+        commands:
+        - buy= 100 BIRCH_SAPLING 2
+      '31':
+        material: JUNGLE_SAPLING
+        stack: 2
+        name: '%color_menu_primary%Jungle Sapling'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7BUY &f&l2 &7FOR %color_gold%100 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to buy'
+        commands:
+        - buy= 100 JUNGLE_SAPLING 2
+      '32':
+        material: ACACIA_SAPLING
+        stack: 2
+        name: '%color_menu_primary%Acacia Sapling'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7BUY &f&l2 &7FOR %color_gold%100 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to buy'
+        commands:
+        - buy= 100 ACACIA_SAPLING 2
+      '33':
+        material: DARK_OAK_SAPLING
+        stack: 2
+        name: '%color_menu_primary%Dark Oak Sapling'
+        lore:
+        - ' '
+        - '%color_gold%🪣 &7BUY &f&l2 &7FOR %color_gold%100 Gold '
+        - ' '
+        - '%color_menu_purchase%&l✔ Click to buy'
+        commands:
+        - buy= 100 DARK_OAK_SAPLING 2
+
+      
+

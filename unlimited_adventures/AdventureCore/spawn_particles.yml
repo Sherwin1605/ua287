@@ -1,0 +1,8 @@
+# Please DO NOT change version number!
+version: 1
+
+# 
+# In this file you can turn off the spawn particles.
+# 
+particles:
+    enabled: true

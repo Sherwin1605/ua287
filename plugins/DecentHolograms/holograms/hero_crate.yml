@@ -1,0 +1,18 @@
+location: spawn:703,470:108,200:820,448
+enabled: true
+display-range: 48
+update-range: 48
+update-interval: 20
+facing: 0.0
+down-origin: false
+pages:
+- lines:
+  - content: '#50ecf3&lHero Crate'
+    height: 0.3
+  - content: '#50ecf3▶ &fYour Keys: %crazycrates_herocrate_total% #50ecf3◀'
+    height: 0.3
+  - content: '#7dff49&lLEFT-CLICK #61fb9b&l(PREVIEW)'
+    height: 0.3
+  - content: '#7dff49&lRIGHT-CLICK #61fb9b&l(OPEN)'
+    height: 0.3
+  actions: {}
