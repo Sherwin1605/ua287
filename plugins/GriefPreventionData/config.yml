@@ -9,11 +9,11 @@ GriefPrevention:
     dungeons: -1
   Claims:
     Mode:
-      spawn: Disabled
-      world: Survival
-      dungeons: Disabled
       world_the_end: Disabled
+      spawn: Disabled
+      dungeons: Disabled
       world_nether: Disabled
+      world: Survival
     PreventGlobalMonsterEggs: true
     PreventTheft: true
     ProtectCreatures: true
