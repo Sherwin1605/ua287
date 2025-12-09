@@ -1,7 +1,7 @@
 {
   "generic": {
     "language": "en_us",
-    "botToken": "MTMwMTYwNDk3NjEzNjgxODc2MA.GVDLEr.fAwMDVmFwEXNZofNkcDXgpLxXuaYWOu88J7FBA",
+    "botToken": "MTMwMTYwNDk3NjEzNjgxODc2MA.G_nKc0.mH1QqPMhU1zEZbLSybmbTdN82NJcHUZZS7S0_0",
     "showServerStatusInBotStatus": true,
     "botPlayingActivity": "Minecraft (%onlinePlayerCount%/%maxPlayerCount%)",
     "botListeningActivity": "Listening",
@@ -94,5 +94,5 @@
     "onlinePlayerCountVoiceChannelName": ""
   },
   "latestVersion": "2.7.0",
-  "latestCheckTime": 1765266855403
+  "latestCheckTime": 1765283666936
 }
