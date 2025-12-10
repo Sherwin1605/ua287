@@ -1,8 +1,8 @@
-[22:16:59] [main/INFO]: Loading Minecraft 1.21.1 with Fabric Loader 0.18.1
-[22:16:59] [ForkJoinPool-1-worker-4/WARN]: The mod "accessories_compat_layer" contains invalid entries in its mod json:
+[22:35:35] [main/INFO]: Loading Minecraft 1.21.1 with Fabric Loader 0.18.1
+[22:35:38] [ForkJoinPool-1-worker-2/WARN]: The mod "accessories_compat_layer" contains invalid entries in its mod json:
 - Unsupported root entry "#COMMENT_breaks" at line 53 column 20
-[22:16:59] [ForkJoinPool-1-worker-3/WARN]: Mod com_github_rtyley_animated-gif-lib-for-java uses the version animated-gif-lib-1.7 which isn't compatible with Loader's extended semantic version format (Could not parse version number component 'animated'!), SemVer is recommended for reliably evaluating dependencies and prioritizing newer version
-[22:16:59] [main/INFO]: Loading 269 mods:
+[22:35:38] [ForkJoinPool-1-worker-2/WARN]: Mod com_github_rtyley_animated-gif-lib-for-java uses the version animated-gif-lib-1.7 which isn't compatible with Loader's extended semantic version format (Could not parse version number component 'animated'!), SemVer is recommended for reliably evaluating dependencies and prioritizing newer version
+[22:35:41] [main/INFO]: Loading 269 mods:
 	- accessories 1.1.0-beta.52+1.21.1
 	- accessories_compat_layer 0.1.10
 	   \-- mixinsquared 0.3.4
@@ -320,92 +320,92 @@
 	   |-- com_twelvemonkeys_imageio_imageio-webp 3.12.0
 	   |-- org_quiltmc_parsers_gson 0.2.1
 	   \-- org_quiltmc_parsers_json 0.2.1
-[22:17:00] [main/INFO]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=file:/workspaces/ua287/libraries/net/fabricmc/sponge-mixin/0.16.5+mixin.0.8.7/sponge-mixin-0.16.5+mixin.0.8.7.jar Service=Knot/Fabric Env=SERVER
-[22:17:00] [main/INFO]: Compatibility level set to JAVA_17
-[22:17:00] [main/INFO]: Compatibility level set to JAVA_21
-[22:17:00] [main/WARN]: Reference map 'forgeconfigapiport.common.refmap.json' for forgeconfigapiport.common.mixins.json could not be read. If this is a development environment you can ignore this message
-[22:17:00] [main/WARN]: Mod 'ferritecore' attempted to override option 'mixin.alloc.blockstate', which doesn't exist, ignoring
-[22:17:00] [main/INFO]: Option 'mixin.entity.collisions.fluid' requires 'mixin.util.block_tracking=true' but found 'false'. Setting 'mixin.entity.collisions.fluid=false'.
-[22:17:00] [main/INFO]: Option 'mixin.experimental.entity.block_caching.block_support' requires 'mixin.util.block_tracking=true' but found 'false'. Setting 'mixin.experimental.entity.block_caching.block_support=false'.
-[22:17:00] [main/INFO]: Option 'mixin.experimental.entity.block_caching.fluid_pushing' requires 'mixin.util.block_tracking=true' but found 'false'. Setting 'mixin.experimental.entity.block_caching.fluid_pushing=false'.
-[22:17:00] [main/INFO]: Option 'mixin.experimental.entity.block_caching.block_touching' requires 'mixin.util.block_tracking=true' but found 'false'. Setting 'mixin.experimental.entity.block_caching.block_touching=false'.
-[22:17:00] [main/INFO]: Option 'mixin.experimental.entity.block_caching.suffocation' requires 'mixin.util.block_tracking=true' but found 'false'. Setting 'mixin.experimental.entity.block_caching.suffocation=false'.
-[22:17:00] [main/INFO]: Option 'mixin.experimental.entity.block_caching' requires 'mixin.util.block_tracking=true' but found 'false'. Setting 'mixin.experimental.entity.block_caching=false'.
-[22:17:00] [main/INFO]: Loaded configuration file for Lithium: 149 options available, 0 override(s) found
-[22:17:01] [main/INFO]: Loaded configuration file for ModernFix 5.25.1+mc1.21.1: 65 options available, 0 override(s) found
-[22:17:01] [main/INFO]: Applying Nashorn fix
-[22:17:01] [main/INFO]: Packet Fixer forge 1.20.5-1.21.X has been applied successfully.
-[22:17:01] [main/WARN]: Reference map 'supermartijn642configlib.mixins.refmap.json' for supermartijn642configlib.mixins.json could not be read. If this is a development environment you can ignore this message
-[22:17:01] [main/WARN]: Reference map 'yet_another_config_lib_v3.refmap.json' for yacl.mixins.json could not be read. If this is a development environment you can ignore this message
-[22:17:01] [main/WARN]: Reference map 'yet_another_config_lib_v3.refmap.json' for yacl-fabric.mixins.json could not be read. If this is a development environment you can ignore this message
-[22:17:01] [main/WARN]: Error loading class: net/minecraft/class_906 (java.lang.ClassNotFoundException: net/minecraft/class_906)
-[22:17:01] [main/WARN]: @Mixin target net.minecraft.class_906 was not found porting_lib_item_abilities.mixins.json:FishingHookRendererMixin from mod porting_lib_item_abilities
-[22:17:01] [main/WARN]: Error loading class: net/minecraft/class_4224 (java.lang.ClassNotFoundException: net/minecraft/class_4224)
-[22:17:01] [main/WARN]: @Mixin target net.minecraft.class_4224 was not found mixins.cobblemon-common.json:ChannelMixin from mod cobblemon
-[22:17:01] [main/WARN]: Error loading class: juuxel/adorn/block/variant/BlockVariantSets (java.lang.ClassNotFoundException: juuxel/adorn/block/variant/BlockVariantSets)
-[22:17:01] [main/WARN]: @Mixin target juuxel.adorn.block.variant.BlockVariantSets was not found mixins.cobblemon-common.json:invoker.AdornRegisterInvoker from mod cobblemon
-[22:17:01] [main/WARN]: Error loading class: net/minecraft/class_1140 (java.lang.ClassNotFoundException: net/minecraft/class_1140)
-[22:17:01] [main/WARN]: @Mixin target net.minecraft.class_1140 was not found mixins.cobblemon-fabric.json:FabricSoundEngineMixin from mod cobblemon
-[22:17:01] [main/WARN]: Error loading class: com/cobblemon/mod/common/entity/pokemon/ai/goals/PokemonFollowOwnerGoal (java.lang.ClassNotFoundException: com/cobblemon/mod/common/entity/pokemon/ai/goals/PokemonFollowOwnerGoal)
-[22:17:01] [main/WARN]: @Mixin target com.cobblemon.mod.common.entity.pokemon.ai.goals.PokemonFollowOwnerGoal was not found fightorflight.mixins_common.json:PokemonFollowOwnerGoalMixin from mod fightorflight
-[22:17:01] [main/WARN]: Error loading class: com/electronwill/nightconfig/core/io/IoUtils (java.lang.ClassNotFoundException: com/electronwill/nightconfig/core/io/IoUtils)
-[22:17:01] [main/WARN]: Error loading class: net/minecraft/class_287 (java.lang.ClassNotFoundException: net/minecraft/class_287)
-[22:17:01] [main/WARN]: @Mixin target net.minecraft.class_287 was not found owo.mixins.json:BufferBuilderAccessor from mod owo
-[22:17:01] [main/WARN]: Error loading class: net/minecraft/class_437 (java.lang.ClassNotFoundException: net/minecraft/class_437)
-[22:17:01] [main/WARN]: @Mixin target net.minecraft.class_437 was not found owo.mixins.json:ScreenAccessor from mod owo
-[22:17:01] [main/WARN]: Error loading class: net/minecraft/class_638 (java.lang.ClassNotFoundException: net/minecraft/class_638)
-[22:17:01] [main/WARN]: @Mixin target net.minecraft.class_638 was not found porting_lib_level_events.mixins.json:client.ClientLevelMixin from mod porting_lib_level_events
-[22:17:01] [main/WARN]: Error loading class: net/minecraft/class_918 (java.lang.ClassNotFoundException: net/minecraft/class_918)
-[22:17:01] [main/WARN]: @Mixin target net.minecraft.class_918 was not found rctmod.mixins.json:client.ItemRendererMixin from mod rctmod
-[22:17:01] [main/WARN]: Error loading class: net/minecraft/class_437 (java.lang.ClassNotFoundException: net/minecraft/class_437)
-[22:17:02] [main/INFO]: Registering config for libjf-translate-v1
-[22:17:02] [main/INFO]: Registering config for respackopts
-[22:17:02] [main/INFO]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.5.0).
-[22:17:05] [main/WARN]: Method overwrite conflict for method_21740 in modernfix-common.mixins.json:perf.remove_biome_temperature_cache.BiomeMixin from mod modernfix, previously written by net.caffeinemc.mods.lithium.mixin.world.temperature_cache.BiomeMixin. Skipping method.
-[22:17:08] [main/WARN]: Error loading class: net/minecraft/class_315 (java.lang.ClassNotFoundException: net/minecraft/class_315)
-[22:17:08] [main/WARN]: Error loading class: net/minecraft/class_310 (java.lang.ClassNotFoundException: net/minecraft/class_310)
-[22:17:08] [main/WARN]: Error loading class: net/minecraft/class_304 (java.lang.ClassNotFoundException: net/minecraft/class_304)
-[22:17:08] [main/INFO]: Vanilla bootstrap took 5387 milliseconds
-[22:17:09] [main/INFO]: Setting up compat modules for Accessories!
-[22:17:09] [main/INFO]: Registered Trinkets Reloaded Listeners
-[22:17:09] [main/INFO]: Successfully initialized antixray for fabric
-[22:17:10] [main/INFO]: Registering Mod Items for carved_wood
-[22:17:10] [main/INFO]: Registering Mod Blocks for carved_wood
-[22:17:10] [main/INFO]: Registering Recipe Serializers for carved_wood
-[22:17:10] [main/INFO]: CobbleCuisine >> Loaded config in memory!
-[22:17:10] [main/INFO]: CobbleCuisine >> Registering Effects...
-[22:17:10] [main/INFO]: CobbleCuisine >> Registering Blocks...
-[22:17:10] [main/INFO]: CobbleCuisine >> Registering Items...
-[22:17:10] [main/INFO]: CobbleCuisine >> Injecting Loot Tables...
-[22:17:10] [main/INFO]: CobbleCuisine >> Up and running! Time spent: 71.26ms
-[22:17:10] [main/ERROR]: No data fixer registered for cobbledollars:cobble_merchant
-[22:17:10] [main/INFO]: Registering C2S receiver with id cobblefurnies:craft_recipe
-[22:17:10] [main/WARN]: Error loading class: net/minecraft/class_465 (java.lang.ClassNotFoundException: net/minecraft/class_465)
-[22:17:10] [main/WARN]: Error loading class: net/minecraft/class_465 (java.lang.ClassNotFoundException: net/minecraft/class_465)
-[22:17:10] [main/WARN]: Error loading class: net/minecraft/class_1132 (java.lang.ClassNotFoundException: net/minecraft/class_1132)
-[22:17:10] [main/INFO]: Mod compatibility check results: {cobbledollars=true, sophisticatedbackpacks=true, cobblenav=true, travelersbackpack=false, waystones=true}
-[22:17:10] [main/INFO]: Detected compatible mod(s) — initializing loot table modifications.
-[22:17:10] [main/INFO]: Cobblemon Additions mod initialized successfully.
-[22:17:10] [main/INFO]: Registering items
-[22:17:10] [main/INFO]: Registering data components
-[22:17:10] [main/INFO]: Registering Mod Items for cozyhome
-[22:17:10] [main/WARN]: Error loading class: net/minecraft/class_310 (java.lang.ClassNotFoundException: net/minecraft/class_310)
-[22:17:10] [main/WARN]: Error loading class: net/minecraft/class_310 (java.lang.ClassNotFoundException: net/minecraft/class_310)
-[22:17:11] [main/INFO]: Registering ModBlocks for cozyhome
-[22:17:11] [main/INFO]: Registering block entities for cozyhome
-[22:17:11] [main/INFO]: Registering Item Groups for cozyhome
-[22:17:11] [main/INFO]: Registering Sounds for cozyhome
-[22:17:11] [main/INFO]: Registering Mod Data Components for cozyhome
-[22:17:11] [main/INFO]: Enabled 28 bug fixes: [MC-2025, MC-7569, MC-8187, MC-30391, MC-69216, MC-88371, MC-89146, MC-93018, MC-100991, MC-119417, MC-119754, MC-121706, MC-121903, MC-129909, MC-132878, MC-135971, MC-155509, MC-160095, MC-179072, MC-183990, MC-199467, MC-200418, MC-206922, MC-215530, MC-223153, MC-224729, MC-231743, MC-232869]
-[22:17:11] [main/INFO]: Successfully Debugify'd your game!
-[22:17:11] [main/INFO]: Detected Java version 21. Enabling Java 16 features.
-[22:17:11] [main/INFO]: [EssentialCommands]: Mod Load Initiated.
-[22:17:11] [main/INFO]: [EssentialCommands]: Mod Load Complete.
-[22:17:11] [main/INFO]: [FANCYMENU] Loading v3.8.1 in server-side mode on FABRIC!
-[22:17:11] [main/WARN]: Error loading class: net/minecraft/class_437 (java.lang.ClassNotFoundException: net/minecraft/class_437)
-[22:17:11] [main/WARN]: Error loading class: net/minecraft/class_437 (java.lang.ClassNotFoundException: net/minecraft/class_437)
-[22:17:11] [main/INFO]: Instancing error handler class dev.isxander.debugify.mixinplugin.DebugifyErrorHandler
-[22:17:11] [main/ERROR]: Mixin apply for mod fightorflight failed fightorflight.mixins_common.json:PokemonEntityMixin from mod fightorflight -> com.cobblemon.mod.common.entity.pokemon.PokemonEntity: org.spongepowered.asm.mixin.injection.throwables.InvalidInjectionException Critical injection failure: @Inject annotation on registerFOFGoals could not find any targets matching 'Lcom/cobblemon/mod/common/entity/pokemon/PokemonEntity;method_5959()V' in com/cobblemon/mod/common/entity/pokemon/PokemonEntity. Using refmap fightorflight-common-refmap.json [INJECT_PREPARE Applicator Phase -> fightorflight.mixins_common.json:PokemonEntityMixin from mod fightorflight -> Prepare Injections -> handler$bip000$fightorflight$registerFOFGoals(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V -> Parse ->  -> Validate Targets]
+[22:35:42] [main/INFO]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=file:/workspaces/ua287/libraries/net/fabricmc/sponge-mixin/0.16.5+mixin.0.8.7/sponge-mixin-0.16.5+mixin.0.8.7.jar Service=Knot/Fabric Env=SERVER
+[22:35:42] [main/INFO]: Compatibility level set to JAVA_17
+[22:35:42] [main/INFO]: Compatibility level set to JAVA_21
+[22:35:43] [main/WARN]: Reference map 'forgeconfigapiport.common.refmap.json' for forgeconfigapiport.common.mixins.json could not be read. If this is a development environment you can ignore this message
+[22:35:43] [main/WARN]: Mod 'ferritecore' attempted to override option 'mixin.alloc.blockstate', which doesn't exist, ignoring
+[22:35:43] [main/INFO]: Option 'mixin.entity.collisions.fluid' requires 'mixin.util.block_tracking=true' but found 'false'. Setting 'mixin.entity.collisions.fluid=false'.
+[22:35:43] [main/INFO]: Option 'mixin.experimental.entity.block_caching.block_support' requires 'mixin.util.block_tracking=true' but found 'false'. Setting 'mixin.experimental.entity.block_caching.block_support=false'.
+[22:35:43] [main/INFO]: Option 'mixin.experimental.entity.block_caching.fluid_pushing' requires 'mixin.util.block_tracking=true' but found 'false'. Setting 'mixin.experimental.entity.block_caching.fluid_pushing=false'.
+[22:35:43] [main/INFO]: Option 'mixin.experimental.entity.block_caching.block_touching' requires 'mixin.util.block_tracking=true' but found 'false'. Setting 'mixin.experimental.entity.block_caching.block_touching=false'.
+[22:35:43] [main/INFO]: Option 'mixin.experimental.entity.block_caching.suffocation' requires 'mixin.util.block_tracking=true' but found 'false'. Setting 'mixin.experimental.entity.block_caching.suffocation=false'.
+[22:35:43] [main/INFO]: Option 'mixin.experimental.entity.block_caching' requires 'mixin.util.block_tracking=true' but found 'false'. Setting 'mixin.experimental.entity.block_caching=false'.
+[22:35:43] [main/INFO]: Loaded configuration file for Lithium: 149 options available, 0 override(s) found
+[22:35:43] [main/INFO]: Loaded configuration file for ModernFix 5.25.1+mc1.21.1: 65 options available, 0 override(s) found
+[22:35:43] [main/INFO]: Applying Nashorn fix
+[22:35:43] [main/INFO]: Packet Fixer forge 1.20.5-1.21.X has been applied successfully.
+[22:35:43] [main/WARN]: Reference map 'supermartijn642configlib.mixins.refmap.json' for supermartijn642configlib.mixins.json could not be read. If this is a development environment you can ignore this message
+[22:35:43] [main/WARN]: Reference map 'yet_another_config_lib_v3.refmap.json' for yacl.mixins.json could not be read. If this is a development environment you can ignore this message
+[22:35:43] [main/WARN]: Reference map 'yet_another_config_lib_v3.refmap.json' for yacl-fabric.mixins.json could not be read. If this is a development environment you can ignore this message
+[22:35:43] [main/WARN]: Error loading class: net/minecraft/class_906 (java.lang.ClassNotFoundException: net/minecraft/class_906)
+[22:35:43] [main/WARN]: @Mixin target net.minecraft.class_906 was not found porting_lib_item_abilities.mixins.json:FishingHookRendererMixin from mod porting_lib_item_abilities
+[22:35:44] [main/WARN]: Error loading class: net/minecraft/class_4224 (java.lang.ClassNotFoundException: net/minecraft/class_4224)
+[22:35:44] [main/WARN]: @Mixin target net.minecraft.class_4224 was not found mixins.cobblemon-common.json:ChannelMixin from mod cobblemon
+[22:35:44] [main/WARN]: Error loading class: juuxel/adorn/block/variant/BlockVariantSets (java.lang.ClassNotFoundException: juuxel/adorn/block/variant/BlockVariantSets)
+[22:35:44] [main/WARN]: @Mixin target juuxel.adorn.block.variant.BlockVariantSets was not found mixins.cobblemon-common.json:invoker.AdornRegisterInvoker from mod cobblemon
+[22:35:44] [main/WARN]: Error loading class: net/minecraft/class_1140 (java.lang.ClassNotFoundException: net/minecraft/class_1140)
+[22:35:44] [main/WARN]: @Mixin target net.minecraft.class_1140 was not found mixins.cobblemon-fabric.json:FabricSoundEngineMixin from mod cobblemon
+[22:35:44] [main/WARN]: Error loading class: com/cobblemon/mod/common/entity/pokemon/ai/goals/PokemonFollowOwnerGoal (java.lang.ClassNotFoundException: com/cobblemon/mod/common/entity/pokemon/ai/goals/PokemonFollowOwnerGoal)
+[22:35:44] [main/WARN]: @Mixin target com.cobblemon.mod.common.entity.pokemon.ai.goals.PokemonFollowOwnerGoal was not found fightorflight.mixins_common.json:PokemonFollowOwnerGoalMixin from mod fightorflight
+[22:35:44] [main/WARN]: Error loading class: com/electronwill/nightconfig/core/io/IoUtils (java.lang.ClassNotFoundException: com/electronwill/nightconfig/core/io/IoUtils)
+[22:35:45] [main/WARN]: Error loading class: net/minecraft/class_287 (java.lang.ClassNotFoundException: net/minecraft/class_287)
+[22:35:45] [main/WARN]: @Mixin target net.minecraft.class_287 was not found owo.mixins.json:BufferBuilderAccessor from mod owo
+[22:35:45] [main/WARN]: Error loading class: net/minecraft/class_437 (java.lang.ClassNotFoundException: net/minecraft/class_437)
+[22:35:45] [main/WARN]: @Mixin target net.minecraft.class_437 was not found owo.mixins.json:ScreenAccessor from mod owo
+[22:35:45] [main/WARN]: Error loading class: net/minecraft/class_638 (java.lang.ClassNotFoundException: net/minecraft/class_638)
+[22:35:45] [main/WARN]: @Mixin target net.minecraft.class_638 was not found porting_lib_level_events.mixins.json:client.ClientLevelMixin from mod porting_lib_level_events
+[22:35:45] [main/WARN]: Error loading class: net/minecraft/class_918 (java.lang.ClassNotFoundException: net/minecraft/class_918)
+[22:35:45] [main/WARN]: @Mixin target net.minecraft.class_918 was not found rctmod.mixins.json:client.ItemRendererMixin from mod rctmod
+[22:35:45] [main/WARN]: Error loading class: net/minecraft/class_437 (java.lang.ClassNotFoundException: net/minecraft/class_437)
+[22:35:46] [main/INFO]: Registering config for libjf-translate-v1
+[22:35:46] [main/INFO]: Registering config for respackopts
+[22:35:46] [main/INFO]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.5.0).
+[22:35:49] [main/WARN]: Method overwrite conflict for method_21740 in modernfix-common.mixins.json:perf.remove_biome_temperature_cache.BiomeMixin from mod modernfix, previously written by net.caffeinemc.mods.lithium.mixin.world.temperature_cache.BiomeMixin. Skipping method.
+[22:35:52] [main/WARN]: Error loading class: net/minecraft/class_315 (java.lang.ClassNotFoundException: net/minecraft/class_315)
+[22:35:52] [main/WARN]: Error loading class: net/minecraft/class_310 (java.lang.ClassNotFoundException: net/minecraft/class_310)
+[22:35:52] [main/WARN]: Error loading class: net/minecraft/class_304 (java.lang.ClassNotFoundException: net/minecraft/class_304)
+[22:35:53] [main/INFO]: Vanilla bootstrap took 5918 milliseconds
+[22:35:53] [main/INFO]: Setting up compat modules for Accessories!
+[22:35:53] [main/INFO]: Registered Trinkets Reloaded Listeners
+[22:35:53] [main/INFO]: Successfully initialized antixray for fabric
+[22:35:54] [main/INFO]: Registering Mod Items for carved_wood
+[22:35:54] [main/INFO]: Registering Mod Blocks for carved_wood
+[22:35:54] [main/INFO]: Registering Recipe Serializers for carved_wood
+[22:35:54] [main/INFO]: CobbleCuisine >> Loaded config in memory!
+[22:35:54] [main/INFO]: CobbleCuisine >> Registering Effects...
+[22:35:54] [main/INFO]: CobbleCuisine >> Registering Blocks...
+[22:35:54] [main/INFO]: CobbleCuisine >> Registering Items...
+[22:35:54] [main/INFO]: CobbleCuisine >> Injecting Loot Tables...
+[22:35:54] [main/INFO]: CobbleCuisine >> Up and running! Time spent: 68.43ms
+[22:35:54] [main/ERROR]: No data fixer registered for cobbledollars:cobble_merchant
+[22:35:55] [main/INFO]: Registering C2S receiver with id cobblefurnies:craft_recipe
+[22:35:55] [main/WARN]: Error loading class: net/minecraft/class_465 (java.lang.ClassNotFoundException: net/minecraft/class_465)
+[22:35:55] [main/WARN]: Error loading class: net/minecraft/class_465 (java.lang.ClassNotFoundException: net/minecraft/class_465)
+[22:35:55] [main/WARN]: Error loading class: net/minecraft/class_1132 (java.lang.ClassNotFoundException: net/minecraft/class_1132)
+[22:35:55] [main/INFO]: Mod compatibility check results: {cobbledollars=true, sophisticatedbackpacks=true, cobblenav=true, travelersbackpack=false, waystones=true}
+[22:35:55] [main/INFO]: Detected compatible mod(s) — initializing loot table modifications.
+[22:35:55] [main/INFO]: Cobblemon Additions mod initialized successfully.
+[22:35:55] [main/INFO]: Registering items
+[22:35:55] [main/INFO]: Registering data components
+[22:35:55] [main/INFO]: Registering Mod Items for cozyhome
+[22:35:55] [main/WARN]: Error loading class: net/minecraft/class_310 (java.lang.ClassNotFoundException: net/minecraft/class_310)
+[22:35:55] [main/WARN]: Error loading class: net/minecraft/class_310 (java.lang.ClassNotFoundException: net/minecraft/class_310)
+[22:35:55] [main/INFO]: Registering ModBlocks for cozyhome
+[22:35:55] [main/INFO]: Registering block entities for cozyhome
+[22:35:55] [main/INFO]: Registering Item Groups for cozyhome
+[22:35:55] [main/INFO]: Registering Sounds for cozyhome
+[22:35:55] [main/INFO]: Registering Mod Data Components for cozyhome
+[22:35:55] [main/INFO]: Enabled 28 bug fixes: [MC-2025, MC-7569, MC-8187, MC-30391, MC-69216, MC-88371, MC-89146, MC-93018, MC-100991, MC-119417, MC-119754, MC-121706, MC-121903, MC-129909, MC-132878, MC-135971, MC-155509, MC-160095, MC-179072, MC-183990, MC-199467, MC-200418, MC-206922, MC-215530, MC-223153, MC-224729, MC-231743, MC-232869]
+[22:35:55] [main/INFO]: Successfully Debugify'd your game!
+[22:35:55] [main/INFO]: Detected Java version 21. Enabling Java 16 features.
+[22:35:55] [main/INFO]: [EssentialCommands]: Mod Load Initiated.
+[22:35:55] [main/INFO]: [EssentialCommands]: Mod Load Complete.
+[22:35:55] [main/INFO]: [FANCYMENU] Loading v3.8.1 in server-side mode on FABRIC!
+[22:35:55] [main/WARN]: Error loading class: net/minecraft/class_437 (java.lang.ClassNotFoundException: net/minecraft/class_437)
+[22:35:55] [main/WARN]: Error loading class: net/minecraft/class_437 (java.lang.ClassNotFoundException: net/minecraft/class_437)
+[22:35:55] [main/INFO]: Instancing error handler class dev.isxander.debugify.mixinplugin.DebugifyErrorHandler
+[22:35:55] [main/ERROR]: Mixin apply for mod fightorflight failed fightorflight.mixins_common.json:PokemonEntityMixin from mod fightorflight -> com.cobblemon.mod.common.entity.pokemon.PokemonEntity: org.spongepowered.asm.mixin.injection.throwables.InvalidInjectionException Critical injection failure: @Inject annotation on registerFOFGoals could not find any targets matching 'Lcom/cobblemon/mod/common/entity/pokemon/PokemonEntity;method_5959()V' in com/cobblemon/mod/common/entity/pokemon/PokemonEntity. Using refmap fightorflight-common-refmap.json [INJECT_PREPARE Applicator Phase -> fightorflight.mixins_common.json:PokemonEntityMixin from mod fightorflight -> Prepare Injections -> handler$bip000$fightorflight$registerFOFGoals(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V -> Parse ->  -> Validate Targets]
 org.spongepowered.asm.mixin.injection.throwables.InvalidInjectionException: Critical injection failure: @Inject annotation on registerFOFGoals could not find any targets matching 'Lcom/cobblemon/mod/common/entity/pokemon/PokemonEntity;method_5959()V' in com/cobblemon/mod/common/entity/pokemon/PokemonEntity. Using refmap fightorflight-common-refmap.json [INJECT_PREPARE Applicator Phase -> fightorflight.mixins_common.json:PokemonEntityMixin from mod fightorflight -> Prepare Injections -> handler$bip000$fightorflight$registerFOFGoals(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V -> Parse ->  -> Validate Targets]
 	at org.spongepowered.asm.mixin.injection.selectors.TargetSelectors.validate(TargetSelectors.java:346) ~[sponge-mixin-0.16.5+mixin.0.8.7.jar:0.16.5+mixin.0.8.7]
 	at org.spongepowered.asm.mixin.injection.struct.InjectionInfo.readAnnotation(InjectionInfo.java:369) ~[sponge-mixin-0.16.5+mixin.0.8.7.jar:0.16.5+mixin.0.8.7]
@@ -441,32 +441,32 @@ org.spongepowered.asm.mixin.injection.throwables.InvalidInjectionException: Crit
 	at net.fabricmc.loader.impl.launch.knot.KnotServer.main(KnotServer.java:23) [fabric-loader-0.18.1.jar:?]
 	at net.fabricmc.loader.impl.launch.server.FabricServerLauncher.main(FabricServerLauncher.java:69) [fabric-loader-0.18.1.jar:?]
 	at net.fabricmc.installer.ServerLauncher.main(ServerLauncher.java:69) [server.jar:1.1.0]
-[22:17:11] [main/ERROR]: No data fixer registered for handcrafted
-[22:17:11] [main/INFO]: Huge Structure Blocks is now making your structure blocks even bigger!
-[22:17:11] [main/INFO]: New structure size = 512
-[22:17:11] [main/INFO]: Setting up file watchers
-[22:17:11] [main/INFO]: [KONKRETE] Loading v1.9.9 in server-side mode on FABRIC!
-[22:17:11] [main/INFO]: ---------------------------
-[22:17:11] [main/INFO]: KONKRETE SHIPS AND USES THE FOLLOWING LIBRARIES:
-[22:17:11] [main/INFO]:  
-[22:17:11] [main/INFO]: Open Imaging Copyright © 2014 Dhyan Blum.
-[22:17:11] [main/INFO]: Open Imaging is licensed under Apache-2.0.
-[22:17:11] [main/INFO]:  
-[22:17:11] [main/INFO]: JsonPath Copyright © 2017 Jayway.
-[22:17:11] [main/INFO]: JsonPath is licensed under Apache-2.0.
-[22:17:11] [main/INFO]:  
-[22:17:11] [main/INFO]: Json-smart Copyright © netplex.
-[22:17:11] [main/INFO]: Json-smart is licensed under Apache-2.0.
-[22:17:11] [main/INFO]:  
-[22:17:11] [main/INFO]: Exp4j Copyright © Frank Asseg.
-[22:17:11] [main/INFO]: Exp4j is licensed under Apache-2.0. https://github.com/fasseg/exp4j
-[22:17:11] [main/INFO]: ---------------------------
-[22:17:11] [main/INFO]: [KONKRETE] Server-side modules initialized and ready to use!
-[22:17:12] [main/INFO]: Compression will use libdeflate (Linux x86_64), encryption will use OpenSSL 3.0.x (Linux x86_64)
-[22:17:12] [main/INFO]: loadsupport is a client mod only!
-[22:17:12] [main/INFO]: LumyMon v0.5.1-6 - Made by LUMYVERSE
-[22:17:12] [main/INFO]: Instancing error handler class dev.isxander.debugify.mixinplugin.DebugifyErrorHandler
-[22:17:12] [main/ERROR]: Mixin apply for mod fightorflight failed fightorflight.mixins_common.json:PokemonEntityMixin from mod fightorflight -> com.cobblemon.mod.common.entity.pokemon.PokemonEntity: org.spongepowered.asm.mixin.injection.throwables.InvalidInjectionException Critical injection failure: @Inject annotation on registerFOFGoals could not find any targets matching 'Lcom/cobblemon/mod/common/entity/pokemon/PokemonEntity;method_5959()V' in com/cobblemon/mod/common/entity/pokemon/PokemonEntity. Using refmap fightorflight-common-refmap.json [INJECT_PREPARE Applicator Phase -> fightorflight.mixins_common.json:PokemonEntityMixin from mod fightorflight -> Prepare Injections -> handler$bip000$fightorflight$registerFOFGoals(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V -> Parse ->  -> Validate Targets]
+[22:35:56] [main/ERROR]: No data fixer registered for handcrafted
+[22:35:56] [main/INFO]: Huge Structure Blocks is now making your structure blocks even bigger!
+[22:35:56] [main/INFO]: New structure size = 512
+[22:35:56] [main/INFO]: Setting up file watchers
+[22:35:56] [main/INFO]: [KONKRETE] Loading v1.9.9 in server-side mode on FABRIC!
+[22:35:56] [main/INFO]: ---------------------------
+[22:35:56] [main/INFO]: KONKRETE SHIPS AND USES THE FOLLOWING LIBRARIES:
+[22:35:56] [main/INFO]:  
+[22:35:56] [main/INFO]: Open Imaging Copyright © 2014 Dhyan Blum.
+[22:35:56] [main/INFO]: Open Imaging is licensed under Apache-2.0.
+[22:35:56] [main/INFO]:  
+[22:35:56] [main/INFO]: JsonPath Copyright © 2017 Jayway.
+[22:35:56] [main/INFO]: JsonPath is licensed under Apache-2.0.
+[22:35:56] [main/INFO]:  
+[22:35:56] [main/INFO]: Json-smart Copyright © netplex.
+[22:35:56] [main/INFO]: Json-smart is licensed under Apache-2.0.
+[22:35:56] [main/INFO]:  
+[22:35:56] [main/INFO]: Exp4j Copyright © Frank Asseg.
+[22:35:56] [main/INFO]: Exp4j is licensed under Apache-2.0. https://github.com/fasseg/exp4j
+[22:35:56] [main/INFO]: ---------------------------
+[22:35:56] [main/INFO]: [KONKRETE] Server-side modules initialized and ready to use!
+[22:35:56] [main/INFO]: Compression will use libdeflate (Linux x86_64), encryption will use OpenSSL 3.0.x (Linux x86_64)
+[22:35:56] [main/INFO]: loadsupport is a client mod only!
+[22:35:56] [main/INFO]: LumyMon v0.5.1-6 - Made by LUMYVERSE
+[22:35:56] [main/INFO]: Instancing error handler class dev.isxander.debugify.mixinplugin.DebugifyErrorHandler
+[22:35:56] [main/ERROR]: Mixin apply for mod fightorflight failed fightorflight.mixins_common.json:PokemonEntityMixin from mod fightorflight -> com.cobblemon.mod.common.entity.pokemon.PokemonEntity: org.spongepowered.asm.mixin.injection.throwables.InvalidInjectionException Critical injection failure: @Inject annotation on registerFOFGoals could not find any targets matching 'Lcom/cobblemon/mod/common/entity/pokemon/PokemonEntity;method_5959()V' in com/cobblemon/mod/common/entity/pokemon/PokemonEntity. Using refmap fightorflight-common-refmap.json [INJECT_PREPARE Applicator Phase -> fightorflight.mixins_common.json:PokemonEntityMixin from mod fightorflight -> Prepare Injections -> handler$bip000$fightorflight$registerFOFGoals(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V -> Parse ->  -> Validate Targets]
 org.spongepowered.asm.mixin.injection.throwables.InvalidInjectionException: Critical injection failure: @Inject annotation on registerFOFGoals could not find any targets matching 'Lcom/cobblemon/mod/common/entity/pokemon/PokemonEntity;method_5959()V' in com/cobblemon/mod/common/entity/pokemon/PokemonEntity. Using refmap fightorflight-common-refmap.json [INJECT_PREPARE Applicator Phase -> fightorflight.mixins_common.json:PokemonEntityMixin from mod fightorflight -> Prepare Injections -> handler$bip000$fightorflight$registerFOFGoals(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V -> Parse ->  -> Validate Targets]
 	at org.spongepowered.asm.mixin.injection.selectors.TargetSelectors.validate(TargetSelectors.java:346) ~[sponge-mixin-0.16.5+mixin.0.8.7.jar:0.16.5+mixin.0.8.7]
 	at org.spongepowered.asm.mixin.injection.struct.InjectionInfo.readAnnotation(InjectionInfo.java:369) ~[sponge-mixin-0.16.5+mixin.0.8.7.jar:0.16.5+mixin.0.8.7]
@@ -504,64 +504,64 @@ org.spongepowered.asm.mixin.injection.throwables.InvalidInjectionException: Crit
 	at net.fabricmc.loader.impl.launch.knot.KnotServer.main(KnotServer.java:23) [fabric-loader-0.18.1.jar:?]
 	at net.fabricmc.loader.impl.launch.server.FabricServerLauncher.main(FabricServerLauncher.java:69) [fabric-loader-0.18.1.jar:?]
 	at net.fabricmc.installer.ServerLauncher.main(ServerLauncher.java:69) [server.jar:1.1.0]
-[22:17:12] [main/WARN]: [MELODY] Disabling Melody since it's loaded server-side.
-[22:17:12] [main/INFO]: Registering ModBlocks for moarconcrete
-[22:17:12] [ForkJoinPool.commonPool-worker-1/INFO]: A new version of Essential Commands is available. Current: '0.35.2-mc1.21' Latest: '0.38.5-mc1.21.8
+[22:35:56] [main/WARN]: [MELODY] Disabling Melody since it's loaded server-side.
+[22:35:56] [main/INFO]: Registering ModBlocks for moarconcrete
+[22:35:56] [ForkJoinPool.commonPool-worker-1/INFO]: A new version of Essential Commands is available. Current: '0.35.2-mc1.21' Latest: '0.38.5-mc1.21.8
 '. Get the new version at https://modrinth.com/mod/essential-commands
-[22:17:12] [main/INFO]: Loading Noisium.
-[22:17:12] [main/INFO]: Don't trust naschhorn, the Master of Taglocks, around you or your bed
-[22:17:12] [main/INFO]: [Ping-Wheel] Init
-[22:17:12] [main/INFO]: [Ping-Wheel] Loaded ServerConfig(defaultChannelMode=auto, playerTrackingEnabled=true, msToRegenerate=1000, rateLimit=5)
-[22:17:12] [main/INFO]: Registering ItemGroups for pokeblocks
-[22:17:12] [main/INFO]: Registering ModItems for pokeblocks
-[22:17:12] [main/INFO]: Registering ModBlocks for pokeblocks
-[22:17:12] [main/INFO]: Registering mod entities for pokeblocks
-[22:17:12] [main/ERROR]: No data fixer registered for trainer
-[22:17:12] [main/ERROR]: No data fixer registered for trainer_association
-[22:17:13] [ToggleableConfigWatchService/INFO]: Registering config for libjf-config-core-v2
-[22:17:13] [ToggleableConfigWatchService/INFO]: Created config watch service
-[22:17:13] [main/INFO]: Registering C2S receiver with id roughlyenoughitems:request_tags_c2s
-[22:17:13] [main/INFO]: [REI] Registered plugin provider DefaultPlugin [roughlyenoughitems] for REIPlugin
-[22:17:13] [main/INFO]: [REI] Registered plugin provider DefaultRuntimePlugin [roughlyenoughitems] for REIPlugin
-[22:17:13] [main/INFO]: [REI] Registered plugin provider REIServerCompat [sophisticatedbackpacks] for REIPlugin
-[22:17:13] [main/INFO]: [REI] Registered plugin provider REIServerCompat [sophisticatedcore] for REIPlugin
-[22:17:13] [main/INFO]: [REI] Registered plugin provider REIServerCompat [sophisticatedstorage] for REIPlugin
-[22:17:13] [main/INFO]: [REI] Registered plugin provider DefaultPlugin [roughlyenoughitems] for REIServerPlugin
-[22:17:13] [main/INFO]: [REI] Registered plugin provider DefaultRuntimePlugin [roughlyenoughitems] for REIServerPlugin
-[22:17:13] [main/INFO]: [REI] Registered plugin provider REIServerCompat [sophisticatedbackpacks] for REIServerPlugin
-[22:17:13] [main/INFO]: [REI] Registered plugin provider REIServerCompat [sophisticatedcore] for REIServerPlugin
-[22:17:13] [main/INFO]: [REI] Registered plugin provider REIServerCompat [sophisticatedstorage] for REIServerPlugin
-[22:17:13] [main/INFO]: [REI] Registered plugin provider FabricFluidAPISupportPlugin for REIServerPlugin
-[22:17:13] [main/INFO]: [REI] Registered plugin provider FabricFluidAPISupportPlugin for REIPlugin
-[22:17:13] [main/INFO]: Registering C2S receiver with id roughlyenoughitems:delete_item
-[22:17:13] [main/INFO]: Registering C2S receiver with id roughlyenoughitems:create_item
-[22:17:13] [main/INFO]: Registering C2S receiver with id roughlyenoughitems:create_item_grab
-[22:17:13] [main/INFO]: Registering C2S receiver with id roughlyenoughitems:create_item_hotbar
-[22:17:13] [main/INFO]: Registering C2S receiver with id roughlyenoughitems:move_items
-[22:17:13] [main/INFO]: Registering C2S receiver with id roughlyenoughitems:move_items_new
-[22:17:13] [main/ERROR]: No data fixer registered for 
-[22:17:14] [main/INFO]: starting server: Undertow - 2.3.17.Final
-[22:17:14] [main/INFO]: XNIO version 3.8.16.Final
-[22:17:14] [main/INFO]: XNIO NIO Implementation Version 3.8.16.Final
-[22:17:14] [main/INFO]: JBoss Threads version 3.5.0.Final
-[22:17:14] [main/INFO]: Internal webserver running on 0.0.0.0:8080
-[22:17:14] [main/INFO]: Creating asynchronous mapping cache executor...
-[22:17:14] [Mappings Cache Thread #1/INFO]: Verifying cache of yarn mappings...
-[22:17:14] [Mappings Cache Thread #1/INFO]: Latest build for yarn is already cached (33 hour(s) ago, refresh in 15 hour(s))
-[22:17:14] [Mappings Cache Thread #1/INFO]: Mappings for yarn build 1.21.1+build.3 are already downloaded
-[22:17:14] [Mappings Cache Thread #1/INFO]: Verified cache of yarn mappings (took 1ms)
-[22:17:14] [Mappings Cache Thread #1/INFO]: Parsing yarn mappings...
-[22:17:15] [Mappings Cache Thread #1/INFO]: Parsed yarn mappings (took 202ms)
-[22:17:15] [Mappings Cache Thread #1/INFO]: Caching yarn mappings...
-[22:17:15] [Mappings Cache Thread #1/INFO]: Cached yarn mappings (took 63ms)
-[22:17:15] [Mappings Cache Thread #1/INFO]: Cached mappings have been built (took 272ms)
-[22:17:15] [Mappings Cache Thread #1/INFO]:   Classes: 7535
-[22:17:15] [Mappings Cache Thread #1/INFO]:   Methods: 27638
-[22:17:15] [Mappings Cache Thread #1/INFO]:   Fields: 32194
-[22:17:15] [ForkJoinPool.commonPool-worker-2/INFO]: Shutting down asynchronous mapping cache executor...
-[22:17:15] [ForkJoinPool.commonPool-worker-2/INFO]: Injecting into root logger...
-[22:17:15] [main/INFO]: Done initializing TabTPS.
-[22:17:15] [main/ERROR]: Failed to start the minecraft server
+[22:35:56] [main/INFO]: Loading Noisium.
+[22:35:56] [main/INFO]: Snakes are inherently funny
+[22:35:56] [main/INFO]: [Ping-Wheel] Init
+[22:35:56] [main/INFO]: [Ping-Wheel] Loaded ServerConfig(defaultChannelMode=auto, playerTrackingEnabled=true, msToRegenerate=1000, rateLimit=5)
+[22:35:56] [main/INFO]: Registering ItemGroups for pokeblocks
+[22:35:57] [main/INFO]: Registering ModItems for pokeblocks
+[22:35:57] [main/INFO]: Registering ModBlocks for pokeblocks
+[22:35:57] [main/INFO]: Registering mod entities for pokeblocks
+[22:35:57] [main/ERROR]: No data fixer registered for trainer
+[22:35:57] [main/ERROR]: No data fixer registered for trainer_association
+[22:35:57] [main/INFO]: Registering C2S receiver with id roughlyenoughitems:request_tags_c2s
+[22:35:57] [main/INFO]: [REI] Registered plugin provider DefaultPlugin [roughlyenoughitems] for REIPlugin
+[22:35:57] [main/INFO]: [REI] Registered plugin provider DefaultRuntimePlugin [roughlyenoughitems] for REIPlugin
+[22:35:57] [main/INFO]: [REI] Registered plugin provider REIServerCompat [sophisticatedbackpacks] for REIPlugin
+[22:35:57] [main/INFO]: [REI] Registered plugin provider REIServerCompat [sophisticatedcore] for REIPlugin
+[22:35:57] [main/INFO]: [REI] Registered plugin provider REIServerCompat [sophisticatedstorage] for REIPlugin
+[22:35:57] [main/INFO]: [REI] Registered plugin provider DefaultPlugin [roughlyenoughitems] for REIServerPlugin
+[22:35:57] [main/INFO]: [REI] Registered plugin provider DefaultRuntimePlugin [roughlyenoughitems] for REIServerPlugin
+[22:35:57] [main/INFO]: [REI] Registered plugin provider REIServerCompat [sophisticatedbackpacks] for REIServerPlugin
+[22:35:57] [main/INFO]: [REI] Registered plugin provider REIServerCompat [sophisticatedcore] for REIServerPlugin
+[22:35:57] [main/INFO]: [REI] Registered plugin provider REIServerCompat [sophisticatedstorage] for REIServerPlugin
+[22:35:57] [main/INFO]: [REI] Registered plugin provider FabricFluidAPISupportPlugin for REIServerPlugin
+[22:35:57] [main/INFO]: [REI] Registered plugin provider FabricFluidAPISupportPlugin for REIPlugin
+[22:35:57] [main/INFO]: Registering C2S receiver with id roughlyenoughitems:delete_item
+[22:35:57] [main/INFO]: Registering C2S receiver with id roughlyenoughitems:create_item
+[22:35:57] [main/INFO]: Registering C2S receiver with id roughlyenoughitems:create_item_grab
+[22:35:57] [main/INFO]: Registering C2S receiver with id roughlyenoughitems:create_item_hotbar
+[22:35:57] [main/INFO]: Registering C2S receiver with id roughlyenoughitems:move_items
+[22:35:57] [main/INFO]: Registering C2S receiver with id roughlyenoughitems:move_items_new
+[22:35:57] [ToggleableConfigWatchService/INFO]: Registering config for libjf-config-core-v2
+[22:35:57] [ToggleableConfigWatchService/INFO]: Created config watch service
+[22:35:57] [main/ERROR]: No data fixer registered for 
+[22:35:58] [main/INFO]: starting server: Undertow - 2.3.17.Final
+[22:35:58] [main/INFO]: XNIO version 3.8.16.Final
+[22:35:58] [main/INFO]: XNIO NIO Implementation Version 3.8.16.Final
+[22:35:58] [main/INFO]: JBoss Threads version 3.5.0.Final
+[22:35:59] [main/INFO]: Internal webserver running on 0.0.0.0:8080
+[22:35:59] [main/INFO]: Creating asynchronous mapping cache executor...
+[22:35:59] [Mappings Cache Thread #1/INFO]: Verifying cache of yarn mappings...
+[22:35:59] [Mappings Cache Thread #1/INFO]: Latest build for yarn is already cached (34 hour(s) ago, refresh in 14 hour(s))
+[22:35:59] [Mappings Cache Thread #1/INFO]: Mappings for yarn build 1.21.1+build.3 are already downloaded
+[22:35:59] [Mappings Cache Thread #1/INFO]: Verified cache of yarn mappings (took 2ms)
+[22:35:59] [Mappings Cache Thread #1/INFO]: Parsing yarn mappings...
+[22:35:59] [Mappings Cache Thread #1/INFO]: Parsed yarn mappings (took 222ms)
+[22:35:59] [Mappings Cache Thread #1/INFO]: Caching yarn mappings...
+[22:35:59] [Mappings Cache Thread #1/INFO]: Cached yarn mappings (took 64ms)
+[22:35:59] [Mappings Cache Thread #1/INFO]: Cached mappings have been built (took 290ms)
+[22:35:59] [Mappings Cache Thread #1/INFO]:   Classes: 7535
+[22:35:59] [Mappings Cache Thread #1/INFO]:   Methods: 27638
+[22:35:59] [Mappings Cache Thread #1/INFO]:   Fields: 32194
+[22:35:59] [ForkJoinPool.commonPool-worker-2/INFO]: Shutting down asynchronous mapping cache executor...
+[22:35:59] [ForkJoinPool.commonPool-worker-2/INFO]: Injecting into root logger...
+[22:35:59] [main/INFO]: Done initializing TabTPS.
+[22:35:59] [main/ERROR]: Failed to start the minecraft server
 java.lang.RuntimeException: Could not execute entrypoint stage 'main' due to errors, provided by 'cobblemon' at 'com.cobblemon.mod.fabric.FabricBootstrap'!
 	at net.fabricmc.loader.impl.FabricLoaderImpl.lambda$invokeEntrypoints$0(FabricLoaderImpl.java:409) ~[fabric-loader-0.18.1.jar:?]
 	at net.fabricmc.loader.impl.util.ExceptionUtil.gatherExceptions(ExceptionUtil.java:33) ~[fabric-loader-0.18.1.jar:?]
@@ -790,4 +790,4 @@ Caused by: org.spongepowered.asm.mixin.injection.throwables.InjectionError: Crit
 	at knot/com.cobblemon.mod.fabric.FabricBootstrap.onInitialize(FabricBootstrap.kt:14) ~[Cobblemon-fabric-1.7.1+1.21.1.jar:?]
 	at net.fabricmc.loader.impl.FabricLoaderImpl.invokeEntrypoints(FabricLoaderImpl.java:405) ~[fabric-loader-0.18.1.jar:?]
 	... 7 more
-[22:17:16] [main/INFO]: Discarded config watch service
+[22:36:00] [main/INFO]: Discarded config watch service
