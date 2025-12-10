@@ -87,12 +87,12 @@
     "offlineChannelTopic": "",
     "onlineChannelTopic": "",
     "onlineChannelTopicForMultiServer": "",
-    "offlineServerStatusVoiceChannelName": "ᴛʀᴀ̣ɴɢ ᴛʜᴀ́ɪ: 🔴 ɴɢᴏᴀ̣ɪ ᴛᴜʏᴇ̂́ɴ",
-    "onlineServerStatusVoiceChannelName": "ᴛʀᴀ̣ɴɢ ᴛʜᴀ́ɪ:🟢 ᴄʜɪ̣ᴄʜ ᴛᴜʏᴇ̂́ɴ",
+    "offlineServerStatusVoiceChannelName": "Trạng Thái: 🔴 Ngoại Tuyến",
+    "onlineServerStatusVoiceChannelName": "Trạng Thái:🟢 Chịch Tuyến",
     "onlineServerStatusVoiceChannelNameForMultiServer": "",
-    "offlinePlayerCountVoiceChannelName": "ɴɢᴜ̛ᴏ̛̀ɪ ᴄʜᴏ̛ɪ: (%onlinePlayerCount%/%maxPlayerCount%)",
-    "onlinePlayerCountVoiceChannelName": "ɴɢᴜ̛ᴏ̛̀ɪ ᴄʜᴏ̛ɪ: (%onlinePlayerCount%/%maxPlayerCount%)"
+    "offlinePlayerCountVoiceChannelName": "Người Chơi: (%onlinePlayerCount%/%maxPlayerCount%)",
+    "onlinePlayerCountVoiceChannelName": "Người Chơi: (%onlinePlayerCount%/%maxPlayerCount%)"
   },
   "latestVersion": "2.7.0",
-  "latestCheckTime": 1765364812813
+  "latestCheckTime": 1765365141919
 }
