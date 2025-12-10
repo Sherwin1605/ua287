@@ -838,3 +838,305 @@
 [08:24:43] [Server thread/INFO]: [|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||]
 [08:28:59] [Server thread/INFO]: * Server 1
 [08:29:02] [Server thread/INFO]: [Server] 1
+[08:32:00] [Server thread/INFO]: Unknown or incomplete command, see below for error
+[08:32:00] [Server thread/INFO]: admin<--[HERE]
+[08:32:33] [Server thread/INFO]: Unknown or incomplete command, see below for error
+[08:32:33] [Server thread/INFO]: 	server			<--[HERE]
+[08:32:37] [Server thread/INFO]: Unknown or incomplete command, see below for error
+[08:32:37] [Server thread/INFO]: server<--[HERE]
+[08:32:39] [Server thread/INFO]: /advancement (grant|revoke)
+[08:32:39] [Server thread/INFO]: /attribute <target> <attribute> (get|base|modifier)
+[08:32:39] [Server thread/INFO]: /execute (run|if|unless|as|at|store|positioned|rotated|facing|align|anchored|in|summon|on)
+[08:32:39] [Server thread/INFO]: /bossbar (add|remove|list|set|get)
+[08:32:39] [Server thread/INFO]: /clear [<targets>]
+[08:32:39] [Server thread/INFO]: /clone (<begin>|from)
+[08:32:39] [Server thread/INFO]: /damage <target> <amount> [<damageType>]
+[08:32:39] [Server thread/INFO]: /data (merge|get|remove|modify)
+[08:32:39] [Server thread/INFO]: /datapack (enable|disable|list)
+[08:32:39] [Server thread/INFO]: /debug (start|stop|function)
+[08:32:39] [Server thread/INFO]: /defaultgamemode <gamemode>
+[08:32:39] [Server thread/INFO]: /difficulty [peaceful|easy|normal|hard]
+[08:32:39] [Server thread/INFO]: /effect (clear|give)
+[08:32:39] [Server thread/INFO]: /me <action>
+[08:32:39] [Server thread/INFO]: /enchant <targets> <enchantment> [<level>]
+[08:32:39] [Server thread/INFO]: /experience (add|set|query)
+[08:32:39] [Server thread/INFO]: /xp -> experience
+[08:32:39] [Server thread/INFO]: /fill <from> <to> <block> [replace|keep|outline|hollow|destroy]
+[08:32:39] [Server thread/INFO]: /fillbiome <from> <to> <biome> [replace]
+[08:32:39] [Server thread/INFO]: /forceload (add|remove|query)
+[08:32:39] [Server thread/INFO]: /function <name> [<arguments>|with]
+[08:32:39] [Server thread/INFO]: /gamemode <gamemode> [<target>]
+[08:32:39] [Server thread/INFO]: /gamerule (announceAdvancements|battleInvulnerability|blockExplosionDropDecay|commandBlockOutput|commandModificationBlockLimit|consumeMoveItemOnUse|disableElytraMovementCheck|disableRaids|doDaylightCycle|doEntityDrops|doFireTick|doImmediateRespawn|doInsomnia|doLimitedCrafting|doMobLoot|doMobSpawning|doPatrolSpawning|doPokemonLoot|doPokemonSpawning|doShinyStarters|doTileDrops|doTraderSpawning|doVinesSpread|doWardenSpawning|doWeatherCycle|drowningDamage|enderPearlsVanishOnDeath|fallDamage|fireDamage|forgiveDeadPlayers|freezeDamage|globalSoundEvents|keepInventory|lavaSourceConversion|logAdminCommands|maxCommandChainLength|maxCommandForkCount|maxEntityCramming|mobExplosionDropDecay|mobGriefing|mobTargetInBattle|naturalRegeneration|playersNetherPortalCreativeDelay|playersNetherPortalDefaultDelay|playersSleepingPercentage|projectilesCanBreakBlocks|randomTickSpeed|reducedDebugInfo|sendCommandFeedback|showDeathMessages|snowAccumulationHeight|spawnChunkRadius|spawnRadius|spectatorsGenerateChunks|tntExplosionDropDecay|universalAnger|waterSourceConversion)
+[08:32:39] [Server thread/INFO]: /give <targets> <item> [<count>]
+[08:32:39] [Server thread/INFO]: /help [<command>]
+[08:32:39] [Server thread/INFO]: /item (replace|modify)
+[08:32:39] [Server thread/INFO]: /kick <targets> [<reason>]
+[08:32:39] [Server thread/INFO]: /kill [<targets>]
+[08:32:39] [Server thread/INFO]: /list [uuids]
+[08:32:39] [Server thread/INFO]: /locate (structure|biome|poi)
+[08:32:39] [Server thread/INFO]: /loot (replace|insert|give|spawn)
+[08:32:39] [Server thread/INFO]: /msg <targets> <message>
+[08:32:39] [Server thread/INFO]: /tell -> msg
+[08:32:39] [Server thread/INFO]: /w -> msg
+[08:32:39] [Server thread/INFO]: /particle <name> [<pos>]
+[08:32:39] [Server thread/INFO]: /place (feature|jigsaw|structure|template)
+[08:32:39] [Server thread/INFO]: /playsound <sound> [master|music|record|weather|block|hostile|neutral|player|ambient|voice]
+[08:32:39] [Server thread/INFO]: /random (value|roll|reset)
+[08:32:39] [Server thread/INFO]: /reload
+[08:32:39] [Server thread/INFO]: /recipe (give|take)
+[08:32:39] [Server thread/INFO]: /return (<value>|fail|run)
+[08:32:39] [Server thread/INFO]: /ride <target> (mount|dismount)
+[08:32:39] [Server thread/INFO]: /say <message>
+[08:32:39] [Server thread/INFO]: /schedule (function|clear)
+[08:32:39] [Server thread/INFO]: /scoreboard (objectives|players)
+[08:32:39] [Server thread/INFO]: /seed
+[08:32:39] [Server thread/INFO]: /setblock <pos> <block> [destroy|keep|replace]
+[08:32:39] [Server thread/INFO]: /spawnpoint [<targets>]
+[08:32:39] [Server thread/INFO]: /setworldspawn [<pos>]
+[08:32:39] [Server thread/INFO]: /spectate [<target>]
+[08:32:39] [Server thread/INFO]: /spreadplayers <center> <spreadDistance> <maxRange> (<respectTeams>|under)
+[08:32:39] [Server thread/INFO]: /stopsound <targets> [*|master|music|record|weather|block|hostile|neutral|player|ambient|voice]
+[08:32:39] [Server thread/INFO]: /summon <entity> [<pos>]
+[08:32:39] [Server thread/INFO]: /tag <targets> (add|remove|list)
+[08:32:39] [Server thread/INFO]: /team (list|add|remove|empty|join|leave|modify)
+[08:32:39] [Server thread/INFO]: /teammsg <message>
+[08:32:39] [Server thread/INFO]: /tm -> teammsg
+[08:32:39] [Server thread/INFO]: /teleport (<location>|<destination>|<targets>)
+[08:32:39] [Server thread/INFO]: /tp -> teleport
+[08:32:39] [Server thread/INFO]: /tellraw <targets> <message>
+[08:32:39] [Server thread/INFO]: /tick (query|rate|step|sprint|unfreeze|freeze)
+[08:32:39] [Server thread/INFO]: /time (set|add|query)
+[08:32:39] [Server thread/INFO]: /title <targets> (clear|reset|title|subtitle|actionbar|times)
+[08:32:39] [Server thread/INFO]: /trigger <objective> [add|set]
+[08:32:39] [Server thread/INFO]: /weather (clear|rain|thunder)
+[08:32:39] [Server thread/INFO]: /worldborder (add|set|center|damage|get|warning)
+[08:32:39] [Server thread/INFO]: /jfr (start|stop)
+[08:32:39] [Server thread/INFO]: /ban-ip <target> [<reason>]
+[08:32:39] [Server thread/INFO]: /banlist [ips|players]
+[08:32:39] [Server thread/INFO]: /ban <targets> [<reason>]
+[08:32:39] [Server thread/INFO]: /deop <targets>
+[08:32:39] [Server thread/INFO]: /op <targets>
+[08:32:39] [Server thread/INFO]: /pardon <targets>
+[08:32:39] [Server thread/INFO]: /pardon-ip <target>
+[08:32:39] [Server thread/INFO]: /perf (start|stop)
+[08:32:39] [Server thread/INFO]: /save-all [flush]
+[08:32:39] [Server thread/INFO]: /save-off
+[08:32:39] [Server thread/INFO]: /save-on
+[08:32:39] [Server thread/INFO]: /setidletimeout <minutes>
+[08:32:39] [Server thread/INFO]: /stop
+[08:32:39] [Server thread/INFO]: /transfer <hostname> [<port>]
+[08:32:39] [Server thread/INFO]: /whitelist (on|off|list|add|remove|reload)
+[08:32:39] [Server thread/INFO]: /c2me notick
+[08:32:39] [Server thread/INFO]: /adventure_callback <uuid>
+[08:32:39] [Server thread/INFO]: /rctmod (player|trainer)
+[08:32:39] [Server thread/INFO]: /balm (dev|export)
+[08:32:39] [Server thread/INFO]: /waystones (activate|forget|count|list|gui)
+[08:32:39] [Server thread/INFO]: /capture_xp reload
+[08:32:39] [Server thread/INFO]: /chunky [cancel|center|confirm|continue|corners|help|pattern|pause|progress|quiet|radius|reload|selection|shape|silent|spawn|start|trim|worldborder|world]
+[08:32:39] [Server thread/INFO]: /cobbledollars (pay|query|give|remove|set|reload|leaderboard)
+[08:32:39] [Server thread/INFO]: /cd -> cobbledollars
+[08:32:39] [Server thread/INFO]: /cobblemerchant (edit|open)
+[08:32:39] [Server thread/INFO]: /cm -> cobblemerchant
+[08:32:39] [Server thread/INFO]: /spawnpokemon <properties>
+[08:32:39] [Server thread/INFO]: /pokespawn <properties>
+[08:32:39] [Server thread/INFO]: /spawnpokemonat <pos> <properties>
+[08:32:39] [Server thread/INFO]: /pokespawnat <pos> <properties>
+[08:32:39] [Server thread/INFO]: /spawnnpc <class> [<level>]
+[08:32:39] [Server thread/INFO]: /npcspawn <class> [<level>]
+[08:32:39] [Server thread/INFO]: /spawnnpcat <pos> <class> [<level>]
+[08:32:39] [Server thread/INFO]: /npcspawnat <pos> <class> [<level>]
+[08:32:39] [Server thread/INFO]: /givepokemon <properties>
+[08:32:39] [Server thread/INFO]: /pokegive <properties>
+[08:32:39] [Server thread/INFO]: /givepokemonother <player> <properties>
+[08:32:39] [Server thread/INFO]: /pokegiveother <player> <properties>
+[08:32:39] [Server thread/INFO]: /takepokemon <player> <slot>
+[08:32:39] [Server thread/INFO]: /changeeyeheight <pokemon> (standing|flying|swimming)
+[08:32:39] [Server thread/INFO]: /changescaleandsize <pokemon> [<scale>]
+[08:32:39] [Server thread/INFO]: /changewalkspeed [<pokemon>]
+[08:32:39] [Server thread/INFO]: /testcommand
+[08:32:39] [Server thread/INFO]: /reloadshowdown
+[08:32:39] [Server thread/INFO]: /pokemonedit <slot> <properties>
+[08:32:39] [Server thread/INFO]: /pokeedit <slot> <properties>
+[08:32:39] [Server thread/INFO]: /pokemoneditother <player> <slot> <properties>
+[08:32:39] [Server thread/INFO]: /pokeeditother <player> <slot> <properties>
+[08:32:39] [Server thread/INFO]: /teach <player> <slot> <move>
+[08:32:39] [Server thread/INFO]: /levelup <player> <slot>
+[08:32:39] [Server thread/INFO]: /healpokemon [<player>]
+[08:32:39] [Server thread/INFO]: /pokeheal [<player>]
+[08:32:39] [Server thread/INFO]: /stopbattle <player>
+[08:32:39] [Server thread/INFO]: /checkspawn
+[08:32:39] [Server thread/INFO]: /openstarterscreen <player>
+[08:32:39] [Server thread/INFO]: /friendship <slot>
+[08:32:39] [Server thread/INFO]: /held_item <target> <slot> <item>
+[08:32:39] [Server thread/INFO]: /pc [<box>]
+[08:32:39] [Server thread/INFO]: /spawnpokemonfrompool [<amount>]
+[08:32:39] [Server thread/INFO]: /forcespawn [<amount>]
+[08:32:39] [Server thread/INFO]: /pokebox <player> <slot> [<box>]
+[08:32:39] [Server thread/INFO]: /pokeboxall <player> [<box>]
+[08:32:39] [Server thread/INFO]: /pokedex (grant|revoke|printcalculations)
+[08:32:39] [Server thread/INFO]: /teststore <player> <store> <properties>
+[08:32:39] [Server thread/INFO]: /querylearnset <player> <slot> <move>
+[08:32:39] [Server thread/INFO]: /testpcslot <player> <box> <slot> <properties>
+[08:32:39] [Server thread/INFO]: /testpartyslot <player> <slot> <properties>
+[08:32:39] [Server thread/INFO]: /clearparty <player>
+[08:32:39] [Server thread/INFO]: /clearpc <player>
+[08:32:39] [Server thread/INFO]: /pokemonrestart [<reset_starters>]
+[08:32:39] [Server thread/INFO]: /pokerestart [<reset_starters>]
+[08:32:39] [Server thread/INFO]: /pokemonrestartother <player> [<reset_starters>]
+[08:32:39] [Server thread/INFO]: /pokerestartother <player> [<reset_starters>]
+[08:32:39] [Server thread/INFO]: /bedrockparticle <effect> (<target>|<world>)
+[08:32:39] [Server thread/INFO]: /opendialogue <dialogue> <player>
+[08:32:39] [Server thread/INFO]: /abandonmultiteam
+[08:32:39] [Server thread/INFO]: /abandonmultibattleteam
+[08:32:39] [Server thread/INFO]: /applyplayertexture <player>
+[08:32:39] [Server thread/INFO]: /runmolangscript <script> [<player>|<npc>|<pokemon>]
+[08:32:39] [Server thread/INFO]: /cobblemon info
+[08:32:39] [Server thread/INFO]: /givepokemonegg <player> <properties>
+[08:32:39] [Server thread/INFO]: /tpa <target_player>
+[08:32:39] [Server thread/INFO]: /tpcancel
+[08:32:39] [Server thread/INFO]: /tpaccept [<target_player>]
+[08:32:39] [Server thread/INFO]: /tpdeny [<target_player>]
+[08:32:39] [Server thread/INFO]: /tpahere <target_player>
+[08:32:39] [Server thread/INFO]: /home (tp|tp_other|tp_offline|set|delete|list|list_offline)
+[08:32:39] [Server thread/INFO]: /back
+[08:32:39] [Server thread/INFO]: /warp (tp|tp_other|set|delete|list)
+[08:32:39] [Server thread/INFO]: /spawn [set|tp]
+[08:32:39] [Server thread/INFO]: /nickname (set|clear|reveal)
+[08:32:39] [Server thread/INFO]: /randomteleport
+[08:32:39] [Server thread/INFO]: /rtp
+[08:32:39] [Server thread/INFO]: /invuln [<target_player>]
+[08:32:39] [Server thread/INFO]: /workbench
+[08:32:39] [Server thread/INFO]: /stonecutter
+[08:32:39] [Server thread/INFO]: /grindstone
+[08:32:39] [Server thread/INFO]: /wastebin
+[08:32:39] [Server thread/INFO]: /top
+[08:32:39] [Server thread/INFO]: /gametime
+[08:32:39] [Server thread/INFO]: /afk
+[08:32:39] [Server thread/INFO]: /lastPos <target_player>
+[08:32:39] [Server thread/INFO]: /day
+[08:32:39] [Server thread/INFO]: /rules [reload]
+[08:32:39] [Server thread/INFO]: /feed [<target_player>]
+[08:32:39] [Server thread/INFO]: /heal [<target_player>]
+[08:32:39] [Server thread/INFO]: /extinguish [<target_player>]
+[08:32:39] [Server thread/INFO]: /ext -> extinguish
+[08:32:39] [Server thread/INFO]: /suicide
+[08:32:39] [Server thread/INFO]: /night
+[08:32:39] [Server thread/INFO]: /repair [<target_player>]
+[08:32:39] [Server thread/INFO]: /near [<range>]
+[08:32:39] [Server thread/INFO]: /essentialcommands [info|tpa|tpcancel|tpaccept|tpdeny|tpahere|home|overwritehome|back|warp|spawn|nickname|randomteleport|rtp|invuln|workbench|stonecutter|grindstone|wastebin|top|gametime|afk|lastPos|day|rules|feed|heal|extinguish|ext|suicide|night|repair|near|profile|config|deleteAllPlayerData]
+[08:32:39] [Server thread/INFO]: /closeguiscreen [<target_players>]
+[08:32:39] [Server thread/INFO]: /openguiscreen <screen_identifier> [<target_players>]
+[08:32:39] [Server thread/INFO]: /fmvariable (get|set)
+[08:32:39] [Server thread/INFO]: /fmlayout <layout_name> <is_layout_enabled> [<target_players>]
+[08:32:39] [Server thread/INFO]: /lenientdeath (config|utilities|deaths)
+[08:32:39] [Server thread/INFO]: /ld -> lenientdeath
+[08:32:39] [Server thread/INFO]: /libjf config [libjf-translate-v1|libjf-config-core-v2|libjf-web-v1|respackopts|reload|reset]
+[08:32:39] [Server thread/INFO]: /msdresetlock
+[08:32:39] [Server thread/INFO]: /msdresetmega
+[08:32:39] [Server thread/INFO]: /msd give <player> <itemtype> <item> [<count>]
+[08:32:39] [Server thread/INFO]: /multitry
+[08:32:39] [Server thread/INFO]: /modernfix mcfunctions
+[08:32:39] [Server thread/INFO]: /pingwheel:server [help|default_channel|player_tracking|regen_time|rate_limit]
+[08:32:39] [Server thread/INFO]: /role (assign|remove|list|reload)
+[08:32:39] [Server thread/INFO]: /sbp (list|give|removeNonPlayer)
+[08:32:39] [Server thread/INFO]: /sophisticatedbackpacks -> sbp
+[08:32:39] [Server thread/INFO]: /squaremap (cancelrender|confirm|fullrender|help|hide|pauserender|progresslogging|radiusrender|reload|resetmap|show)
+[08:32:39] [Server thread/INFO]: /map (cancelrender|confirm|fullrender|help|hide|pauserender|progresslogging|radiusrender|reload|resetmap|show)
+[08:32:39] [Server thread/INFO]: /styledplayerlist [switch|switchothers|reload]
+[08:32:39] [Server thread/INFO]: /plstyle <style>
+[08:32:39] [Server thread/INFO]: /tabtps (about|help|reload)
+[08:32:39] [Server thread/INFO]: /pingall [<page>]
+[08:32:39] [Server thread/INFO]: /ping [<target>]
+[08:32:39] [Server thread/INFO]: /memory
+[08:32:39] [Server thread/INFO]: /mem
+[08:32:39] [Server thread/INFO]: /ram
+[08:32:39] [Server thread/INFO]: /tickinfo
+[08:32:39] [Server thread/INFO]: /tps
+[08:32:39] [Server thread/INFO]: /mspt
+[08:32:39] [Server thread/INFO]: /tim_core reload
+[08:32:39] [Server thread/INFO]: /trinkets (set|clear)
+[08:32:39] [Server thread/INFO]: /villagerconfig [generate|reload|test]
+[08:32:39] [Server thread/INFO]: /vc -> villagerconfig
+[08:32:39] [Server thread/INFO]: /dmcc [help|info|stats|update|whitelist|reload]
+[08:32:39] [Server thread/INFO]: /midnightconfig repurposed_structures (importModdedItems|blacklistedRSLoottablesFromImportingModdedItems)
+[08:32:39] [Server thread/INFO]: /styledchat [reload|set|get|clear]
+[08:32:39] [Server thread/INFO]: /tellform <targets> <message>
+[08:33:08] [Server thread/INFO]: Gamerule keepInventory is now set to: true
+[08:33:45] [Server thread/INFO]: [Chunky] No tasks to pause.
+[08:33:50] [Server thread/INFO]: [Chunky] A task was already started for this world. To continue running it, type '/chunky continue'. To start a new task, type '/chunky confirm'.
+[08:33:56] [Server thread/INFO]: [Chunky] Task continuing for minecraft:overworld.
+[08:34:34] [Server thread/INFO]: Chunky Commands
+chunky start - Start a new chunk generation task
+chunky pause - Pause current tasks and save progress
+chunky continue - Continue current or saved tasks
+chunky cancel - Stop and delete current or saved tasks
+chunky world <world> - Set the world target
+chunky worldborder - Use the world border center & radius
+chunky center <x> <z> - Set the center block location
+chunky spawn - Set the center to the spawn point
+chunky radius <radius> - Set the radius
+chunky corners <x1> <z1> <x2> <z2> - Set by corners
+chunky shape <shape> - Set the shape to generate
+chunky pattern <pattern> - Set the generation pattern
+chunky silent - Toggle displaying update messages
+chunky quiet <interval> - Set the quiet interval
+chunky trim - Delete chunks outside selection
+chunky selection - Display the current selection
+chunky progress - Displays current task progress
+chunky reload - Reload configuration
+[08:34:36] [c2me-worker-0/WARN]: Error loading class: net/minecraft/class_638 (java.lang.ClassNotFoundException: net/minecraft/class_638)
+[08:34:36] [c2me-worker-0/WARN]: Error loading class: net/minecraft/class_638 (java.lang.ClassNotFoundException: net/minecraft/class_638)
+[08:35:26] [Server thread/INFO]: 
+[08:35:26] [Server thread/INFO]: [TabTPS] Server Tick Information
+[08:35:26] [Server thread/INFO]: TPS: 20.00 (5s), 20.00 (1m), 20.00 (5m), 20.02 (15m)
+[08:35:26] [Server thread/INFO]: MSPT - Average, Minimum, Maximum
+[08:35:26] [Server thread/INFO]:  ├─ 5s - 0.32, 0.11, 3.35
+[08:35:26] [Server thread/INFO]:  ├─ 10s - 0.31, 0.11, 3.35
+[08:35:26] [Server thread/INFO]:  └─ 60s - 0.35, 0.11, 7.14
+[08:35:26] [Server thread/INFO]: CPU: 96.29%, 90.49% (sys., proc.)
+[08:35:26] [Server thread/INFO]: RAM: 2490M/4576M (max. 12288M)
+[08:35:26] [Server thread/INFO]: [|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||]
+[08:35:35] [Server thread/INFO]: [Chunky] Silent mode disabled.
+[08:35:35] [Server thread/INFO]: [Chunky] Task running for minecraft:overworld. Processed: 8044 chunks (5.66%), ETA: 1:02:14, Rate: 35.9 cps, Current: 16, 38
+[08:35:36] [Server thread/INFO]: [Chunky] Task running for minecraft:overworld. Processed: 8139 chunks (5.73%), ETA: 1:00:43, Rate: 36.8 cps, Current: 28, 37
+[08:35:37] [Server thread/INFO]: [Chunky] Task running for minecraft:overworld. Processed: 8190 chunks (5.76%), ETA: 1:01:26, Rate: 36.3 cps, Current: 35, 33
+[08:35:38] [Server thread/INFO]: [Chunky] Task running for minecraft:overworld. Processed: 8233 chunks (5.79%), ETA: 1:01:06, Rate: 36.5 cps, Current: 31, 39
+[08:35:39] [Server thread/INFO]: [Chunky] Task running for minecraft:overworld. Processed: 8274 chunks (5.82%), ETA: 1:01:06, Rate: 36.5 cps, Current: 45, 34
+[08:35:40] [Server thread/INFO]: Unknown or incomplete command, see below for error
+[08:35:40] [Server thread/INFO]: restart<--[HERE]
+[08:35:40] [Server thread/INFO]: [Chunky] Task running for minecraft:overworld. Processed: 8307 chunks (5.84%), ETA: 1:00:37, Rate: 36.8 cps, Current: 42, 41
+[08:35:41] [Server thread/INFO]: [Chunky] Task running for minecraft:overworld. Processed: 8335 chunks (5.86%), ETA: 1:01:09, Rate: 36.5 cps, Current: 46, 41
+[08:35:42] [Server thread/INFO]: [Chunky] Task running for minecraft:overworld. Processed: 8350 chunks (5.87%), ETA: 1:01:58, Rate: 36.0 cps, Current: 40, 45
+[08:35:43] [Server thread/INFO]: [Chunky] Task running for minecraft:overworld. Processed: 8392 chunks (5.90%), ETA: 1:01:35, Rate: 36.2 cps, Current: 32, 43
+[08:35:45] [Server thread/INFO]: [Chunky] Task running for minecraft:overworld. Processed: 8443 chunks (5.94%), ETA: 1:03:00, Rate: 35.4 cps, Current: 37, 52
+[08:35:46] [Server thread/INFO]: [Chunky] Task running for minecraft:overworld. Processed: 8497 chunks (5.98%), ETA: 1:01:26, Rate: 36.2 cps, Current: 34, 62
+[08:35:46] [Server thread/INFO]: Unknown or incomplete command, see below for error
+[08:35:46] [Server thread/INFO]: reboot<--[HERE]
+[08:35:47] [Server thread/INFO]: [Chunky] Task running for minecraft:overworld. Processed: 8542 chunks (6.01%), ETA: 1:01:05, Rate: 36.4 cps, Current: 41, 47
+[08:35:48] [Server thread/INFO]: [Chunky] Task running for minecraft:overworld. Processed: 8575 chunks (6.03%), ETA: 1:01:13, Rate: 36.4 cps, Current: 43, 61
+[08:35:48] [Server thread/INFO]: Stopping the server
+[08:35:48] [Chunky-minecraft:overworld Thread/INFO]: [Chunky] Task stopped for minecraft:overworld.
+[08:35:48] [Server thread/INFO]: Stopping server
+[08:35:48] [Server thread/INFO]: Saving players
+[08:35:48] [Server thread/INFO]: Saving worlds
+[08:35:48] [Server thread/INFO]: ServerLevel[world]/minecraft:overworld: waiting for 2950 chunks to unload
+[08:35:49] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world]'/minecraft:overworld
+[08:35:49] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world]'/minecraft:the_end
+[08:35:49] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world]'/minecraft:the_nether
+[08:35:49] [Server thread/INFO]: ThreadedAnvilChunkStorage (world): All chunks are saved
+[08:35:49] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[08:35:49] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[08:35:49] [Server thread/INFO]: ThreadedAnvilChunkStorage: All dimensions are saved
+[08:35:49] [C2ME Storage #3/INFO]: Storage thread Thread[#111,C2ME Storage #3,5,main] stopped
+[08:35:49] [C2ME Storage #2/INFO]: Storage thread Thread[#110,C2ME Storage #2,5,main] stopped
+[08:35:49] [C2ME Storage #1/INFO]: Storage thread Thread[#109,C2ME Storage #1,5,main] stopped
+[08:35:49] [C2ME Storage #6/INFO]: Storage thread Thread[#115,C2ME Storage #6,5,main] stopped
+[08:35:49] [C2ME Storage #5/INFO]: Storage thread Thread[#114,C2ME Storage #5,5,main] stopped
+[08:35:49] [C2ME Storage #4/INFO]: Storage thread Thread[#113,C2ME Storage #4,5,main] stopped
+[08:35:49] [C2ME Storage #9/INFO]: Storage thread Thread[#119,C2ME Storage #9,5,main] stopped
+[08:35:49] [C2ME Storage #8/INFO]: Storage thread Thread[#118,C2ME Storage #8,5,main] stopped
+[08:35:49] [C2ME Storage #7/INFO]: Storage thread Thread[#117,C2ME Storage #7,5,main] stopped
+[08:35:50] [Server thread/INFO]: Discarded config watch service
+[08:35:50] [Server thread/INFO]: stopping server: Undertow - 2.3.17.Final
+[08:35:50] [Server thread/INFO]: Internal webserver stopped
+[08:35:50] [Thread-12/INFO]: [ConsoleLog] Closing ConsoleLogListener
