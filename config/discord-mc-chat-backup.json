@@ -52,7 +52,7 @@
       "\\/auth (.*)"
     ],
     "adminsIds": [
-      ""
+      "582047056768663563"
     ]
   },
   "multiServer": {
@@ -87,12 +87,12 @@
     "offlineChannelTopic": "",
     "onlineChannelTopic": "",
     "onlineChannelTopicForMultiServer": "",
-    "offlineServerStatusVoiceChannelName": "",
-    "onlineServerStatusVoiceChannelName": "",
+    "offlineServerStatusVoiceChannelName": "ᴛʀᴀ̣ɴɢ ᴛʜᴀ́ɪ: 🔴 ɴɢᴏᴀ̣ɪ ᴛᴜʏᴇ̂́ɴ",
+    "onlineServerStatusVoiceChannelName": "ᴛʀᴀ̣ɴɢ ᴛʜᴀ́ɪ:🟢 ᴄʜɪ̣ᴄʜ ᴛᴜʏᴇ̂́ɴ",
     "onlineServerStatusVoiceChannelNameForMultiServer": "",
-    "offlinePlayerCountVoiceChannelName": "",
-    "onlinePlayerCountVoiceChannelName": ""
+    "offlinePlayerCountVoiceChannelName": "ɴɢᴜ̛ᴏ̛̀ɪ ᴄʜᴏ̛ɪ: (%onlinePlayerCount%/%maxPlayerCount%)",
+    "onlinePlayerCountVoiceChannelName": "ɴɢᴜ̛ᴏ̛̀ɪ ᴄʜᴏ̛ɪ: (%onlinePlayerCount%/%maxPlayerCount%)"
   },
   "latestVersion": "2.7.0",
-  "latestCheckTime": 1765283666936
+  "latestCheckTime": 1765364812813
 }
