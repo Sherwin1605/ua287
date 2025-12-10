@@ -3,10 +3,10 @@
     "language": "en_us",
     "botToken": "MTMwMTYwNDk3NjEzNjgxODc2MA.G_nKc0.mH1QqPMhU1zEZbLSybmbTdN82NJcHUZZS7S0_0",
     "showServerStatusInBotStatus": true,
-    "botPlayingActivity": "Minecraft (%onlinePlayerCount%/%maxPlayerCount%)",
+    "botPlayingActivity": "ᴘɪxᴇʟ ᴄᴀᴘɪᴛᴀʟ (%onlinePlayerCount%/%maxPlayerCount%)",
     "botListeningActivity": "Listening",
     "useWebhook": true,
-    "channelId": "1447855711152373863",
+    "channelId": "1448206083037462598",
     "consoleLogChannelId": "1447855711152373863",
     "updateNotificationChannelId": "1447855711152373863",
     "serverStatusVoiceChannelId": "1447855782291837099",
@@ -94,5 +94,5 @@
     "onlinePlayerCountVoiceChannelName": ""
   },
   "latestVersion": "2.7.0",
-  "latestCheckTime": 1765266855403
+  "latestCheckTime": 1765283666936
 }
