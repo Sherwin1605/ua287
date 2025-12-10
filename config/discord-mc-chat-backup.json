@@ -52,7 +52,7 @@
       "\\/auth (.*)"
     ],
     "adminsIds": [
-      ""
+      "582047056768663563"
     ]
   },
   "multiServer": {
@@ -75,8 +75,8 @@
     "formattedCommandNotice": "",
     "messageWithoutWebhook": "",
     "messageWithoutWebhookForMultiServer": "",
-    "serverStarted": "",
-    "serverStopped": "",
+    "serverStarted": "# ᴍᴀ́ʏ ᴄʜᴜ̉ ᴆᴀ̃ ʙᴀ̣̂ᴛ",
+    "serverStopped": "# ᴍᴀ́ʏ ᴄʜᴜ̉ ᴆᴀ̃ ᴛᴀ̆́ᴛ",
     "joinServer": "",
     "leftServer": "",
     "deathMessage": "",
@@ -87,12 +87,12 @@
     "offlineChannelTopic": "",
     "onlineChannelTopic": "",
     "onlineChannelTopicForMultiServer": "",
-    "offlineServerStatusVoiceChannelName": "",
-    "onlineServerStatusVoiceChannelName": "",
+    "offlineServerStatusVoiceChannelName": "⌠🔴⌡〢ᴛʀᴀ̣ɴɢ ᴛʜᴀ́ɪ: ɴɢᴏᴀ̣ɪ ᴛᴜʏᴇ̂́ɴ",
+    "onlineServerStatusVoiceChannelName": "⌠🟢⌡〢ᴛʀᴀ̣ɴɢ ᴛʜᴀ́ɪ: ᴄʜɪ̣ᴄʜ ᴛᴜʏᴇ̂́ɴ",
     "onlineServerStatusVoiceChannelNameForMultiServer": "",
-    "offlinePlayerCountVoiceChannelName": "",
-    "onlinePlayerCountVoiceChannelName": ""
+    "offlinePlayerCountVoiceChannelName": "⌠👤⌡〢Người chơi: (%onlinePlayerCount%/%maxPlayerCount%)",
+    "onlinePlayerCountVoiceChannelName": "⌠👤⌡〢Người chơi: (%onlinePlayerCount%/%maxPlayerCount%)"
   },
   "latestVersion": "2.7.0",
-  "latestCheckTime": 1765283666936
+  "latestCheckTime": 1765365924521
 }
