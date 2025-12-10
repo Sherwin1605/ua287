@@ -1,0 +1,91 @@
+{
+  "uuid": "91d907f0-1712-3f7a-99b3-e56388f97ec7",
+  "starterPrompted": true,
+  "starterLocked": false,
+  "starterSelected": true,
+  "starterUUID": "89f1b42c-661c-49a3-8ff9-81e451e6f70a",
+  "keyItems": [],
+  "battleTheme": "cobblemon:battle.pvp.default",
+  "extraData": {},
+  "advancementData": {
+    "totalCaptureCount": 11,
+    "totalEggsCollected": 0,
+    "totalEggsHatched": 0,
+    "totalEvolvedCount": 0,
+    "totalBattleVictoryCount": 29,
+    "totalPvPBattleVictoryCount": 0,
+    "totalPvWBattleVictoryCount": 28,
+    "totalPvNBattleVictoryCount": 1,
+    "totalShinyCaptureCount": 0,
+    "totalTradedCount": 0,
+    "totalTypeCaptureCounts": {
+      "fire": 4,
+      "normal": 3,
+      "rock": 1,
+      "psychic": 1,
+      "flying": 1,
+      "fighting": 1,
+      "ground": 1,
+      "bug": 1,
+      "poison": 1,
+      "ghost": 1
+    },
+    "totalDefeatedCounts": {
+      "cobblemon:bunnelby": 1,
+      "cobblemon:fomantis": 1,
+      "cobblemon:dodrio": 1,
+      "cobblemon:gimmighoul": 6,
+      "cobblemon:pidgeotto": 1,
+      "cobblemon:poochyena": 1,
+      "cobblemon:obstagoon": 1,
+      "cobblemon:zorua": 1,
+      "cobblemon:spearow": 1,
+      "cobblemon:camerupt": 1,
+      "cobblemon:weezing": 1,
+      "cobblemon:krabby": 1,
+      "cobblemon:fletchling": 1,
+      "cobblemon:gligar": 1,
+      "cobblemon:haunter": 1
+    },
+    "aspectsCollected": {
+      "cobblemon:vulpix": [
+        "male"
+      ],
+      "cobblemon:tandemaus": [
+        "genderless",
+        "maushold-family-four"
+      ],
+      "cobblemon:ponyta": [
+        "male"
+      ],
+      "cobblemon:lunatone": [
+        "genderless"
+      ],
+      "cobblemon:fearow": [
+        "male"
+      ],
+      "cobblemon:tauros": [
+        "male",
+        "paldean",
+        "combat-breed"
+      ],
+      "cobblemon:furfrou": [
+        "female",
+        "natural-trim"
+      ],
+      "cobblemon:cubone": [
+        "female",
+        "region-bias-alola"
+      ],
+      "cobblemon:volcarona": [
+        "male"
+      ],
+      "cobblemon:salandit": [
+        "female"
+      ],
+      "cobblemon:duskull": [
+        "female"
+      ]
+    }
+  }
+}

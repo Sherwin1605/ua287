@@ -1,0 +1,47 @@
+{
+  "uuid": "f17dfa47-1b07-3df0-a737-b04f84c04097",
+  "starterPrompted": true,
+  "starterLocked": false,
+  "starterSelected": true,
+  "starterUUID": "4aff18ca-1af6-442c-818a-0572a86ee9bb",
+  "keyItems": [],
+  "battleTheme": "cobblemon:battle.pvp.default",
+  "extraData": {},
+  "advancementData": {
+    "totalCaptureCount": 3,
+    "totalEggsCollected": 0,
+    "totalEggsHatched": 0,
+    "totalEvolvedCount": 0,
+    "totalBattleVictoryCount": 11,
+    "totalPvPBattleVictoryCount": 0,
+    "totalPvWBattleVictoryCount": 9,
+    "totalPvNBattleVictoryCount": 2,
+    "totalShinyCaptureCount": 0,
+    "totalTradedCount": 0,
+    "totalTypeCaptureCounts": {
+      "normal": 2,
+      "flying": 1,
+      "ice": 1
+    },
+    "totalDefeatedCounts": {
+      "cobblemon:kricketot": 1,
+      "cobblemon:patrat": 1,
+      "cobblemon:snorunt": 3,
+      "cobblemon:rookidee": 1,
+      "cobblemon:starly": 1,
+      "cobblemon:zigzagoon": 1
+    },
+    "aspectsCollected": {
+      "cobblemon:skitty": [
+        "female"
+      ],
+      "cobblemon:pidove": [
+        "male"
+      ],
+      "cobblemon:vulpix": [
+        "female",
+        "alolan"
+      ]
+    }
+  }
+}
