@@ -75,8 +75,8 @@
     "formattedCommandNotice": "",
     "messageWithoutWebhook": "",
     "messageWithoutWebhookForMultiServer": "",
-    "serverStarted": "",
-    "serverStopped": "",
+    "serverStarted": "# ᴍᴀ́ʏ ᴄʜᴜ̉ ᴆᴀ̃ ʙᴀ̣̂ᴛ",
+    "serverStopped": "# ᴍᴀ́ʏ ᴄʜᴜ̉ ᴆᴀ̃ ᴛᴀ̆́ᴛ",
     "joinServer": "",
     "leftServer": "",
     "deathMessage": "",
@@ -87,12 +87,12 @@
     "offlineChannelTopic": "",
     "onlineChannelTopic": "",
     "onlineChannelTopicForMultiServer": "",
-    "offlineServerStatusVoiceChannelName": "Trạng Thái: 🔴 Ngoại Tuyến",
-    "onlineServerStatusVoiceChannelName": "Trạng Thái:🟢 Chịch Tuyến",
+    "offlineServerStatusVoiceChannelName": "ᴛʀᴀ̣ɴɢ ᴛʜᴀ́ɪ: ɴɢᴏᴀ̣ɪ ᴛᴜʏᴇ̂́ɴ 🔴",
+    "onlineServerStatusVoiceChannelName": "ᴛʀᴀ̣ɴɢ ᴛʜᴀ́ɪ: ᴄʜɪ̣ᴄʜ ᴛᴜʏᴇ̂́ɴ 🟢",
     "onlineServerStatusVoiceChannelNameForMultiServer": "",
-    "offlinePlayerCountVoiceChannelName": "Người Chơi: (%onlinePlayerCount%/%maxPlayerCount%)",
-    "onlinePlayerCountVoiceChannelName": "Người Chơi: (%onlinePlayerCount%/%maxPlayerCount%)"
+    "offlinePlayerCountVoiceChannelName": "ɴɢᴜ̛ᴏ̛̀ɪ ᴄʜᴏ̛ɪ: (%onlinePlayerCount%/%maxPlayerCount%)",
+    "onlinePlayerCountVoiceChannelName": "ɴɢᴜ̛ᴏ̛̀ɪ ᴄʜᴏ̛ɪ: (%onlinePlayerCount%/%maxPlayerCount%)"
   },
   "latestVersion": "2.7.0",
-  "latestCheckTime": 1765365141919
+  "latestCheckTime": 1765365741907
 }
