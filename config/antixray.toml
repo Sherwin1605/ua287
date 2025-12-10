@@ -1,7 +1,7 @@
 # Default configuration file for Fabric AntiXray mod by DrexHD
 
 # Default values
-enabled = false
+enabled = true
 
 # World specific values
 [overworld]
