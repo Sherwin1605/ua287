@@ -112,7 +112,7 @@
 				"local_difficulty": true,
 				"day_ticks": true,
 				"days_played": true,
-				"dimension": false,
+				"dimension": true,
 				"highest_block": false,
 				"highest_block_server": false,
 				"light_server": false

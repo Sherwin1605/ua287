@@ -6,7 +6,7 @@
   "useSwimmingAnimationIfSubmerged": true,
   "pokefinderOverlayOffset": 10,
   "trackArrowYOffset": 80,
-  "maxCloudNumber": 12,
+  "maxCloudNumber": 8,
   "maxCloudVelocity": 6,
   "collectableClientConditions": {
     "encounter": true,

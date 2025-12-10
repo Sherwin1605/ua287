@@ -171,6 +171,10 @@
     {
       "Mob Drops": [
         {
+          "item": "minecraft:egg",
+          "price": 250
+        },
+        {
           "item": "minecraft:feather",
           "price": 300
         },
@@ -180,11 +184,7 @@
         },
         {
           "item": "minecraft:rotten_flesh",
-          "price": 350
-        },
-        {
-          "item": "minecraft:spider_eye",
-          "price": 450
+          "price": 400
         },
         {
           "item": "minecraft:ink_sac",
@@ -192,6 +192,10 @@
         },
         {
           "item": "minecraft:bone",
+          "price": 450
+        },
+        {
+          "item": "minecraft:spider_eye",
           "price": 450
         },
         {
@@ -257,6 +261,38 @@
         {
           "item": "minecraft:pearlescent_froglight",
           "price": 3000
+        }
+      ]
+    },
+    {
+      "Poké Radars": [
+        {
+          "item": "lumymon:articuno_radar",
+          "price": 250000
+        },
+        {
+          "item": "lumymon:zapdos_radar",
+          "price": 250000
+        },
+        {
+          "item": "lumymon:moltres_radar",
+          "price": 250000
+        },
+        {
+          "item": "lumymon:necrozma_dusk_radar",
+          "price": 350000
+        },
+        {
+          "item": "lumymon:necrozma_dawn_radar",
+          "price": 350000
+        },
+        {
+          "item": "lumymon:calyrex_ice_radar",
+          "price": 500000
+        },
+        {
+          "item": "lumymon:calyrex_shadow_radar",
+          "price": 500000
         }
       ]
     }

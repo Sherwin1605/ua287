@@ -1,6 +1,7 @@
 {
   "allowStarterOnJoin": true,
   "promptStarterOnceOnly": false,
+  "useConfigStarters": false,
   "starters": [
     {
       "name": "Kanto",
@@ -98,7 +99,7 @@
       "pokemon": [
         "Pikachu level=5 cosplay=cosplay",
         "Eevee level=5",
-        "Pichu level=5"
+        "Pichu level=5 region_bias=alola"
       ]
     },
     {

@@ -9,13 +9,16 @@
 ["Trainer Card"]
 	#━━━━━━━━━━
 	#Padding of the trainer card gui.
-	#Range: 0 ~ 2147483646
+	# Default: 8
+	# Range: 0 ~ 2147483646
 	trainerCardPadding = 8
 	#━━━━━━━━━━
 	#Horizontal alignment of the trainer card gui, i.e. 0=left, 0.5=center, 1=right.
-	#Range: 0.0 ~ 1.0
+	# Default: 0.0
+	# Range: 0.0 ~ 1.0
 	trainerCardAlignmentX = 0.0
 	#━━━━━━━━━━
 	#Vertical alignment of the trainer card gui, i.e. 0=top, 0.5=center, 1=bottom.
-	#Range: 0.0 ~ 1.0
+	# Default: 0.0
+	# Range: 0.0 ~ 1.0
 	trainerCardAlignmentY = 0.0
