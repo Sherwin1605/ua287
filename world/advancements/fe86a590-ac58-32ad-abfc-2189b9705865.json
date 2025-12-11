@@ -22439,6 +22439,7 @@
       "minecraft:river": "2025-12-10 16:40:51 +0000",
       "minecraft:lukewarm_ocean": "2025-12-10 19:36:43 +0000",
       "minecraft:snowy_plains": "2025-12-10 17:49:49 +0000",
+      "minecraft:stony_shore": "2025-12-11 15:22:37 +0000",
       "minecraft:snowy_taiga": "2025-12-10 17:50:19 +0000",
       "minecraft:dripstone_caves": "2025-12-10 20:28:38 +0000",
       "minecraft:old_growth_birch_forest": "2025-12-10 19:27:43 +0000",
@@ -22818,6 +22819,42 @@
     },
     "done": true
   },
+  "minecraft:nether/loot_bastion": {
+    "criteria": {
+      "loot_bastion_other": "2025-12-11 13:57:50 +0000"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/held/fairy_feather": {
+    "criteria": {
+      "has_gem": "2025-12-11 14:00:14 +0000"
+    },
+    "done": true
+  },
+  "minecraft:nether/find_fortress": {
+    "criteria": {
+      "fortress": "2025-12-11 14:01:09 +0000"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/campfire_pot/exp_candy_l": {
+    "criteria": {
+      "has_candy": "2025-12-11 14:19:02 +0000"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/campfire_pot/exp_candy_xl": {
+    "criteria": {
+      "has_candy": "2025-12-11 14:19:20 +0000"
+    },
+    "done": true
+  },
+  "cobbleverse:trainer/kanto/defeat_misty": {
+    "criteria": {
+      "leader_defeated": "2025-12-11 14:33:12 +0000"
+    },
+    "done": true
+  },
   "cobblemon:trade_pokemon": {
     "criteria": {
       "trade": "2025-12-11 14:37:37 +0000"
@@ -22830,51 +22867,15 @@
     },
     "done": true
   },
-  "cobblemon:recipes/campfire_pot/candied_berry": {
-    "criteria": {
-      "has_berry": "2025-12-11 15:02:11 +0000"
-    },
-    "done": true
-  },
   "moarconcrete:recipes/building_blocks/black_concrete_stairs_from_black_concrete_stonecutting": {
     "criteria": {
       "has_black_concrete": "2025-12-11 14:56:37 +0000"
     },
     "done": true
   },
-  "minecraft:nether/loot_bastion": {
-    "criteria": {
-      "loot_bastion_other": "2025-12-11 13:57:50 +0000"
-    },
-    "done": true
-  },
   "moarconcrete:recipes/building_blocks/black_concrete_bricks_from_black_concrete_stonecutting": {
     "criteria": {
       "has_black_concrete": "2025-12-11 14:56:37 +0000"
-    },
-    "done": true
-  },
-  "cobblemon:recipes/held/fairy_feather": {
-    "criteria": {
-      "has_gem": "2025-12-11 14:00:14 +0000"
-    },
-    "done": true
-  },
-  "cobblemon:recipes/campfire_pot/exp_candy_l": {
-    "criteria": {
-      "has_candy": "2025-12-11 14:19:02 +0000"
-    },
-    "done": true
-  },
-  "minecraft:nether/find_fortress": {
-    "criteria": {
-      "fortress": "2025-12-11 14:01:09 +0000"
-    },
-    "done": true
-  },
-  "cobbleverse:trainer/kanto/defeat_misty": {
-    "criteria": {
-      "leader_defeated": "2025-12-11 14:33:12 +0000"
     },
     "done": true
   },
@@ -22890,15 +22891,15 @@
     },
     "done": true
   },
-  "cobblemon:recipes/campfire_pot/exp_candy_xl": {
-    "criteria": {
-      "has_candy": "2025-12-11 14:19:20 +0000"
-    },
-    "done": true
-  },
   "moarconcrete:recipes/building_blocks/black_concrete_panel_from_black_concrete_stonecutting": {
     "criteria": {
       "has_black_concrete": "2025-12-11 14:56:37 +0000"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/campfire_pot/candied_berry": {
+    "criteria": {
+      "has_berry": "2025-12-11 15:02:11 +0000"
     },
     "done": true
   },
@@ -22919,6 +22920,18 @@
       "has_berry": "2025-12-11 15:02:11 +0000"
     },
     "done": true
+  },
+  "cobblemon:recipes/blocks/campfire_pot_red": {
+    "criteria": {
+      "has_red_apricorn": "2025-12-11 15:15:18 +0000"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/campfire_pot/red_aprijuice": {
+    "criteria": {
+      "has_apricorn": "2025-12-11 15:15:19 +0000"
+    },
+    "done": false
   },
   "DataVersion": 3955
 }
