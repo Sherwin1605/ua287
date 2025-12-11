@@ -24484,6 +24484,7 @@
   },
   "cobblemon:rainbow_apricorns": {
     "criteria": {
+      "place_black": "2025-12-11 13:45:55 +0000",
       "place_red": "2025-12-11 12:49:57 +0000"
     },
     "done": false
@@ -24569,6 +24570,12 @@
   "cobblemon:obtain_tumblestone": {
     "criteria": {
       "check_inv": "2025-12-11 13:26:06 +0000"
+    },
+    "done": true
+  },
+  "cobbleverse:trainer/kanto/defeat_brock": {
+    "criteria": {
+      "leader_defeated": "2025-12-11 13:34:42 +0000"
     },
     "done": true
   },
