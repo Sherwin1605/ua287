@@ -8,13 +8,13 @@
   "battleTheme": "cobblemon:battle.pvp.default",
   "extraData": {},
   "advancementData": {
-    "totalCaptureCount": 12,
+    "totalCaptureCount": 13,
     "totalEggsCollected": 0,
     "totalEggsHatched": 0,
     "totalEvolvedCount": 3,
-    "totalBattleVictoryCount": 9,
+    "totalBattleVictoryCount": 12,
     "totalPvPBattleVictoryCount": 0,
-    "totalPvWBattleVictoryCount": 8,
+    "totalPvWBattleVictoryCount": 11,
     "totalPvNBattleVictoryCount": 1,
     "totalShinyCaptureCount": 0,
     "totalTradedCount": 0,
@@ -31,10 +31,11 @@
       "electric": 1,
       "ground": 1,
       "grass": 1,
-      "bug": 1
+      "bug": 1,
+      "fighting": 1
     },
     "totalDefeatedCounts": {
-      "cobblemon:gimmighoul": 3,
+      "cobblemon:gimmighoul": 5,
       "cobblemon:teddiursa": 1
     },
     "aspectsCollected": {
@@ -82,6 +83,9 @@
         "male"
       ],
       "cobblemon:impidimp": [
+        "male"
+      ],
+      "cobblemon:throh": [
         "male"
       ]
     }

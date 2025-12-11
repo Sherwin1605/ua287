@@ -1,0 +1,62 @@
+{
+  "uuid": "9dca150a-c20a-3d23-9367-d926ea295255",
+  "starterPrompted": true,
+  "starterLocked": false,
+  "starterSelected": true,
+  "starterUUID": "941c508e-04a4-4256-aa78-042bf0285d39",
+  "keyItems": [],
+  "battleTheme": "cobblemon:battle.pvp.default",
+  "extraData": {},
+  "advancementData": {
+    "totalCaptureCount": 5,
+    "totalEggsCollected": 0,
+    "totalEggsHatched": 0,
+    "totalEvolvedCount": 2,
+    "totalBattleVictoryCount": 13,
+    "totalPvPBattleVictoryCount": 0,
+    "totalPvWBattleVictoryCount": 13,
+    "totalPvNBattleVictoryCount": 0,
+    "totalShinyCaptureCount": 0,
+    "totalTradedCount": 0,
+    "totalTypeCaptureCounts": {
+      "flying": 4,
+      "dark": 1,
+      "normal": 3,
+      "fighting": 1
+    },
+    "totalDefeatedCounts": {
+      "cobblemon:pidove": 1,
+      "cobblemon:grubbin": 1,
+      "cobblemon:litleo": 1,
+      "cobblemon:pikipek": 1,
+      "cobblemon:cherrim": 1,
+      "cobblemon:snubbull": 1,
+      "cobblemon:poliwag": 2,
+      "cobblemon:gimmighoul": 2,
+      "cobblemon:ledyba": 1
+    },
+    "aspectsCollected": {
+      "cobblemon:bombirdier": [
+        "female"
+      ],
+      "cobblemon:taillow": [
+        "female"
+      ],
+      "cobblemon:swellow": [
+        "female"
+      ],
+      "cobblemon:rufflet": [
+        "male"
+      ],
+      "cobblemon:grapploct": [
+        "female"
+      ],
+      "cobblemon:braviary": [
+        "male"
+      ],
+      "cobblemon:frogadier": [
+        "female"
+      ]
+    }
+  }
+}
