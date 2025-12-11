@@ -213,7 +213,7 @@ class Pokemon {
     this.addedType = "";
     this.knownType = true;
     this.apparentType = this.baseSpecies.types.join("/");
-	this.teraType = this.set.teraType || this.types[0];
+    this.teraType = this.set.teraType || this.types[0];
     this.switchFlag = false;
     this.forceSwitchFlag = false;
     this.skipBeforeSwitchOutEventFlag = false;
@@ -703,13 +703,13 @@ class Pokemon {
       return true;
     return !!(baseMove.category === "Status" && (this.hasItem("assaultvest") || this.volatiles["taunt"]));
   }
-  getDynamaxRequest(skipChecks) {  
+  getDynamaxRequest(skipChecks) {
     if (!skipChecks) {
       if (!this.side.canDynamaxNow())
         return;
-		if (this.species.isMega || this.species.isPrimal || this.species.forme === "Ultra" || this.getItem().zMove || this.terastallized || (this.canMegaEvo && this.species.baseSpecies !== "Rayquaza")) {
+      if (this.species.isMega || this.species.isPrimal || this.species.forme === "Ultra" || this.getItem().zMove || this.canMegaEvo) {
         return;
-	  } 
+      }
       if (this.species.cannotDynamax || this.illusion?.species.cannotDynamax)
         return;
     }
@@ -1173,15 +1173,6 @@ class Pokemon {
       source,
       effect
     });
-	if (this.baseSpecies.forme?.startsWith("Mega")) {
-		const baseForm = this.battle.dex.species.get(this.baseSpecies.baseSpecies);
-		//this.battle.debug(`Reverting ${this.name} from Mega to base species ${baseForm.name} upon fainting`);
-		this.formeChange(baseForm.name, null, true);
-		this.baseSpecies = baseForm;
-		//this.setAbility(baseForm.abilities[0]); // Reset base ability (optional but useful)
-		delete this.canMegaEvo;
-		//console.log(`[DEBUG] ${this.name} reverted to base species ${baseForm.name} on faint`);
-    }
     return d;
   }
   capture() {

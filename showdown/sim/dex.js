@@ -42,7 +42,7 @@ var import_dex_abilities = require("./dex-abilities");
 var import_dex_species = require("./dex-species");
 var import_dex_formats = require("./dex-formats");
 var import_lib = require("../lib");
-var CobblemonCache = __toESM(require("./cobblemon-cache"));
+var import_cobblemon = require("./cobblemon/cobblemon");
 /**
  * Dex
  * Pokemon Showdown - http://pokemonshowdown.com/
@@ -468,7 +468,7 @@ class ModdedDex {
       "thecardgame",
       "trademarked",
       "vaporemons",
-      CobblemonCache.MOD_ID
+      import_cobblemon.Cobblemon.modId
     ];
     if (!this.isBase)
       throw new Error(`This must be called on the base Dex`);

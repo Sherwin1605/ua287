@@ -1,9 +1,7 @@
 "use strict";
-var __create = Object.create;
 var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
 var __getOwnPropNames = Object.getOwnPropertyNames;
-var __getProtoOf = Object.getPrototypeOf;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
 var __export = (target, all) => {
   for (var name in all)
@@ -17,14 +15,6 @@ var __copyProps = (to, from, except, desc) => {
   }
   return to;
 };
-var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__getProtoOf(mod)) : {}, __copyProps(
-  // If the importer is in node compatibility mode or this is not an ESM
-  // file that has been converted to a CommonJS file using a Babel-
-  // compatible transform (i.e. "__esModule" has not been set), then set
-  // "default" to the CommonJS "module.exports" for node compatibility.
-  isNodeMode || !mod || !mod.__esModule ? __defProp(target, "default", { value: mod, enumerable: true }) : target,
-  mod
-));
 var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 var battle_exports = {};
 __export(battle_exports, {
@@ -43,7 +33,7 @@ var import_state = require("./state");
 var import_battle_queue = require("./battle-queue");
 var import_battle_actions = require("./battle-actions");
 var import_lib = require("../lib");
-var BagItems = __toESM(require("./bag-items"));
+var import_cobblemon = require("./cobblemon/cobblemon");
 /**
  * Simulator Battle
  * Pokemon Showdown - http://pokemonshowdown.com/
@@ -97,7 +87,7 @@ class Battle {
     }
     this.format = format;
     this.dex = import_dex.Dex.forFormat(format);
-    this.gen = options.format.gen || this.dex.gen;
+    this.gen = options.format?.gen || this.dex.gen;
     this.ruleTable = this.dex.formats.getRuleTable(format);
     this.trunc = this.dex.trunc;
     this.clampIntRange = import_lib.Utils.clampIntRange;
@@ -2612,10 +2602,10 @@ class Battle {
       throw new Error("Item Name required for useitem");
     if (itemId === void 0)
       throw new Error("Item ID required for useitem");
-    if (!BagItems.has(itemId)) {
+    const item = import_cobblemon.Cobblemon.registries.bagItem.get((0, import_dex.toID)(itemId));
+    if (!item) {
       throw new Error("Invalid item: " + itemId);
     }
-    const item = BagItems.getItem(itemId);
     const pokemon = this.getPokemonById(pokemonId);
     if (!pokemon)
       throw new Error(`No pokemon found for ID ${pokemonId}`);

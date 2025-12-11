@@ -3,7 +3,7 @@
   "update_tick_time": 20,
   "list_header": [
     "",
-    "<gradient:#8B0000:#800080> ᴘɪxᴇʟ ᴄᴀᴘɪᴛᴀʟ <gradient:#800080:#8B0000> ☽ ",
+    " ☽ <gradient:#8B0000:#800080> ᴘɪxᴇʟ ᴄᴀᴘɪᴛᴀʟ <gradient:#800080:#8B0000> ☽ ",
     "",
     "<color #555555><strikethrough>        </strikethrough>[ </color><color #FF5555>%server:online%<color #6666676>/</color>%server:max_players%</color><color #555555> ]<strikethrough>        </strikethrough></color>",
     ""

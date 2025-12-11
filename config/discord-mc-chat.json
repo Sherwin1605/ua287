@@ -91,8 +91,8 @@
     "onlineServerStatusVoiceChannelName": "⌠🟢⌡〢ᴛʀᴀ̣ɴɢ ᴛʜᴀ́ɪ: ᴄʜɪ̣ᴄʜ ᴛᴜʏᴇ̂́ɴ",
     "onlineServerStatusVoiceChannelNameForMultiServer": "",
     "offlinePlayerCountVoiceChannelName": "⌠👤⌡〢Người chơi: (%onlinePlayerCount%/%maxPlayerCount%)",
-    "onlinePlayerCountVoiceChannelName": "⌠👤⌡〢Người chơi: (%onlinePlayerCount%/%maxPlayerCount%)"
+    "onlinePlayerCountVoiceChannelName": "⌠👤⌡〢Người chơi: (0/36)"
   },
   "latestVersion": "2.7.0",
-  "latestCheckTime": 1765396668107
+  "latestCheckTime": 1765436396748
 }

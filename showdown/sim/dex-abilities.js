@@ -22,6 +22,7 @@ __export(dex_abilities_exports, {
   DexAbilities: () => DexAbilities
 });
 module.exports = __toCommonJS(dex_abilities_exports);
+var import_cobblemon = require("./cobblemon/cobblemon");
 var import_dex_data = require("./dex-data");
 class Ability extends import_dex_data.BasicEffect {
   constructor(data) {
@@ -63,7 +64,7 @@ class DexAbilities {
     return this.getByID(id);
   }
   getByID(id) {
-    let ability = this.abilityCache.get(id);
+    let ability = import_cobblemon.Cobblemon.registries.ability.get(id) ?? this.abilityCache.get(id);
     if (ability)
       return ability;
     if (this.dex.data.Aliases.hasOwnProperty(id)) {
@@ -99,11 +100,13 @@ class DexAbilities {
   all() {
     if (this.allCache)
       return this.allCache;
-    const abilities = [];
-    for (const id in this.dex.data.Abilities) {
-      abilities.push(this.getByID(id));
-    }
-    this.allCache = abilities;
+    const allIds = [
+      ...Object.keys(this.dex.data.Abilities),
+      ...import_cobblemon.Cobblemon.registries.ability.contents.keys()
+    ];
+    const uniqueIds = new Set(allIds);
+    const abilities = Array.from(uniqueIds).map((id) => this.getByID(id));
+    this.allCache = Object.freeze(abilities);
     return this.allCache;
   }
 }

@@ -22,6 +22,7 @@ __export(dex_items_exports, {
   Item: () => Item
 });
 module.exports = __toCommonJS(dex_items_exports);
+var import_cobblemon = require("./cobblemon/cobblemon");
 var import_dex_data = require("./dex-data");
 class Item extends import_dex_data.BasicEffect {
   constructor(data) {
@@ -86,7 +87,7 @@ class DexItems {
     return this.getByID(id);
   }
   getByID(id) {
-    let item = this.itemCache.get(id);
+    let item = import_cobblemon.Cobblemon.registries.heldItem.get(id) ?? this.itemCache.get(id);
     if (item)
       return item;
     if (this.dex.data.Aliases.hasOwnProperty(id)) {
@@ -125,10 +126,12 @@ class DexItems {
   all() {
     if (this.allCache)
       return this.allCache;
-    const items = [];
-    for (const id in this.dex.data.Items) {
-      items.push(this.getByID(id));
-    }
+    const allIds = [
+      ...Object.keys(this.dex.data.Items),
+      ...import_cobblemon.Cobblemon.registries.heldItem.contents.keys()
+    ];
+    const uniqueIds = new Set(allIds);
+    const items = Array.from(uniqueIds).map((id) => this.getByID(id));
     this.allCache = Object.freeze(items);
     return this.allCache;
   }

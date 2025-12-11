@@ -24,6 +24,7 @@ __export(dex_moves_exports, {
 module.exports = __toCommonJS(dex_moves_exports);
 var import_lib = require("../lib");
 var import_dex_data = require("./dex-data");
+var import_cobblemon = require("./cobblemon/cobblemon");
 class DataMove extends import_dex_data.BasicEffect {
   constructor(data) {
     super(data);
@@ -169,7 +170,7 @@ class DexMoves {
     return this.getByID(id);
   }
   getByID(id) {
-    let move = this.moveCache.get(id);
+    let move = import_cobblemon.Cobblemon.registries.move.get(id) ?? this.moveCache.get(id);
     if (move)
       return move;
     if (this.dex.data.Aliases.hasOwnProperty(id)) {
@@ -206,10 +207,12 @@ class DexMoves {
   all() {
     if (this.allCache)
       return this.allCache;
-    const moves = [];
-    for (const id in this.dex.data.Moves) {
-      moves.push(this.getByID(id));
-    }
+    const allIds = [
+      ...Object.keys(this.dex.data.Moves),
+      ...import_cobblemon.Cobblemon.registries.move.contents.keys()
+    ];
+    const uniqueIds = new Set(allIds);
+    const moves = Array.from(uniqueIds).map((id) => this.getByID(id));
     this.allCache = Object.freeze(moves);
     return this.allCache;
   }

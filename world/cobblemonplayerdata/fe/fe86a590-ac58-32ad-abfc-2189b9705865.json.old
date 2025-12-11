@@ -1,0 +1,89 @@
+{
+  "uuid": "fe86a590-ac58-32ad-abfc-2189b9705865",
+  "starterPrompted": true,
+  "starterLocked": false,
+  "starterSelected": true,
+  "starterUUID": "ee59b4d1-dcd7-4b71-8569-1497a70d6986",
+  "keyItems": [],
+  "battleTheme": "cobblemon:battle.pvp.default",
+  "extraData": {},
+  "advancementData": {
+    "totalCaptureCount": 12,
+    "totalEggsCollected": 0,
+    "totalEggsHatched": 0,
+    "totalEvolvedCount": 3,
+    "totalBattleVictoryCount": 9,
+    "totalPvPBattleVictoryCount": 0,
+    "totalPvWBattleVictoryCount": 8,
+    "totalPvNBattleVictoryCount": 1,
+    "totalShinyCaptureCount": 0,
+    "totalTradedCount": 0,
+    "totalTypeCaptureCounts": {
+      "water": 1,
+      "flying": 3,
+      "dark": 2,
+      "fairy": 2,
+      "rock": 1,
+      "normal": 3,
+      "psychic": 1,
+      "dragon": 1,
+      "ghost": 1,
+      "electric": 1,
+      "ground": 1,
+      "grass": 1,
+      "bug": 1
+    },
+    "totalDefeatedCounts": {
+      "cobblemon:gimmighoul": 3,
+      "cobblemon:teddiursa": 1
+    },
+    "aspectsCollected": {
+      "cobblemon:golduck": [
+        "male"
+      ],
+      "cobblemon:marshtomp": [
+        "male"
+      ],
+      "cobblemon:bombirdier": [
+        "male"
+      ],
+      "cobblemon:aromatisse": [
+        "male"
+      ],
+      "cobblemon:lycanroc": [
+        "male",
+        "midnight-form"
+      ],
+      "cobblemon:wyrdeer": [
+        "female"
+      ],
+      "cobblemon:drakloak": [
+        "male"
+      ],
+      "cobblemon:electrike": [
+        "female"
+      ],
+      "cobblemon:skitty": [
+        "male"
+      ],
+      "cobblemon:toedscool": [
+        "female"
+      ],
+      "cobblemon:taillow": [
+        "male"
+      ],
+      "cobblemon:swellow": [
+        "male"
+      ],
+      "cobblemon:ledyba": [
+        "male"
+      ],
+      "cobblemon:ledian": [
+        "male"
+      ],
+      "cobblemon:impidimp": [
+        "male"
+      ]
+    }
+  }
+}
