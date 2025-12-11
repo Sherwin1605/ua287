@@ -1,5 +1,5 @@
 {
-  "enableSpawnCommandAlerts": false,
+  "enableSpawnCommandAlerts": true,
   "alertShinies": true,
   "alertLegendaries": true,
   "alertMythicals": true,

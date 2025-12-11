@@ -4867,24 +4867,26 @@
       "quick_ball": "2025-12-10 18:00:44 +0000",
       "great_ball": "2025-12-10 17:46:45 +0000",
       "ancient_leaden_ball": "2025-12-11 14:05:47 +0000",
+      "timer_ball": "2025-12-11 15:45:50 +0000",
+      "ancient_poke_ball": "2025-12-10 18:05:17 +0000",
+      "repeat_ball": "2025-12-10 18:52:35 +0000",
+      "azure_ball": "2025-12-10 17:50:31 +0000",
+      "ancient_jet_ball": "2025-12-10 19:44:21 +0000",
+      "ancient_citrine_ball": "2025-12-11 14:01:58 +0000",
+      "ancient_ultra_ball": "2025-12-11 14:01:33 +0000",
+      "safari_ball": "2025-12-10 19:47:59 +0000",
+      "verdant_ball": "2025-12-10 17:51:21 +0000",
+      "ultra_ball": "2025-12-10 17:47:00 +0000",
       "ancient_wing_ball": "2025-12-10 20:10:33 +0000",
       "slate_ball": "2025-12-10 17:51:10 +0000",
       "ancient_verdant_ball": "2025-12-11 14:02:33 +0000",
-      "ancient_poke_ball": "2025-12-10 18:05:17 +0000",
       "poke_ball": "2025-12-09 12:53:59 +0000",
-      "repeat_ball": "2025-12-10 18:52:35 +0000",
-      "azure_ball": "2025-12-10 17:50:31 +0000",
       "citrine_ball": "2025-12-10 18:00:43 +0000",
       "ancient_azure_ball": "2025-12-11 14:01:49 +0000",
-      "ancient_jet_ball": "2025-12-10 19:44:21 +0000",
       "roseate_ball": "2025-12-10 17:18:16 +0000",
-      "ancient_citrine_ball": "2025-12-11 14:01:58 +0000",
+      "friend_ball": "2025-12-11 15:49:05 +0000",
       "ancient_roseate_ball": "2025-12-10 20:10:46 +0000",
-      "ancient_ultra_ball": "2025-12-11 14:01:33 +0000",
-      "safari_ball": "2025-12-10 19:47:59 +0000",
-      "premier_ball": "2025-12-10 18:52:49 +0000",
-      "verdant_ball": "2025-12-10 17:51:21 +0000",
-      "ultra_ball": "2025-12-10 17:47:00 +0000"
+      "premier_ball": "2025-12-10 18:52:49 +0000"
     },
     "done": false
   },
@@ -22746,6 +22748,7 @@
   },
   "cobblemon:cook_all_regional_delicacies": {
     "criteria": {
+      "rage_candy_bar": "2025-12-11 15:42:58 +0000",
       "old_gateau": "2025-12-11 12:44:39 +0000"
     },
     "done": false
@@ -22932,6 +22935,48 @@
       "has_apricorn": "2025-12-11 15:15:19 +0000"
     },
     "done": false
+  },
+  "cobblemon:craft_apricorn_balls": {
+    "criteria": {
+      "friend_ball": "2025-12-11 15:49:05 +0000"
+    },
+    "done": false
+  },
+  "cobblemon:medicinal_brew": {
+    "criteria": {
+      "check_inv": "2025-12-11 15:41:12 +0000"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/campfire_pot/ether_in_campfire_pot": {
+    "criteria": {
+      "has_brew": "2025-12-11 15:41:12 +0000"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/held/clear_amulet": {
+    "criteria": {
+      "has_amethyst": "2025-12-11 15:54:42 +0000"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/campfire_pot/hyper_potion_in_campfire_pot": {
+    "criteria": {
+      "has_brew": "2025-12-11 15:41:12 +0000"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/campfire_pot/elixir_in_campfire_pot": {
+    "criteria": {
+      "has_brew": "2025-12-11 15:41:12 +0000"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/campfire_pot/super_potion_in_campfire_pot": {
+    "criteria": {
+      "has_brew": "2025-12-11 15:41:12 +0000"
+    },
+    "done": true
   },
   "DataVersion": 3955
 }
