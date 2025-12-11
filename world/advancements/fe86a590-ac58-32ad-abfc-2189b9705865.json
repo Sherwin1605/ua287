@@ -4862,18 +4862,25 @@
   },
   "cobblemon:craft_all_balls": {
     "criteria": {
+      "luxury_ball": "2025-12-11 15:04:37 +0000",
+      "ancient_gigaton_ball": "2025-12-11 13:55:57 +0000",
       "quick_ball": "2025-12-10 18:00:44 +0000",
       "great_ball": "2025-12-10 17:46:45 +0000",
+      "ancient_leaden_ball": "2025-12-11 14:05:47 +0000",
       "ancient_wing_ball": "2025-12-10 20:10:33 +0000",
       "slate_ball": "2025-12-10 17:51:10 +0000",
+      "ancient_verdant_ball": "2025-12-11 14:02:33 +0000",
       "ancient_poke_ball": "2025-12-10 18:05:17 +0000",
       "poke_ball": "2025-12-09 12:53:59 +0000",
       "repeat_ball": "2025-12-10 18:52:35 +0000",
       "azure_ball": "2025-12-10 17:50:31 +0000",
       "citrine_ball": "2025-12-10 18:00:43 +0000",
+      "ancient_azure_ball": "2025-12-11 14:01:49 +0000",
       "ancient_jet_ball": "2025-12-10 19:44:21 +0000",
       "roseate_ball": "2025-12-10 17:18:16 +0000",
+      "ancient_citrine_ball": "2025-12-11 14:01:58 +0000",
       "ancient_roseate_ball": "2025-12-10 20:10:46 +0000",
+      "ancient_ultra_ball": "2025-12-11 14:01:33 +0000",
       "safari_ball": "2025-12-10 19:47:59 +0000",
       "premier_ball": "2025-12-10 18:52:49 +0000",
       "verdant_ball": "2025-12-10 17:51:21 +0000",
@@ -22428,6 +22435,7 @@
       "minecraft:beach": "2025-12-10 19:25:14 +0000",
       "minecraft:dark_forest": "2025-12-10 19:32:15 +0000",
       "minecraft:mangrove_swamp": "2025-12-10 19:36:48 +0000",
+      "minecraft:sparse_jungle": "2025-12-11 14:29:54 +0000",
       "minecraft:river": "2025-12-10 16:40:51 +0000",
       "minecraft:lukewarm_ocean": "2025-12-10 19:36:43 +0000",
       "minecraft:snowy_plains": "2025-12-10 17:49:49 +0000",
@@ -22590,9 +22598,15 @@
   },
   "cobblemon:craft_ancient_balls": {
     "criteria": {
+      "ancient_gigaton_ball": "2025-12-11 13:55:57 +0000",
+      "ancient_citrine_ball": "2025-12-11 14:01:58 +0000",
       "ancient_wing_ball": "2025-12-10 20:10:33 +0000",
+      "ancient_leaden_ball": "2025-12-11 14:05:47 +0000",
+      "ancient_verdant_ball": "2025-12-11 14:02:33 +0000",
       "ancient_roseate_ball": "2025-12-10 20:10:46 +0000",
       "ancient_poke_ball": "2025-12-10 18:05:17 +0000",
+      "ancient_ultra_ball": "2025-12-11 14:01:33 +0000",
+      "ancient_azure_ball": "2025-12-11 14:01:49 +0000",
       "ancient_jet_ball": "2025-12-10 19:44:21 +0000"
     },
     "done": false
@@ -22723,24 +22737,11 @@
     },
     "done": true
   },
-  "minecraft:nether/explore_nether": {
+  "cobblemon:recipes/campfire_pot/pink_aprijuice": {
     "criteria": {
-      "minecraft:nether_wastes": "2025-12-11 13:21:12 +0000",
-      "minecraft:warped_forest": "2025-12-11 13:26:39 +0000"
+      "has_apricorn": "2025-12-11 12:43:21 +0000"
     },
     "done": false
-  },
-  "cobblemon:recipes/campfire_pot/mushroom_stew_in_campfire_pot": {
-    "criteria": {
-      "has_red_mushroom": "2025-12-11 12:57:30 +0000"
-    },
-    "done": true
-  },
-  "cobblemon:recipes/transportation/saccharine_boat": {
-    "criteria": {
-      "in_water": "2025-12-11 12:52:45 +0000"
-    },
-    "done": true
   },
   "cobblemon:cook_all_regional_delicacies": {
     "criteria": {
@@ -22754,9 +22755,21 @@
     },
     "done": false
   },
-  "minecraft:story/form_obsidian": {
+  "cobblemon:recipes/blocks/campfire_pot_black": {
     "criteria": {
-      "obsidian": "2025-12-11 13:18:38 +0000"
+      "has_black_apricorn": "2025-12-11 12:45:25 +0000"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/transportation/saccharine_boat": {
+    "criteria": {
+      "in_water": "2025-12-11 12:52:45 +0000"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/campfire_pot/mushroom_stew_in_campfire_pot": {
+    "criteria": {
+      "has_red_mushroom": "2025-12-11 12:57:30 +0000"
     },
     "done": true
   },
@@ -22766,17 +22779,17 @@
     },
     "done": true
   },
+  "minecraft:story/form_obsidian": {
+    "criteria": {
+      "obsidian": "2025-12-11 13:18:38 +0000"
+    },
+    "done": true
+  },
   "minecraft:nether/obtain_crying_obsidian": {
     "criteria": {
       "crying_obsidian": "2025-12-11 13:20:51 +0000"
     },
     "done": true
-  },
-  "cobblemon:recipes/campfire_pot/pink_aprijuice": {
-    "criteria": {
-      "has_apricorn": "2025-12-11 12:43:21 +0000"
-    },
-    "done": false
   },
   "minecraft:story/enter_the_nether": {
     "criteria": {
@@ -22790,15 +22803,120 @@
     },
     "done": true
   },
+  "minecraft:nether/explore_nether": {
+    "criteria": {
+      "minecraft:crimson_forest": "2025-12-11 13:59:46 +0000",
+      "minecraft:nether_wastes": "2025-12-11 13:21:12 +0000",
+      "minecraft:soul_sand_valley": "2025-12-11 14:05:17 +0000",
+      "minecraft:warped_forest": "2025-12-11 13:26:39 +0000"
+    },
+    "done": false
+  },
   "minecraft:nether/find_bastion": {
     "criteria": {
       "bastion": "2025-12-11 13:26:49 +0000"
     },
     "done": true
   },
-  "cobblemon:recipes/blocks/campfire_pot_black": {
+  "cobblemon:trade_pokemon": {
     "criteria": {
-      "has_black_apricorn": "2025-12-11 12:45:25 +0000"
+      "trade": "2025-12-11 14:37:37 +0000"
+    },
+    "done": true
+  },
+  "moarconcrete:recipes/building_blocks/black_concrete_slab_from_black_concrete_stonecutting": {
+    "criteria": {
+      "has_black_concrete": "2025-12-11 14:56:37 +0000"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/campfire_pot/candied_berry": {
+    "criteria": {
+      "has_berry": "2025-12-11 15:02:11 +0000"
+    },
+    "done": true
+  },
+  "moarconcrete:recipes/building_blocks/black_concrete_stairs_from_black_concrete_stonecutting": {
+    "criteria": {
+      "has_black_concrete": "2025-12-11 14:56:37 +0000"
+    },
+    "done": true
+  },
+  "minecraft:nether/loot_bastion": {
+    "criteria": {
+      "loot_bastion_other": "2025-12-11 13:57:50 +0000"
+    },
+    "done": true
+  },
+  "moarconcrete:recipes/building_blocks/black_concrete_bricks_from_black_concrete_stonecutting": {
+    "criteria": {
+      "has_black_concrete": "2025-12-11 14:56:37 +0000"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/held/fairy_feather": {
+    "criteria": {
+      "has_gem": "2025-12-11 14:00:14 +0000"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/campfire_pot/exp_candy_l": {
+    "criteria": {
+      "has_candy": "2025-12-11 14:19:02 +0000"
+    },
+    "done": true
+  },
+  "minecraft:nether/find_fortress": {
+    "criteria": {
+      "fortress": "2025-12-11 14:01:09 +0000"
+    },
+    "done": true
+  },
+  "cobbleverse:trainer/kanto/defeat_misty": {
+    "criteria": {
+      "leader_defeated": "2025-12-11 14:33:12 +0000"
+    },
+    "done": true
+  },
+  "moarconcrete:recipes/building_blocks/black_concrete_brick_slab_from_black_concrete_stonecutting": {
+    "criteria": {
+      "has_black_concrete": "2025-12-11 14:56:37 +0000"
+    },
+    "done": true
+  },
+  "moarconcrete:recipes/building_blocks/black_concrete_wall_from_black_concrete_stonecutting": {
+    "criteria": {
+      "has_black_concrete": "2025-12-11 14:56:37 +0000"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/campfire_pot/exp_candy_xl": {
+    "criteria": {
+      "has_candy": "2025-12-11 14:19:20 +0000"
+    },
+    "done": true
+  },
+  "moarconcrete:recipes/building_blocks/black_concrete_panel_from_black_concrete_stonecutting": {
+    "criteria": {
+      "has_black_concrete": "2025-12-11 14:56:37 +0000"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/agriculture/oran_berry_smelt_to_dye": {
+    "criteria": {
+      "has_berry": "2025-12-11 15:02:11 +0000"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/campfire_pot/poke_bait": {
+    "criteria": {
+      "has_berry": "2025-12-11 15:02:11 +0000"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/campfire_pot/potion_in_campfire_pot": {
+    "criteria": {
+      "has_berry": "2025-12-11 15:02:11 +0000"
     },
     "done": true
   },

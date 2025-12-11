@@ -8,32 +8,53 @@
   "battleTheme": "cobblemon:battle.pvp.default",
   "extraData": {},
   "advancementData": {
-    "totalCaptureCount": 5,
+    "totalCaptureCount": 8,
     "totalEggsCollected": 0,
     "totalEggsHatched": 0,
-    "totalEvolvedCount": 2,
-    "totalBattleVictoryCount": 14,
-    "totalPvPBattleVictoryCount": 0,
-    "totalPvWBattleVictoryCount": 13,
-    "totalPvNBattleVictoryCount": 1,
+    "totalEvolvedCount": 3,
+    "totalBattleVictoryCount": 40,
+    "totalPvPBattleVictoryCount": 1,
+    "totalPvWBattleVictoryCount": 37,
+    "totalPvNBattleVictoryCount": 2,
     "totalShinyCaptureCount": 0,
-    "totalTradedCount": 0,
+    "totalTradedCount": 2,
     "totalTypeCaptureCounts": {
       "flying": 4,
       "dark": 1,
       "normal": 3,
-      "fighting": 1
+      "fighting": 1,
+      "bug": 1,
+      "poison": 1,
+      "electric": 1,
+      "water": 1,
+      "ice": 1
     },
     "totalDefeatedCounts": {
       "cobblemon:pidove": 1,
-      "cobblemon:grubbin": 1,
+      "cobblemon:grubbin": 2,
       "cobblemon:litleo": 1,
       "cobblemon:pikipek": 1,
       "cobblemon:cherrim": 1,
-      "cobblemon:snubbull": 1,
+      "cobblemon:snubbull": 2,
       "cobblemon:poliwag": 2,
-      "cobblemon:gimmighoul": 2,
-      "cobblemon:ledyba": 1
+      "cobblemon:gimmighoul": 3,
+      "cobblemon:ledyba": 2,
+      "cobblemon:sentret": 1,
+      "cobblemon:purugly": 1,
+      "cobblemon:zigzagoon": 1,
+      "cobblemon:elekid": 1,
+      "cobblemon:linoone": 1,
+      "cobblemon:skitty": 3,
+      "cobblemon:skiddo": 1,
+      "cobblemon:ponyta": 1,
+      "cobblemon:clobbopus": 1,
+      "cobblemon:bouffalant": 2,
+      "cobblemon:rapidash": 1,
+      "cobblemon:granbull": 2,
+      "cobblemon:varoom": 1,
+      "cobblemon:cacnea": 1,
+      "cobblemon:maractus": 1,
+      "cobblemon:phanpy": 1
     },
     "aspectsCollected": {
       "cobblemon:bombirdier": [
@@ -55,6 +76,21 @@
         "male"
       ],
       "cobblemon:frogadier": [
+        "female"
+      ],
+      "cobblemon:kakuna": [
+        "male"
+      ],
+      "cobblemon:toedscruel": [
+        "female"
+      ],
+      "cobblemon:shinx": [
+        "female"
+      ],
+      "cobblemon:lapras": [
+        "female"
+      ],
+      "cobblemon:luxio": [
         "female"
       ]
     }

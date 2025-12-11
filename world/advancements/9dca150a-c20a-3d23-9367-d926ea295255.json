@@ -9981,13 +9981,26 @@
   },
   "cobblemon:craft_all_balls": {
     "criteria": {
-      "roseate_ball": "2025-12-11 12:46:11 +0000",
+      "heal_ball": "2025-12-11 14:12:40 +0000",
+      "nest_ball": "2025-12-11 14:05:57 +0000",
+      "quick_ball": "2025-12-11 14:03:19 +0000",
       "slate_ball": "2025-12-11 13:06:34 +0000",
+      "ancient_poke_ball": "2025-12-11 14:12:44 +0000",
+      "moon_ball": "2025-12-11 14:14:11 +0000",
       "poke_ball": "2025-12-11 12:33:16 +0000",
-      "premier_ball": "2025-12-11 13:06:32 +0000",
       "azure_ball": "2025-12-11 13:07:04 +0000",
-      "verdant_ball": "2025-12-11 12:35:35 +0000",
+      "love_ball": "2025-12-11 14:06:08 +0000",
       "citrine_ball": "2025-12-11 13:21:02 +0000",
+      "ancient_azure_ball": "2025-12-11 14:15:05 +0000",
+      "dive_ball": "2025-12-11 14:03:06 +0000",
+      "roseate_ball": "2025-12-11 12:46:11 +0000",
+      "lure_ball": "2025-12-11 14:13:30 +0000",
+      "ancient_slate_ball": "2025-12-11 14:13:35 +0000",
+      "friend_ball": "2025-12-11 14:12:41 +0000",
+      "premier_ball": "2025-12-11 13:06:32 +0000",
+      "heavy_ball": "2025-12-11 14:15:04 +0000",
+      "verdant_ball": "2025-12-11 12:35:35 +0000",
+      "dream_ball": "2025-12-11 14:03:17 +0000",
       "ultra_ball": "2025-12-11 13:11:05 +0000"
     },
     "done": false
@@ -24371,16 +24384,29 @@
   },
   "minecraft:adventure/adventuring_time": {
     "criteria": {
-      "minecraft:flower_forest": "2025-12-11 13:16:27 +0000",
-      "minecraft:old_growth_birch_forest": "2025-12-11 13:04:33 +0000",
       "minecraft:old_growth_pine_taiga": "2025-12-11 13:08:13 +0000",
       "minecraft:mushroom_fields": "2025-12-11 12:57:32 +0000",
       "minecraft:forest": "2025-12-11 12:34:08 +0000",
-      "minecraft:windswept_forest": "2025-12-11 12:41:31 +0000",
-      "minecraft:sparse_jungle": "2025-12-11 12:50:57 +0000",
-      "minecraft:ocean": "2025-12-11 13:03:49 +0000",
+      "minecraft:taiga": "2025-12-11 14:24:43 +0000",
       "minecraft:deep_ocean": "2025-12-11 13:02:40 +0000",
+      "minecraft:desert": "2025-12-11 14:54:16 +0000",
+      "minecraft:windswept_forest": "2025-12-11 12:41:31 +0000",
+      "minecraft:ocean": "2025-12-11 13:03:49 +0000",
+      "minecraft:cherry_grove": "2025-12-11 14:00:25 +0000",
+      "minecraft:birch_forest": "2025-12-11 14:25:38 +0000",
+      "minecraft:bamboo_jungle": "2025-12-11 14:31:47 +0000",
+      "minecraft:wooded_badlands": "2025-12-11 15:00:05 +0000",
+      "minecraft:warm_ocean": "2025-12-11 14:53:25 +0000",
+      "minecraft:deep_lukewarm_ocean": "2025-12-11 14:50:53 +0000",
+      "minecraft:badlands": "2025-12-11 15:00:35 +0000",
+      "minecraft:flower_forest": "2025-12-11 13:16:27 +0000",
+      "minecraft:beach": "2025-12-11 14:00:00 +0000",
+      "minecraft:dark_forest": "2025-12-11 14:27:11 +0000",
+      "minecraft:sparse_jungle": "2025-12-11 12:50:57 +0000",
       "minecraft:river": "2025-12-11 12:40:10 +0000",
+      "minecraft:lukewarm_ocean": "2025-12-11 14:32:10 +0000",
+      "minecraft:stony_shore": "2025-12-11 14:26:38 +0000",
+      "minecraft:old_growth_birch_forest": "2025-12-11 13:04:33 +0000",
       "minecraft:meadow": "2025-12-11 13:12:21 +0000",
       "minecraft:plains": "2025-12-11 13:13:45 +0000"
     },
@@ -24576,6 +24602,78 @@
   "cobbleverse:trainer/kanto/defeat_brock": {
     "criteria": {
       "leader_defeated": "2025-12-11 13:34:42 +0000"
+    },
+    "done": true
+  },
+  "moarconcrete:recipes/building_blocks/white_concrete_stairs_from_white_concrete_stonecutting": {
+    "criteria": {
+      "has_white_concrete": "2025-12-11 13:51:19 +0000"
+    },
+    "done": true
+  },
+  "moarconcrete:recipes/building_blocks/white_concrete_panel_from_white_concrete_stonecutting": {
+    "criteria": {
+      "has_white_concrete": "2025-12-11 13:51:19 +0000"
+    },
+    "done": true
+  },
+  "moarconcrete:recipes/building_blocks/white_concrete_slab_from_white_concrete_stonecutting": {
+    "criteria": {
+      "has_white_concrete": "2025-12-11 13:51:19 +0000"
+    },
+    "done": true
+  },
+  "moarconcrete:recipes/building_blocks/white_concrete_bricks_from_white_concrete_stonecutting": {
+    "criteria": {
+      "has_white_concrete": "2025-12-11 13:51:19 +0000"
+    },
+    "done": true
+  },
+  "moarconcrete:recipes/building_blocks/white_concrete_wall_from_white_concrete_stonecutting": {
+    "criteria": {
+      "has_white_concrete": "2025-12-11 13:51:19 +0000"
+    },
+    "done": true
+  },
+  "moarconcrete:recipes/building_blocks/white_concrete_brick_slab_from_white_concrete_stonecutting": {
+    "criteria": {
+      "has_white_concrete": "2025-12-11 13:51:19 +0000"
+    },
+    "done": true
+  },
+  "cobblemon:craft_rod": {
+    "criteria": {
+      "craft_rod": "2025-12-11 14:04:24 +0000"
+    },
+    "done": true
+  },
+  "cobblemon:craft_apricorn_balls": {
+    "criteria": {
+      "lure_ball": "2025-12-11 14:13:30 +0000",
+      "friend_ball": "2025-12-11 14:12:41 +0000",
+      "moon_ball": "2025-12-11 14:14:11 +0000",
+      "heavy_ball": "2025-12-11 14:15:04 +0000",
+      "love_ball": "2025-12-11 14:06:08 +0000"
+    },
+    "done": false
+  },
+  "cobblemon:craft_ancient_balls": {
+    "criteria": {
+      "ancient_slate_ball": "2025-12-11 14:13:35 +0000",
+      "ancient_poke_ball": "2025-12-11 14:12:44 +0000",
+      "ancient_azure_ball": "2025-12-11 14:15:05 +0000"
+    },
+    "done": false
+  },
+  "cobblemon:trade_pokemon": {
+    "criteria": {
+      "trade": "2025-12-11 14:37:37 +0000"
+    },
+    "done": true
+  },
+  "cobblemon:first_battle_victory": {
+    "criteria": {
+      "win": "2025-12-11 14:47:24 +0000"
     },
     "done": true
   },
