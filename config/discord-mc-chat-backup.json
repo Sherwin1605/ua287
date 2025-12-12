@@ -93,6 +93,6 @@
     "offlinePlayerCountVoiceChannelName": "⌠👤⌡〢Người chơi: (%onlinePlayerCount%/%maxPlayerCount%)",
     "onlinePlayerCountVoiceChannelName": "⌠👤⌡〢Người chơi: (0/36)"
   },
-  "latestVersion": "2.7.0",
-  "latestCheckTime": 1765469692565
+  "latestVersion": "2.7.1",
+  "latestCheckTime": 1765538570773
 }
