@@ -8,18 +8,18 @@
   "battleTheme": "cobblemon:battle.pvp.default",
   "extraData": {},
   "advancementData": {
-    "totalCaptureCount": 9,
+    "totalCaptureCount": 11,
     "totalEggsCollected": 0,
     "totalEggsHatched": 0,
-    "totalEvolvedCount": 3,
-    "totalBattleVictoryCount": 46,
+    "totalEvolvedCount": 4,
+    "totalBattleVictoryCount": 54,
     "totalPvPBattleVictoryCount": 1,
-    "totalPvWBattleVictoryCount": 39,
+    "totalPvWBattleVictoryCount": 47,
     "totalPvNBattleVictoryCount": 6,
     "totalShinyCaptureCount": 1,
     "totalTradedCount": 2,
     "totalTypeCaptureCounts": {
-      "flying": 4,
+      "flying": 5,
       "dark": 1,
       "normal": 3,
       "fighting": 2,
@@ -27,7 +27,9 @@
       "poison": 1,
       "electric": 1,
       "water": 1,
-      "ice": 1
+      "ice": 1,
+      "dragon": 1,
+      "rock": 1
     },
     "totalDefeatedCounts": {
       "cobblemon:pidove": 1,
@@ -35,9 +37,9 @@
       "cobblemon:litleo": 1,
       "cobblemon:pikipek": 1,
       "cobblemon:cherrim": 1,
-      "cobblemon:snubbull": 2,
+      "cobblemon:snubbull": 4,
       "cobblemon:poliwag": 2,
-      "cobblemon:gimmighoul": 3,
+      "cobblemon:gimmighoul": 4,
       "cobblemon:ledyba": 2,
       "cobblemon:sentret": 1,
       "cobblemon:purugly": 1,
@@ -52,11 +54,15 @@
       "cobblemon:rapidash": 1,
       "cobblemon:granbull": 2,
       "cobblemon:varoom": 1,
-      "cobblemon:cacnea": 1,
+      "cobblemon:cacnea": 2,
       "cobblemon:maractus": 1,
       "cobblemon:phanpy": 1,
       "cobblemon:cubone": 1,
-      "cobblemon:chewtle": 1
+      "cobblemon:chewtle": 1,
+      "cobblemon:silicobra": 1,
+      "cobblemon:hippopotas": 1,
+      "cobblemon:brambleghast": 1,
+      "cobblemon:kangaskhan": 1
     },
     "aspectsCollected": {
       "cobblemon:bombirdier": [
@@ -97,6 +103,16 @@
       ],
       "cobblemon:clobbopus": [
         "shiny",
+        "female"
+      ],
+      "cobblemon:noibat": [
+        "male"
+      ],
+      "cobblemon:rockruff": [
+        "female",
+        "midday-form"
+      ],
+      "cobblemon:luxray": [
         "female"
       ]
     }

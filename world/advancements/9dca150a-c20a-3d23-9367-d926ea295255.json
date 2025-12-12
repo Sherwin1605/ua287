@@ -837,7 +837,8 @@
     "criteria": {
       "obtain_aguav_berry": "2025-12-11 12:42:14 +0000",
       "obtain_oran_berry": "2025-12-11 12:33:16 +0000",
-      "obtain_qualot_berry": "2025-12-11 12:42:13 +0000"
+      "obtain_qualot_berry": "2025-12-11 12:42:13 +0000",
+      "obtain_tanga_berry": "2025-12-12 12:03:16 +0000"
     },
     "done": false
   },
@@ -9984,6 +9985,7 @@
       "luxury_ball": "2025-12-11 15:31:46 +0000",
       "nest_ball": "2025-12-11 14:05:57 +0000",
       "quick_ball": "2025-12-11 14:03:19 +0000",
+      "ancient_leaden_ball": "2025-12-12 12:25:18 +0000",
       "timer_ball": "2025-12-11 15:37:02 +0000",
       "ancient_poke_ball": "2025-12-11 14:12:44 +0000",
       "moon_ball": "2025-12-11 14:14:11 +0000",
@@ -9994,6 +9996,7 @@
       "dive_ball": "2025-12-11 14:03:06 +0000",
       "ancient_citrine_ball": "2025-12-11 15:35:59 +0000",
       "ancient_slate_ball": "2025-12-11 14:13:35 +0000",
+      "level_ball": "2025-12-12 12:14:18 +0000",
       "sport_ball": "2025-12-11 15:42:42 +0000",
       "safari_ball": "2025-12-11 15:41:49 +0000",
       "heavy_ball": "2025-12-11 14:15:04 +0000",
@@ -24424,6 +24427,7 @@
       "minecraft:stony_shore": "2025-12-11 14:26:38 +0000",
       "minecraft:snowy_plains": "2025-12-11 15:59:45 +0000",
       "minecraft:snowy_taiga": "2025-12-11 15:59:59 +0000",
+      "minecraft:dripstone_caves": "2025-12-12 11:50:56 +0000",
       "minecraft:old_growth_birch_forest": "2025-12-11 13:04:33 +0000",
       "minecraft:meadow": "2025-12-11 13:12:21 +0000",
       "minecraft:savanna": "2025-12-11 15:50:57 +0000",
@@ -24669,17 +24673,19 @@
   "cobblemon:craft_apricorn_balls": {
     "criteria": {
       "lure_ball": "2025-12-11 14:13:30 +0000",
+      "level_ball": "2025-12-12 12:14:18 +0000",
       "friend_ball": "2025-12-11 14:12:41 +0000",
       "moon_ball": "2025-12-11 14:14:11 +0000",
       "heavy_ball": "2025-12-11 14:15:04 +0000",
       "love_ball": "2025-12-11 14:06:08 +0000",
       "fast_ball": "2025-12-11 15:37:28 +0000"
     },
-    "done": false
+    "done": true
   },
   "cobblemon:craft_ancient_balls": {
     "criteria": {
       "ancient_citrine_ball": "2025-12-11 15:35:59 +0000",
+      "ancient_leaden_ball": "2025-12-12 12:25:18 +0000",
       "ancient_slate_ball": "2025-12-11 14:13:35 +0000",
       "ancient_verdant_ball": "2025-12-11 15:37:30 +0000",
       "ancient_feather_ball": "2025-12-11 15:42:47 +0000",
@@ -24701,21 +24707,15 @@
     },
     "done": true
   },
-  "cobblemon:recipes/misc/relic_coin": {
-    "criteria": {
-      "has_pouch": "2025-12-11 15:36:45 +0000"
-    },
-    "done": true
-  },
-  "cobblemon:cook_all_regional_delicacies": {
-    "criteria": {
-      "old_gateau": "2025-12-11 15:44:56 +0000"
-    },
-    "done": false
-  },
   "cobbleverse:trainer/kanto/defeat_misty": {
     "criteria": {
       "leader_defeated": "2025-12-11 15:30:16 +0000"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/misc/relic_coin": {
+    "criteria": {
+      "has_pouch": "2025-12-11 15:36:45 +0000"
     },
     "done": true
   },
@@ -24724,6 +24724,12 @@
       "iron_helmet": "2025-12-11 15:38:25 +0000"
     },
     "done": true
+  },
+  "cobblemon:cook_all_regional_delicacies": {
+    "criteria": {
+      "old_gateau": "2025-12-11 15:44:56 +0000"
+    },
+    "done": false
   },
   "minecraft:adventure/salvage_sherd": {
     "criteria": {
@@ -24734,6 +24740,30 @@
   "cobblemon:first_shiny_catch": {
     "criteria": {
       "catch": "2025-12-11 16:09:33 +0000"
+    },
+    "done": true
+  },
+  "sophisticatedbackpacks:recipes/misc/battery_upgrade": {
+    "criteria": {
+      "has_upgrade_base": "2025-12-12 12:26:22 +0000"
+    },
+    "done": true
+  },
+  "sophisticatedbackpacks:recipes/misc/pump_upgrade": {
+    "criteria": {
+      "has_upgrade_base": "2025-12-12 12:26:22 +0000"
+    },
+    "done": true
+  },
+  "minecraft:story/mine_diamond": {
+    "criteria": {
+      "diamond": "2025-12-12 11:55:27 +0000"
+    },
+    "done": true
+  },
+  "sophisticatedbackpacks:recipes/misc/tank_upgrade": {
+    "criteria": {
+      "has_upgrade_base": "2025-12-12 12:26:22 +0000"
     },
     "done": true
   },
