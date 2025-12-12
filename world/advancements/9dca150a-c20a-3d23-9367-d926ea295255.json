@@ -10015,7 +10015,8 @@
       "lure_ball": "2025-12-11 14:13:30 +0000",
       "friend_ball": "2025-12-11 14:12:41 +0000",
       "ancient_roseate_ball": "2025-12-11 15:32:42 +0000",
-      "premier_ball": "2025-12-11 13:06:32 +0000"
+      "premier_ball": "2025-12-11 13:06:32 +0000",
+      "park_ball": "2025-12-12 12:53:21 +0000"
     },
     "done": false
   },
@@ -24429,6 +24430,7 @@
       "minecraft:snowy_taiga": "2025-12-11 15:59:59 +0000",
       "minecraft:dripstone_caves": "2025-12-12 11:50:56 +0000",
       "minecraft:old_growth_birch_forest": "2025-12-11 13:04:33 +0000",
+      "minecraft:swamp": "2025-12-12 13:07:18 +0000",
       "minecraft:meadow": "2025-12-11 13:12:21 +0000",
       "minecraft:savanna": "2025-12-11 15:50:57 +0000",
       "minecraft:plains": "2025-12-11 13:13:45 +0000"
@@ -24743,6 +24745,12 @@
     },
     "done": true
   },
+  "minecraft:story/mine_diamond": {
+    "criteria": {
+      "diamond": "2025-12-12 11:55:27 +0000"
+    },
+    "done": true
+  },
   "sophisticatedbackpacks:recipes/misc/battery_upgrade": {
     "criteria": {
       "has_upgrade_base": "2025-12-12 12:26:22 +0000"
@@ -24752,12 +24760,6 @@
   "sophisticatedbackpacks:recipes/misc/pump_upgrade": {
     "criteria": {
       "has_upgrade_base": "2025-12-12 12:26:22 +0000"
-    },
-    "done": true
-  },
-  "minecraft:story/mine_diamond": {
-    "criteria": {
-      "diamond": "2025-12-12 11:55:27 +0000"
     },
     "done": true
   },

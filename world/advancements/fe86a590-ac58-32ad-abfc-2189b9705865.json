@@ -4875,9 +4875,11 @@
       "ancient_jet_ball": "2025-12-10 19:44:21 +0000",
       "net_ball": "2025-12-12 12:22:56 +0000",
       "ancient_citrine_ball": "2025-12-11 14:01:58 +0000",
+      "sport_ball": "2025-12-12 12:56:19 +0000",
       "ancient_ultra_ball": "2025-12-11 14:01:33 +0000",
       "safari_ball": "2025-12-10 19:47:59 +0000",
       "verdant_ball": "2025-12-10 17:51:21 +0000",
+      "dream_ball": "2025-12-12 12:55:39 +0000",
       "ultra_ball": "2025-12-10 17:47:00 +0000",
       "ancient_wing_ball": "2025-12-10 20:10:33 +0000",
       "slate_ball": "2025-12-10 17:51:10 +0000",
@@ -22981,15 +22983,82 @@
     },
     "done": true
   },
+  "minecraft:story/obtain_armor": {
+    "criteria": {
+      "iron_helmet": "2025-12-12 11:58:47 +0000"
+    },
+    "done": true
+  },
   "cobblemon:craft_rod": {
     "criteria": {
       "craft_rod": "2025-12-12 11:59:34 +0000"
     },
     "done": true
   },
-  "minecraft:story/obtain_armor": {
+  "cobblemon:obtain_revival_herb": {
     "criteria": {
-      "iron_helmet": "2025-12-12 11:58:47 +0000"
+      "check_inv": "2025-12-12 12:43:31 +0000"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/resist_feather": {
+    "criteria": {
+      "has_feather": "2025-12-12 12:43:31 +0000",
+      "has_mint": "2025-12-12 12:43:31 +0000"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/muscle_feather": {
+    "criteria": {
+      "has_feather": "2025-12-12 12:43:31 +0000"
+    },
+    "done": false
+  },
+  "cobblemon:recipes/campfire_pot/white_aprijuice": {
+    "criteria": {
+      "has_apricorn": "2025-12-12 12:43:31 +0000"
+    },
+    "done": false
+  },
+  "cobblemon:obtain_all_mints": {
+    "criteria": {
+      "obtain_blue_mint_leaf": "2025-12-12 12:43:31 +0000"
+    },
+    "done": false
+  },
+  "cobblemon:recipes/swift_feather": {
+    "criteria": {
+      "has_feather": "2025-12-12 12:43:31 +0000"
+    },
+    "done": false
+  },
+  "cobblemon:recipes/genius_feather": {
+    "criteria": {
+      "has_feather": "2025-12-12 12:43:31 +0000"
+    },
+    "done": false
+  },
+  "cobblemon:recipes/health_feather": {
+    "criteria": {
+      "has_feather": "2025-12-12 12:43:31 +0000"
+    },
+    "done": false
+  },
+  "cobblemon:recipes/held/silver_powder": {
+    "criteria": {
+      "has_gem": "2025-12-12 12:55:40 +0000"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/clever_feather": {
+    "criteria": {
+      "has_feather": "2025-12-12 12:43:31 +0000"
+    },
+    "done": false
+  },
+  "cobblemon:recipes/blocks/campfire_pot_white": {
+    "criteria": {
+      "has_white_apricorn": "2025-12-12 12:43:31 +0000"
     },
     "done": true
   },

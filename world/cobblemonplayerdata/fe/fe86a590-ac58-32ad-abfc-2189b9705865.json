@@ -8,7 +8,7 @@
   "battleTheme": "cobblemon:battle.pvp.default",
   "extraData": {},
   "advancementData": {
-    "totalCaptureCount": 14,
+    "totalCaptureCount": 15,
     "totalEggsCollected": 0,
     "totalEggsHatched": 0,
     "totalEvolvedCount": 6,
@@ -32,7 +32,7 @@
       "ground": 1,
       "grass": 1,
       "bug": 1,
-      "fighting": 1,
+      "fighting": 2,
       "fire": 1
     },
     "totalDefeatedCounts": {
@@ -101,6 +101,10 @@
       ],
       "cobblemon:beedrill": [
         "male"
+      ],
+      "cobblemon:zamazenta": [
+        "genderless",
+        "hero"
       ]
     }
   }

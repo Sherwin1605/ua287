@@ -11,10 +11,10 @@
     "totalCaptureCount": 11,
     "totalEggsCollected": 0,
     "totalEggsHatched": 0,
-    "totalEvolvedCount": 4,
-    "totalBattleVictoryCount": 54,
+    "totalEvolvedCount": 5,
+    "totalBattleVictoryCount": 68,
     "totalPvPBattleVictoryCount": 1,
-    "totalPvWBattleVictoryCount": 47,
+    "totalPvWBattleVictoryCount": 61,
     "totalPvNBattleVictoryCount": 6,
     "totalShinyCaptureCount": 1,
     "totalTradedCount": 2,
@@ -37,9 +37,9 @@
       "cobblemon:litleo": 1,
       "cobblemon:pikipek": 1,
       "cobblemon:cherrim": 1,
-      "cobblemon:snubbull": 4,
+      "cobblemon:snubbull": 5,
       "cobblemon:poliwag": 2,
-      "cobblemon:gimmighoul": 4,
+      "cobblemon:gimmighoul": 6,
       "cobblemon:ledyba": 2,
       "cobblemon:sentret": 1,
       "cobblemon:purugly": 1,
@@ -50,19 +50,26 @@
       "cobblemon:skiddo": 1,
       "cobblemon:ponyta": 1,
       "cobblemon:clobbopus": 1,
-      "cobblemon:bouffalant": 2,
+      "cobblemon:bouffalant": 3,
       "cobblemon:rapidash": 1,
       "cobblemon:granbull": 2,
       "cobblemon:varoom": 1,
-      "cobblemon:cacnea": 2,
-      "cobblemon:maractus": 1,
+      "cobblemon:cacnea": 3,
+      "cobblemon:maractus": 2,
       "cobblemon:phanpy": 1,
       "cobblemon:cubone": 1,
       "cobblemon:chewtle": 1,
       "cobblemon:silicobra": 1,
-      "cobblemon:hippopotas": 1,
+      "cobblemon:hippopotas": 2,
       "cobblemon:brambleghast": 1,
-      "cobblemon:kangaskhan": 1
+      "cobblemon:kangaskhan": 1,
+      "cobblemon:tinkatink": 1,
+      "cobblemon:sandaconda": 1,
+      "cobblemon:delcatty": 1,
+      "cobblemon:darmanitan": 1,
+      "cobblemon:sandslash": 1,
+      "cobblemon:yanma": 1,
+      "cobblemon:exeggutor": 1
     },
     "aspectsCollected": {
       "cobblemon:bombirdier": [
@@ -113,6 +120,9 @@
         "midday-form"
       ],
       "cobblemon:luxray": [
+        "female"
+      ],
+      "cobblemon:greninja": [
         "female"
       ]
     }
