@@ -1,7 +1,7 @@
 {
   "generic": {
     "language": "en_us",
-    "botToken": "MTMwMTYwNDk3NjEzNjgxODc2MA.G_nKc0.mH1QqPMhU1zEZbLSybmbTdN82NJcHUZZS7S0_0",
+    "botToken": "",
     "showServerStatusInBotStatus": true,
     "botPlayingActivity": "ᴘɪxᴇʟ ᴄᴀᴘɪᴛᴀʟ (%onlinePlayerCount%/%maxPlayerCount%)",
     "botListeningActivity": "Playing",
